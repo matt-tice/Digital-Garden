@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       804324c7-befe-499f-b738-5e3ea915c8c9
+:END:
+#+title: strings
+#+filetags: :Computer Science:Data Type:
+
+
+* References
+
+
+* Summary
+
+
+* Math
+
+#+begin_src 
+
+\begin{definition}{Monoid of Strings}{•}
+Let $X$ be a set. We call this an \textbf{alphabet}. The free monoid $F_M(X)$ is the \textbf{monoid of strings} in the alphabet $X$. Any $L \subseteq F_M(X)$ is called a \textbf{language}.
+\end{definition}
+\begin{defframe}
+It seems like the free monoid is the natural home of strings, since you want to be able to concatenate strings (multiply them) and you want an empty string (the identity)
+\end{defframe}
+
+
+#+end_src

@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       bd034096-e8b6-42e1-8e05-26505db2ebf3
+:END:
+#+title: the great recession
+#+filetags: :2008:Recession:
+
+* References 
+
+* Summary 
+
+
+
+* Mortgage-Backed Security
+
+A bank will issue some mortgages. They could choose to wait and collect the monthly payments from those they loaned out the mortgages to. But a *mortgage-backed security* is basically taking the right to receive the monthly payments, and selling them to someone else
+
+The problem is that if the borrowers default, the people who bought the MBS just lose all their money, but the banks are fine, having already made their money selling the MBS. The problem is that this incentivized banks, who would no longer be on the hook, to take on riskier and riskier clients.
+
+** Subprime Loans
+
+Loans to those who have a high risk of defaulting
+
+
+
+* Collateralized Debt Organization
+
+Basically an MBS, but it can contain other kinds of loans besides mortgages, including MBS's or other CDO's.
+
+
+
+* Timeline
+
+** 2004
+
+The banks could now borrow and lend out as much money as they wanted
+
+The idea was that the market will decide what the optimal amount of leverage is
+
+** 2006
+
+Because so many people could take out loans, there was a giant increase in demand for homes.
+- Home prices rose like crazy
+
+** 2007
+
+
+** Bailout
+
+** 2010
+
+*** 

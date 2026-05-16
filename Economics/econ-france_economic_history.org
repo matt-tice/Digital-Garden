@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       d49aebca-20f5-4721-a8a5-65d5f1377087
+:END:
+#+title: france economic history
+#+filetags: Economics
+
+* References 
+
+(2004) Jean-Pierre Dormois, The French Economy in the Twentieth Century
+
+* Summary 
+
+Demographic transition: France saw its population stagnate between the 1800s and 1900s for nearly 100 years
+
+Malthusian: Intentionally limiting family size
+- designed to preserve property holdings, since the family estate would be divided equally between children
+- prior to WW2, single-child families were very common
+- because of this, France fell behind in production
+
+

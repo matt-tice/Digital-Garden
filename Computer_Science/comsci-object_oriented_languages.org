@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       4359d5f9-3a11-44cf-a179-e3e35eebbb38
+:END:
+#+title: object-oriented languages
+#+filetags: Computer Science:Programming Languages:
+
+* References 
+
+* Summary 
+
+The basic unit in these languages is called an *object* or *class*
+
+** Modularity
+
+** Abstraction
+
+** Encapsulation
+
+The implementation of an object is inaccessible to the user
+
+** Extensibility
+
+** Polymorphism
+
+** Inheritance
+
+
+
+* Definitions
+
+
+** Object
+
+A first-class construct
+
+** Object-Oriented

@@ -1,0 +1,207 @@
+:PROPERTIES:
+:ID:       cbc7911d-23b3-4bca-9c1d-688bbcc78b9c
+:END:
+#+title: windows registry
+#+filetags: Computer Science
+
+* References
+
+
+Jolanta Thomassen's thesis
+Peter Norris' masters thesis
+
+* Summary
+
+In my journey to learn a bit more about computer science, it might be nice to learn how to play with the registry
+
+The registry is a big dictionary
+- all of the folders are keys
+
+
+The registry contains
+- config info
+- historical info of user activity
+       + to provide users with more personalized experiences
+       + when a user opened an app
+       + when the system last connected to a particular wireless access point
+       + when a graphic image viewer was used to access a particular file
+ 
+
+** Files
+
+The registry files are in =Windows/system32/config=
+The database files are called *hives*
+
+Info specific to certain users are in =NTUSER.dat= and the =USRCLASS.dat= hives
+
+Hives are made up of 4-KB sections called *bins*
+- the first 4 bytes start with regf
+- every 4096 bytes there is hbin
+- data sits neatly inside of the bins; it doesn't split between adjacent bins
+- when new bins are required, space will be taken from unallocated memory, so you can see old registry data inside of other registry files sometimes
+
+  You can actually look at this unallocated space using *data carving tools*
+
+Hbins are in turn made up of different sections, called *cells*
+- key cells or /keys/ contain LastWrite time as a 64-bit FILETIME  structure containing the number of 100 nanosecond intervals since midnight of Jan 1, 1601
+- key cells are 80-bytes long and starts with a 4-byte (ie. dword) value indicating its size
+- next it has a node id, a node type, the offset to the key's parent, the number of subkeys, offset to the subkey list, number of values, offset to the value list, offset to the security id, the length of the key name, etc.
+
+Interestingly, the size of a key is *negative*
+If the key is deleted, then its size is made positive
+- this allows you to find deleted files in the unallocated space of hive files
+
+Unlike keys, value cells don't contain pointers to other cells
+- they do point to data
+- they don't contain a FILETIME object or any other reference to time
+- their size is also negative unless deleted
+- one of the main things they contain is a 4-byte value type, which can be a dword, a unicode string, etc
+
+*** Registry Redirection
+
+On 64-bit Windows, some registry calls by 32-bit apps are redirected to a different hive
+- so certain info shows up in the =HKEY_LOCAL_MACHINE/Software/Wow6432Node= key, rather than just =…/Software=
+  
+
+*** Registry Virtualization
+
+Registry modifications that have a global aspect on the system will be written to a virtual store
+- =HKEY_USERS/<SID>_Classes/VirtualStore/Machine/Software/keypath=
+
+** History
+
+The Registry's purpose is to replace the config and init files that Windows 3.1 used
+
+** Poorly Understood
+
+There is no full listing of what actions by a user or the OS impact which Registry keys, and how they do so
+
+** Logging
+
+The Registry acts as a log file
+- every registry key has a property called *LastWrite time*, which is updated whenever the key/value is modified
+
+** Persistence
+
+One of the reasons that the Registry gets used in malware is that the Registry has persistence across reboots and logins
+
+ex. It lets the system remember that you've plugged in a certain device before
+
+ex. It remembers your settings for apps, if you don't use the defaults
+
+ex. It remembers recently accessed files
+
+*Note*: not all apps create a presence in the registry
+- they might use config files
+
+** Different Versions
+
+The binary structure of the registry has been more-or-less unchanged across different versions of Windows
+- what changes are the keys and values, what they store, etc
+
+** Registry Editor
+
+The GUI
+
+Parts of the registry visible in the editor are *volatile*
+- they are populated when the system is booted up or shut down
+- ex. the =HKEY_CURRENT_USER= hive — you can see it in the editor, but if you shut down the system and look at an acquired image, you won't find that hive
+- ex. the local machine hardware key and its subkeys — it contains info on the devices connected to the systemand their assigned resources
+
+In the local machine system hive, there's a key called CurrentControlSet
+- it doesn't exist when the system is shut down
+
+=HKEY_CLASSES_ROOT=
+- when the system boots, this key gets populated with the local machine software classes key
+- and when the user logs in, it also gets the current user software classes key (which then take precedence to the local machine ones)
+
+* File System Tunneling
+
+An OS's ability to hold onto file system metadata
+- if a file is deleted and another is created shortly after with the same directory entry, the OS will give the new file the metadata of the old one
+
+* Microsoft Knowledge Base
+
+* Prefetch Files (.pf)
+
+
+
+* Dynamic Linked Library (.dll)
+
+
+
+* Dwords
+
+These are 32-bit binary values
+
+* Volume Shadew Copies
+
+* HKEY Current USER
+
+Settings for the person currently logged in
+- desktop
+- keyboard
+- app settings
+
+** Software/Policies/Microsoft/Windows/Explorer
+
+To get rid of internet suggestions when you search something in explorer
+- create a DWORD called *DisableSearchBoxSuggestions* and set it to 1
+
+
+** Software/Microsoft/Windows/CurrentVersion/Explorer/Serialize
+
+If the =Serialize= folder/key doesn't already exist, create it, and add two dwords
+- *WaitForIdleState* value 0
+- *StartupDelayInMSec* value 1
+
+For some reason Windows delays the startup of certain apps; in particular, when I put apps in the startup folder, it delays them (like emacs and Neptune)  
+
+* HKey Classes Root
+
+This is a really cool part of the registry --- you can use it to edit the *right-click menu* that appears when you right click a file or blank space in Windows Explorer
+
+It controls
+- file associations
+- right-click menus
+- drag-and-drop behaviour
+
+There are a bunch of keys in here that are all a dot followed by an extension: ex: =.txt=
+
+
+
+
+** ShellNew
+
+If this appears in a .extension key, it will cause right clicking a blank space in Explorer and going to "new" on the menu, to give "create a new .extension file" as an option
+- the subkeys/values of ShellNew are typically
+- =(Default)=
+- =FileName=: a *string value* which acts as a template for the new file --- whatever the string value is a *path to the template file*
+       - Note that you may need to place the template file in a specific path: =C:\Windows\ShellNew=
+
+** Shell
+
+This is the subkey for what happens when you right click on a particular file type
+- ex: =.txt/shell= determines what happens when you right-click on a text file
+
+** Wildcard
+
+The asterisk is a wildcard, and corresponds to *every file type*
+
+** Directory
+
+This controls what happens when you right-click a folder
+
+*** Background
+
+This subkey controls what happens when you click on the blank space in a folder
+
+* HKey Local Machine
+
+- Hardware drivers
+- boot settings
+- security policies that affect everyone
+
+* HKey Users
+
+- profiles for every user on the machine

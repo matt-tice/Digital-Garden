@@ -1,0 +1,105 @@
+:PROPERTIES:
+:ID:       bfc76749-699a-4cf0-950e-98e3ea7d5983
+:END:
+#+title: firefox
+#+filetags: Computer Science:Browser:
+
+* References
+
+
+
+* Summary
+
+
+
+* Customization
+
+You can customize the look of firefox (in ways that it won't let you otherwise) by editing
+- *userChrome.css*
+
+* Storage
+
+Firefox has 2 types of storage:
+
+1. =browser.storage.sync=
+        - limit of 100kb
+        - for settings
+
+2. =browser.storage.local=
+        - limit of 10mb
+        - can extend the storage if you ask for =unlimitedStorage= in =manifest.json=
+
+** Editing Stored Data
+
+You can't edit stored data directly on your machine, but you can export it to, for example, a json file, and then edit it
+
+* Extensions
+
+Firefox extensions have 2 pieces:
+1. =manifest.json=
+2. Content scripts
+
+
+** Manifest
+
+Every extension has to include this file
+
+The mandatory keys in this file are
+- =manifest_version=
+- =version=
+- =name=
+
+=permissions=:
+
+=background=: a list of any background scripts that are run by the app
+
+#+begin_src 
+"background": {
+  "scripts": ["background.js"]
+}
+#+end_src
+
+=content_scripts=: tells the browser to load specified content scripts
+- contains a =matches= properties, that says which URL patterns must be matched in order for the scripts to be loaded
+
+=action=: an action button that gets added to the toolbar
+
+*** Gecko
+
+The rendering engine of Firefox
+- it's the thing that turns the html and css into a page visible to the user
+
+*** Id
+
+** My Extensions
+*** Resume Auto-fill
+
+I wanted to make my own resume auto-filler extension. I tried SpeedyApply, but there were a few things I didn't like about it.
+
+**** Logic
+
+1. Search: Scan the DOM for appropriate tags
+2. Interpret: Use regex or keyword matching to figure out what a field wants
+3. Fill: Set the =.value= of those fields and trigger =input= or =change= events, so the site knows it's been updated
+
+**** Things to be aware of
+
+Shadow DOMS
+
+
+Dynamic Loading
+- the form doesn't exist when the page first loads
+
+**** Changes from SpeedyApply
+
+I can set a custom keybinding to make the auto-fill trigger precisely when I want, instead of having the extension automatically fill every time
+- register the command in =manifest.json=
+- set up a background script to listen for the command, and send it to the content script
+
+
+I don't have to pay for multiple profiles
+- if you can make one profile, it's really easy (from a programming perspective) to make arbitrarily many
+- just store them all as objects in a JSON array
+
+If you manually fill out any part of an application, you can scrape it and save it as part of a profile
+

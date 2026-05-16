@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       cc522aa6-61c5-4408-ba22-4096268f4aa9
+:END:
+#+title: population
+#+filetags:Economics
+
+* References
+
+
+
+* Summary
+
+
+Smaller population means lower aggregate demand for goods and services
+- this in turn is a pressure towards recession
+
+* Housing
+
+Decreased population reduces demand on apartment rentals
+
+This in turn can diminish the motivation of corporations to construct new multi-dwelling housing
+
+* Recession
+
+A slowly growing or shrinking population 

@@ -1,0 +1,76 @@
+:PROPERTIES:
+:ID:       03ffeb22-4596-45ed-bae0-926452819a73
+:END:
+#+title: gdp
+#+filetags: Economics: Macroeconomics
+
+* References 
+
+* Summary
+
+** Nominal GDP
+
+The nominal GDP is the total amount of money in a given economy
+
+** Real GDP
+
+Adjusted for inflation
+
+This gives you something like the total value in a given economy
+
+
+* Formulas
+
+There are different ways of trying to make GDP mathematically precise
+
+
+** Income Approach
+
+GDP = COE + GOS + GMI + T - S
+
+COE = Compensation of employees
+- wages,  salaries, employer contributions to social security, pensions, etc.
+
+GOS = Gross operating surplus
+- profits for corporations
+  
+GMI = Gross mixed income
+- profits for non-incorporated businesses
+  
+T = Tax
+
+S = Subsidies
+
+
+
+** Expenditure Approach
+
+GDP = C + I + G + X - M
+
+C = Consumption
+- private expenditures excluding housing
+
+I = Investment
+- business investment in equipment, land, etc
+- private purchase of housing (both by businesses and consumers)
+
+G = Governmenet Spending
+- includes salaries of public servants, purchases of weapons, investment, etc.
+- doesn't include social security or unemployment benefits,
+
+X = Exports
+
+
+M = Imports
+- subtracted to avoid counting foreign supply as domestic
+
+* Growth Rate
+
+This is typically more important than the actual value of the GDP. Countries like the US will increase their GDP almost every year, but the question is /by how much?/
+
+So basically you're looking at the acceleration
+- the actual GDP is the position
+- the increase in GDP per year (the growth) is the velocity
+- the growth rate is the acceleration
+
+

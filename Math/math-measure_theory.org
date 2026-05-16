@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       08cefc36-d4a7-4987-8622-b2a36204b4a6
+:END:
+#+title: measure theory
+#+filetags: Math
+
+* References
+
+
+
+* Summary
+
+
+
+* Outer Measure
+
+\lambda^*(A) = inf { \sum_i \ell(I_i) | A \sube \cup_i I_i   }
+
+where I_i are intervals and \ell is their length
+
+Replacing the sums by finite ones gives the *Jordan content*
+- it's not countably additive

@@ -1,0 +1,84 @@
+:PROPERTIES:
+:ID:       692964e7-7c0e-4d6b-8ae8-9bb0faa206d9
+:END:
+#+title: string comparison
+#+filetags: :Computer Science:Bioinformatics
+
+
+* References
+
+
+* Summary
+
+Question: given two strings, what can we say about their relationship?
+
+In what follows, say our string lengths are m and n, with m \leq n.
+
+* Exact Matching
+
+Just check each character against each other
+- O(m)
+
+If we're going to compare the same strings over and over, we can first hash them
+- then we get O(1)
+
+* Hamming Distance
+
+Given two strings of equal length, we can count the number of characters at which they differ
+- this is the Hamming distance
+
+More generally, just pad the smaller string at the end, say, so they're the same length.  
+
+* Levenshtein Distance
+
+We allow strings to change by
+1. insertions
+2. deletions
+3. substitutions
+
+This is relevant in bioinformatics
+
+Complexity O(mn)
+
+* Jaro-Winkler Distance
+
+Gives more weight to strings that match at the beginning
+
+
+
+* Suffix Trees
+
+Contains all the suffixes of a given string
+
+The nodes of the tree are all possible suffixes of a fixed string:
+
+ex. DENIAL becomes a tree made up of
+- DENIAL$
+- ENIAL$
+- NIAL$
+- IAL$
+- AL$
+- L$
+- $ (the root)
+
+An edge of the tree corresponds to the possible endings of that node
+
+ex. AABAAB will have an edge from AAB \to AAB$ and one from AAB \to AABA
+
+But then we compress all of the chains
+
+ex. since there's a single path AAB \to AABA \to AABAA \to AABAAB, we compress this to AAB \to AABAAB.
+
+In implementation, you can just store the indices of a string, instead of repeatedly storing parts of the string.   
+
+Searching the tree is very convenient:   
+
+* Substring Searches
+
+** Naive O(mn)
+
+** Knuth-Morris-Pratt O(m+n)
+
+** Boyer-Moore O(mn)
+
+** Rabin-Karp O(mn)

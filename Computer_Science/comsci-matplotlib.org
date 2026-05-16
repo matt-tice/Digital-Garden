@@ -1,0 +1,46 @@
+:PROPERTIES:
+:ID:       3eb847a0-8d85-477a-b5c3-cda03f6a64aa
+:END:
+#+title: matplotlib
+#+filetags: Computer Science:Python:
+
+* References
+
+
+
+* Summary
+
+Plotting functions requires a numpy array
+- not even a numpy matrix is good
+
+Tip: just make a function out of the plotting parameters you need, so you can easily create that kind of function
+
+
+* Figures
+
+** figure
+
+** subplot
+
+You can plot a figure with axes
+
+** artist
+
+Anything visible on the figure
+
+** annotations
+
+
+** ticks
+
+** Colormaps
+
+ScalarMappable objects
+
+*** pcolormesh
+
+*** contourf
+
+*** imshow
+
+*** scatter

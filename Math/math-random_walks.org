@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       aadb9ff3-133d-4a31-8cdb-a3c2514be3a5
+:END:
+#+title: random walks
+#+filetags: Math
+
+* References
+
+Local limit theorems for random isometries of the plane, Drogin and Hernández.
+
+* Summary
+
+
+Random walks on planar isometries
+- you consider the group G of isometries on, say, R^2
+- you place a measure on the group with finite support
+- and draw elements independently and uniformly from the measure

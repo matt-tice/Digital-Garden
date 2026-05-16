@@ -1,0 +1,268 @@
+:PROPERTIES:
+:ID:       9c2c6e1b-fcbb-410a-a130-041cb0873924
+:END:
+#+title: credit
+#+filetags: Economics:Finance
+
+* References 
+
+Thomas, Consumer Credit Models
+
+
+* Credit Scores
+
+Developed in the 1950s, along with the first credit cards
+
+Purpose: to judge default risk (the risk that the borrower won't pay it back)
+
+Based on Fisher's statistical methods of classification in the 1930s
+
+Scoring classically focused on a very specific risk: typically that the client will go 90 days overdue on their payments in the next 12 months
+- Applicants were then ranked, and the top ones accepted
+- The actual value of the credit score was irrelevant
+
+Credit bureaus started up; they pooled a bunch of legally available credit data on consumers
+
+** 1980s
+
+Behavioural scoring: info on the payment and purchase behaviour of clients in the recent past is used (the /observation period/, typically the last 12 months) along with info from credit bureaus and the classical application data
+- behavioural scores are updated monthly for clients
+
+
+
+** Attrition
+
+The likelyhood that a client will move their business elsewhere
+
+Nowadays credit is *essentially saturated*; people don't want much more credit, but they might be interested in moving lenders to get a better rate
+
+** Profit Scoring Systems
+
+The new way of doing credit scores: focused on how to make the lender the most money
+
+Profit is normally compared with volume of customers
+- if you accept no one, you'll have negative profit (still having to pay whatever the costs of the bank are)
+- if you accept everyone, a lot of them will default and you'll lose that money
+
+
+** Retail Portfolio
+
+The portfolio of loans
+
+We can think of the consumer as a company. The bank increasing the portfolio of a client is basically then increasing their market share
+
+
+** Logistic Regression
+
+This is usually the basic way of computing a credit score.
+Logistic regression allows you to estimate how likely it is that a certain event will occur.
+- You have a binary variable (say, =will default on the loan=, or =will pay it back=)
+- You take a bunch of data and plot it against whether in that situation the person defaulted or not
+- You perform regression with a logistic function (s-curve)
+- The logistic function is continuous, and you interpret its value (say normalized to be between 0 and 1) to be the probability of paying back the loan
+
+For some reason, instead of looking at values between 0 and 1, credit scores normalize it to be between something like 0 and 1000, but the same idea applies.
+
+With this in mind, we can try to optimize our credit score
+
+*** Impacting Credit Scores
+
+In Canada there are 2 companies --- Equifax and TransUnion --- that compute your credit scores. They both use the same info, but use different formulas. They give you more or less the same result, though.
+
+The data which the model is trained on comes from 2 main sources:
+1. Prior borrowers
+2. The current credit applicant
+
+Those then give you different categories of effective ways of improving your score.
+
+When looking at prior borrowers, the information of whether they defaulted on the loan or not (or if the missed payments, etc.) is available.
+- Consequently, prior borrowers can be evaluated by the bank, and given a binary value (say, good/bad), used for the regression.
+
+**** Application Scoring
+
+The data set is only made up of those who were actually accepted for a loan
+- It's mainly used for approving a new customer for a loan
+
+  
+**** Behavioural Scoring
+
+We first select some cut-off date in the past, and then look at all borrowers who have data both before the cut-off and after the cut-off
+- Used on existing customers
+- Includes information on the applicant
+
+
+* Utilities
+
+These can essentially be viewed as a form of unsecured credit, since the utility company provides the service /prior to payment/
+
+* Personal Line of Credit
+
+Low interest and higher credit limits than credit cards.
+
+** Secured PLoC
+
+Higher credit limits than unsecured. Lower interest.
+
+There is some kind of collateral that you put up. Different institutions will take different things as collateral.
+
+*** Home Equity Line of Credit:
+
+Use your home's equity as collateral.
+- Most places accept this
+
+** Unsecured PLoC
+  
+In this case, you don't put up any collateral. As a consequence, the interest is higher
+
+
+
+* Credit Card
+
+Has much higher interest and typically a lower credit limit
+
+The benefit of a credit card is that you can get different benefits and rewards from making purchases with them.
+LoC are just the credit.
+
+Credit cards are also more widely used and accepted, so it's likely that you'll be able to buy whatever you want using them.
+
+* Personal Loan
+
+
+
+* Credit Score
+
+
+* Bank of Canada
+
+
+** Overnight / Policy Interest Rate
+
+Every day, banks are legally required to have a certain amount of money in their reserve, to avoid bank runs
+
+Some banks will have more than they need and some less, so they'll loan each other money.
+
+The Bank of Canada /can't directly control/ the rate that other banks lend at. So instead, it has a rate that it would really like them to lend at, called the *policy interest rate*.
+
+The policy rate will be calculated in some fancy way, in terms of some other rates that the Bank of Canada does directly control.
+
+By setting the rate that the BoC gives other banks for loans and savings, they incentivize banks to loan to each other at a competitive rate.
+- ex: if BoC says that they'll loan at 2% interest, any of the ordinary banks that have extra funds will want to loan at a lower rate, to make sure that they have buyers.
+- Similarly, if the BoC is willing to borrow money from other banks at 2%, then banks can take their excess money and stuff it into the BoC, unless other banks are willing to give them even more interest. So banks are incentivized to buy from other banks at a higher rate (since they need to buy to maintain reserves)
+
+** Bank Rate
+
+The rate that the Bank of Canada will loan to other banks at
+
+** Deposit Rate
+
+The rate that the Bank of Canada will give to people that loan it money. Basically a savings account for the other banks
+
+** Floor vs Corridor System
+
+The range between the bank and deposit rate is called the operating band
+
+Because the policy rate isn't set directly, and is just a target, you need some model to calculate what the policy rate will be in practice, given any set of actions by the Bank.
+
+*** Corridor
+
+This is the basic model, in which the policy rate is assumed to be halfway between the bank and deposit rates
+
+*** Floor
+
+In this model, the policy rate is very slightly above the deposit rate.
+- The BoC switched to this model during Covid
+
+
+* Loans
+
+
+* Mortgage
+
+Mortgage loans are secured by property (like a house)
+
+Down payment: The cash that you put upfront
+
+** Amortization
+
+The total time it'll take to pay off your mortgage
+
+
+** Terms
+
+The time a fixed mortgage contract stays in place before you'll have to renew your mortgage
+
+In the US, these periods can be 30 years long, but in Canada they're much shorter
+
+Longer terms usually have higher rates
+
+*** Closed-Term
+
+Inflexible mortgages. If you repay your mortgage outside of the rules, you'll have to pay penalties
+- for example, if you pay your mortgage off early, you'll also have to pay an extra penalty
+
+*** Open-Term
+
+Have higher rates, but you can pay off early
+
+** Ratio
+
+Low ratio: Down payment is at least 20%
+- Has a higher rate
+       + Usually if you do the math, this choice could work out better, since you don't pay insurance premiums
+  
+High ratio: Less than 20%
+- requires you to buy mortgage default insurance
+- lower rate, because the bank doesn't need to worry about you not having insurance
+
+:THOUGHTS:
+
+One interesting thing you can do is to get the 20%, but then do less than it anyway, and invest the difference; the returns on the investment can offset the extra premiums
+- but you'd really have to run the numbers; it's pretty risky
+
+:END:
+
+** Rate
+
+*** Fixed Rate
+
+You rate is locked in for the whole term
+
+Good if you lock in low
+Bad if you lock in high
+
+*** Variable Rate
+
+If the prime rate changes, your payment stays the same, but you pay more/less to the principle compared to the interest
+
+Better if the interest rate goes up --- more gets paid to the principle. Not good if the rate goes down --- you just pay relatively more interest
+
+*** Adjustable Rate
+
+Your rate over the course of the term changes with the lender's prime rate
+
+Better if interest rate goes down --- you pay less. Worse if interest rate goes up --- you pay more
+
+** Conventional Mortgage
+
+
+
+:OPINION:
+
+So-called "house hacking":
+
+Buy a duplex, rent out one side, which pays off your mortgage
+:END:
+
+** Tax
+
+Mortgages have a number of tax benefits
+
+
+* Reverse Mortgage
+
+* Debt Consolidation
+
+If you have different credit types with different levels of interest, you can pay off some of the debt with other debt: this is consolidation
+- ex. if your credit card has 19% interest, and your line of credit only has 7%, you basically transfer the debt from the card to the line of credit
+
+  

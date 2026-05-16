@@ -1,0 +1,78 @@
+:PROPERTIES:
+:ID:       9002db6a-7f1f-462a-b43a-7cd3fcc192b0
+:END:
+#+title: Canadian Courts
+#+filetags: Law:Courts:
+
+* References 
+
+Russel, Canada's Trial Courts - Two Tiers or One?
+
+
+* Summary 
+
+Currently, civil and criminal courts have two tiers:
+1. Superior courts - staffed by federally appointed judges
+   - Meant for the most serious cases
+2. Provincial courts - provincially appointed judges
+   - Less serious cases
+
+
+* History
+
+1794: Governor Simcoe creates the inferior courts in Canada.
+- Its purpose was to give a judicial service to frontier towns so they didn't have to wait for a SC judge from the capital to stop by
+
+1846: County Courts created in England.
+
+1875: Supreme Court of Canada is established through Section 101
+
+1971: Federal Court of Canada established through Section 101
+
+Canada's judicial system was basically copied and pasted from the one British colonists were under.
+
+*** British North America Act: The Canadian Constitution
+
+- Section 92 (14): Provincial legislature has exclusive jurisdiction over the administration of justice in the province, including the constitution, maintenance, and organization of provincial civil and criminal courts
+  - This was interpretted as giving provinces the power to create their own courts in addition to the SC and IC
+  
+- Section 96: The Governor General appoints the judges of the Superior, District, and County Courts in each province.
+  - These function as a combination of federal and provincial institutions: appointed, paid, and removed by the feds; organized, managed, and supported by province
+  - District and County courts are basically the same thing, but their name depends on whether the province's regional administration was set up on a county or district basis.
+    
+- Note that in the constitution only mentions 3 different kinds of courts by name
+  
+- Section 99: Judges of the SC shall hold office during good behaviour, but shall be removable by the Governor General on Address of the Senate and House of Commons.
+  - This is based on the Act of Settlement of 1701 (charter of judicial independence in the UK)
+
+- Section 101: federal parliament can establish a General Court of Appeal for Canada, and any additional courts for the better administration of the laws of Canada
+  - In other words, federal parliament can create a Supreme Court of Canada
+
+
+
+*** Compare to the USA
+
+In the states, each state has its own system of courts, and the judges are set by the states.
+There is also a system of federal courts for federal and inter-state issues
+
+Canada never worried about inter-province issues, since all of the judges were appointed federally, so there was no worry about conflict of interest.
+
+** Provinces
+
+Prairies and New Brunswick: SC is the Court of Queen's/King's Bench
+
+Atlantic: SC is the Trial Division of the Supreme Court
+
+British Columbia: SC is the Supreme Court of British Columbia
+
+Northwest Territories and Yukon: SC is the Supreme Court
+
+Nunavut: Only one court - the Nunavut Court of Justice
+
+Quebec: had no District or County courts, but had a decentralized Superior court.
+
+England: Superior Courts got their authority from the Crown, not Parliament; as such, there was no legislation telling them what cases they could or couldn't try.
+- In Canada, the SC also existed independently of Parliament, but over time, its power has been reduced by legislation.
+- One of the main modifications has been to give less serious issues to the inferior courts.
+ 
+

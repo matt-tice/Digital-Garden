@@ -1,0 +1,145 @@
+:PROPERTIES:
+:ID:       f88b47e5-7b81-4fc5-bf34-2a6290bd457a
+:END:
+#+title: automata
+#+filetags: Computer Science
+
+* References 
+
+* Summary 
+
+They're like computers with extemely limited memory
+
+* Types
+
+The [[id:8551bead-a854-4930-8373-d958857c151e][formal language]] of an automaton is the set of words which are mapped to final states
+
+** Finite Automata
+
+
+
+*** Definition
+
+A finite automaton is a tuple (A, Q, q_0, F, \phi )
++ A is an alphabet
++ Q is a finite set of states
++ q_0 is the initial state
++ F \sube Q are the final states
++ \phi: Q \times A \to Q is the transition function
+
+We can think of the transition function as the data of a directed graph, labeled by the letters in the alphabet A
+
+Implicitly, we're saying that you can recursively apply the transition function, to take us from some word in A to a sequence of states
+From a language perspective, we only care about what the ultimate state is, corresponding to a word w \in A^*.
+So we can just define the transition function to be a map
+\phi: A^* \to Q
+that has to satisfy certain composition conditions
+
++ \phi(a_0 a_1 ... a_n) means first apply the transition function \phi(q_0, a_0)
++ etc.
++ We need that if \phi(w_1) = \phi(w_2) then \phi(w_1 x) = \phi(w_2 x)
++ I believe that's the only condition
+
+Then the language corresponding to the automaton is the set
+L = \phi^{-1}(F)
+
+That seems far nicer
+
+
+*** My Definition
+
+A (deterministic) finite automaton is a tuple (A, Q, F, \phi) where
++ A is an alphabet
++ Q is a set of states
++ F \sube Q is a set of final states
++ \phi: A^* \to Q such that
+       + if \phi(x) = \phi(y) then \phi(xz) = \phi(yz)
+
+Now the initial state is just the data of \phi(1)
+- phi on the empty word
+
+*** Examples
+Lexical analyzers
+
+For instance, consider a programming language where the syntax says that words must be finite sequences of lower case letters and numbers, starting with a letter
+
+The language is recognized by the automaton 
+    A = {a,b,c ..., z, 0, .. 9}
+    Q = {0, 1}
+    F = {1}
+    + \phi(nx) = 0 if n is a number
+    + \phi(x) = 1 otherwise
+
+
+*** Non-Deterministic
+
+In this case, the transition function should really be a /relation/
+In our definition, we can just replace the transition function
+with a multi-output map, or equivalently,
+     \phi: A^* \to P(Q) such that
+     if \phi(x) \sube \phi(y) then \phi(xz) \sube \phi(yz)
+
+:THOUGHTS:    
+Honestly, I'm pretty impressed with myself for coming up with that
++ I remember when I first tried to learn about automata
+  (probably in the early part of my PhD?)
+  I really struggled trying to figure out how to view them in a simpler way;
+  I never really succeeded in reformulating them
++ Now it's obvious to me
+
+L = { w | \phi(w) \cap F \ne \empty}
+:END:
+
+
+* Push-Down Automata
+
+Used in parsing (the second phase of compilers and interpreters)
+
+It's basically a finite automaton plus finite memory
+
+
+
+
+
+
+* Language of an Automaton
+
+Automata are equivalent to [[id:8551bead-a854-4930-8373-d958857c151e][formal languages]].
+
+** Definitions
+
+*** Accepted Language
+
+#+begin_src 
+\begin{definition}{Accepted Strings of an Automaton}{•}
+Let $\mathbb{M}$ be an automaton and $w = w_1 \ldots w_n \in F(A)$. Then $w$ is accepted by $\mathbb{M}$ if there is a sequence of states $\{ x_0, \ldots, x_n \}$, such that
+
+\begin{enumerate}
+\item $x_0$ is the start state
+\item $f(x_i, w_{i+1}) = x_{i+1}$
+\item $x_n \in F$
+\end{enumerate}
+\end{definition}
+#+end_src
+
+*** Language of an Automaton
+
+#+begin_src 
+\begin{definition}{Language of an Automaton}{•}
+Let $\mathbb{M}$ be an automaton. Then the language of \mathbb{M} is defined to be
+\begin{equation}
+L(\mathbb{M}) = \{ w \mid \mathbb{M} \text { accepts } w \}.
+\end{equation}
+\end{definition}
+#+end_src
+
+** Types of Languages
+
+
+| Language | Automaton |
+|          |           |
+| Regular  | Finite    |
+|          |           |
+
+
+[[id:6c30d0a2-eb82-48b8-bd07-88b172a9ead3][context-free grammar]]

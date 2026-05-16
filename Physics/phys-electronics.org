@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       df260e38-6c0e-4475-91ae-0c05c58faa13
+:END:
+#+title: electronics
+#+filetags: Physics
+
+* References
+
+
+
+* Summary
+
+Electronic devices require a medium through which electrons can flow
+The two main ways are
+1. creating a (near) vacuum
+2. creating a (near) perfect crystal
+
+You also need a *source of charged particles*
+1. heating a cathode to liberate electrons
+2. inputting an impurity with free electrons into the crystal
+
+You then move the electrons with an electric field   
+
+*Currents* are very unfortunate concepts
+- they're defined to travel in the opposite direction from the flow of electrons.
+- So in my analysis, I'm just going to replace ordinary currents with their negatives, because it conceptually makes more sense to look at how the electrons move, than the current itself, which may or may not correspond to something physical.
+
+* Vacuum Electronics
+
+The study of devices that use electrons in a vacuum or low pressure gas
+
+* Cathode Ray Tube
+
+1897
+
+* Therionic Diode
+
+1904
+
+* Triode
+
+Can magnify small AC voltages
+
+Limitations at high frequencies
+
+* Tetrode
+
+* Pentode
+
+* Point Contact Transistor
+
+1948
+
+Electrons move through the lattice of a semiconductor crystal, like silicoln or germanium
+You need to make the crystals very precisely, so they don't have any impurities, which allows the electrons to flow
+
+Often an intentional impurity is added, to provide a source of free electrons

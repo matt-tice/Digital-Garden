@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:       4c447e1f-5e2f-4999-8487-9ce349c04876
+:END:
+#+title: climate change
+#+filetags: Physics
+
+* References 
+
+* Summary 
+
+30% of solar radiation is immediately reflected back into space
+The rest is absorbed by the land, sea, and atmosphere
+
+The heat is eventually released as infrared radiation
+The temperature of the earth is determined by how much of the heat is retained
+
+If incoming energy is greater than the energy lost, we heat up
+
+
+Greenhouse gases absorb infrared radiation and reradiate it in *all directions*
+- So while some of it goes out into space, it's less than initially came in
+
+Sea water absorbs more heat than ice, so as the ice melts, the earth gets even warmer
+
+When plants die they release GhG
+
+* Greenhouse Gases
+
+** Water Vapor H_{2}O
+** Carbon Dioxide CO_2
+
+Main contributor to climate change
+Produced from burning fossil fuels
+
+** Methane CH_4
+** Nitrous Oxide N_{2}O
+
+
+
+
+
+

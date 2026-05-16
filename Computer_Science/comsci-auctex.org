@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       287cc124-247a-4e24-a260-eb5be60d02c6
+:END:
+#+title: auctex
+#+filetags: :Computer Science:Emacs:
+
+
+* References
+
+
+* Summary
+
+
+
+
+
+
+* =/auto= Folders
+
+=TeX-auto-local=:
+- for specific projects
+- when you save a file and =TeX-auto-save= is on, auctex parses it and stores the elisp version in the =TeX-auto-local= directory
+
+=TeX-auto-private=: 
+- for global (user-wide) configs

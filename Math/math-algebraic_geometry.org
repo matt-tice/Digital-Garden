@@ -1,0 +1,272 @@
+:PROPERTIES:
+:ID:       04deddd3-3a16-40b6-b8cf-84ccb332185a
+:END:
+#+title: algebraic geometry
+#+filetags: :Geometry:Math:
+
+
+
+* References 
+
+* Summary 
+
+Algebraic geometry studies *sheaves*, which are ways of gluing things together
+
+** Classical
+
+Studies polynomials
+
+
+
+* Local Structure
+
+* Sieves
+
+A sieve on an object B is a subfunctor of Mor(-,B) = h^{B}
+
+In other words, it's a collection of morphisms that point into B.
+
+Denote a sieve on B by s^{B}
+Similarly, a cosieve is s_{B}
+
+
+** Explicitly
+
+A subfunctor F of Hom(-,B) is a presheaf such that
+F(A) \sube Hom(A,B)
+and F(f) is the restriction of h^B_f.
+Say f: A \to X
+F(f): F(X) \to F(A) \sube Hom(A,B)
+
+But for there to be such a map, if F(X) \ne \empty, it must be the case that F(A) \ne \empty
+So we have that if g \in F(X), so g: X \to B then
+F(f)(g) = fg: A \to X \to B
+must be an element of F(A)
+
+*** Conclusion
+
+1. If s^B(A) is non-empty, then so is s^B(X) for all X that map into A
+   (ie. have some X \to A)
+2. If g \in s^B(X) then fg \in s^B(A) for all f: A \to X
+
+In this way, s^B is something like a collection of /left ideals/
+
+*** Conclusion
+
+It follows then that it's rare for s^B(B) to contain 1_B: if it did, it would also contain all morphisms into B. So we'd have s^B = h^B
+
+So 1_B \in s^B iff s^B = h^B.
+
+Then h^B is something like the full ring and s^B is an ideal
+
+*** Ring Theory
+
+Say we have a one-object category { * }.
+Then h^B is the monoid of all morphisms in the category, and s^B is a sub-monoid closed under left multiplication by any element in h^B
+
+In the case of enriched categories, taking abelian enrichment turns h^B into a ring, and s^B into *literally an ideal*
+
+*** Intuition
+
+A sieve is something like a filter: it picks out regions of B
+
+We can think of a sieve as an ideal in a ringoid (but not literally in a ringoid)
+
+
+** Partial Order
+
+Let s^B \leq t^B iff s^B_A \sube t^B_A for all A.
+Define the union and intersection objectwise
+      (s^B \cup t^B)(A) = s^B_A \cup t^B_A
+      (s^B \cap t^B)(A) = s^B_A \cap t^B_A
+
+Then you get that for any fixed B, the collection of all sieves forms a /complete lattice/.
+
+
+
+
+** Pullback
+
+Let s^{B} be a sieve and f: A \to B. We get a sieve f* s^{B} called the *pullback*, defined by
+
+(f* s^{B})(X) = { g: X \to A | gf \in s^{B} (X)  }
+
+
+
+This is actually the pullback in the categorical sense:
+
+We take s^{B} \times_{h^{B}} h^{A} = f* s^{B}
+
+This sends X \to s^{B}(X) \times_{h^{B}(X)} h^{A}(X), which we compute in Set:
+
+This is { (g,h) \in s^{B}(X) \times h^{A}(X) | g =  hf   }
+
+
+
+*** Notation
+
+Personally, I don't like the f* notation for the pullback. I'll denote the pullback by
+
+ s^{B} / f 
+
+since it corresponds to the set of h: A \to X such that hf \in s^{B}
+
+*** Ring Theory
+
+Consider the one-object case
+Given an ideal s^*, and a ring element x: * \to *, the pullback is
+x*s^* = { a | ax \in s^*  }
+This is the preimage of right multiplication by x
+\rho_x^{-1}(s^*)
+
+
+*** What is h^{B}/s^{B} ?
+
+This just ends up being the collection of all sieves of the form h^{B}/f
+But since h^{B} contains /all/ of the maps into B, every map of the form gf will be in h^{B}. So
+
+h^{B} / s^{B} = { h^{A} | there is a map f: A \to B in s^{B}(A) }
+
+So h^{B}/s^{B} is something like taking all of the hom sets and then restricting to the ones that are connected to B through s.
+
+*** What is t^{B} / h^{B} ?
+
+This is the set of all sieves of the form t^{B}/f, where f is /any/ map into B
+
+So the sieves in  t^{B} / h^{B}  are those such that 
+
+** Grothendieck Topology
+
+For each object, we get a sieve. So think of our sieves as collected into a map
+S: C \times C \to Set
+
+The weird thing is that we want /more than one sieve/ for each object.
+We choose a collection of sieves, which we call *covering sieves*. They have to satisfy the following:
+
+*** Axioms
+
+1) h^{B} is a covering sieve for all B
+
+2) If s^{B} is covering and f:A \to B then s^{B}/f is covering.
+
+3) Let s^{B} be covering and t^{B} be any sieve. If t^{B}/f is covering for all f \in s^{B}(A), for all A, then t^{B} is also covering
+
+
+:OPINION:
+
+
+This is a much nicer way of looking at Grothendieck topologies, I think --- it's very algebraic
+The conditions become
+
+1) We have a special element h^{B}
+2) We're closed under pullback
+3) We have a kind of ideal/multiplicative closure
+
+Let's define t^{B}/s^{B} to be all of the sieves of the form t^{B}/f, with f \in s^{B}(A) for some A.
+
+Then we say that if t^{B} /s^{B} is covering, then so is t^{B}
+
+:END:
+
+*** Ring Case
+
+Given any ideal t, and a covering ideal s, if \rho_x^{-1}(t) is covering for all x \in s, then t is covering
+
+*** Properties
+
+If s^B \leq t^B and s is covering then so is t
+
+**** TODO Proof
+
+If xf \in s \leq t then xf \in t. So \rho_f^{-1}(s) \sube \rho_f^{-1}(t) for all f
+
+
+
+
+** Sites / Toposes
+
+A *site* is just (C, S), a category and a Grothendieck topology
+
+This is also called a *topos*
+
+** Local Isomorphisms
+
+
+
+** Sections
+
+Given a contravariant functor F mapping into Set, we call the set F(X) the *sections of F over X*
+
+From the [[id:b3f34eb4-7605-4d5b-9f0e-cc639a952c4b][Yoneda lemma]], we have Hom(h^{B}, F) \cong F(B) naturally.
+So we can identify the elements of Hom(h^{B} , F) with the sections.
+
+We associate the two with \eta \to \eta_B(1_B)
+And if x \in F(B), we take \eta_A: h^B(A) \to F(A) to be the map which sends f: A \to B to
+F(f)(x) \in F(A)
+
+So
+\eta^x = F(-)(x) is the corresponding natural transformation
+
+
+* Sheaves
+
+These are ways of taking something local and turning it into something global
+
+** Definitions
+
+A *separated presheaf* is a contravariant functor F, such that given any covering sieve s^B, the map
+
+Hom(h^B, F) \to Hom(s^B, F)
+
+is injective.
+
+A *sheaf* on a site is a contravariant functor F, such that given any covering sieve s^B, the map
+
+ Hom(h^B, F) \to Hom(s^B, F)
+
+is a bijection.
+
+A \eta: h^B \Rightarrow F is determined by \eta_B and what it does to 1_B
+What is \eta_B doing on s^B?
+
+\eta_B: s^B_B \to F(B)
+
+We don't necessarily have that 1_B \in s^B_B
+
+
+
+** Consequences
+
+The map above sends a natural transformation (a section of the presheaf)
+\eta: h^B \to F
+to basically the same transformation, just restricted to s^B
+
+
+
+:THOUGHTS:
+
+So this basically says that every covering sieve has 'enough space' to contain all of the possible transformations h^B \to F.
+My guess is that means something like the covering sieves are all global?
+
+:END:
+
+
+
+
+
+
+** Functoriality
+
+A sheaf is a functor
+$F: \mathcal{C} \to \mathcal{D}$
+
+It assigns to each of the objects in $\mathcal{C}$ some local structure in $\mathcal{D}$
+
+We think of the morphisms as telling us how one local structure fits inside of another
+
+** Locality
+
+If we zoom-in to a local region, it should tell us the local structure
+
+If we take a pull-back, which we think of as an intersection, 
+

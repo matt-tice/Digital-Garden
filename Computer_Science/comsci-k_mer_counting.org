@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       d9ccdc25-ac04-477a-948b-8da7e6f8e1b7
+:END:
+#+title: k-mer counting
+#+filetags: :Computer Science:Bioinformatics:Biology:
+
+
+* References
+
+
+* Summary
+
+*k-mers* are substrings of length k inside of a larger string.
+
+1-mer counting would just be counting up each occurance of G, T, A, and C.
+- this can be used as a quick check to see if two strings are not related (if they have very different numbers of each nucleotide, statistically they're not going to be related, because it's expensive to change one string into another)
+       - time complexity O(m+n)
+
+         
+3-mers
+
+We break the string into small k-mers (say, 3-mers)
+We sort those chunks in a hash table
+We use the index to find seeds, where the string match perfectly
+Then we 

@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       8551bead-a854-4930-8373-d958857c151e
+:END:
+#+title: formal language
+#+filetags: Linguistics
+
+* References 
+
+* Summary 
+
+** Definition
+
+Given an alphabet A, with free monoid A^*,
+a *formal language* L with alphabet A
+is a subset of A^*.
+
+
+* Types
+
+Each kind of language corresponds to a certain kind of [[id:f88b47e5-7b81-4fc5-bf34-2a6290bd457a][automaton]]
+
+** Regular
+
+Corresponds to finite automata
+
+
+
+** Context-Free
+
+** 

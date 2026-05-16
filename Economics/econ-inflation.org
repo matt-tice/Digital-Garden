@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       d51fd201-825e-46ba-9911-188b44c00065
+:END:
+#+title: inflation and deflation
+#+filetags: Economics:
+
+* References 
+
+* Summary 
+
+
+** High Inflation
+
+Economy improves
+Prices go up
+
+
+** Low Inflation
+
+Economy worsens
+Prices go down
+
+
+* Stagflation
+
+High inflation + unemployment + stagnant growth

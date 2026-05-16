@@ -1,0 +1,64 @@
+:PROPERTIES:
+:ID:       a42e9082-5322-4206-bf3f-d23177306768
+:END:
+#+title: large language models
+#+filetags: :Computer Science:Machine Learning:AI:
+
+* References
+
+
+
+* Summary
+
+
+* Probabilistic
+
+LLMs produce probability distributions when given input
+- the distribution is the likelihood of different subsequent tokens
+- the /temperature/ setting tells the LLM how to sample from the distribution
+
+There's also a hardware aspect to this
+- because the models are so large and so many calculations are performed in parallel, small changes in the order that things happen can lead to very different final outcomes
+
+AI currently has no verification step or confidence interval
+- this is one of the main reasons it's crappy still
+- you can just run the prompt multiple times and take the most common answer, but that doesn't actually challenge any *systemic bias* to a wrong answer
+
+* The Chess Problem
+
+:THOUGHTS:
+
+
+
+[2026-04-13 Mon 23:00]
+
+I just went through one of my games with Gemini.
+
+It was unable to present the best tactic at the end of the game, in which White had to sacrifice a bishop on f6, to remove the pawn from g7, and then play Qg6+ on the king.
+
+This isn't a difficult tactic (to be fair, I missed it, but I was playing in a bullet game; to a computer that's like a classical amount of time), and stockfish (and probably weaker engines) could find it immediately, just like any grandmaster (and any chess player around my level could easily find it if we knew we were looking for a tactic)
+
+And yet the AI couldn't, even when I told it there were better moves on the board than what it suggested
+
+This brings up an interesting question:
+- LLMs are supposed to be "human-like", as the techbros want us to believe
+- and yet 
+
+:END:
+
+** Deep Blue
+
+Kasparov lost to Deep Blue in 1997
+- DB was using a heuristic search and expert-designed evaluation functions
+
+Neural networks took a long /long time/ to even get competent at chess
+
+:OPINION:
+It's not clear to me that NN models aren't just a waste of time, in comparison to searching for an explicit algorithm
+:END:
+
+* Mixture of Experts
+
+When the human brain works on a problem, only certain "parts" of your brain get involved
+
+In a typical NN, all of the nodes are involved in everything

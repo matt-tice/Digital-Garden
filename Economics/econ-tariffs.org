@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       78b7b66d-1752-4425-bc22-21e4c5392d94
+:END:
+#+title: tariffs
+#+filetags: Economics
+
+* References 
+
+* Summary 
+
+
+* Impact
+
+** External
+
+If the US puts tariffs on Canadian goods, that makes it harder for US citizens to buy Canadian
+So it reduces the demand on Canadian goods
+
+Consequently, it can weaken the economy of Canada, lowering employment, causing deflation, etc.
+
+Tariffs on Canada introduce *uncertainty*, which always drives down investment
+
+Also tariffs hit *productivity*, because they force resources to get reallocated in a non-optimal way; productive export industries might contract, and labour/capital shift to less efficient sectors
+
+
+*** Currency
+
+In 1971 Nixon put a tariff on all imports
+- to basically attack all other countries, reducing their imports. His goal was to get them to capitulate to appreciating their currencies with respect to the dollar.
+
+** Internal
+
+On the other hand, because tariffs increase prices for consumers, it actually causes inflation in the US when the US applies tariffs to other countries
+
+So to do a tariff basically amounts to deflating someone else's economy at the cost of inflating your own

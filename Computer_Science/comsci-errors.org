@@ -1,0 +1,107 @@
+:PROPERTIES:
+:ID:       ecc47e90-3738-4f24-bde5-94a6882657c8
+:END:
+#+title: errors
+#+filetags: Comsci
+
+* References
+
+
+
+* Summary
+
+Errors when a program executes are called *exceptions*.
+
+
+
+* Notes
+
+#+begin_src emacs-lisp
+  (use-package ox-publish
+    :ensure nil  ; It is built into Org, so no need to download
+    :after org
+    :config
+
+  ;; 1. Global Safety Net: Sanitizes EVERY export (buffer or project)
+    (add-to-list 'org-export-filter-final-output-functions #'my/org-export-sanitize-documents-path)
+
+  ;; 2. Project-Specific Logic: Handles private link stubs
+    (setq org-publish-project-alist
+          '(("digital-garden-notes"
+             :base-directory "~/Public"
+             :base-extension "org"
+             :publishing-directory "~/Public-Export"
+             :recursive t
+             :publishing-function org-gfm-export-to-markdown
+             :auto-sitemap t
+             :sitemap-title "Research Notes"
+             ;; This is the crucial part for your privacy:
+             :filter-functions (my/org-export-private-to-stub))
+
+            ("digital-garden-static"
+             :base-directory "~/Public"
+             :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf"
+             :publishing-directory "~/Public-Export"
+             :recursive t
+             :publishing-function org-publish-attachment)
+
+            ("digital-garden" 
+             :components ("digital-garden-notes" "digital-garden-static")))))
+#+end_src
+
+
+#+begin_src 
+Publishing file c:/Users/Matty/OneDrive/Emacs/Org-Roam/Public/Physics/phys-beyond_the_standard_model.org using ‘org-gfm-export-to-markdown’
+Safely publishing: C:/Users/Matty/OneDrive/Emacs/Org-Roam/Public/Math
+Resetting org-publish-cache
+Publishing file c:/Users/Matty/OneDrive/Emacs/Org-Roam/Public/Math/math-topological_vector_spaces.org using ‘org-gfm-export-to-markdown’
+Initializing asynchronous export process
+Publishing file c:/Users/Matty/OneDrive/Emacs/Org-Roam/Public/Math/math-topological_vector_spaces.org using ‘org-gfm-export-to-markdown’
+
+#+end_src
+
+
+#+begin_src emacs-lisp
+  (defun my/org-publish-by-directory ()
+    "Publishes each subdirectory as its own 'mini-batch' to prevent pipe exhaustion."
+    (interactive)
+    (let* ((base-dir "~/Org-Roam/Public")
+           ;; Get a list of all subdirectories (non-recursively)
+           (subdirs (directory-files base-dir t "^[^.]" t)))
+      
+      ;; 1. Process the files in the root directory first
+      (message "Publishing Root Directory...")
+      (org-publish-project "digital-garden-notes" nil) ; Temporary non-recursive
+      
+      ;; 2. Loop through each sub-folder
+      (dolist (dir subdirs)
+        (when (file-directory-p dir)
+  	;; SANITIZE: Replace colons and slashes with underscores for the cache name
+        (let* ((clean-name (replace-regexp-in-string "[:/]" "_" dir))
+               (tmp-project-name (concat "tmp-" clean-name))
+               (org-publish-project-alist
+                `((,tmp-project-name
+                   :base-directory ,dir
+                   :base-extension "org"
+                   :publishing-directory "~/Public-Export/"
+                   :publishing-function org-gfm-export-to-markdown
+                   :filter-functions (my/org-export-private-to-stub)))))
+          (message "Safely publishing: %s" dir)
+          (org-publish-project tmp-project-name t))
+        (garbage-collect)))))
+#+end_src
+
+
+the problem is the *Initializing asynchronous export process*
+- emacs spawns these asynchronous child processes, which hang around until the full emacs loop finishes everything
+- so even though we tried to do everything directory by directory, it ends up just opening all of the files in pipes anyway
+
+This is *resourcee contention*
+- two agents (emacs and windows) are fighting over the same file handles
+- emacs tries to work asynchronously, but Windows is too slow
+- so we have to rate-limit emacs to the speed of Windows
+
+The problem might be the cache
+- the unique names tmp- get a persistent handle
+- so we want to clear the cache at each dolist iteration
+- and also we might as well just use a persistent project name, so we don't keep adding new tmp-project-name folders

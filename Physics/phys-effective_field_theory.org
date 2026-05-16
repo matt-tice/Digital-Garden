@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       cb195e7f-59ad-4e34-9ce2-c0dbd122b43d
+:END:
+#+title: effective field theory
+#+filetags: Physics: QFT:
+
+* References 
+
+[[https://users.ph.nat.tum.de/T30f/research.html][T30f at Technische Universität]]
+
+* Summary 
+
+EFT is the state-of-the-art in dealing with physical systems that have *many different energy scales* occuring at once.
+
+You typically use perturbation theory at high energies and [[id:ae907339-c8f3-4e8e-ba95-bd1e52a1d0f4][lattice QFT]] at low energies
+
+* Heavy Quarkonium
+
+The main example of a multi-scale system in QCD
++ It's a bound state of bottom or charm quarks with their antiparticles
+
+EFTs can be obtained for HQ by integrating out degrees of freedom related to high energies
+
+Two types of EFTs are non-relativistic QCD (NRQCD) and potential non-relativistic QCD (pNRQCD)
+
+** pNRQCD
+
+At the scale of the heavy quarkonium binding energy
+
+HQ decays into a lighter quarkonium by releasing EM radiation

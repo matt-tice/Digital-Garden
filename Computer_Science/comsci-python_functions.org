@@ -1,0 +1,202 @@
+:PROPERTIES:
+:ID:       9c6dffe1-ea2b-435f-8d11-167edf52b2a4
+:END:
+#+title: python functions
+#+filetags: Python:Comsci:
+
+* References
+
+
+
+* Summary
+
+*Functions are objects*
+- so they can be assigned to variables, passed as arguments, returned, and stored in data structures
+
+*Higher order functions* take functions as inputs
+- this is used in functional programming
+
+#+begin_src 
+def fun(f, x):
+  return f(x)
+#+end_src
+
+* Decorators
+
+Functions that take other functions as arguments
+- @decorator is short for
+- function = decorator(function)
+
+#+begin_src 
+def decorator(f):
+  def wrapper(*args, **kwargs):
+     ...
+     f()
+     ...
+  return wrapper
+
+@decorator
+def funct():
+#+end_src  
+
+** Use-Cases
+
+Logging: track function calls
+
+Authentication: restrict access in certain circumstances
+
+Rate limiting: control usage per user
+
+Caching: store results
+
+Retry logic: automatically retry failed attempts
+
+** Method Decorators
+
+You can use decorators inside of classes, on methods
+
+#+begin_src 
+class MyClass:
+  @method_decorator
+  def class_method(self):
+#+end_src
+
+** Class Decorators
+
+You can actually decorate entire classes!
+
+#+begin_src 
+@dec
+class ClassName:
+#+end_src
+
+** Chaining
+
+You can apply multiple decorators to the same function
+- inner-most is applied first
+
+#+begin_src 
+@dec2
+@dec1
+def f:  
+#+end_src
+
+* Default Values
+
+#+begin_src
+  def function(x, y=3):
+#+end_src
+
+You can call this with function(1), and it will have x=1, y=3
+Or you can overwrite y, with function(1,5)
+
+Note that the *default value is only evaluated once*
+- so if you call a function multiple times, the default won't reset
+- the default will become whatever it ended up as the last time the function was called
+
+You can pass only specific variables by naming them when you call the function. The naming version is called *keywords*
+
+#+begin_src
+  def function(x, y=2, z = 5):
+  ...
+
+  function(1, z = 7)
+#+end_src  
+
+#+begin_src 
+def f(pos, /, pos_or_key, *, key):
+#+end_src
+
+The symbols =/= and =*= are optional and they tell you whether you're allowed to pass in positional or keyword arguments
+Without those symbols, you can pass everything by position or keyword
+
+** Use-cases
+
+Positional-only
+- if you don't want user to have the parameter names (ex. the names have no real meaning)
+- for API, to prevent breaking API changes if the parameter's name is modified in the future
+
+Keyword-only
+- when names have meaning and function def is more understandable when you're explicit
+
+** Tuple Arguments
+
+You can set a function to accept arbitrarily many arguments (which will be placed in a tuple)
+- use asterisk before variable name
+- these variadic arguments go *at the end of the function definition*
+
+#+begin_src 
+def f(x,y, *t):
+#+end_src
+
+You can actually call a function with a list or tuple, and /unpack/ the sequence
+
+#+begin_src 
+def f(x,y):
+
+f(*[1,2])  
+#+end_src
+
+** Dictionary Arguments
+
+#+begin_src 
+def f(x, *t, **d):
+
+f(1, 2, 3, person = 'tom', rival = 'sue')  
+#+end_src
+
+
+
+
+** Lambda Expressions
+
+
+
+** Annotations
+
+* Generator Functions
+
+They *produce iterators*
+- things like range()
+- things that a for loop can iterate over
+
+Each time the function is called, it
+- loads its current state
+- does stuff
+- saves its new state
+- returns the new state (using the =yield= keyword)
+       + when the code reaches =yield=, it returns the new state and *pauses*
+       + the next time the function is called it continues from right after the yield command
+
+
+#+begin_src 
+def fibonnaci():
+  x,y = 0, 1
+
+  while True:
+     yield x + y
+     x, y = y, x+ y
+  
+#+end_src
+
+** Benefits
+
+Saves memory since it generates on-the-fly
+
+Chain generators to process data in stages efficiently
+
+Create arbitrarily long sequences
+
+** Methods
+
+send()
+
+close
+
+** Generator Expressions
+
+The same as list comprehension, but use parentheses
+
+#+begin_src 
+sq = (x*x for x in range(1,6))
+#+end_src

@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       cae2016b-52d8-4cd8-b664-e21256c6e95e
+:END:
+#+title: Sahel
+#+filetags: :Politics:Region:
+
+
+* References
+
+
+* Summary
+
+In between the Sahara to the north and the Sudanian savannas to the south.
+
+* Politics
+
+Incredibly high government corruption, particularly in the Western region
+
+* Economics
+
+* Relationships
+
+* Military
+
+Western military assistance was contingent on African nations maintaining a sufficient degree of democratic institutions and government reform
+
+As Western forces exited the region, Russian ones replaced them
+- particularly the Wagner Group and Russia's Africa Corps
+
+** Terrorism
+
+The Sahel accounts for half of all terrorism-related deaths worldwide, [[https://www.visionofhumanity.org/maps/global-terrorism-index/#/][as of 2025]].

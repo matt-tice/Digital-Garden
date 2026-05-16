@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       b5ef8058-4abb-4470-a062-17c1309cfaec
+:END:
+#+title: character encoding
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+Back in the day, you would encode characters in a byte (8 bits)
+
+The last bit would be used as a kind of error checker (called a *parity bit*)
+- ASCII then became the standard
+- it's a 7-bit (128 letters) code
+
+UTF-8 
+- it's the standard on the web

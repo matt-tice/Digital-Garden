@@ -1,0 +1,77 @@
+:PROPERTIES:
+:ID:       6f0520a4-e746-4cb9-afb2-320d92f8a699
+:END:
+#+title: value
+#+filetags: :Economics:Stocks:
+
+* References 
+
+Whitman, Value Investing
+
+* Summary 
+
+
+
+* Valuing a Company
+
+Whitman lists 4 ways companies create value
+
+1. Earnings
+2. Free cash flow
+3. Resource conversion
+4. Access to capital markets
+
+** Earnings
+
+When these aren't part of the cash flow, they're reinvested into the business, to help expand
+
+** Cash Flow
+
+Earnings consume cash. Free cash flow happens when more money is obtained than is required to maintain the business/expand
+
+A company can use its excess money in dividends, to buy back stock, or just hang onto it
+
+** Resource Conversion
+
+Most people worry about *going-concern* analysis; they measure the company in terms of its continuing on the way it currently is. However you can profit by considering how a company can change
+
+Mergers, acquisitions, restructurings, financings, refinancings, spinoffs, change of management, management buyouts, share repurchasing, etc.
+
+The idea is to create wealth by moving around your assets and liabilities
+
+If you own a franchise and the land underneath it, you could choose to put the real estate under a different corporation/stock, or you could sell the real estate and use the cash for something else
+
+Companies that just have a large pile of cash sitting there are often targets of acquisitions. The cash represents potential energy of the company
+
+Financial companies with excess capital could invest it to generate more money
+
+A real estate company that owns a nickel mine could make a big profit selling the mine
+
+:OPINION:
+
+Be aware of companies that have poor earnings (and low prices) but hold great assets. These make great longterm investments
+:END:
+
+** Access to Capital Markets at Good Rates
+
+A company raises money through either selling shares or borrowing money
+- Things like Initial Public Offerings and private placements
+
+If a company can get debt at a rate of 5% when consumers have to pay 7%, you can create wealth. Lower financing costs translate to better cashflows
+
+
+
+* Mayer
+
+As an investment banker, Mayer focused on 3 levels of repayment of debt:
+1. Cash flow (going-concern analysis)
+2. Collateral (liquidation analysis)
+3. 
+
+* Slack
+
+Capacity (something like assets minus liabilities)
+
+Having enough cash on hand to invest when the opportunity arises, having the room to take on more debt
+
+It's about having flexibility

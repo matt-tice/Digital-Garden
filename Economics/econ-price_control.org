@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       e879adec-7904-4765-8a4b-ef980e09964b
+:END:
+#+title: price control
+#+filetags: Economics
+
+* References 
+
+* Summary 
+
+** Price Ceiling
+
+Fixes a price that you aren't allowed to charge above
+
+Consumers are able to afford the controlled goods more easily
+
+It can be inefficient
+- If supply goes down, prices want to go up; if they can't it can lead to a shortage, since the price no longer dissuades people from purchasing
+
+** Price Floor
+
+Fixes a price you aren't allowed to charge below
+
+A *minimum wage* is a price floor
+- Friedman argued that under this price floor, companies will just stop hiring unskilled labor
+

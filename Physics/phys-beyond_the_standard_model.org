@@ -1,0 +1,68 @@
+:PROPERTIES:
+:ID:       999a198a-9dac-4e8c-a3c7-7489ae5f07af
+:END:
+#+title: beyond the standard model
+#+filetags: Physics:String theory:
+
+* References 
+
+* Summary 
+
+
+
+* Metastable deSitter Vacua
+
+
+* Axions in String Theory
+
+The best attempt at a solution to the strong CP problem
+
+The problem is that the F_a (axion coupling) parameter that shows up is several orders of magnitude higher than the cosmological bounds
+
+** Strong CP Problem
+
+We can add a CP-violating interaction to the standard action of QCD
++ The coupling parameter that shows up is the Yang-Mills instanton number
+
+The *strong CP problem* is why the coupling parameter is so small  
++ Another way of thinking about this is, /why does QCD look like it preserves CP-symmetry?/
++ If the coupling parameter were larger, we would be able to see CP violation
++ And in fact, in experiment, we've never seen CP violation in QCD due to the strong force.
+       + We only have CP violations from the weak force
+
+*** Solutions
+
+1. The up quark mass is zero
+        + This seems to be false
+2. CP might be valid microscopically but spontaneously break in such a way that the coupling parameter is small
+        + This is a nice solution because it actually predicts something we can test for
+3. The coupling parameter can relax spontaneously to a small value if axions exist
+
+* Measure Problem of Eternal Inflation
+
+If we have a multiverse of infinite universes, how do we compute the ratios of universes of different types?
+
+
+* End-of-the-World Branes
+
+ETW branes are codimension 1 branes at which spacetime ends
+In particular, it implies spacetime has a boundary
+
+It's important in string theory because it's related to a number of dualities
++ For example, it shows up in compactifications of 11-dimensional spacetime
+
+* Swampland Conjectures
+
+** No Global Symmetries
+
+Conjecture: A theory coupled to gravity must have no global symmetries, and thus are broken or gauged
+
+
+** Completeness
+
+Conjecture: A gauge theory coupled to gravity must have physical states for each possible gauge charge
++ This implies that you have to work with compact Lie groups or discrete gauge groups
+
+** Swampland Cobordism
+
+Conjecture: Any quantum gravity theory compactified on a d-dimensional internal manifold has a corresponding quantum-gravity cobordism group which vanishes in degree d.

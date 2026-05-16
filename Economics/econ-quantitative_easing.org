@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       84629191-fc78-4426-b9cf-075303be1428
+:END:
+#+title: quantitative easing
+#+filetags: Economics:Keynes:Monetary Policy:
+
+
+* References 
+
+* Summary 
+
+
+Normally, in order to stimulate the economy, the central bank will lower the interest rate
+
+But what if the interest rate is already low? Conceivably we could raise the interest rate forever, but we seem to have a hard cut off at 0%
+
+** Quantitative Easing
+
+Meant to increase inflation
+
+The central bank buys bonds from the government (loaning the government money)
+- Because they buy the bonds, the price of bonds goes up (higher demand) and their yield goes down
+  - Now other people are more incentivized to spend and invest in stocks rather than buy government bonds
+
+
+Buying 5-year bonds in QE will affect interest rates on 5-year fixed-rate mortgages, for instance
+
+Buying 10-year bonds would affect more long-term things
+
+** Signals
+
+When the central bank does QE, it tells people that they're going to keep their target (policy) interest rate low for a long time
+- This provides security to busineses and banks (and consumers) in terms of the economic trajectory of the country
+
+
+
+** Reverse Auction
+
+** Settlement Balances
+
+Only the central bank can make these.
+
+The bank will create settlement balances in order to purchase the bonds
+
+* Quantitative Tightening
+
+Undoing the quantitative easing
+
+** Active QT
+
+The bonds are sold
+
+** Passive QT
+
+Bonds are allowed to mature without being replaced

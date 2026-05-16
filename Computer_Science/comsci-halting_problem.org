@@ -1,0 +1,113 @@
+:PROPERTIES:
+:ID:       1e90bfee-0f90-46c1-b9e6-9b7ffc7bdd5b
+:END:
+#+title: halting problem
+#+filetags: Computer Science
+
+* References 
+
+* Summary 
+
+There is no algorithm H such that H satisfies the following:
+
+     given any algorithm A, and input I,
+     H will return 1 if A stops when I is the input of A,
+     and 0 if A doesn't stop when I is the input of A.
+
+
+* Proof:
+
+Say there is such an H
+Define a new algorithm X:
+   - takes as input an algorithm A
+   - outputs 1 if H(A,A) outputs 0
+   - loops forever if H(A,A) outputs 1
+
+Now use as input X:
+Say the output is X(X)
+If X(X) stops then H(X,X) = 1
+But then X(X) loops forever, so X(X) doesn't stop.
+
++ Similarly if X(X) doesn't stop then H(X,X) = 0
+   so X(X) does stop, and outputs 1.
+
+
+* Discussion
+
+This is basically just a reformulation of *Russel's paradox*
+Basically all of these types of things are the same:
++ halting problem
++ russel's paradox
++ incompleteness theorem
++ diagonal argument
+
+** As Russel's Paradox
+
+We can reformulate the halting problem as follows:
+
+Associate to any algorithm A a set, as follows:
++ A_I is the set of all inputs for which A doesn't halt
+
+
+Now we'll think of the letters A,H,X as the above type of sets
+
+Given a halting problem solution H,
+H(A,A) = 0 iff A_I \notin A_I.
+
+So the set corresponding to the algorithm X
+is X_I \equiv { A | H(A,A) = 0  } \cong { A_I | A_I \notin A_I}
+This is *Russel's class*, which *isn't a set*
+
++ this is basically enough to end the argument
++ but if you like, you can continue to say
++ X_I \in X_I if X_I \notin X_I
+
+*** Full Comprehension
+
+The (potential) underlying problem in Russel's Paradox is that you assume you can construct any set you want
+
+The axiom of *full comprehension* says that given any property P, the set
+{ x | P(x) } exists
+
+There are lots of ways around this
+
+1. Restricted comprehension
+   You can only say
+   Given a set X and property P of the elements of X
+   { X | P } exists
+
+2. (there are a bunch of weaker forms of comprehension)
+
+
+*** Discussion
+
+One interesting thing about this, is that the usual way of resolving Russel's paradox --- of just saying that X is a class rather than a set, and therefore since X is defined to be { sets | ... }, X \notin X is fine and doesn't cause a contradiction --- seems a bit odd, because it corresponds to the idea that *X isn't an algorithm*
+
+But what does that mean?
+What is it then?
+
+*** Resolutions
+ 
+Russel's Paradox has a number of different possible resolutions
+
+1. Restrict the axiom of comprehension, so you can't actually define the set X
+        + if we use restricted comprehension,
+        + the corresponding algorithm approach would say
+        + there is no full halting algorithm H
+        + but that's because by definition,
+        + an algorithm has to have a /set/ of inputs
+               + it can't just be defined for everything, in the abstract
+        + but we allow a restricted halting algorithm H_R
+        + which, given a set of algorithms, can solve the halting problem for them
+          
+2. Distinguish between sets and classes
+        + in this case, I suppose you'd say
+        + that X can be defined, but it isn't an algorithm
+          
+3. Structural set theories don't allow you to define a set inherently
+-It's basically just category theory; there are /no elements truly internal to a set/
+-Instead you have morphisms/relations between sets
+
+4. Use paraconsistent logic! So you say it's actually fine that there's a contradiction
+
+** Lawvere's Fixed Point Theorem

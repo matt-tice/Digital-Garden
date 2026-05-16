@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       dbdeaa5b-282f-4662-944b-52c29d17900d
+:END:
+#+title: git
+#+filetags: Computer Science:Version Control:
+
+* References 
+
+* Summary 
+
+#+begin_src 
+git add
+git stage
+git commit -m "Message"
+git remote -verify
+git push -upstream origin main  
+
+touch .gitignore
+vi .gitignore  
+#+end_src
+
+* Terminology
+
+Repo / Repository: a project
+
+
+Commit: the state of your project at a current point in time
+
+Branches: the different flows of time
+
+* GitHub
+
+A way to host your repository online for other people to see / collaborate on
+
+Owned by Microsoft
+
+Not open-source itself.

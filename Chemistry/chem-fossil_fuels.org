@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       a0089e97-4b5e-464b-aec4-79e93cca1476
+:END:
+#+title: fossil fuels
+#+filetags: Chemistry:Industry:
+
+* References 
+
+* Summary 
+
+Coal, oil, natural gas
+
+
+Burning fossil fuels releases CO_2
+
+** Coal
+
+** Oil
+
+** Natural Gas

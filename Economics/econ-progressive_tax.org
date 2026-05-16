@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       a4c6e9f3-99a9-43f3-bdf8-bf9b9c9373e3
+:END:
+#+title: progressive tax
+#+filetags: Economics
+
+* References 
+
+/How Progressive is the US Tax System?/ Coleman, Weisbach (2023)
+
+
+* Summary 
+
+Any tax system that increases the amount of tax you pay with increasing income
+
+* Hayek
+
+Higher taxes deincentivize people from making more money
+
+He wanted a flat tax
+
+
+* Nozick
+
+Thought tax on labour was tantamount to forced labour
+
+* United States
+
+Progressivity has declined since the 1960s
+
+The top marginal tax rate was *over 90%* in the 1950s

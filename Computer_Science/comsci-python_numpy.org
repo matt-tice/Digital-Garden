@@ -1,0 +1,74 @@
+:PROPERTIES:
+:ID:       e22fe304-dbe7-439b-9fc5-dcb8330e504a
+:END:
+#+title: python numpy
+#+filetags: Computer Science:Python
+
+* References
+
+
+
+* Summary
+
+NumPy is designed for manipulating multi-dimensional arrays
+- called *ndarrays*
+
+These arrays are dynamic in size
+
+
+* ndarrays
+
+Unlike lists, they must contain all of the same data type
+
+** Creating Arrays
+
+Given a list, you can wrap it into an array
+
+#+begin_src python
+  alist = [1,2,3]
+  np.array(axlist)
+#+end_src
+
+** Record Arrays
+
+* Matrices
+
+A subclass of arrays
+
+* Math
+
+Python's built-in math library doesn't know how apply something like cos to arrays
+
+* np.indices
+
+Notoriously confusing, I think I'm starting to get what it is
+
+If you take, say (m,n) as dimensions, and do
+
+#+begin_src 
+A = numpy.indices((m,n))
+#+end_src
+
+what you'll get is an array with dimensions *2 x m x n*
+And in particular, the entry
+#+begin_src 
+(A[0, i, j], A[1, i, j]) == (i,j)
+#+end_src
+
+What is the purpose of this? I don't really know
+
+But here's something you can do with it
+- if you want a matrix whose entries are written in terms i and j, you can build that pretty quickly with this array
+
+  #+begin_src
+    # make a matrix with whose entries are the products of the indices
+
+dim = (m,n)
+A = np.indices(dim)
+
+    # we have mat[i,j] = A[0, i, j] * A[1, i, j], which can be coded as
+
+mat = np.prod(A, axis=0)    
+  #+end_src
+
+

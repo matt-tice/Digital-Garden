@@ -1,0 +1,65 @@
+:PROPERTIES:
+:ID:       513d7c73-b104-47b3-ac43-3adaf8c12225
+:END:
+#+title: private placement
+#+filetags: :Stocks:Companies:Business:
+
+* References 
+
+* Summary 
+
+A *private placement* is a sale of securities to private investors (not offered publically on the market)
+
+Usually this is done through the use of an [[id:72567ab6-de4a-42fa-a117-c07f95952606][investment bank:]]
+- the bank will purchase some amount of the shares and then sell them at a premium, pocketing the difference
+
+  
+** Stock Price
+
+Goes down, because the number of shares increases
+
+Additionally, if people are uncomfortable with the price going down, or they think that the company isn't doing well, and that's why they sought a private placement, consumers might sell off their shares at lower prices, fearing a further drop, and thus lowering the stock even more
+
+** What to do?
+
+
+* Types
+
+** Best-Efforts
+
+An [[id:d0cee555-2beb-44cd-a82c-aade94321b6a][underwriter]] agrees to acts as a middle-man in selling securities: they'll look for clients to buy the securities, but there's a contingency in place --- the actual closing of the sales will only occur if a certain condition is met
+- typically, this means that the sales will only go through if a certain minimum number of securities have been agreed to be purchased.
+
+In other words, some people might decide to purchase shares from the underwriter, but unless enough of them do, the sales won't go through and their money will be returned.
+- This gives security to the investors, since they won't be spending any money if no one else is interested in the stock
+
+Usually used for more high-risk securities, where the underwriter isn't confident of selling everything
+
+Good: underwriters receive a flat fee, so if they sell more than expected, the company gets a lot of money
+
+Bad: the company might not get anything
+
+** Bought Deal
+
+One investment bank buys all of the privately offered shares
+- The bank intends to sell the securities they purchased
+
+
+Good: all of the desired capital is raised for the company. Also usually a bank will only go this route if their confident that the security is sellable and thus not very risky
+
+Bad: the company doesn't have the chance to make any extra money, and usually has to offer the shares at a discount to get the bank to buy them all.
+
+
+
+** Brokered
+
+A hired broker sells the securities
+Can use the broker's contacts 
+
+** Non-Brokered
+
+The company sells shares to clients directly. This saves time and money, and has fewer regulations
+
+** Subscription Receipts
+
+** 

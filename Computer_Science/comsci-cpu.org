@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       8091e243-b8fe-4402-986d-68b2dd3de98e
+:END:
+#+title: cpu
+#+filetags: Computer Science
+
+* References 
+
+* Summary 
+
+
+
+* Processor Register
+
+Every processor has certain locations it can quickly access
+- These are its *registers*
+
+When a programming language tells the CPU to copy data from one variable to another, the CPU uses its registers:
+
+#+begin_src c
+  int x,y;
+  y=5;
+  x=y;
+#+end_src
+
+1. The variables x and y are assigned locations in the RAM
+2. Location y is assigned the value 5
+3. *Load operation*: The CPU will move 5 into a register,
+4. *Store operation*: move 5 from the register to location x
+
+
+* Moving Data
+
+Data movement impacts performance far more than computation on modern systems
+
+Compilers are bad at register blocking and understanding /where/ particular data is being stored
+
+In optimizing C, you can keep the number of variables used in a function fewer than there are registers in the cpu, so there's no variable spilling, and thus it doesn't matter where the data is stored (ie it's all in the cpu)
+
+
+* Reset
+
+** Reset Vector
+
+The default location the cpu will go to after a reset

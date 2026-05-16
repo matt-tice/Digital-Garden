@@ -1,0 +1,65 @@
+:PROPERTIES:
+:ID:       c7649935-99bb-4c98-bb38-3eef6706e4fb
+:END:
+#+title: abelian categories
+#+filetags: :Math:Category Theory:
+
+
+
+* Definitions
+
+
+#+begin_export latex
+\begin{definition}{}{}
+#+end_export
+
+
+
+* Lemmas
+
+#+begin_export latex
+\begin{lemma}{Abelian Cat Closed under dual}{•}
+Let $\cat{C}$ be an abelian category. Then the opposite category, $\cat{C}\op$ is also an abelian category.
+  
+\end{lemma}
+\begin{proof-lemma}
+
+Each assumption in the definition of abelian category also includes the dual requirement.
+\end{proof-lemma}
+#+end_export
+
+
+
+
+
+* Propositions
+
+#+begin_src latex
+  \begin{prop}{Equivalent Definitions of Pre-Abelian}{•}
+  Let $\cat{C}$ be additive. Then it has all kernels and cokernels if and only if it has all finite limits and colimits.
+  \end{prop}
+  \begin{proof-prop}
+
+  \newthought{If all finite (co)limits: } (co)kernels are finite (co)limits (pullbacks / pushforwards), and so we have all of these.
+
+  \newthought{If all kernels and cokernels: } We can construct equalizers and coequalizers. Let $f,g: A \to B$. The equalizer is $\ker(f-g)$:
+
+  \begin{tikzcd}
+  \ker(f-g) \arrow[r, "\phi"] \arrow[d] & A \arrow[d, "f-g"] \\
+  0 \arrow[r] & B
+  \end{tikzcd}
+  So $(f-g)\phi = f \phi - g \phi = 0$. Thus $f \phi = g \phi$. And if there is some other $\psi$ with $f \psi = g \psi$ then $(f-g) \psi = 0$ so you can form the same diagram. Then by the UP of the kernel we get a morphism. 
+
+  A dual argument holds for the coequalizer.
+
+  
+
+  Since we also have finite (co)products, this is enough to generate all finite (co)limits.
+
+  \end{proof-prop}
+
+
+
+#+end_src
+
+* Pre-Abelian Categories

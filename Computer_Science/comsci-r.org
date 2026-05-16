@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       f4928a98-eb9f-4643-8826-23ac03246e19
+:END:
+#+title: R
+#+filetags: Programming Language:Computer Science
+
+* References
+
+
+
+* Summary
+
+R is a language specifically for *statistical computing*
+Things like
+- data mining
+- bioinformatics (it's used most often here)
+- data analysis
+- data science
+
+In comparison with SQL:
+- SQL manages and queries data. There's already a database and you interact with it, alter it, etc.
+- R is for computation and data analysis
+
+* Workflow
+
+1. Import data into R
+2. Tidy the data
+3. Transform data
+4. Visualize
+5. Model
+6. Communicate

@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       bfdb0464-6a79-4bfb-85fb-d9c9b3d36a9f
+:END:
+#+title: text files
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+Bits are encoded into characters, so they're human readable
+

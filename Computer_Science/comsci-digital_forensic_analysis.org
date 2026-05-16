@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       ad0dbff8-fb98-4917-a63c-80b014a9c94a
+:END:
+#+title: digital forensic analysis
+#+filetags: Computer Science:Crime:
+
+* References
+
+
+
+* Summary
+
+
+
+* Locard's Exchange Principal
+
+Every contact leaves a trace
+
+Some of these traces might be extremely volatile and only exist for a short period
+- but usually remnants of those traces remain for a long time
+
+* Least Frequency of Occurance
+
+Malware tends to be what occurs *least frequently* on a system
+- Windows is constantly doing crap in the background
+- malware tends to do very little comparitively
+- it makes a few files and maybe some network connections
+
+So if you have a spike of activily in the file system, malware isn't likely to be occuring at that time (unless they're very clever, or very not-clever, I guess)  
+
+
+** Example
+
+In the old days, malware would be designed to quickly overwhelm the system, making it unusable
+- even to the attacker
+- this made it obvious to the victim that they were attacked
+- hackers would use /mutex/ (mutual exclusion), which was a program that checked whether a computer was already infected, so it wouldn't waste time reinfecting them
+- the mutex would store a file on the infected system, which could then be found by the forensic analyst
+
+It turned out that the mutexes that hackers used were very often unique, and so by checking the mutexes in memory for all of the running processes, you could detect malware very quickly
+
+
+* Documentation
+
+1. Document your goals
+2. The steps you take to achieve them
+
+* Live vs Postmortem Analysis
+
+In postmordem analysis you take an image of the hard drive, and perform analysis on that
+
+Live analysis is trickier because the things you do, and the things going on in the background all impact the system
+
+* GUIs
+
+They're designed to make things easier for the user and to *protect the user from themselves*
+- in particular, you need to avoid them in a lot of cases in forensic analysis, because the hackers attack by going under the hood, so you need to meet them there
+

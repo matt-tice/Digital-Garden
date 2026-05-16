@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       50611cc0-1a89-4cb5-a6d9-6e52165c8645
+:END:
+#+title: supply and demand
+#+filetags: Economics
+
+* References 
+
+* Summary 
+
+
+
+* Supply
+
+Supply-side effects can drive down growth and increase inflation
+
+* Demand
+
+Demand-side effects drive down growth and lower inflation

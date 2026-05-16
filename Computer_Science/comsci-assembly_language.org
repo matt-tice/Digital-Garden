@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       156e5c07-8d66-48c6-81eb-d959f549d325
+:END:
+#+title: assembly language
+#+filetags: Computer Science
+
+* References 
+
+* Summary 
+
+A low-level language: one step above machine language
+
+Machine language is the language of each particular machine
++ it's coded in binary
++ it depends on the system architecture
+  
+Assembly language
++ there's a *one-to-one correspondence* between assembly code and machine code
++ *assemblers* convert assembly code to machine code
+
+In other words, assembly code and machine code are isomorphic, but assembly is easier for humans to understand.   
+
+However, assembly still /isn't easy/ to understand, so other [[id:08f231e4-7eaa-4c71-bfdb-239309db2466][programming languages]] exist, which make coding easier for humans
+- Higher level languages like C will translate each line of code to multiple lines of assembly, which then get assembled into machine code
+- Depending on how the compiler does this translation, it may be more or less optimized
+
+* Directives
+
+Tell the assembler what to do
+
+Start with a period
+
+** .data
+
+You declare variables here
+
+Use a question mark to signify a variable isn't to be initialized
+
+** .code
+
+* Instructions
+
+Tell the CPU what to do
+
+** mov
+
+Moves data around
+
+mov num1, 5 ; moves the integer 5 to the memory location corresponding to num1
+
+
+* Operators

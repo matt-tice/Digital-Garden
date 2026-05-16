@@ -1,0 +1,65 @@
+:PROPERTIES:
+:ID:       c05644f8-1bd0-4306-b410-6094ab8ab42c
+:END:
+#+title: shakespeare
+#+filetags: Author
+
+Circa: 1564 -- 1616
+
+* Inspired by
+
+
+
+
+* Inspired
+
+
+
+
+* History
+
+
+* Plays : Number of Lines
+
+
+Two Gentlemen of Verona: 2233
+Taming of the Shrew: 2641
+Henry VI, Part 1: 2702
+Henry VI, Part 2: *3125*
+Henry VI, Part 3: 2932
+Titus Andronicus: 2558
+Richard III: *3718*
+Edward III: 2605
+Comedy of Errors: 1771
+Love's Labour Lost: 2758
+Love's Labour Won:
+Richard II: 2803
+Romeo and Juliet: *3093*
+Midsummer Night's Dream: 2165
+King John: 2648
+Merchant of Venice: 2662
+Henry IV, Part 1: *3041*
+Merry Wives of Windsor: 2612
+Henry IV, Part 2: *3255*
+Much Ado About Nothing: 2581
+Henry V: *3227*
+Julius Caesar: 2636
+As You Like It: 2670
+Hamlet: *4024* (!)
+Twelfth Night: 2482
+Troilus and Cressida: *3486*
+Measure for Measure: 2839
+Othello: *3560*
+All's Well that Ends Well: 2927
+King Lear: *3499*
+Timon of Athens: 2512
+Macbeth: 2477
+Antony and Cleopatra: *3573*
+Pericles, Prince of Tyre: 2464
+Coriolanus: *3824*
+The Winter's Tale: *3362*
+Cymbeline: *3753*
+The Tempest: 2275
+Cardenio:
+Henry VIII: *3239*
+The Two Noble Kinsmen: *3220*

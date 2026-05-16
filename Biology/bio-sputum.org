@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       d67cef96-5b88-41d6-a716-7155deba1870
+:END:
+#+title: sputum
+#+filetags: Medicine:Biology:
+
+* References 
+
+* Summary 
+
+Mucus that is coughed up from *lower airways*
+
+* Tests
+
+
+** Acid-Fast Bacillus Tests
+
+AFB are a kind of bacteria that causes *tuberculosis*
+
+Acid-fastness means that they react in a certain way to certain staining techniques

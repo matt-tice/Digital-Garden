@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       6c30d0a2-eb82-48b8-bd07-88b172a9ead3
+:END:
+#+title: context-free grammar
+#+filetags:Linguistics
+
+* References
+
+
+
+* Summary
+
+
+#+begin_src 
+\begin{definition}{Context-Free Grammar}{•}
+$G = (V, T, R, \alpha)$
+
+\begin{itemize}
+\item \fbox{Variables: } $V$ a finite set
+
+\item \fbox{Terminals: } $T$ a finite set with $V \cap T = \varnothing$
+
+\item \fbox{Rules: } $R \subseteq V \times F_M(V \coprod T)$ a finite set
+
+\item \fbox{Start variable: } $\alpha \in V$
+\end{itemize}
+\end{definition}
+
+
+#+end_src

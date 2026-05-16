@@ -1,0 +1,329 @@
+:PROPERTIES:
+:ID:       29f6e7e7-715c-4535-91a2-ea286933daa2
+:END:
+#+title: javascript
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+Dynamically typed
+Syntax is based on C
+
+
+* Scope
+
+var: declares a variable locally (or globally if not in any function)
+
+let: declares block-scope variable
+- ex. its scope is the if/for/while block it's contained in
+
+const: declares block-scope constant
+- constants *can't be reassigned* but they *can be mutated*
+- ex. adding element to an array
+
+* Data Types
+
+** Boolean
+
+** null
+
+*Lower case*
+
+** undefined
+
+** Number
+
+** BigInt
+
+Arbitrary precision
+
+** String
+
+** Symbol
+
+Immutable
+
+** Object
+
+*** Promise
+
+Represents the eventual completion (or failure) of an asynchronous operation, and its resulting value
+
+* Literals
+
+The values that variables take
+
+** Arrays
+
+#+begin_src
+var people = ["Tim", , "John", ];
+#+end_src
+
+Putting multiple commas allows you to create /empty items/
+- put =/* empty /*= in the empty items, to inform the reader
+
+Also *final commas are ignored*
+- this is useful for writing something like
+
+#+begin_src 
+var people = [
+  "John",
+  "Tim",
+  "Greg",
+];
+#+end_src  
+
+so if you add more elements to the array, you don't have to place a comma on a line that previously didn't have one
+
+** Booleans
+
+** Numbers
+
+** Objects
+
+Basically dictionaries
+
+#+begin_src 
+const colours = {
+  key: value
+};
+#+end_src
+
+** Regex
+
+** Strings
+
+* Control Flow
+
+*Block statements* are things contained in { }
+
+** if...else
+
+#+begin_src 
+if (condition) {
+  statement;
+} else if (condition) {
+  statement;
+} else {
+  statement;
+}
+#+end_src
+
+** switch case
+
+#+begin_src 
+switch (expression) {
+  case label:
+    statement;
+    break;
+  case label:
+    ...
+  default:
+    defaultStatement;
+}
+#+end_src
+
+default is only done if /no case matches/
+
+* Operators
+
+** Await
+
+Can only be used inside of an async function or at the top level of a module
+
+Causes the program to pause until the relevant promise is completed
+
+* Errors
+
+
+Use =try= and =catch=
+
+=throw= raises an exception
+=finally= always executes
+- but it will execute after all of the catch blocks
+- but if any of the catch blocks have a return, the return will execute after the finally
+
+#+begin_src
+  try {
+  ...
+} catch (error) {
+  
+} catch (error) {
+  
+} finally {
+  
+}
+
+#+end_src
+
+#+begin_src 
+throw ErrorName("Error Message");
+
+...
+console.error(Error.name);
+console.error(Error.message);  
+#+end_src
+
+* Time
+
+** Set Interval
+
+Instead of doing a count down, JS will tell the system to notify it in X Minutes
+The process then gets suspended
+
+
+#+begin_src 
+function startClockSync() {
+  const now = new Date();
+  const minutes = now.getMinutes();
+  
+  // Calculate minutes until the next :30
+  let delayMinutes;
+  if (minutes < 30) {
+    delayMinutes = 30 - minutes;
+  } else {
+    delayMinutes = (60 - minutes) + 30;
+  }
+
+  // Convert to milliseconds
+  const delayMs = delayMinutes * 60 * 1000;
+
+  // Wait for the specific "sync" time
+  setTimeout(() => {
+    triggerPopup(); // Show the first one
+    
+    // After the first sync, repeat every 60 minutes
+    setInterval(triggerPopup, 3600000); 
+  }, delayMs);
+}
+
+function triggerPopup() {
+  const popup = document.getElementById('reminder');
+  popup.classList.add('show');
+  alertSound.play().catch(() => {});
+  setTimeout(() => popup.classList.remove('show'), 10000);
+}
+
+startClockSync();
+
+#+end_src
+
+* Resource Saving
+
+SVGs and Icon Fonts are much smaller and faster  than pngs or jpgs
+
+Don't use gaussian blurs (backdrop-filter: blur()  )
+- use solid colours or semi-transparency (rgba)
+
+Gaussian blurs basically look at the surrounding pixels to figure out how to colour one single pixel
+Semi-transparency just looks at a single pixel on the layer above/below the target pixel
+
+* Arrow Functions
+
+* React
+
+Declarative rather than imperative
+
+Encourages you to design a bunch of small components
+
+Creates a virtual DOM
+- React compares the changed virtual DOM to the real one and then only edits the parts in the real one that have changed
+- the speedup is based on the idea of *Reflow*
+
+  
+** Reflow
+
+Whenever you change the real DOM, the browser has to recalculate the entire page. This is Reflow
+- so if 10 things change, the browser reloads 10 times
+
+The virtual DOM makes all 10 changes first (assuming their caught in the same *batch*) in a JS object (which is fast) and then sends a single update
+
+** Batching
+
+React sends updates when the current task is finished
+- if multiple updates all happen inside the same function, React will send those updates all in one
+
+Browsers try to refresh every 16ms (60fps)  
+
+** Components
+
+They return *markup*
+- always start with a Capital (distinguishes them from html tags)
+
+#+begin_src 
+export default
+#+end_src
+
+Specifies the main component of the file
+
+Can be functional or object based
+
+
+*** Event Handlers
+
+You can place functions into your components, for things like onClick{function-when-clicked}
+
+*** Hooks
+
+Used in functional components
+
+They start with the =use= keyword
+- can only be called at the top of components (or other Hooks)
+
+
+**** Use State
+
+You can declare state variables inside of components
+
+#+begin_src 
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  // sets the initial count to 0
+
+  function handleClick() {
+  setCount(count + 1);
+}
+}
+
+  
+#+end_src
+
+useState gives you two things:
+1. the current state (count)
+2. a ways to update the state (setCount)
+
+**** Props
+
+Normally when you have a state, it affects only the component it's attached to
+- so if you define different buttons, that each inherit a counter, they'll all have different counts that work independently
+
+To make them use the same state, you first move the hook into the closest component containing them. Then you call =count= and =setCount= as variables (called *props*)
+
+***** Prop Drilling
+
+***** Key Prop
+
+** Classes
+
+CSS classes are denoted by *className*, rather than class.
+
+** JSX (JavaScript XML)
+
+They have tags
+The browser can't read JSX, so it has to be passed to a /transpiler/, which converts it into HTML + JS
+
+** Router
+
+
+** Life Cycle
+
+1. Mounting
+2. Updating
+3. Unmounting
+
+

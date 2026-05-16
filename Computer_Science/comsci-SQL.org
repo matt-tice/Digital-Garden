@@ -1,0 +1,351 @@
+:PROPERTIES:
+:ID:       e5b2ddc8-75ea-4a65-88cb-a484ae8556f6
+:END:
+#+title: SQL
+#+filetags: ComSci
+
+* Introduction
+
+It's basically a fancy version of Excel.
+
+Idea : You take a database and use SQL commands in order to interact with it
+
+
+Temporary Tables : this is basically a buffer in Emacs.
+- If you want to preserve data integrity, it's better to import first into a temporary table, verify the data, and then import it into the actual final table
+- For speed-up you can also import part of the table first into a temporary table, and then look at a subtable
+
+Window functions : These allow you to take data from a selection of rows and return some values in a new column, for each of those rows
+- ex. give the running total ; give the ranking in terms of largest numerical value
+
+CETs : These are just what you call functions in SQL
+
+
+
+
+
+* Queries
+
+
+** Transactions
+
+Collections of queries
+- the point is that they either all get applied, or none of them do
+- this ensures data integrity
+
+BEGIN TRANSACTION name
+
+query1
+...
+queryN
+
+
+*** Commit / Rollback / Savepoint
+
+COMMIT: Does the actual queries on the database
+
+ROLLBACK: Undoes the queries you just did (can only be used if you *haven't committed*)
+
+SAVEPOINT: Creates checkpoints that you can rollback to (again, this only works if you *haven't committed*)
+
+RELEASE SAVEPOINT: Removes a savepoint
+
+*** CTEs
+
+Common Table Expressions
+
+These are basically function versions of transactions
+- you give a transaction a name, which creates a table that you can repeatedly call
+
+** Order
+
+1. From and Join
+2. Where
+3. Group by
+4. Having
+5. Select
+6. Distinct
+7. Order by
+8. Limit / Offset
+
+** Select / From
+
+** Where
+
+** Order by
+
+** Limit / Offset
+
+** Join
+
+The join is a certain kind of [[id:7984b13c-f903-4d99-b047-73e544683acd][pullback]] on the sets that describe the tables
+- If table A and table B have data of the form (r^A_i, c_{i1}^A, ... c_{in}^A), (r^_{j}B, c_{j1}^B, ... c_{jm}^B), then the join of T_A on T_B at columns c_a^A \wedge c_b^B has data
+- { (r^A_i, c_{i1}^A, ... , c_{in}^A, r^B_j, c^B_{j1}, ..., c^B_{jm} ) | c^A_{ia} = c^B_{jb} }
+
+*** Inner Join
+
+
+returns rows when there is a match in both tables
+
+*** Left Join
+
+Keeps rows from A even if they have no matching row in B
+- ex. if A is /employees/ and B is /parking spots/ then left join will include those employees who don't have a parking spot yet
+
+The *right join* is the dual
+
+The *full join* keeps all rows, regardless of matching
+
+
+*** Self-Join
+
+You can join a table onto itself. This is typically done in the case of /hierarchical data/
+- say you have one column that's employee ID, and another that's the ID of their boss
+- then you can join on those columns, and get a new table that describes the hierarchical relationship
+- for each employee, you'll get all of their subordinates
+
+** Group by
+
+Aggregate functions like MAX(), SUM(), etc.
+
+HAVING lets you filter the groups
+
+* Tables
+
+** Constraints
+
+When you create a table, you usually impose constraints on the kind of data that does into it
+- this maintains data integrity
+
+NOT NULL: prevents column from taking null values
+
+UNIQUE: all entries in the column must be unique
+
+PRIMARY KEY: entries in the column must be both unique and not-null
+
+FOREIGN KEY / REFERENCES: entries in the column must reference an *existing record* in another table (usually by a primary key on the other table)
+- these are very common
+- they basically make sure that you don't get broken links: if something is referenced, it actually exists
+- so for example, if you already have a table that contains ID numbers of employees, and you're making a new table that's also going to include ID numbers, you would make the new ID numbers foreign keys, so they're required to match with the original numbers.
+
+CHECK: all entries in the column must satisfy a given condition
+
+DEFAULT: sets a default value in all the entries in the column, if no other value is specified
+
+
+
+** Modifying
+
+
+Insert Into
+Values
+
+
+Update
+Set
+Where
+
+Delete From
+Where
+
+Alter Table
+Rename to
+
+** Adding Columns
+
+Alter Table
+Add/Drop
+
+
+
+
+
+** Temporary Table
+
+Stores data temporarily
+Automatically deleted when session or transaction ends
+
+Temp table names start with # (it automatically makes them temp)
+- local tables start with #
+       + accessible only within the session / transaction that created it
+- global tables start with ##
+       + accessible by all sessions; only closes when all sessions that are currently using it stop
+       + meant for sharing data
+
+** Pivots
+
+A pivot is something like a transposition; it swaps rows and columns
+
+
+
+** Triggers
+
+You can set a trigger so that something happens when you do something to a table
+- usually used for *data integrity*
+
+So if you don't want someone to be able to modify a table
+- create a trigger that does a ROLLBACK whenever someone updates, adds to, etc. the table
+
+Or you could have a trigger that goes off when something is modified
+- inputs a timestamp of the update and who updated it
+
+You can choose whether the action of the trigger is applied before or after the thing the user is doing  
+
+*** When not to use
+
+
+
+** Stored Procedure
+
+These are basically CTEs that are more flexible
+- SPs are precompiled (so they run quickly)
+- they aren't temporary
+- they allow parameters
+
+They're very similar conceptually, but they have different interpretations
+- CTEs are tables
+- SPs are a collection of commands (this is why the SP has parameters)
+- So the SP will be more like a classic function; it says here are the variables/parameters and here's what I want you to do 
+- CTEs are like that, but you don't have variables, because you explicitly set them in the process of creating the CTE
+- so a CTE is like a function / SP /evaluated at a point/
+
+* Optimization
+
+** Indexes
+
+Basically an index is made up of a copy of the column in the table, and corresponding pointers to the table
+
+(copy_entry , pointer)
+
+The entries of the index are then /sorted/.
+
+The point is that now, if you want to search that column you can do a *binary search* rather than a linear one.
+
+*** Implementation
+
+They're usually either
+- B trees
+- Hash tables
+
+*** Cost
+
+You have a memory cost of storing the index
+And a time cost of the sorting that the index does
+
+*** Types
+
+Clustered indices
+- essentially just reorder the actual table according to the column you chose
+       + consequently, you can only have one clustered index per table (any other would destroy the original index)
+
+Non-clustered indices are the usual version of indices
+
+* Cursors (Avoid)
+
+Cursors are *very slow*
+- Avoid them
+- I'm not sure why they're even on the list of things to learn, you basically never use them
+
+They basically just give you a way of doing operations on each row individually
+- so you take a table, which you pass into your cursor
+- then you move to specific rows in the cursor-table, and do whatever
+
+
+** Implicit Cursors
+
+Insert, Update, Delete all create implicit cursors
+
+** Explicit Cursors
+
+User-defined cursors
+
+Declare
+Cursor For
+    Select
+    From
+
+Open
+
+Fetch { First/Last/Next/Prior/Absolute n/Relative n }
+From cursor_name
+Into
+
+Close
+Deallocate cursor_name
+
+
+
+* Online Transaction Processing (OLTP)
+
+Processes user requests in real-time
+- with ACID 
+- fast
+
+Things like ATMs, or Amazon's order system
+
+Normalized data schemes
+
+* Online Analytical Processing (OLAP)
+
+Designed for data analysts to do data transformations and processing
+
+Things like fraud detection
+
+** OLAP (hyper)Cube
+
+A multi-dimensional array of data
+
+*Slices* are hyperplanes of the cube (you fix one dimension's value, to get an (n-1)-dim subset )
+
+*Dices* are made from slices
+- you pick a particular dimension and several values to evaluate that dimension at
+- then you collect all the corresponding hyperplanes into an n-dimensional box
+
+*Drill up/down*
+
+*Roll-up*
+
+*Pivot* 
+
+* Difficulty Levels
+
+
+:PERSONAL:         
+
+Intermediate
+
+- [X] indexes (clustered, non-clustered)
+- [X] subqueries
+- [X] CTEs
+- [X] joining a table on itself
+- [X] group-by with aggregate functions
+- [X] pivots
+- [X] OLAP vs OLTP
+- [X] triggers (when to use/not use)
+- basic profiling like reading a log
+- transactions and layering them to handle failures up the stack
+- basic Window Functions
+- procedural vs declarative styles
+- extensions PSQL, TSQL
+- design database in 3rd normal form
+  
+Advanced
+
+- optimization
+- complex window Functions
+- UDFs
+- when and how to denormalize adtabase
+- Database Architecture
+- can read an execution plan
+- can tune queries with execution hints without messing up performance
+- profile / use traces for identifying and understanding stats of executions
+- performance counters and their database load
+- can design OLAP cube and do advanced data mining with it
+- trigger safety
+- distributed transactions, even with layers
+- can set up a database for high availability, data recovery, etc
+- understands how DB engines work internally
+- data warehousing and reporting
+- variants of NoSQL
+
+:END:

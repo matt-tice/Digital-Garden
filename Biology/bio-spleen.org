@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       db36d8da-c189-46d1-ac7a-4dd523c66f0b
+:END:
+#+title: spleen
+#+filetags: Medicine
+
+* References 
+
+* Summary 
+
+
+A blood filter: removes old erythrocytes and holds a reserve of blood in case of hemorrhagic shock
+It also recycles iron
+Essentially a large lymph node
+
+
+
+
+
+* Location
+
+Left side of the body, attached to the stomach
+Left upper quadrant
+
+* Diseases
+
+** Hypersplenism
+
+*** Splenomegaly
+
+Enlargement of the spleen
+

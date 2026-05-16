@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       d0cee555-2beb-44cd-a82c-aade94321b6a
+:END:
+#+title: underwriter
+#+filetags: :Economics:Stocks:
+
+* References 
+
+* Summary 
+
+An *underwriter* (or book-runner) is someone who evaluates risk for the purpose of approving or denying a loan, purchase, etc.

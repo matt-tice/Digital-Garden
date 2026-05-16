@@ -1,0 +1,135 @@
+:PROPERTIES:
+:ID:       37e5c94c-38d5-4fde-9db7-41e8b7cf170a
+:END:
+#+title: nuclear power
+#+filetags: Engineering
+
+* References 
+
+* Summary 
+
+
+
+* Coolants
+
+
+
+** Water-cooled
+
+This is the most common reactor type
+
+Max temp: 350C
+Efficiency: 32--34% (for heat to electricity conversion)
+
+*** Advantages
+
+Everyone knows how to make them
+Easy to acquire parts
+Regulations are streamlined
+Water is easy to work with
+
+*** Disadvantages
+
+Water has a low boiling point
+Typically you want the reactor to work above 300C
+In order to use water, you need to operator the reactor at a /very high pressure/
+PV = nRT
+
+The high pressure requires more expensive pressure vessels, and increases the danger of leaks
+
+*** Pressurized Water Reactor (PWR)
+
+Water is kept at *150x atmospheric pressure*
+Water is the neutron moderator
+
+Reactor must be shutdown while refueling
+
+*** Pressurized Heavy Water Reactor (PHWR)
+
+Uses heavy water as coolant and moderator
+Heavy water absorbs fewer neutrons, allowing natural uranium to be used as fuel
+
+Reactor can be refueled while it operates (continuous refueling)
+
+*** Boiling Water Reactor (BWR)
+
+Water is kept at *75x* ap
+
+Water is allowed to boil, and is sent directly to the turbine --- there's no secondary coolant
+
+The water also serves as the neutron moderator
+
+Reactor must be shut down while refueling
+
+*** Light Water Cooled Graphite Moderated Reactors (LWGR)
+
+Water coolant boils and is primary coolant
+
+Graphite is the neutron moderator; it absorbs fewer neutrons
+
+Continuous refueling
+
+
+** Gas-cooled
+
+Can be operated at a higher temperature
+This leads to higher energy conversion efficiency
+
+Max temp: 800--850 C
+Efficiency: 40--50%
+
+CO2 or He is used for coolant
+Graphite neutron moderator
+
+** Metal-cooled
+
+Low pressure
+
+Coolants: Na, Pb, lead-bismuth
+
+These coolants aren't good at moderating neutrons
+So the core has a lot of fast neutrons
+
+These fast neutrons can actually be used to *create new fuel*
+
+*** Disadvantages
+
+Lead-bismuth creates radioactive material
+Lead / lead-bismuth are heavy and corrosive at high temperatures
+
+
+** Salt-cooled
+
+High temp allowed, high efficiency
+Low pressure
+
+*** MSR
+
+*** Fluoride salt high temperature reactor (FHR)
+
+* Plant Design
+
+
+The reactor vessel contains the core
+
+The reactor core contains the nuclear fuel
+Primary coolant is circulated through the core. The heat goes into the coolant, and is transferred to the steam generator
+
+The steam generator is a dense bundle of metal tubes surrounded by the *secondary coolant* (typically water)
+The 2nd coolant boils, producing steam, which goes into a turbine connected to a generator
+
+The turbine turns, uses EM induction to produce electricity, which goes to the power grid
+
+The steam that exits the turbine is sent into a condenser, converting it back into water, which is then sent back into the 2nd coolant area
+
+The cooling of the condenser is provided by an /external water source/, typically a river, lake, or ocean. But it can also be done using cooling towers, which cool using the atmosphere
+
+Control rods absorb neutrons. By pulling them in/out of the core, you control the amount of fission happening
+
+Neutron moderators can slow down the speed of neutrons, turning them into *thermal neutrons*. This can help the fuel work more efficiently. Reactors that have these moderators are called *thermal reactors*
+
+Uranium needs thermal neutrons, but something like plutonium doesn't
+Plutonium reactors are called *fast reactors*
+
+Fast reactors actually can't use water as a primary coolant, because it slows the neutrons too much
+

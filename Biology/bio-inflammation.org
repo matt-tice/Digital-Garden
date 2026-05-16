@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       89db38a0-0c02-4ab0-aee5-a9b526431852
+:END:
+#+title: inflammation
+#+filetags: Medicine
+
+* References 
+
+* Summary 
+
+
+
+* Treatment
+
+
+** Dexamethasone
+
+Reduces inflammation
+
+Long-term use can cause *thrush*

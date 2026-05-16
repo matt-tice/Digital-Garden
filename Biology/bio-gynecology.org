@@ -1,0 +1,101 @@
+:PROPERTIES:
+:ID:       32ba4e54-a051-46c2-b41c-cc104a18911d
+:END:
+#+title: gynecology
+#+filetags: Medicine
+
+* References 
+
+* Summary 
+
+
+Related to [[id:e63f3246-65c4-4050-b096-20471f2e6ad5][obstetrics]]
+
+* Body Parts
+
+** Vulva
+
+The external part of the female reproductive system
+
+*** Clitoris
+
+*** Labia
+
+*** Mons Pubis
+
+*** Vulval Vestibule
+
+*** Urinary Meatus
+
+*** Vaginal Opening
+
+*** Hymen
+
+** Vagina
+
+
+
+
+
+** Cervix
+
+** Uterus
+
+** Fallopian Tubes
+
+** Ovaries
+
+** Vestibular Glands
+
+* Periods
+
+Also called menstruation
+
+Caused by falling [[id:d8c1a015-a733-4ae8-92b5-74f7a65290d0][progesterone]]
+
+Estrogen
+
+
+
+** Menstrual Fluid
+
+Often called "blood", it's in fact more general. Half of it is blood, the rest is mucus, vaginal secretions, and endometrial tissue
+
+Usually about 10--80ml / month
+
+Blood clots are common during menstruation
+
+Plasmin, contained in the endometrium tends to inhibit blood clotting
+
+
+** Iron
+
+The amount of iron lost in menstral fluid is typically very small.
+Most women with iron deficiency have a *gastrointestinal disease*
+
+* Diseases
+
+Cancer and pre-cancerous diseases of the reproductive organs including ovaries, uterus, cervix, vagina, and vulva
+
+** Incontinence of urine
+
+
+** Amenorrhoea
+
+Absence of periods
+
+** Endometriosis
+** Dysmenorrhoea
+
+Painful menstral periods
+** Infertility
+** Menorrhagia
+** Prolapse of pelvic organs
+** Vaginitis
+
+Infections of the vagina (vaginitis), cervix and uterus (including fungal, bacterial, viral, and protozoal)
+** Pelvic inflammatory disease
+** Urinary tract infections
+** Polycystic ovary syndrome
+** Premenstrual dysphoric disorder
+** Post-menopausal osteoporosis

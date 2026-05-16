@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       60b83ab9-91be-4641-8976-0abfd2a65646
+:END:
+#+title: dynamical systems
+#+filetags: Math
+
+* References
+
+
+
+* Summary
+
+A *dynamical system* is a set X and a function f: X \to X
+

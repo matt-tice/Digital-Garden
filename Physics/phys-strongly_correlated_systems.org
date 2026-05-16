@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       ae820549-8514-4cc4-a8d8-5faac12c85cf
+:END:
+#+title: strongly correlated systems
+#+filetags: Physics
+
+* References 
+
+* Summary 
+
+
+
+* Phase Diagrams of QCD
+
+* Ultracold Gases
+
+* Non-equilibrium Evolution of Quantum Systems
+
+* Quantum Gravity
+
+* UV Completions of the Standard Model
+
+* Lattice Gauge Theory
+
+* Topological Aspects of QFT
+
+* Conformal Field Theory

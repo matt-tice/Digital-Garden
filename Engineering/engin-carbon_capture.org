@@ -1,0 +1,48 @@
+:PROPERTIES:
+:ID:       e7b24c1b-a063-42e6-baef-97cc6b651ff8
+:END:
+#+title: carbon capture
+#+filetags: Engineering:Green Tech:
+
+* References 
+
+* Summary 
+
+
+
+** Pre-combustion Capture
+
+** Oxy-fuel Combustion
+
+** Post-combustion Capture
+
+
+* Techniques
+
+
+** Chemical Absorption
+
+Most common
+
+Aqueous solution: alkanolamine, potassium carbonate
+
+Solution reacts with CO2
+
+*** [[id:51ad8fe7-091b-451b-89a9-d80a22e4d431][Amines]]
+
+Three types
+
+** Chemical Adsorption
+
+
+
+** Physical Adsorption
+
+** Cryogenic Distillation
+
+Uses cooling and condensation
+
+Energy intensive
+
+** Membrane Separation
+

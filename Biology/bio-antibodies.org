@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       9cba7e0b-ddc4-4e49-9261-2c01e57ebe05
+:END:
+#+title: antibodies
+#+filetags: :Biology:Cells:
+
+
+* References
+
+
+* Summary
+
+Antibodies are another word for *immunoglobin*
+
+Y-shaped
+
+Part of the adaptive immune system
+
+* Types
+
+There are 5 isotypes of antibodies
+
+** IgA
+
+Has to do with immune system of mucous membranes. The IgA producing cells make up over 80% of all Ig-producing cells. But IgA only makes up about 15% of your antibodies
+
+** IgD
+
+25% of your antibodies
+
+** IgE
+
+Least abundant of the antibodies (0.05%)
+
+Only found in mammals.
+- made by *plasma cells*
+
+Plays an important role in *type 1 hypersensitivity*  
+
+** IgG
+
+The most common antibody in *blood circulation*
+
+Created and released by *plasma B cells*
+
+** IgM
+
+The largest antibody.
+
+It appears first in response to an antigen.
+
+Mainly created in the *spleen*

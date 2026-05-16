@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       f2735156-8b38-43fe-9337-c6f4e07ff448
+:END:
+#+title: banks canada
+#+filetags: Economics:Banks:Canada
+
+* References 
+
+
+* Summary 
+
+* Bank of Canada
+
+** 1934
+
+/Bank of Canada Act/ establishes the central bank
+It is originally publically owned
+
+** 1935
+
+The bank's original goal is to maintain a fixed exchange rate
+
+** 1938
+
+The bank becomes a Crown corporation
+
+
+** 1962
+
+Again the bank's goal becomes to maintain the exchange rate
+
+** 1975
+
+The goal becomes to fight inflation by controlling money growth
+
+** 1991
+
+The goal is to target a specific inflation rate
+
+** 1995
+
+An inflation rate of 2% is agreed upon by the Bank and the government
+

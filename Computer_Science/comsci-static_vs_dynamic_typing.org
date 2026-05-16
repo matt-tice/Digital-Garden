@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       07e6a08d-fc7d-48e0-8a98-bbc9ae1b744e
+:END:
+#+title: static vs dynamic typing
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+
+
+* Static
+
+All types are validated /before/ the program runs
+
+Since the data types are all known, the compiler can optimize for them
+
+** Languages
+
+- C
+- C++
+- C#
+- F#
+- Go
+- Pearl
+- Rust
+- Java
+- Haskell
+- Scala
+- Fortran
+
+* Dynamic
+
+Stores data types at runtime
+
+More flexible
+
+:THOUGHTS:
+- although I would say that's only true if you don't know what you're doing: if you know what you're trying to do, you should in-particular know what types your variables are
+:END:
+
+** Just in Time Compilation
+
+** Languages
+
+- Python
+- Javascript
+- Ruby
+- Lisp
+- Powershell
+- R
+

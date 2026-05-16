@@ -1,0 +1,54 @@
+:PROPERTIES:
+:ID:       79b0bc4c-9d1a-415c-a7ec-c95511390afb
+:END:
+#+title: currency
+#+filetags: Economics
+
+* References 
+
+* Summary 
+
+ Higher interest rates increase currency values
+ - it attracts foreign investment
+ - foreign investment needs the currency of the country they're investing in, driving up the demand, and thus value
+
+* Gold Standard
+
+
+
+* Exchange Rate
+
+** Floating Rate
+
+Exchange rates are determined by market forces.
+- Because of this, countries can manipulate their currency's value by buying/selling their reserves
+
+Gives monetary independence and greater flexibility in exchange for lack of stability
+
+Are better at weathering economic shocks and business cycles
+
+** Fixed (Pegged) Rate
+
+Nowadays we have several floating currencies, for major countries, and everyone else is fixed to them
+
+Often a country will maintain the rate of its currency by holding a reserve of its currency --- if the rate gets too high, they sell their currency on the market for some other currency, increasing supply. If the rate is too low, they buy up their currency, reducing supply, by selling their reserves of other currencies
+
+*** Fixing to a Currency
+
+Gives rate stability for specific trading partners
+- if you're pegged to the USD, every time you trade with them, your money will be worth the same
+
+Businesses like this and will work with their partner country
+
+However, this comes at the cost of not being in charge of your own currency rate
+
+
+*** Gold Standard
+
+Currency is pegged to gold
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       b9625aab-3898-4414-88fe-1385c4d9e352
+:END:
+#+title: internet
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+The *World Wide Web* is the collection of information connected by the *internet* (a collection of computers throughout the world)
+

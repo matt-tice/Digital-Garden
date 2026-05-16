@@ -1,0 +1,73 @@
+:PROPERTIES:
+:ID:       90693255-6072-44fd-91bb-b688d6d3f1fb
+:END:
+#+title: ammonia
+#+filetags: Chemistry:Biology:Inorganic:Compound:Nitrogen:Hydrogen:
+
+* References 
+
+* Summary 
+
+Formula: NH_3
+
+** Traits
+
+- Colourless
+- Gas
+- Toxic
+- Has a very pungent smell
+
+** Uses
+
+Used in fertilizers, fridges, bombs, cleaning products
+
+* Agriculture
+
+
+** Haber Process
+
+This is the industrial way of producing ammonia. The reaction is
+
+N_2 + 3 H_2 \leftrightarrow 2 NH_3
+
+$\Delta H^{\circ}_{298 K} = -92.28$ [[id:6c972bac-192d-4e80-b4ac-662bc1683657][kJ / mol]] of N_2
+
+*** Reaction
+
+The reaction is exothermic: it releases around -93 kj/mol of N_2
+- this isn't that much
+
+But /starting the reaction/ is *very energy intensive*
+- accounts for 1.5% of global energy consumption and 3% of global carbon emissions.
+- This is mainly due to breaking the N_2 triple bond (which is around *945 kJ/mol*)
+       + this requires heating nitrogen to around 450^\circ C
+- But it gets worse: [[id:083ecb8a-7318-428e-8e3f-b409a154a552][producing hydrogen]] is tremendously expensive
+
+*** Economic Impact
+
+The Haber process accounts for around 4% of natural gas consumption globally
+- because ammonia is essential for agriculture, impacts on the [[id:b39040b9-3ae9-413a-b661-c8a68276d69f][gas sector]] can shock the agricultural sector.
+
+
+* Human Body
+
+Being toxic, ammonia is removed from the body through the urinary system, in the form of dissolved urea in urine
+
+Ammonia is produced in *nitrogen fixation*
+
+** Nitrogen Fixation
+
+A process which converts N_2 \to NH_3
+
+Done by enzymes called *nitrogenases*.
+
+*** Nitrogenase
+
+Nitrogen is essential for life. It shows up in a lot of important chemical compounds. But when it does, it's often /a single nitrogen/ bonded to something else.
+- The problem (for living things) with N_2 is that its triple bond is ridiculously strong, so living things have a hard time breaking it down into individual nitrogens that they could use.
+- Nitrogenase can break N_2 down.
+
+In fact nitrogenases are the /only known enzymes/ that can do nitrogen fixation.
+- So obviously, they're incredibly important for us.
+
+Nitrogenases are produced by certain bacteria, like *cyanobacteria* and *rhizobacteria*.

@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       bf364954-d272-4e43-ad60-1cc9700e2b50
+:END:
+#+title: power plants
+#+filetags: Engineering
+
+* References 
+
+* Summary 
+
+The goal of a commercial power plant is to *produce heat*
+
+Coal, gas, and nuclear plants all do this. The difference is in how the heat is produced
+
+** Coal
+
+Coal is burned, producing heat
+
+** Gas
+
+Gas is burned, producing heat
+
+** Nuclear
+
+Fission is performed
+
+* Basic Design
+
+** [[id:37e5c94c-38d5-4fde-9db7-41e8b7cf170a][Nuclear Power]]
+
+1. Nuclear fission produces heat
+2. The heat is picked up by a coolant
+3. The coolant cycles around, and goes to a steam generator
+4. The steam generator picks up the heat, through its secondary coolant
+5. The secondary coolant evaporates, turning into steam that turns a generator
+6. The generator produces electricity
+7. The steam is sent into a condenser, which cools it, either using cooling towers, or a large water source like a lake
+8. The cooled steam becomes water and is sent back into the secondary coolant area
+

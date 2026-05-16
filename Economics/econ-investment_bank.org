@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       72567ab6-de4a-42fa-a117-c07f95952606
+:END:
+#+title: investment bank
+#+filetags: :Economics:Banks:Investments:Stocks:
+
+* References 
+
+* Summary 
+
+An *investment bank* facilitates large-scale financial transactions between corporations and financial markets.
+
+Such a bank normally has a lot of connections, which it uses in order to sell off securities that corporations are looking to part with
+
+
+*** Private Placement
+
+A company creates a bunch of new shares to sell. They go to an investment bank and offer them the chance to be the person who gets to sell these shares.
+
+If the bank agrees, they purchase some amount of the shares, and then use their connections to find buyers. The bank can sell these shares at a premium and pocket the difference
+
+*** Initial Public Offering
+
+*** Mergers and Acquisitions

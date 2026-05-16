@@ -1,0 +1,173 @@
+:PROPERTIES:
+:ID:       e817745d-0a89-41c9-b8dd-2e5684b56a9e
+:END:
+#+title: internet protocol suite
+#+filetags: :Computer Science:Networks:
+
+
+* References
+
+
+* Summary
+
+It tells computers how to interact over a network
+
+It's made up of 4 layers:
+
+1. Application
+2. Transport
+3. Internet
+4. Link
+
+As data gets passed through each of the layers, it gets *encapsulated* ---- new data gets added to it   
+
+* 1. Application
+
+
+How the user interacts with the network
+- http, ssh, ftp, dns
+- turns your data into a format that the network can understand
+
+** HTTP (hypertext transfer protocol)
+
+- stateless
+- request-response protocol
+
+The browser sends a GET or POST request to the server
+- the server looks for the corresponding file and sends it back *with a status code*
+- 404 not found
+- 200 OK
+
+HTTPS uses TLS/SSL to encrypt the HTTP data
+
+Uses port 443
+
+Internet Service Providers use *caching proxies*: if someone else on th network downloaded something, the ISP will retain a local copy in its cache
+
+HTTP is very lightweight
+
+** SSH (Secure Shell)
+
+Used for remote *administration*
+Creates a persistent, encrypted session.
+
+Uses public/private keys
+- when you connect to your device from another machine, the two devices do a /handshake/ to prove identities without sending an actual password
+
+Once you have the SSH set up, you can send things through it
+- the SSH gives you a shell that you can use to execute logic on the remote machine
+
+
+** DNS (Domain Name System)
+When you type a URL, the system sends a DNS query for the corresponding IP address
+- usually this is over *UDP port 53*
+
+** FTP/SFTP (File Transfer Protocol)
+
+HTTP wasn't originally designed for file transfer; FTP was
+- although actually you can use HTTP for file transfer
+
+FTP is *stateful*
+- the server remembers you as long as the session is open
+
+Original FTP sends everything in plain text, while SFTP uses SSH
+
+FTP uses 2 connections:
+1. Commands
+2. Data
+
+There are some issues with FTP
+- the two connections makes firewalls suspicious, unlike HTTP, which only uses one connection
+- it uses a ton of RAM: every connection requires a unique handshake and keeps a persistent state on the serer. HTTPS can handle the request and then forget the client
+
+Because FTP was designed for file transfer, it has built-in tools for things like
+- setting up schedules (although HTTPS is used for that today too; you just get some other program to set the schedule and then use HTTP for the actual transfer)
+
+Backing Up Files
+
+Google Drive and Dropbox use HTTPS
+- they use REST APIs over HTTPS and send POST and PUT requests
+
+Private servers often use SFTP
+
+You use SFTP when you already have a secure shell set up
+- if you use HTTPS and SSH, it's actually *less secure*
+- because they use different ports, you have a new place that hackers can attack
+- SFTP uses the same port as SSH (port 22)
+
+* 2. Transport
+
+- TCP, UDP
+- TCP breaks data into segments, numbers them and waits for an *acknowledgement* (ACK) from the receiver. If a segment is lost, TCP resends it
+- UDP is faster than TCP, but less reliable: it sends data without checking that it ever arrived (ex. streaming music / videos)
+
+** User Datagram Protocol (UDP)
+
+Prioritizes speed over accuracy
+- ex. live-streaming, voice calls
+
+It's a *connectionless* protocol: UDP doesn't know where the packets get sent or what gets sent.
+
+The headers are very small:
+- (2 bytes) Destination port 
+- (2 bytes) Length of header and payload
+       - because this is 2 bytes (16 bits), there's a max size that can be expressed in UDP (2^16 \approx 65,000 bytes)
+  
+And have some optional data:  
+- (2 bytes) Source port (optional in IPv4 and IPv6)
+- (2 bytes) Checksum (option in IPv4)
+
+
+
+** Transmission Control Protocol (TCP)
+
+This protocol is *very precise* --- it checks that every single individual packet is received.
+
+TCP is *connection-oriented*
+- before anything can be sent, the sender and receiver need to establish a connection through a /handshake/
+
+*** Handshake
+
+The headers have an extra piece
+- source port
+- destination port
+- sequence number
+
+*** Header
+
+Contains far more information than UDP
+- (2 bytes) source port
+- (2 bytes) destination port
+- (4 bytes) sequence number
+- (4 bytes) acknowledgement number
+- (2 bytes) checksum
+- (2 bytes) urgent pointer
+- (2 bytes) window
+- (4 bits) Data offset
+- (4 bits) Reserved
+- (8 bits) Flags
+       - CWR
+       - ECE
+       - URG: indicates urgent pointer should be looked at
+       - SYN: 
+       - ACK: indicates Acknowledgement should be looked at
+       - PSH: Asks to push buffered data to receiving app
+       - RST: reset the connection
+       - FIN: indicates this is the final packet
+
+
+* 3. Internet
+
+- IP addresses
+- IP, ICMP
+- packages segments into *packets* and adds the source and destination IP addresses
+
+
+ 
+* 4. Network Access
+
+- the hardware
+- NIC and ethernet cable
+- converts IP packets into *frames* and then into electrical or radio signals
+- uses MAC addresses to move data between two pieces of hardware on the same local network.
+

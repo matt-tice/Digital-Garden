@@ -1,0 +1,106 @@
+:PROPERTIES:
+:ID:       ef6e8f07-63ac-4514-b1cb-a56510f814cf
+:END:
+#+title: autohotkey
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+Variables have no explicit types
+
+Variables don't need to be declared, but they have to be given a value before you call them
+
+Spaces are ignored except
+- no space between function name and parentheses
+- spaces are required for concatenation
+
+Line breaks separate statements
+
+Comments are done through *semicolon* or block comment with =/* */=
+
+* Structure
+
+** Objects
+
+AHK is object-oriented
+They behave more-or-less the same as in python
+
+They have 3 behaviours
+
+1. Get a property:
+2. Set a property: myObj.property[arg] := value
+3. Call a method: myObj.method(arg)
+
+** Hotkeys
+
+
+Modifier keys:
+
+#+begin_src 
+# Windows key
+! Alt
+^ Ctrl
++ Shift
+< Left key of modifier pair
+ * fire even if extra modifiers are being held down 
+  
+UP Used to fire when the key is released, rather than pressed
+
+& to combine modifiers  
+#+end_src
+
+Using & will cause the first term to become a prefix/modifier key, and therefore *lose its original function*
+- ex. Numpad0 & Numpad1 causes the 0 on the numberpad to do nothing on its own
+       + you can fix this by adding =Numpad0::Send "{Numpad0}"=
+       + alternatively, use the ~ prefix
+- Using & will also have the =*= modifier by default
+- You *can't do 3 or more keys*
+  
+
+Hotkeys are *quasi multi-threaded*, so you can run multiple hotkey subroutines at the same time
+
+*** #HotIf
+
+Used to make a hotkey perform actions dependent on conditions
+
+*** Locks
+
+You can force numlock, capslock, etc. to always be on or always off
+- SetNumLockState "AlwaysOn"
+
+*** AltTab
+
+You can actually map hotkeys to do AltTab and ShiftAltTab, to make nicer combos for changing windows
+
+You *can't use #HotIf* with AltTab
+
+** Hotstrings
+
+Can be used to expand abbreviations
+- in general, they're triggered by strings
+
+  #+begin_src 
+::btw::by the way
+  #+end_src
+
+Hotstring options (go after the first colon, before the second)
+
+#+begin_src 
+ * makes it so that you don't need an ending character to activate the hotstring
+
+? hotstring triggered even when in another word
+
+b0 automatic backspacing is not done to erase the hotstring after you type it
+
+c case sensitive
+
+o omit the ending character of the hotstring (allows you to still need to press . or , etc in order to send the hotstring, but it doesn't show up in the text)
+
+X execute a function rather than displaying text  
+#+end_src
+
+** Functions

@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       d06ebfa2-c953-4b7d-95db-ebf87992ea73
+:END:
+#+title: databases
+#+filetags: :Computer Science:Data:
+
+
+* References
+
+
+* Summary
+
+* (.db) Files
+
+Database files, mainly used by SQLite
+
+** Syncing
+
+Syncing .db files is a bit of a challenge:
+- these files don't like being edited by two machines at the same time
+- but you also *can't use Git* to sync them
+       - these are binaries, not text files, so Git actually can't see the specific "lines" being changed
+       - because .db files get updated so rapidly (typically), Git will constantly see an entirely new .db file being written, and will save the whole database again and again, not just the parts being updated
+       - this also prevents Git from merging databases --- if two machines edit the .db at the same time, since Git can't look line-by-line, you have to entirely take one .db and leave the other
+
+You really need *atomic state management*         

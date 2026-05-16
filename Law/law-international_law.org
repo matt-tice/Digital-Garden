@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       d0102706-2dd3-4880-9906-c1041399436b
+:END:
+#+title: international law
+#+filetags: Law
+
+* References
+
+
+
+* Summary
+
+International law is *treaty-based* and thus continually references /states/
+
+But it wants to be able to talk about humanity on a global scale
+- this is a very important point of contention in international legal theory
+
+* Legalist Paradigm
+
+This is what Michael Walzer called it in /Just and Unjust Wars/
+
+War is only permissible under 2 conditions:
+
+1. *Defensive* against unjust attacker, with the goal of obtaining peace.
+2. *Preemptive* war in response to a threat that is both /overwhelming/ and /imminent/.
+
+
+
+Alternatively, some states try to argue that we have, as a third category,
+
+3. *Prevention*: taking anticipatory action against emerging threats
+

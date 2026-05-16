@@ -1,0 +1,342 @@
+:PROPERTIES:
+:ID:       22b5b2f7-c126-4bee-af8d-0232d56f7c28
+:END:
+#+title: html
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+HTML is a markup language
+
+* Tags
+
+Non-semantic tags are general ones that don't tell you anything specific about the element
+
+** Html
+
+Top-level element
+- contains the global attributes
+- specifies the version of html
+- specifies XML namespace
+
+
+
+** Metadata
+
+*** Base
+
+Specifies the base URL for all relative ones
+- can only be one of these
+
+*** Head
+
+Contains info like title, scripts, and style-sheets
+
+*** Link
+
+Specifies relationship between current document and an external resource
+- used to link to CSS
+  
+*** Style
+
+CSS info that will impact only this page
+
+*** Title
+
+Document title shown in the browser title bar
+
+*** Meta
+
+Other metadata that doesn't fall into one of the above categories
+
+
+
+
+** Body
+
+Contains the content of the document
+- can only be one of these
+
+  
+
+** Content
+
+*** Address
+
+Contact info
+
+*** Article
+
+Self-contained composition
+- intended to be independent or reusable
+- ex. forum post, blog entry, comment, widget
+
+*** Aside
+
+Only indirectly related to the main content
+- usually presented as side-bars or call-out boxes
+
+*** Footer
+
+Footer for the nearest ancestor
+- typically contains info on author of the section, copyright data, or links to related documents
+
+*** Header
+
+Intro content
+- navigation buttons/menus, logo, search bar, author's name
+
+*** h1, h2, ...
+
+Section heading levels (h1 is the highest)
+
+*** Hgroup
+
+Heading grouped with secondary content
+- subheadings, alterative title, tagline
+- ex. a heading that says Frankenstein [and then as a subtitle] Or: The Modern Prometheus
+
+*** Main
+
+The main content 
+
+*** Nav
+
+Navigation menus, tables of contents, indexes
+
+*** Section
+
+Generic standalone section
+- should always have a heading
+
+*** Search
+
+Searching or filtering
+
+** Text Content
+
+*** Blockquote
+
+
+*** div
+
+Generic container for flow content
+- used to group content so it can be styled
+
+*** dl
+
+Description list
+- ex. a dictionary, glossary
+
+**** dt
+
+Term in a description list
+
+**** dd
+
+Provides description for preceding item in a description list
+
+*** Figure
+
+*** Figcaption
+
+*** hr
+
+Represents a thematic break between paragraph-level elements
+- change of scene, shift in topic
+
+*** p
+
+Any structural grouping of related content
+- ex. images, form fields, actual paragraphs
+
+*** Lists
+
+**** ul
+
+Unordered list of items
+
+
+**** Menu
+
+The same as <ul>, but just has a more specific name
+
+**** ol
+
+Ordered list of items
+
+**** li
+
+Item in a list
+
+*** Pre
+
+Preformatted text
+- meant to be inserted exactly as written
+- ex. concrete poetry
+
+** Inline Text Semantics
+
+*** a
+
+Creates hyperlink
+
+*** span
+
+Generic container for phrasing content
+- used to group elements for styling purposes (using class/id)
+- only use when you have no other option
+
+*** Abbr
+
+Abbreviation / acronym
+
+*** b
+
+Used to draw reader's attention to the element's content
+- keywords, product names
+- use the class attribute to explain why you're marking this for the reader's attention (class = "keyword")
+
+*** em
+
+Marks text that has stress emphasis if you said it out loud
+
+*** i
+
+Text that is different from the rest for some reason
+- ex. foreign word, a character's thoughts
+
+*** strong
+
+Indicates importance or urgency
+
+*** bdi
+
+*** bdo
+
+*** br
+
+Linebreak
+
+*** Cite
+
+*** Code
+
+*** Data
+
+*** dfn
+
+Marks a word that is being defined by its ancestor
+- A <dfn>subgroup</dfn> is a 
+
+*** kbd
+
+*** Mark
+
+Used to mark something as *relevant* (not necessarily important)
+- relevant to the current user's activity
+- ex. words that matched a search operation, marking part of a quote that's of relevance to the user
+
+*** q
+
+Inline quotation
+
+
+
+*** ruby
+
+**** rt
+
+**** rp
+
+*** s
+
+*** samp
+
+*** small
+
+Side comments and fine print
+
+*** sub
+
+Subscript
+
+**** sup
+
+Superscript
+
+*** Time
+
+To mark a date or time
+
+*** u
+
+To mark the text as having some non-textual annotation
+- annotating spelling errors
+
+*** Var
+
+Variable in a math or computer science contextp
+
+*** Wbr
+
+Word break opportunity
+- the browser can optionally break a line if it needs to
+
+** Embedded Things
+
+*** SVG
+
+*** Math
+
+*** Embed
+
+*** FencedFrame
+
+*** IFrame
+
+Nested browsing content
+
+*** Img
+
+Embeds and image
+
+*** Map
+
+*** Track
+
+*** Video
+
+*** Audio
+
+*** Area
+
+*** Object
+
+*** Picture
+
+*** Source
+
+** Scripting
+
+*** Canvas
+
+*** Noscript
+
+It displays to the user when a script type can't be viewed by them for some reason
+
+*** Script
+
+Used to embed executable code or data
+- usually JavaScript
+
+** Forms
+
+*** Button
+
+** Table Content
+

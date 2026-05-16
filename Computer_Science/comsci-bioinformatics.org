@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       dfd35843-c9ea-421a-be65-0998c54754f3
+:END:
+#+title: bioinformatics
+#+filetags: Biology:Computer Science:
+
+* References
+
+
+
+* Summary
+
+Bioinformatics is a broad area that is related to
+- computational biology
+- software development
+- life science research and development
+
+* Data Formats
+
+Sequence data: FASTA, FASTQ
+
+Genomic interval data
+
+Read mapping data
+
+Variant info data
+
+Tabular data
+
+Config files
+
+Command lines
+
+Perl
+
+bash
+
+BLAST

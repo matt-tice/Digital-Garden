@@ -1,0 +1,78 @@
+:PROPERTIES:
+:ID:       9aa31deb-72dd-49d9-a75b-6c13c2b0258c
+:END:
+#+title: memory
+#+filetags: Computer Science
+
+* References 
+
+* Summary 
+
+
+
+* Hierarchy
+
+1. Primary storage
+        + Directly accessible to the cpu
+2. 
+
+
+* Address
+
+* Pointer
+
+* Non-Volatile
+
+
+** ROM (Read-only Memory)
+
+Cannot be modified after it's done being manufactured
+
+Used to store software that won't change
++ firmware
+
+
+  
+*** Diode Matrix
+
+*** Mask ROM Integrated Circuit
+
+*** Boot ROM
+
+A piece of ROM used for booting a computer system
+
+** BIOS (Basic Input/Output System)
+
+** NVRAM
+
+* Volatile
+
+Requires power to maintain the data in its memory
+
+Quite fast
+
+Can protect sensitive information
+
+** RAM
+
+*** Dynamic RAM
+
+Cheaper
++ each bit of info goes in a single capacitor
++ single transistor for each bit
+
+Even if it has power, the data in DRAM decays in seconds
++ charge leaks out of the capacitor
+  
+So it has to be *refreshed*
++ you read the data of each bit and immediately write it again
++ when you write it, the charge on the capacitor is reset
+
+*** Static RAM
+
+Faster
++ each bit corresponds to 6 transistors
++ used for cpu cache
++ used for processor registers
+
+Data is stored in *flip-flops*

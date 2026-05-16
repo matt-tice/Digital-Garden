@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       6db46104-eabb-4bbe-8ddf-f54feaa71834
+:END:
+#+title: computation
+#+filetags: Computer Science
+
+* References 
+
+* Summary 
+
+
+
+* Turing Machines
+
+Imperative languages 
+
+
+
+** [[id:f88b47e5-7b81-4fc5-bf34-2a6290bd457a][Automata]]
+
+** [[id:1e90bfee-0f90-46c1-b9e6-9b7ffc7bdd5b][The Halting Problem]]
+
+* Lambda Calculus
+
+Functional languages
+
+* Recursive Functions

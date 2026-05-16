@@ -1,0 +1,65 @@
+:PROPERTIES:
+:ID:       c2a06235-dd77-40f9-b740-e3af942d63f2
+:END:
+#+title: time series
+#+filetags: Math
+
+* References
+
+Time-Series Forecasting, Chatfield
+
+* Summary 
+
+A *time series* is anything that we can view as a function of time x(t). Often we look at discrete time, in which case, we just have a series $(x_t)$
+
+Given a time series, we'd like to forecast/predict what its future values will be.
+
+If we know $x_1, \ldots, x_n$, and want to know $x_{n+h}$, h is called the *horizon*
+
+We'll denote this by $x_n(h)$, to make explicit the fact that what we're finding out is the projected value at the horizon, /from/ a fixed point n. In other words, we want to think of $x_{n-1}(h+1)$ differently from $x_n(h)$, because they're working from different data sets (x_n has more data). 
+
+* Forecasting Methods
+
+** Judgemental
+
+Based on intuition
+ex. Delphi method
+
+** Univariate
+
+Depend only on a single time series
+
+** Multivariate
+
+Depend on more than one time series
+
+** Automatic / Non-Automatic
+
+Automatic methods don't require human intervention
+
+
+** Out-of-Sample
+
+Also called /ex-ante/.
+
+x_n(h) uses data up to time n.
+
+** In-Sample
+
+
+
+* Influence
+
+Some predictions influence the results.
+
+ex. economic predictions influence people to take certain actions, which in turn have an influence on what happens in the economy
+
+On the other hand, short-term weather forecasting doesn't actually influence the weather
+
+Long-term weather forecasting (in terms of years) may have influence, if it causes governments/companies to alter their policies to account for, say, climate change. 
+
+* Assumptions
+
+Forecasting generally assumes that the /future will be like the past/
+
+Forecasts are /conditional statements/: if things continue like A, then B will happen

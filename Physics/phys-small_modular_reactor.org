@@ -1,0 +1,138 @@
+:PROPERTIES:
+:ID:       43bcdf9a-0a14-4800-b97a-548aec6063ab
+:END:
+#+title: small modular reactors
+#+filetags: Physics:Chemistry:Nuclear:
+
+* References 
+
+/Small Modular Reactors: Nuclear Power Fad or Future?/ Daniel T. Ingersoll
+
+
+* Summary 
+
+The idea behind SMRs is that you build them piecewise, offsite, at factories, and then you can basically just assemble and use them right away, onsite. 
+
+It's a kind of fission reactor with a power of \le 300 MWe (megawatt electrical)
+
+
+There are so far only 2 nations on earth that have SMRs
+1. China
+2. Russia
+
+* Science
+
+The purpose of a nuclear reactor is to produce heat or electricity.
+
+** Water-cooled Reactor
+
+** Sodium-cooled Reactor
+
+
+
+** Fast-spectrum Reactor
+
+Designed out of fear that we would run out of uranium
+
+** PIUS Reactor
+
+Process Inherent Ultimately Safe
+
+
+
+** PRISM
+
+Power Reactor Inherently Safe Module
+
+Uses 9 small power modules of 160 MWe each
+
+** MHTGR
+
+Modular high temperature gas cooled reactor
+
+** ABWR
+
+Advanced boiling water reactor
+
+Eventually used in Japan
+
+** Combustion Engineering System 80+
+
+Eventually used in South Korea
+
+* History
+
+Commercial nuclear power in the US started with the use of small reactor systems in the navy, designed for propulsion
+
+
+** 1954
+
+First nuclear powered sub: USS Nautilus (SSN-571)
+Nuclear propulsion allowed her to stay submerged longer than diesel-electric subs, because she didn't require refueling as often
+Nuclear subs became the first truly underwater crafts, rather than being surface level crafts that could submerge for short periods
+
+Also nuclear fuel takes up far less space: you can just keep all of it in the reactor
+
+** 1957
+
+(60MWe) Shippingport plant
+
+
+
+** 1958
+
+First nuclear power aircraft carrier: USS Enterprise (CVN-65)
+She's the longest naval vessel ever made, though she's now decommissioned
+
+USS Nautilus became first sub to complete a submerged transit of the north pole
+
+** 1960
+
+USS Triton became the first ship to circumnavigate the globe completely underwater
+It took *60 days 21 hours*
+
+(200 MWe) Dreseden plant
+
+*** Notes
+
+The 1960s saw a huge increase in nuclear power plants in the US
+This actually introduced some issues:
+- there was a huge scale-up of plant size within 10 years
+- but not much time had been spent building experience with the smaller plants
+- plants were being built that were *6x the size of the ones operating at the time*
+- generally the standard is a /max of 2x/
+
+This led to rapidly increasing costs and delays, which in turn led to decreased confidence
+
+Another part of the problem was that each new plant was designed to be "one of a kind", increasing costs and complexity
+
+** 1962
+
+(250 MWe) Indian Point Unit 1 plant
+
+** 1973
+
+[[id:36f45d40-2510-4385-b534-fa023da63e8e][1973 oil crisis]] leads to a further push for nuclear power
+But it also led to decreased energy usage by consumers, who couldn't afford high electricity bills
+
+
+** 1979
+
+*Three Mile Island accident*
+
+*** Notes
+
+Around this time, the accident, high costs of nuclear plants, high interest rates, and lower energy usage caused nuclear plants to fall out of favour in the US
+
+** 1986
+
+*Chernobyl disaster*
+The world stopped working on nuclear power plants
+
+** 1990s
+
+Researchers at Oregan State University started working on SMRs
+
+** 2017
+
+USS Enterprise is decomissioned

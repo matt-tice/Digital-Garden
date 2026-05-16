@@ -1,0 +1,106 @@
+:PROPERTIES:
+:ID:       61530562-4640-4e9f-9169-71a0f6583714
+:END:
+#+title: natural language processing
+#+filetags: Computer Science:Machine Learning:
+
+* References
+
+
+
+* Summary
+
+
+
+* Tokens
+
+*Tokenizers* are the fundamental piece of NLP architecture
+- they translate words into integers
+
+** Embedding Lookup
+
+** Byte Pair Encoding
+
+The standard approach
+- breaks words into morphemes
+
+** Byte Latent Transformer
+
+Processes raw bytes, rather than tokens
+
+** Character-Based
+
+** Unigram
+
+Starts with large vocabulary that gets trimmed down
+
+* Cross-Entropy Loss
+
+* Hallucinations
+
+things look the same in the context window and different outside
+
+* Self-Supervised Learning
+
+
+Context windows
+
+
+** Causal Masking
+
+Shifted-target labeling
+
+* Batch Gradient Descent
+
+* Adaptive Moment Estimation
+
+* Architectures
+
+** Transformers
+
+The inner product determines how related two words are (higher is more related)
+
+
+*** Quadratic Bottleneck
+
+
+
+** Mamba
+
+There's a fixed-size internal memory
+As new context shows up, it's compressed into this fixed state
+
+** RWVK
+
+
+
+** Diffusion Models
+
+Process text in parallel
+
+* Rotary Position Embedding (RoPE)
+
+The idea is to use rotations to represent the positions of words in text
+- and to use radial distance as a measure of importance
+
+It's kind of weird that you have to use angles for distance, but it's basically because the way that transformers work, you interpret the dot product as a measure of attention 
+  
+** The Kernel Trick
+
+** Aliasing
+
+The different angles need to rotate at different speeds, so you don't end up with orthogonal vectors, or two vectors that are meant to represent different words, but are the exact same location (this is called *aliasing*)
+
+The problem is that if your angular increments are set ahead of time, if the context window gets really big, eventually vectors can get too close to ones that have already been seen
+- partitioning a circle into finitely many parts will always give you a way to get back to where you started
+- then the lcm of the different rotation increments needed to get back to 0 degrees will reset the whole vector
+
+Another issue is that if the intervals are too small, we get *floating point errors*
+- the computer can't keep up the precision, and therefore can't tell things like whether you're at word 1 or 2
+
+
+** NTK-Aware Scaling
+
+Neural Tangent Kernel
+
+In Dynamic NTK-Aware Scaling you adjust the base frequency as the conversation (and context) expands

@@ -1,0 +1,300 @@
+:PROPERTIES:
+:ID:       57657538-6cf1-422b-ace3-628d15224ffa
+:END:
+#+title: america economic history
+#+filetags: :Economics:
+
+* References 
+
+
+
+* Summary 
+
+
+* History
+
+** 1918
+
+*** Spanish flu
+
+
+
+** 1919
+
+Dec 5%
+
+** 1920
+
+Jan 6%
+June 7%
+
+Millions of veterans of WWI enter into the economy, with no jobs for them
+- this also led to wage stagnation, since there was such a large labor supply
+- it weakened unions as so many people were desperate for jobs
+  - bosses worked to limit union power as much as possible
+
+    
+  
+Factories that focused on war production needed to refocus
+
+The Spanish flu killed a lot of working age adults
+
+
+
+** 1922
+
+Fordney-McCumber Tariff Act
+
+** 1927
+
+Fed discount rate: 3.5%
+
+The League of Nations hold a World Economic Conference in Geneva to put an end to tariffs
+
+All of the countries were in vast debt
+
+** 1928
+
+France introduces tariffs
+
+US Election
+
+Hoover promises to help farmers by increasing tariffs
+
+** 1929
+
+Inflation 0.6%
+
+Federal Discount Rate: 5%
+
+farmers doing poorly due to overproduction, similarly with manufacturers
+wages got lower, which meant that people couldn't purchase as many products
+
+*** Wall Street Crash (Oct)
+
+Interest rates were very low, causing people to invest in stocks
+
+Eventually people decided to sell 
+
+*** Great Depression
+
+Most of the profit from the 20s economic boom had been spent on speculative stocks
+
+** 1930
+
+Inflation -6.4%
+
+*** Smoot-Hawley Tariff Act
+
+The US was facing overproduction --- it had a massive increase in agriculture and manfucturing production from electrification, US oil refineries, and motorized vehicles
+- In manufacturing, firms actually had excess capacity; they didn't work at full capacity, because not enough people wanted their goods
+
+Because it was easy to purchase tractors, trucks, etc. they became the most important tech in the agricultural sector and day-to-day life
+- consequently, fossil fuels became the prime movers of the sector (displacing hay and oats, which were needed when horses were the main tech)
+- but this in turn reduced demand for farming, since the demand of hay and oats dropped
+  
+Smoot wanted to combat overproduction by applying tariffs on imports
+- the idea being that if we reduce imports, we'll have to rely more on domestic products, which should reduce excess supply
+
+President Herbert Hoover wasn't a fan of the bill, but ended up yielding to pressure
+
+In response, a ton of other countries launched counter tariffs at the US
+
+This led to Canada forging stronger trading links with Britain in 1932, France developing new trading partners, and Germany developing a clearing trade system
+
+Unemployment increased in export-dependent industries, due to the retaliatory tariffs
+
+But tariffs on over 20,000 imported goods in order to shield american industries from foreign competition
+
+Economists at the time thought it was a really bad idea
+
+
+
+** 1932
+
+*** British Empire Economic Conference
+
+In response to the Smoot-Hawley tariffs, Canada and Britain form closer economic ties
+
+** 1944
+
+Inflation 2.3%
+
+*** [[id:de94bb6f-d100-4bd8-8ffc-41da48057610][Bretton Woods System]]
+
+
+
+** 1945
+
+Inflation 2.2%
+
+Recession
+
+** 1946
+
+Inflation 18.1%
+
+Recession
+
+** 1947
+
+Inflation 8.8%
+
+Civil war in Mandatory Palestine between Palestine's Jewish and Arab populations
+
+** 1948
+
+Inflation 8.8%
+
+*** Arab-Israeli War
+
+Israel declares itself as an independent state in Palestine
+- In response Egypt, Transjordan, Iraq, and Syria invade
+
+
+
+** 1949
+
+Inflation -2.1%
+
+Recession
+
+*** Fair Deal
+
+*** NATO
+
+*** Armistice Agreements
+
+The Arab-Israeli War ends
+- Egypt has occupied the Gaza strip
+- The Green Line is established, dividing Arab and Israeli territory
+
+Egypt closes the Suez Canal and Straits of Tiran to Israel
+
+Israel undergoes a period of austerity, lacking food, resources, and foreign currency
+
+** 1950
+
+Inflation 5.9%
+
+*** Korean War
+
+** 1953
+
+Inflation 0.7%
+
+Recession
+
+:CONTROVERSIAL:
+The US wanted to keep the Soviets out of the Near East, and so were trying to cozy up to Egypt, so the americans could put their own troops over there
+- The people (Arabs and Jews) of the Near East weren't worried about the Soviets, and so the US couldn't convince them to unite
+
+The CIA tried to keep a friendly relationship with Nasser
+- The British viewed this as the Americans trying to push the British out of British Egypt
+- Nasser didn't care that much about the CIA, but wanted someone to keep the British in check
+- The CIA tried to bribe him to team up with the British. He took the money, but didn't do it
+
+Arab countries thought that the US would always back Israel, and so didn't trust them
+- For the next few years, the US went out of its way to side with Arab states against Israel
+
+:END:
+  
+*** End of Korean War
+
+** 1956
+
+Inflation 3%
+
+*** The Suez Crisis
+
+Egyptian president Gamal Abdel Nasser nationalizes the Suez Canal from the British and French
+
+- Britain, France, and Israel invade Egypt in order to reopen the Suez Canal
+- The US, Soviets and UN are all against the invasion
+- The US was already arguing against the Soviet invasion of Hungary, and couldn't be seen as hypocritical by supporting Britain and France
+
+Eisenhower proposed imposing sanctions on Israel until they agreed to leave Egypt
+- Democratic Senate didn't want to co-operate with Eisenhower's plan
+- In response, Eisenhower spoke on the radio and TV to tell the public that the UN needed to put pressure on Israel
+
+
+** 1957
+
+Suez Canal is re-opened to Israel, but before the end of the war, Egypt sinks 40 ships in the canal, blocking it.
+
+
+
+** 1966
+
+*** Vietnam War
+
+** 1967
+
+*** 6-Day War
+
+Egypt blocks the Straits of Tiran, in response, Israel invades.
+- In response, Egypt closes the Suez Canal
+
+In the end, Israel takes over the entire Sinai Peninsula, but Egypt keeps control of the west bank of the Suez Canal
+- Egypt keeps the canal closed
+
+  
+  
+** 1969
+
+Recession
+
+** 1970
+
+
+
+
+** 1971
+
+Inflation 5%
+
+[[id:86f5d04f-554c-4da6-b36e-65b83d8e78c5][Nixon Shock]]
+
+** 1972
+
+Inflation 3.4%
+
+** 1973
+
+Inflation 8.7%
+
+Recession
+
+This was a very interesting recession, because it's the first one to occur during a high inflation period (this is so-called *stagflation*)
+
+*** [[id:36f45d40-2510-4385-b534-fa023da63e8e][1973 oil crisis]]
+
+The Yom Kippur War spawns more unrest in the middle east
+- Egypt wants to regain control of the Sinai Peninsula and the east bank of the Canal
+
+  
+The OAPEC stops exporting oil to countries aiding Israel
+
+
+** 1974
+
+Inflation 12.3%
+
+Watergate
+
+** 1976
+
+Inflation 4.9%
+
+The Sterling crisis
+
+
+
+** 1979
+
+Inflation 13.3%
+
+*** [[id:20823c6f-61fc-44b8-93a3-cfc1ac3e1bfd][1979 oil crisis]]
+
+The Iranian revolution occurs
+

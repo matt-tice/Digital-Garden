@@ -1,0 +1,115 @@
+:PROPERTIES:
+:ID:       3dfb6d40-b083-4ba4-9102-84acc5ce0ff9
+:END:
+#+title: plaza accord
+#+filetags: Economics: Inflation: Currency
+
+* References 
+
+* Summary 
+
+In the 1980s, the US was dealing with inflation, and so raised its interest rates
+
+The US dollar ended up appreciating in value as a consequence
+- But this caused american exports to be expensive for other countries
+- So people from other countries didn't really want to buy american products
+- On the other hand, with their strong dollar, americans could import a lot
+- So a trade deficit grew
+
+:THOUGHTS:
+Presumably, the strong dollar didn't impact purchases domestically
+But no country can get everything domestically
+
+:END:
+
+
+Similarly, Germany and Japan had a trade /surplus/ due to relatively weaker currencies
+
+** Strong Currencies
+
+When a company with a strong dollar does business in a country with a weak dollar, there's an issue:
+If you do business in another country, it's in terms of /their/ currency. So you'll get all of your profits in terms of a weak currency. If you try to spend it in /your/ home market then, you'll lose a lot of money.
+
+
+* History
+
+** 1970s
+
+Nixon convinced countries to only use USD when trading in oil
+- in exchange, those countries got protection from the US military
+
+This helped strengthen the dollar
+
+
+
+** 1944
+
+*** [[id:de94bb6f-d100-4bd8-8ffc-41da48057610][Bretton Woods System]]
+
+Countries were worried about competitive devaluations
+- By devaluing your own currency, you make it more enticing for other countries to buy your goods
+- You get a race to the bottom
+
+The BW system put everyone's currency in terms of the US dollar, which could always be exchanged at a fixed rate for gold
+- This is called pegging your currency to the dollar
+- This means that the US made a committment that it could, at any time, pay back any amount of USD in gold
+  - At this point the US owns half of the world's gold reserves
+
+As time goes on, the US owns less and less gold, and other countries dislike that they have to do everything in USD
+- it basically cost the US nothing to print money, but cost value from other countries (in the form of goods) to acquire USD
+- the perspective of other nations became that they were just there to support Americans' standards of living
+
+** 1965
+
+French president Charles de Gaulle wants to redeem France's USD for gold. The US panics because they don't have nearly enough
+
+** 1971
+
+Germany leaves the BW system, after being fed up
+- The USD falls against the Deutschmark
+
+Other countries want out and try to exchange their USD for gold
+
+Congress wants to devalue the dollar in order to prevent other countries from taking all of America's gold
+
+French president Georges Pompidou literally sends a battleship to the States, to pick up his gold
+
+*** [[id:86f5d04f-554c-4da6-b36e-65b83d8e78c5][The Nixon Shock]]
+
+
+*** Happy America
+
+The american stock market immediately jumps up, the public feels like Nixon is a hero, saving them from price-gougers, and Nixon gets re-elected in a landslide
+
+The USD depreciates
+- Japan tries to get its currency to depreciate as well
+- Japan's economy was based on exports, so it needed to keep a weaker currency, to make sure that businesses would buy Japanese goods
+       + in particular tariffs on Japan were a serious problem for them
+- To do this, they buy a ton of USD
+- So now Japan has a huge reserve of USD
+
+
+
+** 1973
+
+*** [[id:36f45d40-2510-4385-b534-fa023da63e8e][1973 oil crisis]]
+
+
+
+** 1981
+
+In the US monetary policy is tight (high interest rates) and the fiscal policy is expansive (low taxes)
+- this led to high long-term interest rates
+
+The French government wants to reduce the strength of the dollar, but the US disagrees
+
+
+** 1985
+
+American industries lobbied the Reagan government to depreciate the dollar
+
+Congress started taking notice and considered implementing protectionist laws.
+
+Reagan didn't want laws to mess up trade, so he decided to meet with the other nations to see what they could do
+
+

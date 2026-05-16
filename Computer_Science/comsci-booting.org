@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       ad5cdbd2-b00a-45db-bbf1-eafdd220601e
+:END:
+#+title: booting
+#+filetags: Computer Science
+
+* References 
+
+* Summary 
+
+When a computer boots, the cpu has nothing in its memory
+In order to use the cpu, we need a different device to load something into the memory
++ This is where ROM comes in
+
+* Boot Loaders
+
+On Windows you have IO.sys and DOS.sys
+
+On linux LILO
+
+

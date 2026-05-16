@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       fe3f2aab-78f6-46cf-9533-9d8f4e01c701
+:END:
+#+title: xml files
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+Extensible Markup Language
+- it's markup, so it has tags
+
+  
+Meant to be both human and machine readable
+
+

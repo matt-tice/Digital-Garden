@@ -1,0 +1,223 @@
+:PROPERTIES:
+:ID:       b3f34eb4-7605-4d5b-9f0e-cc639a952c4b
+:END:
+#+title: hom functors
+#+filetags: Hom:Mor:
+
+* References 
+
+* Summary 
+
+Let h_A = Hom(A,-) and h^B = Hom(-,B)
+
+h_A(f) = Hom(A,f) = the set map that sends g \to gf (do g then do f)
+
+h^B(f) = Hom(f, B) = the map that sends g \to fg (precomposing with f)
+
+Let h_f = Hom(f, -) and h^f = Hom(-, f). These are natural transformations
+
+h_f: h_B \to h_A by
+
+h_f(X): h_B(X) \to h_A(X) which sends g: B \to X to fg: A \to X
+
+So h_f(X) = h^X(f). So a way to remember is to recall that X is always above f
+
+Similarly, h^f: h^A \to h^B given by sending g: X \to A to gf : X \to B
+
+Thus h^f(X) = h_X(f)
+
+*** Note
+
+h_A^B = h^B_A = h_A(B) = h^B(A) = Hom(A,B)
+
+h_f(X) = h_X(f) = h_f^X = h_f^X= Hom(f,X)
+h^f(X) = h_X(f) = h_X^f = h^f_X = Hom(X,f)
+
+So this notation is actually really nice, and lets us do some tensor-like analysis
+
+
+* Yoneda Lemma
+
+Let C be a locally small category (small morphisms)
+
+
+
+** Covariant
+
+Nat(h_A, F) \cong F(A)
+as a natural isomorphism
+
+More precisely, say \eta : h_A \to F is a natural transformation
+We identify it with the element \eta_A(id_A) \in F(A)
+
+*** Functors
+
+To see naturality, we need to view these as functors from C \times Set^C \to Set
+
+Nat(h_{\bullet}, \bullet) : A \times F \to Nat(h_A, F)
+\varepsilon: A \times F \to F(A)
+
+Say f: A \to B. We have
+
+Nat(h, -)(f, \eta) : Nat(h_A, F) \to Nat(h_B, G)
+
+sends a \phi: h_A \Rightarrow F to the natural transformation
+h_f \phi \eta
+
+h_f: h_B \Rightarrow h_A
+
+\varepsilon(f, \eta) : F(A) \to G(B)
+
+We define this by \varepsilon(f,\eta) = \eta_A G(f)
+Note that by naturality of \eta, this is also F(f) \eta_B
+
+\eta: F \Rightarrow G
+\eta_A: F(A) \to G(A)
+
+\eta_A G(f): F(A) \to G(B)
+
+
+
+
+*** Naturality
+
+Let \Phi: Nat(h, -) \Rightarrow \varepsilon
+
+If   f: A \to B  and \eta: F \to G , forming a morphism (f, \eta) in C \times Set^C
+then naturality requires that
+
+\Phi_{(A,F)} \varepsilon(f, \eta) = Nat(f, \eta) \Phi_{(B,G)}
+
+\Phi_{(A,F)} \eta_A G(f) = h_f (-) \eta \Phi_{(B,G)}
+
+Nat(h_A, F) \to Nat(h_B, G)
+\downarrow                               \downarrow
+F(A)            \to      G(B)
+
+
+**** Right-Down
+
+h_f (-) \eta \Phi_{(B,G)}: \psi \to \Phi_{(B,G)} [h_f \psi \eta ] = (h_f(B) \psi_B \eta_B)(id_B) = h^B(f) \psi_B \eta_B : Hom(B,B) \to G(B) applied to id_B
+
+h^B(f): h^B(B) \to h^B(A) = h_A(B)
+
+h^B(f)(id_B) = f
+
+So we end up with \eta_B(\psi_B(f))
+
+**** Down-Right
+
+\Phi_{(A,F)} : Nat(h_A, F) \to F(A)
+\psi \to \psi_A(id_A)
+
+We then apply \varepsilon(f,\eta) = \eta_A G(f), which sends this to
+
+G(f)(\eta_A(\psi_A(id_A)))
+
+Then we can pull G(f) through, since \eta and \psi are natural transformations
+
+We get \eta_B(\psi_B(G(f)(id_A))) = 
+G(f)(\eta_A(\psi_A(id_A))) = (\eta_B \circ F(f) \circ \psi_A)(id_A) = (\eta_B \circ \psi_B \circ h_A(f))(id_A) = (\eta_B \circ \psi_B)(f)
+
+** Contravariant
+
+Nat(h^A, G) \cong G(A)
+
+If we have such a natural transformation, 
+
+
+
+** Yoneda Embedding
+
+We have Nat(h_A , h_B) \cong h_B(A) = Hom(B,A)
+
+Then the map C \to Set^C given by A \to h_A is a contravariant functor that is *fully faithful*
+So C^{op} is embedded in Set^C.
+
+Similarly, Nat(h^A , h^B) \cong h^B(A) = Hom(A,B)
+
+Giving a *fully faithful* covariant functor C \to Set^{C^{op}}
+
+In this way, we can think of C as being /embedded in the category of presheaves on it/.
+
+In fact we have that C^{op} \cong {h_A | A \in C} and C \cong {h^A | A \in C}
+
+In [[id:04deddd3-3a16-40b6-b8cf-84ccb332185a][algebraic geometry]] and topos theory, we will often think of categories as categories of presheaves, and determine whether the presheaves are actually /sheaves/.
+
+This corresponds to saying that our category is a Grothendieck topos.
+
+
+
+* Representable Functor
+
+A functor such that F \cong h_A for some A is said to be *represented by A*
+A *representable presheaf* is F \cong h^A
+
+So the Yoneda embedding gives a way of thinking of every object in C as representing its own presheaf
+
+* Universal Constructions
+
+
+
+** Universal Elements 
+
+These correspond to isomorphisms in Nat(h_A, F)
+
+Using the Yoneda lemma, given any (X, x) with x \in F(X), this corresponds to
+\psi^x = F(-)(x) : h_A \Rightarrow F
+
+Say we had some u such that \psi^u is a natural isomorphism. In particular, we have
+F \Rightarrow h_A
+
+This tells us that given any x \in F(X), we get a bijection
+F(X) \cong h_A^X
+which will send x \to f^x
+
+Then by applying \psi^u, we get that
+F(f^x)(u) = x
+
+Since it's a bijection, this is the unique such map with this property.
+
+This is usually stated as:
+
+    Given any (x,X) with x \in F(X), there is a unique map f: A \to X
+    such that F(f)(u) = x.
+
+This is the thing that shows up when we talk about /universal properties/    
+
+** Functor Category
+
+Consider the functor category
+
+If we take a limit/colimit in D, then we can compute the corresponding limit/colimit in [C,D] objectwise
+
+Let $\Phi: J \to [C,D]$ be a functor.
+
+$\lim \Phi$ is an object in [C,D] (a functor) along with maps into each $\Phi(F)$
+
+Let $X \in C$. We can define
+\[ \Phi_X: J \to D \]
+
+by $\Phi_X(A) = \Phi(A)[X]$
+
+We can define a new functor in [C,D] as follows:
+
+Take $\Phi^*: C \to D$ to be
+
+$\Phi^*(X) = \lim \Phi_X$
+
+This will end up being the limit of $\Phi$
+
+
+
+
+** Hom Functors
+
+In particular, if we look at h_A or h^B, we can express limits and colimits in a nice way
+
+(h_A \times h_B)(X) = h_A(X) \times h_B(X)
+
+Similarly, the fiber product / pullback is
+
+h_A \times_x h_B = h_A(X) \times_x h_B(X)
+

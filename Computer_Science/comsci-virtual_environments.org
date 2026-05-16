@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       716a6556-61b1-40c9-bdbb-9f14f02e7e99
+:END:
+#+title: virtual environments
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+A python *environment* is the root directory of the python installation
+- packages get installed in the lib/site-packages subdirectory
+- you can add packages with pip
+
+A *real environment* occurs when you actually install python
+- this takes a while
+
+What happens if you want a new root? If you make a real environment, it's going to use a lot of resources. This is where virtual environments come in
+
+A *virtual environment* is cheaper to set up and tear down
+- they basically trick python into thinking that it has a new root
+- they have 2 types
+       + inactivated: you call python from the virtual environment
+              - for ex. you call the real python's pip, but install packages into the virtual environment
+       + activated: this sources the activated script, which sets up a new PATH
+
+Since virtual environments are so cheap, if something goes wrong, you usually just delete the whole thing
+- ex. some bad package causes python to not start up — you can't even use pip to uninstall, because you can't start it up
+- just delete it all and recreate it
+
+Typically one installs all the packages they need as soon as the VE is created
+- if new things are needed, they just destroy the environment and reinsall with the new stuff
+
+You create VE using =venv=
+- best practice is to create it in a directory that doesn't exist yet
+
+#+begin_src python
+  python -m venv <directory>
+#+end_src
+
+*virtualenvwrapper* is a package that adds some useful features
+
+Some other benefits of VE
+- you can set up different VE with different versions of certain packages, and then test how your program works under different package versions
+- or under different python interpretters
+- you can use them if you don't have permission to install into the real python environment
+
+  
+* Containers
+
+Similar to VEs, but for collections of programs
+- you can package a piece of software with all of its dependencies into one unit
+
+/Docker/ is a common tool for making containers  
+
+* Virtual Machines
+
+Are the analogue with multiple operating systems
+- VirtualBox is a common tool

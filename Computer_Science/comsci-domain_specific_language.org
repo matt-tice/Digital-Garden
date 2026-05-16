@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       0b0f5801-1e66-4d52-b3b3-0877106b6811
+:END:
+#+title: domain specific language
+#+filetags: :Computer Science:Programming Language:
+
+* References
+
+
+
+* Summary
+
+
+
+
+
+** Idea
+
+:THOUGHTS:
+I was thinking about how to use AI in my math workflow, but I had a few reservations
+- I don't like the idea of sending my data through a free API
+- I don't want to pay for an API key
+- If I run an AI locally on my machine, it'll take a huge amount of RAM
+- Generally, I don't like how bloaty and watery AI feels; I'd rather have a clean algorithm
+:END:
+
+

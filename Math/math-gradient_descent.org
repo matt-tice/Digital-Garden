@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       f7fb1412-3d38-4a1a-9ef7-90ba1c11677c
+:END:
+#+title: gradient descent
+#+filetags: Math:Computer Science
+
+* References
+
+
+
+* Summary
+
+
+
+Sum of squares errors:
+
+1/2 \sum (x_i - z_i)^2,
+
+where z is the target, ie the training data
+
+Gradient descent starts by taking random values for the parameters, calculating the SS error, then adjusting according to the gradient
+- the idea is that you want to travel towards the minimum error
+
+** Issues
+
+To compute the numeric value of the gradient, you need all of the z_i, which means you have to use *all of the training data* every time you improve your model
+- this is why it's so ridiculously resource-intensive to train a neural network
+
+* Backpropagation
+
+The SSE / gradient descent method only uses and modifies the data of the output, not any of the hidden layers; so it can't handle deep NN
+
+
+1. Calculate the error gradients for each of the output neurons
+2. Assign to each neuron in the previous layer a portion of the gradients of each neuron it's connected to
+3. Then use these assigned errors to compute the gradient on this hidden layer
+4. Repeat.
+5. In the end, all neurons have some gradient associated to them
+6. Then apply the ordinary gradient descent with respect to /all/ weights, and update all of the weights
+
+
+Backpropagation relies on taking the derivatives of the activation functions
+- so the activation functions have to be differentiable
+- in particular, this caused people to stop using the threshhold activation functions of the early days

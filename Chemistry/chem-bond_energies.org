@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       6c972bac-192d-4e80-b4ac-662bc1683657
+:END:
+#+title: bond energies
+#+filetags: :Chemistry:
+
+
+* References
+
+
+* Summary
+
+
+|                      | kJ/mol |
+|                      |        |
+| Ionization           |   1000 |
+| Heat of vaporization |     10 |
+| C-H                  |    415 |
+| C-C                  |    839 |
+| C-N                  |    891 |
+| H-F                  |    565 |
+| H-O                  |    460 |
+| C-O                  |    358 |
+| C=O                  |    760 |
+| C \equiv O                |   1072 |
+| N \equiv N                |    945 |
+|                      |        |
+
+* Bond Types
+
+** Covalent Bonds
+
+Two non-metals
+
+** Ionic Bonds
+
+One metal and one non-metal

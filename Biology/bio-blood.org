@@ -1,0 +1,49 @@
+:PROPERTIES:
+:ID:       2b74ede9-ff24-4514-baad-8d094a025194
+:END:
+#+title: blood
+#+filetags: Medicine:Biology:
+
+* References 
+
+* Summary 
+
+
+Erythrocytes: red blood cells
+
+
+** Macrophages
+
+White blood cells of the innate immune system that *engulf* and *digest* pathogens
+
+*** Granuloma
+
+What you call a bunch of macrophages engulfing a foreign substance
+
+
+* Tests
+
+
+** Complete Blood Count (CBC)
+
+Measures all the different blood cells
+
+1. Red blood cells
+   carry oxygen
+2. White blood cells
+   fight infections
+3. Platelets
+   stop bleeding by clotting
+4. Hemoglobin
+   iron-rich protein in red blood cells that carries oxygen
+5. Hematocrit
+   amount of whole blood made up of red blood cells
+6. Mean corpuscular volume
+   size of red blood cells
+
+
+** Erythrocyte Sedimentation Rate (ESR)
+
+Sedimentation rate: time for red blood cells to settle at the bottom of a test tube
+
+[[id:89db38a0-0c02-4ab0-aee5-a9b526431852][inflammation]] causes red blood cells to clump together, making them fall to the bottom of the tube faster

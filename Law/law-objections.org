@@ -1,0 +1,67 @@
+:PROPERTIES:
+:ID:       fbfdb299-d55d-41f9-b16f-b036b2dd3e45
+:END:
+#+title: objections
+#+filetags: Law
+
+* References
+
+
+
+* Summary
+
+
+
+* Argumentative
+
+Arguing with the witness
+
+L: Are you afraid of my client?
+W: Yes
+L: Really? He's like half your height
+
+* Speculation
+
+You must have personal knowledge of a fact to testify about it
+Otherwise, it's speculation
+Also, if there's no way to answer the question that doesn't use speculation, the question itself is speculative
+
+L: How do you think your sister felt when she left?
+
+* Opinion
+
+Only expert witnesses are allowed to offer opinion
+
+* Hearsay
+
+You can only testify to things you know about first hand
+
+W: Janet told me that Ted went out that night. 
+
+* Leading Question
+
+You're allowed to ask leading questions on cross-examination
+but not on direct examination
+- the idea is that if you ask one on direct examination, it's like you're telling the witness what to say
+
+On DE you really want to get out of the way of the witness
+- let them explain as fully as possible
+- lots of /what then?/
+If this doesn't work well (ex. the witness is very quiet, or talks about irrelevant things), you have other options
+- focus on the facts that you want the witness to state, and ask questions about them
+
+But you also need to emphasize the important information from the witness
+You use *looping*
+- you repeat the info in later questions
+
+W: I called my doctor
+L: What did you tell /your doctor/?
+
+As opposed to "what did you tell him?" or "what did he say?" or "and then what?"
+
+  
+** Exceptions
+
+When it's just establishing low-stakes stuff, it's usually allowed
+
+L: Your name is Bob?

@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       31607183-1c72-462f-b733-88810487166a
+:END:
+#+title: brain
+#+filetags: Biology:Neuroscience:
+
+* References 
+
+* Summary 
+
+
+
+* Parts
+
+
+** Cerebrum
+
+At the top / front of your head
+The largest part of the brain.
+
+Cerebral cortex: the outer surface of the cerebrum. Very wrinkly, with 2 hemispheres
+- Corpus callosum: connects the hemispheres
+
+Hemisphers have 5 lobes each:
+1. frontal
+   - largest individual lobe
+   - reasoning
+   - voluntary movement
+   - executive function
+   - social convention
+   - learning / recalling info
+   
+2. parietal (top)
+3. temporal (side)
+4. insular (inside)
+5. occipital (back)
+
+
+Thalamus:
+
+Hypothalamus:
+
+Hippocampus: Manages and stores memory
+
+
+** Cerebellum
+

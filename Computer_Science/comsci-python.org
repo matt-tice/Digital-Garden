@@ -1,0 +1,888 @@
+:PROPERTIES:
+:ID:       2f3cb734-6816-4ce7-85cc-3afd30999f93
+:END:
+#+title: Python
+#+filetags: :ComSci:
+
+* Difficulty Levels
+
+:PERSONAL:
+
+ Advanced
+
+- [ ] numpy
+- [ ] pandas
+- [ ] flask
+- [ ] django
+- [ ] asynchronous programming
+- [ ] unit testing
+- [ ] metaprogramming
+- [ ] Meta class
+- [ ] parallel / multi threading
+- [ ] restful apis
+- [ ] dbt
+- [ ] requests
+
+:END:
+
+* Introduction
+
+- object oriented
+
+
+** Implementation
+
+A python program is a sequence of python statements
+- each contains some number of function calls (possibly zero)
+- when evaluating a statement, the corresponding functions are executed
+
+
+
+*** Call Stack
+
+AKA execution stack / interpreter stack
+
+This is a stack of stack frames
+- the first stack is the execution context for the script being run
+- whenever a function is called, a new stack frame is created and pushed to the call stack
+- once a function returns, its stack frame is popped from the call stack
+
+** Assigning Names
+
+#+begin_src python
+  a = str()
+
+  b = a
+#+end_src
+
+The str function creates a new empty string. This is called *instantiation*
+- But the equals sign just /assigns a name/ to an object
+- so b = a just means that we assign a second name to the empty string object we created
+- so if we change b, it will also change a
+
+* List Comprehension
+
+These are equivalent to *list monads*
+
+The following two statements are the same
+#+begin_src python
+  [s + z for s in iterable1 for z in iterable2]
+
+  li = []
+  for s in iterable1:
+    for z in iterable2:
+      li.append(s+z)
+#+end_src
+
+#+begin_src python
+  [x for x in range(10) if x%2 == 0]
+
+  li = []
+  for x in range(10):
+      if x % 2 == 0:
+          li.append(x)
+#+end_src
+
+* Namespaces / Scopes
+
+*Namespaces* are maps 
+- Names \to Objects
+- usually implemented by dictionaries
+
+*Scopes* of namespaces are the actual regions of text in a python program where that namespace is accessible
+- in a scope of a namespace, referencing a name will use the namespace to find the corresponding object
+
+Functions create local namespaces when called, and those NS are forgotten when the function returns or raises an exception that isn't handled in the function
+- in other words, when you call a function, the local NS has a new map added to it, which is a name of the function referring to the corresponding function object
+- then when the function returns, the mapping in the NS is deleted
+
+Similarly =del x= is really forgetting the map from x to its object in the local NS  
+
+** Scope Hierarchy
+
+Scopes are checked in the following order
+
+1. The local names of a function
+2. The scope of enclosing functions (wrappers)
+        - these are non-local and also non-global
+3. The current module's global names
+4. The built-in names
+
+
+Assignments to names always go to the *local scope*, unless you use a =global= or =nonlocal= keyword
+
+=import= and =def= find the names of the modules/functions in the *local scope*
+
+*** Helpful Example
+
+#+begin_src python
+  def scope_test():
+      def do_local():
+          spam = "local spam"
+
+      def do_nonlocal():
+          nonlocal spam
+          spam = "nonlocal spam"
+
+      def do_global():
+          global spam
+          spam = "global spam"
+
+      spam = "test spam"
+      do_local()
+      print("After local assignment:", spam)
+      do_nonlocal()
+      print("After nonlocal assignment:", spam)
+      do_global()
+      print("After global assignment:", spam)
+
+  scope_test()
+  print("In global scope:", spam)
+#+end_src
+
+Will print
+
+#+begin_src python
+After local assignment: test spam
+After nonlocal assignment: nonlocal spam
+After global assignment: nonlocal spam
+In global scope: global spam
+#+end_src
+
+Here's what's happening under the hood:
+- =do_local= defines a map from the name spam to the str object "local spam"
+- =do_nonlocal= first creates a nonlocal name called spam, and then defines a map from this nonlocal-spam to the str object "nonlocal spam"
+- similarly, in the global case
+- now, in =scope_test= the assignment =spam = "test spam"= is assigning /non-local spam/ to the object "test spam" (which is really local in the eyes of =scope_test=, but it's the same name in the =scope_test= NS that =do_nonlocal= was referring to)
+- and the print function in =scope_test= is referring to that non-local spam
+- outside of the functions, in the final print, we're referring to the /global/ spam, which was set by =do_global=
+
+
+* Data Types
+
+All data in python is represented by *objects* and *relations between objects*
+- (very categorical)
+
+Objects have
+- identity (this is basically a unique code that identifies the object; the memory address, usually)
+- type: determines the operations allowed on the object
+- value
+
+*Containers* are objects that contain references to other objects in their value  
+
+** Numeric
+
+Numeric objects are
+- immutable
+
+#+begin_src 
+int, float, complex
+#+end_src
+
+Int
+- unlimited precision
+- Booleans are a subtype of int
+
+Float
+- implemented using double in C
+
+Complex
+- real and imaginary parts are both float
+- j is used for the imaginary unit
+
+
+** Boolean
+
+and, or, not
+
+** Comparisons
+
+#+begin_src 
+<, >, <=, =>, ==, !=, is, is not
+#+end_src
+
+
+** Frame Objects
+
+
+
+** Sequence
+
+#+begin_src 
+list, tuple, range
+#+end_src
+
+#+begin_src 
+s[i:j]       slice from i to j
+s[i:j:k]     slice from i to j with step k
+del s[i]     removes item i
+s[i:j] = t
+del s[i:j]
+
+s.append(v)    
+s.clear      removes all values
+s.count(n)   returns number of occurences of n
+s.copy
+s.pop(n)     retrieve val at n+1 and remove from s
+s.remove(n)  remove first time n shows up
+s.reverse  
+#+end_src
+
+
+
+*** Lists
+
+Mutable
+
+#+begin_src
+[1,2,4,1]
+list() is the same as []
+list('abc') gives ['a', 'b', 'c']
+
+sort(L) sorts the list in place using only <
+#+end_src
+
+*** Tuples
+
+- Immutable
+
+Interestingly, tuples are actually created by /commas/, not parentheses. The parentheses are actually optional
+
+#+begin_src 
+(1,3,5)
+1,3,5  
+tuple()  
+#+end_src
+
+*** Range
+
+Immutable sequence of numbers
+- always takes the same amount of memory, no matter the size of the range, unlike a list or tuple
+- it only stores the start, stop, and step parameters; the actual items are calculated as needed
+
+#+begin_src 
+range(5)          (0,1,2,3,4)
+range(2,5)        (2,3,4)
+range(2,-2,-1)    (2, 1, 0, -1)
+#+end_src
+
+
+*** Strings
+
+Immutable
+
+#+begin_src 
+'allows embedded "double quotes"'
+"allows 'single quotes' "  
+str()
+
+str.capitalize       capitalizes the first letter
+str.lower
+str.casefold         like lower, but ß -> ss
+str.center(4, '-')   pads to size 4 with -
+str.count(s, 5, 10)  counts occurances of s in range
+
+str.endswith(T)      checks if ends with anything in tuple T
+
+str.expandtabs
+str.find(s, 1,2)     returns location of first instance
+s in S               returns boolean
+
+str.format(A,B)      replaces {i} in string
+
+str.isalpha          checks if only contains letters (no spaces) 
+  
+str.join
+   '-'.join("too")  gives  "t-o-o"
+
+str  
+
+
+#+end_src
+
+#+begin_src python
+string.split()
+#+end_src
+
+** Mapping Types
+
+Also called 'associative arrays'. Their entries have two pieces of data each: a key and a value.
+The keys all have to be unique, but the values can repeat.
+
+*** Dictionaries
+
+Dictionaries are basically SET maps:
+- D: Key \to Value
+The keys in A are distinct by assumption, but different keys can be mapped to the same value
+
+Maps hashable things to arbitary objects
+- mutable
+
+#+begin_src 
+{key : value, key : value}
+dict()
+
+list(D)    returns keys
+D[key]     returns value
+del D[key]
+key in D
+.clear
+.get(key)   returns value for key
+.items      reutnrs key value pairs
+.keys
+.values  
+#+end_src  
+
+*** Nested Dictionaries
+
+You can use dictionaries as your values in a dictionary
+
+
+
+*** View Objects
+
+.keys, .value, .items are all /view objects/
+
+#+begin_src 
+x in dv
+len(dv)
+iter(dv)
+  
+#+end_src
+
+
+
+
+** Sets
+
+#+begin_src 
+set, frozenset
+
+x in s
+A.isdisjoint(B)
+A < B    \subset
+A <= B   \subseteq
+x|A|B|...    is x.union(A,B,...)
+x & A & B... is x.intersection
+x - A - B       x \setmin (A \cup B)
+x ^ A        is xor
+
+x.add(e)
+x.remove(e)
+set.clear  
+#+end_src
+
+set
+- mutable
+
+#+begin_src 
+{}
+set()  
+#+end_src
+
+Frozen Set
+- immutable
+
+** Bytearrays
+
+
+
+
+
+** Files
+
+Three types
+1. Raw binary files
+2. Buffered binary files
+3. Text files
+
+* [[id:b09819c1-193d-47db-b984-8ee0c18a9c82][Classes]]
+
+Say this is a file circle.py
+#+begin_src python
+  class Circle:
+      def __init__(self, radius):
+          self.radius = radius
+      def calculate_area(self):
+          return math.pi * self.radius ** 2
+#+end_src
+
+#+begin_src python
+  from circle.py import Circle
+
+  circle_1 = Circle(42)
+
+  circle_1.radius
+  circle_1.calculate_area()
+  circle_1.radius = 5
+#+end_src
+
+
+
+* Control Flow
+
+** If / Else
+
+If and else always act on *boolean values*
+- if x == 4:
+- x == 4 is either true or false
+
+#+begin_src 
+if reply in {'y', 'yes', 'yep'}:
+#+end_src
+
+** Match / Case
+
+These are sort of like if / else, but they actually allow you to compare things *besides boolean values*
+
+#+begin_src 
+match var:
+  case 200:
+     print(...)
+  case 324:
+     ...
+#+end_src
+
+
+
+** For
+
+You can actually iterate over /any sequence/
+
+The way that a for loop works in python is
+- it calls =iter( )= on whatever you're acting the for loop on (the container)
+- this then returns an iterator object that defines the method =__next__=, which knows how to access the elements in the container one at a time
+- when there are no more elements, =__next__= returns a =StopIteration= exception
+- when it receives a StopIteration, the for loop ends
+
+** While
+
+** Break
+
+** Continue
+
+** Else
+
+FOR: else is executed after the loop finishes
+WHILE: executed after the loop condition is false
+
+Not executed if the loop is terminated by a break
+
+
+
+* [[id:9c6dffe1-ea2b-435f-8d11-167edf52b2a4][Functions]]
+
+* Commands
+
+** Loops
+
+Python doesn't like nested loops.
+- It doesn't have any feature to BREAK out of nested loops (unlike GOTO in C)
+
+One way to get around this is to turn any nested loops into functions and then just use =return=
+
+
+
+** Slicing
+
+Lets you get subsequences of strings
+
+[start : stop (inclusive) : step]
+
+start : if empty, starts at 0
+
+step : if empty, is 1
+
+
+We can reverse an integer by first turning it into a string, and then reversing it, and then turning it back into an integer
+
+int(str(x)[::-1])
+
+
+** Arrays
+
+DYNAMIC ARRAYS: In Python, 
+
+  
+LISTS: Ordered. Mutable.
+- Square brackets (this is called creating a literal)
+- Insert elements with .append() and .insert(). Similarly, you have .pop() and .remove()
+- In python, .remove() and .insert() actually work by first shuffling the elements around, and then modify the stuff at the end (final element) of the list, and then shuffle back into the right order
+
+As a consequence, if you want to work with an element at the very beginning of the list, it will actually take a lot of time
+
+
+LINKED LISTS: Ordered. Their time complexity and the way they store data  is different from ordinary lists.
+- Elements are called 'nodes'
+  The first node is the 'head'
+  Each node has 2 pieces of data: the value of the node, and a reference to the next node in the list
+- Useful for stacks and graphs (like actual discrete graphs from math)
+- The beginning of a linked list has O(1) time complexity (you always know where the first node is)
+  The end of the list has O(n), since you have to travel from the first element to get there
+- Insertion/deletion at a specific point is also O(n) for the same reason
+- Worse at element lookup than lists, since to get to element k, you have to traverse the whole list to get there
+
+- Doubly linked lists have each node also pointing backwards; that lets you traverse from the end as well, reducing the time complexity
+
+- Circular linked lists go from the final element in the list back to the first element
+
+In order to create a linked list
+
+*** SPLICING:
+
+If we have 2 linked lists, how do we put them together?
+- You know you can do it in at least O((n+m)log(n+m)) time 
+  Take both lists, put them into an ordinary list, sort the list, and then construct the new linked list from this sorted one.
+  - constructing the n + m sized list is O(n+m)
+  - sorting the n+m sized list is O(log(n+m))
+  - so it's a total of O((n+m)log(n+m)) time complexity
+- space complexity is O(n+m)
+
+How do we improve this?
+- We should build and sort at the same time:
+  - At each step you take the smaller head of the two linked lists, and add it
+  - This is called a recursive merge or top-down
+Time is
+- O(n+m)
+Space is
+- O(n+m)
+
+There's an even better way though! It's called iterative merge or bottom-up merge
+- It basically does the same thing for time complexity, but it reduces space complexity
+
+
+
+QUEUES: First-in/First-out (FIFO)
+- Linked lists are better
+- .popleft()
+
+STACKS: Last-in/First-out (LIFO)
+- Linked and unlinked lists perform the same
+- For a linked list, you just add things in the reverse order: every new element becomes the new head
+
+GRAPHS: You can encode them with a dictionary, where the keys are the vertices, and the values are lists that contain the vertices pointed to
+
+
+ENUMERATE : Takes in an array, and outputs a new array whose entries are tuples of the form (index, array[index])
+
+[-1] gives the last element in the list
+
+
+ZIP : 
+
+SET : 
+
+** [[ID:ab53a65c-7e2b-4e2f-bb43-9fdaa02df60a][SORTING]]
+
+Use the function sorted()
+
+
+
+
+
+* Modules
+
+This is how python handles the =\input= command in Latex
+
+A *module* is any python file with definitions and statements
+- within a module, the module name is available as =__name__=
+
+In another file you can then import the module with =import=
+- then you can call the functions like you would for a class
+
+#+begin_src 
+mod.funct(1)
+#+end_src
+
+** Modules as Scripts
+
+When you try to run a module as a stand-alone script, it will try to /import it/, with
+- its name set to the string =__main__=
+
+So if you can actually add the following to your module, to make sure it executes like a script
+
+#+begin_src 
+if __name__ == "__main__":
+  import sys
+  module_name(sys.argv[1])
+#+end_src
+
+** System Module
+
+
+
+** dir()
+
+Returns a sorted list of strings that says all the names defined in the given module:
+- variables
+- functions
+- modules
+
+** Packages
+
+These are collections of modules
+
+You can have sub-modules
+- import module.sub.subsub
+
+** Compiling
+
+
+** Modules Types
+
+:RANT:
+- Patrick Westerhoff argues that [[https://stackoverflow.com/a/32005946][modules aren't types]], I don't really agree though: they basically behave the same
+- he says they aren't types in the same way that int objects aren't types, which is probably true...but they're types, c'mon
+- when you do =import stuff=, you're essentially instantiating an object of the class =stuff=, which you call =stuff=. Then =stuff.function= is calling the method from the class/module =stuff=.
+:END:
+
+The way that it's actually implemented in python, is
+- all modules are of type =ModuleType=
+- packages, for ex., are a certain kind of module
+- import creates a module object and initializes it
+       + import isn't an operation /on/ a module object; it operates on a file that defines how the module functions.
+
+
+* Input/Output
+
+** Print
+
+** Formatted String Literals
+
+Also called /f-strings/
+- there's a different (older) way of formatting strings, using "sometext".format(), but it's slightly slower
+
+Start a string with f or F, before the quotation mark
+- you can use { } to put variable calls in the string
+- { var : int } will force the field to be at least int characters wide
+       + useful for printing tables
+
+
+         
+#+begin_src 
+month = "January"
+day = "17th"  
+
+f"Today is {month} {day}"
+#+end_src  
+
+*** Implementation
+
+f-strings are *expressions evaluated at run time*, rather than constants
+
+They use Abstract syntax trees, which the CPython compiler can handle very quickly
+
+*** Benefits
+
+We can compare f-strings to 2 other ways of doing string formatting in Python
+
+1. %-formatting: it only handles certain types (int, str, double), not tuples, etc.
+
+2. str.format: it's a bit verbose, and not as readable
+
+** Files
+
+open() returns a file object
+
+#+begin_src 
+f = open("C:/.../thing.txt", 'r+', encoding="utf-8")
+
+read_data = f.read()
+f.close()
+#+end_src
+
+(r)ead, (w)rite, (a)ppend, (r+)ead and write, 
+
+#+begin_src 
+f.readline()
+
+for line in f:
+    print(line, end="")
+
+
+f.write("whatever I want to write")
+
+
+f.seek(5, whence)
+#+end_src
+whence can be
+(0) from beginning (1) from current point (2) from ending
+- but in text files you can only seek from the beginning (as opposed to byte files)
+
+  
+*** JSON
+
+Reading and writing data types of than strings to a file is tough
+- if you write a dictionary, and then try to read it, how does the computer know that string of text is meant to be a dictionary?
+- json (JavaScript Object Notation) gives you a way to do it
+- it takes Python data hierarchies and /serializes/ them, converting them to strings
+- it can also deserialize, to get back the original type
+
+#+begin_src 
+import json
+  
+json.dump(stuff_to_write, f)
+
+x = json.load(f)  
+
+  
+#+end_src
+
+
+
+* Exceptions
+
+** Flow
+
+Errors during execution.
+
+We can write programs that handle specified exceptions
+
+#+begin_src python
+  try:
+    x = (int(input("Please enter a number: ")))
+    break
+  except ValueError:
+    print("That wasn't a number, fool.")
+  else:
+    ...
+  finally:
+    ...
+#+end_src
+
+How it works:
+- the statements in the =try= block are evaluated
+- if no exception occurs, we jump to =else= and then =finally=
+- if there's an exception found in =try=, we jump to the corresponding =except= (if there is one), followed by =finally=
+
+In particular, =finally= always evaluates  
+
+
+
+** With
+
+The =with= keyword allows you to write try-except-finally statements in a cleaner way
+- they rely on *context managers*
+
+#+begin_src python
+  with Expression as Target:
+     Suite
+
+  # is the same as
+
+  manager = (Expression)
+  enter = manager.__enter__
+  exit = manager.__exit__
+  value = enter()
+  hit_except = False
+
+  try:
+     Target = value
+     Suite
+  except:
+     hit_except = True
+     if not exit(*sys.exc_info()):
+        raise
+  finally:
+     if not hit_except:
+        exit(None, None, None)
+
+#+end_src
+
+When you execute =with=, it will
+1. evaluate a *Expression* to get a context manager
+2. load the CM's =__enter__= and =__exit__=
+3. invoke =__enter__= and assigns its return value to the *Target* in the =with= statement
+4. the *Suite* is executed
+5. =__exit__= is invoked
+        + if any exception arose, it's passed along as three arguments (type, value, traceback) to =__exit__=
+
+*** Context Managers
+
+These are designed to work with resources that will only be used for a fixed period of time
+- after that period, the resources should be freed up
+
+If you don't close resources, it risks using up all of your memory
+
+Once you have a context manager defined, you can call it with the keyword =with=
+
+*** Built-in CM
+
+Files already have a built-in CM
+
+#+begin_src python
+  with open("file.txt") as f:
+      data = f.read()
+#+end_src
+
+We never need to call =close=, because it's all taken care of by the CM
+
+*** Creating a CM
+
+CMs are [[id:b09819c1-193d-47db-b984-8ee0c18a9c82][classes]]
+They need two methods
+- =__enter__=
+- =__exit__=
+
+
+
+** Error Messages
+
+Always read them *from the bottom up* (because they're based on stacks)
+The lines above the error in the error message are call the *traceback*
+
+
+
+** Types of Exceptions
+
+We can also define our own exceptions
+
+** Raising Exceptions
+
+#+begin_src python
+  if :
+      raise TypeError("We're expecting an integer")
+#+end_src
+
+
+Using =raise= is useful, because the traceback will point to the specific moment of the code when the exception was raised
+
+But it's also extremely useful to *handle edge cases*
+- it lets us write things very generally and then just shove the edge cases into exceptions
+
+  #+begin_src python
+    def gcd(x,y):
+        try:
+            return gcd(y, x%y)
+        except ZeroDivisionError:
+            return x
+  #+end_src
+
+That's stunningly beautiful
+This also demonstrates that /exceptions aren't necessarily errors/
+
+** Multiple Exceptions
+
+You can catalogue multiple exceptions in a single object using *exception groups*
+
+#+begin_src python
+  excs = [OSError('error 1'), SystemError('error 2')]
+  raise ExceptionGroup('here are the issues', excs)
+
+#+end_src
+
+** Exception Notes
+
+You can add notes to a rased exception
+- this is used if you, for instance, have a loop going on and you want to include the iteration of the loop the error occured in
+
+
+#+begin_src python
+  excs = []
+  for i in range (4):
+      try:
+          ...
+      except Exception as e:
+          e.add_note(f'Happened in iteration {i+1})
+          excs.append(e)
+#+end_src

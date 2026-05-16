@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       c7dfde58-344c-4565-aca9-c86594017a51
+:END:
+#+title: gases
+#+filetags: Chemistry:Physics:
+
+* References
+
+
+
+* Summary
+
+There are 11 gases at standard T and P:
+- H, N, O, F, Cl, He, Ne, Ar, Kr, Xe, Ra
+  
+
+* Noble Gases
+
+** Helium
+
+** Neon
+
+** Argon
+
+** Krypton
+
+** Xenon
+
+** Radon

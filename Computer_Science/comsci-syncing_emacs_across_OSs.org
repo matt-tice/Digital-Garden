@@ -1,0 +1,112 @@
+:PROPERTIES:
+:ID:       bc4a98c4-8557-4405-a6a6-645ed25fdc63
+:END:
+#+title: syncing emacs across operating systems
+#+filetags:Challenge
+
+
+* Challenge
+
+I've fallen in love with Emacs, and I want to be able to sync and use it on any operating system I might have. The problem is that Windows and Linux handle things like pathing quite differently.
+
+How do I set up my systems to sync Emacs in an operating-system-agnostic way?
+
+* Attempt 1: Emacs Variables
+
+We can define a variable in Emacs that takes the appropriate value depending on our system:
+
+#+begin_src emacs-lisp
+(defvar my/sync-root
+  (cond
+   ((eq system-type 'windows-nt)
+    (expand-file-name "~/Windows_Emacs_Path/"))
+   ((eq system-type 'gnu/linux)
+    (expand-file-name "~/Linux_Emacs_Path/"))
+   (t
+    (error "System type %s is unsupported. Please define my/sync-root manually" system-type)))
+  "The system-specific root for all synced Emacs data, guarded by system-type checks.")
+
+;; Check if the sync-root directory exists
+(unless (file-directory-p my/sync-root)
+  (warn "Sync root directory not found: %s. Some features may fail." my/sync-root)
+)
+
+#+end_src
+
+I've also thrown in a little error-check so that if we're on some other system besides Windows and Linux, we stop right away (we don't even get to the use-packages or anything), so no ghost directories are created.
+
+** Problem: Internal to Emacs
+
+The above approach isn't bad, but because I like to use my Emacs in tandem with other scripts and files that have path-dependent pieces (for instance, certain Make files), having the =my/sync-path= variable defined /internal/ to Emacs leaves those other scripts/etc. system-dependent.
+
+We can get around this using *environment variables*.
+
+* Attempt 2: Environment Variables
+
+We can set an environment variable in Windows easily with Powershell:
+
+#+begin_src powershell
+[System.Environment]::SetEnvironmentVariable("EMACS_DATA_ROOT", "Windows_Emacs_Path", "User")
+#+end_src
+
+(you need the literal word "User", not whatever your username is)
+
+The version for the Linux terminal is
+
+#+begin_src bash
+export EMACS_DATA_ROOT="$HOME/LINUX_EMACS_PATH"
+#+end_src
+
+Then in Emacs, we just define a variable that grabs the environment variable:
+
+#+begin_src emacs-lisp
+(defvar my/sync-root (getenv "EMACS_DATA_ROOT"))
+#+end_src
+
+and we add the check to make sure that we're using a supported system:
+
+#+begin_src emacs-lisp
+(defvar my/sync-root
+  (let ((env-path (getenv "EMACS_DATA_ROOT")))
+    (cond
+     ;; A: Environment Variable is set
+     ((and env-path (file-directory-p env-path))
+      (expand-file-name env-path))
+     
+     ;; B: Windows OS
+     ((eq system-type 'windows-nt)
+      (let ((default "~/Documents/Emacs/"))
+	(message "Environment variable EMACS_DATA_ROOT not set. Defaulting to: %s" default)
+	(expand-file-name default)
+	)
+      )
+
+     ;; C: Linux OS
+     ((eq system-type 'gnu/linux)
+      (let ((default "~/Emacs/"))
+	(message "Environment variable EMACS_DATA_ROOT not set. Defaulting to: %s" default)
+	(expand-file-name default)
+	)
+      )
+     ;; D: Fallback
+     (t
+      (error "System type %s is unsupported. Please define my/sync-root manually" system-type))
+)
+)
+)
+#+end_src
+
+** Note: =cond='s order
+
+A =cond= clause (when triggered) will evaluate everything inside of it, but it will only return the value of the *last form*. So it's important in the above to put the =expand-file-name= expression last.
+
+If we instead wrote
+
+#+begin_src emacs-lisp
+((eq system-type 'gnu/linux)
+ (expand-file-name "~/Emacs/")
+ (warn "Environment variable EMACS_DATA_ROOT not set. Defaulting Emacs root path to $HOME/Emacs."))
+#+end_src
+
+and this clause evaluated, it would return the value of the expression =(warn ...)=, which is =nil=, making our =my/sync-root= get set to =nil=
+

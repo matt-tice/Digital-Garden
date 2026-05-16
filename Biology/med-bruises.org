@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       3e2de181-7816-4f08-89ae-7f5048195963
+:END:
+#+title: bruises
+#+filetags: Biology:Medical:
+
+* References
+
+
+
+* Summary
+
+Also called *contusions*
+A kind of hematoma
+
+Bruises are caused by broken [[id:b3fc3adb-e5bb-4dcf-bc6c-d89380d227ed][capillaries]], usually due to blunt trauma
+When you see a bruise, you're seeing the blood spilling out into the surrounding tissue
+
+Soft tissues get bigger bruises
+- the blood can travel outwards easier
+
+problems with coagulation/clotting allows more blood to flow, making larger bruises
+

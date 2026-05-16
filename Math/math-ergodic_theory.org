@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       6aa84cc1-8b6b-4972-9d62-e97a84f3ffdd
+:END:
+#+title: ergodic theory
+#+filetags: Math:Economics:Stats:
+
+* References
+
+Invitation to Ergodic Theory, C.E. Silva (274 pages)
+
+
+* Summary
+
+Ergodics is also called *measurable dynamics*
+- you work with dynamical systems f: X \to X, in the category of measurable functions
+- the point is to study *long-term behaviour*
+
+All completely separable metric spaces with a Borel measure are isomorphic to a finite or infinite interval in R union with a countable number of isolated points  
+
+* Entropy

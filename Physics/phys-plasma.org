@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       bec01ba6-97a1-4204-8f17-0d14c690c826
+:END:
+#+title: plasma
+#+filetags: Physics
+
+* References
+
+
+
+* Summary
+
+Plasmas are
+- electrically neutral
+- conducting
+- gases
+

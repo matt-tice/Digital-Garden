@@ -1,0 +1,102 @@
+:PROPERTIES:
+:ID:       b47ae89d-0a6f-4281-b200-37da41d83124
+:END:
+#+title: ports
+#+filetags: :Computer Science:Networks:
+
+
+* References
+
+
+* Summary
+
+
+Source Port: a random large number assigned by your laptop to keep track of an outgoing request
+
+Destination Port: A /standardized/ number that tells the receiver where the received data belongs
+
+There are 65,535 ports
+- the first 1024 are reserved for things like HTTP, SSH, DNS
+- then there are the *registered ports*, which are used by specific sofware companies, like MySQL or Steam.
+- finally the dynamic/private ports
+
+Sockets: are IPs + ports
+- ex. 192.168.1.50:22 (SSH into a particular IP)
+
+When you open different browser tabs, each tab gets its own port
+
+Nmap Tool
+- queries all of the ports to see which ones are open
+
+Windows opens a bunch of ports by default, for things like Remote Procedure Calls (RPCs, port 135) and Server Message Blocks (SMBs, port 445)
+
+RCP: when a program makes an RCP cal, the local system packages (*marshals*) the request, and sends it to the remote system. The remote system executes the task and sends the result back.
+- ex. when Windows manages its services across a network
+- this can be used by hackers for Remote Code Execution (RCE)
+
+SMB: The language that Windows uses for file sharing, printer sharing, ect.
+- lets applications read and write to files and request services from programs in a network
+- ex. sending a document to a shared network printer
+- SMBs are used to send RPCs.
+
+Windows computers are *very noisy*
+- they constantly send out SMBs and RPCs into the network, to see if there are printers, for ex.
+- this causes Windows to be more resource intensive while idle than Linux.
+
+EternalBlue was a powerful exploit of SMBs
+
+SMBv1 driver (srv.sys)
+- extended attributes are stored in two formats: OS/2 and NT
+- the driver converts from OS/2 to NT
+
+=SMB_COM_NT_TRANSACT= uses dwords, while =SMB_COM_TRANSACTION2_SECONDARY= uses words.
+-
+
+Buffer Overflow
+
+A buffer is a temporary storage area in RAM
+Many old programming languages, like C and C++ don't actually check if data is small enough to fit in a buffer. If the data is too large, it /overflows/ into the neighbouring memory addresses.
+
+The Return Address (RET) tells the CPU to return to the main program
+- if we overflow and overwrite the return address, we can tell the CPU to return to *a malicious program*
+
+Address Space Layout Randomization (ASLR)
+Every time the computer boots, it randomizes its addresses. This makes it harder for an attacker to know the address of their malicious code
+- if you can figure out the address layout before a boot happens, you can attack effectively
+- you need an *information leak*: if you can find a single memory address, you can use that to find out where the shellcode is hidden
+
+No Operation Sled (NOP Sled)
+The shellcode has its first 1000 bytes NOPs; the malicious code is at the end. Then, if the return address gets changed to something that hits any of those NOPs, the CPU will slide along the address until it reaches the malicious code
+
+Runtimes
+Programming languages like Python and Java have this: it checks to make sure that there are no buffer overflows.
+In a language like C, raw instructions are just sent to the CPU. The CPU doesn't know about buffers and their sizes, so it allows buffer overflows.
+
+Garbage collectors are background processes inside of the runtime. They look for pieces of memory that the program is no longer using, to reclaim tem for future use
+- reference counting: has a stack of references to each object. When a variable gets deleted, it gets popped from the stack; when the stack is empty, the object is considered garbage and is deleted
+- but this can't handle circular references (the stack will never be empty, and you get a memory leak)
+- mark-and-sweep: the garbage collector starts at the global variables and running functions and traces every pointer to see what it can reach. Everything it reaches is marked as live. Anything not marked it swept away from the memory.
+- GCs make sure that memory is only freed once you're no longer going to use what it's currently housing
+
+Runtime Bounds Checking: this is what handles buffer overflows
+- in something like python, you don't access memory directly
+- instead, you work with objects, like arrays
+- if you try to write to an array, the runtime will check if you're able to do that without causing a buffer overflow; if not it gives you an error like IndexOutOfBounds
+
+But *Python is written in C*
+- so you can actually attack the python interpreter (cpython), or the underlying C libraries in python (ex. OpenSSL)
+
+Memory-Safe Systems Languages
+Things like C --- very low level --- but memory safe
+- ex. Rust: it tracks every variable and knows when it's no longer needed. Rust refuses to compile a program if there's /a chance/ of a buffer overflow or memory leak. But it doesn't need to use a Runtime like python.
+
+Resource Exhaustion (DoS)
+Regex DoS (ReDoS): the attacker sends a string to a regex checker that has exponential growth
+
+Data Execution Prevention (DEP/NX)
+Marks the buffers as *non-executable*
+
+Return-Oriented Programming (ROP)
+Instead of injecting their own code, attackers stitch together pieces of legitimate code in a computer's memory to perform an attack
+
+Heap Grooming/Spraying

@@ -1,0 +1,64 @@
+:PROPERTIES:
+:ID:       fe2b77eb-9876-44ac-8e6a-360c670bd909
+:END:
+#+title: cpp
+#+filetags: Programming Language:
+
+* References 
+
+* Summary 
+
+An [[id:4359d5f9-3a11-44cf-a179-e3e35eebbb38][object-oriented language]]
+
+A compiled language
++ Makes it much faster than an interpretted language (like Python)
+
+Has flexibile memory management
++ In Java, some of the system memory is used to interpret the language
+       + A garbage collector is used to tidy up the memory
+       + You don't have direct control over how much memory is used
++ In C++ you know how much memory a program will use
+
+Pointed chasing and virtual method look-up slow down C++ in comparison to Fortran  
+
+* Compilation
+
+Because C++ isn't an interpretted language, it needs to be compiled before it can be executed
+
+* Headers
+
+** <iostream>
+
+Used for the program to know about input and output
+cout is /console output/
+
+** <string>
+
+getline
+
+* Statements
+
+These are the instructions in the program
+They all *end with a semicolon*
+
+* Variables
+
+Must be declared with a type
+
+Double-type variables use up a lot more memory than int
+
+Int is signed by default
+
+** Type Conversion
+
+Explicit type conversion changes the type of a variable
+
+* Debugging
+
+C++ has some features to aid in debugging your program
+
+** <cassert>
+
+assert will check whether a particular statement is true, and if not, it will exit the program, pointing to the issue
+
+asserts are automatically removed when compiled with the -O flag, to optimize your code, which is awesome --- once you know it works, you can drop the asserts

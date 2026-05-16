@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       62fac1a3-9cb6-4621-9ba6-cf1ec26ca464
+:END:
+#+title: binary files
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+Being a binary file just means you aren't [[id:bfdb0464-6a79-4bfb-85fb-d9c9b3d36a9f][text files]]
+- so in particular, they aren't human readable.
+

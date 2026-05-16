@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       ae907339-c8f3-4e8e-ba95-bd1e52a1d0f4
+:END:
+#+title: lattice qft
+#+filetags: Physics:QFT:
+
+* References 
+
+* Summary 
+
+Lattice QFT is a numerical method for non-perturbative calculations
+It computes correlators and matrix elements
+
+The idea is to discretize spacetime to force finite degrees of freedom.
+
+[[id:cb195e7f-59ad-4e34-9ce2-c0dbd122b43d][Effective field theory]] is required in lattice QFT, because you need a way of figuring out whether your discretization makes sense. EFT can predict finite size corrections
+
+
+* Applications
+
+Hadronic physics at zero temperature
+
+QCD at finite temperature
++ QGP phase
+
+Highly improved staggered quarks
+
+
+* Results
+
+Abinitio QCD+QED calculations of proton-neutron mass splitting
+
+Strong constraints on CKM matrix elements
+
+Chiral transition temperature

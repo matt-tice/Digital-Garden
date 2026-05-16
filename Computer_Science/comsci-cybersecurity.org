@@ -1,0 +1,152 @@
+:PROPERTIES:
+:ID:       b63900f0-3641-4d93-8309-206a48368943
+:END:
+#+title: cybersecurity
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+Goals:
+1. Confidentiality
+2. Integrity (keeping info correct)
+3. Availability
+4. Authentication
+5. Authorization (verifying access to resources)
+6. Nonrepudiation (validating the source of info)
+
+
+
+* PATH
+
+** Having "." in your PATH
+
+(The current directory): Security Risk. Having a single period as a path allows a script in /any/ folder you happen to be in to execute with the same priority as system tools.
+- this is a very old security hole
+
+
+* Confidentiality
+
+Encryption
+
+
+** Symmetric
+
+Same key is used to encrypt and decrypt
+
+Shorter keys
+Faster than asymmetric
+
+Typically cybersecurity will use asymmetric encryption to encrypt the symmetric key
+
+** Asymmetric
+
+Public key is used to encrypt
+Private key is used to decrypt
+
+Used to share info over unsecure channels
+
+** Secure Sockets Layer (SSL)
+
+SSL certificates are like digital wallets
+- they contain info about the owner and that identifies the owner
+
+When you buy a domain name, you can buy a corresponding SSL
+- this makes your website /HTTPS/ instead of HTTP
+
+
+
+*** Transport Layer Security (TLS)
+
+Allows users to view the details of a certificate
+
+*** How it works (Handshake Protocol)
+
+When a client (computer) and server contact each other, the server sends out the SSL/TLS certificate
+- the client authenticates it
+
+** Blockchain
+
+The blockchain is a database that contains transactions
+It's stored on multiple computers
+
+When you do a transaction, it gets written to the blockchain
+
+* Integrity
+
+Accomplished through *hashing*
+- a one-way operation
+- represents the data of file
+
+A *salt* is a one-time random stream of characters that is changed every time it's applied
+- ex. a captcha
+
+A *tripwire* creates hashes your files and updates the hash any time the files get updated
+- sends an alert if modified by an unauthorized user
+
+** System Integrity
+
+Being able to trust the system you're using
+- verify the identity of the users
+       + usually through biometric data
+- verify the system hasn't been compromised
+       + secure boot: the system checks if anything has happened since the last log-in. if it has, it won't boot until it's been analyzed
+
+** Data Integrity
+
+
+
+* Availability
+
+
+DDOS attacks
+
+* Authentication
+
+Username/password
+
+Multifactor authentication
+
+Types of authentication
+- something you know (password)
+- something you have (smart card)
+- something you are (biometric)
+
+* Authorization
+
+Once you're authenticated, this is what you're authorized to see
+
+Permissions have the following structure:
+- file type: are the permissions applicable to a file or whole directory?
+- file owner: can the user read-only, read and write, or execute?
+- group owner: r/w/x
+- other user (not authorized): r/w/x
+
+  
+** Access Control Lists (ACLs)
+
+
+
+
+** Intrusion Prevention System (IPS)
+
+Controls traffic on a network
+
+* Nonrepudiation
+
+To prevent someone from claiming they didn't do something they actually did
+- ex. read receipts, email origin verification
+- ex. requiring purchasers to present some form of identifying info before making a purchase
+- ex. IP addresses
+
+
+** Message Authentication Code (MAC)
+
+
+** Digital Signature
+
+Uses an asymmetric key pair in reverse
+- encrypted with the private key, decrypted with the public key

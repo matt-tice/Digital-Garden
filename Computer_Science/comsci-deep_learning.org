@@ -1,0 +1,228 @@
+:PROPERTIES:
+:ID:       c27b78e0-4e99-46ef-9e0b-2417202ef5e1
+:END:
+#+title: deep learning
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+*Hyperparameters*: values set before training
+
+*Parameters*: values that are set by the model during training
+
+GPUs are really useful for neural networks, because they're designed to be really good at calculations with matrices (which show up in graphics)
+- NN are based on a kind of linear structure, in that the input into a neuron is basically a linear combination, so you can represent the information traveling through a NN by a series of matrices being multiplied
+
+         A_1 A_2 .. A_n v
+
+where v is the input vector (technically you also have to factor in the activation functions, so at each new step you really have f(v_i), where f is the activation function applied element-wise and v_i is the output of the previous layer)
+
+
+
+*** Autoencoder
+
+Fewer neurons in the hidden layer than the input layer, and is trained to output the input
+- built-in bottleneck
+- for the NN to learn with this structure, it can't just be a trivial identity map
+- so it, in some sense, encodes the data in something smaller
+
+
+
+*** Decoder
+
+Language generation is a kind of decoder
+- you encode the input statement/question
+- you do some kind of transformation in data-land to turn it into a response
+- you decode the response into human-language
+
+Similarly, translation encodes in one language and decodes in the other  
+
+** Clustering
+
+A kind of unsupervised learning
+- mixture models in stats
+
+* Support Vector Machine
+
+
+
+* Neural Instruction, Multiple Data
+
+Each processor corresponds to a single neuron
+
+* History
+
+** Threshold Logic Units (1940s -- 1960s)
+
+Most models in this period used boolean inputs and outputs and threshold activation functions
+
+They had a single layer
+
+The focus was on if neural networks could learn basic logical relations like AND and OR
+
+*** 1943
+
+/A Logical Calculus of the Ideas Immanent in Nervous Activity/ Walter McCulloch and Walter Pitts
+- models the brain using binary inputs/outputs in neurons
+- inputs could be \pm1 (or 0 if the neuron wasn't firing)
+- each neuron had a threshold function, and if the sum of the input values was over the threshold, it would fire
+
+
+*** 1949
+
+/The Organization of Behaviour/, D. O. Hebb
+- tried to explain behaviour using neurology and psychology
+- behaviour arose from the interactions of neurons
+- Hebb's Postulate: when a neuron A helps make neuron B fire a lot, it will become more efficient at doing so
+- this was taken up by computer scientists as the idea of putting weights on the connections between neurons, which could be altered during the process
+
+*** 1958
+
+Rosenblatt's Perceptron Model
+- a single neuron with threshold activation and one layer of weights
+
+Perceptron Training Rule
+- updated the weights after each training example
+- if the output is correct, don't alter
+- if the output is too low, increase the weights of neurons that produced positive values, and decrease the weights of negative neurons
+- if the output is too high, increase the weights for negative neurons and decrease positive neurons
+
+Perceptron Convergence Theorem
+- if weights exist that will solve the problem, the perceptron will eventually converge to them
+
+*** 1960
+
+Widrow and Hoff
+- Adaptive Linear Neuron (ADALINE)
+       + single neuron, single weight layer
+       + no threshold function
+       + output is the weighted sum of inputs
+       + same training rule as perceptron
+              + called the Least Mean Square algorithm (LMS)
+
+The point of this model was that you could use it to train the network to produce /any output/ not just \pm1
+
+
+*** 1969
+
+/Perceptrons/, Minsky and Papert
+- criticized the hell out of neural networks
+- destroyed the funding for NN research
+- showed perceptrons can't handle XOR (it's not linearly separable)
+
+To fix this, people began using multiple layers of neurons, but they *didn't know how to train them*  
+- the *credit assignment problem*
+
+  
+** Connectionism (1980s -- 1990s)
+
+*** 1980
+
+
+
+Fukushima
+- Convolution NN
+- neocognitron
+- layer of neurons that all have the same set of input weights
+- each neuron only gets input from a small region of the input field
+
+
+*** 1982
+
+Hopfield
+- found a network called *associative memory*
+- once it's been trained, if a corrupted version of an input pattern is presented, it can regenerate the proper pattern
+- useful for pattern completion and error correction
+
+*** 1986
+
+Parallel Distributed Processing Research Group
+- Backpropagation
+- Solves the credit assignment problem
+- has a /forward/ and /backward/ pass
+- doesn't use threshold functions; requires activation functions to be differentiable
+- started using tanh x
+
+The problem is that this method was incredibly inefficient for deeper networks  
+
+*** 1989
+
+LeCun
+- Convolutional Neural Network
+- based on neocognitron
+- can be trained using backpropagation
+
+CNNs are designed for /feature detection/
+- if a feature is present, regardless of where it's located, they should detect it
+- they're designed to lose data about the relative location of a feature
+- this is done by all the neurons having the same input weights (so the weight matrix there is really a weight vector)
+- each neuron is given its own section of an image to look at; since all the neurons will have the same weights, they'll learn to each recognize the same feature if it shows up in their part of the image
+
+
+*** 1990
+
+Elman
+- Recurrent Neural Network
+- processes a sequence of data
+- single hidden layer
+- output of hidden layer is fed forward to output layer and also stored in a buffer
+- from the buffer, it's fed back into the hidden layer with the next input
+- could generate sentences
+
+
+RNNs
+- basically it's just an ordinary NN, but you increase the size of the input vector, so that it contains both the regular input, and the buffer/memory space
+- in other words, you just partition the input vector into input and memory
+- but you also have a process for storing the output into the memory
+- they suffer from the vanishing gradient problem, because the paths that backpropagation takes get so long  
+
+*** 1991
+
+Hochreiter
+- realized that error signals in backpropagation decay exponentially , so early layers get little adjustment 
+- the *vanishing gradient problem*
+
+  
+
+*** 1997
+
+Hochreiter and Schmidhuber
+- long short-term memory units
+- a solution to the vanishing gradient problem in RNNs
+- long term memory in a NN is done by adjusting the weights
+- short term memory corresponds to the activations that flow through the network
+- LSTM allows you to keep the short term memory in the network flowing longer, so that you can deal with sentences where a word early in the sentence is related to one later on
+
+LSTMs
+- have a cell made up of 3 gates: forget, input, output
+- forget gate determines which activations should be forgotten
+- input determines how activations should be updated in response to new input
+- output determines which activations are used to generate output
+- each gate is comprised of neurons
+
+** Deep Learning (2000s -- 2010s)
+
+
+Greedy layer-wise pretraining
+- trains single layer at a time
+
+Glorot initialization  
+
+*** 2011
+
+Rectified Linear Activation Function
+- max(0,x)
+- improved training
+- neurons using this function are called rectified linear units
+- can only flow through positive activation
+
+*** 2014
+
+Sequence-to-sequence
+- two LSTM networks in sequence
+- the first one is the encoder: processes the input one bit at a time and encodes it in a distributed representation
+- the second is the decoder, and takes in the distributed rep and is trained to generate the output sequence one bit at a time using a feedback loop

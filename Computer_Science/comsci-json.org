@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       3f54d8d7-f430-475c-9422-05037c04fdca
+:END:
+#+title: JSON
+#+filetags: :Computer Science:Language:
+
+
+* References
+
+
+* Summary
+
+JSON requires a *single root*
+- so there has to be a main pair of curly braces that everything else lives inside

@@ -1,0 +1,48 @@
+:PROPERTIES:
+:ID:       49732966-665b-4eed-bfae-60e797172b56
+:END:
+#+title: APIs
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+APIs are *Application Programming Interfaces*
+
+:THOUGHTS:
+The thing that confused me for a while is that there /isn't really a rigorous definition/ of API
+- they're more of a feeling, than anything
+- they're basically kinds of connections between programs
+       + but, much like quantum field theories, even though there are specific examples of APIs, there's no precise definition that only includes APIs and includes everything we want to call an API
+- so just keep that in mind
+- it's better to just have a bunch of random examples of things that people call APIs, rather than worry about the actual definition
+:END:
+
+
+*API Specifications* are the formats that one has to use to properly connect with / utilize the API
+- so for instance if you want to pull a bunch of weather data, you need to know the API specification, so you know how to structure your request
+
+** Purpose
+
+APIs allow developers to harness 3rd party tools
+- they don't have to build everything themselves
+
+
+* Web APIs
+
+These are the most common APIs 
+
+* Remote APIs
+
+
+* RESTful APIs
+
+*Representational State Transfer*
+- connect the client and server
+- they all follow the same architecture (the REST architecture)
+- they are /stateless/ --- the server doesn't need to store the client state
+
+  

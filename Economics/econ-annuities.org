@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       8b0f9fc4-c827-43f5-9084-b07252e5de4b
+:END:
+#+title: annuities
+#+filetags: Economics
+
+* References 
+
+* Summary 
+
+ 
+
+** Life Annuity
+
+Provides a guaranteed lifetime income
+- basically you pick some amount, say $100,000. You pay that amount, and it gets paid back to you in installments over the course of the rest of your life.
+- if you live longer than expected, you still get the payments, and end up making more money
+
+** Term-Certain Annuity
+
+Provides guaranteed income for a fixed period (term)
+Even if you die, your beneficiary will receive the rest
+
+The problem is that in this case, since the term is fixed, you could live on past the end of the term, and stop receiving money
+
+** Variable Annuity
+
+Your money is invested
+You receive both a fixed and variable income
+- fixed is usually lower than what you'd get with a non-variable annuity

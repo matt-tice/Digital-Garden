@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       a4c3286a-fcc1-4123-a223-5d6d6f90e281
+:END:
+#+title: wealth management
+#+filetags: :Economics:Wealth:Finance:
+
+* References 
+
+* Summary 
+
+** Types
+
+*** Wealth Advisor
+
+Can't do trades on their own; they always need your confirmation
+
+*** Portfolio Manager
+
+Has discretion to do what they think is best with your money.
+Mainly used when you don't want to be involved in the managing of your money
+
+** Licensing
+
+If I want to buy stocks, I need to get an advisor/manager that's licensed to sell them to me
+
+

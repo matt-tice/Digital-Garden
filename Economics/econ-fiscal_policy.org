@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       22174c3d-67cd-4777-93ce-f044a368df33
+:END:
+#+title: fiscal policy
+#+filetags: Economics:Policy:
+
+* References 
+
+* Summary 
+
+
+** Neutral
+
+** Expansionary
+
+** Contractionary
+
+Increase tax and decrease government spending
+
+It removes money from the economy

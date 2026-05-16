@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       ea253acc-e247-4206-bcf5-6494ab135eb2
+:END:
+#+title: distributed systems
+#+filetags: Computer Science
+
+* References 
+
+* Summary 
+
+There are 3 characteristics of distributed systems:
+
+1. Concurrency
+   + Multiple processes 
+
+2. Synchronisation in time
+
+3. Failures
+
+   
+

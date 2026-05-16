@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       9e2eb54f-e86d-4bdb-8577-f63a91074ab6
+:END:
+#+title: asian financial crisis
+#+filetags: Economics : Crisis
+
+* References 
+
+* Summary 
+
+Thailand's currency was the bhat
+
+
+* History
+
+** 1991
+
+Recession in the US
+- Central bank has to lower the interest rate a lot
+  
+South East Asian countries had a much higher interest rate and were of keen interest to investors
+- American money starts flooding in to SEA
+
+As the US raises its interest rate back up, its dollar increases in value
+- But many countries had their currencies pegged to the US dollar
+- This caused their currencies to also increase in value, which in turn made them less attractive to investors
+  - Another way to think of it is, essentially SEA rates rose with the US, even if their central banks didn't do anything
+  - As a consequence, deflationary pressure is put on SEA
+
+** 1993
+
+Thailand creates new financial industry in Bankok, with limited regulations
+
+** 1997
+
+Thailand's foreign exchange reserves run out
+- they can no longer exchange bhat for dollars, and so have to stop pegging to the USD
+
+
+
+

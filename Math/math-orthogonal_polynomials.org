@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       e9a8051f-caf2-4b09-a952-f6e70ab38d16
+:END:
+#+title: orthogonal polynomials
+#+filetags: Math
+
+* References
+
+A Non-Autonomous Model for Parabolic Implosion, Huneycutt and Sandberg-Clark.
+
+* Summary
+
+
+

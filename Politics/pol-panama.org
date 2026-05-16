@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       90e86295-5c2e-4978-b6fe-1e0ae01f33d0
+:END:
+#+title: panama
+#+filetags: :Politics:
+
+
+* References
+
+
+* Summary
+
+* Economics
+
+** Panama Canal
+
+Businesses have paid up to $4M to move boats through the *Panama Canal*, since the Strait of Hormuz is closed
+- usually to get through the canal, you reserve passage at a flat rate
+- but you can pay extra to cross without a reservation
+- in that case, passage is granted to the highest bidder
+
+* Relationships

@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       e0b928e3-47a4-41ad-8258-f070797b09ca
+:END:
+#+title: network interface card
+#+filetags: :Computer Science:Hardware:Networks:
+
+
+* References
+
+
+* Summary
+
+This is a hardware component of your computer --- it's what allows you to connect to a network
+
+It converts data into EM signals
+- either radio waves for wifi
+- or electrical signals for wired
+
+The NIC is responsible for the first 2 layers of the OSI model.
+
+** Memory
+
+Most NICs have a small amount of *non-volatile memory*
+- it stores the PXE firmware
+
+/Network Boots/ tell the CPU to use the NIC's firmware, instead of the hardrive
+
+** Direct Memory Access
+
+The NIC receives a packet from the network, verifies the checksum, and drops it into RAM. Once enough data has been stored in RAM, it tells the CPU to process the data
+
+** Promiscuous Mode
+
+Tells the NIC to pass /every/ packet it sees to the CPU, instead of just the ones addressed to its MAC address.
+
+** Serialization
+
+Data from the CPU is taken and converted into a stream of electrical pulses or radio waves
+
+** Media Access Control (MAC)
+
+Every NIC has a MAC address burned into its ROM.
+- this is a stable identification of the device
+
+The NIC listens to the wire and if it sees information directed to its MAC address, it knows to react

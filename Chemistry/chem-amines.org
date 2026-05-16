@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       51ad8fe7-091b-451b-89a9-d80a22e4d431
+:END:
+#+title: amines
+#+filetags: Chemistry:Biology:
+
+* References 
+
+* Summary 
+
+Amines are organic compounds that contain *C-N bonds*
+
+1. Primary amines: (R-NH_2)
+        These have an amino group
+
+2. Secondary amines: (R_2-NH)
+
+3. Tertiary amines: (R_3-N)
+
+
+Amines are usually created from [[id:90693255-6072-44fd-91bb-b688d6d3f1fb][ammonia]]
+
+* Types
+
+
+** Primary
+
+Methylamine, amino acids, tris(hydroxymethyl)aminomethane
+
+Methylamine is used to make meth by combining it with phenylacetone (aka P2P)
+
+** Secondary
+
+Dimethylamine, diphenylamine
+
+
+** Tertiary
+
+Trimethylamine (smells like fish)
+
+Decaying fish produce trimethylamine

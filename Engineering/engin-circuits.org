@@ -1,0 +1,54 @@
+:PROPERTIES:
+:ID:       8311c2d2-9173-4933-8be2-905d5bc63102
+:END:
+#+title: circuits
+#+filetags: Engineering
+
+* References 
+
+* Summary 
+
+
+
+* Types
+
+
+** Analogue
+
+Current/voltage is varied over time to encode info as a *continuous parameter*
+
+Components
++ Wires
++ Resistors
++ Diodes
++ Inductors
++ Transistors
+
+** Digital
+
+Electric signals have *discrete values*, which are used to encode data
+
+Components
++ heavy use of transistors
++ transistors can encode logic gates
++ and also can create flip flops and latches, which can store information for a long time
+
+* Components
+
+** Resistors
+
+** Transistors
+
+** Capacitors
+
+** Inductors
+
+** Diodes
+
+** Wires
+
+** Traces
+
+* Integrated Circuit
+
+Also called a *microchip*

@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       c4f57491-fa45-4e04-ab51-3ce0b1814ba8
+:END:
+#+title: packets
+#+filetags: Cybersecurity:Networks:
+
+* References
+
+
+
+* Summary
+
+A way to share data between computers
+
+A *packet* is made up of three parts:
+1. A header that tells the hardware where to deliver the payload
+2. The payload: the content of the message
+3. The trailer: validation that the packet was received properly
+
+As a packet moves through the [[id:e817745d-0a89-41c9-b8dd-2e5684b56a9e][TCP/IP stack]], it picks up additional data (it gets *encapsulated*)
+
+
+
+* Packet Components
+
+** Headers
+
+Routers will look at headers in order to figure out where to send a packet.
+
+*** IPv4
+
+*** IPv6
+
+** Payloads
+
+The actual data that is intended to be transmitted.
+
+The *maximum transmission unit* in ethernet is 1500 bytes. Because of this, packet payloads are usually capped at 1460 bytes.
+
+** Trailers
+
+
+
+* Frames
+
+Frames are the final encapsulated versions of packets.
+- they contain a single packet, wrapped in 
+
+* Deep Packet Inspection
+
+

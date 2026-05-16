@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       5b97763d-97cc-4345-8a8e-e6d18139f261
+:END:
+#+title: shells
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+When you initially type in text, the input is *buffered*
+- meaning they aren't immediately transferred to the shell
+- the place in temporary memory that the text is stored is called a *buffer*
+
+* Input / Output
+
+- *stdin*: Taken from keyboard =<=
+- *stdout*: Sent to terminal =1>=
+- *stderr*: Sent to terminal =2>=
+
+* Here-document
+
+* Pipes
+
+One way of sending the output of one command to the input of another is
+
+#+begin_src 
+cmd_1 > temp_file
+cmd_2 < temp_file  
+#+end_src
+
+Instead of having to create a temp file, pipes let us connect programs directly
+
+#+begin_src 
+cmd_1 | cmd_2
+#+end_src
+
+Pipes always connect stdout to stdin

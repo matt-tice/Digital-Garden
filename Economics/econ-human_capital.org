@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       f0a832a2-2259-4c83-88ab-8ae67937df15
+:END:
+#+title: human capital
+#+filetags: Economics:Marxism:
+
+* References 
+
+Ibbotson, Milevsky, Chen, Zhu, Lifetime Financial Advice
+
+
+* Summary 
+
+
+Human capital is the *present value of the anticipated earnings over the remainder of your life*
+
+Education, therefore, is an investment into human capital
+
+Over the early part of our lives, we develop human capital. When we enter the workforce, we translate this capital into financial capital. As life goes on, we reduce our human capital, but (ideally) increase our financial capital
+
+Even at the end of our lives, we still have human capital if we get things like CPP
+
+Human capital is usually devoid of much risk, compared to stocks
+- this is why people recommend you try to put a lot of equity into your early portfolio, since you have such a safe human capital
+- as you lose human capital, you increase your risk, and so ideally should mitigate that by putting your financial capital into less risky things
+
+
+:FINISH:
+
+ Accumulation Stage
+
+When you enter the workforce
+
+At this point, you typically want stocks, bonds, and life insurance
+
+
+Longevity risk: the risk that you'll live longer than expected, and use up all of the money you'd planned to have for yoursef
+- *annuities* [[id:8b0f9fc4-c827-43f5-9084-b07252e5de4b][annuities]] can be used to mitigate this
+
+Annuity: it pays yearly income as long as you live
+  
+
+:END:

@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       31d7b64c-59ef-4bd1-9d10-0493c600fd69
+:END:
+#+title: spine
+#+filetags: Medicine:Biology:
+
+* References 
+
+* Summary 
+
+* Parts of the Spine
+
+** Thoracic
+
+The middle part of the spine: goes from the shoulders to the middle of your back
+
+Contains 12 vertebrae
+
+
+* Diseases
+
+
+** Pott's Spine
+
+Tuberculosis of the spine, usually having travelled from the lungs
+Can cause discs to collapse
+
+*** Symptoms
+
++ Back pain
++ Neurological problems
++ Focal edema
++ 
++ 
++ 
+

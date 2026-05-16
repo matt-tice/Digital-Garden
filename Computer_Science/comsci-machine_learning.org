@@ -1,0 +1,114 @@
+:PROPERTIES:
+:ID:       b5fe5c82-5aa2-4987-88cb-19fe83ee770c
+:END:
+#+title: machine learning
+#+filetags: Computer Science
+
+* References
+
+
+
+* Summary
+
+
+Experience training, evaluating, and deploying models end-to-end (data preprocessing → training → validation → inference → monitoring)
+
+* Packages
+
+** Pandas
+
+** Scikit-Learn
+
+** PySpark
+
+Open-source
+Big data processing and analytics
+
+** TensorFlow
+
+Open-source
+- developed by Google
+
+For large-scale production
+Static computation graphs
+
+Declarative
+
+*** Structure
+
+Works with multidimensional immutable arrays (which they call *tensors*)
+- If T is the set of tensors, then a *layer* is map
+- f: T^n \to T
+
+Layers are objects with the following methods
+- *init*: create custom layer attributes and weights that don't depend on the input shapes
+- *build*: creates weights that do depend on the input shapes
+- *call*: performs the computation
+
+*** Layers
+
+Some standard layers are
+- *flatten*: turns array into a long vector
+- *dense*: densely connected neural layer
+
+*** Pre-processing
+
+If you're working with images, normalize the data, so that the pixels are all given values between 0 and 1
+- use the same normalization procedure on the training and test data
+
+*** Compiling
+
+**** Loss Function
+
+**** Optimization
+
+**** Metrics
+
+*** Training
+
+Feed in the data
+
+#+begin_src 
+model.fit(train_images, train_labels, epochs = 20)
+#+end_src
+
+Evaluate performance
+
+#+begin_src 
+test_loss, test_acc = model.evaluate(test_images, test_labels, verbose = 2)
+
+print('\nTest accuracy:', test_acc)
+#+end_src
+
+**** Softmax
+
+Converts the logits to probabilities
+
+Then use
+
+#+begin_src 
+probability_model.predict(test_images)
+#+end_src
+
+To see how confident the model is
+- on each test image, it'll give the probability for each potential answer
+
+** PyTorch
+
+Open-source ML library
+- developed by Facebook
+
+Dynamic computation graphs  
+- more flexible
+- good for rapid prototyping
+
+Imperative
+
+** JAX
+
+Open-source numerical computation libraryn
+- by Google
+
+Just-in-time compilation
+
+* [[id:61530562-4640-4e9f-9169-71a0f6583714][Natural Language Processing]]

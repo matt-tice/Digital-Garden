@@ -1,0 +1,168 @@
+:PROPERTIES:
+:ID:       6bb280e3-d41f-43fb-9af7-f5699218a61b
+:END:
+#+title: petroleum
+#+filetags: Chemistry
+
+* References 
+
+/Handbook of Petroleum Product Analysis/, 2ed, Speight
+
+/Petroleum and Gas Field Processing/
+
+* Summary 
+
+Petroleum is *crude oil* (i.e. not refined).
+
+There are a lot of different kinds
+
+Heavy oil has more residuum
+
+Sulfur needs to be removed
+
+Natural gas occurs in the porous rock of the earth's crust, either alone or with petro
+
+When with petro, the gas forms the *gas cap*, trapped between the petro and the rock
+
+If the pressure is high enough, the gas may dissolve into the petro
+
+* Formation
+
+When the petro was forming, it would also release gas
+In some cases, the gas would remain trapped with the petro
+In other cases, the gas would be able to escape and migrated to some other rock
+
+** Reservoir Shapes
+
+*** Dome-Shaped
+
+*** Faulted
+
+*** Salt-Dome
+
+*** Uncomformity
+
+*** Lense-Type
+
+* Petro Types
+
+** Light Oil
+
+Conventional oil
+Has a small amount of N, O, S
+
+** Heavy Oil
+
+More viscous
+
+It's found at a shallower depth
+
+
+Difficult to extract and transfer
+
+Arises out of /biodegradation/
+Bacteria eats up the lighter hydrocarbons
+
+Contains *asphaltenes* and *resins*
+
+Lots of NSOs, aromatics, and naphthenes
+
+*** Saskatchewan
+
+Has lots of heavy oil, but not bitumen
+
+** Bitumen / Asphalt
+
+Also called /extra heavy oil/
+It has a ton of names
+
+API less than 10
+
+It will actually *sink in water*, instead of floating on top
+
+It's a liquid, but it's so ridiculously viscous that a single drop will take around 10 years to fall
+
+Carbon emissions from this is 31% higher than conventional oil
+
+Bitumen from oil sands is the most expensive oil to produce
+
+*** Alberta
+
+Has about 70% of the world's reserves of bitumen
+
+Has 97% of Canada's oil
+So basically all of Canada's oil is bitumen (in the form of oil sands)
+
+Canada is the *only country in the world* with large-scale oil sand production
+
+Basically oil sands are only profitable when the price of oil world-wide is *very high*, so oil sand producers can charge those high prices and recoup costs
+
+** Sweet Oil
+
+Conventional oil
+Low sulfur
+
+** Sour Oil
+
+High sulfur
+
+** Asphalt
+
+** Shale
+
+* Gas Types
+
+Mostly methane
+Can also contain N_2, CO_2, H_{2}S
+
+** Dry
+
+Mostly methane
+
+** Wet
+
+Has other higher-molecular-weight hydrocarbons
+Can be used to make *natural gas liquids*, like ethane, butane, propane, and gasoline
+
+** Sweet
+
+Little H_{2}S
+
+** Sour
+
+Lots of H_{2}S
+
+** Residue Gas
+
+The gas remaining after higher weight paraffins are removed
+
+** Casinghead Gas
+
+Gas from the surface of an oil well
+
+** Nonassociated
+
+Gas found without petro
+Usually mostly CH_4
+
+
+** Shale
+
+
+Associated with shale formations
+Dry gas
+
+
+* Feedstocks
+
+
+
+* History
+
+** 1859
+
+Petroleum is discovered and commercialized in Pennsylvania
+
+** 1940
+
+Spectroscopy becomes important

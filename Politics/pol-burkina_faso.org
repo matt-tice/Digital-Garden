@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       0004f44f-4282-440c-9024-77882dd270f3
+:END:
+#+title: Burkina Faso
+#+filetags: :Politics:Sahel:
+
+
+* References
+
+
+* Summary
+
+Part of the [[id:cae2016b-52d8-4cd8-b664-e21256c6e95e][Sahel]]
+Neighbours Niger and Mali
+
+* Economics
+
+* Relationships
+
+** US
+
+*** 2025
+
+Travel ban on US citizens, in response to US restrictions on them
+
+** Mali
+
+*** 2024
+
+Formed a trilateral security pact with Mali and Niger
+
+** Niger
+
+* Military
+
+** Terrorism
+
+Burkina Faso consistently has one of the [[https://www.visionofhumanity.org/maps/global-terrorism-index/#/][highest rates of terrorism in the world]].
+

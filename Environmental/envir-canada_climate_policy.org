@@ -1,0 +1,107 @@
+:PROPERTIES:
+:ID:       d681192d-340f-447b-92ad-e3d41eac513e
+:END:
+#+title: canada climate policy
+#+filetags: :Environmental:Politics:
+
+* References 
+
+* Summary 
+
+
+
+* Coal
+
+Canada has actually managed to phase out coal to a large degree
+All provinces except SK and NS are set to phase out coal by *2030*
+
+Coal plants have been generally transformed into gas ones, and emissions have fallen by *58% since 2005*
+
+
+
+* Oil / Gas
+
+30% of Canada's emissions; the largest share
+
+* Methane
+
+It's cheap to cut down on methane, and technologically simple
+Methane is also *80x more potent than CO_2 as a greenhouse gas*
+
+Canada has reduced methane emissions by 31% since 2015
+
+* Electric Vehicles
+
+
+* Heat Pumps
+
+
+
+* Large Emitter Trading Systems
+
+
+
+* Carbon Pricing
+
+
+
+** Consumer
+
+** Industrial
+
+Unfortunately, there are a ton of loopholes that companies use to pay a lot less than they should
+
+* Emission Caps
+
+AB and SK push back on any emission caps on oil and gas
+
+Budget 2025 wants to ditch the emission caps. This leaves us in a a position without a lot of leverage in terms of phasing out oil and gas
+
+* Public Transit
+
+25% of emissions. The second-highest
+
+COVID understandably destroyed public transit ridership. Today they run 7% fewer services than in 2016, in part due to waning funding
+
+* Mining
+
+Canada's foreign mines are some of the *top drivers of ecological damage* in the Global South
+
+
+* Legislation
+
+** 2017:
+
+Revenue-neutral carbon pricing
+
+Unfortunately, after COVID, when inflation surged and people got really worried about affordability, carbon pricing became unpopular
+People like Poilieve liked to attack it
+
+It's now abandoned
+
+
+** 2021: Net-Zero Emissions Accountability Act
+
+Binds government to produce, monitor and report on climate strategies at regular intervals, in a way that works towards *net-zero emissons by 2050*
+
+** 2024: Amendment to the Competition Act
+
+Requires companies to substantiate their environmental claims
+Making greenwashing effectively illegal
+
+2025's Budget might roll this back
+
+** Subsidies
+
+Canada has some of the *highest fossil fuel subsidies in the world*
+
+This mainly appears through
+1. Tax deductions
+2. Discounted royalty rates
+3. Lost-cost funding
+
+** Lobbying
+
+Fossil fuel lobbies are the *most powerful*
+- In 2024 alone, oil/gas companies had 1100 meetings with federal officials (more than 4/day)
+

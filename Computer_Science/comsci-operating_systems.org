@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       3835ffb8-a9de-400e-ab83-6eed1a037d7a
+:END:
+#+title: operating systems
+#+filetags: Computer Science
+
+* References 
+
+* Summary 
+
+Manages both hardware and software
+
+* Bootloader
+
+
+
+* Kernel
+
+
+** Drivers
+
+** Resources
+
+
+* Security
+
+** Physical
+
+** Temporal
+
+** Sandboxing
+
+** Cryptographic
+
+Encrypts different sections of memory

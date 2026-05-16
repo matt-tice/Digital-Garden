@@ -1,0 +1,107 @@
+:PROPERTIES:
+:ID:       eb52129f-c81a-47a2-9789-c6a9a215a943
+:END:
+#+title: ruby
+#+filetags: Programming Language
+
+* References
+
+
+
+* Summary
+
+
+Interpreted
+High-level
+Object-Oriented
+Just-in-time compilation
+Garbage collection
+
+The idea was to create an /object-oriented scripting language/
+- so something OO, but very high-level and streamlined.
+
+You use periods to take properties
+- varArray.length
+- poem.lines.reverse.join
+
+  
+* Symbols
+
+Begin with a *colon*
+- use less memory than strings
+
+
+* Arrays
+
+Use << to add to the end of an array
+
+* Hashes
+
+Defined using curly brackets
+
+key and value
+
+** Blocks
+
+Use curly braces and pipes
+
+.select
+
+* Classes
+
+Class names must start with a capital letter
+
+class Classname
+end
+
+To create an element of the class
+
+example = Classname.new
+
+
+** Initialize Function
+
+Inside your class you can set up a function
+
+def initialize(data1var, data2var, ...)
+@data1 = data1var
+@data2 = data2var
+
+
+
+* Variables
+
+** Accessors
+
+These are attaching a suffix with a dot
+
+word.length
+
+** Object Variables
+
+Use @
+
+* Methods
+
+Examples:
+- functions
+
+
+** Dots
+
+.each iterates
+
+* Strings
+
+#{} is used to insert variables in strings
+
+"Hi I'm #{name}"
+
+
+* Conditionals
+
+No colons used
+
+if
+else
+end

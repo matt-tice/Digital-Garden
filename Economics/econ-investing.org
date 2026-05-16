@@ -1,0 +1,145 @@
+:PROPERTIES:
+:ID:       394c0cfb-ad85-4e5c-b956-fc4cdc5cca01
+:END:
+#+title: investing
+#+filetags: :Economics:Stocks:
+
+* References 
+
+Mayer, Invest Like a Dealmaker
+
+John Burr Williams, The Theory of Investment Value (1930)
+
+* Summary 
+
+
+Williams noted that the price of a stock is determined by the /marginal opinion/, rather than the majority.
+- In other words, whoever is the most recent person to buy/sell a stock determines the price of the asset, corresponding to what they paid/got for it
+
+  
+Mayer views the market as having two halves:
+1. The public market of buying/selling stocks
+2. The private market of inside investors
+
+Money can be made when these two markets exhibit different prices for the same commodity   
+
+Mayer says that professional private investors don't spend time looking at stock charts unless they're traders. We basically divide investing into two types: short-term and longterm, and the type you're doing determines the strategy and points of interest you take up
+
+* Short-Term Investing (Trading)
+
+* Long-Term Investing
+
+Mayer:
+Don't care too much about the charts
+Don't look at too many macro-variables
+- it can cloud the picture; you need to get a lot of things right to make it work
+
+  Mayer advocates for bottom-up investing, focusing on underlying value
+
+Spend a lot of time waiting: /buy a deal and wait for profit/
+
+Don't focus much on earnings
+- earnings per share is a heavily manipulated number and companies have ways of massaging it into more suitable values, regardless of the actual underlying situation
+- ironically, earnings don't tell you if a company is making money:
+       + ex. you make a sale of $1M, giving you a profit of $300k. You don't immediately collect the $300k, but it still is listed as earnings. These *accounts receivable* add up over many transactions. You can find it on a balance sheet
+       + you need to know how long it will take for the company to actually acquire the cash flow; delaying cash flow can be useful to get people to want to make deals with you, but it can also put strain on the company, possibly leading to collapse
+
+** Equity
+
+The market equity of a company is
+
+\[ \text{Shares } \times \text{ Share Price} \]
+
+The value of the whole business is
+
+\[ \text{Equity } + \text{ Debt}  \]
+
+this is what you'd have to pay to purchase the entire company
+But companies also might have a certain amount of cash saved up.
+So the *Enterprise Value* is
+
+\[ EV = \text{ Equity } + \text{ Debt } - \text{ Cash} \]
+
+
+** Cash Flow
+
+Working capital is
+
+\[ WC = AR + I - AP \]
+
+AR = accounts receivable
+AP = accounts payable
+I = inventory
+
+You typically look at the /derivative/ of working capital with respect to time
+
+dWC/dt  > 0 --- money is being tied up
+
+Typically dWC/dt > 0 when a company is growing; making more sales, doing more deals, increasing inventory, etc.
+- However, if it grows too fast, that can be a problem (sort of like inflation in that way)
+  - understand /why/ WC is increasing (are they giving out too many deals with lax terms, raising their AR?)
+  
+*** Capital Expenditure
+
+Investments the company makes in itself. Also called *addition to fixed investments*
+
+\[ CE = M + G \]
+
+M = maintenance costs
+G = funding for growth
+
+
+You have to think about whether these are reasonable expenditures in the case of each particular company
+
+*** EBITDA
+
+Earnings before interest, taxes, depreciation, and amortization
+
+\[ EBITDA = Inc + T + I + DA   \]
+
+Inc = net income
+T = taxes
+I = interest on expenses
+DA = depreciation and amortization
+
+You can compare this to EV:
+
+EV/EBITDA = (E + D - C)/(Inc + T + I + DA)
+
+E = equity
+D = debt
+C = cash
+
+You want this close to 0:
+EV depends on the market price, unlike EBITDA, which explicitly depends on the income
+
+** Assets
+
+
+*** Tangible Assets
+
+Physical things like buildings, land, real estate, oil, resources, etc.
+
+*** Intangible Assets
+
+Public sentiment, development costs, licenses, brand names
+
+
+** Margin of Safety
+
+You want to buy assets at such a price that if the price falls, you're still ok
+- one way to do this is to try to buy things at a discount, in comparing their private and public values
+
+Assets that have multiple uses are often safer
+
+Tangible assets are usually more precisely valued and therefore safer
+
+Assets that rely on a lot of intangibles, like brand names, are usually over-priced
+  
+* Asset Value
+
+
+** Book Value
+
+You can subtract intangibles from this to get the *tangible book value*
+From there, you want to adjust different things, depending on how you personally evaluate their worth (add value to certain things not on the balance sheet, subtract things you think aren't worth as much as they appear, etc.)

@@ -1,0 +1,60 @@
+:PROPERTIES:
+:ID:       36f45d40-2510-4385-b534-fa023da63e8e
+:END:
+#+title: 1973 oil crisis
+#+filetags: Crisis:Economics:
+
+* References 
+
+* Summary 
+
+
+** Organization of Arab Petroleum Exporting Countries
+
+Northern Africa and the Levant countries:
+- Algeria, Bahrain, Egypt, Iraq, Kuwait, Libya, Qatar, Saudi Arabia, Syria, United Arab Emirates, Tunisia
+
+Founded by Kuwait, Libya, and Saudi Arabia
+
+Originally places line Egypt and Algeria weren't meant to be included, because their main exports weren't oil
+
+* History
+
+** 1959
+
+*** Mandatory Oil Import Quota Program
+
+President Eisenhower in the US puts a limit on the amount of oil the US is allowed to import
+- he doesn't want to be dependent on foreign oil
+
+The US mainly imported oil from Venezuela and Canada
+
+** 1969
+
+At this point the US has a fantastic auto sector, and can't keep up with demand; it's oil production is too slow
+
+** 1971
+
+Nixon puts a [[id:e879adec-7904-4765-8a4b-ef980e09964b][price ceiling]] on oil
+
+** 1972
+
+The OAPEC allows countries that only have oil as a major export, rather than their primary one
+- so they add Algeria, Iraq, Syria, and Egypt
+
+  
+** 1973
+
+
+*** Yom Kippur War
+
+Egypt and Syria launch a suprise attack on the Jewish holy day of Yom Kippur (which was also the 10th day of Ramadan)
+
+The US supports Israel and the Soviets support the Arab states
+
+OAPEC decides to reduce production of oil by 5% / month to any country that supports Israel, until Israel leaves all territories it occupied in the [[id:38050f0c-87f8-4634-a52b-d88ebea85e43][1967 six-day war]]
+- Canada, Japan, the Netherlands, the UK, US, Portugal, Rhodesia, and South Africa
+
+
+Over the next year, the price of oil rises 300%
+

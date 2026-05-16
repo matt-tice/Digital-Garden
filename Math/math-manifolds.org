@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       bca160cc-5601-4d2b-b9e1-8867daf504bc
+:END:
+#+title: manifolds
+#+filetags: :Math:Differential Geometry:
+
+
+* References
+
+
+* Summary
+

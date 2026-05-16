@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       819903af-7072-4434-aec9-8e9f0661d3e7
+:END:
+#+title: unix
+#+filetags: Computer Science:Operating System:
+
+* References
+
+
+
+* Summary
+
+UNIX is designed around a few key concepts
+- programs should be simple and should do *one single task* each
+- programs should be *linkable*
+- the kernel should be as small as possible
+- all other tasks are the responsibility of the shell
+
+
+
+* Kernel
+
+
+* Shell
+
+Interface between the user and the kernel
+
+There've been a whole bunch of shells over the years. Most of them are based on the Bourne shell
+- Bourne shell (sh)
+       + Korn shell (ksh)
+       + Z shell (zsh)
+       + Bourne again shell  (bash)
+       + POSIX.2
+- C shell (csh)

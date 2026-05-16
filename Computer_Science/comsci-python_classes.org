@@ -1,0 +1,326 @@
+:PROPERTIES:
+:ID:       b09819c1-193d-47db-b984-8ee0c18a9c82
+:END:
+#+title: Python classes
+#+filetags: Python:Comsci:
+
+* References
+
+
+
+
+* Summary
+
+Class members are /public/ and class member functions are /virtual/
+Classes are objects
+
+Types and classes are essentially the same thing, but the keywords =type= and =class= do different things
+- =class= creates new types/classes
+- =type= is a function that prints the type/class of an object
+
+Object-oriented programming is based on *encapsulation*
+- taking a bunch of details explaining how an object should behave, bundling them up in a class, and letting the user work intuitively with the class
+- ex. defining a class of polynomials, which contain a bunch of details defining how addition, multiplication, taking derivatives, etc. work, and then letting the user just use simple commands to do those things
+
+** Definitions
+
+*** Methods
+
+*Methods* are the functions inside of a class
+- they're usually named with a verb and a noun
+- method objects are similar to, but not the same as function objects
+
+#+begin_src python
+  class MyClass:
+      def f(self):
+
+  x = MyClass
+  x.f    
+#+end_src  
+
+The function =f= created from MyClass is a *function object*
+=x.f= is a *method object*
+- method objects aren't just function objects, because they also contain the data of the /instance object/
+- whenever a method object is called, its first variable is *always the instance object*
+- as an object, we can do things like assign a name to it
+#+begin_src python
+xf = x.f
+#+end_src
+
+Methods can *call other methods* in the same class
+They can also references things in the global scope
+
+*** Attributes
+*Attributes* are the variables inside of a class
+- they *don't need to be declared*
+- they spring into existence when first assigned to
+- this allows you to /create new attributes/ in a given object
+
+You access both of these with a period
+- obj.attribute
+- obj.method()
+
+** Instantiation
+
+#+begin_src python
+  class MyClass:
+      ...
+
+  x = MyClass()
+#+end_src
+
+- the program will create a *class object* and give it the local name =MyClass=
+- then it creates a new /instance/ (hence the name) of the class MyClass, and gives it the local name =x=
+
+A priori, the nwew instance of the class MyClass will be /empty/
+- we can use the method =__init__= to change that
+
+
+** Sharing Data
+
+#+begin_src python
+  class Dog:
+
+  tricks = []             # mistaken use of a class variable
+
+  def __init__(self, name):
+      self.name = name
+
+  def add_trick(self, trick):
+      self.tricks.append(trick)
+
+  d = Dog('Fido')
+  e = Dog('Buddy')
+  d.add_trick('roll over')
+  e.add_trick('play dead')
+
+
+
+  >>> d.tricks                # unexpectedly shared by all dogs
+  ['roll over', 'play dead']
+
+#+end_src
+
+The problem here is that the =tricks= list is a class variable, and thus will be shared by all instances of the class
+- so if you modify =tricks= in any instance of the class, it will modify all of them
+Instead if we move the variable to the instance
+- when an instance is instantiated, =__init__= will create a new instance variable, using =self.tricks=
+
+#+begin_src python
+  class Dog:
+
+  def __init__(self, name):
+      self.name = name
+      self.tricks = [] # creates a new empty list for each dog
+
+  def add_trick(self, trick):
+      self.tricks.append(trick)
+
+  d = Dog('Fido')
+  e = Dog('Buddy')
+  d.add_trick('roll over')
+  e.add_trick('play dead')
+
+
+
+  >>> d.tricks                # unexpectedly shared by all dogs
+  ['roll over', 'play dead']
+
+#+end_src
+
+* Derived Classes
+
+#+begin_src python
+class DerivedClassName(BaseClassName):
+#+end_src
+
+Given one class, we can create a new *derived class* from it
+- when the class object is created, it remembers the base class as well
+- if an attribute is referenced by an instance of the derived class, it will first check the derived class, and then if it can't find it there, it will check the base class
+- so in this way, derived classes build upon their base class
+- you can also use this to *overwrite* or *extent* base methods
+       + in that case, if you want to specifically get the base method, not the derived version, use =BaseClassName.methodname=
+
+
+
+** Multiple Inheritance
+
+You can actually create a derived class that's built off of multiple base classes
+
+#+begin_src python
+class DerivedClassName(Base1, Base2):
+#+end_src
+
+When searched for attributes this will
+1. Check =DerivedClassName=
+2. Check /all/ of =Base1= (including any base classes, if =Base1= is itself derived)
+3. Do the same for =Base2=
+
+It uses the *call-next-method*
+
+* Private Variables
+
+Python has *no private variables*
+- but as a programmer, you often want people to interact with a variable /as if it were private/
+
+The convention is to prefix with an underscore
+- =_privVar=
+
+*Name mangling*
+- a name with /two leading underscores/ and /less than 2 trailing underscores/ is replaced as follows:
+- =_spam= becomes =_classname__spam=
+- this is helpful in cases where a derived class uses the same variable name as one in the base class, but you don't want the class's one to be overwritten
+- this is something kind of like a variable private to the base class, but it's not really private; you could still access the base variable
+
+* Iterators
+
+
+
+* Methods List
+
+** =__init__=
+
+This puts a newly created instance of the class into a specific initial state
+
+#+begin_src python
+  class Complex:
+      def __init__(self, realpart, imagpart):
+          self.r = realpart
+          self.i = imagpart
+
+  x = Complex(1,1)          
+#+end_src
+
+
+** =__iter__=
+
+This method returns a new iterator object that has the method =__next__=
+
+There is also a built-in =iter= /function/, which is called by any for loop
+
+If you add the iter /method/ to a class
+- it should return an object with a =__next__= method
+- that way, when you apply a for loop, it will try to apply iter, will use the class's iter method, and get a another object with a next method, which is then looped over
+- (this other object can be the same as the original object, but it doesn't have to be)
+
+
+** =__next__=
+
+Returns the next item from an iterator object
+
+If there are no more items, it raises the StopIteration exception
+
+#+begin_src python
+  class MyClass:
+      def __init__(self,data):
+          self.data = data
+          self.index = 0
+      def __iter__(self):
+          return self
+      def __next__(self):
+          if self.index == len(data):
+              raise StopIteration
+          self.index - self.index + 1
+          return self.data[self.index - 1]             
+
+#+end_src
+
+** =__dict__=
+
+Stores an object's writable attributes
+- it basically gives you info about any object that you need to know more about
+
+#+begin_src 
+def funct():
+class C:
+
+print(funct.__dict__)
+print(C.__dict__)  
+#+end_src
+
+dict allows you to *add new attributes* to an object
+
+** =__slots__=
+
+Very similar to dict, but it's a *static type*, rather than dynamic
+- if you use slots, the object won't create a dict
+- so you can't add new attributes
+- but because it's statically typed, it uses *way less memory*
+- it also has *faster attribute access*
+
+#+begin_src 
+class C:
+  __slots__ = ...
+#+end_src  
+
+** =__add__=
+
+#+begin_src 
+a + b   is interpretted as a.__add__(b)
+#+end_src
+
+*** =__radd__=
+
+If we try
+
+#+begin_src 
+int.__add(1, x)
+#+end_src
+
+for an object x, we'll get a =NotImplemented= error
+- but python will always check addition in the reverse order if NotImplemented shows up
+- this is done with the radd method
+- it will call
+
+  #+begin_src 
+__radd__(x,1)
+  #+end_src
+
+So if we define an addition method on type(x), we can then define 
+
+#+begin_src 
+def __radd__(self, other):
+  return self + other
+#+end_src
+
+(assuming addition is commutative)
+
+** =__call__=
+
+This is used to make an object behave like a function
+- f(x) becomes the syntax for
+  #+begin_src 
+f.__call__(x)
+  #+end_src
+
+** =__eq__=
+
+Used to define when two objects of the same class are equal
+- if we don't specify this, then you could, for instance, define two polynomials with the same coefficients, that aren't considered equal
+- this is because when we create new objects, they each are given a unique identity (see the object section of [[id:2f3cb734-6816-4ce7-85cc-3afd30999f93][Python]]), which is a priori the only thing we have to compare them
+
+** =__enter__=
+
+Used in context managers
+When it's called, you enter the runtime context of the object
+
+*** =__exit__=
+
+Exits the runtime context of the object
+
+
+
+* Conventions
+
+Classes are named in PascalCase
+
+Non-public starts with a leading underscore
+- _radius
+- you don't want to type things like circle._radius (although you can and it'll work)
+
+Name mangling
+- Attribute and method names get two leading underscores  
+
+
+
+* Metaclasses

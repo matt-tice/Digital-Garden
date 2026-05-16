@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       86f5d04f-554c-4da6-b36e-65b83d8e78c5
+:END:
+#+title: nixon shock
+#+filetags: Economics:Shock
+
+* References 
+
+* Summary 
+
+
+
+Nixon talks to a bunch of people at the Federal Reserve and his cabinet, and decides to suspend conversion of USD into gold
+- this essentially ends the [[id:de94bb6f-d100-4bd8-8ffc-41da48057610][Bretton-Woods system]]
+
+Nixon announces 3 goals:
+1. lower unemployment
+2. lower inflation
+3. protect the US dollar from price-gougers
+
+He then introduced 10% [[id:78b7b66d-1752-4425-bc22-21e4c5392d94][tariffs]] on imports
+- this was designed to get other countries to be hurt enough that they would agree to appreciate their currencies
+- its primary effect was to make people angry
+
+

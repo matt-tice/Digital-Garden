@@ -1,0 +1,67 @@
+:PROPERTIES:
+:ID:       de83ee08-8d65-4434-bd2f-fc5b33e99321
+:END:
+#+title: insurance
+#+filetags: Economics
+
+* References 
+
+* Summary 
+
+
+
+* Life Insurance
+
+A contract between a customer and agency to pay a *beneficiary* an amount of money, called a *death benefit* upon the death of the customer
+
+
+
+** Purpose
+
+To take care of those you'll leave behind, and help them maintain their standard of living:
+- to pay for the funeral, to take care of taxes, etc.
+
+:OPINION:
+
+  The beneficiary is a key person in the contract; if you don't have one in mind, you probably don't need life insurance
+
+:END:
+
+
+** Death Benefit
+
+Tax-free
+
+Creditor proof: it doesn't matter how much debt you have, your beneficiaries will get all of the benefit
+
+Bypasses the will probate
+- if there's an issue with the will, you still get the death benefit
+
+:OPINION:
+
+  How much do you need?
+
+Rule of thumb: current gross income that's being used to support your beneficiary, /times/ 5-7
+- the idea is to invest the lump some and live off of the interest/dividends
+- often that means that you'll need a larger policy than that 5-7 factor
+
+You should get enough to also pay for any outstanding debts (mortgage, loans, etc.) and any future lump-sum expenses: funeral, income tax, medical bills, legal fees, probate fees, new car, university tuition, vacation money, contingencies
+
+Finally, consider inflation
+
+If you're single-income, the one bringing in most of the money should take out the full coverage amount for their policy, and the other should take out enough to cover the debts and childcare
+
+:END:
+
+
+
+** CPP
+
+The Canada Pension Plan will pay survivor benefits to your common-law partner / spouse, and children's benefits
+
+
+
+* Home Insurance
+
+
+* Long Term Care Insurance

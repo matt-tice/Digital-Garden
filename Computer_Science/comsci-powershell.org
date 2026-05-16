@@ -1,0 +1,86 @@
+:PROPERTIES:
+:ID:       b393e24a-bc16-476d-896b-aff429487a3c
+:END:
+#+title: powershell
+#+filetags: Computer Science
+
+* References 
+
+* Summary 
+
+Powershell is a scripting language, like Bash
+- object oriented
+- .NET objects
+
+The pipeline in Bash only sends text
+In powershell it sends objects
+
+* Cmdlets
+
+Commandlets are the built-in commands in powershell
+They all have the *same form*
+
+Verb-SingularNoun
+
+Common verbs:
++ Get: Gives you a list of things
++ New: Makes a new thing
++ Remove: Deletes a thing
++ Rename: Renames a thing
++ Move: Moves a thing
++ Copy: Copies a thing
+
+Common nouns
++ Item: files
++ PSDrive
++ ChildItem
++ Alias
++ Variable
+
+
+Most of the cmdlets actually have /aliases/, which are short forms that will apply the corresponding command
+
+So ri will produce remove-item
+rni = rename-item
+
+The list of aliases is stored in the PSDrive called /Alias/
+
+If you travel there with
+#+begin_src
+cd alias:
+#+end_src
+
+Because alias is a drive, you need the colon at the end
++ Similarly, get back to the c drive with cd c:
+
+* Things you can do
+
+** Get a random file
+
+#+begin_src powershell
+$folder =
+Get-ChildItem -Path $folder -File | Get-Random | Invoke-Item
+#+end_src
+
+* Execution Policy Scope
+
+MachinePolicy: Set via Group Policy (GPO) for all users of the computer. It cannot be overridden by local commands.
+
+UserPolicy: Set via Group Policy for the current user. Like MachinePolicy, this is managed by IT administrators and overrides manual settings.
+
+Process: Affects only the current PowerShell session (the window you are currently in). It is stored in memory and disappears once you close the window.
+
+CurrentUser: Affects only the user currently logged in. It is stored in the HKEY_CURRENT_USER registry branch.
+
+LocalMachine: The default scope that affects all users on the computer. It is stored in the HKEY_LOCAL_MACHINE registry branch and requires Administrator rights to change
+
+
+Because LocalUser is higher than LocalMachine, even if LocalMachine sets defaults, LocalUser can override them
+
+** Local Scripts
+
+There is a hidden tag called *zone.identifier* on files
+- when you download a file, Windows adds an Alternate Data Stream to it
+- if the zone id is missing then powershell considers it local
+
+When you unblock a file, it just removes the zone id  

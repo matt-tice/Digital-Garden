@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       083ecb8a-7318-428e-8e3f-b409a154a552
+:END:
+#+title: hydrogen
+#+filetags: Chemistry:Energy:Element:
+
+* References 
+
+* Summary 
+
+
+
+* Physics
+
+The hydrogen atom is one of the first 
+
+* Burning Hydrogen
+
+Hydrogen can be burned at a high temperature, like fossil fuels.
+But unlike them, it *only produces water* when burned.
+
+This makes it a wonderfully green source of heat (and therefore electricity, through producing steam for generators).
+
+
+* Creating Hydrogen
+
+It's *very difficult to find* natural hydrogen.
+
+So most hydrogen is produced industrially.
+
+
+** Grey Hydrogen
+
+Produced using fossil fuels.
+
+*** Steam Methane Reforming (SMR)
+
+Methane is reformed into hydrogen and CO_2 is *released into the atmosphere*.
+- the amount of CO_2 produced is *10x the amount* of H_2 made in SMR.
+- this is the most common method of producing hydrogen.
+
+** Blue Hydrogen
+
+Produced using natural gas alongside [[id:e7b24c1b-a063-42e6-baef-97cc6b651ff8][carbon capture]].
+
+** Green Hydrogen
+
+Produced using renewable energy
+- 3-5 times the price of grey to produce
+
+There's research being done at China Agricultural University and Nanyang Technological University that lowers the price
++ uses sugars derived from agricultural waste
++ like wheat stalks
++ in the place of oxygen
+

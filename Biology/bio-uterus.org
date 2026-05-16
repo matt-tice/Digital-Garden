@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       ba2e023c-6e7d-4081-a1d6-af8c9df32778
+:END:
+#+title: uterus
+#+filetags: Medicine
+
+* References 
+
+* Summary 
+
+
+
+* Diseases
+
+** Abnormal Uterine Bleeding
+
+*** Meorrhagia
+
+Excessively heavy flow
+
+
+**** Excessive Bleeding + Painless
+
+Fibroids
+
+Coagulation issues
+
+Endometrial cancer
+
+Endometrial Polyp
+
+**** Excessive Bleeding + Painful
+
+Pelvic inflammatory disease
+
+Adenomyosis
+
+Miscarriage
+
+Endometriosis
+
+
+*** Anovulation
+
+Skipping ovulation

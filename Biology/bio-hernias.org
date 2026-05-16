@@ -1,0 +1,64 @@
+:PROPERTIES:
+:ID:       3e7d0664-bcde-4619-addf-8815135005dc
+:END:
+#+title: hernias
+#+filetags: Medicine
+
+* References 
+
+* Summary 
+
+The protrusion of a tissue or organ through the wall of the cavity that normally contains it
+
+
+
+* Conditions
+
+
+
+** Reducible
+
+The hernia can be pushed back into the appropriate cavity
+
+** Irreducible
+
+Cannot be completely pushed back in
+
+** Obstructed
+
+Hernia is twisted
+
+** Strangulated
+
+Constriction of hernia obstructs blood flow
+
+* Types
+
+Symptoms are only present in around 66% of people with groin hernias
+
+Typically though, you can see a hernia's bulge in cases of groin pain
+
+** Inguinal
+
+Common cause of pain in the groin
+
+The inguinal ligament is a band that runs from the pubic bone to the iliac crest
+
+The inguinal canal is 
+
+** Femoral
+
+Can also cause pain in the groin
++ Very rare, especially in males
+
+Occurs just below the inguinal ligament
+
+
+
+** Hiatus
+
+
+** Incisional
+
+
+** Umbilical

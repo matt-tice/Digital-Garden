@@ -1,0 +1,255 @@
+:PROPERTIES:
+:ID:       18b9291c-63ad-40e1-abef-5dc880daacbd
+:END:
+#+title: linux
+#+filetags: Computer Science
+
+* References
+
+:PERSONAL:
+
+Things to Learn
+
+- [ ] bash scripting
+- [ ] service files init scripts
+- [ ] command line interface
+- [ ] Manual network config
+
+  :END:
+  
+* Summary
+
+
+* Filesystem Hierarchy Standard (FHS)
+
+- *boot*: stores the kernel
+- *home*: for your personal files
+- *usr*: for your program files
+- *tmp*: for temporary files
+- *var*: for variable size data
+- *swap*: extra memory for working applications
+
+** bin
+
+Essential command binaries that need to be available in single-user mode
+
+cat
+ls
+cp
+
+** boot
+
+Boot loaders
+
+Kernels
+Initrd
+
+** dev
+
+Device files
+
+*** null
+
+*** random
+
+*** disk0
+
+*** sda1
+
+*** dev
+
+*** tty
+
+** etc
+
+System-wide config files
+
+*** opt
+
+Config files for add-ons in opt
+
+*** sgm1
+
+Config files for softare that processes SGML
+
+*** xml
+
+Config files for software that processes XML
+
+** home
+
+Home directors for the user
+
+** lib
+
+Libraries essential for the binaries in bin and sbin
+
+** media
+
+Mount points for removable media
+
+** mnt
+
+Temporarily mounted filesystems
+
+** opt
+
+Add-on packages
+
+** proc
+
+Virtual filesystem providing process and kernel info as files
+
+In linux it corresponds to a procfs mount
+
+** root
+
+Home directory for the root user
+
+** run
+
+Run-time variable data
+- info about system since last boot
+  
+
+** sbin
+
+Essential system binaries
+
+fsck
+init
+route
+
+** srv
+
+Site-specific data like data and scripts for web servers
+
+** sys
+
+Info about devices, drivers, and some kernel features
+
+** tmp
+
+** usr
+
+** var
+
+Variable files
+
+*** cache
+
+Application cache data
+
+*** lib
+
+State information
+- persistent data modified by programs as they run
+
+*** lock
+
+Lock files
+- keeping track of resources currently in use
+
+*** log
+
+Log files
+
+*auth.log*
+- ssh logins
+- failed sudo attempts
+- succesful escalations
+
+*syslog*
+- general system events
+
+*** mail
+
+Mailbox files
+
+*** opt
+
+Variable data from add-ons that are stored in opt
+
+*** run
+
+Run-time variable data
+- describes the system since it was booted
+
+*** spool
+
+For tasks waiting to be processed
+
+*** tmp
+
+Temporary files to be preserved during reboots
+
+* X Windows
+
+** Window Managers
+
+*** KDE
+
+*** GNOME
+
+*** 
+
+* Bootloader
+
+When you install an OS, the installer writes the bootloader onto the hard drive
+- the bootloader connects to the kernel
+
+  
+** Firmware
+
+Modern motherboards come preloaded with public keys from the manufacturer
+
+The bootloader needs to be digitally signed with a matching private key
+
+*** Machine Owner Key
+
+*** One-Time Programmable Memory
+
+The private key is 
+
+*** Pre-bootloader
+
+SHIM
+
+*** UEFI
+
+This allows software to register its bootloader with the firmware
+
+**** NVRAM Boot Entries
+
+Non-volatile random access memory
+
+**** Fallback Path
+
+If there are no entries, it looks for a file with a specific name
+
+*** BIOS
+
+Can't read files
+It *always looks at the first 512 bytes* of a disk
+- this is called the *Master Boot Record*
+
+**** Master Boot Record
+
+If the first sector (512 bytes) ends in the bytes 0x55 and 0xAA, the BIOS recognizes it as a bootloader
+- it then starts executing the 512 bytes
+
+***** Insecure
+
+You can just write a malicious program in assembly and end it with 0x55AA
+
+These kinds of malware are called *Bootkits*
+
+* Kernel
+
+** Coding
+
+It's primarily written in  C (GNU C)
+With a bit of Assembly and Rust
+
+** Socket Buffer
+

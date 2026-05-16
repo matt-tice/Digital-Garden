@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       e63f3246-65c4-4050-b096-20471f2e6ad5
+:END:
+#+title: obstetrics
+#+filetags: Medicine
+
+* References 
+
+* Summary 
+
+Healthcare involving pregnancy and chilbirth
+

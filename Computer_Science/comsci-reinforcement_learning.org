@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       30a4f56d-c144-4a6d-a515-13ef12d44686
+:END:
+#+title: reinforcement learning
+#+filetags: Computer Science:AI:Machine Learning:
+
+* References
+
+
+
+* Summary
+
+
+
+* K-Armed Bandit
+
+One of the simplest problems
+
+A slot machine with K levers
+- you're allowed to pull one
+- they each have different potential award amounts
+- the task is to maximize the reward
+
+  
+* Temporal Difference Learning
+
+You assign /internal rewards/ at all of the hidden layer steps (steps before the final step)
+
+The further the internal step is from the final step, the more its reward is decreased.
+So for instance, the final reward might be 100, the second last step gets 90, the third last gets 85, etc.
+
+* Bellman Equation
+
+* Backgammon
+
+The TD-Gammon program from 1995 can become master-level after playing about 1.5M games with itself

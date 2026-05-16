@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       26a1fc98-d87b-423d-8539-eedae5b83d17
+:END:
+#+title: lattice theory
+#+filetags: Math
+
+* References
+
+[1] Cancellation Elements in Multiplicative Lattices, Dumitrescu.
+
+* Summary
+
+
+
+
+Anderson and Roitman looked at cancellation ideals in commutative rings
+- If IJ = IK then J=K
+
+An ideal is cancellative iff all localizations of I at the max ideals are *principal regular ideals*
+
+You can prove this more generally in a lattice theory context [1]
+
+*** Multiplicative Lattice
+
+Complete lattice which is also a commutative monoid under 

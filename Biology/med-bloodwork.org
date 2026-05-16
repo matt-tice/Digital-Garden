@@ -1,0 +1,135 @@
+:PROPERTIES:
+:ID:       3ce5ae6d-d42e-4bd2-a6e0-443d0bd3f23d
+:END:
+#+title: bloodwork
+#+filetags: Medicine
+
+* References 
+
+* Summary 
+
+
+* Hematology
+
+** WBC Count
+
+** RBC Count
+
+** Hemoglobin
+
+** Hematocrit
+
+** MCV
+
+** Mean Corpuscular Hemoglobin (MCH)
+
+The average mass of hemoglobin per red blood cell
+
+Mass hemoglobin / Number of RBC
+
+
+
+** Mean Corpuscular Hemoglobin Concentration (MCHC)
+
+Compares the hemoglobin with the /volume of the red blood cells/
+
+Mass hemoglobin / Volume of packed cells
+
+
+
+** Red Cell Distribution Width (RDW)
+
+It tells you the variance in red blood cell volumes in your body
+Some red blood cells are just naturally bigger or smaller, but if you have a really high variance, that can be caused by something
+
+This is usually used to distinguish different types of anemia (some involve high variance in RBC volumes, some don't)
+
+** Platelet Count
+
+* Automated Differential
+
+** Neutrophils
+
+The most common white blood cell
+
+This tells you the percentage of your white blood cells that are neutrophils.
+The /absolute neutrophils/ test tells you the actual number of neutrophils (within a certain amount of blood)
+
+** Lymphocytes
+
+** Monocytes
+
+** Eosinophils
+
+** Basophils
+
+** Absolute Neutrophils
+
+** Abs. Lymphocytes
+
+** Abs. Monocytes
+
+** Abs. Eosinophils
+
+** Abs. Basophils
+
+* Chemistry
+
+** Fasting Glucose
+
+** Sodium
+
+** Potassium
+
+** Vitamin B12
+
+Also called *cobalamin*
+
+The most complex of all vitamins
+It contains /cobalt/
+
+*** Deficiency
+
+
+
+*** Too Much (Hypercobalaminemia)
+
+It's actually very difficult to get too much cobalamin
+
+** ALT / SGPT
+
+An enzyme mainly in your liver
+Damaged liver cells release it
+
+Used to diagnose *liver disease*
+
+*** Terminology
+
+ALT has a bunch of different names
+- Alanine Aminotransferase
+- Alanine Transaminase 
+- Serum Glutamic-Pyruvic Transaminase (SGPT)
+- Serum Glutamate-Pyruvate Transaminase (GPT)
+
+*** Alanine Cycle
+
+Amino groups and carbons are transported to the liver
+Muscles will break down amino acids for energy and release amino groups
+ALT will take the amino groups and turn it back into a particular amino acid
+(alanine)
+
+The alanine gets sent to the liver and enters the *urea cycle*
+
+*** Low ALT
+
+Can be a marker of low muscle mass
+
+** Creatinine
+
+** eGFR
+
+** Ferritin
+
+** HbA1C
+
+** TSH

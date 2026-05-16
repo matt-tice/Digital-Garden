@@ -1,0 +1,408 @@
+:PROPERTIES:
+:ID:       08f231e4-7eaa-4c71-bfdb-239309db2466
+:END:
+#+title: programming language
+#+filetags: :Computer Science:
+
+
+* References
+
+
+* Summary
+
+* Domain Specific
+
+Autohotkey
+
+* Shells
+
+** Bash
+
+Bourne Again Shell
+
+Interacts with Linux/macOS operating systems
+
+** Fish
+
+Really good search functionality
+No sub-shells
+** Ksh
+
+Kornshell
+** Powershell
+
+Returns .NET objects, rather than text
+
+** Zsh
+
+Auto-completions
+
+
+* Web Design
+
+
+** ColdFusion
+
+Looks like HTML
+Native support for pdf generation, Microsoft Office, task scheduling, etc.
+
+** PHP
+
+Designed to embed in HTML
+Short feedback loop (don't have to build to see what happened)
+
+Just in time compilation
+Server side
+Synchronous
+
+** Javascript
+
+Asynchronous through Node.js
+
+* General Purpose
+
+
+** C
+
+Simple
+- only 32 keywords
+- easy to create compiler
+- so you can use it on every microcontroller
+
+Low level
+
+Direct hardware access
+- pointer manipulation
+- memory access
+
+** C++
+
+Object oriented
+
+Compiled
+
+Manual memory management
+
+** C#
+
+Garbage collector
+- automatic memory management
+
+Uses .NET  
+
+** Carbon
+
+
+
+
+** Crystal
+
+Related to Ruby
+- much faster than Ruby
+- has clean syntax, like Ruby
+
+Statically typed
+Compiled
+
+
+** Factor
+
+Stack-oriented
+Concatenative
+- there are no functions or arguments
+- you concatenate words to manipulate a global data stack
+- eliminates temporary variables
+
+Dynamic typing
+Garbage collection
+
+Metaprogramming!
+- has essentially no syntax by default
+- so it's really good for creating new domain specific languages
+
+** F#
+
+Functional
+Statically typed
+.NET
+Immutable variables by default
+Compiled
+
+Very concise
+
+** Fortran
+
+Fastest at array processing
+- arrays aren't allowed to overlap (no aliasing)
+- unlike c/c++ where pointers can point anywhere
+- this causes c/c++ to be slower, because they need to check that things don't get messed up
+
+Compiled
+
+Actually NumPy and SciPy are just front-end Python wrappers around back-end Fortran libraries (BLAS/LAPACK)
+
+No garbage collection pauses
+- so run time is /very/ consistent
+
+** Go
+
+Compiled
+- in particular, into small binary files with no dependencies
+
+Simple language
+
+Concurrent tasks
+
+** Haskell
+
+Functional
+
+Lazy evaluation
+- so you can actually define infinite data structures
+
+Static types, but with more expression than C++ or Java
+- Algebraic data types
+- Typeclasses
+
+Concurrent
+
+
+
+** Io
+
+
+
+** Java
+
+Multithreading
+
+Garbage collection
+
+Compile into bytecode that runs anywhere with java virtual machine
+
+No pointers
+- no unauthorized memory access
+
+Has a built in sandbox to protect system
+- but causes slower startup
+
+Object oriented
+
+** Julia
+
+JIT compilation
+- faster than no compilation
+- but slow when starting up, and when loading packages
+- statically compiled languages like Fortran don't have this issue  
+  
+Simple syntax
+Designed for scientific computing
+
+Uses a lot of memory
+
+
+
+** Lisp
+
+Metaprogramming
+
+Read-Eval-Print-Loop
+-  you can test and alter code while it's running
+
+One data type
+- *S-expressions*
+
+*** Common Lisp
+
+*** Scheme
+
+** Lua
+
+One of the fastest interpretted languages
+
+Incredibly lightweight
+
+Designed to embed into other programs
+Only 22 keywords
+One data type
+- the *table*
+
+Variables are /global by default/
+
+Limited error handling
+
+** Nim
+
+Compiled
+Statically typed
+Python-style syntax
+
+Metaprogramming
+
+Can choose between garbage collection and manual
+
+
+
+** Perl
+
+Sort of the anti-python
+- based on the principle that /there's more than one way to do it/
+
+Fantastic for text manipulation
+- integrated regex syntax
+
+Concise
+
+Hard to read
+
+Interpreted
+
+Uses a lot of memory compared to python (which already uses a lot of memory)
+
+** Python
+
+Interpreted
+
+Simple syntax
+A ton of libraries
+
+Garbage collection
+Reference counting
+- helps with memory leaks
+
+Uses a lot of memory
+
+Dynamically typed
+
+Global interpreter lock
+- no multithreading
+
+Can't be used for mobile  
+
+*** Cython
+
+** Ruby
+
+Dynamically typed
+Interpreted
+Clean syntax
+
+Everything is an object
+- leads to higher memory use
+
+** Rust
+
+No garbage collector
+Compiled
+
+Memory safe at compile time
+- checks for null pointer differences, buffer overflows etc.
+- this causes very slow compilation
+
+Safe concurrency
+
+
+
+** Scala
+
+JVM language
+Meant to do both OOP and functional programming
+Static types + local type inference
+
+Simple language
+
+Concurrent libraries
+High performance
+Designed to be *scalable*
+
+Slow compilation
+
+
+** Standard ML
+
+Functional
+Static types
+Algebraic data types
+Garbage collection
+
+Hindley-Milner type system
+- identifies most errors
+- type inference
+
+Safe pattern matching
+- good for building compilers/interpreters and manipulating trees
+
+Formal language
+- you can do formal verifcationf of code
+
+Very poor library
+
+** Swift
+
+About as fast as C++
+Strongly typed
+
+Simple language
+Automatic reference counting
+- avoids memory leaks
+
+Compilation is slow for large projects
+
+Heavily optimized for the Apple ecosystem
+
+** Tcl
+
+Great at making GUIs
+Designed to be embedded into C/C++
+
+One data type
+- *strings*
+- can make it difficult to manipulate large-scale data
+
+Has a built in event loop
+- great for network programming and interactive applications
+
+Interpretted
+
+
+
+** V
+
+Compiled
+Statically typed
+
+Simple syntax
+
+No global variables!
+
+No garbage collection
+- manages memory at compile time
+
+Compiles into machine code or C
+- very portable
+
+
+
+* AI
+
+** Prolog
+
+Declarative
+Untyped!
+
+Automatically searches multiple potential solutions to a query
+- but this is bad for large search spaces
+
+Powerful pattern matching
+- the *unification mechanism*
+
+Slower than a compiled language
+
+
+
+
+* Statistics
+
+** R
+
+** S

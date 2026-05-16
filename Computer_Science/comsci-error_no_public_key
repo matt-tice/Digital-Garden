@@ -1,0 +1,93 @@
+:PROPERTIES:
+:ID:       b614837a-12c0-428c-aad6-f2f1b0e23ca4
+:END:
+#+title: no public key
+#+filetags: :Challenge:Windows:Linux:
+
+* References
+
+
+
+* Summary
+
+#+begin_src 
+Failed to verify signature archive-contents.sig:
+No public key for 645357D2883A0966 created at 2026-05-12T17:10:22-0400 using EDDSA
+Command output:
+gpg: keyblock resource '/c/Users/Matty/Documents/Emacs/c:/Users/Matty/.emacs.d/elpa/gnupg/pubring.kbx': No such file or directory
+gpg: Signature made Tue May 12 17:10:22 2026 EST
+gpg:                using EDDSA key 0327BE68D64D9A1A66859F15645357D2883A0966
+gpg: Can't check signature: No public key
+
+#+end_src
+
+The obvious issue is that Emacs is looking at a nonsense path:
+#+begin_src 
+/c/Users/Matty/Documents/Emacs/c:/Users/Matty/.emacs.d/elpa/gnupg/pubring.kbx
+#+end_src
+which is clearly the concatenation of two different paths.
+
+But note that the two paths start differently:
+- the first has =/c/=
+- the second has =c:/=
+
+The second path is in typical Windows-style, but the first path is something you get when Windows is *pretending to be Linux*  
+
+
+** MSYS2
+
+* =default-directory=
+
+Checking the value of my =default-directory= variable
+
+#+begin_src 
+Its value is "~/Documents/Emacs/"
+Local in buffer *scratch*; global value is "C:/Users/Matty/"
+#+end_src
+
+It's a bit weird that the default directory has a local /and/ global value, no?
+
+In Emacs, =default-directory= is *buffer-local*, meaning
+- every time you switch to a new buffer, Emacs will try to give that buffer its own working directory
+- if you open a file, Emacs will usually set the local default directory to the folder that the file is in
+- similarly, if you launch a program (like Emacs itself), the corresponding buffer (in this case the =*scratch*= buffer) will have its local default directory set to the folder where the program was launched.
+
+** =setq= (Set Quote)
+
+Sets the value of a variable in the *current buffer* if that variable is buffer-local.
+
+** =setq-default=
+
+Changes the default value for *all new buffers*, but *ignores the current buffer*
+
+* What Worked: A Relative Path
+
+All the stuff I tried before was going off in the wrong direction.
+Instead, using a relative path for my =package-gnupghome-dir= *global variable* was enough:
+
+#+begin_src emacs-lisp
+(setq package-gnupghome-dir "~/.emacs.d/elpa/gnupg")
+#+end_src
+
+Somehow absolute paths cause double-rooting in the GPG on Windows 11
+
+* Actually that didn't work
+
+
+Git for Windows uses a specialized MSYS2 environment that prefers the SQLite (.db) backend, while Emacs expects the standard GNU/Linux file-based structure (.kbx).
+
+By installing a "Vanilla" GnuPG binary into your personal bin/ folder, you create a deterministic environment that you control, bypassing the "Shadow Path" issues and the MSYS2 translation layer.
+
+* Ok I finally got it working
+
+The "Staff Engineer" Autopsy: Why it works now
+
+While the specific fix feels like "magic," we actually addressed four distinct architectural layers:
+
+    The Cryptographic Anchor: By setting GNUPGHOME and the gpg.exe path before initializing packages, you ensured the "handshake" didn't fail at the hardware layer.
+
+    The Pipe Fix: process-connection-type nil solved the Windows-specific "Invalid Argument" error by switching from a PTY to a simpler stream that Windows 11 actually understands.
+
+    The Dependency Reset: Deleting the elpa/ folders removed "poisoned" files that were byte-compiled incorrectly during the earlier failures.
+
+    The Built-in Override: package-install-upgrade-built-in allowed Magit to "win" its conflict with the older transient version that ships with Emacs.

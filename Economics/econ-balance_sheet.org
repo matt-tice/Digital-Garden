@@ -1,0 +1,144 @@
+:PROPERTIES:
+:ID:       285f1fcb-ee35-49c1-8b45-80bd9b98e462
+:END:
+#+title: financial statements
+#+filetags: Stocks:Economics:Investing:Companies:Balance Sheet:Cash Flow:
+
+* References 
+
+CFA Institute, Investment Foundations, Chapter 7
+
+* Summary 
+
+
+* Balance Sheet
+
+
+The balance sheet of a company shows what it owns and how it's financed, including its debts and equity.
+
+** Assets
+
+What the company controls. This should be equal to the sum of  liabilities and equity
+
+*** Current Assets
+
+Things expected to be converted to cash or gotten rid of soon  --- cash, inventory, accounts receivable, etc.
+
+*** Non-Current Assets
+
+Long-term. Things like land, buildings, machinery, patents.
+
+When you buy a non-current asset the amount paid is reported on the balance sheet under assets, but its cost doesn't necessarily go on the income statement in full
+- you can split up the cost over the whole lifetime of the asset. This is called *depreciation*, and each year's price is called a *depreciation expense*
+
+
+*Amortisation* is depreciation but for intangible assets.
+
+** Liabilities
+
+
+*** Short-term/Current Liabilities
+
+Must be repaid in the following year
+Things like accounts payable, short-term borrowing like loans,
+*Accrued liabilities* are unpaid operating expenses or wages
+
+
+*** Long-term Debt
+
+Money borrowed that's to be paid off over more than one year
+
+** Equity
+
+This is the amount of investment that shareholders have put in by buying stock in the company
+
+Shareholds are /residual owners/, meaning they own the residual (leftover) value of the company after liabilities are paid.
+
+*** Stock
+
+Money obtained from selling stock to shareowners
+
+*** Retained Earnings
+
+Company's undistributed income; essentially what the owners of the company don't take out of the company
+
+* Income Statement
+
+Identifies the profit/loss of company. Sometimes called the P&L statement
+
+** Revenue
+
+Amount made by the company
+
+** Expenses
+
+Cost of cash, inventory, equipment, etc.
+
+*** Operating Expenses
+
+Cost of goods sold, production, transport, etc.
+
+*Operating Income*:
+Revenue - Operating Expenses 
+
+This is also called the EBIT (earnings before interest and tax)
+
+*** EBITDA
+
+Earnings before interest, tax, depreciation and amortisation.
+
+This is EBIT + D + A
+
+Since D and A are determined through how you do your accounting, EBITDA tells you something about how the company conceptualizes and manages its finances
+
+*** Interest Expenses
+
+Interest on whatever the company has borrowed
+
+*** Income Tax
+
+
+
+
+** Earnings per Share
+
+Net income = Revenue - (EBIT - I - T)
+
+Earnings per Share = Net income / shares
+
+
+
+* Cash Flow
+
+Shows cash received and spent. This is /not the same as income/
+- income is determined as soon as a transaction takes place, /even if money hasn't changed hands yet!/
+  - for example, if products have been shipped to a customer, but the customer hasn't paid yet, it would be in the income statement, but not the cash flow statement
+  - similarly, if you pay before the product is shipped, there would be something on the cash flow statement, but not the income statement
+  - expenses can show up without having something on the cash flow, by extending credit to the purchaser
+  - prepaid things are expenses paid before they occur
+
+Depreciation doesn't show up in the cash flow; instead the cash flow for the long-term asset happens all at once at the time of purchase
+
+
+CF < 0 and Income > 0, ex. company is slow at collecting cash from customers
+
+CF > 0 and Income < 0, ex. company has high depreciation and amortisation
+
+Companies can operate at a loss (income < 0) but still be fine if the cash flow is positive; income statements are more about how you want to frame things, rather than the actual security of the company
+
+*** Operating Cash Flow
+
+Cash generated from the company's main operation
+
+Cash inflows: sales
+Cash outflows: operating expenses
+
+*** Investing Cash Flow
+
+Cash outflows: purchases of long-term assets like equipment or buildings
+Cash inflows: sales of long-term assets
+
+*** Financing Cash Flow
+
+Inflows: raising new capital from shares, borrowing money
+Outflows: paying dividends, paying off debt, repurchasing shares

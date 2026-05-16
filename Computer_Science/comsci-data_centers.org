@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       16b8fd93-8eb6-4f65-bdbe-57f0d9a82fde
+:END:
+#+title: data centers
+#+filetags: :Computer Science:Economics
+
+* References
+
+[[https://www.oilandgas360.com/data-centers-in-america-digital-infrastructure-energy-reality-and-the-rise-of-closed-loop-systems/#utm_source=rss&utm_medium=rss&utm_campaign=data-centers-in-america-digital-infrastructure-energy-reality-and-the-rise-of-closed-loop-systems][Data Centers in America: Digital infrastructure, energy reality, and the rise of closed loop systems]], Greg Barnett, Oil and Gas 360 (2026).
+
+* Summary
+
+** Uses
+
+- AI / machine learning
+- Cloud computing
+- Cybersecurity
+- National Security and defense
+- Financial clearing and payment systems
+- Healthcare data and diagnostics
+- Industrial automation and logistics
+
+* Energy
+
+24/7 baseload demand
+Long-duration loads
+
+** Water
+
+Traditional evaporative cooling systems cost millions of gallons of water / year
+
+*** Lithium Bromide Absorption Cooling
+
+Use water as refrigerant but lithium bromide as the absorbent
+- can also use air-cooled systems
+
+* Financials
+
+Large, creditworthy
+Willing to contract for firm capacity
+Tolerance for on-site or behind-the-meter solutions

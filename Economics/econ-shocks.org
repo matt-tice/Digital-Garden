@@ -1,0 +1,102 @@
+:PROPERTIES:
+:ID:       8432ca79-ddc4-462a-9b84-379e54664376
+:END:
+#+title: shocks
+#+filetags: :Financial Shocks:
+
+* References 
+
+* Summary 
+
+
+
+* Panic of 1893
+
+J. P. Morgan saved the gold standard
+
+* 1900
+
+1901: Business-friendly William McKinley dies. Teddy Roosevelt takes the stage.
+
+** The Money Trust
+
+Businessmen and bankers like J.P. Morgan and John D. Rockefeller were seen as forming a cartel (the *money trust*) that undermined democracy.
+
+Teddy Roosevelt and Woodrow Wilson tried to reign in the money trust.
+
+
+* Panic of 1907
+
+J.P. Morgan steps in to save the day
+
+People became worried that Morgan and his fellow bankers had too much power.
+Congress decides to create a national bank to help in case of another panic
+
+
+* 1912
+
+New election for president: a battle between 3 candidates: Taft, Wilson, and Roosevelt
+
+Wilson was inspired by Thomas Jefferson, and wanted the government to inject competition into markets, breaking apart monopolies
+
+He won the election and would later institute
+1) the Clayton Antitrust Act, which could break up trusts
+2) the 16th Amendment, which instituted the *income tax*, which was meant to tax large fortunes
+3) the Federal Reserve (1913)
+
+Roosevelt wanted *New Nationalism*: a large government that regulated corporations to protect citizens
+
+* World War I 
+
+Europe vastly inflated their currency to fund the war, throwing them off the gold standard
+
+They bought a lot from the US, giving the states a surplus of trade
+
+* 1920s
+
+Radio was the new hot technology
+It was said it would permanently transform the economy with never-ending prosperity
+
+The heros of the tech were bankers and businessmen, like Richard Whitney
+
+
+* The Great Depression (1929)
+
+Prior to the crash, common people were buying into the stock market like never before. It was viewed as free money.
+
+** 1929
+
+*** October
+
+Oct 24: /Black Thursday/
+
+As stocks crashed through panic selling, Richard Whitney tried to hold them up by buying above market price, trying to calm the sellers.
+
+Richard represented the Wall Street Elite
+
+October: Market crashes
+
+November: bank president James J. Riordan commits suicide
+- The bank convinced the public investigator not to release the news until the bank closed, for fear of a bank run
+- The bank needed to pacify customers and so brought in John Raskob (who built the Empire State Building) and Al Smith (who ran for president a year before, and was the former governor of NY, and was friends with FDR, the current governor)
+- NYC announced it was leaving $3M in the bank as an act of faith
+
+** 1932
+
+March: Ivar Kreuger commits suicide
+- Officials withhold the news until market close
+
+After his death, it came out that his financial empire had a lot of corruption and deceipt, triggering the /Kreuger Crash/
+
+
+
+** 1940
+
+Jesse Livermore commits suicide
+- A bear, he made money when stocks went down
+
+* The Great Recession (2008)
+
+The new tech was the changes to the mortgage system. Housing prices would go up forever, people thought
+
+

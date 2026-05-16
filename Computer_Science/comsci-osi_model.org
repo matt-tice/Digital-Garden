@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       9d75133d-9596-47e5-a57e-a6bdb2ce75ad
+:END:
+#+title: OSI model
+#+filetags: :Computer Science:Networks:
+
+
+* References
+
+
+* Summary
+
+Developed by the International Organization for Standardization in order to create a standard to help coordinate networking.
+
+It's made up of 7 layers:
+1. Physical
+2. Data Link
+3. Network
+4. Transport
+5. Session
+6. Presentation
+7. Application
+
+   
+* Physical
+
+* Data Link
+
+* Network
+
+* Transport
+
+* Session
+
+* Presentation
+
+* Application

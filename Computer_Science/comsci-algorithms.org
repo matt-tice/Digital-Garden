@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       d05c590c-d448-4935-a11d-98f7c6f43e5a
+:END:
+#+title: algorithms
+#+filetags: Computer Science
+
+* References 
+
+* Summary 
+
+We can think of algorithms as certain kinds of /partial functions/
+(of course that's just a total function once you restrict the domain)
++ really a partial function /is/ just the data of a subset of a domain and a total function on that subset
++ so they're certain spans
+
+Every program has an assosciated partial function  
+
+
+* Definitions
+
+** Computable Functions
+
+These are supposed to be all of the functions on N that can be computed in principle
+
+These are also called *partial recursive functions*
+
+*** Ex: Non-Computable
+
+[[id:1e90bfee-0f90-46c1-b9e6-9b7ffc7bdd5b][The Halting Problem]]
+Hilbert's 10th problem
+Entscheidungsproblem

@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       1e667904-8cdf-48f3-b248-0ddb6f728423
+:END:
+#+title: ssh
+#+filetags: :Computer Science:Cryptography
+
+
+* References
+
+
+* Summary
+
+
+* Algorithms
+
+** ed25519
+
+The current standard
+It uses [[id:7770c3b9-7f1d-40cd-b50e-45a313c67c09][elliptic curve cryptography]]
+
+** RSA
+
+The old algorithm
+
+* SSH-Keygen
+
+#+begin_src bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+#+end_src
+
+ssh-keygen will generate a public-private key pair:
+- private: =id_ed25519=
+- public: =id_ed25519.pub=
+
+the =-C= flag is for /comments/
+- this just says to tag the keys with your email, so if you have multiple accounts, you remember which account the key belongs to

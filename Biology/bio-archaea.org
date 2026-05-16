@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       ef1eedcc-d0f3-4ba5-8b21-16243204f1c5
+:END:
+#+title: archaea
+#+filetags: :Biology:Cells:Prokaryotes:
+
+
+* References
+
+
+* Summary
+
+Singled-celled prokaryotes
+
+
+* Similarity to Eukaryotes
+
+Archaea are actually surprisingly similar to Eukaryotes. It's possible that Eukaryotes actually developed from archaea. This is kinda weird since, on the surface, eukaryotes seem pretty different --- they have a nucleus, and might not be single-celled.
+
+** Older Classifications
+
+Originally we categorized living things into plants and animals, and bacteria were considered plants. Then we realized bacteria don't really have anything to do with plants or animals, so they got their own category. Then scientists invented a new binary: prokaryotes and eukaryotes. Eventually it became clear that prokaryotes can be more different to each other than they are to eukaryotes.
+
+It's sort of like saying: we can categorize everything based on whether it has 2 legs or not. That gives you a binary classification, and everything sits in one of the 2 blocks, but it's not really a great classification: an elephant and a tree both do not have 2 legs, but they're much more disimilar to each other than they are to humans
+
+
+Actually the problem with binaries is touched on briefly in the article that established that prokaryotes need to be broken down into smaller categories: /Phylogenetic structure of the prokaryotic domain: The primary kingdoms/, Woese, Fox (1977).
+
+Part of the problem with comparing eukaryotes and prokaryotes is that eukaryotes are composite organisms, and so need to be broken down into their components, which can then individually be compared to prokaryotes
+
+
+** Divergence
+
+Apparently Bacteria and Archaea diverged before Eukaryotes even existed. The differences between Archae and Bacteria are subtle; they're differences at the molecular level, rather than the morphological characteristics. To be fair though, prokaryotes can be pretty darn small compared to eukaryotes
+
+It's weird though, because archaea look just like bacteria
+
+
+Mitochondria and chloroplasts apparently are similar to prokaryotes
+
+
