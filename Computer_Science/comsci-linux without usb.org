@@ -1,0 +1,198 @@
+Tags: SystemsArchitecture:Networks:
+
+
+Problem: How do you install Linux on a Windows 11 laptop without using an external hardware or paid software?
+
+* 1. Partitioning
+
+First we need to create a partition for the linux distro
+
+Problem: Windows Disk Management reported only 2GB of available shrink space, even though our hard disk had over 100GB of free space
+
+Discovery: Event log study
+- used the Event Viewer to identify the blockage preventing the shrink
+- Event 259 
+
+Cause: Unmovable files
+- hibernation
+- page file
+- restore points: volume shadow copy service
+- master file table ($Mft::$DATA)
+
+Solution
+- disable hibernation
+	- powershell (admin) powercfg /h off
+
+- disable pagefile
+	- Advanced system settings
+	- Advanced > Performance > Advanced > Change
+	- Uncheck auomatically manage 
+	- choose no paging file
+
+
+Defrag: we want to move the data to the beginning of the hardrive, to give us the room to shrink the parition size
+
+Problem: The Windows kernel can't move $Mft while it's running
+
+
+Solution: Perform a minimum shrink (2GB), create a tiny virtual USB partition. Boot into Arch Live on the virtual USB. Use Linux-native tools (ntfsresize) to move the $Mft while Windows is off
+
+
+* 3. Get a 100% intact Arch ISO over a potentially unstable Wifi connection
+
+Learned: TCP vs BitTorrent
+
+looked at curl vs curl.exe on powershell
+- curl and wget are really an alias for Invoke-WebRequest
+- it loads the file into memory before writing to disk, so it obviousy isn't great for an ISO
+- powershell is object-oriented, so it creates a HtmlWebResponseObject that stores the entire response in RAM
+
+
+curl.exe is the actual C-based curl
+- it opens a TCP socket and pipes the data directly to a file
+- you can use curl.exe -C - -O [URL] to keep rack of which parts of the file you've downloaded already
+- [-C -] performs a *file stat* on the output location
+	- if it finds the file you're downloading,it calculates the offset and sends an HTTP Range header to the server
+- [-O] tells curl to use the filename from the URL as the local filename
+
+Start-BitsTransfer
+- Background Intelligence Transfer Service
+- gives he task to a Windows System Service
+- persistent
+- monitors network usage; it can throttle itself to avoid lagging other apps
+- Start-BitsTransfer -Source [URL] -Destination [OUTPUT]
+
+Checksum
+Get-FileHash .\archlinux-2026.05.01-x86_64.iso -Algorithm SHA256
+
+* Format the Partition
+
+learned about how diskpart works
+
+learned about fat32 vs NTFS APFS
+primary partitions
+
+** Disk Types
+
+MBR: only had room for 4 partitions
+- to trick the system into allowing more partitions, you created "logical" partitions 
+GPT: supports up to 128 partitions
+
+Primary: acts as an independent volume
+- it has its own entry in the partition table, so the BIOS can find it easily during boot
+
+Extended: for MBR, you could use one of the 4 partitions to create an extended partition, which could then house unlimited logical partitions
+
+
+MSR: Microsoft reserved
+
+System: a small FAT32 partition that holds bootloaders for every OS on the machine
+
+
+use detail partition to check that you're looking at the right one, before you format
+
+format the partition and label it
+
+* Mount onto our new Drive
+
+We mount the linux distro and copy the files onto our new drive
+
+Windows still doesn't know that our new drive is a boot option. But we can add it to the Windows Boot Manager
+- use bcdedit
+- edits Boot Configuration Data
+
+we copy the {current} GUID (globally unique identifier) into a new location (bcdedit does this automatically with the /copy command)
+Then we play around with that new location
+
+# 2. Tell the entry to look at your Z: drive
+bcdedit /set {YOUR_GUID_HERE} device partition=Z:
+bcdedit /set {YOUR_GUID_HERE} osdevice partition=Z:
+
+# 3. Tell it which file to run (the EFI bootloader)
+bcdedit /set {YOUR_GUID_HERE} path \EFI\BOOT\BOOTX64.EFI
+
+* Arch Linux
+
+** initramfs
+
+During boot, the bootloader takes a compressed archive (.img) from the Z: drive and decompresses it into a RAM disk containing all the drivers and tools needed to start the system
+
+Execution vs. Storage: Modern OS installers utilize an initrd/initramfs (Initial RAM Disk) to decouple the Operating System from the physical media. This "Cold Boot to RAM" state is what allows for non-destructive filesystem manipulation, as the underlying hardware is not locked by the running kernel's I/O operations.
+- it's a 2-stage boot
+- Windows has WinPE and Winload
+
+
+The RAM-Disk Universal: All modern operating systems utilize a TEE (Temporary Execution Environment) in RAM to bridge the gap between hardware initialization and filesystem mounting. This decoupling is a mechanical necessity for handling driver diversity and performing "cold" system maintenance.
+
+Partition Truncation: A filesystem whose internal metadata reports a size larger than its containing partition is considered "malformed." While non-destructive to the underlying data, it results in a boot failure. The remedy is a manual correction of the Partition Table to match or exceed the filesystem's reported boundaries.
+
+
+Problem: No SRT Trail error
+- startup repair tool
+
+Cause: Windows thinks that linux is a broken version of windows and tries to repair it, but can't find the SrtTrail.txt file that it expects
+
+SRT Trail Loop: A diagnostic failure triggered by the Windows Boot Manager when a non-standard BCD entry fails to initialize. This is frequently caused by Secure Boot's signature verification or incorrect pathing in the BCD's path variable
+
+I suspect the problem is that by copying the {current} GUID, we also inherited the expectation for an SrtTrail.txt file
+- we copied the metadata profile of the Windows Boot Loader
+- in particular, we copied the fact that recoveryenabled is set to yes
+
+Solution: We'll just edit the bcd entry
+
+bcdedit /enum
+lists out the stores
+we find the one we labeled arch linux (it's also the only one on the z: drive, and the last one on the list, so it's easy to find)
+
+I see that recoveryenabled is set to yes
+
+bcdedit /set "{id}" recoveryenabled No
+
+
+now it can't find the efi file
+
+3. The Structural Reality Check
+
+When you say the file uses a lowercase x, you are observing the file from within Windows. However, the UEFI firmware exists outside the OS.
+
+The Mechanical Assumption:
+On many 2018-era laptops, the UEFI firmware expects the bootloader to be at a specific "fallback" path if the BCD entry is ambiguous. Since you are using a local partition on your main drive (and not a separate physical USB), the firmware might be getting confused about which "EFI" folder is the master.
+
+using cmd /c dir /x
+compared the short and long filenames
+the FAT32 filesystem uses a legacy system called VFAT to handle long names
+- it lists the short name as BOOTX64.EFI and the long name as BOOTx64.EFI (lowercase x)
+
+
+
+Solution: Rename-Item to something different
+this breaks the short-long link
+then rename back to the all caps version
+then bcdedit /set the path to the all caps version
+
+didn't work
+
+noticed that the header of my linux under /enum was "windows boot loader"
+- this is because i copied the {current}
+- we can pick a different class
+- chose bootloader
+- made it but didn't see it
+
+
+BCD Visibility Latency: Entries created with the bootsector or osloader flags without defined device or path attributes are often omitted from the standard bcdedit /enum output. They remain dormant in the BCD store and require manual inclusion in the displayorder list to become active objects in the boot menu.
+
+added the metadata
+deleted the old arch linux boot loader
+
+ran it again and it still couldn't find the efi
+pressed f9 and navigated explicitly to the efi file and it said can't authenticate
+- using f9 bypasses the bcd
+- this error tells us we're using secure boot
+- that's an uefi feature that only allows binaries signed by trusted certificates
+- my arch linux obviously isn't signed by microsoft
+
+
+solution: disable secure boot
+- enter bios/uefi set up
+
+

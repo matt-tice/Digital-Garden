@@ -31,6 +31,8 @@ Things to Learn
 
 ** bin
 
+Bin stands for binaries
+
 Essential command binaries that need to be available in single-user mode
 
 cat
@@ -79,6 +81,16 @@ Config files for software that processes XML
 ** home
 
 Home directors for the user
+
+This can be used for whatever you want, but I've found that it's actually nicer to use your /home directory as something like /etc, but for different kinds of things.
+
+Whereas the root version of /etc has configurations for the root, /home has *configurations for the user*
+
+Then you create a separate /data directory or partition, and use that for your actual files
+- and in fact, you can separate that directory further, by creating subdirectories like
+- /archive - for read-only files
+- /workspace - for your actively read/written files
+- /storage - for 3rd party/closed-source binaries
 
 ** lib
 
