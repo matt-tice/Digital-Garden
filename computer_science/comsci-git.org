@@ -35,3 +35,38 @@ A way to host your repository online for other people to see / collaborate on
 Owned by Microsoft
 
 Not open-source itself.
+
+* Errors
+
+#+begin_src git
+git diff-index --quiet HEAD --
+#+end_src
+Detects if files have changed
+
+* Commands
+
+** push
+
+** pull
+
+Runs =git fetch= followed by =git merge=
+
+*** fetch
+
+Downloads the latest history from Github
+Does nothing to the working files
+- just updates git's local copy of what the remote repo looks like
+- this info is stored in =origin/main=
+
+*** merge
+
+Creates a merge commit, forcing multiple different repo histories together
+
+** add
+
+** commit
+
+** rebase
+
+This is a linear alternative to merge
+- finds the most recent common ancestor of the local repos, plugs in those commits first and then reapplies your current comits.

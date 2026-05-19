@@ -1,0 +1,78 @@
+:PROPERTIES:
+:ID:       7080b4e3-8810-4812-b4cb-26d48cd4d4b1
+:END:
+#+title: batch files
+#+filetags: :Computer Science:Windows:Programming Language:
+
+* References
+
+
+* Summary
+
+=.bat= and =.cmd= files are more or less the same thing nowadays
+- they both get executed by cmd.exe
+- but *.bat files have priority*
+       - so if you have two files with the same name and one is .bat and the other .cmd, typing the name without extension in cmd.exe will *run the bat file*
+
+         
+* echo
+
+Use the =@= symbol to prevent a line from writing to standard output
+
+=echo off= turns off the printout for every subsequent command
+
+* Scope
+
+=SETLOCAL= is a scope boundary
+- any environment variable defined after it only exists in the temporary local context
+- close this with =ENDLOCAL=
+
+* Execution
+
+By default all loops parse *at once* at load time
+- this is a problem if you define variables dynamically inside of a loop, because it will view those variables as only having the value that they had at the very beginning of execution (ie. they'll *never update*)
+
+=EnableDelayedExpansion=: Allows us to read variables dynamically as they update
+- use the syntax =!VAR!= for an updating variable
+- and =%VAR%= for a non-updating one
+
+* Sanitization
+
+
+* Variables
+
+Define variables with =SET=
+But be *careful about quotes*
+- =SET VAR =  "VAL"= will interpret the value as =\s"VAL"= (ie. it includes the leading space and the quotations)
+- =SET VAR =  VAL\s= (with a trailing space) will include that space as part of the value
+- =SET "VAR=VAL"= is best practice
+
+
+
+* Loops
+
+#+begin_src bat
+FOR /L %%i IN (0,1,2) DO (
+SET "REPO=!REPOS[%%i]!"
+...
+)
+#+end_src
+
+The exclamation points say that the variable is updating throughout the loop.
+=/L= is a flag that says we're using an *explicit numeric counter*
+=(0,1,2)= denotes
+- starting at 0
+- incrementing by 1
+- ending at 2 (inclusive)
+
+
+* Commands
+
+=%1= represents the first command-line argument passed to the batch script
+
+=%~1= strips any quotation marks placed around the command by the VBS caller
+
+* Errors
+
+=if errorlevel X=: checks if the preceding command's return code is \geq X
+
