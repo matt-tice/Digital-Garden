@@ -1,0 +1,116 @@
+:PROPERTIES:
+:ID:       03e0b929-3668-460a-944f-13eb6924c0d0
+:END:
+#+title: bash
+#+filetags: :Computer Science:Programming Language:Linux:
+
+* References
+
+
+* Summary
+
+It's similar to Windows Batch, in that it's built to string command-line expressions together.
+- the syntax is also quite similar in places
+
+  
+** Differences
+
+Batch is based on MS-DOS
+- uses strict string replacements
+- legacy tokens
+
+Bash is built on the POSIX standard
+- views *everything as a stream of plain text*
+- this allows you to pipe one command's output into another's input
+- this works because *Linux is based on plain text*: almost every system state, config setting, etc. lives in a plain text file  
+  - on the other hand, Windows configs live in binary data structures like the [[id:cbc7911d-23b3-4bca-9c1d-688bbcc78b9c][windows registry]], Active Directory, WMI, and COM APIs.
+
+
+The downside of Bash is that if any commands update and change their output, scripts will easily break
+
+  
+* Shebang
+
+=!#= is called a *shebang*
+- this tells the kernel which program should parse the file
+
+#+begin_src bash
+#!/usr/bin/env bash
+#+end_src  
+
+Even though bash is often just in =/usr/bin/=, coding in =/usr/bin/etc= tells the kernel to seach PATH, incase bash is somewhere else.
+
+* Errors
+
+By default, if a line in a bash script fails, Bash will ignore it and keep going.
+
+=set -e=: Tells bash to end if it encounters any errors (non-zero exit codes).
+
+* Commands
+
+#+begin_src bash
+MODE="${1:-default}"
+#+end_src
+
+=$1= represents the first positional argument passed to the script
+
+=$1:-default= tells the program to evaluate variable one, and if it doesn't exist, to use the string 'default' for its default value
+
+=[= is a command alias for =test=
+
+=[ -d "$REPO" ]= checks that the repo is a valid directory
+- the white space after the square bracket is necessary, because =[= is itself a command
+
+=$(command)= is *command substitution*
+- it runs the command in a subshell, captures whatever it prints to stdout and pastes it into the string
+
+#+begin_src bash
+git push origin main >> "LOG_FILE"
+#+end_src
+
+Bash first reroutes the output stream to =LOG_FILE= and then executes the command
+- =>>= opens the file in append mode
+- =>= opens it in write mode
+
+git then writes its output to stdout as usual, but Bash has already pointed stdout to the log file.  
+
+* File Descriptors
+
+Every process of Linux gets automatically assigned 3 communication channels (*file descriptors*)
+- 0: stdin
+- 1: stdout
+- 2: stderror
+
+=2>&1= means /redirect file descriptor 2's stream to the current target of file descriptor 1/
+- in other words, print any errors
+
+
+* Variables
+
+Bash reads local variables *dynamically by default* (unlike Batch)
+
+** Arrays
+
+Unlike Batch, Bash actually has arrays natively
+- items are separated jusut by whitespace or newlines
+
+=${REPOS[@]}= tells Bash to unpack the entire array
+- it's best practice to place the whole thing in quotes, in case any of the strings inside REPOS contain spaces
+  
+* Loops
+
+*Semicolons* are syntactically equivalent to new lines.
+
+* Conditionals
+
+#+begin_src bash
+if [ "$MODE" == "pull" ]; then
+#+end_src
+
+#+begin_src bash
+if ! git diff-index --quiet HEAD --; then
+#+end_src
+
+=!= is a logical inversion acting on =git diff-index=
+
+
