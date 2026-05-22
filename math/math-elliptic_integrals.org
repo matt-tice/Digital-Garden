@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       19dac00f-58d5-4457-ab28-8d6a01c69293
+:END:
+#+title: elliptic integrals
+#+filetags: :math:analysis:
+
+* References
+
+
+* Summary
+
+
+Elliptic integrals are integrals of the form $\int (p(x))^{-1/2}$, where p is a polynomial of deg(p) = 3 or 4
+
+The inverses of elliptic integrals are elliptic curves
+
+They're also related to tori
+
+
+
+
+* Elliptic Curves and Functions
+
+Elliptic curves are *not the same* as elliptic functions
+
+
+Elliptic integrals, when undergoing inversion gives us a differential equation which defines an elliptic curve. The solution to the differential equation is a an elliptic function, which then parameterizes the elliptic curve.
+
+* Inverses
+
+$\arcsin x = \int_0^x \dfrac{1}{\sqrt{1 - t^2}}dt$
+
+
+* Sigma and Theta Functions
+
+Just like how $\sin x$ and $\cos x$ arise out of a single function $e^{ix}$, elliptic functions arise out of sigma and theta functions.
+
+
+* Harmonic Analysis
+
+The characters of $U(1)$ correspond to complex exponentials
+
+Elliptic curves form tori. If we take the torus as a Lie group, we can do harmonic analysis on it to get elliptic functions
+- you have to be a bit careful though, because if you try to take $U(1) \times U(1)$, you get a /real/ torus.
+- But elliptic curves correspond to complex tori
+       - this is the Uniformization Theorem
+
+
+The space that parameterizes all complex elliptic curves is the upper-half plane acted on by $SL_2(\mathbb{Z})$
+- the characters here are modular forms
+
+

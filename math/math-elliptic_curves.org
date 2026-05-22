@@ -1,0 +1,46 @@
+:PROPERTIES:
+:ID:       3cffa4a3-844f-4a2b-86a7-5601bd2614fa
+:END:
+#+title: elliptic curves
+#+filetags: :math:analysis:geometry:
+
+* References
+
+
+* Summary
+
+We're interested in finding rational points on the curve: $x,y \in \mathbb{Q}, E(x,y) = 0$
+
+Elliptic curves are deeply related to [[id:19dac00f-58d5-4457-ab28-8d6a01c69293][elliptic integrals]]
+
+
+* History
+
+** 1922
+
+Mordell proved that the rational points on any elliptic curve form an abelian group, and in fact this group is *finitely generated*
+
+
+** 1960s
+
+Hasse-Weil L-functions seem to tell us about the algebraic rank of an elliptic curve
+
+* Definitions
+
+** Rank of an Elliptic Curve
+
+*** Algebraic Rank
+
+The *algebraic rank* is the rank of the finitely generated abelian group determined by the curve.
+
+If $r = 0$ we have a finite number of rational points
+
+If $r > 0$ we have an infinite number of rational points
+
+*** Analytic Rank
+
+*** Problem: Finding the Rank
+
+Currently (2026) there's no algorithm for finding the rank of an elliptic curve
+
+
