@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       3c9b024a-d7f6-4f49-ae3d-b5a21e6cc801
+:END:
+#+title: unitary dual
+#+filetags: :math:lie groups:representation theory:
+
+* References
+
+
+* Summary
+
+The unitary dual is the structure of all irreducible unitary characters of a noncompact group.
+
+We can also look at the structure for a compact group
+
+* Definitions
+
+A unitary representation is 
+
+* Langlands

@@ -2,7 +2,7 @@
 :ID:       7770c3b9-7f1d-40cd-b50e-45a313c67c09
 :END:
 #+title: elliptic curve cryptography
-#+filetags: :Computer Science:Cryptography:
+#+filetags:Computer_Science:Cryptography:
 
 
 * References
