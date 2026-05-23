@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       335b09eb-a897-4296-9eab-0900714449f7
+:END:
+#+title: keyboards
+#+filetags: :computer science:hardware:
+
+* References
+
+
+* Summary
+
+* Scan Codes
+
+When you press a key, the keyboard controller sends an interrupt signal to the kernel
+- the signal contains a hex code corresponding to the key, called the *scan code*
+
+The kernel will then send the appropriate information to a program like XKB, which will perform a corresponding action (type a character, move left, etc.)
+
+** Fn key
+
+Unlike most keys, the fn key almost never has a hardware scan code
+- pressing the key doesn't tell the computer anything
+
+Instead, the fn key is wired directly to a hardcoded microcontroller inside the laptop.
+- the microcontroller intercepts the signal of other keyboard presses while the fn key is held and causes a *different scan code* to be sent to the kernel
+
+Because it's unknown to the kernel, there's nothing you can do at the operating system level to remap this key (sadly)
+- if you want to change its behaviour, you can, but you need to alter the code in the embedded microcontroller
+
+Some laptops will actually have a built-in method of changing fn behaviour (usually with limit options) in the BIOS
+- the BIOS will update a certain non-volatile register, and the microcontroller reads 
