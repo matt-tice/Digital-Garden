@@ -9,3 +9,17 @@
 
 * Summary
 
+Accelerated compositing splits the webpage into *separate layers*
+- headers
+- video elements
+- transforming blocks
+
+Each layer gets sent to the GPU, which composites (assembles) them on your screen.
+
+* WebKitGTK
+
+Things like Nyxt expect no issues in the compositing process
+If there are any issues, Nyxt *fails silently*
+
+We can actually turn off accelerated compositing, which makes the browser use a *pure software rasterizer*
+- CPU (not GPU) takes all of the layers into a shared memory buffer and copies that buffer into the window
