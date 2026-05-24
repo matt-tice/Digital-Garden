@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       70b3a012-a4b6-492f-847f-36529a219bd5
+:END:
+#+title: yaml language
+#+filetags: :computer science:language:
+
+* References
+
+
+* Summary
+
+
+
+Key-value pairs are denoted
+
+#+begin_src  yaml
+key: value
+#+end_src
+
+Lists are denoted with a hyphen for the first element
+
+#+begin_src yaml
+steps:
+  - name: Checkout
+    uses: actions/checkout@v4
+#+end_src
+
+
+To run multiple commands, use a literal indicator =|= or a folded indicator =>=
+
+#+begin_src yaml
+run: |
+  echo "Starting build..."
+  mingw32-make
+
+run: >                          # Collapses line breaks
+  echo "This whole thing
+  becomes on single long sentence"
+#+end_src
