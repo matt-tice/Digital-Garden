@@ -1,0 +1,32 @@
+# --- Windows Systems Files ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Local Make Pipeline Files ---
+scripts/local-env.el
+public-export/
+*.tmp.org
+
+# --- macOS Systems Files ---
+.DS_Store
+
+# --- Emacs / Org-mode Files ---
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+auto-save-list
+network-security.json
+org-roam.db
+org-roam.db-journal
+
+
+
+
+
+# --- Other ---
+
+private/
+*.gpg
+
