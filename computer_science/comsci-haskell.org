@@ -1,0 +1,258 @@
+:PROPERTIES:
+:ID:       4ada6ef3-b80f-40ae-bf1e-1b9345577499
+:END:
+#+title: haskell
+#+filetags: :comsci:language
+
+* References
+
+
+* Summary
+
+Functional language
+
+Haskell *doesn't have variables* in the sense of an imperative language
+All "variables" are really explicit values that we give a name
+- you aren't allowed to actually vary the value; every "variable" is a constant
+
+This is actually *fantastic for optimization*
+- compilers can optimize around the fact that all variables are constant
+- for ex. you can replace all occurances of a certain variable name by a pointer to a single shared memory layout
+       - ordinarily, if you did that for a non-constant variable, you'd risk the memory address being overwritten with different values as you change the scope
+
+* Lists
+
+Lists are denoted with square brackets, like =[1,2,3]=, but their actual structure under-the-hood is *nested constructors*:
+
+#+begin_src haskell
+1 : (2 : (3 : []))
+#+end_src
+
+=:= is a function that defines a value
+it has the shape
+#+begin_src haskell
+(:) :: a -> [a] -> [a]
+#+end_src
+It takes an element of type =a= and a list of type =[a]= and returns a list of type =[a]=
+=::= defines a type
+
+#+begin_src haskell
+myList = 1 : 2 : 3 : []
+
+-- is the same as
+1 : (2 : (3 : []))
+-- because : is defined to work from right to left
+
+
+(:) :: a -> [a] -> [a]
+#+end_src
+
+** map
+
+=map= basically applies a function elementwise to a list
+
+#+begin_src haskell
+map :: (a -> b) -> [a] -> [b]
+#+end_src
+
+** foldr
+
+#+begin_src haskell
+foldr :: (a -> b -> b) -> b -> [a] -> b
+#+end_src
+=(a -> b -> b)= is the kind of shape that =:= has.
+So we can write
+#+begin_src 
+foldr (:) z [1,2,3]
+#+end_src
+to replace
+
+* Compiler
+
+Haskell's compiler is the *Glasgow Haskell Compiler* (GHC)
+
+We can alter its behaviour using a *language pragma*:
+={-# LANGUAGE [option] #-}=
+
+#+begin_src haskell
+{-# LANGUAGE OverloadedStrings #-}
+#+end_src
+
+This tells GHC to treat strings as arrays of bytes, as opposed to inefficient linked lists of characters.
+
+
+* Modules
+
+#+begin_src haskell
+module Name where
+
+import Namespace1 (Type1)
+import Namespace2 (Type2)
+#+end_src
+
+=module...where= says that anything within the file belongs to the module Name.
+
+=import Namespace (Type)= grabs certain types from external libraries
+
+** Data.Bits
+
+Gives you highly optimized bit-fiddling operations that compile down to assembly instructions, like =popcnt= and =pxor=
+
+** qualified
+
+#+begin_src haskell
+import qualified Data.Text as T
+#+end_src
+
+=qualified ... as= says that every function imported from =Data.Text= will be prefixed by "T."
+- this helps avoid namespace collisions
+
+* Types
+
+** Word64
+
+Unsigned 64-bit integer
+
+** data
+
+*** Sum Types
+
+#+begin_src haskell
+data sumTypeName
+  = constructor1 Type1
+  | constructor2 Type2
+  deriving (Show, Eq)
+#+end_src
+
+Constructors are functions that instantiate values. The =Type= next to them is what you have to pass into the function
+
+What's happening under the hood, is that we get a function
+#+begin_src haskell
+constructor1 :: Type1 -> sumTypeName
+#+end_src
+
+Sum types say that the data type can be instantiated by any of the listed constructors.
+
+=deriving(Show, Eq)=: these are properties we give our defined type
+- =Show= allows us to print it to the terminal
+- =Eq= allows us to use ==== on it
+
+
+*** Product Types
+
+#+begin_src haskell
+data prodTypeName = prodTypeName
+  { regionName       :: Text
+  , regulatoryBody   :: Maybe Text
+  , sovereignRiskTier:: Int
+  } deriving (Show, Eq)
+#+end_src
+
+This says that the data constructor is also =prodTypeName=
+- this tells us there's only one valid way to construct the data form
+
+The info inside of the curly brackets are *records*: they tell us what information our data type must contain (it has to contain /all of them/)
+
+=field :: Type= means that the field has the type =Type=
+
+=Maybe= is a nice way of preventing null-pointer errors. =Maybe Type= means that either the field can be type =Type= or type =Nothing=
+
+
+** Synonyms
+
+#+begin_src haskell
+type aliasName = Text
+#+end_src
+
+This creates an alias for the type =Text=
+- it's basically just used to help make your code more readable
+
+** newtype
+
+=newtype= doesn't have any runtime cost, unlike =data=
+
+
+#+begin_src haskell
+newtype SemanticID = SemanticID Word64
+#+end_src
+
+In this snippet, two things are happening:
+1. We're defining a new type called =SemanticID=
+2. We're also defining a data constructor named =SemanticID=
+
+The point is that now that SemanticID is /created from/ a 64-bit integer, but it isn't itself considered a 64-bit integer by the program
+- this is a form of *type safety*
+- it says that we can't just pass any random 64-bit integer into a function expecting a SemanticID; we have to explicitly say that our integer is of type =SemanticID=
+- very cool!
+   
+
+* Functions
+
+#+begin_src haskell
+computeSimHash :: [Text] -> SemanticID
+computeSimHash tokens = SemanticID $ foldr buildBits 0 (zip [0..63] vectorSums)
+  where
+    tokenHashes = map hash64 tokens
+    vectorSums  = foldr accumulate (replicate 64 0) tokenHashes
+#+end_src
+
+=foldr= takes a higher order function, an initial accumulator state, and a list, and collapses the list down to a single value from /right to left/
+
+=where= gives the variables *local scope*
+=let ... in= also gives local scope
+
+
+=zip [0..63]=
+
+=zipWith= takes a function that accepts 2 arguments, and zips two lists together by applying the function to their elements.
+
+=\= is the syntax for an anonymous (lambda) function
+
+=.= is the function composition operator (it goes from right to left, so it behaves like g \circ f)
+
+=$= applies a function to a value to produce a value
+- it's basically element application
+  =f $ x= behaves like f(x)
+- without it, lines parse from left to right
+- using the dollar sign basically just lets us avoid a bunch of parentheses
+
+=<$>= takes a function and reaches inside of a container to apply the function inside the container  
+
+#+begin_src haskell
+tokenHashes :: [Word64]
+tokenHashes = map hash64 tokens
+
+-- it's the same as
+-- const tokenHashes = map(hash64, tokens);
+#+end_src
+
+This snippet defines =tokenHashes= as a list (square brackets) of integers
+- the syntax =:: Type= can be thought of like a map from the terminal object into =Type=
+
+The next line then describes how we get this list of integers  
+- =map= is a function that takes two arguments
+- it uses *currying*, so really what ends up happening is you first get a function =(map hash64)= which takes an argument =tokens=
+
+  
+
+* Case
+
+#+begin_src haskell
+case sentences of
+    []         -> ""
+    [single]   -> single
+    (first:xs) -> first <> " . " <> last xs
+#+end_src
+
+=<>= monoidal concatenation
+
+* Pointfree Style
+
+
+#+begin_src haskell
+-- Pointful (Explicit values/elements)
+process txt = show $ hash64 $ txt
+
+-- Pointfree (Pure Category-theoretic Arrow Composition)
+process = show . hash64
+#+end_src
