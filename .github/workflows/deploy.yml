@@ -28,7 +28,7 @@ jobs:
 
       - name: Execute Local Compilation Toolchain
         run: |
-          make                  # Runs the GNU Makefile
+          make all --debug=v                  # Runs the GNU Makefile
       - name: Deploy Compiled Artifacts to Github Pages Branch
         uses: peaceiris/actions-gh-pages@v4
         with:
