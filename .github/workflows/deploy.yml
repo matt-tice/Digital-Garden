@@ -3,38 +3,57 @@ name: Compile and Deploy Digital Garden
 on:
   push:
     branches:
-      - main                    # Trigger only when you push to main
-
+      - main
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest      # Github's cloud OS
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout local repository
+      - name: Checkout main repository
         uses: actions/checkout@v4
-
-      - name: Pre-populate output target from gh-pages branch
-        uses: actions/checkout@v4
-        continue-on-error: true
         with:
-          ref: gh-pages
-          path: ./public-export
+          fetch-depth: 2        # Captures the current push and its parent commit
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y emacs-nox pandoc
 
-      - name: Execute Local Compilation Toolchain
+      - name: Compute Changes and Run Make
         run: |
-          make all --debug=v                  # Runs the GNU Makefile
+          # 1. Extract only the modified .org files from the commit diff
+          CHANGED_ORG=$(git diff --name-only HEAD^1 HEAD | grep '^notes/.*\.org$' || true)
+
+          # 2. Check if there is actual work to do
+          if [ -z "$CHANGED_ORG" ]; then
+            echo "No .org files modified in this push. Skipping compilation."
+            exit 0
+          fi
+
+          echo "Modified source files detected:"
+          echo "$CHANGED_ORG"
+
+          # 3. Transform the .org source paths into the expected .md target paths
+          # Example: notes/engineering/vector.org -> public-export/engineering/vector.md
+          MAKE_TARGETS=""
+          for file in $CHANGED_ORG; do
+            if [ -f "$file" ]; then
+              REL_PATH=${file#notes/}
+              TARGET_MD="public-export/${REL_PATH%.org}.md"
+              MAKE_TARGETS="$MAKE_TARGETS $TARGET_MD"
+            fi
+          done
+
+          # 4. Invoke the Makefile, explicitly overriding the target variable
+          echo "Executing toolchain for targets: $MAKE_TARGETS"
+          make $MAKE_TARGETS
+
       - name: Deploy Compiled Artifacts to Github Pages Branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public-export
           publish_branch: gh-pages
-          # Force the commit to be signed as an official App, to avoid any issues with Github Pages not building
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
