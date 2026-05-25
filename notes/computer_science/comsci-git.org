@@ -43,6 +43,11 @@ git diff-index --quiet HEAD --
 #+end_src
 Detects if files have changed
 
+* Commits
+
+=HEAD= the current commit
+=HEAD^1= the parent commit
+
 * Commands
 
 ** push
@@ -70,3 +75,9 @@ Creates a merge commit, forcing multiple different repo histories together
 
 This is a linear alternative to merge
 - finds the most recent common ancestor of the local repos, plugs in those commits first and then reapplies your current comits.
+
+** diff
+
+Compares different commits, allowing you to find the modified files
+
+Use =--name-only= if you don't want to output the raw text changes, but just grab the paths of the changed files
