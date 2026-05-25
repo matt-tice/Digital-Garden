@@ -57,8 +57,9 @@ $(OUT_DIR)/index.html: $(ORG_DIR)/index.org | $(OUT_DIR)
 
 # Generate index.html for each subdirectory
 # Look only inside of DIR_INDEXES, so we don't end up with this rule applying to our public-exports/index.html
-$(DIR_INDEXES): $(OUT_DIR)/%/index.html  | $(OUT_DIR)
+$(DIR_INDEXES): $(OUT_DIR)/%/index.html: | $(OUT_DIR)
 	@echo "--- Making Directory Index for: $* ---"
+	@mkdir -p $(dir $@)
 	@( \
 		echo "#+TITLE: Index of $*" ; \
 		echo "* Notes in this area:" ; \
