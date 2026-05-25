@@ -38,37 +38,36 @@ DIR_INDEXES := $(patsubst $(ORG_DIR)/%, $(OUT_DIR)/%/index.html, $(SUBDIRS))
 
 .PHONY: all clean
 
-# Explicit execution order: directory -> markdown deltas -> root html entry-point
-all: $(OUT_DIR) $(TARGETS) $(OUT_DIR)/index.html $(DIR_INDEXES)
+all: $(TARGETS) $(OUT_DIR)/index.html $(DIR_INDEXES)
 	@touch $(OUT_DIR)/.nojekyll
 	@echo "[SUCCESS] Digital Garden build sequence completed."
 
-$(OUT_DIR):
-	mkdir -p $(OUT_DIR)
+
+# Compile markdown from org files
+$(OUT_DIR)/%.md: $(ORG_DIR)/%.org $(SCRIPTS) | $(OUT_DIR)
+	@mkdir -p $(patsubst %/,%,$(dir $@))  
+	@echo "--- Compiling Markdown Files: $< ---"
+	$(EMACS) --eval '(my-cloud-export "$<" "$@")'
+
 
 # Create homepage for github-pages
-$(OUT_DIR)/index.html: $(ORG_DIR)/index.org
-	@mkdir -p $(patsubst %/,%,$(dir $@))
+$(OUT_DIR)/index.html: $(ORG_DIR)/index.org | $(OUT_DIR)
 	@echo "--- Compiling Root HTML Interface: $< ---"
 	pandoc $< -f org -t html5 -s -o $@
 
 # Generate index.html for each subdirectory
-$(OUT_DIR)/%/index.html:
-	@mkdir -p $(dir $@)
+$(OUT_DIR)/%/index.html: | $(OUT_DIR)
 	@echo "--- Making Directory Index for: $* ---"
-	@echo "#+TITLE: Index of $*" > $@.tmp
-	@echo "* Notes in this area:" >> $@.tmp
-	@for file in $(notdir $(basename $(filter $(ORG_DIR)/$*/% ,$(ALL_SOURCES)))); do \
-	echo " - [[./$$file.md][$$file]]" >> $@.tmp ; \
-	done
+	@( \
+		echo "#+TITLE: Index of $*" ; \
+		echo "* Notes in this area:" ; \
+		for file in $(notdir $(basename $(filter $(ORG_DIR)/$*/% ,$(ALL_SOURCES)))); do \
+		echo " - [[./$$file.md][$$file]]" ; \
+		done \
+	) > $@.tmp
 	pandoc $@.tmp -f org -t html5 -s -o $@
 	@rm -f $@.tmp
 
-# Compile markdown from org files
-$(OUT_DIR)/%.md: $(ORG_DIR)/%.org $(SCRIPTS)
-	@mkdir -p $(patsubst %/,%,$(dir $@))  
-	@echo "--- Compiling Markdown Files: $< ---"
-	$(EMACS) --eval '(my-cloud-export "$<" "$@")'
 
 clean:
 	rm -rf $(OUT_DIR)

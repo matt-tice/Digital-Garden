@@ -43,3 +43,12 @@ To keep multiple lines inside of the *same shell* (like when doing a for loop) w
 NOTE: when we use =\= Make appends the next line to the end of the current one
 - it *does not create a new line*
 - so usually you need to put a semicolon at the end of the line, before the backslash
+
+* Directories
+
+Directories are a bit special when it comes to Make
+- directories are basically *text files* that list off the names and pointers of the files they contain
+- therefore, a directory's time stamp only updates when the content of the corresponding text file alters
+       - which happens precisely when a file inside of the directory is (1) renamed (2) moved (3) deleted (4) created
+
+Changing the /content/ of a file contained in a directory doesn't change its name or pointer, and so doesn't alter the directory's text file or its time stamp         
