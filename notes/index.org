@@ -1,0 +1,5 @@
+#+TITLE: My Digital Garden
+
+Welcome to my research repository. Use the links below to navigate my public research notes.
+
+- [[./computer_science][Computer Science]]
