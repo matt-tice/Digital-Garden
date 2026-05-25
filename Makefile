@@ -62,11 +62,14 @@ $(OUT_DIR)/%/index.html: | $(OUT_DIR)
 		echo "#+TITLE: Index of $*" ; \
 		echo "* Notes in this area:" ; \
 		for file in $(notdir $(basename $(filter $(ORG_DIR)/$*/% ,$(ALL_SOURCES)))); do \
-		echo " - [[./$$file.md][$$file]]" ; \
+			echo " - [[./$$file.md][$$file]]" ; \
 		done \
 	) > $@.tmp
 	pandoc $@.tmp -f org -t html5 -s -o $@
 	@rm -f $@.tmp
+
+$(OUT_DIR):
+	mkdir -p $(OUT_DIR)
 
 
 clean:
