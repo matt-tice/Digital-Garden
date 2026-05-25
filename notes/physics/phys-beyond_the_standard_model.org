@@ -38,6 +38,7 @@ The *strong CP problem* is why the coupling parameter is so small
         + This is a nice solution because it actually predicts something we can test for
 3. The coupling parameter can relax spontaneously to a small value if axions exist
 
+
 * Measure Problem of Eternal Inflation
 
 If we have a multiverse of infinite universes, how do we compute the ratios of universes of different types?

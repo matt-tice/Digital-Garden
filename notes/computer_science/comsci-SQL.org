@@ -57,6 +57,7 @@ Common Table Expressions
 These are basically function versions of transactions
 - you give a transaction a name, which creates a table that you can repeatedly call
 
+
 ** Order
 
 1. From and Join
