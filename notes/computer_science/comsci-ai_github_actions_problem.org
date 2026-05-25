@@ -11,11 +11,10 @@
 
 May 25, 2026
 
-Here is a sharp, technical postmortem written specifically for your Digital Garden's engineering log. It completely strips out the conversational noise and frames the breakthrough as an elegant triumph of Git-driven data routing over fragile filesystem state tracking.
 
 ---
 
-# TIL: Bypassing CI Timestamp Anomalies with Git-Driven Incremental Builds
+# Bypassing CI Timestamp Anomalies with Git-Driven Incremental Builds
 
 ## The Problem: The Stateless Container Timestamp Trap
 
