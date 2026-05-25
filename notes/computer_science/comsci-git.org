@@ -2,7 +2,7 @@
 :ID:       dbdeaa5b-282f-4662-944b-52c29d17900d
 :END:
 #+title: git
-#+filetags: Computer Science:Version Control:
+#+filetags:comsci:version_control:
 
 * References 
 

@@ -11,10 +11,17 @@ jobs:
     runs-on: ubuntu-latest      # Github's cloud OS
 
     steps:
-      - name: Checkout repository
+      - name: Checkout local repository
         uses: actions/checkout@v4
 
-      - name: Run the Compiler
+      - name: Pre-populate output target from gh-pages branch
+        uses: actions/checkout@v4
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: ./public-export
+
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y emacs-nox pandoc
