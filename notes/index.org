@@ -2,4 +2,30 @@
 
 Welcome to my research repository. Use the links below to navigate my public research notes.
 
+- [[./biology][Biology]]
+
+- [[./chemistry][Chemistry]]
+
 - [[./computer_science][Computer Science]]
+
+- [[./economics][Economics]]
+
+- [[./engineering][Engineering]]
+
+- [[./environmental][Environmental Science]]
+
+- [[./law][Law]]
+
+- [[./linguistics][Linguistics]]
+
+- [[./literature][Literature]]
+
+- [[./math][Mathematics]]
+
+- [[./physics][Physics]]
+
+- [[./politics][Politics]]
+
+- 
+
+- 
