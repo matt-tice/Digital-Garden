@@ -52,7 +52,7 @@ $(OUT_DIR)/index.html: $(ORG_DIR)/index.org
 	pandoc $< -f org -t html5 -s -o $@
 
 # Generate index.html for each subdirectory
-$(OUT_DIR)/%/index.html
+$(OUT_DIR)/%/index.html:
 	@mkdir -p $(dir $@)
 	@echo "--- Making Directory Index for: $* ---"
 	@echo "#+TITLE: Index of $*" > $@.tmp
