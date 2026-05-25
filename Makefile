@@ -56,7 +56,8 @@ $(OUT_DIR)/index.html: $(ORG_DIR)/index.org | $(OUT_DIR)
 	pandoc $< -f org -t html5 -s -o $@
 
 # Generate index.html for each subdirectory
-$(OUT_DIR)/%/index.html: | $(OUT_DIR)
+# Look only inside of DIR_INDEXES, so we don't end up with this rule applying to our public-exports/index.html
+$(DIR_INDEXES): $(OUT_DIR)/%/index.html: | $(OUT_DIR)
 	@echo "--- Making Directory Index for: $* ---"
 	@( \
 		echo "#+TITLE: Index of $*" ; \
