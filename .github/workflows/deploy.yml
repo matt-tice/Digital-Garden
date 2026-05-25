@@ -32,6 +32,9 @@ jobs:
       - name: Deploy Compiled Artifacts to Github Pages Branch
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{  secrets.GITHUB_TOKEN}}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public-export
           publish_branch: gh-pages
+          # Force the commit to be signed as an official App, to avoid any issues with Github Pages not building
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
