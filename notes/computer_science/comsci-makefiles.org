@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       1b39b018-aae3-4a4b-972d-13f280be18cb
+:END:
+#+title: makefiles
+#+filetags: :comsci:
+
+* References
+
+
+* Summary
+
+Makefiles are collaborations between Make and Bash
+
+* Bash
+
+** Redirection
+
+=>= overwrite redirect
+=>>= append redirect
+
+
+** Semicolons
+
+Bash uses semicolons but Make doesn't. This can lead to some oddness in makefiles --- you have to be clear on where semicolons are necessary and where they aren't.
+
+Bash uses semicolons as a newline symbol
+
+* Make
+
+=$@= Resolves to the name of the target file currently being built
+
+=%= is a wildcard
+- you can later reference it with =$*=
+
+* Performance
+
+Make tries to execute every single line as a separate shell command, executed in a separate isolated subshell
+
+To keep multiple lines inside of the *same shell* (like when doing a for loop) we use
+
+=\= to tell us that the end of the current line isn't the end of what to send to this shell
+
+NOTE: when we use =\= Make appends the next line to the end of the current one
+- it *does not create a new line*
+- so usually you need to put a semicolon at the end of the line, before the backslash

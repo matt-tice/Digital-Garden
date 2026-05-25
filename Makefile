@@ -1,3 +1,4 @@
+
 # --- Dynamic Cross-Platform Command Discovery ---
 ifeq ($(OS),Windows_NT)
     # 1. Force Bash as the core execution shell early
@@ -58,8 +59,8 @@ $(OUT_DIR)/%/index.html:
 	@echo "#+TITLE: Index of $*" > $@.tmp
 	@echo "* Notes in this area:" >> $@.tmp
 	@for file in $(notdir $(basename $(filter $(ORG_DIR)/$*/% ,$(ALL_SOURCES)))); do \
-		echo " - [[./$$file.md][$$file]]" >> $@.tmp \
-		done
+	echo " - [[./$$file.md][$$file]]" >> $@.tmp ; \
+	done
 	pandoc $@.tmp -f org -t html5 -s -o $@
 	@rm -f $@.tmp
 
