@@ -2,6 +2,8 @@
 
 Welcome to my research repository. Use the links below to navigate my public research notes.
 
+Much of it is still a work in progress.
+
 - [[./biology][Biology]]
 
 - [[./chemistry][Chemistry]]
@@ -25,5 +27,4 @@ Welcome to my research repository. Use the links below to navigate my public res
 - [[./physics][Physics]]
 
 - [[./politics][Politics]]
-
 
