@@ -1,0 +1,99 @@
+:PROPERTIES:
+:ID:       bd736afd-6623-40ce-a355-65591eeb8ecb
+:END:
+#+title: ai github actions problem
+#+filetags: :comsci:post-mortem
+
+* References
+
+
+* Summary
+
+May 25, 2026
+
+Here is a sharp, technical postmortem written specifically for your Digital Garden's engineering log. It completely strips out the conversational noise and frames the breakthrough as an elegant triumph of Git-driven data routing over fragile filesystem state tracking.
+
+---
+
+# TIL: Bypassing CI Timestamp Anomalies with Git-Driven Incremental Builds
+
+## The Problem: The Stateless Container Timestamp Trap
+
+When building a modular static site or digital garden using a local asset toolchain (like a GNU `Makefile` paired with Emacs/Pandoc), compilation decisions usually rely on the standard filesystem clock inequality:
+
+$$\text{Is } t_{\text{source}} > t_{\text{target}} \text{?}$$
+
+In a local development workspace, this works perfectly. However, migrating this architecture to a stateless CI/CD environment (like a GitHub Actions runner) causes the dependency graph to collapse:
+
+1. **Shallow Clone Default:** By default, actions optimize for network speed by executing a shallow clone (`fetch-depth: 1`), pulling down only the single tip commit snapshot.
+2. **Clock Equalization:** Because the runner begins with a completely empty disk, the checkout action streams and materializes all source files (`.org`) and tracked target files (`.html` / `.md`) sequentially within milliseconds.
+3. **The Result:** Every file lands on the runner disk with an identical checkout timestamp. When `make` checks the clock, $t_{\text{source}}$ is *not* strictly greater than $t_{\text{target}}$. The compilation engine assumes no modifications have occurred, outputting a false-positive `No need to remake target` and skipping the build completely.
+
+Trying to resolve this by blindly wiping directories or forcing updates (`touch notes//*.org`) destroys the performance benefits of incremental compilation, forcing heavy, full-tree rebuilds on every tiny commit.
+
+---
+
+## The Solution: Upstream Ingestion Layer Optimization
+
+Instead of forcing the container's local file system to guess what changed via deceptive clock values, we can leverage the repository's cryptographic commit graph to feed deterministic data down to the compiler.
+
+By increasing the container's ingestion depth to `fetch-depth: 2`, we force Git to pull down the current commit *and* its immediate structural parent into the local `.git/` metadata store. This grants the runner enough localized history to execute a raw memory-speed `git diff`.
+
+### The Optimized Pipeline Architecture (`.github/workflows/build.yml`)
+
+Instead of running a blind `make all`, the pipeline queries Git for the exact file paths changed in the push, transforms those source paths into the explicit expected target file paths, and passes them straight to `make` as targeted command-line variable overrides.
+
+```yaml
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2        # Ingests the current commit and its parent
+
+      - name: Compute Changes and Run Make
+        run: |
+          # 1. Isolate only modified source assets via commit graph delta
+          CHANGED_ORG=$(git diff --name-only HEAD^1 HEAD | grep '^notes/.*\.org$' || true)
+
+          if [ -z "$CHANGED_ORG" ]; then
+            echo "No note files modified in this push. Skipping compilation."
+            exit 0
+          fi
+
+          # 2. Map source paths to explicit target paths via Bash Parameter Expansion
+          MAKE_TARGETS=""
+          for file in $CHANGED_ORG; do
+            if [ -f "$file" ]; then
+              REL_PATH=${file#notes/}
+              TARGET_MD="public-export/${REL_PATH%.org}.md"
+              MAKE_TARGETS="$MAKE_TARGETS $TARGET_MD"
+            fi
+          done
+
+          # 3. Short-circuit Make's default target checking by injecting explicit targets
+          echo "Executing toolchain for targets: $MAKE_TARGETS"
+          make $MAKE_TARGETS
+
+```
+
+---
+
+## Pitfall: Destructive Deployment Synced Deletions
+
+When deploying a sparse, incrementally built directory (`./public-export`) to a deployment target branch (like `gh-pages`), automated deployment handlers (e.g., `peaceiris/actions-gh-pages`) defaults to a destructive synchronization strategy. If a file exists on the remote deployment branch but is absent from the runner's immediate build folder, the action assumes it has been deleted and purges it.
+
+To prevent an incremental build from wiping out the rest of your historical notes from the tracking branch, you must explicitly shift the deployment operation from a destructive override to an **in-place accumulation loop**:
+
+```yaml
+      - name: Deploy Compiled Artifacts to Github Pages Branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public-export
+          publish_branch: gh-pages
+          keep_files: true   # CRITICAL: Prevents continuous sync from purging historical branch assets
+
+```
+
+## Architectural Takeaway
+
+In systems engineering, patching tools downstream to accommodate poorly structured environments often introduces brittle edge cases. By resolving the issue at the **data ingestion layer** (`fetch-depth: 2`), the internal compilation engine is spared from making decisions using a broken clock, preserving an elegant, deterministic compilation loop.
