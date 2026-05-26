@@ -1,0 +1,49 @@
+:PROPERTIES:
+:ID:       ab4943c4-7df8-49b3-bc42-69e89899402d
+:END:
+#+title: white papers
+#+filetags: :engineering:business:consulting:
+
+* References
+
+
+* Summary
+
+A persuasive, evidence-based report that outlines
+- a complex industry problem
+- a specific solution
+
+You can often repurpose the same white paper for things like
+- LinkedIn posts
+- conference talks
+- follow-ups after networking
+
+Start by focusing on 3-5 page papers, focusing on narrow technical friction.
+
+* Structure
+
+** Executive Summary
+
+"Executive", meaning /written for executives/
+- concise
+- what, why, how
+
+** Context / Background
+
+Why the issue matters right now
+
+** Problem Statement
+
+Clear, objective description
+
+** Proposed Solution
+
+Unique insight
+
+** Evidence / Analysis
+
+Data, case studies, mathematical models
+
+** Conclusion
+
+Professional summary of why this solution is the most logical

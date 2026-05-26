@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       3716ad36-1b67-4cc4-a4e9-b0b018cbd246
+:END:
+#+title: phase diagrams
+#+filetags: :chemistry:
+
+* References
+
+
+* Summary
+
+* Triple Point
+
+The P and T where the substance exists in all 3 phases. These are called the triple point temperature (T_tp) and triple point pressure (P_tp)
+
+Helium is the only substance with no triple point at 1 atm
+
+At temperatures below T_c, your substance *cannot be a liquid*
+- it can still be a solid or gas, however

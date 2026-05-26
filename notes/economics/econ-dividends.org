@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       48fd1e62-7cb0-4572-946b-5640e4004c6c
+:END:
+#+title: dividends
+#+filetags: :economics:stocks:
+
+* References
+
+
+* Summary
+
+* Eligible
+
+
+
+* Non-eligible
+
+If a corporation uses the *Small Business Deduction*, it pays a discounted corporate tax rate on its first $500k of active business income, but the dividend becomes non-eligible
+
+
+
+
+

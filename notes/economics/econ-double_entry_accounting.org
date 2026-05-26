@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       52c638bd-6cd9-4049-9a8d-4e2a91a44726
+:END:
+#+title: double entry accounting
+#+filetags: :economics:accounting:
+
+* References
+
+
+* Summary
+
+* Standard Accounts
+
+** Assets
+
+Cash, stocks, equipment
+
+** Liabilities
+
+Margin debt, credit cards, personal line of credit
+
+** Equity
+
+Net worth, opening balances, retained earnings
+
+Equity is really a kind of artificial bookeeping concept.
+By definition, Equity = Assets - Liabilities.
+
+You can use equity in order to make sure the books always balance in a double-entry system.
+
+** Income
+
+Money flowing in
+
+** Expenses
+
+Money flowing out

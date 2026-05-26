@@ -1,0 +1,109 @@
+:PROPERTIES:
+:ID:       3bd8414d-cf78-499f-84b5-f3bd5b3ec50c
+:END:
+#+title: helium
+#+filetags: :chemistry:gas:stable:element:
+
+* References
+
+
+* Summary
+
+Helium is non-reactive and incredibly light.
+If left out in the open, it will float through the atmosphere, into space.
+
+This makes it incredibly rare, and expensive to find and store.
+
+Helium has the *lowest boiling point* of anything on Earth (4.22 K for He^4 and 3.2 K for He^3).
+- if you need to keep something that cold, helium is one of the only options.
+
+You'd actually need 25 atm of pressure to turn helium into a solid  
+
+
+* Isotopes
+
+** He^4
+
+On earth, all of this helium is *radiogenic*
+- it's created by radioactive decay
+- in particular, from the decay of [[id:971df817-cdea-4a35-807a-73bf2f31fcb5][U^238]] and [[id:3d9dcdc0-7ba6-41b2-84b7-d4b2b2b351af][Th^232]]
+
+The nuclei of He^4 are the same thing as alpha particles  
+
+** He^3
+
+
+
+* Superfluid
+
+At 2.17 K, He^4 becomes a superfluid
+
+* Locations
+
+Because helium is so light, it will actually pass though conventional oil and gas. To contain it you need *halite* or *anhydrite* seals
+
+** Seals
+
+*** Halite
+
+*** Anhydrite
+
+** Primary Systems
+
+Reservoirs where the carrier gas is N_2 or CO_2
+
+* Supply
+
+Three countries supply the majority of the world's helium
+
+** US
+
+Doesn't export very much, due to high domestic demand
+
+** Qatar
+
+[2026-05-26 Tue 01:23] Currently suffering Force Majeure due to infrastructure damage from the US-Israel-Iran war.
+
+** Russia
+
+Fully operational
+Western sanctions
+
+* Transport
+
+Helium becomes a liquid at *4.2K*
+- if you don't keep it that cold, and it becomes a gas, it will increase the pressure of its container, and will have to be vented to prevent an explosion.
+
+This means that helium has *transport time limits*
+- in particular, helium stuck in transport containers, like those in the Cape of Good Hope, is a huge cost.
+- the transport time limit is around *55 days*
+
+
+
+* Uses
+
+** Semiconductor Lithography
+
+** Data Centers
+
+Helium gets hermetically sealed inside large (10TB +) hardrives that have the air vacuumed out.
+
+** Superconducting Magnets
+
+*** MRIs
+
+They use NbTi and Nb_{3}Sn superconductors, which require temperatures of
+- 9.2 K (NbTi)
+- 18.3 K (Nb_{3}Sn)
+
+Liquid hydrogen at 1atm has a boiling point of 20 K, so it can't be used.
+- in fact, the triple point of H is 13.8 K at 0.07 atm.
+- so you can't ever get liquid hydrogen at under 13.8 K
+
+And if you try to use solid hydrogen, because solid hydrogen is actually a thermal insulator --- the heat will get trapped right at the surface, rather than escaping as vapour, and so you'll actually have that the boundary of the target that you're trying to cool gets hotter, even though the bulk is cooling
+- this is enough to destroy the superconductivity
+
+Also, in order to have solid hydrogen around 4 K, you'd need a near-vacuum pressure. But then if you're using the sublimation to try to refrigerate your target, the vacuum will get destroyed by the off-gasing of the hydrogen
+- so you'll end up with a bunch of gaseous hydrogen
+
+*** Quantum Computing

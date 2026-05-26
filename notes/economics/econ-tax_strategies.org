@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       d4d28f76-e8e2-4d3b-97f1-043b9b61b539
+:END:
+#+title: tax strategies
+#+filetags: :economics:tax:
+
+* References
+
+
+* Summary
+
+Managing your taxes often comes down to not what you have, but *where you put it*
+
+Different asset classes have different tax rates, so you'd obviously like to place things in the most beneficial boxes
+
+* Sole Proprietorship
+
+Capital losses become *business losses*
+- meaning it can be used to offset *any income*, including dividends
+- it can also be carried forward/backward in time
+
+  
+** Deductions
+
+Internet bill
+Data feed subscriptions
+Capital Cost Allowance for computer hardware
+
+Margin interest becomes *100% deductable*
+
+** Home Office
+
+Square-footage percentage of rent
+- whatever percentage your desk / office takes up in the apartment
+- you can deduct this from
+       1. rent
+       2. heating/hydro
+       3. home insurance
+
+ 
+*** Exlusive Use
+
+In order to deduct, you need the space to be exclusively used by you and your business
+
+
+
+* Conventions
+
+You can deduct up to 2 conferences per year, if they're related to your business
+
+Income Tax Act
+- Subsection 20(10)
+

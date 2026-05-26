@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       ecb2eb11-a736-45f2-a134-0e8e95dd969c
+:END:
+#+title: businesses
+#+filetags: :economics:business:canada:
+
+* References
+
+
+* Summary
+
+* Sole Proprietorship
+
+The owner has
+- sole responsibility in making decisions
+- gets all profits
+- absorbs all losses
+- does not have separate legal status from the business
+
+You don't register as a company
+- it's a classification you apply on your T1 form
+
+** Tax
+
+One of the interesting trade-offs when it comes to business income v.s. capital gains, is that if you sit in a low enough tax bracket, the extra 50% inclusion rate becomes negligible
+- if you make under the Basic Personal Amount, you're already tax free
+- so you can utilize the advantages of business income without the tax penalty

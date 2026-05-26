@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       69ef97d2-4c78-4ff2-aa77-16974cf30961
+:END:
+#+title: capability statement
+#+filetags: :engineering:business:consulting:
+
+* References
+
+
+* Summary
+
+1-2 pages
+Summarize the business's professional identity
+
+* Structure
+
+** Core Competency
+
+Bulleted list of specific services
+
+** Differentiators
+
+Why you?
+
+** Past Performance
+
+A list of past projects.
+Things like PhD and Master's research
+
+** Company Data
+
+Contact info, business name, industry codes
+
+** Key Personnel
+
+Brief professional bio
+- condensed version of CV
