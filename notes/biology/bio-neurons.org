@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       92bac9fa-b82f-49b5-baff-c1ce8ffcd37b
+:END:
+#+title: neurons
+#+filetags: :biology:neuroscience:
+
+* References
+
+
+* Summary
+
+
+Redundancy:  One of the key organizational principles of biology
+
+
+** Broadmann areas: 
+
+** Ion channels:  Dynamical systems
+
+** Synapses:  Dynamical systems
+
+** Nerve cell:  Green's functions and non-linear dynamics and stochastic equaions
+
+** Multi unit activity:  Graded responses
+
+** Columnar activity:  Fibre bundles
+
+** Brain modules:  Phase transitions
+
+** Brain network of modules:  coupled oscillators
+
+** Global brian:  behavioural response
+
+** Neuromodulation on nerve cells:  
+
+
+
+
+
+
+
