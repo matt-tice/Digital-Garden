@@ -12,3 +12,8 @@
 If a chain complex encodes the homotopical nature of spaces, the algebraic structure on top, turning it into a dga, encodes the geometry / coordinate functions.
 
 In the de Rham complex, the higher chains encode higher derivatives.
+
+* Graded-Commutative
+
+In this case, everything in odd degree is a kind of *infinitesimal*
+- x^2 = 0
