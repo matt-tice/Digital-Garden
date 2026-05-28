@@ -1,0 +1,245 @@
+:PROPERTIES:
+:ID:       fdde2b71-a9d9-4ed5-97e5-b6d89e128b50
+:END:
+#+title: chain complexes
+#+filetags: :math:homotopy:homology:
+
+* References
+
+
+* (co)Homology
+
+ker d_n / im d_{n+1}
+
+** Differential Operators
+
+If we view d as a kind of linear differential operator, or a system of equations, then
+- the cycles are *homogeneous solutions*: d(f) = 0.
+- the boundaries are *integrable:* f = d(g).
+
+The homology then tells you about the *non-integrable solutions.*  
+
+*** Example: Electromagnetism
+
+In EM, Maxwell's equations tell us
+\nabla\cdot B = 0
+So the magnetic field is a cycle. But when doing calculations, we often want to integrate the magnetic field, in order to compute things about it; so we need B to be /integrable/
+- so we want it to be a boundary.
+This means that we need
+B = \nabla \times A
+This says that there is a *magnetic potential* A, that generates the actual magnetic field.
+
+In fact, looking at the de Rham complex, *Helmholtz's theorem* says that for R^N, the (co)homology at the level of the magnetic field is zero (every magnetic field satisfying Maxwell's equations is integrable).
+
+**** Aharonov-Bohm Effect
+
+When you puncture R, you get non-trivial cohomology
+- so there are certain *obstructions* (non-integrable solutions).
+- In particular, there are fields with zero curl that /aren't gradients./
+  
+
+** Cohomology
+
+Coboundaries are *flat* or *path-independent* or *conservative*
+- if you take any two paths from the same starting point to the same ending point, you get the same result (of taking the integral over the path, say)
+- so there's no energy being lost anywhere, in a certain sense
+
+Using Poincaré duality, we have that
+<d f , \gamma> = <f, \partial \gamma>
+where d is the codifferential, and \partial is the differential, and the pairing is integrating the function (cochain) over the space (chain).
+
+A coboundary is g = df. So for coboundaries
+<g, \gamma> = <f, \partial\gamma>
+So g is determined by just the boundary (paths through the bulk are irrelevant).
+
+A cocycle will satisfy 
+<f, \partial \gamma> = <0, \gamma> = 0 for all \gamma.
+So it has *no information on the boundary*
+- it's "path independent" on the boundary, in a higher dimensional sense
+- *any two half-coverings of the boundary* give the same integral
+
+But think about what this means:
+when we take two half-coverings, we're just taking two pieces of the boundary, and saying they stitch together to form the whole boundary (they don't literally need to have the same size, any 2-block partition will work). So there's a *glue-line* that you're stitching the coverings together on.
+
+But no matter how you move, stretch, contract, etc. the covering pieces, the fact that they come together at the glue-line means they enclose a bulk --- they're the boundary of /something/. So the integral of each piece will always be the same!
+So if you take just one of the two coverings, no matter how you move it around, its integral will never change, as long as you keep the glue-line fixed in place.
+- this is absolutely fascinating!
+
+By the way, you need to keep the glue-line the same, because if you don't one will be bigger than the other, and so you can't stitch the two versions together to enclose a bulk.  
+
+But note that here, this only works when we're integrating over \partial \gamma. So /by assumption/ there's a bulk, \gamma.
+In other words, a cocycle is something that, if you have a bulk, becomes path independent on the boundary.
+- so the cocycle *adds no information to the bulk*
+- this in turn means that the only way you can get non-trivial info from the bulk is if the actual geometry of the bulk is non-trivial (for example, there's a hole in it)
+
+Cocycles can *suck the information* from the boundary into the bulk. The boundary data is trivial; all that matters is what's in the bulk  
+
+
+*** Mapping Cones
+
+A mapping cone of a function
+f: X \to Y
+glues a cone-version of X onto Y, along f.
+You first form the mapping cylinder X \times I, and then glue an end on Y, and then collapse the other end to a point.
+
+Our perspective on cocycles then tells us that a cocycle's integral won't change, as you deform X, as long as you keep f fixed.
+
+*** Cohomology
+
+Cohomology is then very interesting: think of the mapping cone, or half a sphere. Being a cocycle for the hemisphere means you can deform the hemisphere and nothing changes.
+
+But that hemisphere is actually the *bulk for the gluing line*!
+Which means that deforming the hemisphere also won't change coboundaries on the gluing line.
+
+Consider the pair of pants cobordism M. We break it into 3 parts:
+1. the 1d rims \Gamma = \partial \Sigma
+2. the 2d surface \Sigma = \partial M
+3. the 3d bulk M
+
+What we found above is that the cocycles and coboundaries don't notice the shape of the cobordism at all, other than the fact that it has a certain number of rims.
+- in other words, they only care about the topological class of the cobordism
+- this is how we see a *topological quantum field theory* arising: taking path integrals is independent of the world-sheet defining the cobordism
+
+
+
+** Topological String Theory
+
+In the A-model you basically work with a pair of pants where you collapse all three of the rims to points
+- this is the /virtual holomorphic sphere/
+
+The theory is topological in the sense that d \omega = 0 (\omega is a cycle), for an appropriate d
+- this says that you can change the metric of your pants
+- and even if you do that, you have certain *Gromov-Witten invariants* (the integral on the surface, of \omega)
+
+The idea of *quantum cohomology* is that you study maps
+f: S^2 \to X
+that hit three different cycles in the manifold X (the collapsed rims of the pants)
+
+You think of the map f as a kind of non-local communication between the cycles (strings)
+
+* Exact Sequences
+
+From our discussions on homology, we have that exact sequences are like spaces that are *very calm*
+- no singularities
+- no holes
+- no vortices
+
+But they can still have twists (like a Möbius band)  
+
+** Split Exact Sequences
+
+Correspond to untwisted, calm spaces.
+
+* Summary
+
+Consider a polynomial algebra k[x]. We can perform a resolution on the algebra k[x]/x
+- We want k[x]/x to be the zeroth homology, and for all the other homologies to be zero.
+  
+Set C_0 = k[x] and C_1 = k[x, \varepsilon], where \varepsilon is a formal element in degree 1, and defining
+d(\varepsilon) = x.
+
+If we further require the algebra structure to be graded commutative, we have
+\varepsilon^2 = 0.
+So we can interpret this as something like an *infinitesimal*
+
+Now the elements in degree 1 have the form
+p(x) \varepsilon , where p(x) \in C_0 is a polynomial
+with boundary
+d(p) \varepsilon + p d(\varepsilon) = 0 + p(x) x.
+
+It follows that if there is a cycle in degree 1, we'd have
+d(p \varepsilon) = p(x) x = 0.
+
+If there are no zero-divisors, this implies that there are no cycles. So
+H_1 \cong 0.
+
+Similarly, if we take the higher degrees, we're trivial, because they would need to be built out of elements in degree 1 (to increase the degree). But since \varepsilon^2 = 0, this produces no elements above degree 1. Thus
+H_{n \geq 1} \cong 0,
+and so we get a (very easy) resolution of k[x]:
+0 \to k[x, \varepsilon] \to k[x] \to 0
+which is quasi-isomorphic to k[x] (as a trivial chain complex: 0 \to k[x] \to 0).
+
+* Functional Analysis
+
+** Fredholm Operators
+
+By definition, these are operators with
+- finite dimensional kernel
+- finite dimensional and closed cokernel
+
+The *Fredholm index* is
+    dim(ker) - dim(coker)
+It counts solutions to equations
+
+** Atiyah-Singer Index Theorem
+
+If T is an elliptic differential operator on a manifold, the analytical index is equal to the topological index
+- the analytical index is the homology of the operator
+- the topological index is the cohomology of the manifold's tangent bundle.
+
+* Harmonic Analysis
+
+A locally compact group is amenable if and only if its first Hochschild cohomology group of its convolution algebra with coefficients in dual modules is zero:
+       H^1(L^1(G), X^*) \cong 0
+
+* Complex Analysis
+
+** Hartog's Extension Theorem
+
+Holomorphic functions are those that are locally complex differentiable
+- each point has some neighbourhood on which it's complex differentiable.
+
+This is enough to conclude that the function is analytic  
+
+*** Sheaf Cohomology
+
+** Analytic Continuation
+
+This is actually related to *relative cohomology*
+
+Mikio Sato viewed real functions (which you'd like to analytically continue) as /being boundaries between two holomorphic functions/
+
+You build relative cohomology out of this idea: take
+... \to O(C) \to O(C \setminus R) \to H^1_R(C, O) \to 0
+where O is the sheaf of holomorphic functions.
+This is a long exact sequence.
+
+An element of O(C \setminus R) is really a pair of holomorphic functions: one defined on the upper half plane, one defined on the lower.
+
+The codifferential into H^1 is a computation of the difference between a pair of holomorphic functions, as you approach the real axis.
+
+Functions that admit analytic continuations are precisely coboundaries in the first degree
+
+** Wick Rotation
+
+When you take a path integral, say over time, you're integrating
+\int_{-\infty}^{\infty} \omega
+where \omega is some complex differential form.
+
+When we do wick rotation, we want to switch into imaginary time. How does this work?
+
+Consider the upper right and lower left quadrants of the complex plane.
+
+Well say \omega is closed (a cocycle). Then we can think of the real and imaginary axes as two half-coverings of a larger bulk made up of the upper right and lower left quadrants
+- if there are no poles in those quadrants, then we can perform wick rotation, because our two different half-coverings give the same integral.
+
+To be a bit more precise, typically what you do is you have to consider finite parts of the quadrants and then take the limits to infinity
+- this is because the integral over the whole, non-compact, domain might not exist
+
+  On the other hand, you can use *Borel-Moore Homology*
+  - this allows your chains to be non-compact.
+  - it'll basically give you exactly what I was saying above
+
+I guess another way of thinking about it, is you compactify C (say, into the Riemann sphere) and then play the game
+- the real and imaginary axes become circles on the sphere that meet at 0 and \infty (north and south poles)
+ But when you do this, your integrand actually becomes very messy at \infty
+ - but you can't just remove that point, because it'll add a new point to your boundary
+- so you basically turn the point into a small circle and then take the limit as you close the circle
+
+If the pole at \infty is regular or logarithmic, everything is fine
+- if it's an essential singularity, you have to be careful
+- this is actually related to *global D-Module theory*
+
+* Cup Product
+
+
