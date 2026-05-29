@@ -1,0 +1,48 @@
+:PROPERTIES:
+:ID:       a078425d-e64f-4755-ae88-6470c5d6f0c8
+:END:
+#+title: ram
+#+filetags: :comsci:
+
+* References
+
+
+* Summary
+
+RAM is made up of 2 parts:
+1. The stack
+2. The heap
+
+
+
+* How Memory Works
+
+Your CPU reads memory in chunks called *cache lines*, usually 64 bytes at a time and throws them in the L1 cache
+- because of this, it can't just read one byte at a time.
+- so ideally, you want to store related data in the same cache line.
+- if your cpu has to jump around to different blocks to get all of the data, it's called a *cache miss*
+
+
+* Stack
+
+*Contiguous*
+- the entire sequence of data is a single unbroken block inside your RAM
+
+Very fast
+
+Stores small, fixed-size data
+- cpu registers
+- local function parameters
+
+The stack frame is wiped as soon as a function finishes executing
+  
+* Heap
+
+Giant global pool of memory
+For long-lived data, data that changes size, and structures that need to be shared across multiple parst of a program
+
+Everything on the heap has associated data that must be stored with it:
+- Header: points to an internal table that tells you what kind of data the payload is and how many layout pointers follow it
+- Payload: the actual data / pointers you want to store
+- Data Alignment Padding: to make sure you fill the 8-byte blocks
+

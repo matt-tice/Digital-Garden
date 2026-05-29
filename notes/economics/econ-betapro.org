@@ -1,0 +1,80 @@
+:PROPERTIES:
+:ID:       a73dd6a3-d95b-4461-9fff-935f7ba8e12a
+:END:
+#+title: betapro
+#+filetags: :economics:stocks:volatility:
+
+* References
+
+
+* Summary
+
+Physical commodity market
+
+Leveraged financial derivative
+
+
+Something like HOU is designed to deliver 200% of the *daily return* of crude oil futures.
+- it is decidedly /not/ meant to track the /price of oil/ over time
+- the fund resets its leverage every day
+
+** Volatility Decay
+
+
+** Futures
+
+HOU holds near-month crude oil futures contracts
+
+Futures for oil are often in *contango*
+
+*** Contango
+
+The price for delivery in the future is /higher/ than the current (spot) price.
+
+** Liquidity
+
+Because HOU is highly liquid, when things go bad for hedge funds, and they need liquidity fast, a fund like HOU is one of the first things to sell, massively crashing the price
+
+* Derivatives
+
+Derivatives are contracts whose value is derived from the price action of a commodity
+
+Derivatives are zero-sum
+
+They're the first to go in volatile times
+- they get hit quickly by margin calls, because they allow high leverage
+
+** Types
+*** Forwards
+
+Over-the-counter
+Contracts to trade an asset at a set price on a specific future date
+
+*** Futures
+
+The exchange-traded versions of forwards
+
+*** Options
+
+*** Swaps
+
+An agreement to  trade one type of cash flow for another
+
+** Math
+
+If P is the price of the underlying asset, the derivative price is
+V(P,t)
+\partial V/ \partial P  = \Delta  is the "delta"
+
+\partial^2_P V is gamma.
+
+High gamma means serious price spikes or crashes
+
+\partial_t V is theta
+- it tells you about how the derivative loses value, even if the price of the underlying commodity is fixed
+
+Alpha is the return that isn't explained by the market
+- it's the actual skill of the trader
+
+Beta is a measure of how your system correlates with the market
+-  \beta = 2 means that you're amplifying the market's movement by 200%

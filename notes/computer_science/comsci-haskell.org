@@ -20,52 +20,146 @@ This is actually *fantastic for optimization*
 - for ex. you can replace all occurances of a certain variable name by a pointer to a single shared memory layout
        - ordinarily, if you did that for a non-constant variable, you'd risk the memory address being overwritten with different values as you change the scope
 
-* Lists
+* Commands
 
-Lists are denoted with square brackets, like =[1,2,3]=, but their actual structure under-the-hood is *nested constructors*:
+** The Prelude
 
-#+begin_src haskell
-1 : (2 : (3 : []))
-#+end_src
+The functions that haskell natively has, before you import anything
 
-=:= is a function that defines a value
-it has the shape
-#+begin_src haskell
-(:) :: a -> [a] -> [a]
-#+end_src
-It takes an element of type =a= and a list of type =[a]= and returns a list of type =[a]=
-=::= defines a type
+*** Reshapers
 
-#+begin_src haskell
-myList = 1 : 2 : 3 : []
-
--- is the same as
-1 : (2 : (3 : []))
--- because : is defined to work from right to left
-
-
-(:) :: a -> [a] -> [a]
-#+end_src
-
-** map
-
-=map= basically applies a function elementwise to a list
-
-#+begin_src haskell
-map :: (a -> b) -> [a] -> [b]
-#+end_src
-
-** foldr
+**** foldr
 
 #+begin_src haskell
 foldr :: (a -> b -> b) -> b -> [a] -> b
 #+end_src
-=(a -> b -> b)= is the kind of shape that =:= has.
+=(a -> b -> b)= is the kind of shape that a node =(:)= has.
 So we can write
 #+begin_src 
 foldr (:) z [1,2,3]
 #+end_src
 to replace
+
+
+**** map
+
+Applies a function elementwise to a list
+
+#+begin_src haskell
+map :: (a -> b) -> [a] -> [b]
+#+end_src
+
+**** concatMap
+
+Applies a function f to each element in a list, giving you a list of lists.
+Then it concatenates the nested list into a single list
+
+#+begin_src haskell
+map :: (a -> [b]) -> [a] -> [b]
+#+end_src
+
+**** filter
+
+Evaluates a predicate function against each item in a list.
+If the predicate returns true, the item stays, if false, it's dropped
+
+#+begin_src haskell
+(a -> Bool) -> [a] -> [a]
+#+end_src
+
+*** Folds
+
+Basically these things take a list and replace all of the cons operators =(:)= with a specified function f, and replace the empty list =[ ]=, with a base-case z
+
+**** foldr
+
+Processes a list from right to left
+- it computes f_1(f_2(f_3(z)))
+
+#+begin_src haskell
+(a -> b -> b) -> b -> [a] -> b
+#+end_src
+The first object is f
+- we think of it as a list of functions, indexed by elements in our list
+The second is z
+The third is your list
+
+Basically =f z [1,2,3]= becomes
+f_1(f_2(f_3(z)))
+
+So basically, it allows you to evaluate a composition of functions f_i :: b \to b on a fixed element z
+
+Note: =foldr= is computed lazily
+- if it can return without having to compute the nested compositions, it will
+
+**** foldl / foldl'
+
+Processes a list from left to right
+- basically it wraps composition in the opposite way
+
+#+begin_src haskell
+(b -> a -> b) -> b -> [a] -> b
+#+end_src
+
+The first object is g
+- we think of it again as a list of functions g_i = g(-,i) : b \to b
+The second element is the base case
+The third is the list
+
+We get
+g(g(g(z,1),2),3) = g_3(g_2(g_1(z)))
+
+Note: Haskell's laziness treats this a little weird
+- it will skip over g_1(z), leaving it unevaluated (we call this a *thunk*)
+- then it'll do the same at g_2, and so on, until it gets to the end
+- only then will it try to evaluate the whole thing
+- because of this, you can actually run out of memory, since it'll leaving these thunks behind
+
+Note: =foldl'= is usually better, because it evaluates at each step, instead of combining a bunch of unexecuted lazy expressions
+
+*** Linkers and Slicers
+
+**** zip
+
+Takes two lists and locks them together into a list of tuples
+- if one list is shorter than the other, it truncates at the shortest length
+
+#+begin_src haskell
+[a] -> [b] -> [(a,b)]
+#+end_src
+
+**** replicate
+
+Creates a list where every element has the same value
+
+#+begin_src haskell
+replicate :: Int -> a -> [a]
+#+end_src
+
+
+**** take / drop
+
+=take n= grabs the first n elements of a list and drops the rest
+=drop n= drops the first n elements from the list and returns the rest
+
+#+begin_src haskell
+Int -> [a] -> [a]
+#+end_src
+
+*** Combinations
+
+**** Function composition
+
+#+begin_src haskell
+(b -> c) -> (a -> b) -> a -> c
+#+end_src
+
+**** Evaluation on a value
+
+#+begin_src haskell
+(a - > b) -> a -> b
+#+end_src
+
 
 * Compiler
 
@@ -80,32 +174,6 @@ We can alter its behaviour using a *language pragma*:
 
 This tells GHC to treat strings as arrays of bytes, as opposed to inefficient linked lists of characters.
 
-
-* Modules
-
-#+begin_src haskell
-module Name where
-
-import Namespace1 (Type1)
-import Namespace2 (Type2)
-#+end_src
-
-=module...where= says that anything within the file belongs to the module Name.
-
-=import Namespace (Type)= grabs certain types from external libraries
-
-** Data.Bits
-
-Gives you highly optimized bit-fiddling operations that compile down to assembly instructions, like =popcnt= and =pxor=
-
-** qualified
-
-#+begin_src haskell
-import qualified Data.Text as T
-#+end_src
-
-=qualified ... as= says that every function imported from =Data.Text= will be prefixed by "T."
-- this helps avoid namespace collisions
 
 * Types
 
@@ -142,9 +210,9 @@ Sum types say that the data type can be instantiated by any of the listed constr
 
 #+begin_src haskell
 data prodTypeName = prodTypeName
-  { regionName       :: Text
-  , regulatoryBody   :: Maybe Text
-  , sovereignRiskTier:: Int
+  { regionName        :: Text
+  , regulatoryBody    :: Maybe Text
+  , sovereignRiskTier :: Int
   } deriving (Show, Eq)
 #+end_src
 
@@ -185,6 +253,171 @@ The point is that now that SemanticID is /created from/ a 64-bit integer, but it
 - it says that we can't just pass any random 64-bit integer into a function expecting a SemanticID; we have to explicitly say that our integer is of type =SemanticID=
 - very cool!
    
+
+** Characters
+
+All characters are *boxed*
+- they're their own independent objects living in some random place on the heap
+
+They're made up of
+- header (8 bytes)
+- unicode point data (4 bytes (32-bit unicode), padded to 8)
+
+** Lists
+
+Lists are denoted with square brackets, like =[1,2,3]=, but their actual structure under-the-hood is *nested constructors*:
+
+#+begin_src haskell
+1 : (2 : (3 : []))
+#+end_src
+
+The colon =:= is called a *node* or a *cons operator*. It's actually a function with shape
+#+begin_src haskell
+(:) :: a -> [a] -> [a]
+#+end_src
+It takes an element of type =a= and a list of type =[a]= and returns a list of type =[a]=
+=::= defines a type
+
+A node contains two pointers:
+1. to the associated character
+2. to the next node (or to =[ ]=)
+
+
+#+begin_src haskell
+myList = 1 : 2 : 3 : []
+
+-- is the same as
+1 : (2 : (3 : []))
+-- because : is defined to work from right to left
+
+
+(:) :: a -> [a] -> [a]
+#+end_src
+
+*** Disadvantages
+
+Lists are stored [[id:a078425d-e64f-4755-ae88-6470c5d6f0c8][non-contiguously]]
+- so you constantly get cache misses
+
+Because lists are generated lazily, if you need to go through an entire list, it's inefficient
+
+A single character usually takes 1-2 bytes in another language. In a haskell list, on average, a character takes *up to 24 bytes*
+because it's really made up of
+- a node
+- two pointers
+- a boxed character header
+
+*** Advantages
+
+Lists are generated lazily
+- so you can actually manipulate lists that are *larger than your RAM*
+- you just create the list as you go
+- and as you finish a step and move on to the next one, the GC reclaims the node
+
+You can prepend data in O(1)
+- you just point into the beginning of your list
+
+** Strings
+
+In basic haskell, =String= is an alias for a list of characters:
+#+begin_src haskell
+type String = [Char]
+#+end_src
+
+Consequently, it's a long chain of nodes:
+#+begin_src haskell
+h : e : l : l : o : []
+#+end_src
+
+Since each character is blocked, they're all scattered around the heap, which makes them slow to read
+
+
+* Modules
+
+#+begin_src haskell
+module Name where
+
+import Namespace1 (Type1)
+import Namespace2 (Type2)
+#+end_src
+
+=module...where= says that anything within the file belongs to the module Name.
+
+=import Namespace (Type)= grabs certain types from external libraries
+
+** Data.Bits
+
+Gives you highly optimized bit-fiddling operations that compile down to assembly instructions, like =popcnt= and =pxor=
+
+** Data.Text
+
+Treats strings as contiguous byte arrays encoded in UTF-16
+- stores the length of the string and the current offset
+
+Because it's contiguous, you don't need pointers, since you know that the next character is just in the next part of the cache line
+- characters take up *2 bytes*
+
+*** splitOn
+
+Text \to Text \to [Text]
+
+Scans the text block for every occurance of a fixed string and breaks it into a list at those points.
+- instead of creating a list made up of the strings of text you get, it just creates a list of pointers to the memory address and offset of each of the chunks in the list
+
+*** strip
+
+Text \to Text
+
+Trims all leading and trailing whitespace
+- just changes the length and offset to start after the whitespace and end right before
+
+*** null
+
+Text \to Bool
+
+Checks if your text is empty
+- O(1) by just checking if length = 0
+
+*** toLower
+
+Text \to Text
+
+Makes all of the letters lowercase
+- creates a new array on the heap and writes the lowercase version of the text
+
+*** words
+
+Text \to [Text]
+
+Splits text into a list of words
+- stores the pointers and lengths
+
+It's actually smarter than =splitOn=, which  doesn't know how to handle double-spaces or other kinds of white spaces, like tabs, newlines, and carriage returns.
+
+*** filter
+
+
+(Char \to Bool) \to Text \to Text
+
+Retains only the characters that match a given filter
+
+Note that unlike =words=, this returns plain text, *not a list*.
+- so it can't just handle things using pointers
+- it rewrites the filtered text as a new array
+
+*** length
+
+Returns the total number of characters
+- O(N) (surprising!). It's because UTF-16 is variable-width, so some characters take up more or fewer bytes than others
+
+** qualified
+
+#+begin_src haskell
+import qualified Data.Text as T
+#+end_src
+
+=qualified ... as= says that every function imported from =Data.Text= will be prefixed by "T."
+- this helps avoid namespace collisions
 
 * Functions
 
