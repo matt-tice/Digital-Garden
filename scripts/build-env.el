@@ -62,9 +62,9 @@
 		   (org-element-put-property link :type "customid")
 		   (org-element-put-property link :path "broken-link"))
 		  )
-	    ))))
+	    )))))
 ;; Since you're modifying the AST, you need to return the whole tree at the end
-  tree))
+  tree)
 
 ;; --- 4. The Unified Cloud Export Driver ---
 ;; The original exporter turned things into markdown files, which was perfect for when we were just navigating in the repo
