@@ -168,54 +168,7 @@
 <header id="title-block-header">
 <h1 class="title">makefiles</h1>
 </header>
-<h1 id="references">References</h1>
-<h1 id="summary">Summary</h1>
-<p>Makefiles are collaborations between Make and Bash</p>
-<h1 id="bash">Bash</h1>
-<h2 id="redirection">Redirection</h2>
-<p><code class="verbatim">&gt;</code> overwrite redirect <code
-class="verbatim">&gt;&gt;</code> append redirect</p>
-<h2 id="semicolons">Semicolons</h2>
-<p>Bash uses semicolons but Make doesn't. This can lead to some oddness
-in makefiles — you have to be clear on where semicolons are necessary
-and where they aren't.</p>
-<p>Bash uses semicolons as a newline symbol</p>
-<h1 id="make">Make</h1>
-<p><code class="verbatim">$@</code> Resolves to the name of the target
-file currently being built</p>
-<p><code class="verbatim">%</code> is a wildcard</p>
-<ul>
-<li>you can later reference it with <code
-class="verbatim">$*</code></li>
-</ul>
-<h1 id="performance">Performance</h1>
-<p>Make tries to execute every single line as a separate shell command,
-executed in a separate isolated subshell</p>
-<p>To keep multiple lines inside of the <strong>same shell</strong>
-(like when doing a for loop) we use</p>
-<p><code class="verbatim">\</code> to tell us that the end of the
-current line isn't the end of what to send to this shell</p>
-<p>NOTE: when we use <code class="verbatim">\</code> Make appends the
-next line to the end of the current one</p>
-<ul>
-<li>it <strong>does not create a new line</strong></li>
-<li>so usually you need to put a semicolon at the end of the line,
-before the backslash</li>
-</ul>
-<h1 id="directories">Directories</h1>
-<p>Directories are a bit special when it comes to Make</p>
-<ul>
-<li>directories are basically <strong>text files</strong> that list off
-the names and pointers of the files they contain</li>
-<li>therefore, a directory's time stamp only updates when the content of
-the corresponding text file alters
-<ul>
-<li>which happens precisely when a file inside of the directory is (1)
-renamed (2) moved (3) deleted (4) created</li>
-</ul></li>
-</ul>
-<p>Changing the <em>content</em> of a file contained in a directory
-doesn't change its name or pointer, and so doesn't alter the directory's
-text file or its time stamp</p>
+<p><a href="comsci-makefiles.html">betapro</a><a
+href="comsci-makefiles.html">makefiles</a></p>
 </body>
 </html>
