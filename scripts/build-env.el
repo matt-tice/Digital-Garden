@@ -55,7 +55,7 @@
 			(base-path (file-name-sans-extension rel-path-from-root))
 			(html-path (concat "/Digital-Garden/" base-path ".html"))
 			)
-		     (org-element-put-property link :type "https")
+		     (org-element-put-property link :type "file")
 		     (org-element-put-property link :path html-path)
 		     )) 		;
 		  (t
