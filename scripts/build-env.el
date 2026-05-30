@@ -50,20 +50,20 @@
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
 		   (let*
-		       ((rel-path-from-root (file-relative-name target-file (expand-name "public/notes") org-roam-directory))
+		       ((rel-path-from-root (file-relative-name target-file (expand-file-name "public/notes") org-roam-directory))
 			(base-path (file-name-sans-extension rel-path-from-root))
 			(html-path (concat "matt-tice.github.io/Digital-Garden/" base-path ".html"))
 			)
 		     (org-element-put-property link :type "file")
 		     (org-element-put-property link :path html-path)
-		     tree)) 		;; Since you're modifying the AST, you need to return the whole tree at the end
+		     )) 		;
 		  (t
 		   (message "[WARNING] Broken org-id link found in file: %s (Target ID: %s)" (buffer-file-name) link-path)
 		   (org-element-put-property link :type "customid")
 		   (org-element-put-property link :path "broken-link"))
-		  tree)
+		  )
 	    ))))
-  ;; Return the mutated tree back to the export pipeline
+;; Since you're modifying the AST, you need to return the whole tree at the end
   tree))
 
 ;; --- 4. The Unified Cloud Export Driver ---
