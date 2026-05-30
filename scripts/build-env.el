@@ -49,10 +49,13 @@
         (when (string= link-type "id")
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
-		   (let* ((current-file (buffer-file-name))
-			  (rel-path (file-relative-name target-file (file-name-directory current-file))))
+		   (let* ((current-file (buffer-file-name)) ;; The file name includes the file extension
+			  (rel-path (file-relative-name target-file (file-name-directory current-file)))
+			  (html-path (concat (file-name-sans-extension rel-path) ".html"))
+			  )
 		     (org-element-put-property link :type "file")
-		     (org-element-put-property link :path rel-path)))
+		     (org-element-put-property link :path html-path)
+		     link)) 		;; Return the modified link object
 		  (t
 		   (message "[WARNING] Broken org-id link found in file: %s (Target ID: %s)" (buffer-file-name) link-path)
 		   (org-element-put-property link :type "customid")

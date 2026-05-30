@@ -28,10 +28,10 @@ jobs:
           CHANGED_ORG=$(git diff --name-only HEAD^1 HEAD | grep '^notes/.*\.org$' || true)
 
           # 2. Check if there is actual work to do
-          # if [ -z "$CHANGED_ORG" ]; then
-          #   echo "No .org files modified in this push. Skipping compilation."
-          #   exit 0
-          # fi
+          if [ -z "$CHANGED_ORG" ]; then
+            echo "No .org files modified in this push. Skipping compilation."
+            exit 0
+          fi
 
           echo "Modified source files detected:"
           echo "$CHANGED_ORG"
@@ -63,8 +63,8 @@ jobs:
 
           # 6. Invoke the Makefile, explicitly overriding the target variable
           echo "Executing toolchain for targets: $MAKE_TARGETS"
-          # make $FINAL_TARGETS
-          make all
+          make $FINAL_TARGETS
+          
       - name: Deploy Compiled Artifacts to Github Pages Branch
         uses: peaceiris/actions-gh-pages@v4
         with:
