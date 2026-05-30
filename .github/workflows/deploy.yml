@@ -71,7 +71,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public-export
           publish_branch: gh-pages
-          keep_files: true      # otherwise this action would delete all of the unchanged md files
-          force_orphan: true
+          keep_files: true      # otherwise this action would delete all of the unchanged files
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
