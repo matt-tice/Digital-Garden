@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>representation theory</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">representation theory</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<h1 id="definitions">Definitions</h1>
+<p>A representation of a group <span
+class="math inline"><em>G</em></span> is a group homomorphism G → Aut(V)
+= GL(V) into the automorphisms on a vector space. This is equivalent to
+saying that it's the structure of a kG-module on a k-vector space V.</p>
+<ul>
+<li>in other words, G acts on V</li>
+</ul>
+<p>A unitary representation is a representation that maps into the
+unitary operators on a Hilbert spaace G → U(H) We view ℂ G as an
+involutive structure, with (λ g)<sup>*</sup> = λ<sup>*</sup>
+g<sup>-1</sup>. Then a unitary representation is a ℂ G module with an
+inner product such that &lt;g x, y&gt; = &lt;x, g<sup>*</sup> y&gt; for
+all g ∈ kG In other words, V is a *-representation.</p>
+<h2 id="reducibility">Reducibility</h2>
+<h3 id="irreducible">Irreducible</h3>
+<p>An irreducible representation is a representation such that there are
+no subspaces of V invariant under the action of G. From the module
+perspective, it's the same thing as a simple kG-module.</p>
+<h3 id="completely-reducible">Completely Reducible</h3>
+<p>V is a direct sum of irreducible representations</p>
+<p>V is a semisimple module</p>
+<h2 id="regular-representation">Regular Representation</h2>
+<p>Or G acting on functions f: G → k via left multiplication</p>
+<p>kG acting on itself</p>
+<h2 id="characters">Characters</h2>
+<p>The trace of the representation matrix χ(g) = Tr(ρ(g))</p>
+<p>A linear functional on kG from the trace of the endomorphism
+representation, vanishing on the commutator subspace [kG, kG]</p>
+<p>Class functions (constant on conjugacy classes) are equivalent to the
+center Z(kG)</p>
+<p>Irreducible modules correspond to ring maps Z(kG) → k</p>
+<h3 id="linear-functionals-and-integrals">Linear Functionals and
+Integrals</h3>
+<p>When we look at characters as linear functionals on kG, we can view
+them as corresponding to integrals; in particular, they correspond to
+<strong>integral kernels</strong></p>
+<p>This is particularly useful when we look at characters for infinite
+groups</p>
+<h3 id="irreducible-1">Irreducible</h3>
+<p>If V is an irreducible representation, we define the specific
+character χ(g) = Tr(ρ(g)) as the irreducible character of this
+representation</p>
+<p>Irreducible characters end up being equivalent to maps G → ℂ such
+that</p>
+<ol>
+<li>It's a class function</li>
+<li>&lt;χ, χ&gt; = 1</li>
+<li>&lt;φ, χ&gt;  ≥ 0</li>
+</ol>
+<p>From the module perspective, an irreducible character is a linear
+functional if and only if</p>
+<ol>
+<li><p>U(1) : One-dimensional Irreducible Unitary</p>
+<p>The 1-dim irreducible unitary characters are exactly maps into
+U(1)</p></li>
+</ol>
+<h3 id="inner-product-on-kg">Inner Product on (kG)<sup>*</sup></h3>
+<p>We can define the inner product as a Frobenius pairing, where we take
+kG as the coalgebra with duplication coproduct, giving (kG)<sup>*</sup>
+an algebra structure. Then we can take the counit to be the average over
+the group if it's finite</p>
+<ul>
+<li><p>for compact groups, you use the Haar measure and take
+L<sup>2</sup>(G) instead of the strict dual</p></li>
+<li><p>locally compact groups also have a Haar measure, but the integral
+over the whole space is infinite You have a few options:</p>
+<ol>
+<li>the Plancherel Theorem gives us a measure on the space of
+irreducible representations (the <strong>spectrum</strong> of the
+group), and you integrate over this</li>
+<li>you essentially restrict to Schwartz-like functions and use
+temmpered distributions. The tempered distributions don't have an inner
+product though. So you have to use a Fourier transform on them to map
+them back into L<sup>2</sup>(spectrum)</li>
+</ol></li>
+<li><p>non locally compact groups are difficult:</p>
+<ul>
+<li><p>since there's no Haar measure, by definition there's no
+translation-invariant measure</p></li>
+<li><p>so you use a quasi-invariant measure: actions by the group
+elements preserve null sets</p></li>
+<li><p>you then define a Radon-Nikodym derivative ρ(g,x) = (x)</p></li>
+<li><p>and define a unitary action on L<sup>2</sup>(G, μ) with (U(g) ċ
+f) (x) = f(g<sup>-1</sup> x)</p></li>
+<li><p>and you integrate with respect to the quasi-invariant measure</p>
+<p>An example of this is the <strong>Wiener measure</strong>!</p></li>
+</ul></li>
+</ul>
+<p>Another solution is to take the colimit of compact subgroups G^• =
+G<sub>1</sub> ≤ G<sub>2</sub> ≤ …</p>
+<p>Then you take the limit over the the haar measures (when this exists;
+which is only for certain characters) &lt;φ, ψ&gt; = lim 
+∫<sub>G<sub>n</sub></sub> φ(g) ψ<sup>*</sup>(g) d μ<sub>n</sub>(g)</p>
+<h3 id="orthogonality">Orthogonality</h3>
+<p>Over ℂ we have that the irreducible characters satisfy</p>
+<p>&lt;χ<sub>i</sub>, χ<sub>j</sub>&gt; = ∑<sub>g</sub> χ<sub>i</sub>(g)
+χ<sub>j</sub><sup>*</sup>(g) = δ<sub>ij</sub></p>
+<p>This allows us to decompose an arbitrary complex representation into
+irreducible pieces using projection</p>
+<p>From the kG-module perspective, we have Wedderburn's Structure
+Theorem</p>
+<h1 id="theorems">Theorems</h1>
+<h2 id="maschkes-theorem">Maschke's Theorem</h2>
+<h3 id="intuition">Intuition</h3>
+<p>If G is a finite group and</p>
+<h3 id="statement">Statement</h3>
+<p>Let G be a finite group with |G|  ≢ 0 (mod char k), and let V be a
+representation. Then every invariant subspace W ⊆ V has a complement
+subspace U with V = W ⊕ U</p>
+<p>From the module perspective, this says that every finite group with
+|G|  ≠ 0 (mod char k) has kG semisimple.</p>
+<p>Every short exact sequence of kG-modules splits</p>
+<h2 id="schurs-lemma">Schur's Lemma</h2>
+<h3 id="statement-1">Statement</h3>
+<p>Let φ<sub>1</sub>, φ<sub>2</sub> be irreducible representations on
+V<sub>1</sub> and V<sub>2</sub>, and let Ψ: φ<sub>1</sub> →
+φ<sub>2</sub> (commutative square) Then</p>
+<ol>
+<li>Ψ is an isomorphism or Ψ = 0.</li>
+<li>If V<sub>1</sub> = V<sub>2</sub> and k is algebraically closed then
+Ψ = λ I for some λ ∈ k.</li>
+</ol>
+<p>From the perspective of kG-modules we have</p>
+<p>If V<sub>1</sub> and V<sub>2</sub> are simple kG-modules then</p>
+<ol>
+<li>Hom<sub>kG</sub>(V<sub>1</sub>, V<sub>2</sub>) = 0 if and only if
+V<sub>1</sub> V<sub>2</sub></li>
+<li>If V<sub>1</sub> ≅ V<sub>2</sub> then End<sub>kG</sub>(V) is a
+division ring
+<ul>
+<li>If k is algebraically closed and V is finite dimensional, then
+End<sub>kG</sub>(V) ≅ k</li>
+</ul></li>
+</ol>
+</body>
+</html>

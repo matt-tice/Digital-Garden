@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>comsci-linux_without_usb.html.tmp</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p>Tags: SystemsArchitecture:Networks:</p>
+<p>Problem: How do you install Linux on a Windows 11 laptop without
+using an external hardware or paid software?</p>
+<h1 id="partitioning">1. Partitioning</h1>
+<p>First we need to create a partition for the linux distro</p>
+<p>Problem: Windows Disk Management reported only 2GB of available
+shrink space, even though our hard disk had over 100GB of free space</p>
+<p>Discovery: Event log study</p>
+<ul>
+<li>used the Event Viewer to identify the blockage preventing the
+shrink</li>
+<li>Event 259</li>
+</ul>
+<p>Cause: Unmovable files</p>
+<ul>
+<li>hibernation</li>
+<li>page file</li>
+<li>restore points: volume shadow copy service</li>
+<li>master file table ($Mft::$DATA)</li>
+</ul>
+<p>Solution</p>
+<ul>
+<li>disable hibernation
+<ul>
+<li>powershell (admin) powercfg /h off</li>
+</ul></li>
+<li>disable pagefile
+<ul>
+<li>Advanced system settings</li>
+<li>Advanced &gt; Performance &gt; Advanced &gt; Change</li>
+<li>Uncheck auomatically manage</li>
+<li>choose no paging file</li>
+</ul></li>
+</ul>
+<p>Defrag: we want to move the data to the beginning of the hardrive, to
+give us the room to shrink the parition size</p>
+<p>Problem: The Windows kernel can't move $Mft while it's running</p>
+<p>Solution: Perform a minimum shrink (2GB), create a tiny virtual USB
+partition. Boot into Arch Live on the virtual USB. Use Linux-native
+tools (ntfsresize) to move the $Mft while Windows is off</p>
+<h1
+id="get-a-100-intact-arch-iso-over-a-potentially-unstable-wifi-connection">3.
+Get a 100% intact Arch ISO over a potentially unstable Wifi
+connection</h1>
+<p>Learned: TCP vs BitTorrent</p>
+<p>looked at curl vs curl.exe on powershell</p>
+<ul>
+<li>curl and wget are really an alias for Invoke-WebRequest</li>
+<li>it loads the file into memory before writing to disk, so it obviousy
+isn't great for an ISO</li>
+<li>powershell is object-oriented, so it creates a HtmlWebResponseObject
+that stores the entire response in RAM</li>
+</ul>
+<p>curl.exe is the actual C-based curl</p>
+<ul>
+<li>it opens a TCP socket and pipes the data directly to a file</li>
+<li>you can use curl.exe -C - -O [URL] to keep rack of which parts of
+the file you've downloaded already</li>
+<li>[-C -] performs a <strong>file stat</strong> on the output location
+<ul>
+<li>if it finds the file you're downloading,it calculates the offset and
+sends an HTTP Range header to the server</li>
+</ul></li>
+<li>[-O] tells curl to use the filename from the URL as the local
+filename</li>
+</ul>
+<p>Start-BitsTransfer</p>
+<ul>
+<li>Background Intelligence Transfer Service</li>
+<li>gives he task to a Windows System Service</li>
+<li>persistent</li>
+<li>monitors network usage; it can throttle itself to avoid lagging
+other apps</li>
+<li>Start-BitsTransfer -Source [URL] -Destination [OUTPUT]</li>
+</ul>
+<p>Checksum Get-FileHash ..01-x86<sub>64</sub>.iso -Algorithm SHA256</p>
+<h1 id="format-the-partition">Format the Partition</h1>
+<p>learned about how diskpart works</p>
+<p>learned about fat32 vs NTFS APFS primary partitions</p>
+<h2 id="disk-types">Disk Types</h2>
+<p>MBR: only had room for 4 partitions</p>
+<ul>
+<li>to trick the system into allowing more partitions, you created
+"logical" partitions</li>
+</ul>
+<p>GPT: supports up to 128 partitions</p>
+<p>Primary: acts as an independent volume</p>
+<ul>
+<li>it has its own entry in the partition table, so the BIOS can find it
+easily during boot</li>
+</ul>
+<p>Extended: for MBR, you could use one of the 4 partitions to create an
+extended partition, which could then house unlimited logical
+partitions</p>
+<p>MSR: Microsoft reserved</p>
+<p>System: a small FAT32 partition that holds bootloaders for every OS
+on the machine</p>
+<p>use detail partition to check that you're looking at the right one,
+before you format</p>
+<p>format the partition and label it</p>
+<h1 id="mount-onto-our-new-drive">Mount onto our new Drive</h1>
+<p>We mount the linux distro and copy the files onto our new drive</p>
+<p>Windows still doesn't know that our new drive is a boot option. But
+we can add it to the Windows Boot Manager</p>
+<ul>
+<li>use bcdedit</li>
+<li>edits Boot Configuration Data</li>
+</ul>
+<p>we copy the {current} GUID (globally unique identifier) into a new
+location (bcdedit does this automatically with the /copy command) Then
+we play around with that new location</p>
+<p>bcdedit /set {YOUR<sub>GUIDHERE</sub>} device partition=Z: bcdedit
+/set {YOUR<sub>GUIDHERE</sub>} osdevice partition=Z:</p>
+<p>bcdedit /set {YOUR<sub>GUIDHERE</sub>} path 64.EFI</p>
+<h1 id="arch-linux">Arch Linux</h1>
+<h2 id="initramfs">initramfs</h2>
+<p>During boot, the bootloader takes a compressed archive (.img) from
+the Z: drive and decompresses it into a RAM disk containing all the
+drivers and tools needed to start the system</p>
+<p>Execution vs. Storage: Modern OS installers utilize an
+initrd/initramfs (Initial RAM Disk) to decouple the Operating System
+from the physical media. This "Cold Boot to RAM" state is what allows
+for non-destructive filesystem manipulation, as the underlying hardware
+is not locked by the running kernel's I/O operations.</p>
+<ul>
+<li>it's a 2-stage boot</li>
+<li>Windows has WinPE and Winload</li>
+</ul>
+<p>The RAM-Disk Universal: All modern operating systems utilize a TEE
+(Temporary Execution Environment) in RAM to bridge the gap between
+hardware initialization and filesystem mounting. This decoupling is a
+mechanical necessity for handling driver diversity and performing "cold"
+system maintenance.</p>
+<p>Partition Truncation: A filesystem whose internal metadata reports a
+size larger than its containing partition is considered "malformed."
+While non-destructive to the underlying data, it results in a boot
+failure. The remedy is a manual correction of the Partition Table to
+match or exceed the filesystem's reported boundaries.</p>
+<p>Problem: No SRT Trail error</p>
+<ul>
+<li>startup repair tool</li>
+</ul>
+<p>Cause: Windows thinks that linux is a broken version of windows and
+tries to repair it, but can't find the SrtTrail.txt file that it
+expects</p>
+<p>SRT Trail Loop: A diagnostic failure triggered by the Windows Boot
+Manager when a non-standard BCD entry fails to initialize. This is
+frequently caused by Secure Boot's signature verification or incorrect
+pathing in the BCD's path variable</p>
+<p>I suspect the problem is that by copying the {current} GUID, we also
+inherited the expectation for an SrtTrail.txt file</p>
+<ul>
+<li>we copied the metadata profile of the Windows Boot Loader</li>
+<li>in particular, we copied the fact that recoveryenabled is set to
+yes</li>
+</ul>
+<p>Solution: We'll just edit the bcd entry</p>
+<p>bcdedit /enum lists out the stores we find the one we labeled arch
+linux (it's also the only one on the z: drive, and the last one on the
+list, so it's easy to find)</p>
+<p>I see that recoveryenabled is set to yes</p>
+<p>bcdedit /set "{id}" recoveryenabled No</p>
+<p>now it can't find the efi file</p>
+<ol>
+<li>The Structural Reality Check</li>
+</ol>
+<p>When you say the file uses a lowercase x, you are observing the file
+from within Windows. However, the UEFI firmware exists outside the
+OS.</p>
+<p>The Mechanical Assumption: On many 2018-era laptops, the UEFI
+firmware expects the bootloader to be at a specific "fallback" path if
+the BCD entry is ambiguous. Since you are using a local partition on
+your main drive (and not a separate physical USB), the firmware might be
+getting confused about which "EFI" folder is the master.</p>
+<p>using cmd /c dir /x compared the short and long filenames the FAT32
+filesystem uses a legacy system called VFAT to handle long names</p>
+<ul>
+<li>it lists the short name as BOOTX64.EFI and the long name as
+BOOTx64.EFI (lowercase x)</li>
+</ul>
+<p>Solution: Rename-Item to something different this breaks the
+short-long link then rename back to the all caps version then bcdedit
+/set the path to the all caps version</p>
+<p>didn't work</p>
+<p>noticed that the header of my linux under /enum was "windows boot
+loader"</p>
+<ul>
+<li>this is because i copied the {current}</li>
+<li>we can pick a different class</li>
+<li>chose bootloader</li>
+<li>made it but didn't see it</li>
+</ul>
+<p>BCD Visibility Latency: Entries created with the bootsector or
+osloader flags without defined device or path attributes are often
+omitted from the standard bcdedit /enum output. They remain dormant in
+the BCD store and require manual inclusion in the displayorder list to
+become active objects in the boot menu.</p>
+<p>added the metadata deleted the old arch linux boot loader</p>
+<p>ran it again and it still couldn't find the efi pressed f9 and
+navigated explicitly to the efi file and it said can't authenticate</p>
+<ul>
+<li>using f9 bypasses the bcd</li>
+<li>this error tells us we're using secure boot</li>
+<li>that's an uefi feature that only allows binaries signed by trusted
+certificates</li>
+<li>my arch linux obviously isn't signed by microsoft</li>
+</ul>
+<p>solution: disable secure boot</p>
+<ul>
+<li>enter bios/uefi set up</li>
+</ul>
+</body>
+</html>

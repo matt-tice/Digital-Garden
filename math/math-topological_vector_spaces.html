@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>topological vector spaces</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">topological vector spaces</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<h1 id="initial-topologies">Initial Topologies</h1>
+<h2 id="lemma">Lemma</h2>
+<pre class="example"><code>If {f_i : X \to X_i} are linear then initial top is TVS
+</code></pre>
+<pre class="example"><code>If X_i are locally convex then so is X
+</code></pre>
+<h2 id="lemma-1">Lemma</h2>
+<pre class="example"><code>If {f_i: X \to X_i} gives initial top then
+g:A \to X is cont iff g f_i cont \forall i
+</code></pre>
+<pre class="example"><code>Moreover, initial top on Y wrt g is the same as wrt {g f_i}
+</code></pre>
+<h2 id="lemma-subfamily">Lemma: Subfamily</h2>
+<pre class="example"><code>If F \sube G is a subfamily of generating maps then
+I_F \sube I_G
+where I denotes the initial topology.
+</code></pre>
+<p>The topology from G has as open sets all
+g<sub>i</sub><sup>-1</sup>(U) where U is open For those f ∈ F, their
+open sets will also be open in G. So G is finer</p>
+<h3 id="reverse">Reverse</h3>
+<p>In order for the reverse to hold, given an open set U<sub>G</sub> in
+I<sub>G</sub>, we need we need an open set U<sub>F</sub> in
+I<sub>F</sub> with U<sub>F</sub> ⊆ U<sub>G</sub></p>
+<h3 id="frobenius-algebra">Frobenius Algebra</h3>
+<p>In order to remove &lt;-,z&gt; from our generating set, we need</p>
+<p>Given any U and {x | &lt;x,z&gt; ∈ U} there is some w and V with {x |
+&lt;x,w&gt; ∈ V} or {x | &lt;w, x&gt; ∈ V} </p>
+<p>We can always restrict to a basis. So say we look at {x |
+|&lt;x,z&gt;| &lt; r}</p>
+<p>We can take &lt;-, λ z&gt; for *any <em>λ</em>*  ≠ 0 and look at { x
+| |&lt;x,λ z&gt;| &lt; |λ| r }</p>
+<p>That's actually very helpful, because it means that we can take as
+our generating set a kind of projectivization</p>
+<p>But we can actually just reduce to the <strong>basis
+elements</strong> So we pick a basis {b<sub>i</sub>} (possibly
+infinite-dimensional)</p>
+<p>Write z = α<sub>1</sub> b(i<sub>1</sub>) + … + α<sub>n</sub>
+b(i<sub>n</sub>) Then |&lt;x, z&gt;| ≤ |α<sub>1</sub>| |&lt;x,
+b(i<sub>1</sub>)&gt;| + … + |α<sub>n</sub>| |&lt;x,
+b(i<sub>n</sub>)&gt;|</p>
+<p>Now the α and n only depend on z and are thus fixed. So we just take
+the intersection of the open sets defined by each { x |
+|&lt;x,b(i<sub>k</sub>)&gt;| &lt; r / (n α<sub>k</sub>) }</p>
+<h1 id="strongweak-topologies">Strong/Weak Topologies</h1>
+<h2 id="weak-topology">Weak Topology</h2>
+<pre class="example"><code>Def : Given any TVS V, we can define an initial topology generated by all of the *continuous linear functionals*
+</code></pre>
+<pre class="example"><code>This is called the *weak topology* of V.
+</code></pre>
+<p>If we want to talk about topological properties with respect to this
+topology, we'll call them</p>
+<p>Prop: There are no new continuous linear functionals</p>
+<p>Let &lt;-,-&gt;: V × W → k be a bilinear form (not-necessarily
+non-degenerate) Let V have the initial topology generated by all
+&lt;-,w&gt;: V → k Let φ : V → k be a cont linear functional Then there
+is some w ∈ W such that φ = &lt;-,w&gt;</p>
+<div class="CONJECTURE drawer">
+<p>Is it true that if we take &lt;-,-&gt;: V × V → k and both
+&lt;-,x&gt; and &lt;x,-&gt; as generating the initial topology, we don't
+get any more continuous linear functionals?</p>
+<p>If we take that topology, we've added extra generating functions,
+which will make more maps continuous, and thus</p>
+</div>
+<h3 id="frobenius-algebra-1">Frobenius Algebra</h3>
+<p>So a Frobenius algebra F will have its Frobenius topology, generated
+by the &lt;x,-&gt; and &lt;-,x&gt;. But it will also have a weak and
+strong topology.</p>
+<p>But by the above proposition, F has no continuous linear functionals
+that aren't of the form &lt;-,x&gt;</p>
+<h2 id="strong-topology">Strong Topology</h2>
+<h1 id="semi-norms">Semi-norms</h1>
+<pre class="example"><code>Def : p(x+y) \le p(x) + p(y)
+      p(\lambda x) = |\lambda|p(x)      
+</code></pre>
+<p>To be a norm, we also need p(x) = 0 implies x = 0</p>
+<p>Lemma: Absolute value doesn't change anything</p>
+<pre class="example"><code>Given linear functionals f_i : X \to k, the initial topology generated is the same as the initial topology generated by |f_i|: X \to R
+</code></pre>
+<p>Basically you use the fact that the absolute value | ċ | : k → R is
+continuous for both k = C and R. So you use the fact that the initial
+top on X → V → V<sub>i</sub> is the same as the initial top from X →
+Ǧiven any bilinear form &lt;-,-&gt;: V × W → k The initial topologies
+generated by &lt;-,W&gt;: V → k and &lt;V,-&gt; : W → k are also
+generated by post-composing with the absolute value</p>
+<h3 id="frobenius-algebra-2">Frobenius Algebra</h3>
+<p>Any unital Frobenius algebra will have its topology generated simply
+by ε since</p>
+<h2 id="semi-norm-initial-topology">Semi-norm Initial Topology</h2>
+<p>The SN topology for a family of seminorms is the initial topology
+with respect to them This <strong>is not</strong> necessarily a TVS
+structure, since the seminorms aren't linear maps and don't necessarily
+come from linear maps</p>
+<h1 id="special-subsets">Special Subsets</h1>
+<h2 id="absorbing">Absorbing</h2>
+<pre class="example"><code>Def : Let U \sube V
+For all x there is some \alpha &gt; 0 with x \in \lambda U for all |\lambda| \geq \alpha
+</code></pre>
+<p>This says that given any element x, if we expand U, it will
+eventually contain x.</p>
+<h3 id="frobenius-algebras">Frobenius Algebras</h3>
+<p>U = { x | &lt;x,x&gt; }</p>
+<h2 id="balanced">Balanced</h2>
+<p>B is <strong>balanced</strong> if λ B ⊆ B for all |λ|  ≤ 1</p>
+<h3 id="frobenius-algebras-1">Frobenius Algebras</h3>
+<h2 id="barreled">Barreled</h2>
+<p>B is a <strong>barrel</strong> if it is</p>
+<ol>
+<li>Convex</li>
+<li>Balanced</li>
+<li>Absorbing</li>
+<li>Closed</li>
+</ol>
+<p>A <strong>barrelled space</strong> is a TVS for which every barrel is
+a nbh of zero.</p>
+<h3 id="frobenius-algebras-2">Frobenius Algebras</h3>
+<h2 id="bounded">Bounded</h2>
+<p>B is <strong>bounded</strong> if for all zero nbh U, there is a λ
+such that B ⊆ λ U This is equivalent to for all zero nbh U there is an α
+with B ⊆ λ U for all |λ| ≥ α</p>
+<p>In other words, every zero nbh absorbs B</p>
+<p>The finer the topology, the <strong>fewer</strong> bounded sets
+(because they have to satisfy more conditions)</p>
+<p>In a LCTVS, B is bounded iff every countable subset A ⊆ B has p(A)
+bounded for all p</p>
+<p>Prop</p>
+<p>Continuous functions between TVS map bounded to bounded</p>
+<p>Prop</p>
+<p>For an initial topology generated by f<sub>i</sub>: V →
+V<sub>i</sub>, B is bounded iff f<sub>i</sub>(B) is bounded ∀ i</p>
+<p>Prop</p>
+<p>B is bounded iff for any sequence b<sub>n</sub> ∈ B and scalars
+λ<sub>n</sub>  → 0, we have (λ<sub>n</sub> b<sub>n</sub>)  → 0</p>
+<p>Prop</p>
+<p>Let &lt;E,F&gt; be a dual pair A polar A^ˆ is absorbing iff A is
+bounded</p>
+<p>Prop: Preserving Boundedness</p>
+<p>If B is bounded then so is</p>
+<ol>
+<li>The convex hull (in a LCTVS)</li>
+<li>The closure</li>
+<li>Balanced hull</li>
+<li>Absolutely convex closed hull (in a LCTVS)</li>
+</ol>
+<h3 id="frobenius-algebras-3">Frobenius Algebras</h3>
+<h2 id="totally-bounded-precompact">(Totally) Bounded / Precompact</h2>
+<p>B is precompact if for any nbh of zero, U, there is a finite set of
+translations of U, {a<sub>i</sub> + U} which covers B</p>
+<p>Prop</p>
+<p>Closed under</p>
+<ol>
+<li>Convex hull (LCTVS)</li>
+<li>Closed absolutely convex hull (LCTVS)</li>
+</ol>
+<p>Prop</p>
+<p>Compact iff precompact and complete</p>
+<h2 id="closed">Closed</h2>
+<p>A linear function on a TVS is cont iff ker f is closed.</p>
+<h2 id="convex">Convex</h2>
+<p>C is <strong>convex</strong> if λ x + (1 - λ)y ∈ C for all x,y ∈ C, 0
+≤ λ  ≤ 1</p>
+<p>Prop: LCTVS, you get convexity for free on bounded sets</p>
+<p>In any LCTVS, convex hulls of bounded sets are bounded</p>
+<p>If C is convex then so is both Int(C) and Cl(C)</p>
+<h3 id="frobenius-algebras-4">Frobenius Algebras</h3>
+<ol>
+<li><p>Prop</p>
+<p>Let C be convex in a LCTVS, then C is closed iff C is weakly
+closed</p></li>
+</ol>
+<h2 id="polar">Polar</h2>
+<h1 id="topological-vector-spaces-1">Topological Vector Spaces</h1>
+<h2 id="proposition-continuous-operations">Proposition: Continuous
+Operations</h2>
+<pre class="example"><code>Let V be a TVS
+
+x \to x + y is a homeo
+x \to \lambda x is a homeo
+\lambda \to \lambda x is cont
+
+every (not nec open) nbh of zero is absorbing
+every nbh U has some W with W + W \sube U
+</code></pre>
+<p>For the absorbing one, we take the map f: λ → λ x For any nbh of
+zero, U, and any x, we take the preimage of this map, f<sup>-1</sup>(U).
+Now λ ∈ f<sup>-1</sup>(U) iff λ x ∈ U iff x ∈ λ<sup>-1</sup> U. Since
+f(0) = 0 ∈ U, we can take a small ball in f<sup>-1</sup>(U) around 0,
+with radius less than 1. Call the radius α</p>
+<p>Then you're inside this ball iff |λ| &lt; α</p>
+<p>The last one follows from continuity of addition In particular, we're
+cont at (0,0) in V × V 0 + 0 = 0, so we take a nbh around 0, U, preimage
+from addition to get a nbh of (0,0). Restricting to a basic nbh we have
+A<sub>1</sub> × A<sub>2</sub> with A<sub>1</sub> + A<sub>2</sub> ⊆ U Now
+set W = A<sub>1</sub> ∩ A<sub>2</sub></p>
+<h1 id="locally-convex-tvs">Locally Convex TVS</h1>
+<h2 id="continuity">Continuity</h2>
+<pre class="example"><code>If V&#39;s topology is defined by a family of seminorms, then
+x_\alpha \to 0 (as a net) iff each p(x_\alpha) \to 0
+</code></pre>
+<p>Given two LCTVS a map between them f: V → W is cont iff for each
+seminorm p<sub>W</sub>, there is a finite number of
+q<sub>V</sub><sup>i</sup> and a constant α<sub>P</sub> such that
+p<sub>W</sub>(f(x)) ≤ α<sub>P</sub> (q<sub>V</sub><sup>1</sup>(x) + … +
+q<sub>V</sub><sup>n</sup> (x)) for all x</p>
+<h3 id="frobenius-algebra-3">Frobenius Algebra</h3>
+<p>The topology on F × F is induced by the projections followed by the
+pairing So (x,y)  →  &lt; <em>x</em>, <em>z</em>&gt;, &lt;z,x&gt;,
+&lt;y,z&gt; or &lt;z,y&gt; for a fixed z.</p>
+<p>So the pairing is jointly continuous iff there is some C such that
+The map |&lt;x,y&gt;| ≤ C (q<sub>1</sub>(x,y) + … + q<sub>n</sub>(x,y))
+for all x,y</p>
+<h2 id="frobenius-algebra-4">Frobenius Algebra</h2>
+<p>The topology induced by &lt;-,-&gt; : F × F → k has as a basis of
+open sets for the origin</p>
+<p>{x | |&lt;x,b<sub>j</sub>&gt;|, |&lt;a<sub>i</sub>, x&gt;| &lt; r}
+where {a<sub>i</sub>, b<sub>j</sub>} is a finite set of elements of
+F</p>
+<p>In other words, you take a finite number of the generating seminorms,
+and some radius</p>
+<h2 id="set-types">Set Types</h2>
+<p>For any seminorm, {x | p(x) &lt; 1} and {x | p(x)  ≤ 1} are</p>
+<ol>
+<li>Convex</li>
+<li>Absorbing</li>
+<li>Balanced</li>
+</ol>
+<p>B is bounded iff each p_α(B) is bounded in R</p>
+<h1 id="locally-bounded-maps">Locally Bounded Maps</h1>
+<p>A locally bounded map f: V → W is one which sends bounded sets to
+bounded sets.</p>
+<h1 id="continuity-1">Continuity</h1>
+<p>A linear map between TVS f: V → W is cont iff it is cont at any
+single point</p>
+<p>A continuous linear map is uniformly continuous.</p>
+<p>A map f: V → k is cont iff there is a cont seminorm on V s.t. |f|≤
+p</p>
+<p>A map f: V → k is cont iff the kernel is closed</p>
+<h3 id="frobenius-algebra-5">Frobenius Algebra</h3>
+<p>&lt;-,-&gt; : F × F → k</p>
+<h1 id="convergence">Convergence</h1>
+<p>Let V be a LCTVS defined by seminorms {p_α} A net (x_α) → x iff p(x_α
+- x)  → 0 for all p</p>
+<h1 id="universal-constructions">Universal Constructions</h1>
+<h2 id="products">Products</h2>
+<p>Arbitrary products of LCTVS are still LCTVS. The seminorms are the
+projections followed by the original seminorms</p>
+<p>∏_α V_α → V_β → k</p>
+</body>
+</html>

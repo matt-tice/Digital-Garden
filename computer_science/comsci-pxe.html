@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>comsci-pxe.html.tmp</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p>PXE (Preboot Execution Environment) Server</p>
+<p>When you turn on a laptop</p>
+<h1 id="osi-model">OSI Model</h1>
+<p>Seven levels:</p>
+<ol>
+<li>Physical</li>
+<li>Data Link</li>
+<li>Network</li>
+<li>Transport</li>
+<li>Session</li>
+<li>Presentation</li>
+<li>Application</li>
+</ol>
+<h1 id="network-interface-card-nic">Network Interface Card (NIC)</h1>
+<p>This is a hardware component of your computer — it's what allows you
+to connect to a network</p>
+<p>It converts data into EM signals</p>
+<ul>
+<li>either radio waves for wifi</li>
+<li>or electrical signals for wired</li>
+</ul>
+<p>The NIC is responsible for the first 2 layers of the OSI model.</p>
+<h2 id="memory">Memory</h2>
+<p>Most NICs have a small amount of <strong>non-volatile
+memory</strong></p>
+<ul>
+<li>it stores the PXE firmware</li>
+</ul>
+<p><em>Network Boots</em> tell the CPU to use the NIC's firmware,
+instead of the hardrive</p>
+<h2 id="direct-memory-access">Direct Memory Access</h2>
+<p>The NIC receives a packet from the network, verifies the checksum,
+and drops it into RAM. Once enough data has been stored in RAM, it tells
+the CPU to process the data</p>
+<h2 id="promiscuous-mode">Promiscuous Mode</h2>
+<p>Tells the NIC to pass <em>every</em> packet it sees to the CPU,
+instead of just the ones addressed to its MAC address.</p>
+<h2 id="serialization">Serialization</h2>
+<p>Data from the CPU is taken and converted into a stream of electrical
+pulses or radio waves</p>
+<h2 id="media-access-control-mac">Media Access Control (MAC)</h2>
+<p>Every NIC has a MAC address burned into its ROM.</p>
+<ul>
+<li>this is a stable identification of the device</li>
+</ul>
+<p>The NIC listens to the wire and if it sees information directed to
+its MAC address, it knows to react</p>
+<h1 id="dora-process">DORA Process</h1>
+<h1 id="dhcp">DHCP</h1>
+<h1 id="tftp">TFTP</h1>
+<h1 id="http">HTTP</h1>
+<h1 id="tcpip-stack-internet-protocol-suite">TCP/IP Stack (Internet
+Protocol Suite)</h1>
+<p>It tells computers how to interact over a network</p>
+<p>It's made up of a bunch of layers (a stack)</p>
+<ol>
+<li>Application</li>
+<li>how the user interacts with the network</li>
+<li>http, ssh, ftp, dns</li>
+<li>turns your data into a format that the network can understand</li>
+</ol>
+<p>HTTP (hypertext transfer protocol)</p>
+<ul>
+<li>stateless</li>
+<li>request-response protocol</li>
+</ul>
+<p>The browser sends a GET or POST request to the server</p>
+<ul>
+<li>the server looks for the corresponding file and sends it back
+<strong>with a status code</strong></li>
+<li>404 not found</li>
+<li>200 OK</li>
+</ul>
+<p>HTTPS uses TLS/SSL to encrypt the HTTP data</p>
+<p>Uses port 443</p>
+<p>Internet Service Providers use <strong>caching proxies</strong>: if
+someone else on th network downloaded something, the ISP will retain a
+local copy in its cache</p>
+<p>HTTP is very lightweight</p>
+<p>SSH (Secure Shell)</p>
+<p>Used for remote <strong>administration</strong> Creates a persistent,
+encrypted session.</p>
+<p>Uses public/private keys</p>
+<ul>
+<li>when you connect to your device from another machine, the two
+devices do a <em>handshake</em> to prove identities without sending an
+actual password</li>
+</ul>
+<p>Once you have the SSH set up, you can send things through it</p>
+<ul>
+<li>the SSH gives you a shell that you can use to execute logic on the
+remote machine</li>
+</ul>
+<p>DNS (Domain Name System) When you type a URL, the system sends a DNS
+query for the corresponding IP address</p>
+<ul>
+<li>usually this is over <strong>UDP port 53</strong></li>
+</ul>
+<p>FTP/SFTP (File Transfer Protocol)</p>
+<p>HTTP wasn't originally designed for file transfer; FTP was</p>
+<ul>
+<li>although actually you can use HTTP for file transfer</li>
+</ul>
+<p>FTP is <strong>stateful</strong></p>
+<ul>
+<li>the server remembers you as long as the session is open</li>
+</ul>
+<p>Original FTP sends everything in plain text, while SFTP uses SSH</p>
+<p>FTP uses 2 connections:</p>
+<ol>
+<li>Commands</li>
+<li>Data</li>
+</ol>
+<p>There are some issues with FTP</p>
+<ul>
+<li>the two connections makes firewalls suspicious, unlike HTTP, which
+only uses one connection</li>
+<li>it uses a ton of RAM: every connection requires a unique handshake
+and keeps a persistent state on the serer. HTTPS can handle the request
+and then forget the client</li>
+</ul>
+<p>Because FTP was designed for file transfer, it has built-in tools for
+things like</p>
+<ul>
+<li>setting up schedules (although HTTPS is used for that today too; you
+just get some other program to set the schedule and then use HTTP for
+the actual transfer)</li>
+</ul>
+<p>Backing Up Files</p>
+<p>Google Drive and Dropbox use HTTPS</p>
+<ul>
+<li>they use REST APIs over HTTPS and send POST and PUT requests</li>
+</ul>
+<p>Private servers often use SFTP</p>
+<p>You use SFTP when you already have a secure shell set up</p>
+<ul>
+<li><p>if you use HTTPS and SSH, it's actually <strong>less
+secure</strong></p></li>
+<li><p>because they use different ports, you have a new place that
+hackers can attack</p></li>
+<li><p>SFTP uses the same port as SSH (port 22)</p></li>
+<li><p>Transport</p></li>
+<li><p>TCP, UDP</p></li>
+<li><p>TCP breaks data into segments, numbers them and waits for an
+<strong>acknowledgement</strong> (ACK) from the receiver. If a segment
+is lost, TCP resends it</p></li>
+<li><p>UDP is faster than TCP, but less reliable: it sends data without
+checking that it ever arrived (ex. streaming music / videos)</p></li>
+</ul>
+<p>Source Port: a random large number assigned by your laptop to keep
+track of an outgoing request</p>
+<p>Destination Port: A <em>standardized</em> number that tells the
+receiver where the received data belongs</p>
+<p>There are 65,535 ports</p>
+<ul>
+<li>the first 1024 are reserved for things like HTTP, SSH, DNS</li>
+<li>then there are the <strong>registered ports</strong>, which are used
+by specific sofware companies, like MySQL or Steam.</li>
+<li>finally the dynamic/private ports</li>
+</ul>
+<p>Sockets: are IPs + ports</p>
+<ul>
+<li>ex. 192.168.1.50:22 (SSH into a particular IP)</li>
+</ul>
+<p>When you open different browser tabs, each tab gets its own port</p>
+<p>Nmap Tool</p>
+<ul>
+<li>queries all of the ports to see which ones are open</li>
+</ul>
+<p>Windows opens a bunch of ports by default, for things like Remote
+Procedure Calls (RPCs, port 135) and Server Message Blocks (SMBs, port
+445)</p>
+<p>RCP: when a program makes an RCP cal, the local system packages
+(<strong>marshals</strong>) the request, and sends it to the remote
+system. The remote system executes the task and sends the result
+back.</p>
+<ul>
+<li>ex. when Windows manages its services across a network</li>
+<li>this can be used by hackers for Remote Code Execution (RCE)</li>
+</ul>
+<p>SMB: The language that Windows uses for file sharing, printer
+sharing, ect.</p>
+<ul>
+<li>lets applications read and write to files and request services from
+programs in a network</li>
+<li>ex. sending a document to a shared network printer</li>
+<li>SMBs are used to send RPCs.</li>
+</ul>
+<p>Windows computers are <strong>very noisy</strong></p>
+<ul>
+<li>they constantly send out SMBs and RPCs into the network, to see if
+there are printers, for ex.</li>
+<li>this causes Windows to be more resource intensive while idle than
+Linux.</li>
+</ul>
+<p>EternalBlue was a powerful exploit of SMBs</p>
+<p>SMBv1 driver (srv.sys)</p>
+<ul>
+<li>extended attributes are stored in two formats: OS/2 and NT</li>
+<li>the driver converts from OS/2 to NT</li>
+</ul>
+<p><code class="verbatim">SMB_COM_NT_TRANSACT</code> uses dwords, while
+<code class="verbatim">SMB_COM_TRANSACTION2_SECONDARY</code> uses
+words.</p>
+<ul>
+<li></li>
+</ul>
+<p>Buffer Overflow</p>
+<p>A buffer is a temporary storage area in RAM Many old programming
+languages, like C and C++ don't actually check if data is small enough
+to fit in a buffer. If the data is too large, it <em>overflows</em> into
+the neighbouring memory addresses.</p>
+<p>The Return Address (RET) tells the CPU to return to the main
+program</p>
+<ul>
+<li>if we overflow and overwrite the return address, we can tell the CPU
+to return to <strong>a malicious program</strong></li>
+</ul>
+<p>Address Space Layout Randomization (ASLR) Every time the computer
+boots, it randomizes its addresses. This makes it harder for an attacker
+to know the address of their malicious code</p>
+<ul>
+<li>if you can figure out the address layout before a boot happens, you
+can attack effectively</li>
+<li>you need an <strong>information leak</strong>: if you can find a
+single memory address, you can use that to find out where the shellcode
+is hidden</li>
+</ul>
+<p>No Operation Sled (NOP Sled) The shellcode has its first 1000 bytes
+NOPs; the malicious code is at the end. Then, if the return address gets
+changed to something that hits any of those NOPs, the CPU will slide
+along the address until it reaches the malicious code</p>
+<p>Runtimes Programming languages like Python and Java have this: it
+checks to make sure that there are no buffer overflows. In a language
+like C, raw instructions are just sent to the CPU. The CPU doesn't know
+about buffers and their sizes, so it allows buffer overflows.</p>
+<p>Garbage collectors are background processes inside of the runtime.
+They look for pieces of memory that the program is no longer using, to
+reclaim tem for future use</p>
+<ul>
+<li>reference counting: has a stack of references to each object. When a
+variable gets deleted, it gets popped from the stack; when the stack is
+empty, the object is considered garbage and is deleted</li>
+<li>but this can't handle circular references (the stack will never be
+empty, and you get a memory leak)</li>
+<li>mark-and-sweep: the garbage collector starts at the global variables
+and running functions and traces every pointer to see what it can reach.
+Everything it reaches is marked as live. Anything not marked it swept
+away from the memory.</li>
+<li>GCs make sure that memory is only freed once you're no longer going
+to use what it's currently housing</li>
+</ul>
+<p>Runtime Bounds Checking: this is what handles buffer overflows</p>
+<ul>
+<li>in something like python, you don't access memory directly</li>
+<li>instead, you work with objects, like arrays</li>
+<li>if you try to write to an array, the runtime will check if you're
+able to do that without causing a buffer overflow; if not it gives you
+an error like IndexOutOfBounds</li>
+</ul>
+<p>But <strong>Python is written in C</strong></p>
+<ul>
+<li>so you can actually attack the python interpreter (cpython), or the
+underlying C libraries in python (ex. OpenSSL)</li>
+</ul>
+<p>Memory-Safe Systems Languages Things like C — very low level — but
+memory safe</p>
+<ul>
+<li>ex. Rust: it tracks every variable and knows when it's no longer
+needed. Rust refuses to compile a program if there's <em>a chance</em>
+of a buffer overflow or memory leak. But it doesn't need to use a
+Runtime like python.</li>
+</ul>
+<p>Resource Exhaustion (DoS) Regex DoS (ReDoS): the attacker sends a
+string to a regex checker that has exponential growth</p>
+<p>Data Execution Prevention (DEP/NX) Marks the buffers as
+<strong>non-executable</strong></p>
+<p>Return-Oriented Programming (ROP) Instead of injecting their own
+code, attackers stitch together pieces of legitimate code in a
+computer's memory to perform an attack</p>
+<p>Heap Grooming/Spraying</p>
+<ol>
+<li><p>Internet</p></li>
+<li><p>IP addresses</p></li>
+<li><p>IP, ICMP</p></li>
+<li><p>packages segments into <strong>packets</strong> and adds the
+source and destination IP addresses</p></li>
+<li><p>Network Access</p></li>
+<li><p>the hardware</p></li>
+<li><p>NIC and ethernet cable</p></li>
+<li><p>converts IP packets into <strong>frames</strong> and then into
+electrical or radio signals</p></li>
+<li><p>uses MAC addresses to move data between two pieces of hardware on
+the same local network.</p></li>
+</ol>
+</body>
+</html>

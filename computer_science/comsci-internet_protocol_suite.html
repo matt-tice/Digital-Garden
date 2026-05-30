@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>internet protocol suite</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">internet protocol suite</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>It tells computers how to interact over a network</p>
+<p>It's made up of 4 layers:</p>
+<ol>
+<li>Application</li>
+<li>Transport</li>
+<li>Internet</li>
+<li>Link</li>
+</ol>
+<p>As data gets passed through each of the layers, it gets
+<strong>encapsulated</strong> —- new data gets added to it</p>
+<h1 id="application">1. Application</h1>
+<p>How the user interacts with the network</p>
+<ul>
+<li>http, ssh, ftp, dns</li>
+<li>turns your data into a format that the network can understand</li>
+</ul>
+<h2 id="http-hypertext-transfer-protocol">HTTP (hypertext transfer
+protocol)</h2>
+<ul>
+<li>stateless</li>
+<li>request-response protocol</li>
+</ul>
+<p>The browser sends a GET or POST request to the server</p>
+<ul>
+<li>the server looks for the corresponding file and sends it back
+<strong>with a status code</strong></li>
+<li>404 not found</li>
+<li>200 OK</li>
+</ul>
+<p>HTTPS uses TLS/SSL to encrypt the HTTP data</p>
+<p>Uses port 443</p>
+<p>Internet Service Providers use <strong>caching proxies</strong>: if
+someone else on th network downloaded something, the ISP will retain a
+local copy in its cache</p>
+<p>HTTP is very lightweight</p>
+<h2 id="ssh-secure-shell">SSH (Secure Shell)</h2>
+<p>Used for remote <strong>administration</strong> Creates a persistent,
+encrypted session.</p>
+<p>Uses public/private keys</p>
+<ul>
+<li>when you connect to your device from another machine, the two
+devices do a <em>handshake</em> to prove identities without sending an
+actual password</li>
+</ul>
+<p>Once you have the SSH set up, you can send things through it</p>
+<ul>
+<li>the SSH gives you a shell that you can use to execute logic on the
+remote machine</li>
+</ul>
+<h2 id="dns-domain-name-system">DNS (Domain Name System)</h2>
+<p>When you type a URL, the system sends a DNS query for the
+corresponding IP address</p>
+<ul>
+<li>usually this is over <strong>UDP port 53</strong></li>
+</ul>
+<h2 id="ftpsftp-file-transfer-protocol">FTP/SFTP (File Transfer
+Protocol)</h2>
+<p>HTTP wasn't originally designed for file transfer; FTP was</p>
+<ul>
+<li>although actually you can use HTTP for file transfer</li>
+</ul>
+<p>FTP is <strong>stateful</strong></p>
+<ul>
+<li>the server remembers you as long as the session is open</li>
+</ul>
+<p>Original FTP sends everything in plain text, while SFTP uses SSH</p>
+<p>FTP uses 2 connections:</p>
+<ol>
+<li>Commands</li>
+<li>Data</li>
+</ol>
+<p>There are some issues with FTP</p>
+<ul>
+<li>the two connections makes firewalls suspicious, unlike HTTP, which
+only uses one connection</li>
+<li>it uses a ton of RAM: every connection requires a unique handshake
+and keeps a persistent state on the serer. HTTPS can handle the request
+and then forget the client</li>
+</ul>
+<p>Because FTP was designed for file transfer, it has built-in tools for
+things like</p>
+<ul>
+<li>setting up schedules (although HTTPS is used for that today too; you
+just get some other program to set the schedule and then use HTTP for
+the actual transfer)</li>
+</ul>
+<p>Backing Up Files</p>
+<p>Google Drive and Dropbox use HTTPS</p>
+<ul>
+<li>they use REST APIs over HTTPS and send POST and PUT requests</li>
+</ul>
+<p>Private servers often use SFTP</p>
+<p>You use SFTP when you already have a secure shell set up</p>
+<ul>
+<li>if you use HTTPS and SSH, it's actually <strong>less
+secure</strong></li>
+<li>because they use different ports, you have a new place that hackers
+can attack</li>
+<li>SFTP uses the same port as SSH (port 22)</li>
+</ul>
+<h1 id="transport">2. Transport</h1>
+<ul>
+<li>TCP, UDP</li>
+<li>TCP breaks data into segments, numbers them and waits for an
+<strong>acknowledgement</strong> (ACK) from the receiver. If a segment
+is lost, TCP resends it</li>
+<li>UDP is faster than TCP, but less reliable: it sends data without
+checking that it ever arrived (ex. streaming music / videos)</li>
+</ul>
+<h2 id="user-datagram-protocol-udp">User Datagram Protocol (UDP)</h2>
+<p>Prioritizes speed over accuracy</p>
+<ul>
+<li>ex. live-streaming, voice calls</li>
+</ul>
+<p>It's a <strong>connectionless</strong> protocol: UDP doesn't know
+where the packets get sent or what gets sent.</p>
+<p>The headers are very small:</p>
+<ul>
+<li>(2 bytes) Destination port</li>
+<li>(2 bytes) Length of header and payload
+<ul>
+<li>because this is 2 bytes (16 bits), there's a max size that can be
+expressed in UDP (2<sup>16</sup>  ≈ 65,000 bytes)</li>
+</ul></li>
+</ul>
+<p>And have some optional data:</p>
+<ul>
+<li>(2 bytes) Source port (optional in IPv4 and IPv6)</li>
+<li>(2 bytes) Checksum (option in IPv4)</li>
+</ul>
+<h2 id="transmission-control-protocol-tcp">Transmission Control Protocol
+(TCP)</h2>
+<p>This protocol is <strong>very precise</strong> — it checks that every
+single individual packet is received.</p>
+<p>TCP is <strong>connection-oriented</strong></p>
+<ul>
+<li>before anything can be sent, the sender and receiver need to
+establish a connection through a <em>handshake</em></li>
+</ul>
+<h3 id="handshake">Handshake</h3>
+<p>The headers have an extra piece</p>
+<ul>
+<li>source port</li>
+<li>destination port</li>
+<li>sequence number</li>
+</ul>
+<h3 id="header">Header</h3>
+<p>Contains far more information than UDP</p>
+<ul>
+<li>(2 bytes) source port</li>
+<li>(2 bytes) destination port</li>
+<li>(4 bytes) sequence number</li>
+<li>(4 bytes) acknowledgement number</li>
+<li>(2 bytes) checksum</li>
+<li>(2 bytes) urgent pointer</li>
+<li>(2 bytes) window</li>
+<li>(4 bits) Data offset</li>
+<li>(4 bits) Reserved</li>
+<li>(8 bits) Flags
+<ul>
+<li>CWR</li>
+<li>ECE</li>
+<li>URG: indicates urgent pointer should be looked at</li>
+<li>SYN:</li>
+<li>ACK: indicates Acknowledgement should be looked at</li>
+<li>PSH: Asks to push buffered data to receiving app</li>
+<li>RST: reset the connection</li>
+<li>FIN: indicates this is the final packet</li>
+</ul></li>
+</ul>
+<h1 id="internet">3. Internet</h1>
+<ul>
+<li>IP addresses</li>
+<li>IP, ICMP</li>
+<li>packages segments into <strong>packets</strong> and adds the source
+and destination IP addresses</li>
+</ul>
+<h1 id="network-access">4. Network Access</h1>
+<ul>
+<li>the hardware</li>
+<li>NIC and ethernet cable</li>
+<li>converts IP packets into <strong>frames</strong> and then into
+electrical or radio signals</li>
+<li>uses MAC addresses to move data between two pieces of hardware on
+the same local network.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>halting problem</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">halting problem</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>There is no algorithm H such that H satisfies the following:</p>
+<p>given any algorithm A, and input I, H will return 1 if A stops when I
+is the input of A, and 0 if A doesn't stop when I is the input of A.</p>
+<h1 id="proof">Proof:</h1>
+<p>Say there is such an H Define a new algorithm X:</p>
+<ul>
+<li>takes as input an algorithm A</li>
+<li>outputs 1 if H(A,A) outputs 0</li>
+<li>loops forever if H(A,A) outputs 1</li>
+</ul>
+<p>Now use as input X: Say the output is X(X) If X(X) stops then H(X,X)
+= 1 But then X(X) loops forever, so X(X) doesn't stop.</p>
+<ul>
+<li>Similarly if X(X) doesn't stop then H(X,X) = 0 so X(X) does stop,
+and outputs 1.</li>
+</ul>
+<h1 id="discussion">Discussion</h1>
+<p>This is basically just a reformulation of <strong>Russel's
+paradox</strong> Basically all of these types of things are the
+same:</p>
+<ul>
+<li>halting problem</li>
+<li>russel's paradox</li>
+<li>incompleteness theorem</li>
+<li>diagonal argument</li>
+</ul>
+<h2 id="as-russels-paradox">As Russel's Paradox</h2>
+<p>We can reformulate the halting problem as follows:</p>
+<p>Associate to any algorithm A a set, as follows:</p>
+<ul>
+<li>A<sub>I</sub> is the set of all inputs for which A doesn't halt</li>
+</ul>
+<p>Now we'll think of the letters A,H,X as the above type of sets</p>
+<p>Given a halting problem solution H, H(A,A) = 0 iff A<sub>I</sub> ∉
+A<sub>I</sub>.</p>
+<p>So the set corresponding to the algorithm X is X<sub>I</sub>
+ ≡ <em>A</em>|<em>H</em>(<em>A</em>,<em>A</em>) = 0
+ ≅ <em>A</em><sub><em>I</em></sub>|<em>A</em><sub><em>I</em></sub> ∉ <em>A</em><sub><em>I</em></sub>
+This is <strong>Russel's class</strong>, which <strong>isn't a
+set</strong></p>
+<ul>
+<li>this is basically enough to end the argument</li>
+<li>but if you like, you can continue to say</li>
+<li>X<sub>I</sub> ∈ X<sub>I</sub> if X<sub>I</sub> ∉ X<sub>I</sub></li>
+</ul>
+<h3 id="full-comprehension">Full Comprehension</h3>
+<p>The (potential) underlying problem in Russel's Paradox is that you
+assume you can construct any set you want</p>
+<p>The axiom of <strong>full comprehension</strong> says that given any
+property P, the set { x | P(x) } exists</p>
+<p>There are lots of ways around this</p>
+<ol>
+<li><p>Restricted comprehension You can only say Given a set X and
+property P of the elements of X { X | P } exists</p></li>
+<li><p>(there are a bunch of weaker forms of comprehension)</p></li>
+</ol>
+<h3 id="discussion-1">Discussion</h3>
+<p>One interesting thing about this, is that the usual way of resolving
+Russel's paradox — of just saying that X is a class rather than a set,
+and therefore since X is defined to be { sets | … }, X ∉ X is fine and
+doesn't cause a contradiction — seems a bit odd, because it corresponds
+to the idea that <strong>X isn't an algorithm</strong></p>
+<p>But what does that mean? What is it then?</p>
+<h3 id="resolutions">Resolutions</h3>
+<p>Russel's Paradox has a number of different possible resolutions</p>
+<ol>
+<li>Restrict the axiom of comprehension, so you can't actually define
+the set X
+<ul>
+<li>if we use restricted comprehension,</li>
+<li>the corresponding algorithm approach would say</li>
+<li>there is no full halting algorithm H</li>
+<li>but that's because by definition,</li>
+<li>an algorithm has to have a <em>set</em> of inputs
+<ul>
+<li>it can't just be defined for everything, in the abstract</li>
+</ul></li>
+<li>but we allow a restricted halting algorithm H<sub>R</sub></li>
+<li>which, given a set of algorithms, can solve the halting problem for
+them</li>
+</ul></li>
+<li>Distinguish between sets and classes
+<ul>
+<li>in this case, I suppose you'd say</li>
+<li>that X can be defined, but it isn't an algorithm</li>
+</ul></li>
+<li>Structural set theories don't allow you to define a set
+inherently</li>
+</ol>
+<p>-It's basically just category theory; there are <em>no elements truly
+internal to a set</em> -Instead you have morphisms/relations between
+sets</p>
+<ol>
+<li>Use paraconsistent logic! So you say it's actually fine that there's
+a contradiction</li>
+</ol>
+<h2 id="lawveres-fixed-point-theorem">Lawvere's Fixed Point Theorem</h2>
+</body>
+</html>

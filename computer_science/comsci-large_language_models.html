@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>large language models</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">large language models</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<h1 id="probabilistic">Probabilistic</h1>
+<p>LLMs produce probability distributions when given input</p>
+<ul>
+<li>the distribution is the likelihood of different subsequent
+tokens</li>
+<li>the <em>temperature</em> setting tells the LLM how to sample from
+the distribution</li>
+</ul>
+<p>There's also a hardware aspect to this</p>
+<ul>
+<li>because the models are so large and so many calculations are
+performed in parallel, small changes in the order that things happen can
+lead to very different final outcomes</li>
+</ul>
+<p>AI currently has no verification step or confidence interval</p>
+<ul>
+<li>this is one of the main reasons it's crappy still</li>
+<li>you can just run the prompt multiple times and take the most common
+answer, but that doesn't actually challenge any <strong>systemic
+bias</strong> to a wrong answer</li>
+</ul>
+<h1 id="the-chess-problem">The Chess Problem</h1>
+<div class="THOUGHTS drawer">
+<p>[2026-04-13 Mon 23:00]</p>
+<p>I just went through one of my games with Gemini.</p>
+<p>It was unable to present the best tactic at the end of the game, in
+which White had to sacrifice a bishop on f6, to remove the pawn from g7,
+and then play Qg6+ on the king.</p>
+<p>This isn't a difficult tactic (to be fair, I missed it, but I was
+playing in a bullet game; to a computer that's like a classical amount
+of time), and stockfish (and probably weaker engines) could find it
+immediately, just like any grandmaster (and any chess player around my
+level could easily find it if we knew we were looking for a tactic)</p>
+<p>And yet the AI couldn't, even when I told it there were better moves
+on the board than what it suggested</p>
+<p>This brings up an interesting question:</p>
+<ul>
+<li>LLMs are supposed to be "human-like", as the techbros want us to
+believe</li>
+<li>and yet</li>
+</ul>
+</div>
+<h2 id="deep-blue">Deep Blue</h2>
+<p>Kasparov lost to Deep Blue in 1997</p>
+<ul>
+<li>DB was using a heuristic search and expert-designed evaluation
+functions</li>
+</ul>
+<p>Neural networks took a long <em>long time</em> to even get competent
+at chess</p>
+<div class="OPINION drawer">
+<p>It's not clear to me that NN models aren't just a waste of time, in
+comparison to searching for an explicit algorithm</p>
+</div>
+<h1 id="mixture-of-experts">Mixture of Experts</h1>
+<p>When the human brain works on a problem, only certain "parts" of your
+brain get involved</p>
+<p>In a typical NN, all of the nodes are involved in everything</p>
+</body>
+</html>

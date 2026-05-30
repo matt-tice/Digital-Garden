@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>python functions</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">python functions</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p><strong>Functions are objects</strong></p>
+<ul>
+<li>so they can be assigned to variables, passed as arguments, returned,
+and stored in data structures</li>
+</ul>
+<p><strong>Higher order functions</strong> take functions as inputs</p>
+<ul>
+<li>this is used in functional programming</li>
+</ul>
+<pre><code>def fun(f, x):
+  return f(x)
+</code></pre>
+<h1 id="decorators">Decorators</h1>
+<p>Functions that take other functions as arguments</p>
+<ul>
+<li>@decorator is short for</li>
+<li>function = decorator(function)</li>
+</ul>
+<pre><code>def decorator(f):
+  def wrapper(*args, **kwargs):
+     ...
+     f()
+     ...
+  return wrapper
+
+@decorator
+def funct():
+</code></pre>
+<h2 id="use-cases">Use-Cases</h2>
+<p>Logging: track function calls</p>
+<p>Authentication: restrict access in certain circumstances</p>
+<p>Rate limiting: control usage per user</p>
+<p>Caching: store results</p>
+<p>Retry logic: automatically retry failed attempts</p>
+<h2 id="method-decorators">Method Decorators</h2>
+<p>You can use decorators inside of classes, on methods</p>
+<pre><code>class MyClass:
+  @method_decorator
+  def class_method(self):
+</code></pre>
+<h2 id="class-decorators">Class Decorators</h2>
+<p>You can actually decorate entire classes!</p>
+<pre><code>@dec
+class ClassName:
+</code></pre>
+<h2 id="chaining">Chaining</h2>
+<p>You can apply multiple decorators to the same function</p>
+<ul>
+<li>inner-most is applied first</li>
+</ul>
+<pre><code>@dec2
+@dec1
+def f:  
+</code></pre>
+<h1 id="default-values">Default Values</h1>
+<pre><code>def function(x, y=3):
+</code></pre>
+<p>You can call this with function(1), and it will have x=1, y=3 Or you
+can overwrite y, with function(1,5)</p>
+<p>Note that the <strong>default value is only evaluated
+once</strong></p>
+<ul>
+<li>so if you call a function multiple times, the default won't
+reset</li>
+<li>the default will become whatever it ended up as the last time the
+function was called</li>
+</ul>
+<p>You can pass only specific variables by naming them when you call the
+function. The naming version is called <strong>keywords</strong></p>
+<pre><code>def function(x, y=2, z = 5):
+...
+
+function(1, z = 7)
+</code></pre>
+<pre><code>def f(pos, /, pos_or_key, *, key):
+</code></pre>
+<p>The symbols <code class="verbatim">/</code> and <code
+class="verbatim">*</code> are optional and they tell you whether you're
+allowed to pass in positional or keyword arguments Without those
+symbols, you can pass everything by position or keyword</p>
+<h2 id="use-cases-1">Use-cases</h2>
+<p>Positional-only</p>
+<ul>
+<li>if you don't want user to have the parameter names (ex. the names
+have no real meaning)</li>
+<li>for API, to prevent breaking API changes if the parameter's name is
+modified in the future</li>
+</ul>
+<p>Keyword-only</p>
+<ul>
+<li>when names have meaning and function def is more understandable when
+you're explicit</li>
+</ul>
+<h2 id="tuple-arguments">Tuple Arguments</h2>
+<p>You can set a function to accept arbitrarily many arguments (which
+will be placed in a tuple)</p>
+<ul>
+<li>use asterisk before variable name</li>
+<li>these variadic arguments go <strong>at the end of the function
+definition</strong></li>
+</ul>
+<pre><code>def f(x,y, *t):
+</code></pre>
+<p>You can actually call a function with a list or tuple, and
+<em>unpack</em> the sequence</p>
+<pre><code>def f(x,y):
+
+f(*[1,2])  
+</code></pre>
+<h2 id="dictionary-arguments">Dictionary Arguments</h2>
+<pre><code>def f(x, *t, **d):
+
+f(1, 2, 3, person = &#39;tom&#39;, rival = &#39;sue&#39;)  
+</code></pre>
+<h2 id="lambda-expressions">Lambda Expressions</h2>
+<h2 id="annotations">Annotations</h2>
+<h1 id="generator-functions">Generator Functions</h1>
+<p>They <strong>produce iterators</strong></p>
+<ul>
+<li>things like range()</li>
+<li>things that a for loop can iterate over</li>
+</ul>
+<p>Each time the function is called, it</p>
+<ul>
+<li>loads its current state</li>
+<li>does stuff</li>
+<li>saves its new state</li>
+<li>returns the new state (using the <code class="verbatim">yield</code>
+keyword)
+<ul>
+<li>when the code reaches <code class="verbatim">yield</code>, it
+returns the new state and <strong>pauses</strong></li>
+<li>the next time the function is called it continues from right after
+the yield command</li>
+</ul></li>
+</ul>
+<pre><code>def fibonnaci():
+  x,y = 0, 1
+
+  while True:
+     yield x + y
+     x, y = y, x+ y
+</code></pre>
+<h2 id="benefits">Benefits</h2>
+<p>Saves memory since it generates on-the-fly</p>
+<p>Chain generators to process data in stages efficiently</p>
+<p>Create arbitrarily long sequences</p>
+<h2 id="methods">Methods</h2>
+<p>send()</p>
+<p>close</p>
+<h2 id="generator-expressions">Generator Expressions</h2>
+<p>The same as list comprehension, but use parentheses</p>
+<pre><code>sq = (x*x for x in range(1,6))
+</code></pre>
+</body>
+</html>

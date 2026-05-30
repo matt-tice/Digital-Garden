@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>simhash-haskell</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">simhash-haskell</h1>
+</header>
+<p>– Unfortunately, vanilla SimHash only compares text syntactically: it
+looks at whether two strings literally have words in common – but it
+doesn't tell you whether two texts are semantically similar.</p>
+<h1 id="strings">Strings</h1>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ot">{-# LANGUAGE OverloadedStrings #-}</span></span></code></pre></div>
+<h1 id="modules">Modules</h1>
+<p>Using <code class="verbatim">qualified</code> is really important, to
+make it easy to see what's an imported funciton and what's
+programmer-defined</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> <span class="dt">SimHash</span> <span class="kw">where</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Data.Text</span> <span class="kw">as</span> <span class="dt">T</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Data.Word</span> (<span class="dt">Word64</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Data.Bits</span> (testBit, setBit, xor, popCount)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Data.Hashable</span> (hashPtr)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">System.IO.Unsafe</span> (unsafePerformIO)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Foreign.Storable</span> (sizeOf)</span></code></pre></div>
+<h1 id="type-safety">Type-safety</h1>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">newtype</span> <span class="dt">SyntacticID</span> <span class="ot">=</span> <span class="dt">SyntacticID</span> <span class="dt">Word64</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">deriving</span> (<span class="dt">Show</span>, <span class="dt">Eq</span>)</span></code></pre></div>
+<p>We set up a distinction between the type <code
+class="verbatim">Word64</code> and the type <code
+class="verbatim">SyntacticID</code></p>
+<ul>
+<li>So if a function requires a type <code
+class="verbatim">SyntacticID</code>, even though a SyntacticID is a kind
+of integer (in a conceptual sense), from the perspective of the program
+it's different;</li>
+<li>Thus we have to explicitly declare something a Syntactic ID if we
+want to use it in a function that requires that type.</li>
+</ul>
+<h1 id="bit-manipulation">Bit Manipulation</h1>
+<p>Because we're working with the raw memory, we need to make sure that
+the compiler doesn't move our string around in RAM while we're hashing
+it</p>
+<ul>
+<li><code class="verbatim">T.useAsPtr</code> fixes the string down in
+memory and passes a starting memory location (ptr) and the length of
+txt</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ot">hash64 ::</span> <span class="dt">Text</span> <span class="ot">-&gt;</span> <span class="dt">Word64</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>hash64 txt <span class="ot">=</span> unsafePerformIO <span class="op">$</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  T.useAsPtr txt <span class="op">$</span> \ptr len <span class="ot">-&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fromIntegral</span> <span class="op">&lt;$&gt;</span> hashPtr ptr (<span class="fu">fromIntegral</span> <span class="op">$</span> len <span class="op">*</span> sizeOf (<span class="fu">undefined</span><span class="ot"> ::</span> <span class="dt">Char</span>))</span></code></pre></div>
+<h1 id="main-function">Main function</h1>
+<p>Our goal is to compute a hash function for the text, such that if two
+texts have similar hash functions, their content is syntactically
+similar.</p>
+<p>We take our list of text tokens and</p>
+<ol>
+<li><code class="verbatim">vectorSums</code> : compute the list of
+integers that it corresponds to</li>
+<li>give each of those integers an index, from 0 to 63</li>
+<li><code class="verbatim">buildBits</code> : flatten the integers into
+a single hash value</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ot">computeSimHash ::</span> [<span class="dt">Text</span>] <span class="ot">-&gt;</span> <span class="dt">SyntacticID</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>computeSimHash tokens <span class="ot">=</span> <span class="dt">SyntacticID</span> <span class="op">$</span> <span class="fu">foldr</span> buildBits <span class="dv">0</span> (<span class="fu">zip</span> [<span class="dv">0</span><span class="op">..</span><span class="dv">63</span>] vectorSums)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span></span></code></pre></div>
+<h2 id="issues">Issues</h2>
+<p>There are suboptimality issues though:</p>
+<ul>
+<li><p>lists in haskell stink for memory</p></li>
+<li><p>you never want to initialize a long list if you can help
+it</p></li>
+<li><p>here, our list <code class="verbatim">[0..63]</code> is useless;
+the data of indices is already encoded in any list; zipping them
+together explicitly just wastes memory</p>
+<p>You can fix this by using unboxed mutable vectors</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Data.Vector.Unboxed.Mutable</span> <span class="kw">as</span> <span class="dt">MV</span></span></code></pre></div></li>
+</ul>
+<p>We use <code class="verbatim">MV.modify</code></p>
+<ul>
+<li>it <strong>modifies in place</strong></li>
+<li>we never get a whole heap object, because we can read and modify the
+vector, one spot at a time</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ot">accumulateMutable ::</span> <span class="dt">Word64</span> <span class="ot">-&gt;</span> <span class="dt">MV.IOVector</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> ()</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>accumulateMutable tokenH acc <span class="ot">=</span> go <span class="dv">0</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ot">    go ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> ()</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    go <span class="dv">64</span> <span class="ot">=</span> <span class="fu">return</span> ()</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    go i  <span class="ot">=</span> <span class="kw">do</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> delta <span class="ot">=</span> <span class="kw">if</span> testBit tokenH i <span class="kw">then</span> <span class="dv">1</span> <span class="kw">else</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>      MV.modify acc (<span class="op">+</span> delta) i</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      go (i <span class="op">+</span> <span class="dv">1</span>)</span></code></pre></div>
+<h2 id="functions-here">Functions here</h2>
+<h3 id="hash">Hash</h3>
+<p>The starting hash we use is arbitrary</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- 1. Hash all of the tokens in the list</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ot">tokenHashes ::</span> [<span class="dt">Word64</span>]</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>tokenHashes <span class="ot">=</span> <span class="fu">map</span> hash64 tokens</span></code></pre></div>
+<h3 id="accumulate">Accumulate</h3>
+<p>We take each of the hashes we got and assign it an index from 0 to
+63. For each hash-index pair, <code class="verbatim">accumulate</code>
+will (<code class="verbatim">weightDelta</code>) add +1 if the bit value
+at the specified index is 1, and add -1 if the bit value is 0.</p>
+<p>We end up with a list of 64 integers (<code
+class="verbatim">vectorSums</code>)</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ot">vectorSums ::</span> [<span class="dt">Int</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>vectorSums <span class="ot">=</span> <span class="fu">foldr</span> accumulate (<span class="fu">replicate</span> <span class="dv">64</span> <span class="dv">0</span>) tokenHashes</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ot">accumulate ::</span> <span class="dt">Word64</span> <span class="ot">-&gt;</span> [<span class="dt">Int</span>] <span class="ot">-&gt;</span> [<span class="dt">Int</span>]</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>accumulate tokenH acc <span class="ot">=</span> <span class="fu">zipWith</span> (\bitIdx weight <span class="ot">-&gt;</span> weight <span class="op">+</span> weightDelta tokenH bitIdx) [<span class="dv">0</span><span class="op">..</span><span class="dv">63</span>] acc</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="ot">weightDelta ::</span> <span class="dt">Word64</span> <span class="ot">-&gt;</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>weightDelta tokenH idx <span class="ot">=</span> <span class="kw">if</span> testBit tokenH idx <span class="kw">then</span> <span class="dv">1</span> <span class="kw">else</span> <span class="op">-</span><span class="dv">1</span></span></code></pre></div>
+<h3 id="rebuild-a-single-hash">Rebuild a single hash</h3>
+<p>Finally, take each of those 64 integers, along with their indices,
+and create a 64 bit word whose 1's correspond to the indices with
+integers &gt; 0, and 0's correspond to those integers &lt; 0</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ot">buildBits ::</span> (<span class="dt">Int</span>, <span class="dt">Int</span>) <span class="ot">-&gt;</span> <span class="dt">Word64</span> <span class="ot">-&gt;</span> <span class="dt">Word64</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>buildBits (bitIdx, score) currentWord <span class="ot">=</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">if</span> score <span class="op">&gt;</span> <span class="dv">0</span> <span class="kw">then</span> setBit currentWord bitIdx <span class="kw">else</span> currentWord</span></code></pre></div>
+<h1 id="syntactic-distance">Syntactic Distance</h1>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- | Compute the structural distance between two semantic vectors.</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- Returns an integer between 0 (identical) and 64 (complete inversion).</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="ot">syntacticDistance ::</span> <span class="dt">SyntacticID</span> <span class="ot">-&gt;</span> <span class="dt">SyntacticID</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>syntacticDistance (<span class="dt">SyntacticID</span> h1) (<span class="dt">SyntacticID</span> h2) <span class="ot">=</span> popCount (h1 <span class="ot">`xor`</span> h2)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">-- | Hard boundary rail evaluating structural duplication</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="ot">isNearDuplicate ::</span> <span class="dt">SyntacticID</span> <span class="ot">-&gt;</span> <span class="dt">SyntacticID</span> <span class="ot">-&gt;</span> <span class="dt">Bool</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>isNearDuplicate id1 id2 <span class="ot">=</span> semanticDistance id1 id2 <span class="op">&lt;=</span> <span class="dv">3</span></span></code></pre></div>
+</body>
+</html>

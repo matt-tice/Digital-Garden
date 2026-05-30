@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ai github actions problem</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">ai github actions problem</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>May 25, 2026</p>
+<p>—</p>
+<p>## The Problem: The Stateless Container Timestamp Trap</p>
+<p>When building a modular static site or digital garden using a local
+asset toolchain (like a GNU `Makefile` paired with Emacs/Pandoc),
+compilation decisions usually rely on the standard filesystem clock
+inequality:</p>
+<p><span class="math display">Is
+<em>t</em><sub>source</sub> &gt; <em>t</em><sub>target</sub>?</span></p>
+<p>In a local development workspace, this works perfectly. However,
+migrating this architecture to a stateless CI/CD environment (like a
+GitHub Actions runner) causes the dependency graph to collapse:</p>
+<ol>
+<li><strong><strong>Shallow Clone Default:</strong></strong> By default,
+actions optimize for network speed by executing a shallow clone
+(`fetch-depth: 1`), pulling down only the single tip commit
+snapshot.</li>
+<li><strong><strong>Clock Equalization:</strong></strong> Because the
+runner begins with a completely empty disk, the checkout action streams
+and materializes all source files (`.org`) and tracked target files
+(`.html` / `.md`) sequentially within milliseconds.</li>
+<li><strong><strong>The Result:</strong></strong> Every file lands on
+the runner disk with an identical checkout timestamp. When `make` checks
+the clock, <span class="math inline"><em>t</em><sub>source</sub></span>
+is <strong>not</strong> strictly greater than <span
+class="math inline"><em>t</em><sub>target</sub></span>. The compilation
+engine assumes no modifications have occurred, outputting a
+false-positive `No need to remake target` and skipping the build
+completely.</li>
+</ol>
+<p>Trying to resolve this by blindly wiping directories or forcing
+updates (`touch notes//*.org`) destroys the performance benefits of
+incremental compilation, forcing heavy, full-tree rebuilds on every tiny
+commit.</p>
+<p>—</p>
+<p>## The Solution: Upstream Ingestion Layer Optimization</p>
+<p>Instead of forcing the container's local file system to guess what
+changed via deceptive clock values, we can leverage the repository's
+cryptographic commit graph to feed deterministic data down to the
+compiler.</p>
+<p>By increasing the container's ingestion depth to `fetch-depth: 2`, we
+force Git to pull down the current commit <strong>and</strong> its
+immediate structural parent into the local `.git/` metadata store. This
+grants the runner enough localized history to execute a raw memory-speed
+`git diff`.</p>
+<p>### The Optimized Pipeline Architecture
+(`.github/workflows/build.yml`)</p>
+<p>Instead of running a blind `make all`, the pipeline queries Git for
+the exact file paths changed in the push, transforms those source paths
+into the explicit expected target file paths, and passes them straight
+to `make` as targeted command-line variable overrides.</p>
+<p>```yaml</p>
+<ul>
+<li><p>name: Checkout Repository uses: actions/checkout@v4 with:
+fetch-depth: 2 # Ingests the current commit and its parent</p></li>
+<li><p>name: Compute Changes and Run Make run: |</p>
+<p>CHANGED<sub>ORG</sub>=<span class="math inline">$(git diff
+--name-only HEAD^1 HEAD | grep '^notes/.*\.org$</span>' || true)</p>
+<p>if [ -z "$CHANGED<sub>ORG</sub>" ]; then echo "No note files modified
+in this push. Skipping compilation." exit 0 fi</p>
+<p>MAKE<sub>TARGETS</sub>="" for file in $CHANGED<sub>ORG</sub>; do if [
+-f "$file" ]; then REL<sub>PATH</sub>=${file#notes/}
+TARGET<sub>MD</sub>="public-export/${REL<sub>PATH</sub>%.org}.md"
+MAKE<sub>TARGETS</sub>="$MAKE<sub>TARGETS</sub> $TARGET<sub>MD</sub>" fi
+done</p>
+<p>echo "Executing toolchain for targets: $MAKE<sub>TARGETS</sub>" make
+$MAKE<sub>TARGETS</sub></p></li>
+</ul>
+<p>```</p>
+<p>—</p>
+<p>## Pitfall: Destructive Deployment Synced Deletions</p>
+<p>When deploying a sparse, incrementally built directory
+(`./public-export`) to a deployment target branch (like `gh-pages`),
+automated deployment handlers (e.g., `peaceiris/actions-gh-pages`)
+defaults to a destructive synchronization strategy. If a file exists on
+the remote deployment branch but is absent from the runner's immediate
+build folder, the action assumes it has been deleted and purges it.</p>
+<p>To prevent an incremental build from wiping out the rest of your
+historical notes from the tracking branch, you must explicitly shift the
+deployment operation from a destructive override to an
+<strong><strong>in-place accumulation loop</strong></strong>:</p>
+<p>```yaml</p>
+<ul>
+<li>name: Deploy Compiled Artifacts to Github Pages Branch uses:
+peaceiris/actions-gh-pages@v4 with: github<sub>token</sub>: ${{
+secrets.GITHUB<sub>TOKEN</sub> }} publish<sub>dir</sub>: ./public-export
+publish<sub>branch</sub>: gh-pages keep<sub>files</sub>: true #
+CRITICAL: Prevents continuous sync from purging historical branch
+assets</li>
+</ul>
+<p>```</p>
+<p>## Architectural Takeaway</p>
+<p>In systems engineering, patching tools downstream to accommodate
+poorly structured environments often introduces brittle edge cases. By
+resolving the issue at the <strong><strong>data ingestion
+layer</strong></strong> (`fetch-depth: 2`), the internal compilation
+engine is spared from making decisions using a broken clock, preserving
+an elegant, deterministic compilation loop.</p>
+</body>
+</html>

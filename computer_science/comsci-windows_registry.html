@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>windows registry</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">windows registry</h1>
+</header>
+<h1 id="references">References</h1>
+<p>Jolanta Thomassen's thesis Peter Norris' masters thesis</p>
+<h1 id="summary">Summary</h1>
+<p>In my journey to learn a bit more about computer science, it might be
+nice to learn how to play with the registry</p>
+<p>The registry is a big dictionary</p>
+<ul>
+<li>all of the folders are keys</li>
+</ul>
+<p>The registry contains</p>
+<ul>
+<li>config info</li>
+<li>historical info of user activity
+<ul>
+<li>to provide users with more personalized experiences</li>
+<li>when a user opened an app</li>
+<li>when the system last connected to a particular wireless access
+point</li>
+<li>when a graphic image viewer was used to access a particular
+file</li>
+</ul></li>
+</ul>
+<h2 id="files">Files</h2>
+<p>The registry files are in <code
+class="verbatim">Windows/system32/config</code> The database files are
+called <strong>hives</strong></p>
+<p>Info specific to certain users are in <code
+class="verbatim">NTUSER.dat</code> and the <code
+class="verbatim">USRCLASS.dat</code> hives</p>
+<p>Hives are made up of 4-KB sections called <strong>bins</strong></p>
+<ul>
+<li><p>the first 4 bytes start with regf</p></li>
+<li><p>every 4096 bytes there is hbin</p></li>
+<li><p>data sits neatly inside of the bins; it doesn't split between
+adjacent bins</p></li>
+<li><p>when new bins are required, space will be taken from unallocated
+memory, so you can see old registry data inside of other registry files
+sometimes</p>
+<p>You can actually look at this unallocated space using <strong>data
+carving tools</strong></p></li>
+</ul>
+<p>Hbins are in turn made up of different sections, called
+<strong>cells</strong></p>
+<ul>
+<li>key cells or <em>keys</em> contain LastWrite time as a 64-bit
+FILETIME structure containing the number of 100 nanosecond intervals
+since midnight of Jan 1, 1601</li>
+<li>key cells are 80-bytes long and starts with a 4-byte (ie. dword)
+value indicating its size</li>
+<li>next it has a node id, a node type, the offset to the key's parent,
+the number of subkeys, offset to the subkey list, number of values,
+offset to the value list, offset to the security id, the length of the
+key name, etc.</li>
+</ul>
+<p>Interestingly, the size of a key is <strong>negative</strong> If the
+key is deleted, then its size is made positive</p>
+<ul>
+<li>this allows you to find deleted files in the unallocated space of
+hive files</li>
+</ul>
+<p>Unlike keys, value cells don't contain pointers to other cells</p>
+<ul>
+<li>they do point to data</li>
+<li>they don't contain a FILETIME object or any other reference to
+time</li>
+<li>their size is also negative unless deleted</li>
+<li>one of the main things they contain is a 4-byte value type, which
+can be a dword, a unicode string, etc</li>
+</ul>
+<h3 id="registry-redirection">Registry Redirection</h3>
+<p>On 64-bit Windows, some registry calls by 32-bit apps are redirected
+to a different hive</p>
+<ul>
+<li>so certain info shows up in the <code
+class="verbatim">HKEY_LOCAL_MACHINE/Software/Wow6432Node</code> key,
+rather than just <code class="verbatim">…/Software</code></li>
+</ul>
+<h3 id="registry-virtualization">Registry Virtualization</h3>
+<p>Registry modifications that have a global aspect on the system will
+be written to a virtual store</p>
+<ul>
+<li><code
+class="verbatim">HKEY_USERS/&lt;SID&gt;_Classes/VirtualStore/Machine/Software/keypath</code></li>
+</ul>
+<h2 id="history">History</h2>
+<p>The Registry's purpose is to replace the config and init files that
+Windows 3.1 used</p>
+<h2 id="poorly-understood">Poorly Understood</h2>
+<p>There is no full listing of what actions by a user or the OS impact
+which Registry keys, and how they do so</p>
+<h2 id="logging">Logging</h2>
+<p>The Registry acts as a log file</p>
+<ul>
+<li>every registry key has a property called <strong>LastWrite
+time</strong>, which is updated whenever the key/value is modified</li>
+</ul>
+<h2 id="persistence">Persistence</h2>
+<p>One of the reasons that the Registry gets used in malware is that the
+Registry has persistence across reboots and logins</p>
+<p>ex. It lets the system remember that you've plugged in a certain
+device before</p>
+<p>ex. It remembers your settings for apps, if you don't use the
+defaults</p>
+<p>ex. It remembers recently accessed files</p>
+<p><strong>Note</strong>: not all apps create a presence in the
+registry</p>
+<ul>
+<li>they might use config files</li>
+</ul>
+<h2 id="different-versions">Different Versions</h2>
+<p>The binary structure of the registry has been more-or-less unchanged
+across different versions of Windows</p>
+<ul>
+<li>what changes are the keys and values, what they store, etc</li>
+</ul>
+<h2 id="registry-editor">Registry Editor</h2>
+<p>The GUI</p>
+<p>Parts of the registry visible in the editor are
+<strong>volatile</strong></p>
+<ul>
+<li>they are populated when the system is booted up or shut down</li>
+<li>ex. the <code class="verbatim">HKEY_CURRENT_USER</code> hive — you
+can see it in the editor, but if you shut down the system and look at an
+acquired image, you won't find that hive</li>
+<li>ex. the local machine hardware key and its subkeys — it contains
+info on the devices connected to the systemand their assigned
+resources</li>
+</ul>
+<p>In the local machine system hive, there's a key called
+CurrentControlSet</p>
+<ul>
+<li>it doesn't exist when the system is shut down</li>
+</ul>
+<p><code class="verbatim">HKEY_CLASSES_ROOT</code></p>
+<ul>
+<li>when the system boots, this key gets populated with the local
+machine software classes key</li>
+<li>and when the user logs in, it also gets the current user software
+classes key (which then take precedence to the local machine ones)</li>
+</ul>
+<h1 id="file-system-tunneling">File System Tunneling</h1>
+<p>An OS's ability to hold onto file system metadata</p>
+<ul>
+<li>if a file is deleted and another is created shortly after with the
+same directory entry, the OS will give the new file the metadata of the
+old one</li>
+</ul>
+<h1 id="microsoft-knowledge-base">Microsoft Knowledge Base</h1>
+<h1 id="prefetch-files-.pf">Prefetch Files (.pf)</h1>
+<h1 id="dynamic-linked-library-.dll">Dynamic Linked Library (.dll)</h1>
+<h1 id="dwords">Dwords</h1>
+<p>These are 32-bit binary values</p>
+<h1 id="volume-shadew-copies">Volume Shadew Copies</h1>
+<h1 id="hkey-current-user">HKEY Current USER</h1>
+<p>Settings for the person currently logged in</p>
+<ul>
+<li>desktop</li>
+<li>keyboard</li>
+<li>app settings</li>
+</ul>
+<h2
+id="softwarepoliciesmicrosoftwindowsexplorer">Software/Policies/Microsoft/Windows/Explorer</h2>
+<p>To get rid of internet suggestions when you search something in
+explorer</p>
+<ul>
+<li>create a DWORD called <strong>DisableSearchBoxSuggestions</strong>
+and set it to 1</li>
+</ul>
+<h2
+id="softwaremicrosoftwindowscurrentversionexplorerserialize">Software/Microsoft/Windows/CurrentVersion/Explorer/Serialize</h2>
+<p>If the <code class="verbatim">Serialize</code> folder/key doesn't
+already exist, create it, and add two dwords</p>
+<ul>
+<li><strong>WaitForIdleState</strong> value 0</li>
+<li><strong>StartupDelayInMSec</strong> value 1</li>
+</ul>
+<p>For some reason Windows delays the startup of certain apps; in
+particular, when I put apps in the startup folder, it delays them (like
+emacs and Neptune)</p>
+<h1 id="hkey-classes-root">HKey Classes Root</h1>
+<p>This is a really cool part of the registry — you can use it to edit
+the <strong>right-click menu</strong> that appears when you right click
+a file or blank space in Windows Explorer</p>
+<p>It controls</p>
+<ul>
+<li>file associations</li>
+<li>right-click menus</li>
+<li>drag-and-drop behaviour</li>
+</ul>
+<p>There are a bunch of keys in here that are all a dot followed by an
+extension: ex: <code class="verbatim">.txt</code></p>
+<h2 id="shellnew">ShellNew</h2>
+<p>If this appears in a .extension key, it will cause right clicking a
+blank space in Explorer and going to "new" on the menu, to give "create
+a new .extension file" as an option</p>
+<ul>
+<li>the subkeys/values of ShellNew are typically</li>
+<li><code class="verbatim">(Default)</code></li>
+<li><code class="verbatim">FileName</code>: a <strong>string
+value</strong> which acts as a template for the new file — whatever the
+string value is a <strong>path to the template file</strong>
+<ul>
+<li>Note that you may need to place the template file in a specific
+path: <code class="verbatim">C:\Windows\ShellNew</code></li>
+</ul></li>
+</ul>
+<h2 id="shell">Shell</h2>
+<p>This is the subkey for what happens when you right click on a
+particular file type</p>
+<ul>
+<li>ex: <code class="verbatim">.txt/shell</code> determines what happens
+when you right-click on a text file</li>
+</ul>
+<h2 id="wildcard">Wildcard</h2>
+<p>The asterisk is a wildcard, and corresponds to <strong>every file
+type</strong></p>
+<h2 id="directory">Directory</h2>
+<p>This controls what happens when you right-click a folder</p>
+<h3 id="background">Background</h3>
+<p>This subkey controls what happens when you click on the blank space
+in a folder</p>
+<h1 id="hkey-local-machine">HKey Local Machine</h1>
+<ul>
+<li>Hardware drivers</li>
+<li>boot settings</li>
+<li>security policies that affect everyone</li>
+</ul>
+<h1 id="hkey-users">HKey Users</h1>
+<ul>
+<li>profiles for every user on the machine</li>
+</ul>
+</body>
+</html>

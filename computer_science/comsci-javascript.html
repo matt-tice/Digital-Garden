@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>javascript</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">javascript</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>Dynamically typed Syntax is based on C</p>
+<h1 id="scope">Scope</h1>
+<p>var: declares a variable locally (or globally if not in any
+function)</p>
+<p>let: declares block-scope variable</p>
+<ul>
+<li>ex. its scope is the if/for/while block it's contained in</li>
+</ul>
+<p>const: declares block-scope constant</p>
+<ul>
+<li>constants <strong>can't be reassigned</strong> but they <strong>can
+be mutated</strong></li>
+<li>ex. adding element to an array</li>
+</ul>
+<h1 id="data-types">Data Types</h1>
+<h2 id="boolean">Boolean</h2>
+<h2 id="null">null</h2>
+<p><strong>Lower case</strong></p>
+<h2 id="undefined">undefined</h2>
+<h2 id="number">Number</h2>
+<h2 id="bigint">BigInt</h2>
+<p>Arbitrary precision</p>
+<h2 id="string">String</h2>
+<h2 id="symbol">Symbol</h2>
+<p>Immutable</p>
+<h2 id="object">Object</h2>
+<h3 id="promise">Promise</h3>
+<p>Represents the eventual completion (or failure) of an asynchronous
+operation, and its resulting value</p>
+<h1 id="literals">Literals</h1>
+<p>The values that variables take</p>
+<h2 id="arrays">Arrays</h2>
+<pre><code>var people = [&quot;Tim&quot;, , &quot;John&quot;, ];
+</code></pre>
+<p>Putting multiple commas allows you to create <em>empty items</em></p>
+<ul>
+<li>put <code class="verbatim">/* empty /*</code> in the empty items, to
+inform the reader</li>
+</ul>
+<p>Also <strong>final commas are ignored</strong></p>
+<ul>
+<li>this is useful for writing something like</li>
+</ul>
+<pre><code>var people = [
+  &quot;John&quot;,
+  &quot;Tim&quot;,
+  &quot;Greg&quot;,
+];
+</code></pre>
+<p>so if you add more elements to the array, you don't have to place a
+comma on a line that previously didn't have one</p>
+<h2 id="booleans">Booleans</h2>
+<h2 id="numbers">Numbers</h2>
+<h2 id="objects">Objects</h2>
+<p>Basically dictionaries</p>
+<pre><code>const colours = {
+  key: value
+};
+</code></pre>
+<h2 id="regex">Regex</h2>
+<h2 id="strings">Strings</h2>
+<h1 id="control-flow">Control Flow</h1>
+<p><strong>Block statements</strong> are things contained in { }</p>
+<h2 id="ifelse">if…else</h2>
+<pre><code>if (condition) {
+  statement;
+} else if (condition) {
+  statement;
+} else {
+  statement;
+}
+</code></pre>
+<h2 id="switch-case">switch case</h2>
+<pre><code>switch (expression) {
+  case label:
+    statement;
+    break;
+  case label:
+    ...
+  default:
+    defaultStatement;
+}
+</code></pre>
+<p>default is only done if <em>no case matches</em></p>
+<h1 id="operators">Operators</h1>
+<h2 id="await">Await</h2>
+<p>Can only be used inside of an async function or at the top level of a
+module</p>
+<p>Causes the program to pause until the relevant promise is
+completed</p>
+<h1 id="errors">Errors</h1>
+<p>Use <code class="verbatim">try</code> and <code
+class="verbatim">catch</code></p>
+<p><code class="verbatim">throw</code> raises an exception <code
+class="verbatim">finally</code> always executes</p>
+<ul>
+<li>but it will execute after all of the catch blocks</li>
+<li>but if any of the catch blocks have a return, the return will
+execute after the finally</li>
+</ul>
+<pre><code>  try {
+  ...
+} catch (error) {
+
+} catch (error) {
+
+} finally {
+
+}
+</code></pre>
+<pre><code>throw ErrorName(&quot;Error Message&quot;);
+
+...
+console.error(Error.name);
+console.error(Error.message);  
+</code></pre>
+<h1 id="time">Time</h1>
+<h2 id="set-interval">Set Interval</h2>
+<p>Instead of doing a count down, JS will tell the system to notify it
+in X Minutes The process then gets suspended</p>
+<pre><code>function startClockSync() {
+  const now = new Date();
+  const minutes = now.getMinutes();
+
+  // Calculate minutes until the next :30
+  let delayMinutes;
+  if (minutes &lt; 30) {
+    delayMinutes = 30 - minutes;
+  } else {
+    delayMinutes = (60 - minutes) + 30;
+  }
+
+  // Convert to milliseconds
+  const delayMs = delayMinutes * 60 * 1000;
+
+  // Wait for the specific &quot;sync&quot; time
+  setTimeout(() =&gt; {
+    triggerPopup(); // Show the first one
+
+    // After the first sync, repeat every 60 minutes
+    setInterval(triggerPopup, 3600000); 
+  }, delayMs);
+}
+
+function triggerPopup() {
+  const popup = document.getElementById(&#39;reminder&#39;);
+  popup.classList.add(&#39;show&#39;);
+  alertSound.play().catch(() =&gt; {});
+  setTimeout(() =&gt; popup.classList.remove(&#39;show&#39;), 10000);
+}
+
+startClockSync();
+</code></pre>
+<h1 id="resource-saving">Resource Saving</h1>
+<p>SVGs and Icon Fonts are much smaller and faster than pngs or jpgs</p>
+<p>Don't use gaussian blurs (backdrop-filter: blur() )</p>
+<ul>
+<li>use solid colours or semi-transparency (rgba)</li>
+</ul>
+<p>Gaussian blurs basically look at the surrounding pixels to figure out
+how to colour one single pixel Semi-transparency just looks at a single
+pixel on the layer above/below the target pixel</p>
+<h1 id="arrow-functions">Arrow Functions</h1>
+<h1 id="react">React</h1>
+<p>Declarative rather than imperative</p>
+<p>Encourages you to design a bunch of small components</p>
+<p>Creates a virtual DOM</p>
+<ul>
+<li>React compares the changed virtual DOM to the real one and then only
+edits the parts in the real one that have changed</li>
+<li>the speedup is based on the idea of <strong>Reflow</strong></li>
+</ul>
+<h2 id="reflow">Reflow</h2>
+<p>Whenever you change the real DOM, the browser has to recalculate the
+entire page. This is Reflow</p>
+<ul>
+<li>so if 10 things change, the browser reloads 10 times</li>
+</ul>
+<p>The virtual DOM makes all 10 changes first (assuming their caught in
+the same <strong>batch</strong>) in a JS object (which is fast) and then
+sends a single update</p>
+<h2 id="batching">Batching</h2>
+<p>React sends updates when the current task is finished</p>
+<ul>
+<li>if multiple updates all happen inside the same function, React will
+send those updates all in one</li>
+</ul>
+<p>Browsers try to refresh every 16ms (60fps)</p>
+<h2 id="components">Components</h2>
+<p>They return <strong>markup</strong></p>
+<ul>
+<li>always start with a Capital (distinguishes them from html tags)</li>
+</ul>
+<pre><code>export default
+</code></pre>
+<p>Specifies the main component of the file</p>
+<p>Can be functional or object based</p>
+<h3 id="event-handlers">Event Handlers</h3>
+<p>You can place functions into your components, for things like
+onClick{function-when-clicked}</p>
+<h3 id="hooks">Hooks</h3>
+<p>Used in functional components</p>
+<p>They start with the <code class="verbatim">use</code> keyword</p>
+<ul>
+<li>can only be called at the top of components (or other Hooks)</li>
+</ul>
+<ol>
+<li><p>Use State</p>
+<p>You can declare state variables inside of components</p>
+<pre><code>function MyButton() {
+  const [count, setCount] = useState(0);
+
+  // sets the initial count to 0
+
+  function handleClick() {
+  setCount(count + 1);
+}
+}
+</code></pre>
+<p>useState gives you two things:</p>
+<ol>
+<li>the current state (count)</li>
+<li>a ways to update the state (setCount)</li>
+</ol></li>
+<li><p>Props</p>
+<p>Normally when you have a state, it affects only the component it's
+attached to</p>
+<ul>
+<li>so if you define different buttons, that each inherit a counter,
+they'll all have different counts that work independently</li>
+</ul>
+<p>To make them use the same state, you first move the hook into the
+closest component containing them. Then you call <code
+class="verbatim">count</code> and <code class="verbatim">setCount</code>
+as variables (called <strong>props</strong>)</p>
+<ol>
+<li><p>Prop Drilling</p></li>
+<li><p>Key Prop</p></li>
+</ol></li>
+</ol>
+<h2 id="classes">Classes</h2>
+<p>CSS classes are denoted by <strong>className</strong>, rather than
+class.</p>
+<h2 id="jsx-javascript-xml">JSX (JavaScript XML)</h2>
+<p>They have tags The browser can't read JSX, so it has to be passed to
+a <em>transpiler</em>, which converts it into HTML + JS</p>
+<h2 id="router">Router</h2>
+<h2 id="life-cycle">Life Cycle</h2>
+<ol>
+<li>Mounting</li>
+<li>Updating</li>
+<li>Unmounting</li>
+</ol>
+</body>
+</html>

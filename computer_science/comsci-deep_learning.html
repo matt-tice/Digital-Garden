@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>deep learning</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">deep learning</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p><strong>Hyperparameters</strong>: values set before training</p>
+<p><strong>Parameters</strong>: values that are set by the model during
+training</p>
+<p>GPUs are really useful for neural networks, because they're designed
+to be really good at calculations with matrices (which show up in
+graphics)</p>
+<ul>
+<li><p>NN are based on a kind of linear structure, in that the input
+into a neuron is basically a linear combination, so you can represent
+the information traveling through a NN by a series of matrices being
+multiplied</p>
+<p>A<sub>1</sub> A<sub>2</sub> .. A<sub>n</sub> v</p></li>
+</ul>
+<p>where v is the input vector (technically you also have to factor in
+the activation functions, so at each new step you really have
+f(v<sub>i</sub>), where f is the activation function applied
+element-wise and v<sub>i</sub> is the output of the previous layer)</p>
+<h3 id="autoencoder">Autoencoder</h3>
+<p>Fewer neurons in the hidden layer than the input layer, and is
+trained to output the input</p>
+<ul>
+<li>built-in bottleneck</li>
+<li>for the NN to learn with this structure, it can't just be a trivial
+identity map</li>
+<li>so it, in some sense, encodes the data in something smaller</li>
+</ul>
+<h3 id="decoder">Decoder</h3>
+<p>Language generation is a kind of decoder</p>
+<ul>
+<li>you encode the input statement/question</li>
+<li>you do some kind of transformation in data-land to turn it into a
+response</li>
+<li>you decode the response into human-language</li>
+</ul>
+<p>Similarly, translation encodes in one language and decodes in the
+other</p>
+<h2 id="clustering">Clustering</h2>
+<p>A kind of unsupervised learning</p>
+<ul>
+<li>mixture models in stats</li>
+</ul>
+<h1 id="support-vector-machine">Support Vector Machine</h1>
+<h1 id="neural-instruction-multiple-data">Neural Instruction, Multiple
+Data</h1>
+<p>Each processor corresponds to a single neuron</p>
+<h1 id="history">History</h1>
+<h2 id="threshold-logic-units-1940s-1960s">Threshold Logic Units (1940s
+– 1960s)</h2>
+<p>Most models in this period used boolean inputs and outputs and
+threshold activation functions</p>
+<p>They had a single layer</p>
+<p>The focus was on if neural networks could learn basic logical
+relations like AND and OR</p>
+<h3 id="section">1943</h3>
+<p><em>A Logical Calculus of the Ideas Immanent in Nervous Activity</em>
+Walter McCulloch and Walter Pitts</p>
+<ul>
+<li>models the brain using binary inputs/outputs in neurons</li>
+<li>inputs could be  ± 1 (or 0 if the neuron wasn't firing)</li>
+<li>each neuron had a threshold function, and if the sum of the input
+values was over the threshold, it would fire</li>
+</ul>
+<h3 id="section-1">1949</h3>
+<p><em>The Organization of Behaviour</em>, D. O. Hebb</p>
+<ul>
+<li>tried to explain behaviour using neurology and psychology</li>
+<li>behaviour arose from the interactions of neurons</li>
+<li>Hebb's Postulate: when a neuron A helps make neuron B fire a lot, it
+will become more efficient at doing so</li>
+<li>this was taken up by computer scientists as the idea of putting
+weights on the connections between neurons, which could be altered
+during the process</li>
+</ul>
+<h3 id="section-2">1958</h3>
+<p>Rosenblatt's Perceptron Model</p>
+<ul>
+<li>a single neuron with threshold activation and one layer of
+weights</li>
+</ul>
+<p>Perceptron Training Rule</p>
+<ul>
+<li>updated the weights after each training example</li>
+<li>if the output is correct, don't alter</li>
+<li>if the output is too low, increase the weights of neurons that
+produced positive values, and decrease the weights of negative
+neurons</li>
+<li>if the output is too high, increase the weights for negative neurons
+and decrease positive neurons</li>
+</ul>
+<p>Perceptron Convergence Theorem</p>
+<ul>
+<li>if weights exist that will solve the problem, the perceptron will
+eventually converge to them</li>
+</ul>
+<h3 id="section-3">1960</h3>
+<p>Widrow and Hoff</p>
+<ul>
+<li>Adaptive Linear Neuron (ADALINE)
+<ul>
+<li>single neuron, single weight layer</li>
+<li>no threshold function</li>
+<li>output is the weighted sum of inputs</li>
+<li>same training rule as perceptron
+<ul>
+<li>called the Least Mean Square algorithm (LMS)</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>The point of this model was that you could use it to train the
+network to produce <em>any output</em> not just  ± 1</p>
+<h3 id="section-4">1969</h3>
+<p><em>Perceptrons</em>, Minsky and Papert</p>
+<ul>
+<li>criticized the hell out of neural networks</li>
+<li>destroyed the funding for NN research</li>
+<li>showed perceptrons can't handle XOR (it's not linearly
+separable)</li>
+</ul>
+<p>To fix this, people began using multiple layers of neurons, but they
+<strong>didn't know how to train them</strong></p>
+<ul>
+<li>the <strong>credit assignment problem</strong></li>
+</ul>
+<h2 id="connectionism-1980s-1990s">Connectionism (1980s – 1990s)</h2>
+<h3 id="section-5">1980</h3>
+<p>Fukushima</p>
+<ul>
+<li>Convolution NN</li>
+<li>neocognitron</li>
+<li>layer of neurons that all have the same set of input weights</li>
+<li>each neuron only gets input from a small region of the input
+field</li>
+</ul>
+<h3 id="section-6">1982</h3>
+<p>Hopfield</p>
+<ul>
+<li>found a network called <strong>associative memory</strong></li>
+<li>once it's been trained, if a corrupted version of an input pattern
+is presented, it can regenerate the proper pattern</li>
+<li>useful for pattern completion and error correction</li>
+</ul>
+<h3 id="section-7">1986</h3>
+<p>Parallel Distributed Processing Research Group</p>
+<ul>
+<li>Backpropagation</li>
+<li>Solves the credit assignment problem</li>
+<li>has a <em>forward</em> and <em>backward</em> pass</li>
+<li>doesn't use threshold functions; requires activation functions to be
+differentiable</li>
+<li>started using tanh x</li>
+</ul>
+<p>The problem is that this method was incredibly inefficient for deeper
+networks</p>
+<h3 id="section-8">1989</h3>
+<p>LeCun</p>
+<ul>
+<li>Convolutional Neural Network</li>
+<li>based on neocognitron</li>
+<li>can be trained using backpropagation</li>
+</ul>
+<p>CNNs are designed for <em>feature detection</em></p>
+<ul>
+<li>if a feature is present, regardless of where it's located, they
+should detect it</li>
+<li>they're designed to lose data about the relative location of a
+feature</li>
+<li>this is done by all the neurons having the same input weights (so
+the weight matrix there is really a weight vector)</li>
+<li>each neuron is given its own section of an image to look at; since
+all the neurons will have the same weights, they'll learn to each
+recognize the same feature if it shows up in their part of the
+image</li>
+</ul>
+<h3 id="section-9">1990</h3>
+<p>Elman</p>
+<ul>
+<li>Recurrent Neural Network</li>
+<li>processes a sequence of data</li>
+<li>single hidden layer</li>
+<li>output of hidden layer is fed forward to output layer and also
+stored in a buffer</li>
+<li>from the buffer, it's fed back into the hidden layer with the next
+input</li>
+<li>could generate sentences</li>
+</ul>
+<p>RNNs</p>
+<ul>
+<li>basically it's just an ordinary NN, but you increase the size of the
+input vector, so that it contains both the regular input, and the
+buffer/memory space</li>
+<li>in other words, you just partition the input vector into input and
+memory</li>
+<li>but you also have a process for storing the output into the
+memory</li>
+<li>they suffer from the vanishing gradient problem, because the paths
+that backpropagation takes get so long</li>
+</ul>
+<h3 id="section-10">1991</h3>
+<p>Hochreiter</p>
+<ul>
+<li>realized that error signals in backpropagation decay exponentially ,
+so early layers get little adjustment</li>
+<li>the <strong>vanishing gradient problem</strong></li>
+</ul>
+<h3 id="section-11">1997</h3>
+<p>Hochreiter and Schmidhuber</p>
+<ul>
+<li>long short-term memory units</li>
+<li>a solution to the vanishing gradient problem in RNNs</li>
+<li>long term memory in a NN is done by adjusting the weights</li>
+<li>short term memory corresponds to the activations that flow through
+the network</li>
+<li>LSTM allows you to keep the short term memory in the network flowing
+longer, so that you can deal with sentences where a word early in the
+sentence is related to one later on</li>
+</ul>
+<p>LSTMs</p>
+<ul>
+<li>have a cell made up of 3 gates: forget, input, output</li>
+<li>forget gate determines which activations should be forgotten</li>
+<li>input determines how activations should be updated in response to
+new input</li>
+<li>output determines which activations are used to generate output</li>
+<li>each gate is comprised of neurons</li>
+</ul>
+<h2 id="deep-learning-2000s-2010s">Deep Learning (2000s – 2010s)</h2>
+<p>Greedy layer-wise pretraining</p>
+<ul>
+<li>trains single layer at a time</li>
+</ul>
+<p>Glorot initialization</p>
+<h3 id="section-12">2011</h3>
+<p>Rectified Linear Activation Function</p>
+<ul>
+<li>max(0,x)</li>
+<li>improved training</li>
+<li>neurons using this function are called rectified linear units</li>
+<li>can only flow through positive activation</li>
+</ul>
+<h3 id="section-13">2014</h3>
+<p>Sequence-to-sequence</p>
+<ul>
+<li>two LSTM networks in sequence</li>
+<li>the first one is the encoder: processes the input one bit at a time
+and encodes it in a distributed representation</li>
+<li>the second is the decoder, and takes in the distributed rep and is
+trained to generate the output sequence one bit at a time using a
+feedback loop</li>
+</ul>
+</body>
+</html>

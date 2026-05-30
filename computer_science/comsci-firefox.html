@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>firefox</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">firefox</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<h1 id="customization">Customization</h1>
+<p>You can customize the look of firefox (in ways that it won't let you
+otherwise) by editing</p>
+<ul>
+<li><strong>userChrome.css</strong></li>
+</ul>
+<h1 id="storage">Storage</h1>
+<p>Firefox has 2 types of storage:</p>
+<ol>
+<li><code class="verbatim">browser.storage.sync</code>
+<ul>
+<li>limit of 100kb</li>
+<li>for settings</li>
+</ul></li>
+<li><code class="verbatim">browser.storage.local</code>
+<ul>
+<li>limit of 10mb</li>
+<li>can extend the storage if you ask for <code
+class="verbatim">unlimitedStorage</code> in <code
+class="verbatim">manifest.json</code></li>
+</ul></li>
+</ol>
+<h2 id="editing-stored-data">Editing Stored Data</h2>
+<p>You can't edit stored data directly on your machine, but you can
+export it to, for example, a json file, and then edit it</p>
+<h1 id="extensions">Extensions</h1>
+<p>Firefox extensions have 2 pieces:</p>
+<ol>
+<li><code class="verbatim">manifest.json</code></li>
+<li>Content scripts</li>
+</ol>
+<h2 id="manifest">Manifest</h2>
+<p>Every extension has to include this file</p>
+<p>The mandatory keys in this file are</p>
+<ul>
+<li><code class="verbatim">manifest_version</code></li>
+<li><code class="verbatim">version</code></li>
+<li><code class="verbatim">name</code></li>
+</ul>
+<p><code class="verbatim">permissions</code>:</p>
+<p><code class="verbatim">background</code>: a list of any background
+scripts that are run by the app</p>
+<pre><code>&quot;background&quot;: {
+  &quot;scripts&quot;: [&quot;background.js&quot;]
+}
+</code></pre>
+<p><code class="verbatim">content_scripts</code>: tells the browser to
+load specified content scripts</p>
+<ul>
+<li>contains a <code class="verbatim">matches</code> properties, that
+says which URL patterns must be matched in order for the scripts to be
+loaded</li>
+</ul>
+<p><code class="verbatim">action</code>: an action button that gets
+added to the toolbar</p>
+<h3 id="gecko">Gecko</h3>
+<p>The rendering engine of Firefox</p>
+<ul>
+<li>it's the thing that turns the html and css into a page visible to
+the user</li>
+</ul>
+<h3 id="id">Id</h3>
+<h2 id="my-extensions">My Extensions</h2>
+<h3 id="resume-auto-fill">Resume Auto-fill</h3>
+<p>I wanted to make my own resume auto-filler extension. I tried
+SpeedyApply, but there were a few things I didn't like about it.</p>
+<ol>
+<li><p>Logic</p>
+<ol>
+<li>Search: Scan the DOM for appropriate tags</li>
+<li>Interpret: Use regex or keyword matching to figure out what a field
+wants</li>
+<li>Fill: Set the <code class="verbatim">.value</code> of those fields
+and trigger <code class="verbatim">input</code> or <code
+class="verbatim">change</code> events, so the site knows it's been
+updated</li>
+</ol></li>
+<li><p>Things to be aware of</p>
+<p>Shadow DOMS</p>
+<p>Dynamic Loading</p>
+<ul>
+<li>the form doesn't exist when the page first loads</li>
+</ul></li>
+<li><p>Changes from SpeedyApply</p>
+<p>I can set a custom keybinding to make the auto-fill trigger precisely
+when I want, instead of having the extension automatically fill every
+time</p>
+<ul>
+<li>register the command in <code
+class="verbatim">manifest.json</code></li>
+<li>set up a background script to listen for the command, and send it to
+the content script</li>
+</ul>
+<p>I don't have to pay for multiple profiles</p>
+<ul>
+<li>if you can make one profile, it's really easy (from a programming
+perspective) to make arbitrarily many</li>
+<li>just store them all as objects in a JSON array</li>
+</ul>
+<p>If you manually fill out any part of an application, you can scrape
+it and save it as part of a profile</p></li>
+</ol>
+</body>
+</html>

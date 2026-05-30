@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>credit</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">credit</h1>
+</header>
+<h1 id="references">References</h1>
+<p>Thomas, Consumer Credit Models</p>
+<h1 id="credit-scores">Credit Scores</h1>
+<p>Developed in the 1950s, along with the first credit cards</p>
+<p>Purpose: to judge default risk (the risk that the borrower won't pay
+it back)</p>
+<p>Based on Fisher's statistical methods of classification in the
+1930s</p>
+<p>Scoring classically focused on a very specific risk: typically that
+the client will go 90 days overdue on their payments in the next 12
+months</p>
+<ul>
+<li>Applicants were then ranked, and the top ones accepted</li>
+<li>The actual value of the credit score was irrelevant</li>
+</ul>
+<p>Credit bureaus started up; they pooled a bunch of legally available
+credit data on consumers</p>
+<h2 id="s">1980s</h2>
+<p>Behavioural scoring: info on the payment and purchase behaviour of
+clients in the recent past is used (the <em>observation period</em>,
+typically the last 12 months) along with info from credit bureaus and
+the classical application data</p>
+<ul>
+<li>behavioural scores are updated monthly for clients</li>
+</ul>
+<h2 id="attrition">Attrition</h2>
+<p>The likelyhood that a client will move their business elsewhere</p>
+<p>Nowadays credit is <strong>essentially saturated</strong>; people
+don't want much more credit, but they might be interested in moving
+lenders to get a better rate</p>
+<h2 id="profit-scoring-systems">Profit Scoring Systems</h2>
+<p>The new way of doing credit scores: focused on how to make the lender
+the most money</p>
+<p>Profit is normally compared with volume of customers</p>
+<ul>
+<li>if you accept no one, you'll have negative profit (still having to
+pay whatever the costs of the bank are)</li>
+<li>if you accept everyone, a lot of them will default and you'll lose
+that money</li>
+</ul>
+<h2 id="retail-portfolio">Retail Portfolio</h2>
+<p>The portfolio of loans</p>
+<p>We can think of the consumer as a company. The bank increasing the
+portfolio of a client is basically then increasing their market
+share</p>
+<h2 id="logistic-regression">Logistic Regression</h2>
+<p>This is usually the basic way of computing a credit score. Logistic
+regression allows you to estimate how likely it is that a certain event
+will occur.</p>
+<ul>
+<li>You have a binary variable (say, <code
+class="verbatim">will default on the loan</code>, or <code
+class="verbatim">will pay it back</code>)</li>
+<li>You take a bunch of data and plot it against whether in that
+situation the person defaulted or not</li>
+<li>You perform regression with a logistic function (s-curve)</li>
+<li>The logistic function is continuous, and you interpret its value
+(say normalized to be between 0 and 1) to be the probability of paying
+back the loan</li>
+</ul>
+<p>For some reason, instead of looking at values between 0 and 1, credit
+scores normalize it to be between something like 0 and 1000, but the
+same idea applies.</p>
+<p>With this in mind, we can try to optimize our credit score</p>
+<h3 id="impacting-credit-scores">Impacting Credit Scores</h3>
+<p>In Canada there are 2 companies — Equifax and TransUnion — that
+compute your credit scores. They both use the same info, but use
+different formulas. They give you more or less the same result,
+though.</p>
+<p>The data which the model is trained on comes from 2 main sources:</p>
+<ol>
+<li>Prior borrowers</li>
+<li>The current credit applicant</li>
+</ol>
+<p>Those then give you different categories of effective ways of
+improving your score.</p>
+<p>When looking at prior borrowers, the information of whether they
+defaulted on the loan or not (or if the missed payments, etc.) is
+available.</p>
+<ul>
+<li>Consequently, prior borrowers can be evaluated by the bank, and
+given a binary value (say, good/bad), used for the regression.</li>
+</ul>
+<ol>
+<li><p>Application Scoring</p>
+<p>The data set is only made up of those who were actually accepted for
+a loan</p>
+<ul>
+<li>It's mainly used for approving a new customer for a loan</li>
+</ul></li>
+<li><p>Behavioural Scoring</p>
+<p>We first select some cut-off date in the past, and then look at all
+borrowers who have data both before the cut-off and after the
+cut-off</p>
+<ul>
+<li>Used on existing customers</li>
+<li>Includes information on the applicant</li>
+</ul></li>
+</ol>
+<h1 id="utilities">Utilities</h1>
+<p>These can essentially be viewed as a form of unsecured credit, since
+the utility company provides the service <em>prior to payment</em></p>
+<h1 id="personal-line-of-credit">Personal Line of Credit</h1>
+<p>Low interest and higher credit limits than credit cards.</p>
+<h2 id="secured-ploc">Secured PLoC</h2>
+<p>Higher credit limits than unsecured. Lower interest.</p>
+<p>There is some kind of collateral that you put up. Different
+institutions will take different things as collateral.</p>
+<h3 id="home-equity-line-of-credit">Home Equity Line of Credit:</h3>
+<p>Use your home's equity as collateral.</p>
+<ul>
+<li>Most places accept this</li>
+</ul>
+<h2 id="unsecured-ploc">Unsecured PLoC</h2>
+<p>In this case, you don't put up any collateral. As a consequence, the
+interest is higher</p>
+<h1 id="credit-card">Credit Card</h1>
+<p>Has much higher interest and typically a lower credit limit</p>
+<p>The benefit of a credit card is that you can get different benefits
+and rewards from making purchases with them. LoC are just the
+credit.</p>
+<p>Credit cards are also more widely used and accepted, so it's likely
+that you'll be able to buy whatever you want using them.</p>
+<h1 id="personal-loan">Personal Loan</h1>
+<h1 id="credit-score">Credit Score</h1>
+<h1 id="bank-of-canada">Bank of Canada</h1>
+<h2 id="overnight-policy-interest-rate">Overnight / Policy Interest
+Rate</h2>
+<p>Every day, banks are legally required to have a certain amount of
+money in their reserve, to avoid bank runs</p>
+<p>Some banks will have more than they need and some less, so they'll
+loan each other money.</p>
+<p>The Bank of Canada <em>can't directly control</em> the rate that
+other banks lend at. So instead, it has a rate that it would really like
+them to lend at, called the <strong>policy interest rate</strong>.</p>
+<p>The policy rate will be calculated in some fancy way, in terms of
+some other rates that the Bank of Canada does directly control.</p>
+<p>By setting the rate that the BoC gives other banks for loans and
+savings, they incentivize banks to loan to each other at a competitive
+rate.</p>
+<ul>
+<li>ex: if BoC says that they'll loan at 2% interest, any of the
+ordinary banks that have extra funds will want to loan at a lower rate,
+to make sure that they have buyers.</li>
+<li>Similarly, if the BoC is willing to borrow money from other banks at
+2%, then banks can take their excess money and stuff it into the BoC,
+unless other banks are willing to give them even more interest. So banks
+are incentivized to buy from other banks at a higher rate (since they
+need to buy to maintain reserves)</li>
+</ul>
+<h2 id="bank-rate">Bank Rate</h2>
+<p>The rate that the Bank of Canada will loan to other banks at</p>
+<h2 id="deposit-rate">Deposit Rate</h2>
+<p>The rate that the Bank of Canada will give to people that loan it
+money. Basically a savings account for the other banks</p>
+<h2 id="floor-vs-corridor-system">Floor vs Corridor System</h2>
+<p>The range between the bank and deposit rate is called the operating
+band</p>
+<p>Because the policy rate isn't set directly, and is just a target, you
+need some model to calculate what the policy rate will be in practice,
+given any set of actions by the Bank.</p>
+<h3 id="corridor">Corridor</h3>
+<p>This is the basic model, in which the policy rate is assumed to be
+halfway between the bank and deposit rates</p>
+<h3 id="floor">Floor</h3>
+<p>In this model, the policy rate is very slightly above the deposit
+rate.</p>
+<ul>
+<li>The BoC switched to this model during Covid</li>
+</ul>
+<h1 id="loans">Loans</h1>
+<h1 id="mortgage">Mortgage</h1>
+<p>Mortgage loans are secured by property (like a house)</p>
+<p>Down payment: The cash that you put upfront</p>
+<h2 id="amortization">Amortization</h2>
+<p>The total time it'll take to pay off your mortgage</p>
+<h2 id="terms">Terms</h2>
+<p>The time a fixed mortgage contract stays in place before you'll have
+to renew your mortgage</p>
+<p>In the US, these periods can be 30 years long, but in Canada they're
+much shorter</p>
+<p>Longer terms usually have higher rates</p>
+<h3 id="closed-term">Closed-Term</h3>
+<p>Inflexible mortgages. If you repay your mortgage outside of the
+rules, you'll have to pay penalties</p>
+<ul>
+<li>for example, if you pay your mortgage off early, you'll also have to
+pay an extra penalty</li>
+</ul>
+<h3 id="open-term">Open-Term</h3>
+<p>Have higher rates, but you can pay off early</p>
+<h2 id="ratio">Ratio</h2>
+<p>Low ratio: Down payment is at least 20%</p>
+<ul>
+<li>Has a higher rate
+<ul>
+<li>Usually if you do the math, this choice could work out better, since
+you don't pay insurance premiums</li>
+</ul></li>
+</ul>
+<p>High ratio: Less than 20%</p>
+<ul>
+<li>requires you to buy mortgage default insurance</li>
+<li>lower rate, because the bank doesn't need to worry about you not
+having insurance</li>
+</ul>
+<div class="THOUGHTS drawer">
+<p>One interesting thing you can do is to get the 20%, but then do less
+than it anyway, and invest the difference; the returns on the investment
+can offset the extra premiums</p>
+<ul>
+<li>but you'd really have to run the numbers; it's pretty risky</li>
+</ul>
+</div>
+<h2 id="rate">Rate</h2>
+<h3 id="fixed-rate">Fixed Rate</h3>
+<p>You rate is locked in for the whole term</p>
+<p>Good if you lock in low Bad if you lock in high</p>
+<h3 id="variable-rate">Variable Rate</h3>
+<p>If the prime rate changes, your payment stays the same, but you pay
+more/less to the principle compared to the interest</p>
+<p>Better if the interest rate goes up — more gets paid to the
+principle. Not good if the rate goes down — you just pay relatively more
+interest</p>
+<h3 id="adjustable-rate">Adjustable Rate</h3>
+<p>Your rate over the course of the term changes with the lender's prime
+rate</p>
+<p>Better if interest rate goes down — you pay less. Worse if interest
+rate goes up — you pay more</p>
+<h2 id="conventional-mortgage">Conventional Mortgage</h2>
+<div class="OPINION drawer">
+<p>So-called "house hacking":</p>
+<p>Buy a duplex, rent out one side, which pays off your mortgage</p>
+</div>
+<h2 id="tax">Tax</h2>
+<p>Mortgages have a number of tax benefits</p>
+<h1 id="reverse-mortgage">Reverse Mortgage</h1>
+<h1 id="debt-consolidation">Debt Consolidation</h1>
+<p>If you have different credit types with different levels of interest,
+you can pay off some of the debt with other debt: this is
+consolidation</p>
+<ul>
+<li>ex. if your credit card has 19% interest, and your line of credit
+only has 7%, you basically transfer the debt from the card to the line
+of credit</li>
+</ul>
+</body>
+</html>

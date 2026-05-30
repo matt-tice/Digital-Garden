@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>chain complexes</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">chain complexes</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="cohomology">(co)Homology</h1>
+<p>ker d<sub>n</sub> / im d<sub>n+1</sub></p>
+<h2 id="differential-operators">Differential Operators</h2>
+<p>If we view d as a kind of linear differential operator, or a system
+of equations, then</p>
+<ul>
+<li>the cycles are <strong>homogeneous solutions</strong>: d(f) =
+0.</li>
+<li>the boundaries are <strong>integrable:</strong> f = d(g).</li>
+</ul>
+<p>The homology then tells you about the <strong>non-integrable
+solutions.</strong></p>
+<h3 id="example-electromagnetism">Example: Electromagnetism</h3>
+<p>In EM, Maxwell's equations tell us ∇ċ B = 0 So the magnetic field is
+a cycle. But when doing calculations, we often want to integrate the
+magnetic field, in order to compute things about it; so we need B to be
+<em>integrable</em></p>
+<ul>
+<li>so we want it to be a boundary.</li>
+</ul>
+<p>This means that we need B = ∇ × A This says that there is a
+<strong>magnetic potential</strong> A, that generates the actual
+magnetic field.</p>
+<p>In fact, looking at the de Rham complex, <strong>Helmholtz's
+theorem</strong> says that for R<sup>N</sup>, the (co)homology at the
+level of the magnetic field is zero (every magnetic field satisfying
+Maxwell's equations is integrable).</p>
+<ol>
+<li><p>Aharonov-Bohm Effect</p>
+<p>When you puncture R, you get non-trivial cohomology</p>
+<ul>
+<li>so there are certain <strong>obstructions</strong> (non-integrable
+solutions).</li>
+<li>In particular, there are fields with zero curl that <em>aren't
+gradients.</em></li>
+</ul></li>
+</ol>
+<h2 id="cohomology-1">Cohomology</h2>
+<p>Coboundaries are <strong>flat</strong> or
+<strong>path-independent</strong> or <strong>conservative</strong></p>
+<ul>
+<li>if you take any two paths from the same starting point to the same
+ending point, you get the same result (of taking the integral over the
+path, say)</li>
+<li>so there's no energy being lost anywhere, in a certain sense</li>
+</ul>
+<p>Using Poincaré duality, we have that &lt;d f , γ&gt; = &lt;f, ∂ γ&gt;
+where d is the codifferential, and ∂ is the differential, and the
+pairing is integrating the function (cochain) over the space
+(chain).</p>
+<p>A coboundary is g = df. So for coboundaries &lt;g, γ&gt; = &lt;f,
+∂γ&gt; So g is determined by just the boundary (paths through the bulk
+are irrelevant).</p>
+<p>A cocycle will satisfy &lt;f, ∂ γ&gt; = &lt;0, γ&gt; = 0 for all γ.
+So it has <strong>no information on the boundary</strong></p>
+<ul>
+<li>it's "path independent" on the boundary, in a higher dimensional
+sense</li>
+<li><strong>any two half-coverings of the boundary</strong> give the
+same integral</li>
+</ul>
+<p>But think about what this means: when we take two half-coverings,
+we're just taking two pieces of the boundary, and saying they stitch
+together to form the whole boundary (they don't literally need to have
+the same size, any 2-block partition will work). So there's a
+<strong>glue-line</strong> that you're stitching the coverings together
+on.</p>
+<p>But no matter how you move, stretch, contract, etc. the covering
+pieces, the fact that they come together at the glue-line means they
+enclose a bulk — they're the boundary of <em>something</em>. So the
+integral of each piece will always be the same! So if you take just one
+of the two coverings, no matter how you move it around, its integral
+will never change, as long as you keep the glue-line fixed in place.</p>
+<ul>
+<li>this is absolutely fascinating!</li>
+</ul>
+<p>By the way, you need to keep the glue-line the same, because if you
+don't one will be bigger than the other, and so you can't stitch the two
+versions together to enclose a bulk.</p>
+<p>But note that here, this only works when we're integrating over ∂ γ.
+So <em>by assumption</em> there's a bulk, γ. In other words, a cocycle
+is something that, if you have a bulk, becomes path independent on the
+boundary.</p>
+<ul>
+<li>so the cocycle <strong>adds no information to the bulk</strong></li>
+<li>this in turn means that the only way you can get non-trivial info
+from the bulk is if the actual geometry of the bulk is non-trivial (for
+example, there's a hole in it)</li>
+</ul>
+<p>Cocycles can <strong>suck the information</strong> from the boundary
+into the bulk. The boundary data is trivial; all that matters is what's
+in the bulk</p>
+<h3 id="mapping-cones">Mapping Cones</h3>
+<p>A mapping cone of a function f: X → Y glues a cone-version of X onto
+Y, along f. You first form the mapping cylinder X × I, and then glue an
+end on Y, and then collapse the other end to a point.</p>
+<p>Our perspective on cocycles then tells us that a cocycle's integral
+won't change, as you deform X, as long as you keep f fixed.</p>
+<h3 id="cohomology-2">Cohomology</h3>
+<p>Cohomology is then very interesting: think of the mapping cone, or
+half a sphere. Being a cocycle for the hemisphere means you can deform
+the hemisphere and nothing changes.</p>
+<p>But that hemisphere is actually the <strong>bulk for the gluing
+line</strong>! Which means that deforming the hemisphere also won't
+change coboundaries on the gluing line.</p>
+<p>Consider the pair of pants cobordism M. We break it into 3 parts:</p>
+<ol>
+<li>the 1d rims Γ = ∂ Σ</li>
+<li>the 2d surface Σ = ∂ M</li>
+<li>the 3d bulk M</li>
+</ol>
+<p>What we found above is that the cocycles and coboundaries don't
+notice the shape of the cobordism at all, other than the fact that it
+has a certain number of rims.</p>
+<ul>
+<li>in other words, they only care about the topological class of the
+cobordism</li>
+<li>this is how we see a <strong>topological quantum field
+theory</strong> arising: taking path integrals is independent of the
+world-sheet defining the cobordism</li>
+</ul>
+<h2 id="topological-string-theory">Topological String Theory</h2>
+<p>In the A-model you basically work with a pair of pants where you
+collapse all three of the rims to points</p>
+<ul>
+<li>this is the <em>virtual holomorphic sphere</em></li>
+</ul>
+<p>The theory is topological in the sense that d ω = 0 (ω is a cycle),
+for an appropriate d</p>
+<ul>
+<li>this says that you can change the metric of your pants</li>
+<li>and even if you do that, you have certain <strong>Gromov-Witten
+invariants</strong> (the integral on the surface, of ω)</li>
+</ul>
+<p>The idea of <strong>quantum cohomology</strong> is that you study
+maps f: S<sup>2</sup> → X that hit three different cycles in the
+manifold X (the collapsed rims of the pants)</p>
+<p>You think of the map f as a kind of non-local communication between
+the cycles (strings)</p>
+<h1 id="exact-sequences">Exact Sequences</h1>
+<p>From our discussions on homology, we have that exact sequences are
+like spaces that are <strong>very calm</strong></p>
+<ul>
+<li>no singularities</li>
+<li>no holes</li>
+<li>no vortices</li>
+</ul>
+<p>But they can still have twists (like a Möbius band)</p>
+<h2 id="split-exact-sequences">Split Exact Sequences</h2>
+<p>Correspond to untwisted, calm spaces.</p>
+<h1 id="summary">Summary</h1>
+<p>Consider a polynomial algebra k[x]. We can perform a resolution on
+the algebra k[x]/x</p>
+<ul>
+<li>We want k[x]/x to be the zeroth homology, and for all the other
+homologies to be zero.</li>
+</ul>
+<p>Set C<sub>0</sub> = k[x] and C<sub>1</sub> = k[x, ε], where ε is a
+formal element in degree 1, and defining d(ε) = x.</p>
+<p>If we further require the algebra structure to be graded commutative,
+we have ε<sup>2</sup> = 0. So we can interpret this as something like an
+<strong>infinitesimal</strong></p>
+<p>Now the elements in degree 1 have the form p(x) ε , where p(x) ∈
+C<sub>0</sub> is a polynomial with boundary d(p) ε + p d(ε) = 0 + p(x)
+x.</p>
+<p>It follows that if there is a cycle in degree 1, we'd have d(p ε) =
+p(x) x = 0.</p>
+<p>If there are no zero-divisors, this implies that there are no cycles.
+So H<sub>1</sub>  ≅ 0.</p>
+<p>Similarly, if we take the higher degrees, we're trivial, because they
+would need to be built out of elements in degree 1 (to increase the
+degree). But since ε<sup>2</sup> = 0, this produces no elements above
+degree 1. Thus H<sub>n  ≥ 1</sub>  ≅ 0, and so we get a (very easy)
+resolution of k[x]: 0 → k[x, ε] → k[x]  → 0 which is quasi-isomorphic to
+k[x] (as a trivial chain complex: 0 → k[x]  → 0).</p>
+<h1 id="functional-analysis">Functional Analysis</h1>
+<h2 id="fredholm-operators">Fredholm Operators</h2>
+<p>By definition, these are operators with</p>
+<ul>
+<li>finite dimensional kernel</li>
+<li>finite dimensional and closed cokernel</li>
+</ul>
+<p>The <strong>Fredholm index</strong> is dim(ker) - dim(coker) It
+counts solutions to equations</p>
+<h2 id="atiyah-singer-index-theorem">Atiyah-Singer Index Theorem</h2>
+<p>If T is an elliptic differential operator on a manifold, the
+analytical index is equal to the topological index</p>
+<ul>
+<li>the analytical index is the homology of the operator</li>
+<li>the topological index is the cohomology of the manifold's tangent
+bundle.</li>
+</ul>
+<h1 id="harmonic-analysis">Harmonic Analysis</h1>
+<p>A locally compact group is amenable if and only if its first
+Hochschild cohomology group of its convolution algebra with coefficients
+in dual modules is zero: H<sup>1</sup>(L<sup>1</sup>(G), X<sup>*</sup>)
+ ≅ 0</p>
+<h1 id="complex-analysis">Complex Analysis</h1>
+<h2 id="hartogs-extension-theorem">Hartog's Extension Theorem</h2>
+<p>Holomorphic functions are those that are locally complex
+differentiable</p>
+<ul>
+<li>each point has some neighbourhood on which it's complex
+differentiable.</li>
+</ul>
+<p>This is enough to conclude that the function is analytic</p>
+<h3 id="sheaf-cohomology">Sheaf Cohomology</h3>
+<h2 id="analytic-continuation">Analytic Continuation</h2>
+<p>This is actually related to <strong>relative cohomology</strong></p>
+<p>Mikio Sato viewed real functions (which you'd like to analytically
+continue) as <em>being boundaries between two holomorphic
+functions</em></p>
+<p>You build relative cohomology out of this idea: take … → O(C) → O(C ∖
+R) → H<sup>1</sup><sub>R</sub>(C, O)  → 0 where O is the sheaf of
+holomorphic functions. This is a long exact sequence.</p>
+<p>An element of O(C ∖ R) is really a pair of holomorphic functions: one
+defined on the upper half plane, one defined on the lower.</p>
+<p>The codifferential into H<sup>1</sup> is a computation of the
+difference between a pair of holomorphic functions, as you approach the
+real axis.</p>
+<p>Functions that admit analytic continuations are precisely
+coboundaries in the first degree</p>
+<h2 id="wick-rotation">Wick Rotation</h2>
+<p>When you take a path integral, say over time, you're integrating
+∫<sub>-∞</sub><sup>∞</sup> ω where ω is some complex differential
+form.</p>
+<p>When we do wick rotation, we want to switch into imaginary time. How
+does this work?</p>
+<p>Consider the upper right and lower left quadrants of the complex
+plane.</p>
+<p>Well say ω is closed (a cocycle). Then we can think of the real and
+imaginary axes as two half-coverings of a larger bulk made up of the
+upper right and lower left quadrants</p>
+<ul>
+<li>if there are no poles in those quadrants, then we can perform wick
+rotation, because our two different half-coverings give the same
+integral.</li>
+</ul>
+<p>To be a bit more precise, typically what you do is you have to
+consider finite parts of the quadrants and then take the limits to
+infinity</p>
+<ul>
+<li><p>this is because the integral over the whole, non-compact, domain
+might not exist</p>
+<p>On the other hand, you can use <strong>Borel-Moore
+Homology</strong></p>
+<ul>
+<li>this allows your chains to be non-compact.</li>
+<li>it'll basically give you exactly what I was saying above</li>
+</ul></li>
+</ul>
+<p>I guess another way of thinking about it, is you compactify C (say,
+into the Riemann sphere) and then play the game</p>
+<ul>
+<li>the real and imaginary axes become circles on the sphere that meet
+at 0 and ∞ (north and south poles) But when you do this, your integrand
+actually becomes very messy at ∞
+<ul>
+<li>but you can't just remove that point, because it'll add a new point
+to your boundary</li>
+</ul></li>
+<li>so you basically turn the point into a small circle and then take
+the limit as you close the circle</li>
+</ul>
+<p>If the pole at ∞ is regular or logarithmic, everything is fine</p>
+<ul>
+<li>if it's an essential singularity, you have to be careful</li>
+<li>this is actually related to <strong>global D-Module
+theory</strong></li>
+</ul>
+<h1 id="cup-product">Cup Product</h1>
+</body>
+</html>
