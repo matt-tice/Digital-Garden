@@ -57,12 +57,13 @@
 			)
 		     (org-element-put-property link :type "file")
 		     (org-element-put-property link :path html-path)
-		     link)) 		; We need to return the link, so that it doesn't just appear as the raw id
+		     (org-element-put-property link :raw-link (concat "file:" html-path))
+		     )) 		; We need to return the link, so that it doesn't just appear as the raw id
 		  (t
 		   (message "[WARNING] Broken org-id link found in file: %s (Target ID: %s)" (buffer-file-name) link-path)
 		   (org-element-put-property link :type "customid")
 		   (org-element-put-property link :path "broken-link"))
-		  link)
+		  )
 	    ))))))
 ;; Since you're modifying the AST, you need to return the whole tree at the end
   tree)
