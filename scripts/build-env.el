@@ -52,9 +52,9 @@
 		   (let*
 		       ((rel-path-from-root (file-relative-name target-file (expand-file-name "public/notes") org-roam-directory))
 			(base-path (file-name-sans-extension rel-path-from-root))
-			(html-path (concat "matt-tice.github.io/Digital-Garden/" base-path ".html"))
+			(html-path (concat "https://matt-tice.github.io/Digital-Garden/" base-path ".html"))
 			)
-		     (org-element-put-property link :type "file")
+		     (org-element-put-property link :type "https")
 		     (org-element-put-property link :path html-path)
 		     )) 		;
 		  (t
