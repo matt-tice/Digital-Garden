@@ -24,9 +24,9 @@
 ;; --- 3. Parsing & Redaction Filters ---
 (defun my/org-export-private-to-stub (text backend info)
   "A robust filter to turn private links into stubs."
-  (when (org-export-derived-backend-p backend 'html)
+  (when (org-export-derived-backend-p backend '(html org))
     (let* ((case-fold-search t)
-           (private-regex "\\[\\(.*?\\)\\].*/private/\\(.*?\\)\\.\\(org\\|md\\)"))
+           (private-regex "\\[\\(.*?\\)\\].*/private/\\(.*?\\)\\.\\(org\\|html\\|md\\)"))
       (if (string-match private-regex text)
           (let ((link-text (match-string 1 text)))
             (format "**%s** [?? Note currently private]" link-text))
@@ -34,14 +34,14 @@
 
 (defun my/org-export-sanitize-documents-path (text backend info)
   "Scrub the user's home directory from the final GitHub output."
-  (when (org-export-derived-backend-p backend 'html)
+  (when (org-export-derived-backend-p backend '(html org))
     (let ((user-home (expand-file-name "~")))
       (replace-regexp-in-string (regexp-quote user-home) "[HOME]/" text))))
 
 ;; Turn org-roam links into regular org-links (which github can understand)
 (defun my/org-export-resolve-org-ids (tree backend info)
   "Traverses the Org AST and mutates raw 'id:' link objects into standard relative 'file:' links."
-  (when (org-export-derived-backend-p backend 'html)
+  (when (org-export-derived-backend-p backend '(html org))
   (org-element-map tree 'link
     (lambda (link)
       (let ((link-type (org-element-property :type link))
@@ -50,6 +50,7 @@
         (when (string= link-type "id")
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
+		   (message "Target file: %s" target-file)
 		   (let*
 		       ((rel-path-from-root (file-relative-name target-file (expand-file-name "public/notes" org-roam-directory)))
 			(base-path (file-name-sans-extension rel-path-from-root))
