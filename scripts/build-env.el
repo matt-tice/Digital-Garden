@@ -50,11 +50,10 @@
         (when (string= link-type "id")
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
-		   (message "Target file: %s" target-file)
 		   (let*
-		       ((rel-path-from-root (file-relative-name target-file (expand-file-name "public/notes" org-roam-directory)))
+		       ((rel-path-from-root (file-relative-name target-file "notes"))
 			(base-path (file-name-sans-extension rel-path-from-root))
-			(html-path (concat "https://matt-tice.github.io/Digital-Garden/" base-path ".html"))
+			(html-path (concat "/Digital-Garden/" base-path ".html"))
 			)
 		     (org-element-put-property link :type "https")
 		     (org-element-put-property link :path html-path)
