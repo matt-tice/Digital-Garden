@@ -56,11 +56,12 @@
 			)
 		     (org-element-put-property link :type "file")
 		     (org-element-put-property link :path html-path)
-		     link)) 		;; Return the modified link object
+		     tree)) 		;; Since you're modifying the AST, you need to return the whole tree at the end
 		  (t
 		   (message "[WARNING] Broken org-id link found in file: %s (Target ID: %s)" (buffer-file-name) link-path)
 		   (org-element-put-property link :type "customid")
-		   (org-element-put-property link :path "broken-link")))
+		   (org-element-put-property link :path "broken-link"))
+		  tree)
 	    ))))
   ;; Return the mutated tree back to the export pipeline
   tree))
