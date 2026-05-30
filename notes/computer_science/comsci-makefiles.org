@@ -36,7 +36,7 @@ Bash uses semicolons as a newline symbol
 
 You can't put comments inside of multiline commands being sent to bash
 
-[[id:b3fc3adb-e5bb-4dcf-bc6c-d89380d227ed][capillaries]] something
+[[id:b3fc3adb-e5bb-4dcf-bc6c-d89380d227ed][capillaries]] something for a test
 
 [[id:a73dd6a3-d95b-4461-9fff-935f7ba8e12a][betapro]] and a bit more
 

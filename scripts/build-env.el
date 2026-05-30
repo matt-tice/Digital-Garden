@@ -49,10 +49,11 @@
         (when (string= link-type "id")
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
-		   (let* ((current-file (buffer-file-name)) ;; The file name includes the file extension
-			  (rel-path (file-relative-name target-file (file-name-directory current-file)))
-			  (html-path (concat (file-name-sans-extension rel-path) ".html"))
-			  )
+		   (let*
+		       ((rel-path-from-root (file-relative-name target-file "notes"))
+			(base-path (file-name-sans-extension rel-path-from-root))
+			(html-path (concat "./" base-path ".html"))
+			)
 		     (org-element-put-property link :type "file")
 		     (org-element-put-property link :path html-path)
 		     link)) 		;; Return the modified link object
