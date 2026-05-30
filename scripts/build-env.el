@@ -41,6 +41,7 @@
 ;; Turn org-roam links into regular org-links (which github can understand)
 (defun my/org-export-resolve-org-ids (tree backend info)
   "Traverses the Org AST and mutates raw 'id:' link objects into standard relative 'file:' links."
+  (when (org-export-derived-backend-p backend 'html)
   (org-element-map tree 'link
     (lambda (link)
       (let ((link-type (org-element-property :type link))
@@ -62,7 +63,7 @@
 		   (org-element-put-property link :type "customid")
 		   (org-element-put-property link :path "broken-link"))
 		  )
-	    )))))
+	    ))))))
 ;; Since you're modifying the AST, you need to return the whole tree at the end
   tree)
 
