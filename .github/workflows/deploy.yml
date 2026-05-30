@@ -22,6 +22,8 @@ jobs:
 
       - name: Compute Changes and Run Make
         run: |
+          # Make sure the output directory exists, even if no org files were modified (in case the makefile, yaml file, etc. are modified)
+          mkdir -p public-export
           # 1. Extract only the modified .org files from the commit diff
           CHANGED_ORG=$(git diff --name-only HEAD^1 HEAD | grep '^notes/.*\.org$' || true)
 
