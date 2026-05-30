@@ -40,6 +40,7 @@ You can't put comments inside of multiline commands being sent to bash
 
 [[id:b39040b9-3ae9-413a-b661-c8a68276d69f][Oil and Gas]] is a file
 
+[[id:8c1545c5-1a9e-4fad-892b-d2cfb0733cba][perfect pitch]] is a private file
 
 [[id:1b39b018-aae3-4a4b-972d-13f280be18cb][makefiles]] one more test.
 
