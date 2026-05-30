@@ -59,7 +59,7 @@
 		   (org-element-put-property link :path "broken-link")))
 	    ))))
   ;; Return the mutated tree back to the export pipeline
-  tree)
+  tree))
 
 ;; --- 4. The Unified Cloud Export Driver ---
 ;; The original exporter turned things into markdown files, which was perfect for when we were just navigating in the repo
