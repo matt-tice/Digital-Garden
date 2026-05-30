@@ -29,12 +29,12 @@ jobs:
 
           # 2. Check if there is actual work to do
           # if [ -z "$CHANGED_ORG" ]; then
-            # echo "No .org files modified in this push. Skipping compilation."
-            # exit 0
+          #   echo "No .org files modified in this push. Skipping compilation."
+          #   exit 0
           # fi
 
-          # echo "Modified source files detected:"
-          # echo "$CHANGED_ORG"
+          echo "Modified source files detected:"
+          echo "$CHANGED_ORG"
 
           # 3. Transform the .org source paths into the expected .md target paths
           # Example: notes/engineering/vector.org -> public-export/engineering/vector.md

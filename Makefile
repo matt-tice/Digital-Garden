@@ -67,9 +67,9 @@ $(DIR_INDEXES): $(OUT_DIR)/%/index.html: | $(OUT_DIR)
 		echo "#+TITLE: Index of $*" ; \
 		echo "* Notes in this area:" ; \
 		for file in $(notdir $(basename $(filter $(ORG_DIR)/$*/% ,$(ALL_SOURCES)))); do \
-			;; 	# Replace all underscores with spaces in the file name
+# Replace all underscores with spaces in the file name
 			DISPLAY_NAME="$${file//_/ }" ; \
-			;; 	# Put the clean name in the link display
+# Put the clean name in the link display
 			echo " - [[./$$file.html][$$DISPLAY_NAME]]" ; \
 		done \
 	) > $@.tmp
