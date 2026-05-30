@@ -24,7 +24,7 @@
 ;; --- 3. Parsing & Redaction Filters ---
 (defun my/org-export-private-to-stub (text backend info)
   "A robust filter to turn private links into stubs."
-  (when (org-export-derived-backend-p backend 'gfm)
+  (when (org-export-derived-backend-p backend 'html)
     (let* ((case-fold-search t)
            (private-regex "\\[\\(.*?\\)\\].*/private/\\(.*?\\)\\.\\(org\\|md\\)"))
       (if (string-match private-regex text)
@@ -34,7 +34,7 @@
 
 (defun my/org-export-sanitize-documents-path (text backend info)
   "Scrub the user's home directory from the final GitHub output."
-  (when (org-export-derived-backend-p backend 'gfm)
+  (when (org-export-derived-backend-p backend 'html)
     (let ((user-home (expand-file-name "~")))
       (replace-regexp-in-string (regexp-quote user-home) "[HOME]/" text))))
 
