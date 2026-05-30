@@ -43,8 +43,8 @@ jobs:
             if [ -f "$file" ]; then # checks that file wasn't deleted
               REL_PATH=${file#notes/} # remove the notes/ header from the file paths
               DIR_NAME=$(dirname "$REL_PATH") # extract parent directory
-              TARGET_MD="public-export/${REL_PATH%.org}.md" # remove the .org suffix from the paths
-              MAKE_TARGETS="$MAKE_TARGETS $TARGET_MD"
+              TARGET_HTML="public-export/${REL_PATH%.org}.html" # remove the .org suffix from the paths
+              MAKE_TARGETS="$MAKE_TARGETS $TARGET_HTML"
               if [ "$DIR_NAME" != "." ]; then
                 TARGET_INDEX="public-export/$DIR_NAME/index.html"
                 # Add to a temporary list to deduplicate later

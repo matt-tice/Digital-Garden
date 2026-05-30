@@ -29,9 +29,12 @@ EMACS   := $(EMACS_BIN) --batch -l $(SCRIPTS)
 # Find all raw source notes
 ALL_SOURCES := $(shell $(FIND_CMD) $(ORG_DIR) -name "*.org")
 
-# Filter out index.org from the default Markdown target list
+# Filter out index.org from the default target list
 SOURCES     := $(filter-out $(ORG_DIR)/index.org, $(ALL_SOURCES))
-TARGETS     := $(patsubst $(ORG_DIR)/%.org, $(OUT_DIR)/%.md, $(SOURCES))
+
+# Originally our targets were markdown files, but now we want to use html
+# TARGETS     := $(patsubst $(ORG_DIR)/%.org, $(OUT_DIR)/%.md, $(SOURCES))
+TARGETS     := $(patsubst $(ORG_DIR)/%.org, $(OUT_DIR)/%.html, $(SOURCES))
 
 SUBDIRS     := $(shell $(FIND_CMD) $(ORG_DIR) -mindepth 1 -type d)
 DIR_INDEXES := $(patsubst $(ORG_DIR)/%, $(OUT_DIR)/%/index.html, $(SUBDIRS))
@@ -43,8 +46,8 @@ all: $(TARGETS) $(OUT_DIR)/index.html $(DIR_INDEXES)
 	@echo "[SUCCESS] Digital Garden build sequence completed."
 
 
-# Compile markdown from org files
-$(OUT_DIR)/%.md: $(ORG_DIR)/%.org $(SCRIPTS) | $(OUT_DIR)
+# Compile targets from org files
+$(OUT_DIR)/%.html: $(ORG_DIR)/%.org $(SCRIPTS) | $(OUT_DIR)
 	@mkdir -p $(patsubst %/,%,$(dir $@))  
 	@echo "--- Compiling Markdown Files: $< ---"
 	$(EMACS) --eval '(my-cloud-export "$<" "$@")'
@@ -64,7 +67,10 @@ $(DIR_INDEXES): $(OUT_DIR)/%/index.html: | $(OUT_DIR)
 		echo "#+TITLE: Index of $*" ; \
 		echo "* Notes in this area:" ; \
 		for file in $(notdir $(basename $(filter $(ORG_DIR)/$*/% ,$(ALL_SOURCES)))); do \
-			echo " - [[./$$file.md][$$file]]" ; \
+			;; 	# Replace all underscores with spaces in the file name
+			DISPLAY_NAME="$${file//_/ }" ; \
+			;; 	# Put the clean name in the link display
+			echo " - [[./$$file.html][$$DISPLAY_NAME]]" ; \
 		done \
 	) > $@.tmp
 	pandoc $@.tmp -f org -t html5 -s -o $@

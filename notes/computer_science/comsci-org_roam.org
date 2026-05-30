@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       922a01bc-d80f-4d40-8c91-46660205646c
+:END:
+#+title: org-roam
+#+filetags: :comsci:emacs:
+
+* References
+
+
+* Summary
+
+* Links
+
+Org-roam assigns each file a unique id, which it plaaces in its database: =org-roam.db=
+
+When you click a link in an org roam file, the link is just an id; emacs queries the database for this id, and jumps to the relevant file.
