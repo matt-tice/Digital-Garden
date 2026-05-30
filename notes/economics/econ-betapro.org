@@ -35,6 +35,16 @@ The price for delivery in the future is /higher/ than the current (spot) price.
 
 Because HOU is highly liquid, when things go bad for hedge funds, and they need liquidity fast, a fund like HOU is one of the first things to sell, massively crashing the price
 
+* HOU / HOD
+
+** Algorithms
+
+Because the rebalancing is executed by algorithms in a fraction of a second, it's unreasonable to try to trade HOU or HOD by hand
+
+** Efficiency
+
+Oil is such a massively watched commodity, that there's no way to find market inefficiency in its price
+
 * Derivatives
 
 Derivatives are contracts whose value is derived from the price action of a commodity

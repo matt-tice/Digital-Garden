@@ -128,6 +128,14 @@ Takes two lists and locks them together into a list of tuples
 [a] -> [b] -> [(a,b)]
 #+end_src
 
+**** zipWith
+
+Takes two lists, matches them index-by-index and applies a combining function
+
+#+begin_src haskell
+zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]
+#+end_src
+
 **** replicate
 
 Creates a list where every element has the same value
@@ -159,6 +167,10 @@ Int -> [a] -> [a]
 #+begin_src haskell
 (a - > b) -> a -> b
 #+end_src
+
+
+
+
 
 
 * Compiler
@@ -331,6 +343,9 @@ h : e : l : l : o : []
 
 Since each character is blocked, they're all scattered around the heap, which makes them slow to read
 
+*** Concatenation
+
+=<>= is actually the operator for the *semigroup* typeclass
 
 * Modules
 
@@ -409,6 +424,15 @@ Note that unlike =words=, this returns plain text, *not a list*.
 
 Returns the total number of characters
 - O(N) (surprising!). It's because UTF-16 is variable-width, so some characters take up more or fewer bytes than others
+
+*** intercalate
+
+Takes in a seperator list and a list of lists
+- sticks the seperator list between every element in the list of lists and flattens the result
+
+#+begin_src haskell
+intercalate :: [a] -> [[a]] -> [a]
+#+end_src
 
 ** qualified
 
@@ -489,3 +513,125 @@ process txt = show $ hash64 $ txt
 -- Pointfree (Pure Category-theoretic Arrow Composition)
 process = show . hash64
 #+end_src
+
+* Fat Arrow
+
+==>= denotes a *type-class constraint*
+- it says /you can only execute the following if these constraints are satisfied/
+
+* Monads
+
+Ordinarily, the compiler is able to execute things in whatever order will be most optimal
+- there's no native concept of time or sequence in Haskell
+
+Monads *force things to evaluate in sequence*
+
+** When would you use this?
+
+When interacting with hardware states
+- you can't read a memory address before you allocate it
+
+** Monad Types
+
+*** PrimMonad
+
+Can execute raw, low-level things
+
+**** IO Monad
+
+Can mutate memory, talk to the disk, print to the screen, write to a file
+
+**** ST Monad
+
+Memory *sandbox* that allows mutation, but can't interact with the outside world
+
+Designed for single-thread deterministic execution
+- you can't pass an ST vector between concurrent threads, because it's stuck in the sandbox
+- you can't write to logs or do any nice debugging
+
+*** PrimState
+
+**** RealWorld
+
+The IO monad has this state
+
+**** s (sandbox)
+
+The ST monad has this state
+
+* Optimizing
+
+** Streaming-Mutation
+
+When you mutate a string, you never want to store the whole string and then mutate it, because you'll get a string scattered throughout the heap
+
+Instead, you modify in place, one letter at a time
+- you keep your string in the L1/L2 cache
+
+* Scoping
+
+** let ... in
+
+=let= can be used anywhere in your code that a value is expected
+- it defines local variables
+
+=in= defines the expression where the local variables are valid
+
+#+begin_src haskell
+calculateArea :: Double -> Double
+calculateArea radius = 
+    let piVal = 3.14159
+        r2    = radius * radius
+    in piVal * r2
+#+end_src
+
+=let ... in= is used typically inside of lambda functions or if-thens, where =where= can't be used
+
+** where
+
+It's very similar to =let=, but you have to *use it inside of a function*
+- the nice thing is that =where= automatically knows about every argument in the function it's attached to
+  
+#+begin_src haskell
+calculateArea :: Double -> Double
+calculateArea radius = piVal * r2
+  where piVal = 3.14159
+        r2    = radius * radius
+#+end_src
+
+It can also work across sum-types:
+
+#+begin_src haskell
+describeNumber :: Int -> String
+describeNumber n
+    | n > 0     = "Positive: " ++ show n
+    | n < 0     = "Negative: " ++ show n
+    | otherwise = "Zero"
+    where nSquared = n * n -- This nSquared is available to ALL guards (|)
+#+end_src
+
+* Pattern Matching
+
+** case ... of
+
+=case= takes a value and compares it against a series of patterns, to decide what to return
+
+#+begin_src haskell
+case expression of
+    pattern1 -> result1
+    pattern2 -> result2
+    _        -> defaultResult
+#+end_src
+
+functions in haskell are computed using =case...of=, under the hood
+
+#+begin_src haskell
+factorial :: Int -> Int
+factorial x = case x of
+    0 -> 1
+    n -> n * factorial (n - 1)
+#+end_src
+
+=case ... of= and =if ... then= are computed in the exact same way
+- so they're equally performant
+but =case= is often clearer, and allows you to handle more cases, without having to nest a bunch of if statements.

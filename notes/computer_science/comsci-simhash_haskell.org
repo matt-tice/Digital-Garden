@@ -1,0 +1,161 @@
+:PROPERTIES:
+:ID:       e0822867-2fdb-4201-b705-c0cd7f1987bc
+:END:
+#+title: simhash-haskell
+#+filetags: :comsci:literate:program:
+
+
+
+-- Unfortunately, vanilla SimHash only compares text syntactically: it looks at whether two strings literally have words in common
+-- but it doesn't tell you whether two texts are semantically similar.
+
+** Strings
+
+
+#+begin_src haskell
+{-# LANGUAGE OverloadedStrings #-}
+#+end_src
+
+** Modules
+
+Using =qualified= is really important, to make it easy to see what's an imported funciton and what's programmer-defined
+
+#+begin_src haskell
+module SimHash where
+
+import qualified Data.Text as T
+import Data.Word (Word64)
+import Data.Bits (testBit, setBit, xor, popCount)
+import Data.Hashable (hashPtr)
+import System.IO.Unsafe (unsafePerformIO)
+import Foreign.Storable (sizeOf)
+
+#+end_src
+
+** Type-safety
+
+#+begin_src haskell
+newtype SyntacticID = SyntacticID Word64
+  deriving (Show, Eq)
+#+end_src
+
+We set up a distinction between the type =Word64= and the type =SyntacticID=
+- So if a function requires a type =SyntacticID=, even though a SyntacticID is a kind of integer (in a conceptual sense), from the perspective of the program it's different;
+- Thus we have to explicitly declare something a Syntactic ID if we want to use it in a function that requires that type.
+
+** Bit Manipulation
+
+Because we're working with the raw memory, we need to make sure that the compiler doesn't move our string around in RAM while we're hashing it
+- =T.useAsPtr= fixes the string down in memory and passes a starting memory location (ptr) and the length of txt
+
+#+begin_src haskell
+hash64 :: Text -> Word64
+hash64 txt = unsafePerformIO $ 
+  T.useAsPtr txt $ \ptr len ->
+    fromIntegral <$> hashPtr ptr (fromIntegral $ len * sizeOf (undefined :: Char))
+
+#+end_src
+
+** Main function
+
+Our goal is to compute a hash function for the text, such that if two texts have similar hash functions, their content is syntactically similar.
+
+We take our list of text tokens and
+1. =vectorSums= : compute the list of integers that it corresponds to 
+2. give each of those integers an index, from 0 to 63
+3. =buildBits= : flatten the integers into a single hash value 
+
+#+begin_src haskell
+computeSimHash :: [Text] -> SyntacticID
+computeSimHash tokens = SyntacticID $ foldr buildBits 0 (zip [0..63] vectorSums)
+  where
+#+end_src
+
+*** Issues
+
+There are suboptimality issues though:
+- lists in haskell stink for memory
+- you never want to initialize a long list if you can help it
+- here, our list =[0..63]= is useless; the data of indices is already encoded in any list; zipping them together explicitly just wastes memory
+
+  You can fix this by using unboxed mutable vectors
+
+  #+begin_src haskell
+import qualified Data.Vector.Unboxed.Mutable as MV
+  #+end_src
+
+We use =MV.modify=
+- it *modifies in place*
+- we never get a whole heap object, because we can read and modify the vector, one spot at a time
+
+#+begin_src haskell
+accumulateMutable :: Word64 -> MV.IOVector Int -> IO ()
+accumulateMutable tokenH acc = go 0
+  where
+    go :: Int -> IO ()
+    go 64 = return ()
+    go i  = do
+      let delta = if testBit tokenH i then 1 else -1
+      MV.modify acc (+ delta) i
+      go (i + 1)
+#+end_src
+
+
+*** Functions here
+
+**** Hash
+
+The starting hash we use is arbitrary
+
+#+begin_src haskell
+    -- 1. Hash all of the tokens in the list
+    tokenHashes :: [Word64]
+    tokenHashes = map hash64 tokens
+#+end_src
+
+**** Accumulate
+
+We take each of the hashes we got and assign it an index from 0 to 63.
+For each hash-index pair, =accumulate= will (=weightDelta=) add +1 if the bit value at the specified index is 1, and add -1 if the bit value is 0.
+
+We end up with a list of 64 integers (=vectorSums=)
+
+#+begin_src haskell
+    vectorSums :: [Int]
+    vectorSums = foldr accumulate (replicate 64 0) tokenHashes
+
+    accumulate :: Word64 -> [Int] -> [Int]
+    accumulate tokenH acc = zipWith (\bitIdx weight -> weight + weightDelta tokenH bitIdx) [0..63] acc
+
+    weightDelta :: Word64 -> Int -> Int
+    weightDelta tokenH idx = if testBit tokenH idx then 1 else -1
+#+end_src
+
+**** Rebuild a single hash
+
+Finally, take each of those 64 integers, along with their indices, and create a 64 bit word whose 1's correspond to the indices with integers > 0, and 0's correspond to those integers < 0
+
+#+begin_src haskell
+buildBits :: (Int, Int) -> Word64 -> Word64
+buildBits (bitIdx, score) currentWord =
+  if score > 0 then setBit currentWord bitIdx else currentWord
+#+end_src
+
+
+** Syntactic Distance
+
+#+begin_src haskell
+
+-- | Compute the structural distance between two semantic vectors.
+-- Returns an integer between 0 (identical) and 64 (complete inversion).
+syntacticDistance :: SyntacticID -> SyntacticID -> Int
+syntacticDistance (SyntacticID h1) (SyntacticID h2) = popCount (h1 `xor` h2)
+
+-- | Hard boundary rail evaluating structural duplication
+isNearDuplicate :: SyntacticID -> SyntacticID -> Bool
+isNearDuplicate id1 id2 = semanticDistance id1 id2 <= 3
+
+#+end_src
+
+
+
