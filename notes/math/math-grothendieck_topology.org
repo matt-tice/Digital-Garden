@@ -1,0 +1,145 @@
+:PROPERTIES:
+:ID:       536ce184-c1e3-43b2-92a3-9963fe332076
+:END:
+#+title: grothendieck topology
+#+filetags: :math:cats:topology:
+
+* References
+
+
+* Summary
+
+Grothendieck topologies allow us to define [[id:435f2de8-a08d-49c0-bdf7-aa63affc91d9][sheaves]]
+
+A category with a Grothendieck topology is called a *site*
+
+* Definitions
+
+#+begin_definition
+Let $A \in \obj$. A *covering family* of $A$ is collection of subsets of $\mor{-}{A}$: 
+\begin{equation*}
+X \subseteq P(\mor{-}{A})
+\end{equation*}
+#+end_definition
+#+begin_
+Each object $A$ has not only one covering $\{ f_i: A_i \to A \}$, but a whole set of them.
+
+
+#+begin_src latex
+
+
+\begin{definition}{Site}{}
+A category $\cat{C}$ with a covering family for all $A \in \obj$, such that
+\begin{itemize}
+
+\item If $\{ f_i: A_i \to A \}$ is one of the coverings and $g: B \to A$ then there is a \textit{refined covering} $\{ h_j: B_j \to B \} $ with some $\{ k_{i,j} \}$ such that
+
+\adjustbox{center}{
+\begin{tikzcd}
+B_j \arrow[d, "h_j"] \arrow[r, "k_{i,j}"] & A_{i_j} \arrow[d, "f_{i_j}" ] \\
+B \arrow[r, "g"] & A
+\end{tikzcd}
+}
+for some $i_j$ for all $j$.
+\end{itemize}
+\end{definition}
+\begin{defframe}
+\newthought{Intutition:}  
+\end{defframe}
+
+\begin{example}{Site on \textsc{Top}}{•}
+\newthought{\textsc{Top}: } Let $X \in \obj$ be a topology and let the coverings be
+\begin{equation}
+\{ in: U_\alpha \to X \mid \cup_\alpha U_\alpha = X, U \in \mathcal{T} \}
+\end{equation}
+so our coverings are all possible topological coverings
+
+\begin{itemize}
+\item Let $\{ in: U_\alpha \to X \}$ be a covering and $g: Y \to X$ be continuous. Then $g^{-1}(U_\alpha)$ is open for all $\alpha$. And if $y \in Y$ then $g(y) \in X = \cup_\alpha U_\alpha$, so $g(y) \in U_\alpha$, giving $y \in g^{-1}(U_\alpha)$ for some $\alpha$. Thus
+\begin{equation}
+Y = \cup_\alpha g^{-1}(U_\alpha)
+\end{equation}
+So $\{ in: g^{-1}(U_\alpha) \to Y \}$ is a covering of $Y$. Now consider the square
+
+\adjustbox{center}{
+\begin{tikzcd}
+g^{-1}(U_\alpha) \arrow[d, "in"] \arrow[r, "g"] & U_i \arrow[d, "in" ] \\
+Y \arrow[r, "g"] & X
+\end{tikzcd}
+}
+This commutes since if $x \in g^{-1}(U_\alpha)$ then $g \circ in(x) = g(x) = in \circ g(x)$. So we have a site.
+
+\end{itemize}
+
+\end{example}
+
+
+\begin{example}{Category: Single Topology}{•}
+Let $X$ be a topological space. We can view it as a category by
+
+\begin{itemize}
+\item $\obj: $ Open sets
+
+\item $\morph: $ $\mor{A}{B} = \{ in: A \to B \}$ or empty.
+
+\end{itemize}
+
+\end{example}
+
+
+\begin{example}{Site: Single Topology}{•}
+Let $X$ be a topology and view it as a category $Op(X)$. Now the coverings are
+\begin{equation}
+\{ in: A_\alpha \to A \mid \cup_\alpha A_\alpha = A \}
+\end{equation}
+
+\end{example}
+
+
+\begin{definition}{Matching Family for a Covering}{•}
+Let $\cat{C}$ be a site, $\{ f_i: A_i \to A \}$ be a covering and let $F: \cat{C}^{op} \to \textsc{Set}$ be a functor. A matching family for this covering is $\{ x_i \in F(A_i) \}$ such that for all
+
+\adjustbox{center}{
+\begin{tikzcd}
+A_i \arrow[dr, swap, "f_i"] & \arrow[l,  swap, "g"] B \arrow[r, "h"] & A_j \arrow[dl, "f_j"] \\
+& A
+\end{tikzcd}
+}
+we have $F(g)(x_i) = F(h)(x_j)$
+
+\end{definition}
+\begin{defframe}
+
+\newthought{Intuition: } We consider arrows in a category to be inclusion. Then $B \subseteq A_i \cap A_j$ 
+
+\end{defframe}
+
+
+
+\begin{example}{Matching Family: Site}{•}
+Let $\cat{C}$ be a site and $F: \cat{C}^{op} \to \textsc{Set}$ be any functor. Then every $\{ f_i: A_i \to A \}$ has a matching family induced by each $x \in F(A)$:
+\begin{equation}
+\{ F(f_i)(x) \}
+\end{equation}
+We get a function
+\begin{equation}
+F(A) \to \operatorname{Match}(\{f_i \}, F)
+\end{equation}
+
+
+\end{example}
+\begin{exampleframe}
+Consider a diagram
+
+\adjustbox{center}{
+\begin{tikzcd}
+A_i \arrow[dr, swap, "f_i"] & \arrow[l,  swap, "g"] B \arrow[r, "h"] & A_j \arrow[dl, "f_j"] \\
+& A
+\end{tikzcd}
+}
+$F(g)(F(f_i)(x)) = F(f_i \circ g)(x) = F(f_j \circ h)(x) = F(h)(F(f_j)(x))$. So this is a matching family.
+
+
+\end{exampleframe}
+
+#+end_src

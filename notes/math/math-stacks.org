@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       362c0779-f98d-4ba9-b480-fd99b762eff7
+:END:
+#+title: stacks
+#+filetags: :math:alg_geo:cats:
+
+* References
+
+
+* Summary
+
+The purpose of a stack is to give points in a space extra data
+- for example, in a moduli space, the points correspond to isomorphism classes
+
+* Algebraic Stacks
+
+** Deligne-Mumford Stack
+
+** Artin Stack
+
+* Geometric Stacks
