@@ -40,7 +40,7 @@ You can't put comments inside of multiline commands being sent to bash
 
 [[id:b39040b9-3ae9-413a-b661-c8a68276d69f][Oil and Gas]] is a private file
 
-[[id:8c1545c5-1a9e-4fad-892b-d2cfb0733cba][perfect pitch]] is a private file let's see
+[[id:8c1545c5-1a9e-4fad-892b-d2cfb0733cba][perfect pitch]] is a private file let's see how
 
 [[id:19dac00f-58d5-4457-ab28-8d6a01c69293][elliptic integrals]] also is not a private file
 
