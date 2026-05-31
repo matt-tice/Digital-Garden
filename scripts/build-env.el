@@ -71,6 +71,7 @@
 			(html-path (concat "/Digital-Garden/" base-path ".html"))
 			)
 		     (message "--------- Html path: %s ---------" html-path)
+		     (message "Repo root: %s" repo-root-path)
 		     (message "Target file: %s" normalized-target)
 		     (message "Base path: %s" base-path)
 		     (org-element-put-property link :type "https")
