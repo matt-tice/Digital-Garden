@@ -55,7 +55,6 @@
 			(base-path (file-name-sans-extension rel-path-from-root))
 			(html-path (concat "/Digital-Garden/" base-path ".html"))
 			)
-		     (message "path link is: %s" html-path)
 		     (org-element-put-property link :type "file")
 		     (org-element-put-property link :path html-path)
 		     (org-element-put-property link :raw-link (concat "file:" html-path))
