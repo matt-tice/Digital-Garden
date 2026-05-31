@@ -60,9 +60,11 @@
       (let ((link-type (org-element-property :type link))
             (link-path (org-element-property :path link)))
         ;; Only target links that use the id protocol
+	(message "--------- Spot 1")
         (when (string= link-type "id")
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
+		   	(message "--------- Spot 2")
 		   (let ((normalized-target (expand-file-name target-file)))
 		     (if (string-match "/private/" normalized-target)
 			 (let* ((contents (org-element-contents link))
@@ -71,8 +73,9 @@
 					     (org-element-interpret-data contents)))
 				(clean-text (if (or (null link-text) (string-empty-p link-text)) "Note" link-text))
 				;; Generate a clean inline stub object
-				(stub-text (format "%s [?? Note currently private]" clean-text))
+				(stub-text (format "%s [\N{LOCK} Note currently private]" clean-text))
 				(stub-node (org-element-create 'bold nil stub-text)))
+	(message "--------- Spot 3")
                            ;; Replace the link element entirely with a text stub node
                            (org-element-set-element link stub-node))
 		       (let* (
