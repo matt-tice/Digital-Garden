@@ -24,7 +24,7 @@
 ;; --- 3. Parsing & Redaction Filters ---
 (defun my/org-export-private-to-stub (text backend info)
   "A robust filter to turn private links into stubs."
-  (when (org-export-derived-backend-p backend org) ; In this part of the program, we're creating a tmp org file
+  (when (org-export-derived-backend-p backend 'org) ; In this part of the program, we're creating a tmp org file
     (let* ((case-fold-search t)
            (private-regex "\\[\\(.*?\\)\\].*/private/\\(.*?\\)\\.\\(org\\|html\\|md\\)"))
       (if (string-match private-regex text)
@@ -34,7 +34,7 @@
 
 (defun my/org-export-sanitize-documents-path (text backend info)
   "Scrub the user's home directory from the final GitHub output."
-  (when (org-export-derived-backend-p backend org)
+  (when (org-export-derived-backend-p backend 'org)
     (let ((user-home (expand-file-name "~")))
       (replace-regexp-in-string (regexp-quote user-home) "[HOME]/" text))))
 
@@ -44,8 +44,8 @@
 
   (message "----- Outside the when -----")
   (message "Backend: %s" backend)
-  (message "When evaluation: %s" (org-export-derived-backend-p backend org))
-  (when (org-export-derived-backend-p backend '(html org))
+  (message "When evaluation: %s" (org-export-derived-backend-p backend 'org))
+  (when (org-export-derived-backend-p backend 'org)
     (message "----- Inside when -----")
   (org-element-map tree 'link
     (lambda (link)
