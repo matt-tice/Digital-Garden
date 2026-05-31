@@ -65,7 +65,7 @@
 	    (cond (target-file
 		   (let*
 		       ((normalized-target (expand-file-name target-file))
-			(repo-root-path "notes") 
+			(repo-root-path (expand-file-name "notes") )
 			(rel-path-from-root (file-relative-name normalized-target repo-root-path))
 			(base-path (file-name-sans-extension rel-path-from-root))
 			(html-path (concat "/Digital-Garden/" base-path ".html"))
