@@ -66,9 +66,12 @@
 		   (let ((normalized-target (expand-file-name target-file)))
 		     (if (string-match "/private/" normalized-target)
 			 (let* ((contents (org-element-contents link))
-				(clean-text (if (string-empty-p link-text) "Note" link-text))
+				(link-text (if (stringp (car contents))
+					       (car contents)
+					     (org-element-interpret-data contents)))
+				(clean-text (if (or (null link-text) (string-empty-p link-text)) "Note" link-text))
 				;; Generate a clean inline stub object
-				(stub-text (format "**%s** [?? Note currently private]" clean-text))
+				(stub-text (format "%s [?? Note currently private]" clean-text))
 				(stub-node (org-element-create 'bold nil stub-text)))
                            ;; Replace the link element entirely with a text stub node
                            (org-element-set-element link stub-node))
