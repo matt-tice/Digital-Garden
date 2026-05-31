@@ -42,18 +42,14 @@
 (defun my/org-export-resolve-org-ids (tree backend info)
   "Traverses the Org AST and mutates raw 'id:' link objects into standard relative 'file:' links."
 
-  (message "----- Outside the when -----")
-  (message "Backend: %s" backend)
-  (message "When evaluation: %s" (org-export-derived-backend-p backend 'org))
   (when (org-export-derived-backend-p backend 'org)
-    (message "----- Inside when -----")
   (org-element-map tree 'link
     (lambda (link)
-      (message "Inside lambda")
       (let ((link-type (org-element-property :type link))
             (link-path (org-element-property :path link)))
         ;; Only target links that use the id protocol
         (when (string= link-type "id")
+	  (message "Target file: %s" (org-id-find-id-file link-path))
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
 		   (let*
@@ -61,6 +57,7 @@
 			(base-path (file-name-sans-extension rel-path-from-root))
 			(html-path (concat "/Digital-Garden/" base-path ".html"))
 			)
+		     (message "html-path: %s" html-path)
 		     (org-element-put-property link :type "file")
 		     (org-element-put-property link :path html-path)
 		     (org-element-put-property link :raw-link (concat "file:" html-path))
