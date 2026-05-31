@@ -61,6 +61,7 @@
             (link-path (org-element-property :path link)))
         ;; Only target links that use the id protocol
         (when (string= link-type "id")
+	  (message "Link path: %s " link-path)
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
 		   (let ((normalized-target (expand-file-name target-file)))
