@@ -63,9 +63,8 @@ jobs:
 
           # 6. Invoke the Makefile, explicitly overriding the target variable
           echo "Executing toolchain for targets: $MAKE_TARGETS"
-          # make $FINAL_TARGETS
-          make all
-          
+          make $FINAL_TARGETS
+
       - name: Deploy Compiled Artifacts to Github Pages Branch
         uses: peaceiris/actions-gh-pages@v4
         with:

@@ -9,6 +9,80 @@
 
 * Summary
 
-* Suprachiasmatic nucleus
+* Circadian Rhythm
+
+Our bodies have two clocks:
+1. The SCN
+2. The peripheral clocks (individual organs and tissues)
+
+** Suprachiasmatic nucleus (SCN)
 
 Part of the hypothalmus. Regulates sleep cycles.
+
+Highly sensitive to light and neurological activity
+
+The SCN sends hormonal and temperature signals to the peripheral clocks
+
+The SCN can adjust its sleep-wake schedule within 1-2 days
+
+*** Circadian Alterness Signal
+
+The SCN manages this signal, which fluctuates throughout the day.
+This dips around 1-4pm: the *post-prandial dip*
+
+**** Post-Prandial Dip
+
+Most people get sleepy in the early afternoon, between *1pm and 4pm*
+
+
+
+
+** Peripheral Clocks
+
+Adjust their sleep-wake schedule after *5-8 days*
+
+*** Pancreas and Liver
+
+Their clocks determine insulin production
+- if they think it's night, even though you're wide awake, and you eat a meal, your pancreas won't secrete enough insulin and your liver will remain in glucose-production
+
+* Core Body Temperature
+
+Reaches minimum 2 hours before you wake
+
+* Sleep Drive
+
+Accumulation of adenosine in the brain builds up every waking hour
+
+
+* Sleep Types
+
+Sleep clears away adenosine
+
+It also consolidates memories
+
+** 20min Naps
+
+** 90min Naps
+
+** Prolactin
+
+In biphasic sleep, in the period between the two sleeps (called *the Watch*), there are high levels of prolactin
+
+During the Watch, avoid using your phone or anything that
+1. Triggers unpredictable dopamine (notifications, news updates, social feeds)
+2. Suppresses melatonin (blue light)
+
+
+
+
+
+* Zeitgeber
+
+Environmental cues that help your body synchronize its biological clock
+
+** Exercise
+
+Spikes cortisol, which drives up core body temperature and processsing speed
+
+* Caffeine
