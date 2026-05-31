@@ -65,7 +65,7 @@
 	    (cond (target-file
 		   (let ((normalized-target (expand-file-name target-file)))
 		     (message "Target: %s" normalized-target)
-		     (message "%s" (string-match "/notes/" normalized-target))
+		     (message "Does the string contain notes: %s" (string-match "/notes/" normalized-target))
 		     (cond ((string-match "/private/" normalized-target)
 			 (let* ((contents (org-element-contents link)) ; This will always return a list, not a single piece of text, so we need to grab the text
 				(link-text (if (stringp (car contents))
@@ -87,7 +87,7 @@
 								      :raw-link html-path
 								      :format (org-element-property :format link)))))
 			     (org-element-set-contents new-link (org-element-contents link)))
-			   (message "New link: %s" new-link)
+			   (message "New link: %s" (org-element-contents link))
 			     (org-element-set-element link new-link)
 			     ))
 		     ))
