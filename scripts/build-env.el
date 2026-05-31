@@ -42,9 +42,10 @@
 (defun my/org-export-resolve-org-ids (tree backend info)
   "Traverses the Org AST and mutates raw 'id:' link objects into standard relative 'file:' links."
 
-  (message "Outside the when")
+  (message "----- Outside the when -----")
+  (message "Backend: %s" backend)
   (when (org-export-derived-backend-p backend '(html org))
-    (message "Inside when")
+    (message "----- Inside when -----")
   (org-element-map tree 'link
     (lambda (link)
       (message "Inside lambda")
