@@ -64,8 +64,7 @@
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
 		   (let ((normalized-target (expand-file-name target-file)))
-		     (message "Target: %s" normalized-target)
-		     (message "Does the string contain notes: %s" (string-match "/notes/" normalized-target))
+		     ;; ----- Case 1: Private Notes -----
 		     (cond ((string-match "/private/" normalized-target)
 			 (let* ((contents (org-element-contents link)) ; This will always return a list, not a single piece of text, so we need to grab the text
 				(link-text (if (stringp (car contents))
@@ -75,22 +74,18 @@
 			   (org-element-put-property link :type "customid")
 			   (org-element-put-property link :path "private-note")
 			   (org-element-set-contents link (list link-replacement))))
+			   ;; ----- Case 2: Public Notes -----
 		     ((string-match "/notes/" normalized-target)
-			   (let* (
+			   (let* (	;; In this case we preserve the link content, and just change the path to point to the relevant html file
 				  (notes-root (expand-file-name "../../notes" ))
 				  (rel-path-from-notes (file-relative-name normalized-target notes-root))
 				  (base-path (file-name-sans-extension rel-path-from-notes))
 				  (html-path (concat "/Digital-Garden/" base-path ".html"))
-				  (new-link (org-element-create 'link
-								(list :type "https"
-								      :path html-path
-								      :raw-link html-path
-								      :format (org-element-property :format link)))))
-			     (org-element-set-contents new-link (org-element-contents link)))
-			   (message "New link: %s" (org-element-contents link))
-			     (org-element-set-element link new-link)
+				  )
+			     (org-element-put-property link :type "https")
+			     (org-element-put-property link :path html-path)
 			     ))
-		     ))
+		     )))
 		  (t
 		   (message "[WARNING] Broken org-id link found in file: %s (Target ID: %s)" (buffer-file-name) link-path)
 		   (org-element-put-property link :type "customid")
