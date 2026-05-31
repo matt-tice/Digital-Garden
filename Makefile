@@ -22,6 +22,7 @@ endif
 ORG_DIR := notes
 OUT_DIR := public-export
 SCRIPTS := scripts/build-env.el
+ID_DB := scripts/.org-id-locations
 
 EMACS   := $(EMACS_BIN) --batch -l $(SCRIPTS)
 
@@ -41,20 +42,24 @@ DIR_INDEXES := $(patsubst $(ORG_DIR)/%, $(OUT_DIR)/%/index.html, $(SUBDIRS))
 
 .PHONY: all clean
 
-all: $(TARGETS) $(OUT_DIR)/index.html $(DIR_INDEXES)
+all: $(ID_DB) $(TARGETS) $(OUT_DIR)/index.html $(DIR_INDEXES)
 	@touch $(OUT_DIR)/.nojekyll
 	@echo "[SUCCESS] Digital Garden build sequence completed."
 
+# Create the database of org-roam ids
+$(ID_DB): $(ALL_SOURCES)
+	@echo "--- Generating Missing Global Cross-Reference Database ---"
+	$(EMACS) --eval '(my-generate-global-id-db)'
 
 # Compile targets from org files
-$(OUT_DIR)/%.html: $(ORG_DIR)/%.org $(SCRIPTS) | $(OUT_DIR)
+$(OUT_DIR)/%.html: $(ORG_DIR)/%.org $(SCRIPTS) $(ID_DB) | $(OUT_DIR)
 	@mkdir -p $(patsubst %/,%,$(dir $@))  
 	@echo "--- Compiling Markdown Files: $< ---"
 	$(EMACS) --eval '(my-cloud-export "$<" "$@")'
 
 
 # Create homepage for github-pages
-$(OUT_DIR)/index.html: $(ORG_DIR)/index.org | $(OUT_DIR)
+$(OUT_DIR)/index.html: $(ORG_DIR)/index.org $(SCRIPTS) $(ID_DB) | $(OUT_DIR)
 	@echo "--- Compiling Root HTML Interface: $< ---"
 	pandoc $< -f org -t html5 -s -o $@
 

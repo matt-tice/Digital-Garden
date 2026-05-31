@@ -21,6 +21,18 @@
 
 (require 'ox-pandoc)
 
+(defun my-generate-global-id-db ()
+  "Scans the entire garden repository to generate the missing scripts/.org-id-locations file."
+  (let ((notes-dir (expand-file-name "notes" default-directory)))
+    (if (file-directory-p notes-dir)
+        (let ((all-files (directory-files-recursively notes-dir "\\.org$")))
+          (message "Scanning %d files to build global cross-reference matrix..." (length all-files))
+          (setq org-id-locations nil) ; Clear any old state
+          (org-id-update-id-locations all-files)
+          (org-id-locations-save)
+          (message "[SUCCESS] Generated %s containing all cross-links." org-id-locations-file))
+      (error "Critical Error: 'notes' directory not found inside execution context."))))
+
 ;; --- 3. Parsing & Redaction Filters ---
 (defun my/org-export-private-to-stub (text backend info)
   "A robust filter to turn private links into stubs."
@@ -49,8 +61,6 @@
             (link-path (org-element-property :path link)))
         ;; Only target links that use the id protocol
         (when (string= link-type "id")
-	  (messge "----------- Link: %s ---------" link)
-	  (message "Target file: %s" (org-id-find-id-file link-path))
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
 		   (let*
@@ -58,7 +68,6 @@
 			(base-path (file-name-sans-extension rel-path-from-root))
 			(html-path (concat "/Digital-Garden/" base-path ".html"))
 			)
-		     (message "html-path: %s" html-path)
 		     (org-element-put-property link :type "file")
 		     (org-element-put-property link :path html-path)
 		     (org-element-put-property link :raw-link (concat "file:" html-path))
