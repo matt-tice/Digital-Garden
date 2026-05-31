@@ -64,6 +64,8 @@
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
 		   (let ((normalized-target (expand-file-name target-file)))
+		     (message "Target: %s" normalized-target)
+		     (message "Contents: %s" (org-element-contents link))
 		     ;; ----- Case 1: Private Notes -----
 		     (cond ((string-match "/private/" normalized-target)
 			 (let* ((contents (org-element-contents link)) ; This will always return a list, not a single piece of text, so we need to grab the text
@@ -71,9 +73,13 @@
 					       (car contents)
 					     "Locked Note"))
 				(link-replacement (format "%s [\N{LOCK} Note currently private]" link-text)))
+			   ;; Set the link to the private overwrite
+			   (message "Link before: %s" link)
 			   (org-element-put-property link :type "customid")
 			   (org-element-put-property link :path "private-note")
-			   (org-element-set-contents link (list link-replacement))))
+			   (org-element-set-contents link (list link-replacement))
+			   (message "Link after: %s" link)
+))
 			   ;; ----- Case 2: Public Notes -----
 		     ((string-match "/notes/" normalized-target)
 			   (let* (	;; In this case we preserve the link content, and just change the path to point to the relevant html file
