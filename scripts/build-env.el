@@ -65,11 +65,11 @@
 	    (cond (target-file
 		   	
 		   (let ((normalized-target (expand-file-name target-file)))
-		     ;; (message "--------- Spot 2")
-		     ;; (message "Link: %s" (org-element-contents link))
-		     ;; (message "Link text: %s" (car (org-element-contents link)))
-		     ;; (message "Stub-text: %s"  (format "%s [\N{LOCK} Note currently private]" (car (org-element-contents link))))		     
-		     ;; (message "Stub-node: %s" (org-element-create 'bold nil (format "%s [\N{LOCK} Note currently private]" (car (org-element-contents link)))))
+		     (message "--------- Spot 2")
+		     (message "Link: %s" (org-element-contents link))
+		     (message "Link text: %s" (car (org-element-contents link)))
+		     (message "Stub-text: %s"  (format "%s [\N{LOCK} Note currently private]" (car (org-element-contents link))))		     
+		     (message "Stub-node: %s" (org-element-create 'bold nil (list (format "%s [\N{LOCK} Note currently private]" (car (org-element-contents link))))))
 		     (if (string-match "/private/" normalized-target)
 			 (let* ((contents (org-element-contents link))
 				(link-text (if (stringp (car contents))
