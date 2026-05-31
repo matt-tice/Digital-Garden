@@ -90,7 +90,7 @@
       (let ((org-export-filter-parse-tree-functions
 	     '(my/org-export-resolve-org-ids))
             (org-export-filter-final-output-functions
-	     '(my/org-export-private-to-sub
+	     '(my/org-export-private-to-stub
 	       my/org-export-sanitize-documents-path
 	       ))
             (default-directory dest-dir))
