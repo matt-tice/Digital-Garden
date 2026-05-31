@@ -71,9 +71,9 @@
 			)
 		     (message "--------- Html path: %s ---------" html-path)
 		     (message "Base path: %s" base-path)
-		     (org-element-put-property link :type "file")
+		     (org-element-put-property link :type "https")
 		     (org-element-put-property link :path html-path)
-		     (org-element-put-property link :raw-link (concat "file:" html-path))
+		     (org-element-put-property link :raw-link html-path)
 		     )) 		; We need to return the link, so that it doesn't just appear as the raw id
 		  (t
 		   (message "[WARNING] Broken org-id link found in file: %s (Target ID: %s)" (buffer-file-name) link-path)
