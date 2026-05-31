@@ -41,9 +41,13 @@
 ;; Turn org-roam links into regular org-links (which github can understand)
 (defun my/org-export-resolve-org-ids (tree backend info)
   "Traverses the Org AST and mutates raw 'id:' link objects into standard relative 'file:' links."
+
+  (message "Outside the when")
   (when (org-export-derived-backend-p backend '(html org))
+    (message "Inside when")
   (org-element-map tree 'link
     (lambda (link)
+      (message "Inside lambda")
       (let ((link-type (org-element-property :type link))
             (link-path (org-element-property :path link)))
         ;; Only target links that use the id protocol
