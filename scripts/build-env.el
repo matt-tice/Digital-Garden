@@ -74,7 +74,7 @@
 		     (org-element-put-property link :type "https")
 		     (org-element-put-property link :path html-path)
 		     (org-element-put-property link :raw-link html-path)
-		     )) 		; We need to return the link, so that it doesn't just appear as the raw id
+		 link )) 		; We need to return the link, so that it doesn't just appear as the raw id
 		  (t
 		   (message "[WARNING] Broken org-id link found in file: %s (Target ID: %s)" (buffer-file-name) link-path)
 		   (org-element-put-property link :type "customid")
