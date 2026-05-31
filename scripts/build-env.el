@@ -61,6 +61,8 @@
             (link-path (org-element-property :path link))) ;; This will grab the org-roam id of the link
         ;; Only target links that use the id protocol
         (when (string= link-type "id")
+	  (when (null org-id-locations)
+	    (org-id-locations-load))
 	  (message "Database Entry: %s " (gethash link-path org-id-locations))
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
