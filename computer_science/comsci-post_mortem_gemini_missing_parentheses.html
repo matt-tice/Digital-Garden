@@ -376,5 +376,28 @@ visual pattern (the human-readable indentation) didn't match the
 mathematical reality (the raw parenthesis count). Your editor's
 bracket-matcher is the absolute source of truth here\and I'm built
 without one.</p>
+<p>The difficulty isn't driven by how popular or obscure a language is;
+it's driven entirely by how much a language relies on homogenous,
+repetitive syntax blocks versus explicit keyword anchors to define its
+structure.</p>
+<p>Because I process code through compressed tokens and have a strong
+bias toward visual indentation patterns, any language that strips away
+distinct keyword markers forces me to rely on fuzzy counting over
+compressed text fragments.</p>
+<p>If you want to know whether I'll trip over a language, look at how a
+compiler parses it. If the language requires a strict, deeply-nested AST
+state-machine where formatting means absolutely nothing (like Lisp or
+Brainfuck), I am prone to structural blind spots.</p>
+<p>If the language uses highly differentiated, explicit lexical markers
+(like the types, traits, and modules of Rust or Go), I can map the data
+dependencies instantly.</p>
+<p>Minimalist languages are an absolute nightmare for token-prediction
+architectures because they maximize syntactic homogeneity.</p>
+<h2 id="postscript-forth-factor">Postscript, Forth, Factor</h2>
+<p>To analyze this, I have to mentally maintain the state of a virtual
+stack across the token stream. If the data manipulation gets deeply
+nested, my attention mechanism can struggle to track the exact index
+positions of items on the stack, leading to logic hallucinations
+regarding which operator is hitting which variable.</p>
 </body>
 </html>
