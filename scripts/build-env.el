@@ -61,7 +61,7 @@
             (link-path (org-element-property :path link))) ;; This will grab the org-roam id of the link
         ;; Only target links that use the id protocol
         (when (string= link-type "id")
-	  (message "Link path available: %s " (assoc link-path org-id-locations))
+	  (message "Link path available: %s " (string-match link-path org-id-locations))
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
 		   (let ((normalized-target (expand-file-name target-file)))
