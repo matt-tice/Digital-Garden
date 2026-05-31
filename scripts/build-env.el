@@ -63,37 +63,31 @@
         (when (string= link-type "id")
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
-		   	
 		   (let ((normalized-target (expand-file-name target-file)))
-		     (message "--------- Spot 2")
-		     (message "Link: %s" (org-element-contents link))
-		     (message "Link text: %s" (car (org-element-contents link)))
-		     (message "Stub-text: %s"  (format "%s [\N{LOCK} Note currently private]" (car (org-element-contents link))))		     
-		     (message "Stub-node: %s" (org-element-create 'bold nil (format "%s [\N{LOCK} Note currently private]" (car (org-element-contents link)))))
-		     (if (string-match "/private/" normalized-target)
-			 (let* ((contents (org-element-contents link))
+		     (cond ((string-match "/private/" normalized-target)
+			 (let* ((contents (org-element-contents link)) ; This will always return a list, not a single piece of text, so we need to grab the text
 				(link-text (if (stringp (car contents))
 					       (car contents)
-					     (org-element-interpret-data contents)))
-				(clean-text (if (or (null link-text) (string-empty-p link-text)) "Note" link-text))
-				;; Generate a clean inline stub object
-				(stub-text (format "%s [\N{LOCK} Note currently private]" clean-text))
-				(stub-node (org-element-create 'bold nil stub-text)))
-	(message "--------- Spot 3")
-                           ;; Replace the link element entirely with a text stub node
-                           (org-element-set-element link stub-node))
-		       (let* (
-			      (notes-root (expand-file-name "../../notes" ))
-			      (rel-path-from-notes (file-relative-name normalized-target notes-root))
-			      (base-path (file-name-sans-extension rel-path-from-notes))
-			      (html-path (concat "/Digital-Garden/" base-path ".html"))
-			      (new-link (org-element-create 'link
-							    (list :type "https"
-								  :path html-path
-								  :raw-link html-path
-								  :format (org-element-property :format link)))))
-			 (org-element-set-contents new-link (org-element-contents link))
-			 (org-element-set-element link new-link)))))
+					     "Locked Note"))
+				(link-replacement (format "%s [\N{LOCK} Note currently private]" link-text)))
+			   (org-element-put-property link :type "customid")
+			   (org-element-put-property link :path "private-note")
+			   (org-element-set-contents link (list link-replacement))))
+		     ((string-match "/public/" normalized-target)
+			   (let* (
+				  (notes-root (expand-file-name "../../notes" ))
+				  (rel-path-from-notes (file-relative-name normalized-target notes-root))
+				  (base-path (file-name-sans-extension rel-path-from-notes))
+				  (html-path (concat "/Digital-Garden/" base-path ".html"))
+				  (new-link (org-element-create 'link
+								(list :type "https"
+								      :path html-path
+								      :raw-link html-path
+								      :format (org-element-property :format link)))))
+			     (org-element-set-contents new-link (org-element-contents link)))
+			     ;; (org-element-set-element link new-link)
+			     ))
+		     ))
 		  (t
 		   (message "[WARNING] Broken org-id link found in file: %s (Target ID: %s)" (buffer-file-name) link-path)
 		   (org-element-put-property link :type "customid")
