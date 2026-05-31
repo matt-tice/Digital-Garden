@@ -88,9 +88,11 @@
 
     (with-current-buffer (find-file-noselect abs-infile)
       (let ((org-export-filter-parse-tree-functions
-	     '(my/org-export-private-to-stub
-	       my/org-export-resolve-org-ids))
-            (org-export-filter-final-output-functions '(my/org-export-sanitize-documents-path))
+	     '(my/org-export-resolve-org-ids))
+            (org-export-filter-final-output-functions
+	     '(my/org-export-private-to-sub
+	       my/org-export-sanitize-documents-path
+	       ))
             (default-directory dest-dir))
         (org-export-to-file 'org temp-org nil nil nil nil nil))
       (kill-buffer))
