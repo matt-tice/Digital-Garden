@@ -64,12 +64,12 @@
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
 		   (let*
-		       ((rel-path-from-root (file-relative-name target-file "notes"))
+		       ((repo-root-path (expand-file-name "notes" default-directory)) ;; Expand against the default *repo* root
+			(rel-path-from-root (file-relative-name target-file repo-root-path))
 			(base-path (file-name-sans-extension rel-path-from-root))
 			(html-path (concat "/Digital-Garden/" base-path ".html"))
 			)
 		     (message "--------- Html path: %s ---------" html-path)
-		     (message "Link: %s" link)
 		     (message "Base path: %s" base-path)
 		     (org-element-put-property link :type "file")
 		     (org-element-put-property link :path html-path)
