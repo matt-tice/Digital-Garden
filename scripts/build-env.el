@@ -34,15 +34,26 @@
       (error "Critical Error: 'notes' directory not found inside execution context."))))
 
 ;; --- 3. Parsing & Redaction Filters ---
-(defun my/org-export-private-to-stub (text backend info)
+(defun my/org-link-private-to-stub (link)
   "A robust filter to turn private links into stubs."
-  (when (org-export-derived-backend-p backend 'org) ; In this part of the program, we're creating a tmp org file
-    (let* ((case-fold-search t)
-           (private-regex "\\[\\(.*?\\)\\].*/private/\\(.*?\\)\\.\\(org\\|html\\|md\\)"))
-      (if (string-match private-regex text)
-          (let ((link-text (match-string 1 text)))
-            (format "**%s** [?? Note currently private]" link-text))
-        text))))
+  (let* ((contents (org-element-contents link)) ; This will always return a list, not a single piece of text, so we need to grab the text
+				(link-text (if (stringp (car contents))
+					       (car contents)
+					     "Locked Note"))
+				(link-replacement (format "%s [\N{LOCK} Note currently private]" link-text)))
+			   ;; Set the link to the private overwrite
+			   (org-element-put-property link :type "customid")
+			   (org-element-put-property link :path "private-note")
+			   (org-element-set-contents link (list link-replacement))
+			   )
+  ;; (when (org-export-derived-backend-p backend 'org) ; In this part of the program, we're creating a tmp org file
+  ;;   (let* ((case-fold-search t)
+  ;;          (private-regex "\\[\\(.*?\\)\\].*/private/\\(.*?\\)\\.\\(org\\|html\\|md\\)"))
+  ;;     (if (string-match private-regex text)
+  ;;         (let ((link-text (match-string 1 text)))
+  ;;           (format "**%s** [?? Note currently private]" link-text))
+  ;;       text)))
+  )
 
 (defun my/org-export-sanitize-documents-path (text backend info)
   "Scrub the user's home directory from the final GitHub output."
@@ -61,29 +72,25 @@
             (link-path (org-element-property :path link))) ;; This will grab the org-roam id of the link
         ;; Only target links that use the id protocol
         (when (string= link-type "id")
-	  (when (null org-id-locations)
+	  
+	  (when (null org-id-locations)	;; Typically the org-id-locations database hasn't loaded by the time we get here, so we load it now if it hasn't been already
 	    (org-id-locations-load))
-	  (message "Database Entry: %s " (gethash link-path org-id-locations))
-          (let ((target-file (org-id-find-id-file link-path)))
-	    (cond (target-file
+	  
+          (let ((target-file (gethash link-path org-id-locations)))
+	    (cond
+	     ( (null target-file)
+	       (my/org-link-private-to-stub link))
+
+	     (target-file
 		   (let ((normalized-target (expand-file-name target-file)))
 		     (message "Target: %s" normalized-target)
 		     (message "Contents: %s" (org-element-contents link))
-		     ;; ----- Case 1: Private Notes -----
-		     (cond ((string-match "/private/" normalized-target)
-			 (let* ((contents (org-element-contents link)) ; This will always return a list, not a single piece of text, so we need to grab the text
-				(link-text (if (stringp (car contents))
-					       (car contents)
-					     "Locked Note"))
-				(link-replacement (format "%s [\N{LOCK} Note currently private]" link-text)))
-			   ;; Set the link to the private overwrite
-			   (message "Link before: %s" link)
-			   (org-element-put-property link :type "customid")
-			   (org-element-put-property link :path "private-note")
-			   (org-element-set-contents link (list link-replacement))
-			   (message "Link after: %s" link)
-))
-			   ;; ----- Case 2: Public Notes -----
+		     (cond
+		      ;; ----- Case 1: Private Notes -----
+		      ((string-match "/private/" normalized-target)
+		       (my/org-link-private-to-stub ))
+		      
+		      ;; ----- Case 2: Public Notes -----
 		     ((string-match "/notes/" normalized-target)
 			   (let* (	;; In this case we preserve the link content, and just change the path to point to the relevant html file
 				  (notes-root (expand-file-name "../../notes" ))
@@ -119,10 +126,10 @@
     (with-current-buffer (find-file-noselect abs-infile)
       (let ((org-export-filter-parse-tree-functions
 	     '(my/org-export-resolve-org-ids))
-            (org-export-filter-final-output-functions
-	     '(my/org-export-private-to-stub
-	       my/org-export-sanitize-documents-path
-	       ))
+            ;; (org-export-filter-final-output-functions
+	    ;;  '(my/org-export-private-to-stub
+	    ;;    my/org-export-sanitize-documents-path
+	    ;;    ))
             (default-directory dest-dir))
         (org-export-to-file 'org temp-org nil nil nil nil nil))
       (kill-buffer))
