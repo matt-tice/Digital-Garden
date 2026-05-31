@@ -168,8 +168,136 @@
 <header id="title-block-header">
 <h1 class="title">automata</h1>
 </header>
-<p><a href="comsci-automata.org">formal language</a> <a
-href="comsci-automata.org">formal languages</a><a
-href="comsci-automata.org">context-free grammar</a></p>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>They're like computers with extemely limited memory</p>
+<h1 id="types">Types</h1>
+<p>The <a
+href="https:/Digital-Garden/linguistics/ling-formal_language.html">formal
+language</a> of an automaton is the set of words which are mapped to
+final states</p>
+<h2 id="finite-automata">Finite Automata</h2>
+<h3 id="definition">Definition</h3>
+<p>A finite automaton is a tuple (A, Q, q<sub>0</sub>, F, φ )</p>
+<ul>
+<li>A is an alphabet</li>
+<li>Q is a finite set of states</li>
+<li>q<sub>0</sub> is the initial state</li>
+<li>F ⊆ Q are the final states</li>
+<li>φ: Q × A → Q is the transition function</li>
+</ul>
+<p>We can think of the transition function as the data of a directed
+graph, labeled by the letters in the alphabet A</p>
+<p>Implicitly, we're saying that you can recursively apply the
+transition function, to take us from some word in A to a sequence of
+states From a language perspective, we only care about what the ultimate
+state is, corresponding to a word w ∈ A<sup>*</sup>. So we can just
+define the transition function to be a map φ: A<sup>*</sup> → Q that has
+to satisfy certain composition conditions</p>
+<ul>
+<li>φ(a<sub>0</sub> a<sub>1</sub> … a<sub>n</sub>) means first apply the
+transition function φ(q<sub>0</sub>, a<sub>0</sub>)</li>
+<li>etc.</li>
+<li>We need that if φ(w<sub>1</sub>) = φ(w<sub>2</sub>) then
+φ(w<sub>1</sub> x) = φ(w<sub>2</sub> x)</li>
+<li>I believe that's the only condition</li>
+</ul>
+<p>Then the language corresponding to the automaton is the set L =
+φ<sup>-1</sup>(F)</p>
+<p>That seems far nicer</p>
+<h3 id="my-definition">My Definition</h3>
+<p>A (deterministic) finite automaton is a tuple (A, Q, F, φ) where</p>
+<ul>
+<li>A is an alphabet</li>
+<li>Q is a set of states</li>
+<li>F ⊆ Q is a set of final states</li>
+<li>φ: A<sup>*</sup> → Q such that
+<ul>
+<li>if φ(x) = φ(y) then φ(xz) = φ(yz)</li>
+</ul></li>
+</ul>
+<p>Now the initial state is just the data of φ(1)</p>
+<ul>
+<li>phi on the empty word</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<p>Lexical analyzers</p>
+<p>For instance, consider a programming language where the syntax says
+that words must be finite sequences of lower case letters and numbers,
+starting with a letter</p>
+<p>The language is recognized by the automaton A = {a,b,c …, z, 0, .. 9}
+Q = {0, 1} F = {1}</p>
+<ul>
+<li>φ(nx) = 0 if n is a number</li>
+<li>φ(x) = 1 otherwise</li>
+</ul>
+<h3 id="non-deterministic">Non-Deterministic</h3>
+<p>In this case, the transition function should really be a
+<em>relation</em> In our definition, we can just replace the transition
+function with a multi-output map, or equivalently, φ: A<sup>*</sup> →
+P(Q) such that if φ(x) ⊆ φ(y) then φ(xz) ⊆ φ(yz)</p>
+<div class="THOUGHTS drawer">
+<p>Honestly, I'm pretty impressed with myself for coming up with
+that</p>
+<ul>
+<li>I remember when I first tried to learn about automata (probably in
+the early part of my PhD?) I really struggled trying to figure out how
+to view them in a simpler way; I never really succeeded in reformulating
+them</li>
+<li>Now it's obvious to me</li>
+</ul>
+<p>L = { w | φ(w) ∩ F ≠ ∅}</p>
+</div>
+<h1 id="push-down-automata">Push-Down Automata</h1>
+<p>Used in parsing (the second phase of compilers and interpreters)</p>
+<p>It's basically a finite automaton plus finite memory</p>
+<h1 id="language-of-an-automaton">Language of an Automaton</h1>
+<p>Automata are equivalent to <a
+href="https:/Digital-Garden/linguistics/ling-formal_language.html">formal
+languages</a>.</p>
+<h2 id="definitions">Definitions</h2>
+<h3 id="accepted-language">Accepted Language</h3>
+<pre><code>\begin{definition}{Accepted Strings of an Automaton}{•}
+Let $\mathbb{M}$ be an automaton and $w = w_1 \ldots w_n \in F(A)$. Then $w$ is accepted by $\mathbb{M}$ if there is a sequence of states $\{ x_0, \ldots, x_n \}$, such that
+
+\begin{enumerate}
+\item $x_0$ is the start state
+\item $f(x_i, w_{i+1}) = x_{i+1}$
+\item $x_n \in F$
+\end{enumerate}
+\end{definition}
+</code></pre>
+<h3 id="language-of-an-automaton-1">Language of an Automaton</h3>
+<pre><code>\begin{definition}{Language of an Automaton}{•}
+Let $\mathbb{M}$ be an automaton. Then the language of \mathbb{M} is defined to be
+\begin{equation}
+L(\mathbb{M}) = \{ w \mid \mathbb{M} \text { accepts } w \}.
+\end{equation}
+\end{definition}
+</code></pre>
+<h2 id="types-of-languages">Types of Languages</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td>Language</td>
+<td>Automaton</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Regular</td>
+<td>Finite</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><a
+href="https:/Digital-Garden/linguistics/ling-context_free_grammar.html">context-free
+grammar</a></p>
 </body>
 </html>

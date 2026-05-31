@@ -168,6 +168,319 @@
 <header id="title-block-header">
 <h1 class="title">SQL</h1>
 </header>
-<p><a href="comsci-SQL.org">pullback</a></p>
+<h1 id="introduction">Introduction</h1>
+<p>It's basically a fancy version of Excel.</p>
+<p>Idea : You take a database and use SQL commands in order to interact
+with it</p>
+<p>Temporary Tables : this is basically a buffer in Emacs.</p>
+<ul>
+<li>If you want to preserve data integrity, it's better to import first
+into a temporary table, verify the data, and then import it into the
+actual final table</li>
+<li>For speed-up you can also import part of the table first into a
+temporary table, and then look at a subtable</li>
+</ul>
+<p>Window functions : These allow you to take data from a selection of
+rows and return some values in a new column, for each of those rows</p>
+<ul>
+<li>ex. give the running total ; give the ranking in terms of largest
+numerical value</li>
+</ul>
+<p>CETs : These are just what you call functions in SQL</p>
+<h1 id="queries">Queries</h1>
+<h2 id="transactions">Transactions</h2>
+<p>Collections of queries</p>
+<ul>
+<li>the point is that they either all get applied, or none of them
+do</li>
+<li>this ensures data integrity</li>
+</ul>
+<p>BEGIN TRANSACTION name</p>
+<p>query1 … queryN</p>
+<h3 id="commit-rollback-savepoint">Commit / Rollback / Savepoint</h3>
+<p>COMMIT: Does the actual queries on the database</p>
+<p>ROLLBACK: Undoes the queries you just did (can only be used if you
+<strong>haven't committed</strong>)</p>
+<p>SAVEPOINT: Creates checkpoints that you can rollback to (again, this
+only works if you <strong>haven't committed</strong>)</p>
+<p>RELEASE SAVEPOINT: Removes a savepoint</p>
+<h3 id="ctes">CTEs</h3>
+<p>Common Table Expressions</p>
+<p>These are basically function versions of transactions</p>
+<ul>
+<li>you give a transaction a name, which creates a table that you can
+repeatedly call</li>
+</ul>
+<h2 id="order">Order</h2>
+<ol>
+<li>From and Join</li>
+<li>Where</li>
+<li>Group by</li>
+<li>Having</li>
+<li>Select</li>
+<li>Distinct</li>
+<li>Order by</li>
+<li>Limit / Offset</li>
+</ol>
+<h2 id="select-from">Select / From</h2>
+<h2 id="where">Where</h2>
+<h2 id="order-by">Order by</h2>
+<h2 id="limit-offset">Limit / Offset</h2>
+<h2 id="join">Join</h2>
+<p>The join is a certain kind of <a
+href="https:/Digital-Garden/math/math-pullbacks_and_pushouts.html">pullback</a>
+on the sets that describe the tables</p>
+<ul>
+<li>If table A and table B have data of the form
+(r<sup>A</sup><sub>i</sub>, c<sub>i1</sub><sup>A</sup>, …
+c<sub>in</sub><sup>A</sup>), (r^<sub>j</sub>B,
+c<sub>j1</sub><sup>B</sup>, … c<sub>jm</sub><sup>B</sup>), then the join
+of T<sub>A</sub> on T<sub>B</sub> at columns c<sub>a</sub><sup>A</sup> ∧
+c<sub>b</sub><sup>B</sup> has data</li>
+<li>{ (r<sup>A</sup><sub>i</sub>, c<sub>i1</sub><sup>A</sup>, … ,
+c<sub>in</sub><sup>A</sup>, r<sup>B</sup><sub>j</sub>,
+c<sup>B</sup><sub>j1</sub>, …, c<sup>B</sup><sub>jm</sub> ) |
+c<sup>A</sup><sub>ia</sub> = c<sup>B</sup><sub>jb</sub> }</li>
+</ul>
+<h3 id="inner-join">Inner Join</h3>
+<p>returns rows when there is a match in both tables</p>
+<h3 id="left-join">Left Join</h3>
+<p>Keeps rows from A even if they have no matching row in B</p>
+<ul>
+<li>ex. if A is <em>employees</em> and B is <em>parking spots</em> then
+left join will include those employees who don't have a parking spot
+yet</li>
+</ul>
+<p>The <strong>right join</strong> is the dual</p>
+<p>The <strong>full join</strong> keeps all rows, regardless of
+matching</p>
+<h3 id="self-join">Self-Join</h3>
+<p>You can join a table onto itself. This is typically done in the case
+of <em>hierarchical data</em></p>
+<ul>
+<li>say you have one column that's employee ID, and another that's the
+ID of their boss</li>
+<li>then you can join on those columns, and get a new table that
+describes the hierarchical relationship</li>
+<li>for each employee, you'll get all of their subordinates</li>
+</ul>
+<h2 id="group-by">Group by</h2>
+<p>Aggregate functions like MAX(), SUM(), etc.</p>
+<p>HAVING lets you filter the groups</p>
+<h1 id="tables">Tables</h1>
+<h2 id="constraints">Constraints</h2>
+<p>When you create a table, you usually impose constraints on the kind
+of data that does into it</p>
+<ul>
+<li>this maintains data integrity</li>
+</ul>
+<p>NOT NULL: prevents column from taking null values</p>
+<p>UNIQUE: all entries in the column must be unique</p>
+<p>PRIMARY KEY: entries in the column must be both unique and
+not-null</p>
+<p>FOREIGN KEY / REFERENCES: entries in the column must reference an
+<strong>existing record</strong> in another table (usually by a primary
+key on the other table)</p>
+<ul>
+<li>these are very common</li>
+<li>they basically make sure that you don't get broken links: if
+something is referenced, it actually exists</li>
+<li>so for example, if you already have a table that contains ID numbers
+of employees, and you're making a new table that's also going to include
+ID numbers, you would make the new ID numbers foreign keys, so they're
+required to match with the original numbers.</li>
+</ul>
+<p>CHECK: all entries in the column must satisfy a given condition</p>
+<p>DEFAULT: sets a default value in all the entries in the column, if no
+other value is specified</p>
+<h2 id="modifying">Modifying</h2>
+<p>Insert Into Values</p>
+<p>Update Set Where</p>
+<p>Delete From Where</p>
+<p>Alter Table Rename to</p>
+<h2 id="adding-columns">Adding Columns</h2>
+<p>Alter Table Add/Drop</p>
+<h2 id="temporary-table">Temporary Table</h2>
+<p>Stores data temporarily Automatically deleted when session or
+transaction ends</p>
+<p>Temp table names start with # (it automatically makes them temp)</p>
+<ul>
+<li>local tables start with #
+<ul>
+<li>accessible only within the session / transaction that created
+it</li>
+</ul></li>
+<li>global tables start with ##
+<ul>
+<li>accessible by all sessions; only closes when all sessions that are
+currently using it stop</li>
+<li>meant for sharing data</li>
+</ul></li>
+</ul>
+<h2 id="pivots">Pivots</h2>
+<p>A pivot is something like a transposition; it swaps rows and
+columns</p>
+<h2 id="triggers">Triggers</h2>
+<p>You can set a trigger so that something happens when you do something
+to a table</p>
+<ul>
+<li>usually used for <strong>data integrity</strong></li>
+</ul>
+<p>So if you don't want someone to be able to modify a table</p>
+<ul>
+<li>create a trigger that does a ROLLBACK whenever someone updates, adds
+to, etc. the table</li>
+</ul>
+<p>Or you could have a trigger that goes off when something is
+modified</p>
+<ul>
+<li>inputs a timestamp of the update and who updated it</li>
+</ul>
+<p>You can choose whether the action of the trigger is applied before or
+after the thing the user is doing</p>
+<h3 id="when-not-to-use">When not to use</h3>
+<h2 id="stored-procedure">Stored Procedure</h2>
+<p>These are basically CTEs that are more flexible</p>
+<ul>
+<li>SPs are precompiled (so they run quickly)</li>
+<li>they aren't temporary</li>
+<li>they allow parameters</li>
+</ul>
+<p>They're very similar conceptually, but they have different
+interpretations</p>
+<ul>
+<li>CTEs are tables</li>
+<li>SPs are a collection of commands (this is why the SP has
+parameters)</li>
+<li>So the SP will be more like a classic function; it says here are the
+variables/parameters and here's what I want you to do</li>
+<li>CTEs are like that, but you don't have variables, because you
+explicitly set them in the process of creating the CTE</li>
+<li>so a CTE is like a function / SP <em>evaluated at a point</em></li>
+</ul>
+<h1 id="optimization">Optimization</h1>
+<h2 id="indexes">Indexes</h2>
+<p>Basically an index is made up of a copy of the column in the table,
+and corresponding pointers to the table</p>
+<p>(copy<sub>entry</sub> , pointer)</p>
+<p>The entries of the index are then <em>sorted</em>.</p>
+<p>The point is that now, if you want to search that column you can do a
+<strong>binary search</strong> rather than a linear one.</p>
+<h3 id="implementation">Implementation</h3>
+<p>They're usually either</p>
+<ul>
+<li>B trees</li>
+<li>Hash tables</li>
+</ul>
+<h3 id="cost">Cost</h3>
+<p>You have a memory cost of storing the index And a time cost of the
+sorting that the index does</p>
+<h3 id="types">Types</h3>
+<p>Clustered indices</p>
+<ul>
+<li>essentially just reorder the actual table according to the column
+you chose
+<ul>
+<li>consequently, you can only have one clustered index per table (any
+other would destroy the original index)</li>
+</ul></li>
+</ul>
+<p>Non-clustered indices are the usual version of indices</p>
+<h1 id="cursors-avoid">Cursors (Avoid)</h1>
+<p>Cursors are <strong>very slow</strong></p>
+<ul>
+<li>Avoid them</li>
+<li>I'm not sure why they're even on the list of things to learn, you
+basically never use them</li>
+</ul>
+<p>They basically just give you a way of doing operations on each row
+individually</p>
+<ul>
+<li>so you take a table, which you pass into your cursor</li>
+<li>then you move to specific rows in the cursor-table, and do
+whatever</li>
+</ul>
+<h2 id="implicit-cursors">Implicit Cursors</h2>
+<p>Insert, Update, Delete all create implicit cursors</p>
+<h2 id="explicit-cursors">Explicit Cursors</h2>
+<p>User-defined cursors</p>
+<p>Declare Cursor For Select From</p>
+<p>Open</p>
+<p>Fetch { First/Last/Next/Prior/Absolute n/Relative n } From
+cursor<sub>name</sub> Into</p>
+<p>Close Deallocate cursor<sub>name</sub></p>
+<h1 id="online-transaction-processing-oltp">Online Transaction
+Processing (OLTP)</h1>
+<p>Processes user requests in real-time</p>
+<ul>
+<li>with ACID</li>
+<li>fast</li>
+</ul>
+<p>Things like ATMs, or Amazon's order system</p>
+<p>Normalized data schemes</p>
+<h1 id="online-analytical-processing-olap">Online Analytical Processing
+(OLAP)</h1>
+<p>Designed for data analysts to do data transformations and
+processing</p>
+<p>Things like fraud detection</p>
+<h2 id="olap-hypercube">OLAP (hyper)Cube</h2>
+<p>A multi-dimensional array of data</p>
+<p><strong>Slices</strong> are hyperplanes of the cube (you fix one
+dimension's value, to get an (n-1)-dim subset )</p>
+<p><strong>Dices</strong> are made from slices</p>
+<ul>
+<li>you pick a particular dimension and several values to evaluate that
+dimension at</li>
+<li>then you collect all the corresponding hyperplanes into an
+n-dimensional box</li>
+</ul>
+<p><strong>Drill up/down</strong></p>
+<p><strong>Roll-up</strong></p>
+<p><strong>Pivot</strong></p>
+<h1 id="difficulty-levels">Difficulty Levels</h1>
+<div class="PERSONAL drawer">
+<p>Intermediate</p>
+<ul>
+<li><label><input type="checkbox" checked="" />indexes (clustered,
+non-clustered)</label></li>
+<li><label><input type="checkbox" checked="" />subqueries</label></li>
+<li><label><input type="checkbox" checked="" />CTEs</label></li>
+<li><label><input type="checkbox" checked="" />joining a table on
+itself</label></li>
+<li><label><input type="checkbox" checked="" />group-by with aggregate
+functions</label></li>
+<li><label><input type="checkbox" checked="" />pivots</label></li>
+<li><label><input type="checkbox" checked="" />OLAP vs OLTP</label></li>
+<li><label><input type="checkbox" checked="" />triggers (when to use/not
+use)</label></li>
+<li>basic profiling like reading a log</li>
+<li>transactions and layering them to handle failures up the stack</li>
+<li>basic Window Functions</li>
+<li>procedural vs declarative styles</li>
+<li>extensions PSQL, TSQL</li>
+<li>design database in 3rd normal form</li>
+</ul>
+<p>Advanced</p>
+<ul>
+<li>optimization</li>
+<li>complex window Functions</li>
+<li>UDFs</li>
+<li>when and how to denormalize adtabase</li>
+<li>Database Architecture</li>
+<li>can read an execution plan</li>
+<li>can tune queries with execution hints without messing up
+performance</li>
+<li>profile / use traces for identifying and understanding stats of
+executions</li>
+<li>performance counters and their database load</li>
+<li>can design OLAP cube and do advanced data mining with it</li>
+<li>trigger safety</li>
+<li>distributed transactions, even with layers</li>
+<li>can set up a database for high availability, data recovery, etc</li>
+<li>understands how DB engines work internally</li>
+<li>data warehousing and reporting</li>
+<li>variants of NoSQL</li>
+</ul>
+</div>
 </body>
 </html>

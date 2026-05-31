@@ -168,7 +168,98 @@
 <header id="title-block-header">
 <h1 class="title">machine learning</h1>
 </header>
-<p><a href="comsci-machine_learning.org">Natural Language
-Processing</a></p>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>Experience training, evaluating, and deploying models end-to-end
+(data preprocessing → training → validation → inference →
+monitoring)</p>
+<h1 id="packages">Packages</h1>
+<h2 id="pandas">Pandas</h2>
+<h2 id="scikit-learn">Scikit-Learn</h2>
+<h2 id="pyspark">PySpark</h2>
+<p>Open-source Big data processing and analytics</p>
+<h2 id="tensorflow">TensorFlow</h2>
+<p>Open-source</p>
+<ul>
+<li>developed by Google</li>
+</ul>
+<p>For large-scale production Static computation graphs</p>
+<p>Declarative</p>
+<h3 id="structure">Structure</h3>
+<p>Works with multidimensional immutable arrays (which they call
+<strong>tensors</strong>)</p>
+<ul>
+<li>If T is the set of tensors, then a <strong>layer</strong> is
+map</li>
+<li>f: T<sup>n</sup> → T</li>
+</ul>
+<p>Layers are objects with the following methods</p>
+<ul>
+<li><strong>init</strong>: create custom layer attributes and weights
+that don't depend on the input shapes</li>
+<li><strong>build</strong>: creates weights that do depend on the input
+shapes</li>
+<li><strong>call</strong>: performs the computation</li>
+</ul>
+<h3 id="layers">Layers</h3>
+<p>Some standard layers are</p>
+<ul>
+<li><strong>flatten</strong>: turns array into a long vector</li>
+<li><strong>dense</strong>: densely connected neural layer</li>
+</ul>
+<h3 id="pre-processing">Pre-processing</h3>
+<p>If you're working with images, normalize the data, so that the pixels
+are all given values between 0 and 1</p>
+<ul>
+<li>use the same normalization procedure on the training and test
+data</li>
+</ul>
+<h3 id="compiling">Compiling</h3>
+<ol>
+<li><p>Loss Function</p></li>
+<li><p>Optimization</p></li>
+<li><p>Metrics</p></li>
+</ol>
+<h3 id="training">Training</h3>
+<p>Feed in the data</p>
+<pre><code>model.fit(train_images, train_labels, epochs = 20)
+</code></pre>
+<p>Evaluate performance</p>
+<pre><code>test_loss, test_acc = model.evaluate(test_images, test_labels, verbose = 2)
+
+print(&#39;\nTest accuracy:&#39;, test_acc)
+</code></pre>
+<ol>
+<li><p>Softmax</p>
+<p>Converts the logits to probabilities</p>
+<p>Then use</p>
+<pre><code>probability_model.predict(test_images)
+</code></pre>
+<p>To see how confident the model is</p>
+<ul>
+<li>on each test image, it'll give the probability for each potential
+answer</li>
+</ul></li>
+</ol>
+<h2 id="pytorch">PyTorch</h2>
+<p>Open-source ML library</p>
+<ul>
+<li>developed by Facebook</li>
+</ul>
+<p>Dynamic computation graphs</p>
+<ul>
+<li>more flexible</li>
+<li>good for rapid prototyping</li>
+</ul>
+<p>Imperative</p>
+<h2 id="jax">JAX</h2>
+<p>Open-source numerical computation libraryn</p>
+<ul>
+<li>by Google</li>
+</ul>
+<p>Just-in-time compilation</p>
+<h1 id="natural-language-processing"><a
+href="https:/Digital-Garden/computer_science/comsci-natural_language_processing.html">Natural
+Language Processing</a></h1>
 </body>
 </html>

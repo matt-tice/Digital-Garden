@@ -162,12 +162,395 @@
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">Python classes</h1>
 </header>
-<p><a href="comsci-python_classes.org">Python</a></p>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>Class members are <em>public</em> and class member functions are
+<em>virtual</em> Classes are objects</p>
+<p>Types and classes are essentially the same thing, but the keywords
+<code class="verbatim">type</code> and <code
+class="verbatim">class</code> do different things</p>
+<ul>
+<li><code class="verbatim">class</code> creates new types/classes</li>
+<li><code class="verbatim">type</code> is a function that prints the
+type/class of an object</li>
+</ul>
+<p>Object-oriented programming is based on
+<strong>encapsulation</strong></p>
+<ul>
+<li>taking a bunch of details explaining how an object should behave,
+bundling them up in a class, and letting the user work intuitively with
+the class</li>
+<li>ex. defining a class of polynomials, which contain a bunch of
+details defining how addition, multiplication, taking derivatives, etc.
+work, and then letting the user just use simple commands to do those
+things</li>
+</ul>
+<h2 id="definitions">Definitions</h2>
+<h3 id="methods">Methods</h3>
+<p><strong>Methods</strong> are the functions inside of a class</p>
+<ul>
+<li>they're usually named with a verb and a noun</li>
+<li>method objects are similar to, but not the same as function
+objects</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MyClass:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> f(<span class="va">self</span>):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> MyClass</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>x.f    </span></code></pre></div>
+<p>The function <code class="verbatim">f</code> created from MyClass is
+a <strong>function object</strong> <code class="verbatim">x.f</code> is
+a <strong>method object</strong></p>
+<ul>
+<li>method objects aren't just function objects, because they also
+contain the data of the <em>instance object</em></li>
+<li>whenever a method object is called, its first variable is
+<strong>always the instance object</strong></li>
+<li>as an object, we can do things like assign a name to it</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>xf <span class="op">=</span> x.f</span></code></pre></div>
+<p>Methods can <strong>call other methods</strong> in the same class
+They can also references things in the global scope</p>
+<h3 id="attributes">Attributes</h3>
+<p><strong>Attributes</strong> are the variables inside of a class</p>
+<ul>
+<li>they <strong>don't need to be declared</strong></li>
+<li>they spring into existence when first assigned to</li>
+<li>this allows you to <em>create new attributes</em> in a given
+object</li>
+</ul>
+<p>You access both of these with a period</p>
+<ul>
+<li>obj.attribute</li>
+<li>obj.method()</li>
+</ul>
+<h2 id="instantiation">Instantiation</h2>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MyClass:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> MyClass()</span></code></pre></div>
+<ul>
+<li>the program will create a <strong>class object</strong> and give it
+the local name <code class="verbatim">MyClass</code></li>
+<li>then it creates a new <em>instance</em> (hence the name) of the
+class MyClass, and gives it the local name <code
+class="verbatim">x</code></li>
+</ul>
+<p>A priori, the nwew instance of the class MyClass will be
+<em>empty</em></p>
+<ul>
+<li>we can use the method <code class="verbatim">__init__</code> to
+change that</li>
+</ul>
+<h2 id="sharing-data">Sharing Data</h2>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>tricks <span class="op">=</span> []             <span class="co"># mistaken use of a class variable</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_trick(<span class="va">self</span>, trick):</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.tricks.append(trick)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> Dog(<span class="st">&#39;Fido&#39;</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> Dog(<span class="st">&#39;Buddy&#39;</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>d.add_trick(<span class="st">&#39;roll over&#39;</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>e.add_trick(<span class="st">&#39;play dead&#39;</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> d.tricks                <span class="co"># unexpectedly shared by all dogs</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>[<span class="st">&#39;roll over&#39;</span>, <span class="st">&#39;play dead&#39;</span>]</span></code></pre></div>
+<p>The problem here is that the <code class="verbatim">tricks</code>
+list is a class variable, and thus will be shared by all instances of
+the class</p>
+<ul>
+<li>so if you modify <code class="verbatim">tricks</code> in any
+instance of the class, it will modify all of them</li>
+</ul>
+<p>Instead if we move the variable to the instance</p>
+<ul>
+<li>when an instance is instantiated, <code
+class="verbatim">__init__</code> will create a new instance variable,
+using <code class="verbatim">self.tricks</code></li>
+</ul>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Dog:</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.tricks <span class="op">=</span> [] <span class="co"># creates a new empty list for each dog</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_trick(<span class="va">self</span>, trick):</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.tricks.append(trick)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> Dog(<span class="st">&#39;Fido&#39;</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> Dog(<span class="st">&#39;Buddy&#39;</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>d.add_trick(<span class="st">&#39;roll over&#39;</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>e.add_trick(<span class="st">&#39;play dead&#39;</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> d.tricks                <span class="co"># unexpectedly shared by all dogs</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>[<span class="st">&#39;roll over&#39;</span>, <span class="st">&#39;play dead&#39;</span>]</span></code></pre></div>
+<h1 id="derived-classes">Derived Classes</h1>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> DerivedClassName(BaseClassName):</span></code></pre></div>
+<p>Given one class, we can create a new <strong>derived class</strong>
+from it</p>
+<ul>
+<li>when the class object is created, it remembers the base class as
+well</li>
+<li>if an attribute is referenced by an instance of the derived class,
+it will first check the derived class, and then if it can't find it
+there, it will check the base class</li>
+<li>so in this way, derived classes build upon their base class</li>
+<li>you can also use this to <strong>overwrite</strong> or
+<strong>extent</strong> base methods
+<ul>
+<li>in that case, if you want to specifically get the base method, not
+the derived version, use <code
+class="verbatim">BaseClassName.methodname</code></li>
+</ul></li>
+</ul>
+<h2 id="multiple-inheritance">Multiple Inheritance</h2>
+<p>You can actually create a derived class that's built off of multiple
+base classes</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> DerivedClassName(Base1, Base2):</span></code></pre></div>
+<p>When searched for attributes this will</p>
+<ol>
+<li>Check <code class="verbatim">DerivedClassName</code></li>
+<li>Check <em>all</em> of <code class="verbatim">Base1</code> (including
+any base classes, if <code class="verbatim">Base1</code> is itself
+derived)</li>
+<li>Do the same for <code class="verbatim">Base2</code></li>
+</ol>
+<p>It uses the <strong>call-next-method</strong></p>
+<h1 id="private-variables">Private Variables</h1>
+<p>Python has <strong>no private variables</strong></p>
+<ul>
+<li>but as a programmer, you often want people to interact with a
+variable <em>as if it were private</em></li>
+</ul>
+<p>The convention is to prefix with an underscore</p>
+<ul>
+<li><code class="verbatim">_privVar</code></li>
+</ul>
+<p><strong>Name mangling</strong></p>
+<ul>
+<li>a name with <em>two leading underscores</em> and <em>less than 2
+trailing underscores</em> is replaced as follows:</li>
+<li><code class="verbatim">_spam</code> becomes <code
+class="verbatim">_classname__spam</code></li>
+<li>this is helpful in cases where a derived class uses the same
+variable name as one in the base class, but you don't want the class's
+one to be overwritten</li>
+<li>this is something kind of like a variable private to the base class,
+but it's not really private; you could still access the base
+variable</li>
+</ul>
+<h1 id="iterators">Iterators</h1>
+<h1 id="methods-list">Methods List</h1>
+<h2 id="init__"><code class="verbatim">__init__</code></h2>
+<p>This puts a newly created instance of the class into a specific
+initial state</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Complex:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, realpart, imagpart):</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.r <span class="op">=</span> realpart</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.i <span class="op">=</span> imagpart</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> Complex(<span class="dv">1</span>,<span class="dv">1</span>)          </span></code></pre></div>
+<h2 id="iter__"><code class="verbatim">__iter__</code></h2>
+<p>This method returns a new iterator object that has the method <code
+class="verbatim">__next__</code></p>
+<p>There is also a built-in <code class="verbatim">iter</code>
+<em>function</em>, which is called by any for loop</p>
+<p>If you add the iter <em>method</em> to a class</p>
+<ul>
+<li>it should return an object with a <code
+class="verbatim">__next__</code> method</li>
+<li>that way, when you apply a for loop, it will try to apply iter, will
+use the class's iter method, and get a another object with a next
+method, which is then looped over</li>
+<li>(this other object can be the same as the original object, but it
+doesn't have to be)</li>
+</ul>
+<h2 id="next__"><code class="verbatim">__next__</code></h2>
+<p>Returns the next item from an iterator object</p>
+<p>If there are no more items, it raises the StopIteration exception</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MyClass:</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>,data):</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.data <span class="op">=</span> data</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.index <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__iter__</span>(<span class="va">self</span>):</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__next__</span>(<span class="va">self</span>):</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.index <span class="op">==</span> <span class="bu">len</span>(data):</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">StopIteration</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.index <span class="op">-</span> <span class="va">self</span>.index <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.data[<span class="va">self</span>.index <span class="op">-</span> <span class="dv">1</span>]             </span></code></pre></div>
+<h2 id="dict__"><code class="verbatim">__dict__</code></h2>
+<p>Stores an object's writable attributes</p>
+<ul>
+<li>it basically gives you info about any object that you need to know
+more about</li>
+</ul>
+<pre><code>def funct():
+class C:
+
+print(funct.__dict__)
+print(C.__dict__)  
+</code></pre>
+<p>dict allows you to <strong>add new attributes</strong> to an
+object</p>
+<h2 id="slots__"><code class="verbatim">__slots__</code></h2>
+<p>Very similar to dict, but it's a <strong>static type</strong>, rather
+than dynamic</p>
+<ul>
+<li>if you use slots, the object won't create a dict</li>
+<li>so you can't add new attributes</li>
+<li>but because it's statically typed, it uses <strong>way less
+memory</strong></li>
+<li>it also has <strong>faster attribute access</strong></li>
+</ul>
+<pre><code>class C:
+  __slots__ = ...
+</code></pre>
+<h2 id="add__"><code class="verbatim">__add__</code></h2>
+<pre><code>a + b   is interpretted as a.__add__(b)
+</code></pre>
+<h3 id="radd__"><code class="verbatim">__radd__</code></h3>
+<p>If we try</p>
+<pre><code>int.__add(1, x)
+</code></pre>
+<p>for an object x, we'll get a <code
+class="verbatim">NotImplemented</code> error</p>
+<ul>
+<li><p>but python will always check addition in the reverse order if
+NotImplemented shows up</p></li>
+<li><p>this is done with the radd method</p></li>
+<li><p>it will call</p>
+<pre><code>__radd__(x,1)
+</code></pre></li>
+</ul>
+<p>So if we define an addition method on type(x), we can then define</p>
+<pre><code>def __radd__(self, other):
+  return self + other
+</code></pre>
+<p>(assuming addition is commutative)</p>
+<h2 id="call__"><code class="verbatim">__call__</code></h2>
+<p>This is used to make an object behave like a function</p>
+<ul>
+<li><p>f(x) becomes the syntax for</p>
+<pre><code>f.__call__(x)
+</code></pre></li>
+</ul>
+<h2 id="eq__"><code class="verbatim">__eq__</code></h2>
+<p>Used to define when two objects of the same class are equal</p>
+<ul>
+<li>if we don't specify this, then you could, for instance, define two
+polynomials with the same coefficients, that aren't considered
+equal</li>
+<li>this is because when we create new objects, they each are given a
+unique identity (see the object section of <a
+href="https:/Digital-Garden/computer_science/comsci-python.html">Python</a>),
+which is a priori the only thing we have to compare them</li>
+</ul>
+<h2 id="enter__"><code class="verbatim">__enter__</code></h2>
+<p>Used in context managers When it's called, you enter the runtime
+context of the object</p>
+<h3 id="exit__"><code class="verbatim">__exit__</code></h3>
+<p>Exits the runtime context of the object</p>
+<h1 id="conventions">Conventions</h1>
+<p>Classes are named in PascalCase</p>
+<p>Non-public starts with a leading underscore</p>
+<ul>
+<li><sub>radius</sub></li>
+<li>you don't want to type things like circle.<sub>radius</sub>
+(although you can and it'll work)</li>
+</ul>
+<p>Name mangling</p>
+<ul>
+<li>Attribute and method names get two leading underscores</li>
+</ul>
+<h1 id="metaclasses">Metaclasses</h1>
 </body>
 </html>

@@ -168,6 +168,47 @@
 <header id="title-block-header">
 <h1 class="title">assembly language</h1>
 </header>
-<p><a href="comsci-assembly_language.org">programming languages</a></p>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>A low-level language: one step above machine language</p>
+<p>Machine language is the language of each particular machine</p>
+<ul>
+<li>it's coded in binary</li>
+<li>it depends on the system architecture</li>
+</ul>
+<p>Assembly language</p>
+<ul>
+<li>there's a <strong>one-to-one correspondence</strong> between
+assembly code and machine code</li>
+<li><strong>assemblers</strong> convert assembly code to machine
+code</li>
+</ul>
+<p>In other words, assembly code and machine code are isomorphic, but
+assembly is easier for humans to understand.</p>
+<p>However, assembly still <em>isn't easy</em> to understand, so other
+<a
+href="https:/Digital-Garden/computer_science/comsci-programming_language.html">programming
+languages</a> exist, which make coding easier for humans</p>
+<ul>
+<li>Higher level languages like C will translate each line of code to
+multiple lines of assembly, which then get assembled into machine
+code</li>
+<li>Depending on how the compiler does this translation, it may be more
+or less optimized</li>
+</ul>
+<h1 id="directives">Directives</h1>
+<p>Tell the assembler what to do</p>
+<p>Start with a period</p>
+<h2 id="data">.data</h2>
+<p>You declare variables here</p>
+<p>Use a question mark to signify a variable isn't to be initialized</p>
+<h2 id="code">.code</h2>
+<h1 id="instructions">Instructions</h1>
+<p>Tell the CPU what to do</p>
+<h2 id="mov">mov</h2>
+<p>Moves data around</p>
+<p>mov num1, 5 ; moves the integer 5 to the memory location
+corresponding to num1</p>
+<h1 id="operators">Operators</h1>
 </body>
 </html>

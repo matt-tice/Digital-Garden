@@ -168,6 +168,69 @@
 <header id="title-block-header">
 <h1 class="title">emacs</h1>
 </header>
-<p><a href="comsci-emacs.org">AUCteX</a></p>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>In this file I'll record some of the things I've learned about emacs
+usage — tips, tricks, debugging, etc.</p>
+<h1 id="rectangles">Rectangles</h1>
+<h1 id="registers">Registers</h1>
+<p>They store things:</p>
+<ul>
+<li>Text</li>
+<li>Rectangles</li>
+<li>Buffer names</li>
+<li>Frame configs</li>
+<li>File names</li>
+</ul>
+<p>Each register has a <strong>single letter</strong> as its name</p>
+<h2 id="bookmarks">Bookmarks</h2>
+<p>Lets you jump to specific files or directories very quickly It saves
+them forever, unlike registers</p>
+<h1 id="latex">Latex</h1>
+<p>Auctex has two different (similar) modes:</p>
+<ul>
+<li>latex-mode</li>
+<li>tex-mode</li>
+</ul>
+<p>As it turns out, you <strong>need both of them</strong></p>
+<ul>
+<li>tex-mode is the thing that lets you compile and such</li>
+<li>latex-mode</li>
+</ul>
+<h1 id="keybindings">Keybindings</h1>
+<p>You can remove keybindings with</p>
+<p>global-unset-key local-unset-key</p>
+<p>Similarly, you can set them with</p>
+<p>global-set-key local-set-key</p>
+<h1 id="org-agenda">Org-Agenda</h1>
+<p>You can <strong>add agenda files</strong> by going to the relevent
+file and typing <em>M-x org-agenda-file-to-front</em></p>
+<ul>
+<li><code class="verbatim">C-c [</code></li>
+</ul>
+<p>And remove them with <em>M-x org-remove-file</em> -<code
+class="verbatim">C-c ]</code></p>
+<h1 id="emms">Emms</h1>
+<p>Ok so I tried for a while to get this thing working, but upon
+restarting my emacs, I realized I'd somehow messed everything up. So I'm
+just going to <strong>remove emms for now</strong></p>
+<h3 id="old">Old</h3>
+<p>A music player for emacs (this thing really has it all!)</p>
+<div class="TO-FIX drawer">
+<p>I can't figure out how to get it working on Windows I tried getting
+it to work with VLC, but for some reason it looks like it's playing, but
+has no audio, and the songs just seem to crash and skip very quickly</p>
+<p>So now I'm to get MPV working But the problem is it seems that MPV
+wants to use something called a <strong>socket</strong> while Windows
+uses <strong>pipes</strong></p>
+</div>
+<h1 id="eww">EWW</h1>
+<p>Emacs has a web browser! That's crazy</p>
+<p>It doesn't allow javascript or most CSS, so it's actually pretty
+safe</p>
+<p>It actually looks pretty good — it's basically just the way elfeed
+looks</p>
+<h1 id="auctex"><a
+href="https:/Digital-Garden/computer_science/comsci-auctex.html">AUCteX</a></h1>
 </body>
 </html>

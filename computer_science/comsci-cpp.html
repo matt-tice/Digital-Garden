@@ -168,6 +168,52 @@
 <header id="title-block-header">
 <h1 class="title">cpp</h1>
 </header>
-<p><a href="comsci-cpp.org">object-oriented language</a></p>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>An <a
+href="https:/Digital-Garden/computer_science/comsci-object_oriented_languages.html">object-oriented
+language</a></p>
+<p>A compiled language</p>
+<ul>
+<li>Makes it much faster than an interpretted language (like
+Python)</li>
+</ul>
+<p>Has flexibile memory management</p>
+<ul>
+<li>In Java, some of the system memory is used to interpret the language
+<ul>
+<li>A garbage collector is used to tidy up the memory</li>
+<li>You don't have direct control over how much memory is used</li>
+</ul></li>
+<li>In C++ you know how much memory a program will use</li>
+</ul>
+<p>Pointed chasing and virtual method look-up slow down C++ in
+comparison to Fortran</p>
+<h1 id="compilation">Compilation</h1>
+<p>Because C++ isn't an interpretted language, it needs to be compiled
+before it can be executed</p>
+<h1 id="headers">Headers</h1>
+<h2 id="iostream">&lt;iostream&gt;</h2>
+<p>Used for the program to know about input and output cout is
+<em>console output</em></p>
+<h2 id="string">&lt;string&gt;</h2>
+<p>getline</p>
+<h1 id="statements">Statements</h1>
+<p>These are the instructions in the program They all <strong>end with a
+semicolon</strong></p>
+<h1 id="variables">Variables</h1>
+<p>Must be declared with a type</p>
+<p>Double-type variables use up a lot more memory than int</p>
+<p>Int is signed by default</p>
+<h2 id="type-conversion">Type Conversion</h2>
+<p>Explicit type conversion changes the type of a variable</p>
+<h1 id="debugging">Debugging</h1>
+<p>C++ has some features to aid in debugging your program</p>
+<h2 id="cassert">&lt;cassert&gt;</h2>
+<p>assert will check whether a particular statement is true, and if not,
+it will exit the program, pointing to the issue</p>
+<p>asserts are automatically removed when compiled with the -O flag, to
+optimize your code, which is awesome — once you know it works, you can
+drop the asserts</p>
 </body>
 </html>

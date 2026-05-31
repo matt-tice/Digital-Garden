@@ -162,12 +162,665 @@
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">haskell</h1>
 </header>
-<p><a href="comsci-haskell.org">non-contiguously</a></p>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>Functional language</p>
+<p>Haskell <strong>doesn't have variables</strong> in the sense of an
+imperative language All "variables" are really explicit values that we
+give a name</p>
+<ul>
+<li>you aren't allowed to actually vary the value; every "variable" is a
+constant</li>
+</ul>
+<p>This is actually <strong>fantastic for optimization</strong></p>
+<ul>
+<li>compilers can optimize around the fact that all variables are
+constant</li>
+<li>for ex. you can replace all occurances of a certain variable name by
+a pointer to a single shared memory layout
+<ul>
+<li>ordinarily, if you did that for a non-constant variable, you'd risk
+the memory address being overwritten with different values as you change
+the scope</li>
+</ul></li>
+</ul>
+<h1 id="commands">Commands</h1>
+<h2 id="the-prelude">The Prelude</h2>
+<p>The functions that haskell natively has, before you import
+anything</p>
+<h3 id="reshapers">Reshapers</h3>
+<ol>
+<li><p>foldr</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">foldr</span><span class="ot"> ::</span> (a <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> b</span></code></pre></div>
+<p><code class="verbatim">(a -&gt; b -&gt; b)</code> is the kind of
+shape that a node <code class="verbatim">(:)</code> has. So we can
+write</p>
+<pre><code>foldr (:) z [1,2,3]
+</code></pre>
+<p>to replace</p></li>
+<li><p>map</p>
+<p>Applies a function elementwise to a list</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span><span class="ot"> ::</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> [b]</span></code></pre></div></li>
+<li><p>concatMap</p>
+<p>Applies a function f to each element in a list, giving you a list of
+lists. Then it concatenates the nested list into a single list</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span><span class="ot"> ::</span> (a <span class="ot">-&gt;</span> [b]) <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> [b]</span></code></pre></div></li>
+<li><p>filter</p>
+<p>Evaluates a predicate function against each item in a list. If the
+predicate returns true, the item stays, if false, it's dropped</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(a <span class="ot">-&gt;</span> <span class="dt">Bool</span>) <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> [a]</span></code></pre></div></li>
+</ol>
+<h3 id="folds">Folds</h3>
+<p>Basically these things take a list and replace all of the cons
+operators <code class="verbatim">(:)</code> with a specified function f,
+and replace the empty list <code class="verbatim">[ ]</code>, with a
+base-case z</p>
+<ol>
+<li><p>foldr</p>
+<p>Processes a list from right to left</p>
+<ul>
+<li>it computes f<sub>1</sub>(f<sub>2</sub>(f<sub>3</sub>(z)))</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>(a <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> b</span></code></pre></div>
+<p>The first object is f</p>
+<ul>
+<li>we think of it as a list of functions, indexed by elements in our
+list</li>
+</ul>
+<p>The second is z The third is your list</p>
+<p>Basically <code class="verbatim">f z [1,2,3]</code> becomes
+f<sub>1</sub>(f<sub>2</sub>(f<sub>3</sub>(z)))</p>
+<p>So basically, it allows you to evaluate a composition of functions
+f<sub>i</sub> :: b → b on a fixed element z</p>
+<p>Note: <code class="verbatim">foldr</code> is computed lazily</p>
+<ul>
+<li>if it can return without having to compute the nested compositions,
+it will</li>
+</ul></li>
+<li><p>foldl / foldl'</p>
+<p>Processes a list from left to right</p>
+<ul>
+<li>basically it wraps composition in the opposite way</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(b <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> b</span></code></pre></div>
+<p>The first object is g</p>
+<ul>
+<li>we think of it again as a list of functions g<sub>i</sub> = g(-,i) :
+b → b</li>
+</ul>
+<p>The second element is the base case The third is the list</p>
+<p>We get g(g(g(z,1),2),3) =
+g<sub>3</sub>(g<sub>2</sub>(g<sub>1</sub>(z)))</p>
+<p>Note: Haskell's laziness treats this a little weird</p>
+<ul>
+<li>it will skip over g<sub>1</sub>(z), leaving it unevaluated (we call
+this a <strong>thunk</strong>)</li>
+<li>then it'll do the same at g<sub>2</sub>, and so on, until it gets to
+the end</li>
+<li>only then will it try to evaluate the whole thing</li>
+<li>because of this, you can actually run out of memory, since it'll
+leaving these thunks behind</li>
+</ul>
+<p>Note: <code class="verbatim">foldl'</code> is usually better, because
+it evaluates at each step, instead of combining a bunch of unexecuted
+lazy expressions</p></li>
+</ol>
+<h3 id="linkers-and-slicers">Linkers and Slicers</h3>
+<ol>
+<li><p>zip</p>
+<p>Takes two lists and locks them together into a list of tuples</p>
+<ul>
+<li>if one list is shorter than the other, it truncates at the shortest
+length</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>[a] <span class="ot">-&gt;</span> [b] <span class="ot">-&gt;</span> [(a,b)]</span></code></pre></div></li>
+<li><p>zipWith</p>
+<p>Takes two lists, matches them index-by-index and applies a combining
+function</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">zipWith</span><span class="ot"> ::</span> (a <span class="ot">-&gt;</span> b <span class="ot">-&gt;</span> c) <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> [b] <span class="ot">-&gt;</span> [c]</span></code></pre></div></li>
+<li><p>replicate</p>
+<p>Creates a list where every element has the same value</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">replicate</span><span class="ot"> ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> [a]</span></code></pre></div></li>
+<li><p>take / drop</p>
+<p><code class="verbatim">take n</code> grabs the first n elements of a
+list and drops the rest <code class="verbatim">drop n</code> drops the
+first n elements from the list and returns the rest</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">Int</span> <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> [a]</span></code></pre></div></li>
+</ol>
+<h3 id="combinations">Combinations</h3>
+<ol>
+<li><p>Function composition</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>(b <span class="ot">-&gt;</span> c) <span class="ot">-&gt;</span> (a <span class="ot">-&gt;</span> b) <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> c</span></code></pre></div></li>
+<li><p>Evaluation on a value</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>(a <span class="op">-</span> <span class="op">&gt;</span> b) <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> b</span></code></pre></div></li>
+</ol>
+<h1 id="compiler">Compiler</h1>
+<p>Haskell's compiler is the <strong>Glasgow Haskell Compiler</strong>
+(GHC)</p>
+<p>We can alter its behaviour using a <strong>language pragma</strong>:
+<code class="verbatim">{-# LANGUAGE [option] #-}</code></p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ot">{-# LANGUAGE OverloadedStrings #-}</span></span></code></pre></div>
+<p>This tells GHC to treat strings as arrays of bytes, as opposed to
+inefficient linked lists of characters.</p>
+<h1 id="types">Types</h1>
+<h2 id="word64">Word64</h2>
+<p>Unsigned 64-bit integer</p>
+<h2 id="data">data</h2>
+<h3 id="sum-types">Sum Types</h3>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">data</span> sumTypeName</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="ot">=</span> constructor1 <span class="dt">Type1</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> constructor2 <span class="dt">Type2</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">deriving</span> (<span class="dt">Show</span>, <span class="dt">Eq</span>)</span></code></pre></div>
+<p>Constructors are functions that instantiate values. The <code
+class="verbatim">Type</code> next to them is what you have to pass into
+the function</p>
+<p>What's happening under the hood, is that we get a function</p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ot">constructor1 ::</span> <span class="dt">Type1</span> <span class="ot">-&gt;</span> sumTypeName</span></code></pre></div>
+<p>Sum types say that the data type can be instantiated by any of the
+listed constructors.</p>
+<p><code class="verbatim">deriving(Show, Eq)</code>: these are
+properties we give our defined type</p>
+<ul>
+<li><code class="verbatim">Show</code> allows us to print it to the
+terminal</li>
+<li><code class="verbatim">Eq</code> allows us to use <code
+class="verbatim">==</code> on it</li>
+</ul>
+<h3 id="product-types">Product Types</h3>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">data</span> prodTypeName <span class="ot">=</span> prodTypeName</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  {<span class="ot"> regionName        ::</span> <span class="dt">Text</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  ,<span class="ot"> regulatoryBody    ::</span> <span class="dt">Maybe</span> <span class="dt">Text</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  ,<span class="ot"> sovereignRiskTier ::</span> <span class="dt">Int</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  } <span class="kw">deriving</span> (<span class="dt">Show</span>, <span class="dt">Eq</span>)</span></code></pre></div>
+<p>This says that the data constructor is also <code
+class="verbatim">prodTypeName</code></p>
+<ul>
+<li>this tells us there's only one valid way to construct the data
+form</li>
+</ul>
+<p>The info inside of the curly brackets are <strong>records</strong>:
+they tell us what information our data type must contain (it has to
+contain <em>all of them</em>)</p>
+<p><code class="verbatim">field :: Type</code> means that the field has
+the type <code class="verbatim">Type</code></p>
+<p><code class="verbatim">Maybe</code> is a nice way of preventing
+null-pointer errors. <code class="verbatim">Maybe Type</code> means that
+either the field can be type <code class="verbatim">Type</code> or type
+<code class="verbatim">Nothing</code></p>
+<h2 id="synonyms">Synonyms</h2>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> aliasName <span class="ot">=</span> <span class="dt">Text</span></span></code></pre></div>
+<p>This creates an alias for the type <code
+class="verbatim">Text</code></p>
+<ul>
+<li>it's basically just used to help make your code more readable</li>
+</ul>
+<h2 id="newtype">newtype</h2>
+<p><code class="verbatim">newtype</code> doesn't have any runtime cost,
+unlike <code class="verbatim">data</code></p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">newtype</span> <span class="dt">SemanticID</span> <span class="ot">=</span> <span class="dt">SemanticID</span> <span class="dt">Word64</span></span></code></pre></div>
+<p>In this snippet, two things are happening:</p>
+<ol>
+<li>We're defining a new type called <code
+class="verbatim">SemanticID</code></li>
+<li>We're also defining a data constructor named <code
+class="verbatim">SemanticID</code></li>
+</ol>
+<p>The point is that now that SemanticID is <em>created from</em> a
+64-bit integer, but it isn't itself considered a 64-bit integer by the
+program</p>
+<ul>
+<li>this is a form of <strong>type safety</strong></li>
+<li>it says that we can't just pass any random 64-bit integer into a
+function expecting a SemanticID; we have to explicitly say that our
+integer is of type <code class="verbatim">SemanticID</code></li>
+<li>very cool!</li>
+</ul>
+<h2 id="characters">Characters</h2>
+<p>All characters are <strong>boxed</strong></p>
+<ul>
+<li>they're their own independent objects living in some random place on
+the heap</li>
+</ul>
+<p>They're made up of</p>
+<ul>
+<li>header (8 bytes)</li>
+<li>unicode point data (4 bytes (32-bit unicode), padded to 8)</li>
+</ul>
+<h2 id="lists">Lists</h2>
+<p>Lists are denoted with square brackets, like <code
+class="verbatim">[1,2,3]</code>, but their actual structure
+under-the-hood is <strong>nested constructors</strong>:</p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">:</span> (<span class="dv">2</span> <span class="op">:</span> (<span class="dv">3</span> <span class="op">:</span> []))</span></code></pre></div>
+<p>The colon <code class="verbatim">:</code> is called a
+<strong>node</strong> or a <strong>cons operator</strong>. It's actually
+a function with shape</p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ot">(:) ::</span> a <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> [a]</span></code></pre></div>
+<p>It takes an element of type <code class="verbatim">a</code> and a
+list of type <code class="verbatim">[a]</code> and returns a list of
+type <code class="verbatim">[a]</code> <code class="verbatim">::</code>
+defines a type</p>
+<p>A node contains two pointers:</p>
+<ol>
+<li>to the associated character</li>
+<li>to the next node (or to <code class="verbatim">[ ]</code>)</li>
+</ol>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>myList <span class="ot">=</span> <span class="dv">1</span> <span class="op">:</span> <span class="dv">2</span> <span class="op">:</span> <span class="dv">3</span> <span class="op">:</span> []</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- is the same as</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">:</span> (<span class="dv">2</span> <span class="op">:</span> (<span class="dv">3</span> <span class="op">:</span> []))</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- because : is defined to work from right to left</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="ot">(:) ::</span> a <span class="ot">-&gt;</span> [a] <span class="ot">-&gt;</span> [a]</span></code></pre></div>
+<h3 id="disadvantages">Disadvantages</h3>
+<p>Lists are stored <a
+href="https:/Digital-Garden/computer_science/comsci-ram.html">non-contiguously</a></p>
+<ul>
+<li>so you constantly get cache misses</li>
+</ul>
+<p>Because lists are generated lazily, if you need to go through an
+entire list, it's inefficient</p>
+<p>A single character usually takes 1-2 bytes in another language. In a
+haskell list, on average, a character takes <strong>up to 24
+bytes</strong> because it's really made up of</p>
+<ul>
+<li>a node</li>
+<li>two pointers</li>
+<li>a boxed character header</li>
+</ul>
+<h3 id="advantages">Advantages</h3>
+<p>Lists are generated lazily</p>
+<ul>
+<li>so you can actually manipulate lists that are <strong>larger than
+your RAM</strong></li>
+<li>you just create the list as you go</li>
+<li>and as you finish a step and move on to the next one, the GC
+reclaims the node</li>
+</ul>
+<p>You can prepend data in O(1)</p>
+<ul>
+<li>you just point into the beginning of your list</li>
+</ul>
+<h2 id="strings">Strings</h2>
+<p>In basic haskell, <code class="verbatim">String</code> is an alias
+for a list of characters:</p>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">String</span> <span class="ot">=</span> [<span class="dt">Char</span>]</span></code></pre></div>
+<p>Consequently, it's a long chain of nodes:</p>
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>h <span class="op">:</span> e <span class="op">:</span> l <span class="op">:</span> l <span class="op">:</span> o <span class="op">:</span> []</span></code></pre></div>
+<p>Since each character is blocked, they're all scattered around the
+heap, which makes them slow to read</p>
+<h3 id="concatenation">Concatenation</h3>
+<p><code class="verbatim">&lt;&gt;</code> is actually the operator for
+the <strong>semigroup</strong> typeclass</p>
+<h1 id="modules">Modules</h1>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> <span class="dt">Name</span> <span class="kw">where</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Namespace1</span> (<span class="dt">Type1</span>)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Namespace2</span> (<span class="dt">Type2</span>)</span></code></pre></div>
+<p><code class="verbatim">module...where</code> says that anything
+within the file belongs to the module Name.</p>
+<p><code class="verbatim">import Namespace (Type)</code> grabs certain
+types from external libraries</p>
+<h2 id="data.bits">Data.Bits</h2>
+<p>Gives you highly optimized bit-fiddling operations that compile down
+to assembly instructions, like <code class="verbatim">popcnt</code> and
+<code class="verbatim">pxor</code></p>
+<h2 id="data.text">Data.Text</h2>
+<p>Treats strings as contiguous byte arrays encoded in UTF-16</p>
+<ul>
+<li>stores the length of the string and the current offset</li>
+</ul>
+<p>Because it's contiguous, you don't need pointers, since you know that
+the next character is just in the next part of the cache line</p>
+<ul>
+<li>characters take up <strong>2 bytes</strong></li>
+</ul>
+<h3 id="spliton">splitOn</h3>
+<p>Text → Text  → [<em>T</em><em>e</em><em>x</em><em>t</em>]</p>
+<p>Scans the text block for every occurance of a fixed string and breaks
+it into a list at those points.</p>
+<ul>
+<li>instead of creating a list made up of the strings of text you get,
+it just creates a list of pointers to the memory address and offset of
+each of the chunks in the list</li>
+</ul>
+<h3 id="strip">strip</h3>
+<p>Text → Text</p>
+<p>Trims all leading and trailing whitespace</p>
+<ul>
+<li>just changes the length and offset to start after the whitespace and
+end right before</li>
+</ul>
+<h3 id="null">null</h3>
+<p>Text → Bool</p>
+<p>Checks if your text is empty</p>
+<ul>
+<li>O(1) by just checking if length = 0</li>
+</ul>
+<h3 id="tolower">toLower</h3>
+<p>Text → Text</p>
+<p>Makes all of the letters lowercase</p>
+<ul>
+<li>creates a new array on the heap and writes the lowercase version of
+the text</li>
+</ul>
+<h3 id="words">words</h3>
+<p>Text  → [<em>T</em><em>e</em><em>x</em><em>t</em>]</p>
+<p>Splits text into a list of words</p>
+<ul>
+<li>stores the pointers and lengths</li>
+</ul>
+<p>It's actually smarter than <code class="verbatim">splitOn</code>,
+which doesn't know how to handle double-spaces or other kinds of white
+spaces, like tabs, newlines, and carriage returns.</p>
+<h3 id="filter-1">filter</h3>
+<p>(Char → Bool) → Text → Text</p>
+<p>Retains only the characters that match a given filter</p>
+<p>Note that unlike <code class="verbatim">words</code>, this returns
+plain text, <strong>not a list</strong>.</p>
+<ul>
+<li>so it can't just handle things using pointers</li>
+<li>it rewrites the filtered text as a new array</li>
+</ul>
+<h3 id="length">length</h3>
+<p>Returns the total number of characters</p>
+<ul>
+<li>O(N) (surprising!). It's because UTF-16 is variable-width, so some
+characters take up more or fewer bytes than others</li>
+</ul>
+<h3 id="intercalate">intercalate</h3>
+<p>Takes in a seperator list and a list of lists</p>
+<ul>
+<li>sticks the seperator list between every element in the list of lists
+and flattens the result</li>
+</ul>
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ot">intercalate ::</span> [a] <span class="ot">-&gt;</span> [[a]] <span class="ot">-&gt;</span> [a]</span></code></pre></div>
+<h2 id="qualified">qualified</h2>
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Data.Text</span> <span class="kw">as</span> <span class="dt">T</span></span></code></pre></div>
+<p><code class="verbatim">qualified ... as</code> says that every
+function imported from <code class="verbatim">Data.Text</code> will be
+prefixed by "T."</p>
+<ul>
+<li>this helps avoid namespace collisions</li>
+</ul>
+<h1 id="functions">Functions</h1>
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ot">computeSimHash ::</span> [<span class="dt">Text</span>] <span class="ot">-&gt;</span> <span class="dt">SemanticID</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>computeSimHash tokens <span class="ot">=</span> <span class="dt">SemanticID</span> <span class="op">$</span> <span class="fu">foldr</span> buildBits <span class="dv">0</span> (<span class="fu">zip</span> [<span class="dv">0</span><span class="op">..</span><span class="dv">63</span>] vectorSums)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    tokenHashes <span class="ot">=</span> <span class="fu">map</span> hash64 tokens</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    vectorSums  <span class="ot">=</span> <span class="fu">foldr</span> accumulate (<span class="fu">replicate</span> <span class="dv">64</span> <span class="dv">0</span>) tokenHashes</span></code></pre></div>
+<p><code class="verbatim">foldr</code> takes a higher order function, an
+initial accumulator state, and a list, and collapses the list down to a
+single value from <em>right to left</em></p>
+<p><code class="verbatim">where</code> gives the variables <strong>local
+scope</strong> <code class="verbatim">let ... in</code> also gives local
+scope</p>
+<p><code class="verbatim">zip [0..63]</code></p>
+<p><code class="verbatim">zipWith</code> takes a function that accepts 2
+arguments, and zips two lists together by applying the function to their
+elements.</p>
+<p><code class="verbatim">\</code> is the syntax for an anonymous
+(lambda) function</p>
+<p><code class="verbatim">.</code> is the function composition operator
+(it goes from right to left, so it behaves like g ˆ f)</p>
+<p><code class="verbatim">$</code> applies a function to a value to
+produce a value</p>
+<ul>
+<li>it's basically element application <code
+class="verbatim">f $ x</code> behaves like f(x)</li>
+<li>without it, lines parse from left to right</li>
+<li>using the dollar sign basically just lets us avoid a bunch of
+parentheses</li>
+</ul>
+<p><code class="verbatim">&lt;$&gt;</code> takes a function and reaches
+inside of a container to apply the function inside the container</p>
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ot">tokenHashes ::</span> [<span class="dt">Word64</span>]</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>tokenHashes <span class="ot">=</span> <span class="fu">map</span> hash64 tokens</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- it&#39;s the same as</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- const tokenHashes = map(hash64, tokens);</span></span></code></pre></div>
+<p>This snippet defines <code class="verbatim">tokenHashes</code> as a
+list (square brackets) of integers</p>
+<ul>
+<li>the syntax <code class="verbatim">:: Type</code> can be thought of
+like a map from the terminal object into <code
+class="verbatim">Type</code></li>
+</ul>
+<p>The next line then describes how we get this list of integers</p>
+<ul>
+<li><code class="verbatim">map</code> is a function that takes two
+arguments</li>
+<li>it uses <strong>currying</strong>, so really what ends up happening
+is you first get a function <code class="verbatim">(map hash64)</code>
+which takes an argument <code class="verbatim">tokens</code></li>
+</ul>
+<h1 id="case">Case</h1>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">case</span> sentences <span class="kw">of</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    []         <span class="ot">-&gt;</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>    [single]   <span class="ot">-&gt;</span> single</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    (first<span class="op">:</span>xs) <span class="ot">-&gt;</span> first <span class="op">&lt;&gt;</span> <span class="st">&quot; . &quot;</span> <span class="op">&lt;&gt;</span> <span class="fu">last</span> xs</span></code></pre></div>
+<p><code class="verbatim">&lt;&gt;</code> monoidal concatenation</p>
+<h1 id="pointfree-style">Pointfree Style</h1>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Pointful (Explicit values/elements)</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>process txt <span class="ot">=</span> <span class="fu">show</span> <span class="op">$</span> hash64 <span class="op">$</span> txt</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- Pointfree (Pure Category-theoretic Arrow Composition)</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>process <span class="ot">=</span> <span class="fu">show</span> <span class="op">.</span> hash64</span></code></pre></div>
+<h1 id="fat-arrow">Fat Arrow</h1>
+<p><code class="verbatim">=&gt;</code> denotes a <strong>type-class
+constraint</strong></p>
+<ul>
+<li>it says <em>you can only execute the following if these constraints
+are satisfied</em></li>
+</ul>
+<h1 id="monads">Monads</h1>
+<p>Ordinarily, the compiler is able to execute things in whatever order
+will be most optimal</p>
+<ul>
+<li>there's no native concept of time or sequence in Haskell</li>
+</ul>
+<p>Monads <strong>force things to evaluate in sequence</strong></p>
+<h2 id="when-would-you-use-this">When would you use this?</h2>
+<p>When interacting with hardware states</p>
+<ul>
+<li>you can't read a memory address before you allocate it</li>
+</ul>
+<h2 id="monad-types">Monad Types</h2>
+<h3 id="primmonad">PrimMonad</h3>
+<p>Can execute raw, low-level things</p>
+<ol>
+<li><p>IO Monad</p>
+<p>Can mutate memory, talk to the disk, print to the screen, write to a
+file</p></li>
+<li><p>ST Monad</p>
+<p>Memory <strong>sandbox</strong> that allows mutation, but can't
+interact with the outside world</p>
+<p>Designed for single-thread deterministic execution</p>
+<ul>
+<li>you can't pass an ST vector between concurrent threads, because it's
+stuck in the sandbox</li>
+<li>you can't write to logs or do any nice debugging</li>
+</ul></li>
+</ol>
+<h3 id="primstate">PrimState</h3>
+<ol>
+<li><p>RealWorld</p>
+<p>The IO monad has this state</p></li>
+<li><p>s (sandbox)</p>
+<p>The ST monad has this state</p></li>
+</ol>
+<h1 id="optimizing">Optimizing</h1>
+<h2 id="streaming-mutation">Streaming-Mutation</h2>
+<p>When you mutate a string, you never want to store the whole string
+and then mutate it, because you'll get a string scattered throughout the
+heap</p>
+<p>Instead, you modify in place, one letter at a time</p>
+<ul>
+<li>you keep your string in the L1/L2 cache</li>
+</ul>
+<h1 id="scoping">Scoping</h1>
+<h2 id="let-in">let … in</h2>
+<p><code class="verbatim">let</code> can be used anywhere in your code
+that a value is expected</p>
+<ul>
+<li>it defines local variables</li>
+</ul>
+<p><code class="verbatim">in</code> defines the expression where the
+local variables are valid</p>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ot">calculateArea ::</span> <span class="dt">Double</span> <span class="ot">-&gt;</span> <span class="dt">Double</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>calculateArea radius <span class="ot">=</span> </span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> piVal <span class="ot">=</span> <span class="fl">3.14159</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>        r2    <span class="ot">=</span> radius <span class="op">*</span> radius</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">in</span> piVal <span class="op">*</span> r2</span></code></pre></div>
+<p><code class="verbatim">let ... in</code> is used typically inside of
+lambda functions or if-thens, where <code class="verbatim">where</code>
+can't be used</p>
+<h2 id="where">where</h2>
+<p>It's very similar to <code class="verbatim">let</code>, but you have
+to <strong>use it inside of a function</strong></p>
+<ul>
+<li>the nice thing is that <code class="verbatim">where</code>
+automatically knows about every argument in the function it's attached
+to</li>
+</ul>
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ot">calculateArea ::</span> <span class="dt">Double</span> <span class="ot">-&gt;</span> <span class="dt">Double</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>calculateArea radius <span class="ot">=</span> piVal <span class="op">*</span> r2</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span> piVal <span class="ot">=</span> <span class="fl">3.14159</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>        r2    <span class="ot">=</span> radius <span class="op">*</span> radius</span></code></pre></div>
+<p>It can also work across sum-types:</p>
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="ot">describeNumber ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>describeNumber n</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> n <span class="op">&gt;</span> <span class="dv">0</span>     <span class="ot">=</span> <span class="st">&quot;Positive: &quot;</span> <span class="op">++</span> <span class="fu">show</span> n</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> n <span class="op">&lt;</span> <span class="dv">0</span>     <span class="ot">=</span> <span class="st">&quot;Negative: &quot;</span> <span class="op">++</span> <span class="fu">show</span> n</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> <span class="fu">otherwise</span> <span class="ot">=</span> <span class="st">&quot;Zero&quot;</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">where</span> nSquared <span class="ot">=</span> n <span class="op">*</span> n <span class="co">-- This nSquared is available to ALL guards (|)</span></span></code></pre></div>
+<h1 id="pattern-matching">Pattern Matching</h1>
+<h2 id="case-of">case … of</h2>
+<p><code class="verbatim">case</code> takes a value and compares it
+against a series of patterns, to decide what to return</p>
+<div class="sourceCode" id="cb35"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">case</span> expression <span class="kw">of</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    pattern1 <span class="ot">-&gt;</span> result1</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    pattern2 <span class="ot">-&gt;</span> result2</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    _        <span class="ot">-&gt;</span> defaultResult</span></code></pre></div>
+<p>functions in haskell are computed using <code
+class="verbatim">case...of</code>, under the hood</p>
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="ot">factorial ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>factorial x <span class="ot">=</span> <span class="kw">case</span> x <span class="kw">of</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span> <span class="ot">-&gt;</span> <span class="dv">1</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">-&gt;</span> n <span class="op">*</span> factorial (n <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
+<p><code class="verbatim">case ... of</code> and <code
+class="verbatim">if ... then</code> are computed in the exact same
+way</p>
+<ul>
+<li>so they're equally performant</li>
+</ul>
+<p>but <code class="verbatim">case</code> is often clearer, and allows
+you to handle more cases, without having to nest a bunch of if
+statements.</p>
 </body>
 </html>

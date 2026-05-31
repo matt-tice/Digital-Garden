@@ -162,12 +162,208 @@
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">grothendieck topology</h1>
 </header>
-<p><a href="math-grothendieck_topology.org">sheaves</a></p>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>Grothendieck topologies allow us to define <a
+href="https:/Digital-Garden/math/math-sheaves.html">sheaves</a></p>
+<p>A category with a Grothendieck topology is called a
+<strong>site</strong></p>
+<h1 id="definitions">Definitions</h1>
+<div class="definition">
+<p>Let <span class="math inline">$A \in \obj$</span>. A <strong>covering
+family</strong> of <span class="math inline"><em>A</em></span> is
+collection of subsets of <span
+class="math inline">$\mor{-}{A}$</span>:</p>
+</div>
+<p>Each object <span class="math inline"><em>A</em></span> has not only
+one covering <span
+class="math inline">{<em>f</em><sub><em>i</em></sub> : <em>A</em><sub><em>i</em></sub> → <em>A</em>}</span>,
+but a whole set of them.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode latex"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">definition</span>}{Site}{}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>A category <span class="ss">$</span><span class="sc">\cat</span><span class="ss">{C}$</span> with a covering family for all <span class="ss">$A </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\obj</span><span class="ss">$</span>, such that</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span> If <span class="ss">$</span><span class="sc">\{</span><span class="ss"> f_i: A_i </span><span class="sc">\to</span><span class="ss"> A </span><span class="sc">\}</span><span class="ss">$</span> is one of the coverings and <span class="ss">$g: B </span><span class="sc">\to</span><span class="ss"> A$</span> then there is a <span class="fu">\textit</span>{refined covering} <span class="ss">$</span><span class="sc">\{</span><span class="ss"> h_j: B_j </span><span class="sc">\to</span><span class="ss"> B </span><span class="sc">\}</span><span class="ss"> $</span> with some <span class="ss">$</span><span class="sc">\{</span><span class="ss"> k_{i,j} </span><span class="sc">\}</span><span class="ss">$</span> such that</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">\adjustbox</span>{center}{</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzcd</span>}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>B_j <span class="fu">\arrow</span>[d, &quot;h_j&quot;] <span class="fu">\arrow</span>[r, &quot;k_{i,j}&quot;] &amp; A_{i_j} <span class="fu">\arrow</span>[d, &quot;f_{i_j}&quot; ] <span class="fu">\\</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>B <span class="fu">\arrow</span>[r, &quot;g&quot;] &amp; A</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzcd</span>}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>for some <span class="ss">$i_j$</span> for all <span class="ss">$j$</span>.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">definition</span>}</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">defframe</span>}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">\newthought</span>{Intutition:}  </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">defframe</span>}</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">example</span>}{Site on <span class="fu">\textsc</span>{Top}}{•}</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">\newthought</span>{<span class="fu">\textsc</span>{Top}: } Let <span class="ss">$X </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\obj</span><span class="ss">$</span> be a topology and let the coverings be</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="sc">\{</span><span class="ss"> in: U_</span><span class="sc">\alpha</span><span class="ss"> </span><span class="sc">\to</span><span class="ss"> X </span><span class="sc">\mid</span><span class="ss"> </span><span class="sc">\cup</span><span class="ss">_</span><span class="sc">\alpha</span><span class="ss"> U_</span><span class="sc">\alpha</span><span class="ss"> = X, U </span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\mathcal</span><span class="ss">{T} </span><span class="sc">\}</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>so our coverings are all possible topological coverings</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span> Let <span class="ss">$</span><span class="sc">\{</span><span class="ss"> in: U_</span><span class="sc">\alpha</span><span class="ss"> </span><span class="sc">\to</span><span class="ss"> X </span><span class="sc">\}</span><span class="ss">$</span> be a covering and <span class="ss">$g: Y </span><span class="sc">\to</span><span class="ss"> X$</span> be continuous. Then <span class="ss">$g^{-1}(U_</span><span class="sc">\alpha</span><span class="ss">)$</span> is open for all <span class="ss">$</span><span class="sc">\alpha</span><span class="ss">$</span>. And if <span class="ss">$y </span><span class="sc">\in</span><span class="ss"> Y$</span> then <span class="ss">$g(y) </span><span class="sc">\in</span><span class="ss"> X = </span><span class="sc">\cup</span><span class="ss">_</span><span class="sc">\alpha</span><span class="ss"> U_</span><span class="sc">\alpha</span><span class="ss">$</span>, so <span class="ss">$g(y) </span><span class="sc">\in</span><span class="ss"> U_</span><span class="sc">\alpha</span><span class="ss">$</span>, giving <span class="ss">$y </span><span class="sc">\in</span><span class="ss"> g^{-1}(U_</span><span class="sc">\alpha</span><span class="ss">)$</span> for some <span class="ss">$</span><span class="sc">\alpha</span><span class="ss">$</span>. Thus</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">Y = </span><span class="sc">\cup</span><span class="ss">_</span><span class="sc">\alpha</span><span class="ss"> g^{-1}(U_</span><span class="sc">\alpha</span><span class="ss">)</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>So <span class="ss">$</span><span class="sc">\{</span><span class="ss"> in: g^{-1}(U_</span><span class="sc">\alpha</span><span class="ss">) </span><span class="sc">\to</span><span class="ss"> Y </span><span class="sc">\}</span><span class="ss">$</span> is a covering of <span class="ss">$Y$</span>. Now consider the square</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">\adjustbox</span>{center}{</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzcd</span>}</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>g^{-1}(U_<span class="fu">\alpha</span>) <span class="fu">\arrow</span>[d, &quot;in&quot;] <span class="fu">\arrow</span>[r, &quot;g&quot;] &amp; U_i <span class="fu">\arrow</span>[d, &quot;in&quot; ] <span class="fu">\\</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>Y <span class="fu">\arrow</span>[r, &quot;g&quot;] &amp; X</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzcd</span>}</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>This commutes since if <span class="ss">$x </span><span class="sc">\in</span><span class="ss"> g^{-1}(U_</span><span class="sc">\alpha</span><span class="ss">)$</span> then <span class="ss">$g </span><span class="sc">\circ</span><span class="ss"> in(x) = g(x) = in </span><span class="sc">\circ</span><span class="ss"> g(x)$</span>. So we have a site.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">example</span>}</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">example</span>}{Category: Single Topology}{•}</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>Let <span class="ss">$X$</span> be a topological space. We can view it as a category by</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span> <span class="ss">$</span><span class="sc">\obj</span><span class="ss">: $</span> Open sets</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span> <span class="ss">$</span><span class="sc">\morph</span><span class="ss">: $</span> <span class="ss">$</span><span class="sc">\mor</span><span class="ss">{A}{B} = </span><span class="sc">\{</span><span class="ss"> in: A </span><span class="sc">\to</span><span class="ss"> B </span><span class="sc">\}</span><span class="ss">$</span> or empty.</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">example</span>}</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">example</span>}{Site: Single Topology}{•}</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>Let <span class="ss">$X$</span> be a topology and view it as a category <span class="ss">$Op(X)$</span>. Now the coverings are</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="sc">\{</span><span class="ss"> in: A_</span><span class="sc">\alpha</span><span class="ss"> </span><span class="sc">\to</span><span class="ss"> A </span><span class="sc">\mid</span><span class="ss"> </span><span class="sc">\cup</span><span class="ss">_</span><span class="sc">\alpha</span><span class="ss"> A_</span><span class="sc">\alpha</span><span class="ss"> = A </span><span class="sc">\}</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">example</span>}</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">definition</span>}{Matching Family for a Covering}{•}</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>Let <span class="ss">$</span><span class="sc">\cat</span><span class="ss">{C}$</span> be a site, <span class="ss">$</span><span class="sc">\{</span><span class="ss"> f_i: A_i </span><span class="sc">\to</span><span class="ss"> A </span><span class="sc">\}</span><span class="ss">$</span> be a covering and let <span class="ss">$F: </span><span class="sc">\cat</span><span class="ss">{C}^{op} </span><span class="sc">\to</span><span class="ss"> </span><span class="sc">\textsc</span>{Set}<span class="ss">$</span> be a functor. A matching family for this covering is <span class="ss">$</span><span class="sc">\{</span><span class="ss"> x_i </span><span class="sc">\in</span><span class="ss"> F(A_i) </span><span class="sc">\}</span><span class="ss">$</span> such that for all</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="fu">\adjustbox</span>{center}{</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzcd</span>}</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>A_i <span class="fu">\arrow</span>[dr, swap, &quot;f_i&quot;] &amp; <span class="fu">\arrow</span>[l,  swap, &quot;g&quot;] B <span class="fu">\arrow</span>[r, &quot;h&quot;] &amp; A_j <span class="fu">\arrow</span>[dl, &quot;f_j&quot;] <span class="fu">\\</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>&amp; A</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzcd</span>}</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>we have <span class="ss">$F(g)(x_i) = F(h)(x_j)$</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">definition</span>}</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">defframe</span>}</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="fu">\newthought</span>{Intuition: } We consider arrows in a category to be inclusion. Then <span class="ss">$B </span><span class="sc">\subseteq</span><span class="ss"> A_i </span><span class="sc">\cap</span><span class="ss"> A_j$</span> </span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">defframe</span>}</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">example</span>}{Matching Family: Site}{•}</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>Let <span class="ss">$</span><span class="sc">\cat</span><span class="ss">{C}$</span> be a site and <span class="ss">$F: </span><span class="sc">\cat</span><span class="ss">{C}^{op} </span><span class="sc">\to</span><span class="ss"> </span><span class="sc">\textsc</span>{Set}<span class="ss">$</span> be any functor. Then every <span class="ss">$</span><span class="sc">\{</span><span class="ss"> f_i: A_i </span><span class="sc">\to</span><span class="ss"> A </span><span class="sc">\}</span><span class="ss">$</span> has a matching family induced by each <span class="ss">$x </span><span class="sc">\in</span><span class="ss"> F(A)$</span>:</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="sc">\{</span><span class="ss"> F(f_i)(x) </span><span class="sc">\}</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>We get a function</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">F(A) </span><span class="sc">\to</span><span class="ss"> </span><span class="sc">\operatorname</span><span class="ss">{Match}(</span><span class="sc">\{</span><span class="ss">f_i </span><span class="sc">\}</span><span class="ss">, F)</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">example</span>}</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">exampleframe</span>}</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>Consider a diagram</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="fu">\adjustbox</span>{center}{</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tikzcd</span>}</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>A_i <span class="fu">\arrow</span>[dr, swap, &quot;f_i&quot;] &amp; <span class="fu">\arrow</span>[l,  swap, &quot;g&quot;] B <span class="fu">\arrow</span>[r, &quot;h&quot;] &amp; A_j <span class="fu">\arrow</span>[dl, &quot;f_j&quot;] <span class="fu">\\</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>&amp; A</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tikzcd</span>}</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="ss">$F(g)(F(f_i)(x)) = F(f_i </span><span class="sc">\circ</span><span class="ss"> g)(x) = F(f_j </span><span class="sc">\circ</span><span class="ss"> h)(x) = F(h)(F(f_j)(x))$</span>. So this is a matching family.</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">exampleframe</span>}</span></code></pre></div>
 </body>
 </html>

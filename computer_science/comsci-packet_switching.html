@@ -168,6 +168,36 @@
 <header id="title-block-header">
 <h1 class="title">packets</h1>
 </header>
-<p><a href="comsci-packet_switching.org">TCP/IP stack</a></p>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>A way to share data between computers</p>
+<p>A <strong>packet</strong> is made up of three parts:</p>
+<ol>
+<li>A header that tells the hardware where to deliver the payload</li>
+<li>The payload: the content of the message</li>
+<li>The trailer: validation that the packet was received properly</li>
+</ol>
+<p>As a packet moves through the <a
+href="https:/Digital-Garden/computer_science/comsci-internet_protocol_suite.html">TCP/IP
+stack</a>, it picks up additional data (it gets
+<strong>encapsulated</strong>)</p>
+<h1 id="packet-components">Packet Components</h1>
+<h2 id="headers">Headers</h2>
+<p>Routers will look at headers in order to figure out where to send a
+packet.</p>
+<h3 id="ipv4">IPv4</h3>
+<h3 id="ipv6">IPv6</h3>
+<h2 id="payloads">Payloads</h2>
+<p>The actual data that is intended to be transmitted.</p>
+<p>The <strong>maximum transmission unit</strong> in ethernet is 1500
+bytes. Because of this, packet payloads are usually capped at 1460
+bytes.</p>
+<h2 id="trailers">Trailers</h2>
+<h1 id="frames">Frames</h1>
+<p>Frames are the final encapsulated versions of packets.</p>
+<ul>
+<li>they contain a single packet, wrapped in</li>
+</ul>
+<h1 id="deep-packet-inspection">Deep Packet Inspection</h1>
 </body>
 </html>

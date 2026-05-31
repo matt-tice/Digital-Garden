@@ -162,12 +162,193 @@
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">bash</h1>
 </header>
-<p><a href="comsci-bash.org">windows registry</a></p>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>It's similar to Windows Batch, in that it's built to string
+command-line expressions together.</p>
+<ul>
+<li>the syntax is also quite similar in places</li>
+</ul>
+<h2 id="differences">Differences</h2>
+<p>Batch is based on MS-DOS</p>
+<ul>
+<li>uses strict string replacements</li>
+<li>legacy tokens</li>
+</ul>
+<p>Bash is built on the POSIX standard</p>
+<ul>
+<li>views <strong>everything as a stream of plain text</strong></li>
+<li>this allows you to pipe one command's output into another's
+input</li>
+<li>this works because <strong>Linux is based on plain text</strong>:
+almost every system state, config setting, etc. lives in a plain text
+file
+<ul>
+<li>on the other hand, Windows configs live in binary data structures
+like the <a
+href="https:/Digital-Garden/computer_science/comsci-windows_registry.html">windows
+registry</a>, Active Directory, WMI, and COM APIs.</li>
+</ul></li>
+</ul>
+<p>The downside of Bash is that if any commands update and change their
+output, scripts will easily break</p>
+<h1 id="shebang">Shebang</h1>
+<p><code class="verbatim">!#</code> is called a
+<strong>shebang</strong></p>
+<ul>
+<li>this tells the kernel which program should parse the file</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env bash</span></span></code></pre></div>
+<p>Even though bash is often just in <code
+class="verbatim">/usr/bin/</code>, coding in <code
+class="verbatim">/usr/bin/etc</code> tells the kernel to seach PATH,
+incase bash is somewhere else.</p>
+<h1 id="errors">Errors</h1>
+<p>By default, if a line in a bash script fails, Bash will ignore it and
+keep going.</p>
+<p><code class="verbatim">set -e</code>: Tells bash to end if it
+encounters any errors (non-zero exit codes).</p>
+<h1 id="commands">Commands</h1>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">MODE</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${1</span><span class="op">:-</span>default<span class="va">}</span><span class="st">&quot;</span></span></code></pre></div>
+<p><code class="verbatim">$1</code> represents the first positional
+argument passed to the script</p>
+<p><code class="verbatim">$1:-default</code> tells the program to
+evaluate variable one, and if it doesn't exist, to use the string
+'default' for its default value</p>
+<p><code class="verbatim">[</code> is a command alias for <code
+class="verbatim">test</code></p>
+<p><code class="verbatim">[ -d "$REPO" ]</code> checks that the repo is
+a valid directory</p>
+<ul>
+<li>the white space after the square bracket is necessary, because <code
+class="verbatim">[</code> is itself a command</li>
+</ul>
+<p><code class="verbatim">$(command)</code> is <strong>command
+substitution</strong></p>
+<ul>
+<li>it runs the command in a subshell, captures whatever it prints to
+stdout and pastes it into the string</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main <span class="op">&gt;&gt;</span> <span class="st">&quot;LOG_FILE&quot;</span></span></code></pre></div>
+<p>Bash first reroutes the output stream to <code
+class="verbatim">LOG_FILE</code> and then executes the command</p>
+<ul>
+<li><code class="verbatim">&gt;&gt;</code> opens the file in append
+mode</li>
+<li><code class="verbatim">&gt;</code> opens it in write mode</li>
+</ul>
+<p>git then writes its output to stdout as usual, but Bash has already
+pointed stdout to the log file.</p>
+<h1 id="file-descriptors">File Descriptors</h1>
+<p>Every process of Linux gets automatically assigned 3 communication
+channels (<strong>file descriptors</strong>)</p>
+<ul>
+<li>0: stdin</li>
+<li>1: stdout</li>
+<li>2: stderror</li>
+</ul>
+<p><code class="verbatim">2&gt;&amp;1</code> means <em>redirect file
+descriptor 2's stream to the current target of file descriptor
+1</em></p>
+<ul>
+<li>in other words, print any errors</li>
+</ul>
+<h1 id="variables">Variables</h1>
+<p>Bash reads local variables <strong>dynamically by default</strong>
+(unlike Batch)</p>
+<h2 id="arrays">Arrays</h2>
+<p>Unlike Batch, Bash actually has arrays natively</p>
+<ul>
+<li>items are separated jusut by whitespace or newlines</li>
+</ul>
+<p><code class="verbatim">${REPOS[@]}</code> tells Bash to unpack the
+entire array</p>
+<ul>
+<li>it's best practice to place the whole thing in quotes, in case any
+of the strings inside REPOS contain spaces</li>
+</ul>
+<h1 id="loops">Loops</h1>
+<p><strong>Semicolons</strong> are syntactically equivalent to new
+lines.</p>
+<h1 id="conditionals">Conditionals</h1>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="st">&quot;</span><span class="va">$MODE</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;pull&quot;</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="ot">! </span><span class="fu">git</span> diff-index <span class="at">--quiet</span> HEAD <span class="at">--</span><span class="kw">;</span> <span class="cf">then</span></span></code></pre></div>
+<p><code class="verbatim">!</code> is a logical inversion acting on
+<code class="verbatim">git diff-index</code></p>
 </body>
 </html>

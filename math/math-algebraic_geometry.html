@@ -168,6 +168,193 @@
 <header id="title-block-header">
 <h1 class="title">algebraic geometry</h1>
 </header>
-<p><a href="math-algebraic_geometry.org">Yoneda lemma</a></p>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>Algebraic geometry studies <strong>sheaves</strong>, which are ways
+of gluing things together</p>
+<h2 id="classical">Classical</h2>
+<p>Studies polynomials</p>
+<h1 id="local-structure">Local Structure</h1>
+<h1 id="sieves">Sieves</h1>
+<p>A sieve on an object B is a subfunctor of Mor(-,B) =
+h<sup>B</sup></p>
+<p>In other words, it's a collection of morphisms that point into B.</p>
+<p>Denote a sieve on B by s<sup>B</sup> Similarly, a cosieve is
+s<sub>B</sub></p>
+<h2 id="explicitly">Explicitly</h2>
+<p>A subfunctor F of Hom(-,B) is a presheaf such that F(A) ⊆ Hom(A,B)
+and F(f) is the restriction of h<sup>B</sup><sub>f</sub>. Say f: A → X
+F(f): F(X) → F(A) ⊆ Hom(A,B)</p>
+<p>But for there to be such a map, if F(X) ≠ ∅, it must be the case that
+F(A) ≠ ∅ So we have that if g ∈ F(X), so g: X → B then F(f)(g) = fg: A →
+X → B must be an element of F(A)</p>
+<h3 id="conclusion">Conclusion</h3>
+<ol>
+<li>If s<sup>B</sup>(A) is non-empty, then so is s<sup>B</sup>(X) for
+all X that map into A (ie. have some X → A)</li>
+<li>If g ∈ s<sup>B</sup>(X) then fg ∈ s<sup>B</sup>(A) for all f: A →
+X</li>
+</ol>
+<p>In this way, s<sup>B</sup> is something like a collection of <em>left
+ideals</em></p>
+<h3 id="conclusion-1">Conclusion</h3>
+<p>It follows then that it's rare for s<sup>B</sup>(B) to contain
+1<sub>B</sub>: if it did, it would also contain all morphisms into B. So
+we'd have s<sup>B</sup> = h<sup>B</sup></p>
+<p>So 1<sub>B</sub> ∈ s<sup>B</sup> iff s<sup>B</sup> =
+h<sup>B</sup>.</p>
+<p>Then h<sup>B</sup> is something like the full ring and s<sup>B</sup>
+is an ideal</p>
+<h3 id="ring-theory">Ring Theory</h3>
+<p>Say we have a one-object category { * }. Then h<sup>B</sup> is the
+monoid of all morphisms in the category, and s<sup>B</sup> is a
+sub-monoid closed under left multiplication by any element in
+h<sup>B</sup></p>
+<p>In the case of enriched categories, taking abelian enrichment turns
+h<sup>B</sup> into a ring, and s<sup>B</sup> into <strong>literally an
+ideal</strong></p>
+<h3 id="intuition">Intuition</h3>
+<p>A sieve is something like a filter: it picks out regions of B</p>
+<p>We can think of a sieve as an ideal in a ringoid (but not literally
+in a ringoid)</p>
+<h2 id="partial-order">Partial Order</h2>
+<p>Let s<sup>B</sup> ≤ t<sup>B</sup> iff s<sup>B</sup><sub>A</sub> ⊆
+t<sup>B</sup><sub>A</sub> for all A. Define the union and intersection
+objectwise (s<sup>B</sup> ∪ t<sup>B</sup>)(A) =
+s<sup>B</sup><sub>A</sub> ∪ t<sup>B</sup><sub>A</sub> (s<sup>B</sup> ∩
+t<sup>B</sup>)(A) = s<sup>B</sup><sub>A</sub> ∩
+t<sup>B</sup><sub>A</sub></p>
+<p>Then you get that for any fixed B, the collection of all sieves forms
+a <em>complete lattice</em>.</p>
+<h2 id="pullback">Pullback</h2>
+<p>Let s<sup>B</sup> be a sieve and f: A → B. We get a sieve f*
+s<sup>B</sup> called the <strong>pullback</strong>, defined by</p>
+<p>(f* s<sup>B</sup>)(X) = { g: X → A | gf ∈ s<sup>B</sup> (X) }</p>
+<p>This is actually the pullback in the categorical sense:</p>
+<p>We take s<sup>B</sup> ×<sub>h<sup>B</sup></sub> h<sup>A</sup> = f*
+s<sup>B</sup></p>
+<p>This sends X → s<sup>B</sup>(X) ×<sub>h<sup>B</sup>(X)</sub>
+h<sup>A</sup>(X), which we compute in Set:</p>
+<p>This is { (g,h) ∈ s<sup>B</sup>(X) × h<sup>A</sup>(X) | g = hf }</p>
+<h3 id="notation">Notation</h3>
+<p>Personally, I don't like the f* notation for the pullback. I'll
+denote the pullback by</p>
+<p>s<sup>B</sup> / f</p>
+<p>since it corresponds to the set of h: A → X such that hf ∈
+s<sup>B</sup></p>
+<h3 id="ring-theory-1">Ring Theory</h3>
+<p>Consider the one-object case Given an ideal s<sup>*</sup>, and a ring
+element x: *  → *, the pullback is x*s<sup>*</sup> = { a | ax ∈
+s<sup>*</sup> } This is the preimage of right multiplication by x
+ρ<sub>x</sub><sup>-1</sup>(s<sup>*</sup>)</p>
+<h3 id="what-is-hbsb">What is h<sup>B</sup>/s<sup>B</sup> ?</h3>
+<p>This just ends up being the collection of all sieves of the form
+h<sup>B</sup>/f But since h<sup>B</sup> contains <em>all</em> of the
+maps into B, every map of the form gf will be in h<sup>B</sup>. So</p>
+<p>h<sup>B</sup> / s<sup>B</sup> = { h<sup>A</sup> | there is a map f: A
+→ B in s<sup>B</sup>(A) }</p>
+<p>So h<sup>B</sup>/s<sup>B</sup> is something like taking all of the
+hom sets and then restricting to the ones that are connected to B
+through s.</p>
+<h3 id="what-is-tb-hb">What is t<sup>B</sup> / h<sup>B</sup> ?</h3>
+<p>This is the set of all sieves of the form t<sup>B</sup>/f, where f is
+<em>any</em> map into B</p>
+<p>So the sieves in t<sup>B</sup> / h<sup>B</sup> are those such
+that</p>
+<h2 id="grothendieck-topology">Grothendieck Topology</h2>
+<p>For each object, we get a sieve. So think of our sieves as collected
+into a map S: C × C → Set</p>
+<p>The weird thing is that we want <em>more than one sieve</em> for each
+object. We choose a collection of sieves, which we call <strong>covering
+sieves</strong>. They have to satisfy the following:</p>
+<h3 id="axioms">Axioms</h3>
+<ol>
+<li><p>h<sup>B</sup> is a covering sieve for all B</p></li>
+<li><p>If s<sup>B</sup> is covering and f:A → B then s<sup>B</sup>/f is
+covering.</p></li>
+<li><p>Let s<sup>B</sup> be covering and t<sup>B</sup> be any sieve. If
+t<sup>B</sup>/f is covering for all f ∈ s<sup>B</sup>(A), for all A,
+then t<sup>B</sup> is also covering</p></li>
+</ol>
+<div class="OPINION drawer">
+<p>This is a much nicer way of looking at Grothendieck topologies, I
+think — it's very algebraic The conditions become</p>
+<ol>
+<li>We have a special element h<sup>B</sup></li>
+<li>We're closed under pullback</li>
+<li>We have a kind of ideal/multiplicative closure</li>
+</ol>
+<p>Let's define t<sup>B</sup>/s<sup>B</sup> to be all of the sieves of
+the form t<sup>B</sup>/f, with f ∈ s<sup>B</sup>(A) for some A.</p>
+<p>Then we say that if t<sup>B</sup> /s<sup>B</sup> is covering, then so
+is t<sup>B</sup></p>
+</div>
+<h3 id="ring-case">Ring Case</h3>
+<p>Given any ideal t, and a covering ideal s, if
+ρ<sub>x</sub><sup>-1</sup>(t) is covering for all x ∈ s, then t is
+covering</p>
+<h3 id="properties">Properties</h3>
+<p>If s<sup>B</sup> ≤ t<sup>B</sup> and s is covering then so is t</p>
+<ol>
+<li><p><span class="todo TODO">TODO</span> Proof</p>
+<p>If xf ∈ s ≤ t then xf ∈ t. So ρ<sub>f</sub><sup>-1</sup>(s) ⊆
+ρ<sub>f</sub><sup>-1</sup>(t) for all f</p></li>
+</ol>
+<h2 id="sites-toposes">Sites / Toposes</h2>
+<p>A <strong>site</strong> is just (C, S), a category and a Grothendieck
+topology</p>
+<p>This is also called a <strong>topos</strong></p>
+<h2 id="local-isomorphisms">Local Isomorphisms</h2>
+<h2 id="sections">Sections</h2>
+<p>Given a contravariant functor F mapping into Set, we call the set
+F(X) the <strong>sections of F over X</strong></p>
+<p>From the <a
+href="https:/Digital-Garden/math/math-hom_functors.html">Yoneda
+lemma</a>, we have Hom(h<sup>B</sup>, F) ≅ F(B) naturally. So we can
+identify the elements of Hom(h<sup>B</sup> , F) with the sections.</p>
+<p>We associate the two with η → η<sub>B</sub>(1<sub>B</sub>) And if x ∈
+F(B), we take η<sub>A</sub>: h<sup>B</sup>(A) → F(A) to be the map which
+sends f: A → B to F(f)(x) ∈ F(A)</p>
+<p>So η<sup>x</sup> = F(-)(x) is the corresponding natural
+transformation</p>
+<h1 id="sheaves">Sheaves</h1>
+<p>These are ways of taking something local and turning it into
+something global</p>
+<h2 id="definitions">Definitions</h2>
+<p>A <strong>separated presheaf</strong> is a contravariant functor F,
+such that given any covering sieve s<sup>B</sup>, the map</p>
+<p>Hom(h<sup>B</sup>, F) → Hom(s<sup>B</sup>, F)</p>
+<p>is injective.</p>
+<p>A <strong>sheaf</strong> on a site is a contravariant functor F, such
+that given any covering sieve s<sup>B</sup>, the map</p>
+<p>Hom(h<sup>B</sup>, F) → Hom(s<sup>B</sup>, F)</p>
+<p>is a bijection.</p>
+<p>A η: h<sup>B</sup> ⇒ F is determined by η<sub>B</sub> and what it
+does to 1<sub>B</sub> What is η<sub>B</sub> doing on s<sup>B</sup>?</p>
+<p>η<sub>B</sub>: s<sup>B</sup><sub>B</sub> → F(B)</p>
+<p>We don't necessarily have that 1<sub>B</sub> ∈
+s<sup>B</sup><sub>B</sub></p>
+<h2 id="consequences">Consequences</h2>
+<p>The map above sends a natural transformation (a section of the
+presheaf) η: h<sup>B</sup> → F to basically the same transformation,
+just restricted to s<sup>B</sup></p>
+<div class="THOUGHTS drawer">
+<p>So this basically says that every covering sieve has 'enough space'
+to contain all of the possible transformations h<sup>B</sup> → F. My
+guess is that means something like the covering sieves are all
+global?</p>
+</div>
+<h2 id="functoriality">Functoriality</h2>
+<p>A sheaf is a functor <span
+class="math inline"><em>F</em> : 𝒞 → 𝒟</span></p>
+<p>It assigns to each of the objects in <span
+class="math inline">𝒞</span> some local structure in <span
+class="math inline">𝒟</span></p>
+<p>We think of the morphisms as telling us how one local structure fits
+inside of another</p>
+<h2 id="locality">Locality</h2>
+<p>If we zoom-in to a local region, it should tell us the local
+structure</p>
+<p>If we take a pull-back, which we think of as an intersection,</p>
 </body>
 </html>

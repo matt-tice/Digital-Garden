@@ -168,6 +168,162 @@
 <header id="title-block-header">
 <h1 class="title">hom functors</h1>
 </header>
-<p><a href="math-hom_functors.org">algebraic geometry</a></p>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>Let h<sub>A</sub> = Hom(A,-) and h<sup>B</sup> = Hom(-,B)</p>
+<p>h<sub>A</sub>(f) = Hom(A,f) = the set map that sends g → gf (do g
+then do f)</p>
+<p>h<sup>B</sup>(f) = Hom(f, B) = the map that sends g → fg
+(precomposing with f)</p>
+<p>Let h<sub>f</sub> = Hom(f, -) and h<sup>f</sup> = Hom(-, f). These
+are natural transformations</p>
+<p>h<sub>f</sub>: h<sub>B</sub> → h<sub>A</sub> by</p>
+<p>h<sub>f</sub>(X): h<sub>B</sub>(X) → h<sub>A</sub>(X) which sends g:
+B → X to fg: A → X</p>
+<p>So h<sub>f</sub>(X) = h<sup>X</sup>(f). So a way to remember is to
+recall that X is always above f</p>
+<p>Similarly, h<sup>f</sup>: h<sup>A</sup> → h<sup>B</sup> given by
+sending g: X → A to gf : X → B</p>
+<p>Thus h<sup>f</sup>(X) = h<sub>X</sub>(f)</p>
+<h3 id="note">Note</h3>
+<p>h<sub>A</sub><sup>B</sup> = h<sup>B</sup><sub>A</sub> =
+h<sub>A</sub>(B) = h<sup>B</sup>(A) = Hom(A,B)</p>
+<p>h<sub>f</sub>(X) = h<sub>X</sub>(f) = h<sub>f</sub><sup>X</sup> =
+h<sub>f</sub><sup>X</sup>= Hom(f,X) h<sup>f</sup>(X) = h<sub>X</sub>(f)
+= h<sub>X</sub><sup>f</sup> = h<sup>f</sup><sub>X</sub> = Hom(X,f)</p>
+<p>So this notation is actually really nice, and lets us do some
+tensor-like analysis</p>
+<h1 id="yoneda-lemma">Yoneda Lemma</h1>
+<p>Let C be a locally small category (small morphisms)</p>
+<h2 id="covariant">Covariant</h2>
+<p>Nat(h<sub>A</sub>, F) ≅ F(A) as a natural isomorphism</p>
+<p>More precisely, say η : h<sub>A</sub> → F is a natural transformation
+We identify it with the element η<sub>A</sub>(id<sub>A</sub>) ∈ F(A)</p>
+<h3 id="functors">Functors</h3>
+<p>To see naturality, we need to view these as functors from C ×
+Set<sup>C</sup> → Set</p>
+<p>Nat(h<sub>•</sub>, •) : A × F → Nat(h<sub>A</sub>, F) ε: A × F →
+F(A)</p>
+<p>Say f: A → B. We have</p>
+<p>Nat(h, -)(f, η) : Nat(h<sub>A</sub>, F) → Nat(h<sub>B</sub>, G)</p>
+<p>sends a φ: h<sub>A</sub> ⇒ F to the natural transformation
+h<sub>f</sub> φ η</p>
+<p>h<sub>f</sub>: h<sub>B</sub> ⇒ h<sub>A</sub></p>
+<p>ε(f, η) : F(A) → G(B)</p>
+<p>We define this by ε(f,η) = η<sub>A</sub> G(f) Note that by naturality
+of η, this is also F(f) η<sub>B</sub></p>
+<p>η: F ⇒ G η<sub>A</sub>: F(A) → G(A)</p>
+<p>η<sub>A</sub> G(f): F(A) → G(B)</p>
+<h3 id="naturality">Naturality</h3>
+<p>Let Φ: Nat(h, -) ⇒ ε</p>
+<p>If f: A → B and η: F → G , forming a morphism (f, η) in C ×
+Set<sup>C</sup> then naturality requires that</p>
+<p>Φ<sub>(A,F)</sub> ε(f, η) = Nat(f, η) Φ<sub>(B,G)</sub></p>
+<p>Φ<sub>(A,F)</sub> η<sub>A</sub> G(f) = h<sub>f</sub> (-) η
+Φ<sub>(B,G)</sub></p>
+<p>Nat(h<sub>A</sub>, F) → Nat(h<sub>B</sub>, G) ↓ ↓ F(A) → G(B)</p>
+<ol>
+<li><p>Right-Down</p>
+<p>h<sub>f</sub> (-) η Φ<sub>(B,G)</sub>: ψ → Φ<sub>(B,G)</sub>
+[h<sub>f</sub> ψ η ] = (h<sub>f</sub>(B) ψ<sub>B</sub>
+η<sub>B</sub>)(id<sub>B</sub>) = h<sup>B</sup>(f) ψ<sub>B</sub>
+η<sub>B</sub> : Hom(B,B) → G(B) applied to id<sub>B</sub></p>
+<p>h<sup>B</sup>(f): h<sup>B</sup>(B) → h<sup>B</sup>(A) =
+h<sub>A</sub>(B)</p>
+<p>h<sup>B</sup>(f)(id<sub>B</sub>) = f</p>
+<p>So we end up with η<sub>B</sub>(ψ<sub>B</sub>(f))</p></li>
+<li><p>Down-Right</p>
+<p>Φ<sub>(A,F)</sub> : Nat(h<sub>A</sub>, F) → F(A) ψ →
+ψ<sub>A</sub>(id<sub>A</sub>)</p>
+<p>We then apply ε(f,η) = η<sub>A</sub> G(f), which sends this to</p>
+<p>G(f)(η<sub>A</sub>(ψ<sub>A</sub>(id<sub>A</sub>)))</p>
+<p>Then we can pull G(f) through, since η and ψ are natural
+transformations</p>
+<p>We get η<sub>B</sub>(ψ<sub>B</sub>(G(f)(id<sub>A</sub>))) =
+G(f)(η<sub>A</sub>(ψ<sub>A</sub>(id<sub>A</sub>))) = (η<sub>B</sub> ˆ
+F(f) ˆ ψ<sub>A</sub>)(id<sub>A</sub>) = (η<sub>B</sub> ˆ ψ<sub>B</sub> ˆ
+h<sub>A</sub>(f))(id<sub>A</sub>) = (η<sub>B</sub> ˆ
+ψ<sub>B</sub>)(f)</p></li>
+</ol>
+<h2 id="contravariant">Contravariant</h2>
+<p>Nat(h<sup>A</sup>, G) ≅ G(A)</p>
+<p>If we have such a natural transformation,</p>
+<h2 id="yoneda-embedding">Yoneda Embedding</h2>
+<p>We have Nat(h<sub>A</sub> , h<sub>B</sub>) ≅ h<sub>B</sub>(A) =
+Hom(B,A)</p>
+<p>Then the map C → Set<sup>C</sup> given by A → h<sub>A</sub> is a
+contravariant functor that is <strong>fully faithful</strong> So
+C<sup>op</sup> is embedded in Set<sup>C</sup>.</p>
+<p>Similarly, Nat(h<sup>A</sup> , h<sup>B</sup>) ≅ h<sup>B</sup>(A) =
+Hom(A,B)</p>
+<p>Giving a <strong>fully faithful</strong> covariant functor C →
+Set<sup>C<sup>op</sup></sup></p>
+<p>In this way, we can think of C as being <em>embedded in the category
+of presheaves on it</em>.</p>
+<p>In fact we have that C<sup>op</sup>
+ ≅ <em>h</em><sub><em>A</em></sub>|<em>A</em> ∈ <em>C</em> and C
+ ≅ <em>h</em><sup><em>A</em></sup>|<em>A</em> ∈ <em>C</em></p>
+<p>In <a
+href="https:/Digital-Garden/math/math-algebraic_geometry.html">algebraic
+geometry</a> and topos theory, we will often think of categories as
+categories of presheaves, and determine whether the presheaves are
+actually <em>sheaves</em>.</p>
+<p>This corresponds to saying that our category is a Grothendieck
+topos.</p>
+<h1 id="representable-functor">Representable Functor</h1>
+<p>A functor such that F ≅ h<sub>A</sub> for some A is said to be
+<strong>represented by A</strong> A <strong>representable
+presheaf</strong> is F ≅ h<sup>A</sup></p>
+<p>So the Yoneda embedding gives a way of thinking of every object in C
+as representing its own presheaf</p>
+<h1 id="universal-constructions">Universal Constructions</h1>
+<h2 id="universal-elements">Universal Elements</h2>
+<p>These correspond to isomorphisms in Nat(h<sub>A</sub>, F)</p>
+<p>Using the Yoneda lemma, given any (X, x) with x ∈ F(X), this
+corresponds to ψ<sup>x</sup> = F(-)(x) : h<sub>A</sub> ⇒ F</p>
+<p>Say we had some u such that ψ<sup>u</sup> is a natural isomorphism.
+In particular, we have F ⇒ h<sub>A</sub></p>
+<p>This tells us that given any x ∈ F(X), we get a bijection F(X) ≅
+h<sub>A</sub><sup>X</sup> which will send x → f<sup>x</sup></p>
+<p>Then by applying ψ<sup>u</sup>, we get that F(f<sup>x</sup>)(u) =
+x</p>
+<p>Since it's a bijection, this is the unique such map with this
+property.</p>
+<p>This is usually stated as:</p>
+<p>Given any (x,X) with x ∈ F(X), there is a unique map f: A → X such
+that F(f)(u) = x.</p>
+<p>This is the thing that shows up when we talk about <em>universal
+properties</em></p>
+<h2 id="functor-category">Functor Category</h2>
+<p>Consider the functor category</p>
+<p>If we take a limit/colimit in D, then we can compute the
+corresponding limit/colimit in [C,D] objectwise</p>
+<p>Let <span
+class="math inline"><em>Φ</em> : <em>J</em> → [<em>C</em>,<em>D</em>]</span>
+be a functor.</p>
+<p><span class="math inline">lim <em>Φ</em></span> is an object in [C,D]
+(a functor) along with maps into each <span
+class="math inline"><em>Φ</em>(<em>F</em>)</span></p>
+<p>Let <span class="math inline"><em>X</em> ∈ <em>C</em></span>. We can
+define <span
+class="math display"><em>Φ</em><sub><em>X</em></sub> : <em>J</em> → <em>D</em></span></p>
+<p>by <span
+class="math inline"><em>Φ</em><sub><em>X</em></sub>(<em>A</em>) = <em>Φ</em>(<em>A</em>)[<em>X</em>]</span></p>
+<p>We can define a new functor in [C,D] as follows:</p>
+<p>Take <span
+class="math inline"><em>Φ</em><sup>*</sup> : <em>C</em> → <em>D</em></span>
+to be</p>
+<p><span
+class="math inline"><em>Φ</em><sup>*</sup>(<em>X</em>) = lim <em>Φ</em><sub><em>X</em></sub></span></p>
+<p>This will end up being the limit of <span
+class="math inline"><em>Φ</em></span></p>
+<h2 id="hom-functors-1">Hom Functors</h2>
+<p>In particular, if we look at h<sub>A</sub> or h<sup>B</sup>, we can
+express limits and colimits in a nice way</p>
+<p>(h<sub>A</sub> × h<sub>B</sub>)(X) = h<sub>A</sub>(X) ×
+h<sub>B</sub>(X)</p>
+<p>Similarly, the fiber product / pullback is</p>
+<p>h<sub>A</sub> ×<sub>x</sub> h<sub>B</sub> = h<sub>A</sub>(X)
+×<sub>x</sub> h<sub>B</sub>(X)</p>
 </body>
 </html>
