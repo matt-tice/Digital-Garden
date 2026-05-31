@@ -87,6 +87,7 @@
 								      :raw-link html-path
 								      :format (org-element-property :format link)))))
 			     (org-element-set-contents new-link (org-element-contents link)))
+			   (message "New link: %s" new-link)
 			     (org-element-set-element link new-link)
 			     ))
 		     ))
