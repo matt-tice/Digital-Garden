@@ -58,10 +58,10 @@
   (org-element-map tree 'link
     (lambda (link)
       (let ((link-type (org-element-property :type link))
-            (link-path (org-element-property :path link)))
+            (link-path (org-element-property :path link))) ;; This will grab the org-roam id of the link
         ;; Only target links that use the id protocol
         (when (string= link-type "id")
-	  (message "Link path: %s " link-path)
+	  (message "Link path: %s " (org-id-find-id-file link-path))
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
 		   (let ((normalized-target (expand-file-name target-file)))
