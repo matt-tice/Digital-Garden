@@ -44,6 +44,7 @@
 
   (message "----- Outside the when -----")
   (message "Backend: %s" backend)
+  (message "When evaluation: %s" (org-export-derived-backend-p backend '(html org)))
   (when (org-export-derived-backend-p backend '(html org))
     (message "----- Inside when -----")
   (org-element-map tree 'link
