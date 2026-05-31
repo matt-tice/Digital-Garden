@@ -65,7 +65,7 @@
 	    (cond (target-file
 		   (let ((normalized-target (expand-file-name target-file)))
 		     (if (string-match "/private/" normalized-target)
-			 (let* ((link-text (org-element-interpret-data (org-element-contents link)))
+			 (let* ((contents (org-element-contents link))
 				(clean-text (if (string-empty-p link-text) "Note" link-text))
 				;; Generate a clean inline stub object
 				(stub-text (format "**%s** [?? Note currently private]" clean-text))
@@ -77,15 +77,15 @@
 			      (rel-path-from-notes (file-relative-name normalized-target notes-root))
 			      (base-path (file-name-sans-extension rel-path-from-notes))
 			      (html-path (concat "/Digital-Garden/" base-path ".html"))
-			      (new-link (org-element-create 'link							    
-                                                            (list :type "https"
-                                                                  :path html-path
-                                                                  :raw-link html-path
-                                                                  :format (org-element-property :format link)))))
-                         (org-element-set-contents new-link (org-element-contents link))
-                         (org-element-set-element link new-link)))))
-		   (t
-		    (message "[WARNING] Broken org-id link found in file: %s (Target ID: %s)" (buffer-file-name) link-path)
+			      (new-link (org-element-create 'link
+							    (list :type "https"
+								  :path html-path
+								  :raw-link html-path
+								  :format (org-element-property :format link)))))
+			 (org-element-set-contents new-link (org-element-contents link))
+			 (org-element-set-element link new-link)))))
+		  (t
+		   (message "[WARNING] Broken org-id link found in file: %s (Target ID: %s)" (buffer-file-name) link-path)
 		   (org-element-put-property link :type "customid")
 		   (org-element-put-property link :path "broken-link"))
 		  )
