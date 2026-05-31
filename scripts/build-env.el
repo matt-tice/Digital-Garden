@@ -64,6 +64,8 @@
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
 		   (let ((normalized-target (expand-file-name target-file)))
+		     (message "Target: %s" normalized-target)
+		     (message "%s" (string-match "/notes/" normalized-target))
 		     (cond ((string-match "/private/" normalized-target)
 			 (let* ((contents (org-element-contents link)) ; This will always return a list, not a single piece of text, so we need to grab the text
 				(link-text (if (stringp (car contents))
@@ -73,7 +75,7 @@
 			   (org-element-put-property link :type "customid")
 			   (org-element-put-property link :path "private-note")
 			   (org-element-set-contents link (list link-replacement))))
-		     (t
+		     ((string-match "/notes/" normalized-target)
 			   (let* (
 				  (notes-root (expand-file-name "../../notes" ))
 				  (rel-path-from-notes (file-relative-name normalized-target notes-root))
