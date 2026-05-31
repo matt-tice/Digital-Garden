@@ -64,32 +64,26 @@
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
 		   (let ((normalized-target (expand-file-name target-file)))
-                     
-                     ;; --- PRIVACY DETECTION BOUNDARY ---
-                     ;; Check if the resolved file path contains the "/private/" token
-                     (if (string-match "/private/" normalized-target)
-                         (let* ((link-text (org-element-interpret-data (org-element-contents link)))
+		     (if (string-match "/private/" normalized-target)
+			 (let* ((link-text (org-element-interpret-data (org-element-contents link)))
 				(clean-text (if (string-empty-p link-text) "Note" link-text))
 				;; Generate a clean inline stub object
 				(stub-text (format "**%s** [?? Note currently private]" clean-text))
 				(stub-node (org-element-create 'bold nil stub-text)))
                            ;; Replace the link element entirely with a text stub node
                            (org-element-set-element link stub-node))
-                       
-                       ;; --- STANDARD PUBLIC CROSS-LINK PASS ---
-                       (let* ((abs-outfile (expand-file-name (buffer-file-name)))
-                              (notes-root (expand-file-name "../../notes" (file-name-directory abs-outfile)))
-                              (rel-path-from-notes (file-relative-name normalized-target notes-root))
-                              (base-path (file-name-sans-extension rel-path-from-notes))
-                              (html-path (concat "/Digital-Garden/" base-path ".html"))
-                              
-                              (new-link (org-element-create 'link
+		       (let* (
+			      (notes-root (expand-file-name "../../notes" ))
+			      (rel-path-from-notes (file-relative-name normalized-target notes-root))
+			      (base-path (file-name-sans-extension rel-path-from-notes))
+			      (html-path (concat "/Digital-Garden/" base-path ".html"))
+			      (new-link (org-element-create 'link							    
                                                             (list :type "https"
                                                                   :path html-path
                                                                   :raw-link html-path
                                                                   :format (org-element-property :format link)))))
                          (org-element-set-contents new-link (org-element-contents link))
-                         (org-element-set-element link new-link))))
+                         (org-element-set-element link new-link)))))
 		   (t
 		    (message "[WARNING] Broken org-id link found in file: %s (Target ID: %s)" (buffer-file-name) link-path)
 		   (org-element-put-property link :type "customid")
