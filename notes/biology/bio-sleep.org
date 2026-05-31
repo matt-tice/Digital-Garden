@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       6fd70e13-1ba8-4a2e-84b5-d3d3a5846d88
+:END:
+#+title: sleep
+#+filetags: :biology:neurosci
+
+* References
+
+
+* Summary
+
+* Suprachiasmatic nucleus
+
+Part of the hypothalmus. Regulates sleep cycles.
