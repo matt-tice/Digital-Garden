@@ -60,12 +60,16 @@
       (let ((link-type (org-element-property :type link))
             (link-path (org-element-property :path link)))
         ;; Only target links that use the id protocol
-	(message "--------- Spot 1")
         (when (string= link-type "id")
           (let ((target-file (org-id-find-id-file link-path)))
 	    (cond (target-file
-		   	(message "--------- Spot 2")
+		   	
 		   (let ((normalized-target (expand-file-name target-file)))
+		     (message "--------- Spot 2")
+		     (message "Link: %s" (org-element-contents link))
+		     (message "Link text: %s" (car contents))
+		     (message "Stub-text: %s"  (format "%s [\N{LOCK} Note currently private]" clean-text))
+		     (message "Stub-node: %s" (org-element-create 'bold nil stub-text))
 		     (if (string-match "/private/" normalized-target)
 			 (let* ((contents (org-element-contents link))
 				(link-text (if (stringp (car contents))
