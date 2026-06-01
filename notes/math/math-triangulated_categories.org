@@ -1,0 +1,78 @@
+:PROPERTIES:
+:ID:       d8402b20-f94d-4b4a-8d0e-83d8745aa911
+:END:
+#+title: triangulated categories
+#+filetags: :math:homotopy:
+
+* References
+
+
+* Summary
+
+When you take a short exact sequence of chain complexes, the homology groups end up forming a long exact sequence
+
+* Definitions
+
+** Triangulated Category
+
+Additive category T
+
+Additive translation functor: T \to T
+- this plays the role of a suspension
+
+Collection of *exact triangles*
+  X \to Y \to Z \to X[1]
+- these play the roles of short exact sequences
+- as well as fiber sequences and cofiber sequences
+
+We'll denote these triangles by [X,Y,Z] or [XYZ]   
+
+
+The triangles satisfy
+
+*** TR 1
+
+For every object X, we have an exact triangle [XX0] given by
+X \xrightarrow{id} X \to 0 \to X[1]
+
+*** TR 2
+
+For every f: X \to Y there is an exact triangle [XYZ]
+X \xrightarrow{f} Y \to Z \to X[1]
+
+*** TR 3
+
+[XYZ] is an exact triangle if and only if [YZX[1]] is
+
+X \xrightarrow{f} Y \to Z \to X[1]
+Y \to Z \to X[1] \xrightarrow{f} Y[1]
+
+*** TR 4 (Octahedral Axiom)
+
+Given three triangles of a certain form, there exists another triangle such that they all satisfy a big diagram
+
+* Examples
+
+** Derived Categories
+
+** Stable Homotopy Category
+
+** Mirror Symmetry
+
+Homological mirror symmetry conjectures that the derived category of a Calabi-Yau manifold is equivalent to the Fukaya category of its mirror symplectic manifold
+
+* Properties
+
+Given two triangles [ABC] [XYZ] and a commuting square [AB] \to [XY], there exists a map C \to Z that makes the whole thing commute
+
+Proof:
+
+Given a triangulated category and a triangle [A, B, B/A], we have
+A \to B \to B/A is the zero map
+
+Proof:
+
+[AA0] and [A,B,B/A] are triangles, and we can map [AA] \to [AB]
+- by the previous lemma, we get a map 0 \to B/A that makes the whole thing commute
+- then looking at the middle square, you get the result
+
