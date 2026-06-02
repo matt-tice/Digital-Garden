@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       2e4cf62e-b431-454f-a3d2-f7f2d3f568cb
+:END:
+#+title: bar-cobar construction
+#+filetags: :math:homotopy:
+
+* References
+
+
+* Summary
+
+Uses differential graded (co)operads to introduce homotopy.
+
+Two steps:
+1. Bar: a projection
+2. Cobar: a free reconstruction
+
+** Requirements
+
+You need to be able to dualize
+
+You need an augmented operad
+
+You typically work with linear operads
+
+You typically assume a connected operad
+
+* Bar Construction
+
+Takes an operad and constructs a cooperad
+
+More generally it takes a monad algebra and turns it into a simplicial object

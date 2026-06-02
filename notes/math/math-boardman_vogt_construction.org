@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       a9e10e21-7527-429a-97f3-0780cc4c6ef8
+:END:
+#+title: boardman-vogt construction
+#+filetags: :math:homotopy:
+
+* References
+
+
+* Summary
+
+This is a cofibrant resolution of operads
+
+Requires an interval object
+- you want to work in the model category structure of operads
+- you need colimits to distribute over tensor products
+
+
+Let O be an operad over Set
