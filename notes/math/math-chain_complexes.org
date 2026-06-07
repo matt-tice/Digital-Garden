@@ -2,7 +2,7 @@
 :ID:       fdde2b71-a9d9-4ed5-97e5-b6d89e128b50
 :END:
 #+title: chain complexes
-#+filetags: :math:homotopy:homology:
+#+filetags: :math:homotopy:homology:cohomology:
 
 * References
 
@@ -101,6 +101,12 @@ What we found above is that the cocycles and coboundaries don't notice the shape
 - this is how we see a *topological quantum field theory* arising: taking path integrals is independent of the world-sheet defining the cobordism
 
 
+
+*** Chern Classes
+
+The first Chern class is a 2-cocycle
+So it's something that has no boundary data
+- it can't see boundaries of 3d objects
 
 ** Topological String Theory
 
