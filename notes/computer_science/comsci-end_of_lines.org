@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       b227d313-9fb5-4d0b-b31d-6f197dd359d8
+:END:
+#+title: end of lines
+#+filetags: :comsci:ascii:
+
+* References
+
+
+* Summary
+
+Line endings are controlled by
+1. Carriage return: =\r= (ASCII value 13)
+2. Line feed: =\n= (ASCII value 10)
+
+Linux and macOS use LF, while Windows uses CRLF (=\r\n=)
+- because of this, sometimes when Windows opens up a file that's been edited on Linux or macOS, it will be upset that the lines only end in =\r=, without =\n= following it
+
+You can actually fix this, by /not having a CR at all!/
+- if you just use the line feed, all 3 OS can read it
+
+
+* Carriage Return
+
+On a physical type writer, the carriage return *slid the typing carriage back to the left*
+- however, it did not move the paper up: you'd still be on the same line
+
+=^M= (control M) is the keyboard shortcut for carriage return
+
+* Line Feed
+
+On a typewriter, this moved the paper up, but didn't shift the carriage back to the left

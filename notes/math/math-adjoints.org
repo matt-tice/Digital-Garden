@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       450875cd-82b6-4aa6-a813-63cc866efcd9
+:END:
+#+title: adjoints
+#+filetags: :math:cats:
+
+* References
+
+
+* Summary
+
+L \dashv R means that L is the left adjoint and R is the right adjoint
+
+* (Co)Limits
+
+1. Take the appropriate diagram
+2. Set up the constant functor
+
+** (Co)products
+
+\sqcup \dashv \Delta \dashv \times
+
+
+** (Co)equalizers
+
+The diagram is a pair of parallel morphisms
+
+We then take the functor category C^I
+
+The constant functor 
+\Delta: C \to C^I by
+A \to (A \xrightarrow{id}) A)
+
+Coeq \dashv \Delta \dashv Eq
+
+** Pullbacks and Pushouts
+
+
+Your diagram is a span (or cospan)
+

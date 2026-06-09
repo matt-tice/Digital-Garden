@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       2a60ad57-a588-47e3-9794-e69bfa5c7fa0
+:END:
+#+title: category theory
+#+filetags: :math:cats:
+
+* References
+
+
+* Summary
+
+** Limits
+
+** Adjunctions
+
+Once you get to the level of comfort required to deal with adjunctions, they're a much cleaner way of dealing with things
+
+** Representable Functors
+
+Focuses on the Yoneda Lemma
+
+Turns category theory into set theory
+
+Requires you to be good at presheaves
+
+** Kan Extensions
+
+Extends naturally to \infty-cats

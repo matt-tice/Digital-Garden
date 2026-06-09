@@ -1,0 +1,75 @@
+:PROPERTIES:
+:ID:       9c5a3724-a1c0-4eec-b27a-2129bb60eb7d
+:END:
+#+title: adipose tissue
+#+filetags: :biology:fat:body:
+
+* References
+
+
+* Summary
+
+* Resting Metabolic Rate
+
+Surprisingly, your /RMR per pound of muscle/ remains basically the same from age 20 to 60
+
+Your RMR is highly correlated with your muscle mass --- the more muscle you have, the higher your RMR
+
+* Sertraline
+
+Can reduce *non-exercise acivity thermogenesis* (NEAT)
+- which is to say, fidgeting, pacing, etc
+
+Does not impact RMR
+Does impact your satiation response
+
+* Sedentarity
+
+When muscles sit static for hours, their insulin sensitivity drops
+
+* Muscle
+
+Significantly denser than fat
+
+In order to actually build muscle you need a calorie /surplus/
+
+* NEAT
+
+** Spontaneous Physical Activity
+
+You can intentionally do NEAT movements
+
+*** Soleus Muscle
+
+It runs from the back of the knee to the heel
+
+Highly resistant to fatigue
+
+Rapid heel raises while keeping toes planted and sitting
+- rest forearms or weight on your knees
+
+
+*** Postural Oscillated Shift
+
+Shift your weight from one sit-bone to the other
+
+* Isometric Exercise
+
+Holding a muscle under tension forces the muscle to expend energy rapidly
+
+** Posture
+
+Good posture is a form of isometric exercise
+- it uses the *axial stabilizer network*
+
+
+** Toe Walking
+
+Puts a continuous load on your calves
+
+Leads to Type I (slow-twitch muscle fibers)
+- fatigue resistant
+- mitochondria-rich
+
+
+** 

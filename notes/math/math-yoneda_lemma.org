@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       dc299af7-5db3-44a3-a66f-e4be459a5cde
+:END:
+#+title: yoneda lemma
+#+filetags: :math:cats:
+
+* References
+
+
+* Summary
+

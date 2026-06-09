@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       bb6d80d7-3eff-4bde-8d2f-9843deef50d0
+:END:
+#+title: representable functors
+#+filetags: :math:cats:presheafs:
+
+* References
+
+
+* Summary
+
+* [[id:dc299af7-5db3-44a3-a66f-e4be459a5cde][Yoneda lemma]]
+
+
+
+
+
