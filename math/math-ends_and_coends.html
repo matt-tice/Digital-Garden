@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Index of physics</title>
+  <title>ends and coends</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,24 +166,48 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Index of physics</h1>
+<h1 class="title">ends and coends</h1>
 </header>
-<h1 id="notes-in-this-area">Notes in this area:</h1>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<h1 id="ends">Ends</h1>
+<p>Let <span
+class="math inline"><em>F</em> : <em>C</em><sup><em>o</em><em>p</em></sup> × <em>C</em> → 𝒱</span>
+A <strong>wedge</strong> w → F is a collection of maps <span
+class="math inline"><em>w</em><sub><em>A</em></sub> : <em>w</em> → <em>F</em>(<em>A</em>,<em>A</em>)</span>
+such that</p>
+<p>An <strong>end</strong> is a universal wedge</p>
+<h2 id="intuition">Intuition</h2>
+<p>Think of the maps <span
+class="math inline"><em>w</em><sub><em>A</em></sub> : <em>w</em> → <em>F</em>(<em>A</em>,<em>A</em>)</span>
+as something like the maps that make up a natural transformation</p>
+<p>Because your end is a limit, you're basically looking at a collection
+{w<sub>A</sub>} such that they are invariant under altering the
+components of F(A, B) independently</p>
+<h1 id="coends">Coends</h1>
+<p>F(A, A) → F(A, B) ↓ ↓ F(B, A) → w</p>
+<p>We denote the coend by ∫<sup>A</sup> F(A, A)</p>
+<h2 id="intuition-1">Intuition</h2>
+<p>The maps <span
+class="math inline"><em>w</em><sub><em>A</em></sub> : <em>F</em>(<em>A</em>,<em>A</em>) → <em>w</em></span>
+define your gluing</p>
+<p>You essentially glue together the maps that change the components of
+F(A, B) independently.</p>
+<p>This is meant to be something like the <strong>tensor product of
+modules</strong></p>
 <ul>
-<li><a href="./phys-plasma.html">phys-plasma</a></li>
-<li><a href="./phys-effective_field_theory.html">phys-effective field
-theory</a></li>
-<li><a href="./phys-small_modular_reactor.html">phys-small modular
-reactor</a></li>
-<li><a href="./phys-electronics.html">phys-electronics</a></li>
-<li><a href="./phys-climate_change.html">phys-climate change</a></li>
-<li><a href="./phys-string_theory.html">phys-string theory</a></li>
-<li><a href="./phys-strongly_correlated_systems.html">phys-strongly
-correlated systems</a></li>
-<li><a href="./phys-lattice_qft.html">phys-lattice qft</a></li>
-<li><a href="./phys-beyond_the_standard_model.html">phys-beyond the
-standard model</a></li>
-<li><a href="./phys-gauge_theory.html">phys-gauge theory</a></li>
+<li>In M ⊗ N, you have α m ⊗ n = m ⊗ α n</li>
 </ul>
+<p>Similarly, here you want to think of C (its morphisms) as your ring,
+and the functors as your modules.</p>
+<h2 id="left-kan-extensions">Left Kan Extensions</h2>
+<p>If we have F: C → D and K: C → E</p>
+<p>C → D ↓ E</p>
+<p>The <strong>left Kan extension of F along K</strong> is</p>
+<p>(L<sub>K</sub> F)[Y] = ∫<sup>X</sup> Mor(K(X), Y) ċ F(X)</p>
+<p>where ċ is the copwoer</p>
+<h1 id="yoneda">Yoneda</h1>
+<p>∫<sup>A</sup> Mor(A,B) ⊗ F(A) ≅ F(B)</p>
+<p>∫<sub>A</sub> Hom(Mor(B, A), F(A)) ≅ F(B)</p>
 </body>
 </html>
