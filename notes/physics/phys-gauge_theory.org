@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       066fc5c6-cf3b-4344-80f8-436b301b0183
+:END:
+#+title: gauge theory
+#+filetags: :physics:qft:
+
+* References
+
+
+* Summary
+
+* Homotopy
+
+** Yau's HQFT
+
+He uses the W construction to homotopify both the underlying spacetime and the algebras at the same time.
+
+He ends up with an adjunction from his HQFTs and A_\infty-algebras, induced by any map from Assoc
+- this basically says you can associate a free A_\infty-algebra to any region of spacetime in his model.
+- The downside is that you don't have much control over these A_\infty-algebras: since they come from an adjunction, they lose a lot of info about your theory 

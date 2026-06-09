@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       ab4fd273-9e7c-42f6-872e-947f011fe8f7
+:END:
+#+title: string theory
+#+filetags: :physics:qft:math_phys:
+
+* References
+
+
+* Summary
+
+* Closed Strings
+
+Their world sheets are *closed Riemann surfaces*
+
+* Open Strings
+
+Open string boundaries lie on D-branes
+
+* Homotopy
+
+** The A-Model
+
+Open strings are stretched between Lagrangian D-branes
+
+** Fukaya Category
+
+A kind of A_\infty category

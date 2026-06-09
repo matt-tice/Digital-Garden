@@ -1,0 +1,64 @@
+:PROPERTIES:
+:ID:       7f627391-aa55-443d-a889-3205a56bf234
+:END:
+#+title: ends and coends
+#+filetags: :math:cats:colimits:
+
+* References
+
+
+* Summary
+
+* Ends
+
+Let $F: C^{op} \times C \to \mathcal{V}$
+A *wedge* w \to F is a collection of maps $w_A: w \to F(A, A)$ such that 
+
+An *end* is a universal wedge
+
+** Intuition
+
+Think of the maps $w_A: w \to F(A, A)$ as something like the maps that make up a natural transformation
+
+Because your end is a limit, you're basically looking at a collection {w_A} such that they are invariant under altering the components of F(A, B) independently 
+
+
+* Coends
+
+F(A, A) \to F(A, B)
+\downarrow                  \downarrow
+F(B, A) \to w
+
+We denote the coend by
+\int^A F(A, A)
+
+** Intuition
+
+The maps $w_{A}: F(A, A) \to w$ define your gluing
+
+You essentially glue together the maps that change the components of F(A, B) independently.
+
+This is meant to be something like the *tensor product of modules*
+- In M \otimes N, you have \alpha m \otimes n = m \otimes \alpha n
+
+Similarly, here you want to think of C (its morphisms) as your ring, and the functors as your modules.
+
+** Left Kan Extensions
+
+If we have F: C \to D  and K: C \to E
+
+C \to D
+\downarrow
+E
+
+The *left Kan extension of F along K* is 
+
+(L_K F)[Y] = \int^X Mor(K(X), Y) \cdot F(X)
+
+where \cdot is the copwoer
+
+* Yoneda
+
+\int^A Mor(A,B) \otimes F(A) \cong F(B)
+
+\int_A Hom(Mor(B, A), F(A)) \cong F(B)
