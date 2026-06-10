@@ -170,5 +170,352 @@
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
+<h1 id="mor-functors">Mor Functors</h1>
+<p>Mor functors are very nice to work with; in some ways they're some of
+the simplest functors, so it's nice to be able to understand them.</p>
+<h1 id="section">•</h1>
+<p><code class="verbatim">Intuition:</code> There should be something
+underneath the Yoneda Lemma that (to me) is more important: that natural
+transformations out of mor functors are completely determined by where
+they send the identity.</p>
+<p>There should be some generalization of this</p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="representable-functors">Representable Functors</h2>
+<div class="definition">
+<p><code class="verbatim">My Definition:</code> A functor <span
+class="math inline"><em>F</em> :  ⁀ <em>C</em> →  ⁀ <em>D</em></span> is
+representable, if there is some object <span
+class="math inline"><em>A</em></span> and map <span
+class="math inline">$f_A: \newmoon \to F(A)$</span> such that if <span
+class="math inline"><em>η</em>, <em>θ</em> : <em>F</em> ⇒ <em>G</em></span>
+and <span
+class="math inline"><em>η</em><sub><em>A</em></sub><em>f</em><sub><em>A</em></sub> = <em>θ</em><sub><em>A</em></sub><em>f</em><sub><em>A</em></sub></span>
+then <span class="math inline"><em>η</em> = <em>θ</em></span></p>
+<p>So in other words, the functor is rigid in some sense; natural
+transformations are determined by where they send a single element of
+the functor</p>
+<p>This looks like enough to prove the yoneda lemma. I think that you
+can generalize <span class="math inline">$\newmoon$</span> to an object
+<span class="math inline"><em>X</em></span>, as long as you get some
+outer horn filling condition: for any two maps <span
+class="math inline"><em>X</em> → <em>F</em>(<em>B</em>)</span> and <span
+class="math inline"><em>X</em> → <em>G</em>(<em>B</em>)</span>, you can
+make the diagram commute with a map <span
+class="math inline"><em>F</em>(<em>B</em>) → <em>G</em>(<em>B</em>)</span>.
+This holds if <span class="math inline"><em>X</em></span> is the
+terminal object, and maybe this characterizes the terminal object; I'll
+have to see</p>
+<p>This also seems related to universal morphisms; so maybe that's what
+I'm looking for</p>
+</div>
+<h1 id="results">Results</h1>
+<div class="theorem">
+<p>representable iff satisfies the Yoneda Lemma</p>
+</div>
+<div class="proof-theorem">
+<div class="enumerate">
+<p>\item </p>
+<p><code class="verbatim">Surjective:</code> Let <span
+class="math inline">$\alpha: \newmoon \to G(A)$</span>. Then we have</p>
+<p><span class="math inline">$\newmoon \xrightarrow{x_F} F(A)
+\xrightarrow{F(f)} G(A)$</span></p>
+<p>Use the fact that it's the terminal object to get <span
+class="math inline"><em>η</em><sub><em>A</em></sub><em>x</em><sub><em>F</em></sub> = <em>α</em></span></p>
+<div class="center">
+<div class="tikzcd">
+<p>F(A) &amp; F(B) <br />
+G(A) &amp; G(B)</p>
+</div>
+</div>
+<p>We can use the terminal object to demonstrate <span
+class="math inline">$\eta_B f = G(f) \alpha: \newmoon \to
+G(A)$</span></p>
+<p>\item Say <span class="math inline"><em>F</em></span> satisfies the
+Yoneda Lemma. Then we have for any functor, <span
+class="math inline"><em>G</em></span>, <span
+class="math inline">[<em>F</em>,<em>G</em>] ≅ <em>G</em>(<em>A</em>)</span></p>
+</div>
+</div>
+<div class="prop">
+<p>Let <span
+class="math inline"><em>F</em>, <em>G</em> :  ⁀ <em>C</em> →  ⁀ <em>D</em></span></p>
+<p>They are both representable with the same object iff they're
+naturally isomorphic</p>
+</div>
+<div class="proof-prop">
+<p><code class="verbatim">Representable:</code> We have <span
+class="math inline"><em>F</em>, <em>G</em></span> with the special
+object <span
+class="math inline"><em>A</em><sub><em>F</em></sub> ≅ <em>A</em><sub><em>G</em></sub></span>
+and special morphisms <span class="math inline">$x_F: \newmoon \to
+F(A_F)$</span> and <span class="math inline">$x_G: \newmoon \to
+G(A_G)$</span>.</p>
+<p><span
+class="math inline">[<em>F</em>,<em>G</em>] ≅ <em>G</em>(<em>A</em><sub><em>F</em></sub>)</span>
+and <span
+class="math inline">[<em>G</em>,<em>F</em>] ≅ <em>F</em>(<em>A</em><sub><em>G</em></sub>)</span>.
+Since we have an iso <span
+class="math inline"><em>α</em> : <em>A</em><sub><em>F</em></sub> → <em>A</em><sub><em>G</em></sub></span>,
+we have that <span
+class="math inline"><em>F</em>(<em>α</em>) : <em>F</em>(<em>A</em><sub><em>F</em></sub>) → <em>F</em>(<em>A</em><sub><em>G</em></sub>)</span>
+is an iso. Now the map <span class="math inline">$\newmoon
+\xrightarrow{x_F} F(A_F) \xrightarrow{F(\alpha)} F(A_G)$</span> must
+correspond to some natural transformation <span
+class="math inline"><em>η</em><sup><em>F</em></sup> : <em>F</em> ⇒ <em>G</em></span>
+(since <span class="math inline"><em>F</em></span> satisfies the Yoneda
+Lemma). Similarly, <span class="math inline">$\newmoon \xrightarrow{x_G}
+G(A_G) \xrightarrow{G(\alpha)^{-1}} G(A_F)$</span> gives us a natural
+transformation <span
+class="math inline"><em>η</em><sup><em>G</em></sup> : <em>G</em> ⇒ <em>F</em></span></p>
+</div>
+<div class="theorem">
+<p>Let <span class="math inline">$F: \cat{C} \to \textsc{Set}$</span> be
+representable in my definition. Then it is representable</p>
+<p>(iff?)</p>
+</div>
+<div class="proof-theorem">
+<p>In this setting the special map <span
+class="math inline"><em>f</em><sub><em>A</em></sub></span> is really
+just an element. Let <span class="math inline"><em>A</em></span> be the
+special object of <span class="math inline"><em>A</em></span> and let
+<span class="math inline"><em>x</em> ∈ <em>F</em>(<em>A</em>)</span> be
+the special element. The Yoneda lemma will hold for <span
+class="math inline"><em>F</em></span>, so <span class="math inline">$[F,
+\mor{A}] = \mor{A}{A}$</span></p>
+<p>And <span class="math inline">$[\mor{A}{-}, F] = F(A)$</span></p>
+<p>Now consider the natural transformation corresponding to <span
+class="math inline"><em>x</em> ∈ <em>F</em>(<em>A</em>)</span>. The
+natural transformation is <span
+class="math inline"><em>η</em><sub><em>B</em></sub>(<em>f</em>) = <em>F</em>(<em>f</em>)(<em>x</em>)</span></p>
+<p> I think we can show that if two functors satisfy the yoneda lemma,
+they're naturally isomorphic</p>
+</div>
+<p><code class="verbatim">Takeaway:</code> This gives a different
+perspective to the Yoneda Lemma (and generalizes to categories that have
+a terminal object). It shows that representable functors are rigid, in
+the sense that some special element of them determines how every natural
+transformation out of it acts</p>
+<p><span class="math display">$$\mor{Y_A}{F} \cong F(A)$$</span></p>
+<p><span
+class="math inline"><em>Y</em><sub><em>Y</em><sub><em>A</em></sub></sub><sup><em>F</em></sup> = <em>F</em>(<em>A</em>)</span></p>
+<p><span class="math inline">$Y_A^B \equiv \mor{A}{B}$</span> <span
+class="math inline">$Y_A^{F(-)} \equiv \mor{A}{F(-)}$</span></p>
+<div class="theorem">
+<p>Let <span class="math inline">$F: \cat{C} \to \textsc{Set}$</span>
+and <span class="math inline">$A \in \obj_{\cat{C}}$</span>. Then</p>
+<div class="equation">
+<p>φ: [, F] F(A)</p>
+</div>
+<p>is a bijection, with <span
+class="math inline"><em>ϕ</em>(<em>η</em>) = <em>η</em><sub><em>A</em></sub>(<em>i</em><em>d</em><sub><em>A</em></sub>)</span>.</p>
+<p><code class="verbatim">Also:</code> If you consider functors <span
+class="math inline">$G,H: \cat{C} \times \textsc{Set}^{\cat{C}}$</span>
+with</p>
+<div class="equation">
+<div class="split">
+<p>G(A, F) &amp;= [, F]<br />
+H(A,F) &amp;= F(A)</p>
+</div>
+</div>
+<p>Then <span class="math inline"><em>ϕ</em></span> is a natural
+isomorphism in <span class="math inline"><em>A</em></span> and <span
+class="math inline"><em>F</em></span>.</p>
+</div>
+<div class="proof-theorem">
+<p><code class="verbatim">Well-defined:</code> Let <span
+class="math inline">$\eta \in [\mor{A}{-}, F]$</span> be a natural
+transformation. Then <span class="math inline">$\eta_A: \mor{A}{A} \to
+F(A) \in \obj_{\textsc{Set}}$</span>. So <span
+class="math inline"><em>ϕ</em>(<em>η</em>) = <em>η</em><sub><em>A</em></sub>(<em>i</em><em>d</em><sub><em>A</em></sub>) ∈ <em>F</em>(<em>A</em>)</span>.</p>
+<p><code class="verbatim">Injective:</code> Say <span
+class="math inline"><em>ϕ</em>(<em>η</em>) = <em>η</em><sub><em>A</em></sub>(<em>i</em><em>d</em><sub><em>A</em></sub>) = <em>ϕ</em>(<em>θ</em>) = <em>θ</em><sub><em>A</em></sub>(<em>i</em><em>d</em><sub><em>A</em></sub>)</span>.
+Now let <span class="math inline">$B \in \obj_{\cat{C}}$</span>. We need
+to show that <span
+class="math inline"><em>η</em><sub><em>B</em></sub> = <em>θ</em><sub><em>B</em></sub></span>.
+Now we have</p>
+<div class="equation">
+<p>η<sub>B</sub>, θ<sub>B</sub>: → F(B)</p>
+</div>
+<p>Let <span
+class="math inline"><em>f</em> : <em>A</em> → <em>B</em></span>.</p>
+<p><code class="verbatim">Natural transformation:</code> Because <span
+class="math inline"><em>η</em>, <em>θ</em></span> are natural
+transformations, we get the commutative square</p>
+<p> So if we take <span
+class="math inline"><em>f</em> : <em>A</em> → <em>B</em></span> then
+<span class="math inline">$\mor{A}{-}(f): \mor{A}{A} \to
+\mor{A}{B}$</span>. And thus from the above commutative square, we get
+<span class="math inline">$\eta_B \mor{A}{-}(f) =  F(f)\eta_A$</span>
+and <span class="math inline">$\theta_B \mor{A}{-}(f) =  F(f)
+\theta_A$</span>. Now apply these maps to <span
+class="math inline"><em>i</em><em>d</em><sub><em>A</em></sub></span>. We
+have <span class="math inline">$\eta_B \mor{A}{-}(f)(id_A) = \eta_B(f
+\circ id_A) = \eta_B(f) =  F(f)\eta_A(id_A) = F(f) \theta_A(id_A) =
+\theta_B \mor{A}{-}(f)(id_A) = \theta_B(f \circ id_A) =
+\theta_B(f)$</span>. So</p>
+<div class="equation">
+<p>η<sub>B</sub>(f) = θ<sub>B</sub>(f)</p>
+</div>
+<p>for all <span
+class="math inline"><em>f</em> : <em>A</em> → <em>B</em></span>. So
+<span
+class="math inline"><em>η</em><sub><em>B</em></sub> = <em>θ</em><sub><em>B</em></sub></span>.
+And since this hold for all <span class="math inline">$B \in
+\obj_{\cat{C}}$</span> we have <span
+class="math inline"><em>η</em> = <em>θ</em></span>. So we are
+injective.</p>
+<p><code class="verbatim">Surjective:</code> Now let <span
+class="math inline"><em>x</em> ∈ <em>F</em>(<em>A</em>)</span>. Define a
+natural transformation by <span
+class="math inline"><em>η</em><sub><em>A</em></sub>(<em>i</em><em>d</em><sub><em>A</em></sub>) = <em>x</em></span>
+and for any <span class="math inline">$f \in \mor{A}{B}$</span> let
+<span
+class="math inline"><em>η</em><sub><em>B</em></sub>(<em>f</em>) = <em>F</em>(<em>f</em>)(<em>x</em>)</span>.</p>
+<p><code class="verbatim">This is a natural transformation:</code>
+Consider the square</p>
+<p> Let <span class="math inline">$g \in \mor{A}{A}$</span>. We have
+<span class="math inline">$\eta_B \mor{A}{-}(f)(g) = \eta_B(f \circ g)
+\equiv F(f \circ g)(x) = (F(f) \circ F(g)) (x) = F(f)(F(g)(x))$</span>.
+And <span
+class="math inline"><em>F</em>(<em>f</em>)<em>η</em><sub><em>A</em></sub>(<em>g</em>) ≡ <em>F</em>(<em>f</em>)(<em>F</em>(<em>g</em>)(<em>x</em>))</span>.
+So the above square commutes. Thus we are surjective.</p>
+<p><code class="verbatim">So</code> we have a bijection.</p>
+<p></p>
+<p><code class="verbatim">Natural isomorphism:</code> We have two types
+of squares to check:</p>
+<div class="itemize">
+<p>\item <code class="verbatim">Natural in $F$:</code> We need</p>
+<p> Now let <span
+class="math inline"><em>f</em> : <em>X</em> → <em>Y</em></span> and
+<span class="math inline"><em>η</em> : <em>F</em> ⇒ <em>F</em></span>.
+Then the upper arrow on the diagram is</p>
+<p>\item <code class="verbatim">Natural in $A$:</code></p>
+</div>
+</div>
+<div class="theorem">
+<p>Let <span class="math inline">$F: \cat{C}\to \textsc{Set}$</span> be
+contravariant. Then</p>
+<div class="equation">
+<p>[,F] ≅ F(A)</p>
+</div>
+</div>
+<div class="proof-theorem">
+<p>This is basically just by dualizing everything; a contravariant
+functor <span class="math inline">$F: \cat{C} \to \textsc{Set}$</span>
+corresponds to a covariant <span class="math inline">$F^{op}:
+\cat{C}^{op} \to \textsc{Set}$</span> (this is why I usually just write
+<span class="math inline">$F: \cat{C}^{op} \to \textsc{Set}$</span> for
+contravariant functors). And <span class="math inline">$\mor{A}{-}^{op}
+= \mor{-}{A}$</span>. So dualizing everything, you get the result.</p>
+</div>
+<p><code class="verbatim">Corollary:</code> <span
+class="math display">[<em>M</em><em>o</em><em>r</em>(−,<em>A</em>),<em>M</em><em>o</em><em>r</em>(−,<em>B</em>)] ≅ <em>M</em><em>o</em><em>r</em>(<em>A</em>,<em>B</em>)</span></p>
+<div class="definition">
+<p>The functor</p>
+<div class="equation">
+<p>Y<sub>-</sub>:  ⁀ <em>C</em> → <span
+class="smallcaps">Set</span><sup> ⁀ <em>C</em></sup></p>
+</div>
+<p>is the covariant Yoneda embedding, that sends <span
+class="math inline"><em>A</em> → <em>Y</em><sub><em>A</em></sub></span>.
+And</p>
+<div class="equation">
+<p>Y<sup>-</sup>:  ⁀ <em>C</em> → <span
+class="smallcaps">Set</span><sup> ⁀ <em>C</em><sup>op</sup></sup></p>
+</div>
+</div>
+<div class="defframe">
+<p><code class="verbatim">What's the use?</code> It turns out that cats
+of the form <span class="math inline">$\textsc{Set}^{\cat{C}}$</span>
+are really nice: they have all limits and colimits. So it can be really
+nice to work in these cats. But <em>even better</em>, it turns out that
+the Yoneda embedding is actually <strong>full and faithful</strong>
+(meaning it's essentially a bijection on the morphisms — in other words,
+<span class="math inline"> ⁀ <em>C</em></span> embeds into <span
+class="math inline">$\textsc{Set}^{\cat{C}}$</span>; so it's a
+subcategory)</p>
+<p><code class="verbatim">In this way:</code> We can view <span
+class="math inline">$\textsc{Set}^{\cat{C}}$</span> and <span
+class="math inline">$\textsc{Set}^{\cat{C}^{op}}$</span> as ways of
+extending <span class="math inline"> ⁀ <em>C</em></span> so that it's
+complete and cocomplete.</p>
+</div>
+<div class="prop">
+<p>Consider <span
+class="math inline"> ⁀ <em>C</em><sup>⁀<em>D</em></sup></span>. If <span
+class="math inline"> ⁀ <em>D</em></span> has (co)limits, then so does
+<span class="math inline"> ⁀ <em>C</em><sup>⁀<em>D</em></sup></span></p>
+</div>
+<div class="proof-prop">
+<p>Let <span
+class="math inline"><em>F</em> :  ⁀ <em>J</em> →  ⁀ <em>C</em><sup>⁀<em>D</em></sup></span>.
+The limit is a functor. We want to show that</p>
+<p><span
+class="math inline">lim <em>F</em> ≅ lim <em>F</em>(−)</span></p>
+<p><span
+class="math inline"><em>Y</em><sub><em>Δ</em>(−)</sub><sup><em>F</em></sup></span></p>
+<p><span
+class="math inline"><em>Y</em><sup>lim <em>F</em></sup> ≅ <em>Y</em></span></p>
+<p>We're looking at</p>
+<p><span
+class="math inline"><em>Y</em><sup>lim <em>F</em></sup> ≅ <em>Y</em><sub>*</sub><sup><em>Y</em><sub>−</sub><sup><em>F</em></sup></sup></span></p>
+</div>
+<div class="definition">
+<p>Let <span class="math inline">$\mor{A}{-}: \cat{C} \to
+\textsc{Set}$</span>. Consider the Yoneda bijection</p>
+<div class="equation">
+<p>[, ] </p>
+</div>
+<p><code class="verbatim">Define:</code> Let <span
+class="math inline">$Y: \cat{C}^{op} \to \textsc{Set}^{\cat{C}}$</span>
+act as</p>
+<div class="equation">
+<div class="split">
+<p>Y(A) &amp;= <br />
+Y(f: B → A) &amp;= φ<sup>-1</sup>(f)</p>
+</div>
+</div>
+</div>
+<h1 id="ninja-yoneda-lemma">Ninja Yoneda Lemma</h1>
+<p>Let h<sup>A</sup> = Mor(-, A) and h<sub>A</sub> = Mor(A, -)</p>
+<p>When F is covariant <span
+class="math display">∫<sup><em>A</em></sup><em>h</em><sub><em>A</em></sub> ⊗ <em>F</em>(<em>A</em>) ≅ <em>F</em></span>
+and <span
+class="math display">∫<sub><em>A</em></sub><em>H</em><em>o</em><em>m</em>(<em>h</em><sup><em>A</em></sup>,<em>F</em>(<em>A</em>)) ≅ <em>F</em></span></p>
+<p>When F is contravariant <span
+class="math display">∫<sup><em>A</em></sup><em>h</em><sup><em>A</em></sup> ⊗ <em>F</em>(<em>A</em>) ≅ <em>F</em></span>
+and <span
+class="math display">∫<sub><em>A</em></sub><em>H</em><em>o</em><em>m</em>(<em>h</em><sub><em>A</em></sub>,<em>F</em>) ≅ <em>F</em></span></p>
+<h1 id="uses">Uses</h1>
+<h2 id="proving-isomorphisms">Proving Isomorphisms</h2>
+<p>Often instead of proving A ≅ B directly, you can just prove that
+<span
+class="math display"><em>M</em><em>o</em><em>r</em>(<em>X</em>,<em>A</em>) ≅ <em>M</em><em>o</em><em>r</em>(<em>X</em>,<em>B</em>)</span>
+for all X, naturally. In other words, you show h<sup>A</sup> ≅
+h<sup>B</sup>.</p>
+<div class="theorem">
+
+</div>
+<div class="proof-theorem">
+<p>Let h<sup>A</sup> ≅ h<sup>B</sup>, witnessed by the natural
+transformation η. Consider η<sub>A</sub>: Mor(A, A) → Mor(A, B) and
+η<sub>B</sub><sup>-1</sup>: Mor(B, B) → Mor(B, A). Now we take the
+diagram</p>
+<p>Mor(A, A) → Mor(B, A) η<sub>A</sub> ↓ ↓ η<sub>B</sub> Mor(A, B) →
+Mor(B, B)</p>
+<p>Mor(f, A) = - ˆ f, for any f: B → A. Now taking
+η<sub>B</sub><sup>-1</sup>(1<sub>B</sub>) as our f, we have <span
+class="math display"><em>η</em><sub><em>A</em></sub>(1<sub><em>A</em></sub>) ∘ <em>η</em><sub><em>B</em></sub><sup>−1</sup>(1<sub><em>B</em></sub>) = (<em>M</em><em>o</em><em>r</em>(<em>η</em><sub><em>B</em></sub><sup>−1</sup>(1<sub><em>B</em></sub>),<em>B</em>)∘<em>η</em><sub><em>A</em></sub>)[1<sub><em>A</em></sub>] = (<em>η</em><sub><em>B</em></sub>∘<em>M</em><em>o</em><em>r</em>(<em>η</em><sub><em>B</em></sub><sup>−1</sup>(1<sub><em>B</em></sub>),<em>A</em>))[1<sub><em>A</em></sub>] = <em>η</em><sub><em>B</em></sub> ∘ 1<sub><em>A</em></sub> ∘ <em>η</em><sub><em>B</em></sub><sup>−1</sup> = 1<sub><em>B</em></sub>.</span>
+Similarly, <span
+class="math display"><em>η</em><sub><em>B</em></sub><sup>−1</sup>(1<sub><em>B</em></sub>) ∘ <em>η</em><sub><em>A</em></sub>(1<sub><em>A</em></sub>) = (<em>M</em><em>o</em><em>r</em>(<em>η</em><sub><em>A</em></sub>(1<sub><em>A</em></sub>),<em>A</em>)∘<em>η</em><sub><em>B</em></sub><sup>−1</sup>)[1<sub><em>B</em></sub>] = <em>η</em><sub><em>A</em></sub><sup>−1</sup> ∘ (<em>M</em><em>o</em><em>r</em>(<em>η</em><sub><em>A</em></sub>(1<sub><em>A</em></sub>),<em>B</em>))[1<sub><em>B</em></sub>] = <em>η</em><sub><em>A</em></sub><sup>−1</sup> ∘ 1<sub><em>B</em></sub> ∘ <em>η</em><sub><em>A</em></sub>(1<sub><em>A</em></sub>) = 1<sub><em>A</em></sub>.</span>
+Thus η<sub>A</sub>(1<sub>A</sub>) and
+η<sub>B</sub><sup>-1</sup>(1<sub>B</sub>) are inverse pairs, showing
+that <span class="math display"><em>A</em> ≅ <em>B</em>.</span></p>
+</div>
+<h2 id="grothendieck-topology">Grothendieck Topology</h2>
+<p>Use the Yoneda embedding to send A → h<sup>A</sup>. Then inside of
+the presheaf category, all limits and colimits exist. You perform the
+(co)limit there, and then check whether your result is representable. If
+it is, you drop back down into the original category.</p>
 </body>
 </html>
