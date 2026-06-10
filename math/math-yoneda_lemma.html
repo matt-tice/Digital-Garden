@@ -170,6 +170,49 @@
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
+<h1 id="presheafs">Presheafs</h1>
+<p>Presheafs are basically generalizations of <strong>right
+modules</strong>. So a presheaf <span
+class="math display"><em>F</em> : 𝒞<sup><em>o</em><em>p</em></sup> → <em>S</em><em>e</em><em>t</em></span>
+can be thought of as a right representation of <span
+class="math inline">𝒞</span>, or as a right <span
+class="math inline">𝒞</span>-module structure on <span
+class="math inline"><em>S</em><em>e</em><em>t</em></span>, where the
+action of an "element" (ie a morphism) <span
+class="math inline"><em>f</em></span> is <span
+class="math display"><em>f</em> ⋅ <em>x</em> = <em>F</em>(<em>f</em>)(<em>x</em>)</span>
+for all <span
+class="math inline"><em>x</em> ∈ <em>F</em>(<em>f</em>)<sub><em>s</em></sub></span>.</p>
+<p>In the case that we take functors <span
+class="math inline"><em>B</em><em>G</em> → <em>V</em><em>e</em><em>c</em></span>,
+we get ordinary representation theory of groups, as left <span
+class="math inline"><em>k</em>[<em>G</em>]</span> -modules. If we do it
+with presheaves, we get right modules.</p>
+<p>This further implies that <a
+href="https:/Digital-Garden/math/math-topos_theory.html">topos
+theory</a> is a generalization of representation theory.</p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="yoneda-embedding">Yoneda Embedding</h2>
+<p>This is essentially the regular representation</p>
+<h1 id="density-theorem">Density Theorem</h1>
+<p>All presheafs are colimits of representable presheaves This is
+basically saying that all modules are sums and quotients of regular
+representations</p>
+<h1 id="irreducibles">Irreducibles</h1>
+<p>You can decompose presheafs, like you would ordinary representations.
+This is <strong>sheafification</strong></p>
+<h2 id="girauds-theorem">Giraud's Theorem</h2>
+<h1 id="subobject-classifier">Subobject Classifier</h1>
+<p>This is basically Schur's lemma</p>
+<p>If you have two irreducible representations <span
+class="math inline"><em>V</em>, <em>W</em></span>, then <span
+class="math display">$$
+\operatorname{Mor}(V, W) \cong
+\begin{cases}
+k, \text{if} V \cong W, \\
+0, \text{else}
+\end{cases}.
+$$</span></p>
 <h1 id="mor-functors">Mor Functors</h1>
 <p>Mor functors are very nice to work with; in some ways they're some of
 the simplest functors, so it's nice to be able to understand them.</p>
@@ -179,7 +222,7 @@ underneath the Yoneda Lemma that (to me) is more important: that natural
 transformations out of mor functors are completely determined by where
 they send the identity.</p>
 <p>There should be some generalization of this</p>
-<h1 id="definitions">Definitions</h1>
+<h1 id="definitions-1">Definitions</h1>
 <h2 id="representable-functors">Representable Functors</h2>
 <div class="definition">
 <p><code class="verbatim">My Definition:</code> A functor <span
@@ -476,6 +519,20 @@ Y(f: B → A) &amp;= φ<sup>-1</sup>(f)</p>
 </div>
 </div>
 </div>
+<h1 id="results-1">Results</h1>
+<h2 id="yoneda-embedding-is-fully-faithful">Yoneda Embedding is Fully
+Faithful</h2>
+<div class="lemma">
+
+</div>
+<div class="proof-lemma">
+<p>Consider the Yoneda embedding <span
+class="math inline"><em>h</em><sub>−</sub> : 𝒞 → <em>S</em><em>e</em><em>t</em><sup>𝒞<sup><em>o</em><em>p</em></sup></sup></span>.
+Applying the Yoneda lemma, we get <span
+class="math display">Nat (<em>h</em><sub><em>A</em></sub>,<em>h</em><sub><em>B</em></sub>) ≅ Mor (<em>A</em>,<em>B</em>).</span>
+Since the isomorphism in the category of sets is a bijection, this tells
+us that the Yoneda embedding is fully faithful.</p>
+</div>
 <h1 id="ninja-yoneda-lemma">Ninja Yoneda Lemma</h1>
 <p>Let h<sup>A</sup> = Mor(-, A) and h<sub>A</sub> = Mor(A, -)</p>
 <p>When F is covariant <span
@@ -511,6 +568,17 @@ class="math display"><em>η</em><sub><em>B</em></sub><sup>−1</sup>(1<sub><em>B
 Thus η<sub>A</sub>(1<sub>A</sub>) and
 η<sub>B</sub><sup>-1</sup>(1<sub>B</sub>) are inverse pairs, showing
 that <span class="math display"><em>A</em> ≅ <em>B</em>.</span></p>
+</div>
+<div class="theorem">
+
+</div>
+<div class="proof-theorem">
+<p>The yoneda embedding <span
+class="math inline"><em>h</em><sub>−</sub></span> is fully faithful. We
+have <span
+class="math inline"><em>h</em><sub><em>A</em></sub> ≅ <em>h</em><sub><em>B</em></sub></span>.
+Then by the fact that fully faithful functors reflect isomorphisms, we
+get that <span class="math display"><em>A</em> ≅ <em>B</em>.</span></p>
 </div>
 <h2 id="grothendieck-topology">Grothendieck Topology</h2>
 <p>Use the Yoneda embedding to send A → h<sup>A</sup>. Then inside of
