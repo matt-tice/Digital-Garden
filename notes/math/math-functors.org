@@ -1,0 +1,48 @@
+:PROPERTIES:
+:ID:       d8fd2762-9b05-4a0e-8c4e-563bb723e79b
+:END:
+#+title: functors
+#+filetags: :math:cats:
+
+* References
+
+
+* Summary
+
+* Definitions
+
+** Types of Functors
+
+*** Full
+
+$\operatorname{Mor}(X, Y) \to \operatorname{Mor}(F(X), F(Y))$  is surjective.
+
+*** Faithful
+
+$\operatorname{Mor}(X, Y) \to \operatorname{Mor}(F(X), F(Y))$  is injective.
+
+* Theorems
+
+** Fully Faithful
+
+*** FF Reflects Isomorphisms
+
+#+ATTR_LATEX: :options {FF Functors Refelct Isomorphisms} {fullyfaith-refl-isos}
+#+begin_lemma
+
+Let $F: \mathcal{C} \to \mathcal{D}$ be fully faithful. Then if $F(f)$ is an isomorphism, so is $f$.
+
+#+end_lemma
+#+begin_proof-lemma
+
+Let $F(f)$ be an isomorphism, so there's an inverse $\phi$. By fullness, there's a $g$ with $F(g) = \phi.$ Then
+\[
+1 = F(f)F(g) = F(fg).
+\]
+By faithfulness, we have $fg = 1$. Similarly, $gf = 1$ . Thus $m$ is an inverse. 
+
+
+
+#+end_proof-lemma
+
+

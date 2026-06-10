@@ -9,6 +9,54 @@
 
 * Summary
 
+* Presheafs
+
+Presheafs are basically generalizations of *right modules*. So a presheaf
+\[
+F: \mathcal{C}^{op} \to \mathit{Set}
+\]
+can be thought of as a right representation of $\mathcal{C}$, or as a right $\mathcal{C}$-module structure on $\mathit{Set}$, where the action of an "element" (ie a morphism) $f$ is 
+\[
+f \cdot x = F(f)(x)
+\]
+for all $x \in F(f)_{s}$.
+
+
+In the case that we take functors $BG \to \mathit{Vec}$, we get ordinary representation theory of groups, as left $k[G]$ -modules. If we do it with presheaves, we get right modules.
+
+This further implies that [[id:e83e3fd1-2b4b-4df7-b8b9-adab1a346022][topos theory]] is a generalization of representation theory.
+
+* Definitions
+
+** Yoneda Embedding
+
+This is essentially the regular representation
+
+* Density Theorem
+
+All presheafs are colimits of representable presheaves
+This is basically saying that all modules are sums and quotients of regular representations
+
+* Irreducibles
+
+You can decompose presheafs, like you would ordinary representations.
+This is *sheafification*
+
+** Giraud's Theorem
+
+* Subobject Classifier
+
+This is basically Schur's lemma
+
+If you have two irreducible representations $V, W$, then 
+\[
+\operatorname{Mor}(V, W) \cong 
+\begin{cases}
+k, \text{if} V \cong W, \\
+0, \text{else}
+\end{cases}.
+\]
+
 
 * Mor Functors
 :PROPERTIES:
@@ -336,6 +384,26 @@ Y(f: B \to A) &= \phi^{-1}(f)
 #+end_definition
 
 
+* Results
+
+** Yoneda Embedding is Fully Faithful
+
+#+ATTR_LATEX: :options {Yoneda embedding is Fully Faithful} {yoneda-fullyfaith}
+#+begin_lemma
+
+#+end_lemma
+#+begin_proof-lemma
+
+Consider the Yoneda embedding $h_{-}: \mathcal{C} \to 
+\mathit{Set}^{\mathcal{C}^{op}}$. Applying the Yoneda lemma, we get
+\[
+\operatorname{Nat}(h_{A}, h_{B}) \cong \operatorname{Mor}(A, B).
+\]
+Since the isomorphism in the category of sets is a bijection, this tells us that the Yoneda embedding is fully faithful.
+
+#+end_proof-lemma
+
+
 
 * Ninja Yoneda Lemma
 
@@ -398,6 +466,22 @@ A \cong B.
 
 
 #+end_proof-theorem
+
+
+#+ATTR_LATEX: :options {Theorem Name} {Theorem Tag}
+#+begin_theorem
+
+#+end_theorem
+#+begin_proof-theorem
+
+The yoneda embedding $h_{-}$ is fully faithful. We have $h_{A} \cong h_{B}$. Then by the fact that fully faithful functors reflect isomorphisms, we get that 
+\[
+A \cong B.
+\]
+
+
+#+end_proof-theorem
+
 
 
 
