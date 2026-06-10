@@ -10,3 +10,397 @@
 * Summary
 
 
+* Mor Functors
+:PROPERTIES:
+:CUSTOM_ID: mor-functors
+:END:
+
+Mor functors are very nice to work with; in some ways they're some of the simplest functors, so it's nice to be able to understand them.
+
+* •
+:PROPERTIES:
+:CUSTOM_ID: section
+:END:
+
+=Intuition:= There should be something underneath the Yoneda
+Lemma that (to me) is more important: that natural transformations out of mor functors are completely determined by where they send the identity.
+
+There should be some generalization of this
+
+* Definitions
+
+** Representable Functors
+
+#+attr_latex: :options {Representable Functor}{•}
+#+begin_definition
+
+
+=My Definition:= A functor $F: \cat{C} \to \cat{D}$ is representable, if there is some object $A$ and map $f_A: \newmoon \to F(A)$ such that if $\eta, \theta: F \Rightarrow G$ and $\eta_A f_A = \theta_A f_A$ then $\eta = \theta$
+
+So in other words, the functor is rigid in some sense; natural transformations are determined by where they send a single element of the functor
+
+This looks like enough to prove the yoneda lemma. I think that you can generalize $\newmoon$ to an object $X$, as long as you get some outer horn filling condition: for any two maps $X \to F(B)$ and $X \to G(B)$, you can make the diagram commute with a map $F(B) \to G(B)$. This holds if $X$ is the terminal object, and maybe this characterizes the terminal object; I'll have to see
+
+This also seems related to universal morphisms; so maybe that's what I'm looking for
+
+#+end_definition
+
+
+* Results
+
+
+
+#+attr_latex: :options {•}
+#+begin_theorem
+
+representable iff satisfies the Yoneda Lemma
+#+end_theorem
+#+begin_proof-theorem
+
+
+#+begin_enumerate
+
+\item \fbox{If Representable: } 
+
+
+=Surjective:= Let $\alpha: \newmoon \to G(A)$. Then we have
+
+$\newmoon \xrightarrow{x_F} F(A) \xrightarrow{F(f)} G(A)$
+
+Use the fact that it's the terminal object to get
+$\eta_A x_F = \alpha$
+
+#+begin_center
+
+#+begin_tikzcd
+
+F(A) \arrow[r, "F(f)"] \arrow[d, "\eta_A"] & F(B) \arrow[d, "\eta_B"] \\
+G(A) \arrow[r, swap, "G(f)"] & G(B)
+#+end_tikzcd
+#+end_center
+
+
+We can use the terminal object to demonstrate $\eta_B f = G(f) \alpha: \newmoon \to G(A)$
+
+
+
+\item \fbox{If Yoneda: } Say $F$ satisfies the Yoneda Lemma. Then we have for any functor, $G$, $[F, G] \cong G(A)$
+
+#+end_enumerate
+
+
+
+#+end_proof-theorem
+#+attr_latex: :options {•}{•}
+#+begin_prop
+
+
+Let $F, G: \cat{C} \to \cat{D}$
+
+They are both representable with the same object iff they're naturally isomorphic
+
+
+#+end_prop
+#+begin_proof-prop
+
+
+
+=Representable:= We have $F, G$ with the special object $A_F \cong A_G$ and special morphisms $x_F: \newmoon \to F(A_F)$ and $x_G: \newmoon \to G(A_G)$.
+
+
+$[F, G] \cong G(A_F)$ and $[G,F] \cong F(A_G)$. Since we have an iso $\alpha: A_F \to A_G$, we have that $F(\alpha): F(A_F) \to F(A_G)$ is an iso. Now the map $\newmoon \xrightarrow{x_F} F(A_F) \xrightarrow{F(\alpha)} F(A_G)$ must correspond to some natural transformation $\eta^F: F \Rightarrow G$ (since $F$ satisfies the Yoneda Lemma). Similarly, $\newmoon \xrightarrow{x_G} G(A_G) \xrightarrow{G(\alpha)^{-1}} G(A_F)$ gives us a natural transformation $\eta^G: G \Rightarrow F$
+
+
+
+
+#+end_proof-prop
+#+attr_latex: :options {•}
+#+begin_theorem
+
+
+
+Let $F: \cat{C} \to \textsc{Set}$ be representable in my definition. Then it is representable
+
+(iff?)
+#+end_theorem
+#+begin_proof-theorem
+
+In this setting the special map $f_A$ is really just an element. Let $A$ be the special object of $A$ and let $x \in F(A)$ be the special element. The Yoneda lemma will hold for $F$, so $[F, \mor{A}] = \mor{A}{A}$
+
+And $[\mor{A}{-}, F] = F(A)$
+
+Now consider the natural transformation corresponding to $x \in F(A)$. The natural transformation is $\eta_B(f) = F(f)(x)$
+
+
+\newthought{•} I think we can show that if two functors satisfy the yoneda lemma, they're naturally isomorphic
+
+
+
+
+
+
+
+#+end_proof-theorem
+=Takeaway:= This gives a different perspective to the Yoneda
+Lemma (and generalizes to categories that have a terminal object). It
+shows that representable functors are rigid, in the sense that some
+special element of them determines how every natural transformation out
+of it acts
+
+\[\mor{Y_A}{F} \cong F(A)\]
+
+\(Y_{Y_A}^F = F(A)\)
+
+\(Y_A^B \equiv \mor{A}{B}\) \(Y_A^{F(-)} \equiv \mor{A}{F(-)}\)
+
+#+attr_latex: :options {The Yoneda Lemma}{•}
+#+begin_theorem
+Let $F: \cat{C} \to \textsc{Set}$ and $A \in \obj_{\cat{C}}$. Then
+#+begin_equation
+
+\phi: [\mor{A}{-}, F] \overset{\phi}{\cong} F(A)
+#+end_equation
+is a bijection, with $\phi(\eta) = \eta_A(id_A)$.
+
+=Also:= If you consider functors $G,H: \cat{C} \times \textsc{Set}^{\cat{C}}$ with 
+#+begin_equation
+
+#+begin_split
+
+G(A, F) &= [\mor{A}{-}, F] \\
+H(A,F) &= F(A)
+#+end_split
+#+end_equation
+Then $\phi$ is a natural isomorphism in $A$ and $F$.
+
+#+end_theorem
+#+begin_proof-theorem
+
+
+=Well-defined:= Let $\eta \in [\mor{A}{-}, F]$ be a natural transformation. Then $\eta_A: \mor{A}{A} \to F(A) \in \obj_{\textsc{Set}}$. So $\phi(\eta) = \eta_A(id_A) \in F(A)$.
+
+=Injective:= Say $\phi(\eta) = \eta_A(id_A) = \phi(\theta) = \theta_A(id_A)$. Now let $B \in \obj_{\cat{C}}$. We need to show that $\eta_B = \theta_B$. Now we have
+#+begin_equation
+
+\eta_B, \theta_B: \mor{A}{B} \to F(B)
+#+end_equation
+Let $f: A \to B$. 
+
+=Natural transformation:= Because $\eta, \theta$ are natural transformations, we get the commutative square
+
+\adjustbox{center}{
+#+begin_tikzcd
+
+\mor{A}{A} \arrow[r] \arrow[d, "{\eta_A, \theta_A}"] & \mor{A}{B} \arrow[d, "{\eta_B, \theta_B}"] \\
+F(A) \arrow[r] & F(B)
+#+end_tikzcd
+}
+So if we take $f: A \to B$ then $\mor{A}{-}(f): \mor{A}{A} \to \mor{A}{B}$. And thus from the above commutative square, we get $\eta_B \mor{A}{-}(f) =  F(f)\eta_A$ and $\theta_B \mor{A}{-}(f) =  F(f) \theta_A$. Now apply these maps to $id_A$. We have $\eta_B \mor{A}{-}(f)(id_A) = \eta_B(f \circ id_A) = \eta_B(f) =  F(f)\eta_A(id_A) = F(f) \theta_A(id_A) = \theta_B \mor{A}{-}(f)(id_A) = \theta_B(f \circ id_A) = \theta_B(f)$. So
+#+begin_equation
+
+\eta_B(f) = \theta_B(f)
+#+end_equation
+for all $f: A \to B$. So $\eta_B = \theta_B$. And since this hold for all $B \in \obj_{\cat{C}}$ we have $\eta = \theta$. So we are injective.
+
+=Surjective:= Now let $x \in F(A)$. Define a natural transformation by $\eta_A(id_A) = x$ and for any $f \in \mor{A}{B}$ let $\eta_B(f) = F(f)(x)$.
+
+=This is a natural transformation:= Consider the square
+
+\adjustbox{center}{
+#+begin_tikzcd
+
+\mor{A}{A} \arrow[r] \arrow[d, "\eta_A"] & \mor{A}{B} \arrow[d, "\eta_B"] \\
+F(A) \arrow[r, "F(f)"] & F(B)
+#+end_tikzcd
+}
+Let $g \in \mor{A}{A}$. We have $\eta_B \mor{A}{-}(f)(g) = \eta_B(f \circ g) \equiv F(f \circ g)(x) = (F(f) \circ F(g)) (x) = F(f)(F(g)(x))$. And $F(f) \eta_A(g) \equiv F(f) (F(g)(x))$. So the above square commutes. Thus we are surjective.
+
+=So= we have a bijection.
+
+\dotfill
+
+=Natural isomorphism:= We have two types of squares to check:
+
+#+begin_itemize
+
+
+\item =Natural in $F$:= We need
+
+\adjustbox{center}{
+#+begin_tikzcd
+
+{[\mor{X}{-}, F]} \arrow[r] \arrow[d, "\phi_A"] & {[\mor{Y}{-}, F]} \arrow[d, "\phi_B"] \\
+F(X) \arrow[r] & F(Y)
+#+end_tikzcd
+}
+Now let $f: X \to Y$ and $\eta: F \Rightarrow F$. Then the upper arrow on the diagram is 
+
+
+\item =Natural in $A$:=
+
+#+end_itemize
+
+
+
+#+end_proof-theorem
+#+attr_latex: :options {Contravariant Yoneda Lemma}{•}
+#+begin_theorem
+Let $F: \cat{C}\to \textsc{Set}$ be contravariant. Then
+#+begin_equation
+
+[\mor{-}{A},F] \cong F(A)
+#+end_equation
+#+end_theorem
+#+begin_proof-theorem
+
+This is basically just by dualizing everything; a contravariant functor $F: \cat{C} \to \textsc{Set}$ corresponds to a covariant $F^{op}: \cat{C}^{op} \to \textsc{Set}$ (this is why I usually just write $F: \cat{C}^{op} \to \textsc{Set}$ for contravariant functors). And $\mor{A}{-}^{op} = \mor{-}{A}$. So dualizing everything, you get the result.
+
+#+end_proof-theorem
+
+=Corollary:= 
+\[
+[Mor(-, A), Mor(-, B)] \cong Mor(A, B)
+\]
+
+
+
+
+
+
+#+attr_latex: :options {Yoneda Embedding}{•}
+#+begin_definition
+The functor
+#+begin_equation
+
+Y_{-}: \cat{C} \to \textsc{Set}^{\cat{C}}
+#+end_equation
+is the covariant Yoneda embedding, that sends $A \to Y_A$. And 
+#+begin_equation
+
+Y^{-}: \cat{C} \to \textsc{Set}^{\cat{C}^{op}}
+#+end_equation
+
+#+end_definition
+#+begin_defframe
+
+
+
+=What's the use?= It turns out that cats of the form $\textsc{Set}^{\cat{C}}$ are really nice: they have all limits and colimits. So it can be really nice to work in these cats. But \textit{even better}, it turns out that the Yoneda embedding is actually \textbf{full and faithful} (meaning it's essentially a bijection on the morphisms --- in other words, $\cat{C}$ embeds into $\textsc{Set}^{\cat{C}}$; so it's a subcategory)
+
+=In this way:= We can view $\textsc{Set}^{\cat{C}}$ and $\textsc{Set}^{\cat{C}^{op}}$ as ways of extending $\cat{C}$ so that it's complete and cocomplete.
+
+
+
+#+end_defframe
+#+attr_latex: :options {•}{•}
+#+begin_prop
+Consider $\cat{C}^{\cat{D}}$. If $\cat{D}$ has (co)limits, then so does $\cat{C}^{\cat{D}}$
+#+end_prop
+#+begin_proof-prop
+
+
+Let $F: \cat{J} \to \cat{C}^{\cat{D}}$. The limit is a functor. We want to show that 
+
+$\lim F \cong \lim F(-)$
+
+
+$Y_{\Delta(-)}^F$
+
+$Y^{\lim F} \cong Y$
+
+
+We're looking at
+
+$Y^{\lim F} \cong Y_{*}^{Y_{-}^F}$
+
+
+#+end_proof-prop
+#+attr_latex: :options {Yoneda Embedding}{•}
+#+begin_definition
+Let $\mor{A}{-}: \cat{C} \to \textsc{Set}$. Consider the Yoneda bijection
+#+begin_equation
+
+[\mor{A}{-}, \mor{B}{-}] \overset{\phi}{\cong} \mor{B}{A}
+#+end_equation
+
+=Define:= Let $Y: \cat{C}^{op} \to \textsc{Set}^{\cat{C}}$ act as
+#+begin_equation
+
+#+begin_split
+
+Y(A) &= \mor{A}{-}\\
+Y(f: B \to A) &= \phi^{-1}(f)
+#+end_split
+#+end_equation
+
+#+end_definition
+
+
+
+* Ninja Yoneda Lemma
+
+Let h^A = Mor(-, A) and h_A = Mor(A, -)
+
+When F is covariant
+\[
+\int^{A} h_{A} \otimes F(A) \cong F
+\]
+and 
+\[
+\int_{A} Hom(h^{A}, F(A)) \cong F
+\]
+
+
+
+When F is contravariant
+\[
+\int^{A} h^{A} \otimes F(A) \cong F
+\]
+and
+\[
+\int_{A} Hom(h_{A}, F) \cong F
+\]
+
+* Uses
+
+** Proving Isomorphisms
+
+Often instead of proving A \cong B directly, you can just prove that 
+\[
+Mor(X, A) \cong Mor(X, B)
+\]
+for all X, naturally. In other words, you show h^A \cong h^B.
+
+#+ATTR_LATEX: :options {Isomorphisms from Yoneda} {}
+#+begin_theorem
+
+#+end_theorem
+#+begin_proof-theorem
+
+Let h^A \cong h^B, witnessed by the natural transformation \eta. Consider \eta_A: Mor(A, A) \to Mor(A, B) and \eta_B^{-1}: Mor(B, B) \to Mor(B, A). Now we take the diagram
+
+Mor(A, A) \to Mor(B, A)
+\eta_A \downarrow                          \downarrow \eta_B
+Mor(A, B) \to Mor(B, B)
+
+Mor(f, A) = - \circ f, for any f: B \to A. Now taking \eta_B^-1(1_B) as our f, we have
+\[
+\eta_{A}(1_{A}) \circ \eta_{B}^{-1}(1_{B}) = (Mor(\eta_{B}^{-1}(1_{B}), B) \circ\eta_{A})[1_{A}] = (\eta_{B} \circ Mor(\eta_{B}^{-1}(1_{B}), A))[1_{A}] = \eta_{B} \circ 1_{A} \circ \eta_{B}^{-1} = 1_{B}.
+\]
+Similarly, 
+\[
+\eta_{B}^{-1} (1_{B})\circ \eta_{A}(1_{A}) = (Mor(\eta_{A}(1_{A}), A) \circ \eta_{B}^{-1})[1_{B}] = \eta_{A}^{-1} \circ (Mor(\eta_{A}(1_{A}), B))[1_{B}] = \eta_{A}^{-1} \circ 1_{B} \circ \eta_{A}(1_{A}) = 1_{A}.
+\]
+Thus \eta_A(1_A) and \eta_B^{-1}(1_B) are inverse pairs, showing that
+\[
+A \cong B.
+\]
+
+
+#+end_proof-theorem
+
+
+
+** Grothendieck Topology
+
+Use the Yoneda embedding to send A \to h^A. Then inside of the presheaf category, all limits and colimits exist. You perform the (co)limit there, and then check whether your result is representable. If it is, you drop back down into the original category.
