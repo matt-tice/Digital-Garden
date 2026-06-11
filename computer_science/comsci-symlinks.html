@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>adjoints</title>
+  <title>symlinks</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,28 +166,36 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">adjoints</h1>
+<h1 class="title">symlinks</h1>
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
-<p>L ⊣ R means that L is the left adjoint and R is the right adjoint</p>
-<h1 id="colimits">(Co)Limits</h1>
-<ol>
-<li>Take the appropriate diagram</li>
-<li>Set up the constant functor</li>
-</ol>
-<h2 id="coproducts">(Co)products</h2>
-<p><span class="math inline"> ⊔  ⊣ <em>Δ</em> ⊣ ×</span></p>
-<h2 id="coequalizers">(Co)equalizers</h2>
-<p>The diagram is a pair of parallel morphisms</p>
-<p>We then take the functor category C<sup>I</sup></p>
-<p>The constant functor <span
-class="math inline"><em>Δ</em> : <em>C</em> → <em>C</em><sup><em>I</em></sup></span>
-by <span
-class="math inline"><em>A</em> → <em>A</em>⇉<sup><em>i</em><em>d</em></sup><em>A</em></span></p>
-<p><span class="math inline">$\textsc{Coeq} \dashv \Delta \dashv
-\textsc{Eq}$</span></p>
-<h2 id="pullbacks-and-pushouts">Pullbacks and Pushouts</h2>
-<p>Your diagram is a span (or cospan)</p>
+<p>It's a kind of shortcut</p>
+<ul>
+<li>but distinct from Windows' shortcuts</li>
+</ul>
+<p>Windows shortcuts are <code class="verbatim">.lnk</code> files</p>
+<ul>
+<li>they operate at the <strong>application level</strong></li>
+<li>it's a file that tells the program opening it to open a different
+file</li>
+<li>because the shortcut is itself a file, in order for it to be used,
+the tool you're using has to be able to open it</li>
+<li>if your app isn't configured correctly, it will just read the file
+as binary data, rather than doing the intended thing of opening another
+file</li>
+</ul>
+<p>Linux symlinks operate at the <strong>filesystem level</strong></p>
+<ul>
+<li>when you create a symlink, the original file is <em>deleted and
+replaced</em> with a pointer to the target file</li>
+<li>unlike in the case of Windows, <em>there is only one file</em> (the
+target file)</li>
+</ul>
+<h1 id="security">Security</h1>
+<p>Never symlink files to a root daemon that executes code</p>
+<ul>
+<li>that gives the user control of root-level code execution</li>
+</ul>
 </body>
 </html>
