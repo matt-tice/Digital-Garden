@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       86144a3b-d921-4181-a442-949c59b4a858
+:END:
+#+title: symlinks
+#+filetags: :comsci:linux:
+
+* References
+
+* Summary
+
+It's a kind of shortcut
+- but distinct from Windows' shortcuts
+
+Windows shortcuts are =.lnk= files
+- they operate at the *application level*
+- it's a file that tells the program opening it to open a different file
+- because the shortcut is itself a file, in order for it to be used, the tool you're using has to be able to open it
+- if your app isn't configured correctly, it will just read the file as binary data, rather than doing the intended thing of opening another file
+
+Linux symlinks operate at the *filesystem level*
+- when you create a symlink, the original file is /deleted and replaced/ with a pointer to the target file
+- unlike in the case of Windows, /there is only one file/ (the target file)
+
+* Security
+
+Never symlink files to a root daemon that executes code
+- that gives the user control of root-level code execution

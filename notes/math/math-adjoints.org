@@ -18,7 +18,7 @@ L \dashv R means that L is the left adjoint and R is the right adjoint
 
 ** (Co)products
 
-\sqcup \dashv \Delta \dashv \times
+$\sqcup \dashv \Delta \dashv \times$
 
 
 ** (Co)equalizers
@@ -28,10 +28,11 @@ The diagram is a pair of parallel morphisms
 We then take the functor category C^I
 
 The constant functor 
-\Delta: C \to C^I by
-A \to (A \xrightarrow{id}) A)
+$\Delta: C \to C^I$ by
+$A \to A \rightrightarrows^{id} A$
 
-Coeq \dashv \Delta \dashv Eq
+
+$\textsc{Coeq} \dashv \Delta \dashv \textsc{Eq}$
 
 ** Pullbacks and Pushouts
 
