@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       4c86ab15-dd87-47b3-a368-578a7d45ee10
+:END:
+#+title: finitely presented groups
+#+filetags: :math:groups:
+
+* References
+
+* Summary
+
+* Results
+
+** Novikov-Boone Theorem
+
+#+ATTR_LATEX: :options {The Word Problem is Unsolvable} {word-problem-unsolvable}
+#+begin_theorem
+The word problem on finitely presented groups is unsolvable.
+#+end_theorem
+#+begin_proof-theorem
+
+=Intuition:= We show that group presentations are enough to create a Turing machine. 
+
+=States:= 
+
+=Alphabet:= 
+
+=Transition function:=  
+
+#+end_proof-theorem
+
+** Metabelian Groups
+
+There are finitely presented solvable groups of derived length 3 with an unsolvable word problem
+
+It's unknown whether this can be reduced to derive[2026-06-06 Sat] At the hotel, briefly met
+       - Caques Hurtubise (Professor McGill)
+d length 2 (metabelian groups).
+
+** Presentation Size
+
+The smallest presentations so far for undecidability have been
+- 5 generators, 12 relations (Borisov 1968)
+- 4 generators, 7 relations (Collins 1986)
+- 2 generators, 12 relations (Borisov 1999)

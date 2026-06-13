@@ -1,0 +1,126 @@
+:PROPERTIES:
+:ID:       b3d59dfb-058e-450c-8973-928fa92c13ac
+:END:
+#+title: fundamental group
+#+filetags: :math:homotopy:algtop:
+
+* References
+
+* Summary
+
+* Results
+
+** Seifert-van Kampen Theorem
+
+** You can make any finitely presented group
+
+#+ATTR_LATEX: :options {Every Finitely Presented Group is a Fundamental Group} {finpres-is-fund}
+#+begin_theorem
+Let $G$  be a finitely presented group. Then there is a 4-dimensional manifold $M$ such that 
+\[
+G \cong \pi_{1}(M).
+\]
+
+#+end_theorem
+#+begin_proof-theorem
+Let $G = \gen{x_{1}, \ldots, x_{m} \mid r_{1}, \ldots, r_{n}}$ . Construct a CW complex as follows:
+
+1. Take a single 0-cell, $e_{0}$.
+2. For each generator, stick in a loop $\ell(x_{i})$. This is enough to get the free group $F_{n}$.
+3. Each relation is a word in $G$, and we take a 
+
+
+The problem is that the base point is a singularity. We fix this by thickening everything
+
+#+end_proof-theorem
+
+
+=Implications:= Because the word problem is unsolvable for finitely presented groups, this shows that fundamental groups can't be used to algorithmically classify 4-manifolds.
+
+=Higher groups:= 
+
+*** Gompf's Theorem
+
+Every finitely presented group is the fundamental group of a compact, symplectic 4-manifold
+
+*** Higher Dimensions
+
+The result carries into higher dimensions: you can find a manifold of any dimension $\geq 4$ with a given fundamental group.
+
+You basically look at $M_{4} \times D^{k}$ where $D^{k}$ is a k-dimensional disk. The fundamental group is a monoidal functor over the product, so this preserves the fundamental group.
+
+But this is a manifold /with boundary/. To remove the boundary, you attach handles.
+
+** Surgery Theory
+
+In dimension $\geq 5$ you can show that manifolds with a fixed fundamental group $G$ are classifyable. So for example, you can classify simply-connected manifolds in dimension $\geq 5$.
+
+** Markov (1958)
+
+/On Insolubility of the Homeomorphy Problem/
+
+This is one of my favourite mathematical results of all time.
+
+Classifying compact manifolds up to homeomorphism is undecidable in dimension $\geq 4$.
+
+First, Markov gives an algorithm that takes any group presentation and gives you a corresponding manifold. Your group is trivial if and only if the manifold you get is a *homotopy 4-sphere* (it has the same fundamental group and homology groups as $S^{4}$ ). If your space is homeomorphic to $S^{4}$ then you have a homotopy 4-sphere, and thus $G$ is trivial. But the rest of the proof actually relies on the other direction: if you start with the trivial group, is the space you get from the algorithm actually homeomorphic to $S^{4}$, or just a homotopy 4-sphere? 
+
+Markov then assumes the /topological/ Poincare conjecture holds in dimension 4 (which wasn't proved at the time): that every homotopy 4-sphere is /homeomorphic/ to $S^{4}.$ 
+- it was proven in 1982 by Michael Freedman
+
+Assuming that's true (which it turned out to be), if there was some invariant that could distinguish every manifold from $S^{4}$, that would solve the word problem as follows:
+- take a presentation of your group
+- compute the manifold
+- you get $S^{4}$ if and only if your group is trivial
+
+ 
+*** Smooth Case
+
+If you do everything smoothly, the trivial group gives you a smooth manifold that is homeomorphic to $S^{4}$. But the *Smooth 4D Poincare Conjecture* (whether this implies that manifold is diffeomorphic to $S^{4}$) is still unsolved.
+- if this conjecture isn't true, there are *exotic smooth spheres* 
+
+** Kunneth Theorem
+
+** Homotopy Groups are Representations of $\pi_{1}$ 
+
+Every higher homotopy group is a $\mathbb{Z}\pi_{1$}-module
+
+** Homotopy Groups are $\#P$-hard 
+
+This is essentially due to the Whitehead products
+
+** Freedman's Intersection Form
+
+4-dimensional simply-connected manifolds are determined by *Freedman's intersection form* 
+
+** Homology is Decidable on CW Complexes
+
+Homology is decidable both on the set of compact manifolds, and on finite CW complexes. Homotopy is undecidable on both of these.
+
+We can compute the *Smith normal form* in polynomial time
+
+=Consequently:= There's no algorithm for determining whether a finite 4d CW complex has $\pi_{2} \cong 0$. But there is one to check if $H_{2} \cong 0.$ 
+
+** Homotopy is Decidable on Simply Connected 4-Manifolds
+
+This is *rational homotopy theory*.
+
+Since $\pi_{1} \cong 0$, from Hurewicz's theorem we get that $\pi_{2} \cong H_{2}.$ This is computable.
+
+We then construct the higher homotopy groups with the *Postnikov Tower*: 
+
+** Brown's Computability Theorem
+
+For any simply connected finite CW complex, there is a primitive recursive algorithm for $\pi_{n}.$ 
+
+However the complexity of the algorithm scales exponentially with $n$ 
+
+** Hurewicz's Theorem
+
+** Riemann Surfaces
+
+Let $\Sigma_{g}$ be a Riemann surface of genus $g$. Then 
+\[
+\pi_{1}(\Sigma_{g}) = \gen{a_{1}, b_{1}, \ldots, a_{g}, b_{g} \mid [a_{1},b_{1}]\ldots [a_{g}, b_{g}] = 1}
+\]
+  

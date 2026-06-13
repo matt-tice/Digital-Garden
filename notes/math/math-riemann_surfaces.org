@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       e3c38d3d-8679-4b74-ada9-7e57690a624a
+:END:
+#+title: riemann surfaces
+#+filetags: :math:geometry:
+
+* References
+
+* Summary
+
+* Results
+
+** Uniformization Theorem
+
+Every compact Riemann surface is completely classified by its genus.

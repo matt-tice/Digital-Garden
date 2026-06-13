@@ -1,0 +1,90 @@
+:PROPERTIES:
+:ID:       1da43ebe-1c1e-44fb-9143-e147eb489c70
+:END:
+#+title: n-cubes
+#+filetags: :math:geometry:
+
+* References
+
+* Summary
+
+\[
+I^{n} = [0,1]^{n} = \{ \bar{x} \mid 0 \leq x_{i} \leq 1\}
+\]
+
+=Vertices:= $2^{n}$ (each coordinate is zero or one) 
+
+=Faces:=  $2n$ (fix one coord as zero or one)
+
+* Results
+
+** Homeomorphic to $S^{n}$ 
+
+#+ATTR_LATEX: :options {$\partial I^n \cong S^{n-1}$ } {ncube-homeo-nsph}
+#+begin_proposition
+
+#+end_proposition
+#+begin_proof-prop
+
+Center the cube around the origin: $I^{n} = [-1,1]^{n}$. Now we map $\partial I^{n} \to S^{n-1}$  by
+\[
+\phi(x) = \dfrac{x}{\norm{x}_{2}^{2}}
+\]
+and map $\psi: S^{n-1} \to \partial I^{n}$ by
+\[
+\psi(x) = \dfrac{x}{\norm{x}_{\infty}}
+\]
+
+
+#+end_proof-prop
+
+=Analysis:= This is basically the proof of the equivalence of the 2 and infinity norms
+
+=Combinatorial topology:= Since these spaces are homeomorphic, we can use the combinatorics of cubes to study spheres.
+
+* Spaces
+
+** Lens Space
+
+Take $I^{3}$ and glue two of the face pairs normally, but put a twist on the last pair
+
+** Poincare Homology Sphere
+
+Take a d12 and glue opposite faces with a $\pi/5$ twist
+
+* Hopf Fibration
+
+Describes $S^{3}$ using $S^{2}$ and $S^1$. We can do the same thing for cubes, to visualize this easier (since cubes and spheres are homeomorphic)
+
+\[
+\partial I^{4} \to \partial I^{3}
+\]
+
+
+
+* Gluck Twist
+
+Involves cutting a tubular neighborhood $S^2 \times D^2$ out of $S^4$.
+
+Our tubular neighbourhood becomes $\partial I^{3} \times I^{2}$. We travel along the boundary of the square part: $\partial I^{3} \times \partial I^{2}$. Now you twist $\partial I^{3}$  as you travel along the square. You basically do a complete rotation around the 3-cube, as you traverse the 2-cube
+
+=Top:= Leave the 3-cube alone (this isn't really necessary; it makes some of the math easier, but you could just do a 90 degree rotation at every step instead)
+
+=Right:= Rotate the cube 90 degrees (front to left to back to right to front)
+
+=Bottom:= Do another 90 degrees in the same direction
+
+=Left:=  Do the final 180 degrees in the same direction
+
+But now look at what happens to the interior part: $\partial I^{3} \times \operatorname{int}I^{2}$. The interior part of the square must be moving similar to how the boundary is, and so are dragging the cube behind them. Close to the edge of the square, the cube does almost a full rotation, and near the center, it does barely anything. 
+- you can think of it like this: if you take a line out from the center of the square to the edge, the motion of the cube has to be continuous.
+- take two different points on the edge and draw lines into the center. Without loss of generality, say that one of the lines goes to the top of the square (where the cube hasn't moved yet)
+
+# Importantly, when we rotate the cube, we're actually leaving the top and bottom faces virtually unchanged. The points on them just move in little concentric squares. Meaning that the top and bottom of the cube are always /entirely filled/. They form a gateway that the knot travels through (this is how it gets twisted up)
+
+# But importantly, since we're only rotating around the middle of the cube, the top and bottom faces can be rotated continuously in such a way that they stay inside the same face (moving in little concentric squares, basically). This gives you a /smooth gateway/, that you can use to reattach the twisted piece, giving you an exotic smooth sphere.
+
+
+=Dimension 3:= Say we tried to do this in dimension 3. We'd end up with $\partial I^{2} \times \partial I^{2}$. We could try the same technique. But when we look at the interior of the second factor is when things go wrong. 
+
+=Dimension 5:= We have $\partial I^{4} \times \partial I^{2}$. In this case, there are multiple smooth gateways. You can basically use these passages to unknot the twist, so you don't get an exotic sphere.
