@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>fundamental group</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">fundamental group</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<h1 id="results">Results</h1>
+<h2 id="seifert-van-kampen-theorem">Seifert-van Kampen Theorem</h2>
+<h2 id="you-can-make-any-finitely-presented-group">You can make any
+finitely presented group</h2>
+<div class="theorem">
+<p>Let <span class="math inline"><em>G</em></span> be a finitely
+presented group. Then there is a 4-dimensional manifold <span
+class="math inline"><em>M</em></span> such that <span
+class="math display"><em>G</em> ≅ <em>π</em><sub>1</sub>(<em>M</em>).</span></p>
+</div>
+<div class="proof-theorem">
+<p>Let <span class="math inline">$G = \gen{x_{1}, \ldots, x_{m} \mid
+r_{1}, \ldots, r_{n}}$</span> . Construct a CW complex as follows:</p>
+<ol>
+<li>Take a single 0-cell, <span
+class="math inline"><em>e</em><sub>0</sub></span>.</li>
+<li>For each generator, stick in a loop <span
+class="math inline">ℓ(<em>x</em><sub><em>i</em></sub>)</span>. This is
+enough to get the free group <span
+class="math inline"><em>F</em><sub><em>n</em></sub></span>.</li>
+<li>Each relation is a word in <span
+class="math inline"><em>G</em></span>, and we take a</li>
+</ol>
+<p>The problem is that the base point is a singularity. We fix this by
+thickening everything</p>
+</div>
+<p><code class="verbatim">Implications:</code> Because the word problem
+is unsolvable for finitely presented groups, this shows that fundamental
+groups can't be used to algorithmically classify 4-manifolds.</p>
+<p><code class="verbatim">Higher groups:</code></p>
+<h3 id="gompfs-theorem">Gompf's Theorem</h3>
+<p>Every finitely presented group is the fundamental group of a compact,
+symplectic 4-manifold</p>
+<h3 id="higher-dimensions">Higher Dimensions</h3>
+<p>The result carries into higher dimensions: you can find a manifold of
+any dimension <span class="math inline"> ≥ 4</span> with a given
+fundamental group.</p>
+<p>You basically look at <span
+class="math inline"><em>M</em><sub>4</sub> × <em>D</em><sup><em>k</em></sup></span>
+where <span class="math inline"><em>D</em><sup><em>k</em></sup></span>
+is a k-dimensional disk. The fundamental group is a monoidal functor
+over the product, so this preserves the fundamental group.</p>
+<p>But this is a manifold <em>with boundary</em>. To remove the
+boundary, you attach handles.</p>
+<h2 id="surgery-theory">Surgery Theory</h2>
+<p>In dimension <span class="math inline"> ≥ 5</span> you can show that
+manifolds with a fixed fundamental group <span
+class="math inline"><em>G</em></span> are classifyable. So for example,
+you can classify simply-connected manifolds in dimension <span
+class="math inline"> ≥ 5</span>.</p>
+<h2 id="markov-1958">Markov (1958)</h2>
+<p><em>On Insolubility of the Homeomorphy Problem</em></p>
+<p>This is one of my favourite mathematical results of all time.</p>
+<p>Classifying compact manifolds up to homeomorphism is undecidable in
+dimension <span class="math inline"> ≥ 4</span>.</p>
+<p>First, Markov gives an algorithm that takes any group presentation
+and gives you a corresponding manifold. Your group is trivial if and
+only if the manifold you get is a <strong>homotopy 4-sphere</strong> (it
+has the same fundamental group and homology groups as <span
+class="math inline"><em>S</em><sup>4</sup></span> ). If your space is
+homeomorphic to <span class="math inline"><em>S</em><sup>4</sup></span>
+then you have a homotopy 4-sphere, and thus <span
+class="math inline"><em>G</em></span> is trivial. But the rest of the
+proof actually relies on the other direction: if you start with the
+trivial group, is the space you get from the algorithm actually
+homeomorphic to <span class="math inline"><em>S</em><sup>4</sup></span>,
+or just a homotopy 4-sphere?</p>
+<p>Markov then assumes the <em>topological</em> Poincare conjecture
+holds in dimension 4 (which wasn't proved at the time): that every
+homotopy 4-sphere is <em>homeomorphic</em> to $S<sup>4</sup>.$</p>
+<ul>
+<li>it was proven in 1982 by Michael Freedman</li>
+</ul>
+<p>Assuming that's true (which it turned out to be), if there was some
+invariant that could distinguish every manifold from <span
+class="math inline"><em>S</em><sup>4</sup></span>, that would solve the
+word problem as follows:</p>
+<ul>
+<li>take a presentation of your group</li>
+<li>compute the manifold</li>
+<li>you get <span class="math inline"><em>S</em><sup>4</sup></span> if
+and only if your group is trivial</li>
+</ul>
+<h3 id="smooth-case">Smooth Case</h3>
+<p>If you do everything smoothly, the trivial group gives you a smooth
+manifold that is homeomorphic to <span
+class="math inline"><em>S</em><sup>4</sup></span>. But the
+<strong>Smooth 4D Poincare Conjecture</strong> (whether this implies
+that manifold is diffeomorphic to <span
+class="math inline"><em>S</em><sup>4</sup></span>) is still
+unsolved.</p>
+<ul>
+<li>if this conjecture isn't true, there are <strong>exotic smooth
+spheres</strong></li>
+</ul>
+<h2 id="kunneth-theorem">Kunneth Theorem</h2>
+<h2 id="homotopy-groups-are-representations-of-pi_1">Homotopy Groups are
+Representations of <span
+class="math inline"><em>π</em><sub>1</sub></span></h2>
+<p>Every higher homotopy group is a $ℤπ<sub>1$</sub>-module</p>
+<h2 id="homotopy-groups-are-p-hard">Homotopy Groups are <span
+class="math inline">#<em>P</em></span>-hard</h2>
+<p>This is essentially due to the Whitehead products</p>
+<h2 id="freedmans-intersection-form">Freedman's Intersection Form</h2>
+<p>4-dimensional simply-connected manifolds are determined by
+<strong>Freedman's intersection form</strong></p>
+<h2 id="homology-is-decidable-on-cw-complexes">Homology is Decidable on
+CW Complexes</h2>
+<p>Homology is decidable both on the set of compact manifolds, and on
+finite CW complexes. Homotopy is undecidable on both of these.</p>
+<p>We can compute the <strong>Smith normal form</strong> in polynomial
+time</p>
+<p><code class="verbatim">Consequently:</code> There's no algorithm for
+determining whether a finite 4d CW complex has <span
+class="math inline"><em>π</em><sub>2</sub> ≅ 0</span>. But there is one
+to check if $H<sub>2</sub>  ≅ 0.$</p>
+<h2 id="homotopy-is-decidable-on-simply-connected-4-manifolds">Homotopy
+is Decidable on Simply Connected 4-Manifolds</h2>
+<p>This is <strong>rational homotopy theory</strong>.</p>
+<p>Since <span class="math inline"><em>π</em><sub>1</sub> ≅ 0</span>,
+from Hurewicz's theorem we get that $π<sub>2</sub> ≅ H<sub>2</sub>.$
+This is computable.</p>
+<p>We then construct the higher homotopy groups with the
+<strong>Postnikov Tower</strong>:</p>
+<h2 id="browns-computability-theorem">Brown's Computability Theorem</h2>
+<p>For any simply connected finite CW complex, there is a primitive
+recursive algorithm for $π<sub>n</sub>.$</p>
+<p>However the complexity of the algorithm scales exponentially with
+<span class="math inline"><em>n</em></span></p>
+<h2 id="hurewiczs-theorem">Hurewicz's Theorem</h2>
+<h2 id="riemann-surfaces">Riemann Surfaces</h2>
+<p>Let <span class="math inline"><em>Σ</em><sub><em>g</em></sub></span>
+be a Riemann surface of genus <span
+class="math inline"><em>g</em></span>. Then <span
+class="math display">$$
+\pi_{1}(\Sigma_{g}) = \gen{a_{1}, b_{1}, \ldots, a_{g}, b_{g} \mid
+[a_{1},b_{1}]\ldots [a_{g}, b_{g}] = 1}
+$$</span></p>
+</body>
+</html>
