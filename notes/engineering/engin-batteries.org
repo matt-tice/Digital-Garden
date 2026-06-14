@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       edbe6554-05c7-44b0-8d02-8ab5f5688ce7
+:END:
+#+title: batteries
+#+filetags: :engineering:comsci:
+
+* References
+
+* Summary
+
+* Lithium-ion
+
+They don't discharge linearly
+When at 100%, it sits in a high-voltage saturation phase
+
+As it begins to lose power, the terminal voltage drops very slowly
