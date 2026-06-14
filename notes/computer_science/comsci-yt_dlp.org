@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       96df2cf1-770a-4a26-9ac6-510545ea72c3
+:END:
+#+title: yt-dlp
+#+filetags: :comsci:package:youtube:
+
+* References
+
+* Summary
+
+You give it a youtube url and it talks directly to the backend servers, pulling the raw media stream link
+
+* Ads
+
+Youtube injects video ads into their web client. By going directly to the backend data, you avoid them.
+
+

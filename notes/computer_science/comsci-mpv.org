@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       eabd53c6-4a97-4933-8bb2-23b17b452a0d
+:END:
+#+title: mpv
+#+filetags: :comsci:package:media:
+
+* References
+
+* Summary
+
+* Battery Life
+
+mpv avoids having to process DOM scripts, trackers, CSS, etc. This actually saves battery life and cpu usage
+
+* yt-dlp
+
+mpv integrates neatly with yt-dlp out of the box. You can pass a url to mpv, which it will pass to yt-dlp, who resolves the web stream and then passes it back to mpv, who pipes it to your media playback engine.
+
+As a consequence, mpv ends up streaming the file to you, rather than waiting for it all to download

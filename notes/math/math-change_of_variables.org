@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       5248c46f-41e5-4f4b-8e47-e716137c577f
+:END:
+#+title: change of variables
+#+filetags: :math:calculus:funcanaly:
+
+* References
+
+* Summary
+
+* Radon-Nikodym Derivative

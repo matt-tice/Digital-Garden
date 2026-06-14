@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       d1a233fc-4ab4-4a44-b71a-7a146da41e57
+:END:
+#+title: sway
+#+filetags: :comsci:linux:
+
+* References
+
+* Summary
+
+* Structure
+
+** Workspaces
+
+The main containers
+
+** Containers
+
+Hold windows or nest sub-containers
+
+Every container is either vertical or horizontal
+
+** Windows
+
+The actual application windows

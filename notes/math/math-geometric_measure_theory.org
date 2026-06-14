@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       5141ba90-8e94-48ac-a9fa-9bc99614668b
+:END:
+#+title: geometric measure theory
+#+filetags: :math:measures:
+
+* References
+
+* Summary
+
+* Currents
+
+We view measures as 0-chains in a chain complex. 
+- really they're distributions
+
+Higher-dimensional chains are called *currents*.
+
+Let $\mathcal{D}^{k}(M)$ be the smooth, compactly supported $k$-forms on $M$. A *k-current* is a continuous linear functional
+\[
+\phi: \mathcal{D}^{k}(M) \to
+\]
+ 
+The space of currents is denoted with a subscript: $\mathcal{D}_{k}$ 
+
+
+\[
+\partial \phi(_{}\omega) = \phi(d \omega)
+\]
+
+Given a measure $\mu$, we define an $n$-current for each measurable set by
+\[
+\phi_{E}(\omega) = \int_{E} \omega
+\]
+
+Null sets are then the zero elements of the chain complex  
+
+* Singularities
+
+Currents allow you to handle singularities: having a singularity corresponds to the measure being a higher-order current

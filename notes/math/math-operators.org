@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       1c00eb55-101f-4f11-b54d-10e27da4a9f2
+:END:
+#+title: operators
+#+filetags: :math:funcanly:
+
+* References
+
+* Summary
+
+* Self-Adjoint
+
+** Spectral Theorem
+
+*** Projection valued measures

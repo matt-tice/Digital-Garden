@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       120effa5-e7b6-4285-a258-1bc496c0eea6
+:END:
+#+title: pacman
+#+filetags: :comsci:linux:package:
+
+* References
+
+* Summary
+
+Designed to prevent corrupted installs
+
+* Steps
+
+** Sync Check
+
+Checks local sync databases to find
+- download urls
+- package sizes
+- version strings
+
+
+** Cache Download
+
+Streams compressed archive binaries (=.pkg.tar.zst=) into a local storage pool at =/var/cache/pacman/pkg/=
+
+** Integrity Validation
+
+A checksum verification is run to makesure the package's PGP signature matches the developer keys.
+
+** Execution
+
+If /every single download/ matches the target signature, pacman finally unpacks the binaries and places them in the system paths
+
+* Corruption
+
+If a download is interrupted or corrupted, the integrity check will fail. Pacman will automatically redownload the corrupted cache next time you try to install the package.
+
+* Flags
+
+=-S:= Sync. 
+
+=-yy:= Force refresh. Download fresh copies of the master package lists from the mirrors, even if it thinks they're up to date
+
+=-u:= Sysupgrade. Upgrades out of date dependencies
+
+* Updates
+
+Pacman will often download hundreds of mb (if not gb) of packages during updates. Importantly, pacman will *install over the old verisons*.
+
+** Archive
+
+Pacman will keep an archive of old installation files, which will take up disk space over time.
+
+Pacman *doesn't automatically purge* the =/var/cache/pacman/pkg/= folder.
+
+This is a security feature
