@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       93262346-7d72-4691-8113-652cf0e56abe
+:END:
+#+title: oauth2
+#+filetags: :comsci:cybersecurity:
+
+* References
+
+* Summary
+
+* Schemes
+
+** Bearer
+
+Whoever has this token can use it (all that's required is that you bear it). In particular, the server doesn't verify /how you got/ the token. It just checks that the token is legit.
+
+* Scope
+
+When you don't include a scope in your =.authinfo.gpg=, the server will treat it as a basic profile, which has no privileges.
+
+Google won't give you a higher-clearance than you specifically ask for. So in the developer console, you might have set a very high security clearance, but unless you ask for it in your =.authinfo=, you won't get it
+

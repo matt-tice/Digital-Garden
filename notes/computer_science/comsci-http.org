@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       b61c785a-74f9-4375-bbc0-b28ae6622547
+:END:
+#+title: http
+#+filetags: :comsci::
+
+* References
+
+* Summary
+
+* Status Codes
+
+** 400
+
+The data received is malformed, contains invalid syntax, or exceeds server limits.
+
+=Client-side:= The error is caused by you, rather than the server
