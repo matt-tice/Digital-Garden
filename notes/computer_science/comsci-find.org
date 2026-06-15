@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       5d9dadd1-2b0b-462b-b494-f56306b1f64f
+:END:
+#+title: find
+#+filetags: :comsci:linux:
+
+* References
+
+* Summary
+
+* Delimeters
+
+={} += Stop, group the files, then run the command once on all of them
+
+={} \;= Stop, run the command for each file separately

@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       7f1f779a-cec6-44b4-bef0-b2989b91d9a8
+:END:
+#+title: email in emacs
+#+filetags: :comsci:emacs:
+
+* References
+
+* Summary
+
+To use email in emacs you basically download all your emails and store them in a local database (usually Xapian)
+
+* Sync
+
+=mbsync= or =offlineimap= can be used to connect to your email provider, download your message and save them in a folder called =Maildir=
+
+* Index
+
+=mu= or =notmuch= then parses =Maildir=, indexes every word and stores the metadata in a C++ database
+
+* Interface
+
+=mu4e= or =notmuch.el= then use local shell commands to interact with your database.
+
+** mu4e
+
+Uses folders. If you move a file between folders locally, mbsync will push it up to the IMAP server
+
+** notmuch
+
+No folders --- everything is tagged.
+Instead of folders, you can save search queries (ex. all emails tagged "work")
+
+* Sending Messages
+
+** Message Mode
+
+Built-in to emacs. Works both on linux and windows
+
+
+

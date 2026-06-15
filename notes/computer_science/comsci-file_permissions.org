@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       2250c744-e1d7-4ccf-9992-9643f9928768
+:END:
+#+title: file permissions
+#+filetags: :comsci:cybersecurity:
+
+* References
+
+* Summary
+
+* Codes
+
+** Octal codes
+
+Read has a value of 4
+Write has value 2
+Execute has value 1
+
+The three slots, from left to right are
+1. =User:= The current user
+2. =Groups:=  Backup daemons, audio servers
+3. =Others:= Other user profiles
+
+|     |             |
+| 600 | rw--------- |
+| 644 | rw--r---r-- |
+| 700 | rwx-------- |
+| 755 | rwx-r-x-r-x |
+| 777 | rwx-rwx-rwx |
+
+** Home Directory
+
+Should be =750=
+- you have complete access
+- background processes can read and execute, but can't write or overwrite public keys or other files
+
+** .gnupg
+
+Needs to be =700=
+- don't let anyone even look in that folder
+- it stores certain unencrypted data
+
+
+* Superuser
+
+Bypasses the standard permission octal codes
+- even if the permissions are 000, the root user can read, write, and execute

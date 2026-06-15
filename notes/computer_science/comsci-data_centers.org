@@ -10,7 +10,15 @@
 
 * Summary
 
-** Uses
+* Google
+
+Uses *tensor processing units*, rather than GPUs. TPUs have slightly lower energy usage.
+
+Since 2015, google has been making custom TPUs for things like powering Google Search
+- TPUs are strictly designed for matrix multiplication, as opposed to GPUs, which have control logic and memory fetching
+- once you start a TPU process, it never reads or writes to external memory
+
+* Uses
 
 - AI / machine learning
 - Cloud computing
@@ -20,6 +28,77 @@
 - Healthcare data and diagnostics
 - Industrial automation and logistics
 
+
+** Cloud Computing
+
+- Web hosting
+- Corporate databases
+- Email
+- Video streaming (Netflix)
+- Software as a service
+
+
+*** Resource Usage
+
+Relatively little. CPUs are mainly used. Single racks use about 10-15 kW
+
+Because of the lower power usage, they can often get away with air cooling. Alternatively, there's mild evaporation-assisted cooling.
+- 2 L / kWh
+
+
+** AI Training
+
+Processing pentabytes of data
+
+*** Resource Usage
+
+Very high
+
+Uses hundreds of thousands of GPUs, which can pull up to *1.2 kW per chip* 
+150-230 kW per rack
+ 
+Air cooling is ruled out by the high heat, so you need *direct-to-chip liquid cooling* 
+- 5 L/Kwh
+
+
+** AI Inference
+
+Running a trained model to answer prompts
+
+*** Resource Usage
+
+Moderate per request, but massive at scale
+- individual prompts use about 0.25 - 2 Wh (approx. an LED light bulb being run for 1.5 - 12 minutes)
+- but billions of queries per day
+ 
+10 to 50 basic queries can evaporate 500 mL of water
+
+Water usage is 
+9L / kWh
+
+Images take *5-30 times more energy* (about as much as charging a smartphone from 0 to 100%). And *20-100 times more water* (about 500 mL)
+
+5 sec of video generation can take a *further 30-150 times more energy* (running a dishwasher for a cycle)
+- on the low end, this is about as much as watching *one hour of netflix in 4K*
+
+
+*** Usage Limits
+
+The free tier of something ChatGPT, Claude, or Gemini puts you around 10-80 Wh / day (about as much as a fridge uses running for 1 hour)
+- for Gemini, it's about 12-24 Wh / day for basic chats; if you try to skirt around this with images or documentd-contexted prompts, you'll get capped around 50 Wh / day
+- this equates to around 26 mL / day for maxing out text prompts
+
+** High-Performance Computing
+
+Weather forecasting, scientific research, cryptography
+
+*** Resource Usage
+
+High bursts of energy
+
+High water usage
+
+  
 * Energy
 
 24/7 baseload demand
@@ -33,6 +112,13 @@ Traditional evaporative cooling systems cost millions of gallons of water / year
 
 Use water as refrigerant but lithium bromide as the absorbent
 - can also use air-cooled systems
+
+
+** Location
+
+Data centers are meant to couple into business or consumer-use infrastructure. This makes them *bunch together*, leading to heavy loads on the power grids in those locations.
+
+Northern Virginia has the world's largest concentration of data centers
 
 * Financials
 

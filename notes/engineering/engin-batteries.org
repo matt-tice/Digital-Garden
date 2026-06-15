@@ -14,3 +14,47 @@ They don't discharge linearly
 When at 100%, it sits in a high-voltage saturation phase
 
 As it begins to lose power, the terminal voltage drops very slowly
+
+* Charging
+
+The wall charger determines the voltage and the laptop dictates the amperage.
+
+This means that amperage is *drawn as needed*
+
+** Strain Fatigue
+
+Plugging and unplugging the cable causes strain fatigue, leading to the outer sleeve of the cable being pulled away
+
+Never pull on the actual cable; pull on the hard plastic head
+
+** Packing the cable
+
+Don't roll it around the power brick, it twists the internal wires.
+
+Loop the cable in loose circles, letting the wire curve as it will
+
+** USB-C Chargers
+
+Standardized; so any usb-c cable will fit any port.
+
+*** Smart Charging
+
+Even if your charger has a higher wattage than necessary, the laptop will tell it not to give it more than it can handle
+
+Same with voltage. This makes it impossible to fry a device using a usb-c charger with too much voltage or wattage!
+
+This is done through a digital handshake called *USB Power Delivery* 
+- the charger initially passes 5V, until it can confirm what the device can handle.
+
+*** USB Power Delivery 3.1
+
+USB-c used to only be able to deliver 100W. Now it can go up to 240W.
+
+** Round Barrel Plugs
+
+The barrel plugs are the traditional laptop plugs. These *are not standardized*.
+
+If you buy a replacement
+- the *voltage must match exactly*; too much will fry the motherboard
+- the *amps can meet or exceed*; a lower amperage will cause the brick to overheat
+  

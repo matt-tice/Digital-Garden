@@ -1,0 +1,75 @@
+:PROPERTIES:
+:ID:       55035242-3a67-40b0-89d2-50833c7e2da4
+:END:
+#+title: electricity
+#+filetags: :physics:forces:
+
+* References
+
+* Summary
+
+* Electric Field
+
+** QED
+
+There are two fundamental fields:
+1. The electron field $\psi$
+2. The electromagnetic gauge field $A_{\mu}$
+
+
+** Interaction
+
+When an electron interacts with an element in a lattice, it briefly localizes, delocalizing its momentum state
+
+When the electron and phonon interact, they *become entangled*
+- or perhaps more precisely, the interaction term in the Hamiltonian is an entanglement operator
+
+After the interaction, we have
+\[
+\psi_{out} = \sum_{k} c_{k} e_{k-q} \otimes e_{q}
+\]
+where the first tensor factor describes the momentum state of the electron and the second describes the momentum state of the phonon.
+
+
+* Voltage
+
+Voltage is essentially the scalar potential $\phi$, where 
+\[
+E = -\nabla \phi
+\].
+Say we place a fixed voltage across a length of wire L.
+This creates an interaction term in the Lagrangian.
+
+Assume $\phi = - Ex$. As the electron field propagates from one end of the wire to the other, the potential energy drops. The lost energy is converted to kinetic energy, as the electron increases momentum.
+ 
+
+
+* Amperage
+
+
+
+* Resistance
+
+Consider electrons propagating through a lattice.
+
+The lattice atoms vibrate, which gives off [[id:d927a613-e400-4244-a968-9841a5f4fff7][phonons]] (typically infrared photons).
+
+When electron fields propagate through the lattice, they interact with the photon fields, undergoing scattering.
+
+When electrons emit phonons, they introduce heat into the system
+
+Electrons in a lattice are surrounded by *virtual phonons*, forming a *polaron.* 
+
+** Cooper Pairs
+
+** BCS Superconductivity
+
+* Wattage
+
+* Capacitors
+
+* Inductors
+
+* Transistors
+
+* Semiconductors

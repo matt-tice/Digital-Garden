@@ -1,0 +1,77 @@
+:PROPERTIES:
+:ID:       ff475201-ed38-4a20-a267-1ab8a0301842
+:END:
+#+title: gpg
+#+filetags: :comsci:cybersecurity:gnupg:
+
+* References
+
+* Summary
+
+You typically only need one key. You can attach multiple identities to it
+
+You only need multiple keys if
+1. you want to completely separate identities
+2. your employer requires you to sign commits with a company-issued token
+3. you store a private key on a highly exposed mobile device or a remote cloud server
+
+* List Keys
+
+#+begin_src bash
+gpg --list-secret-keys --keyid-format=long
+
+#+end_src
+
+=sec:= Tells you the encryption algorithm (ex. rsa4096), your secret private key, and the expiry date
+
+=uid:= 
+
+=ssb:= Secret subkey for encryption. This is literally a key that's used specifically to encrypt
+
+** Issues
+
+*** Warning Unsafe Permissions
+
+You need to make sure that the file permissions for the home directory and =.gnupg= don't allow other local users or groups to read or write to them
+
+=Note:= we need to use chown with the recursive flag on  both the home directory and the .gnupg subdirectory. This might seem odd, but it's because if we don't already have permission on .gnupg, the recursive run on the home directory will get a permission denied when it tries to modify .gnupg
+
+Here are the [[id:2250c744-e1d7-4ccf-9992-9643f9928768][file permissions]] explained
+
+
+#+begin_src bash
+# 1. Ensure your user strictly owns your home directory and .gnupg directory
+chown -R $(whoami) ~
+chown -R $(whoami) ~/.gnupg
+
+# 2. Fix your home directory permissions 
+# (Standard is 755 or 700. If you are on a shared server, use 700)
+chmod 750 ~
+
+# 3. Restrict the .gnupg directory so ONLY your user can read, write, or enter it
+chmod 700 ~/.gnupg
+
+# 4. Restrict files inside .gnupg (keys, trust databases, config files) to read/write for you only
+find ~/.gnupg -type f -exec chmod 600 {} +
+
+# 5. Restrict subdirectories inside .gnupg (like private-keys-v1.d) to read/write/execute for you only
+find ~/.gnupg -type d -exec chmod 700 {} +
+#+end_src
+
+The ={} += are *argument delimeters* of [[id:5d9dadd1-2b0b-462b-b494-f56306b1f64f][find]]
+
+Then reload the gpg daemon
+
+#+begin_src bash
+gpgconf --kill gpg-agent
+
+gpg --list-secret-keys --keyid-format=long
+#+end_src
+
+* User Identities
+
+
+#+begin_src bash
+gpg --edit-key <key number>
+gpg> adduid
+#+end_src

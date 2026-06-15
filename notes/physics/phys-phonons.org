@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       d927a613-e400-4244-a968-9841a5f4fff7
+:END:
+#+title: phonons
+#+filetags: :physics:lattices:
+
+* References
+
+* Summary
+
+Photons produced by lattice vibrations have quantized energy levels. To distinguish these photons from typical ones, they're called *phonons.* 
+
+Phonons are Goldstone-like bosons that come from *spontaneous symmetry breaking* 
