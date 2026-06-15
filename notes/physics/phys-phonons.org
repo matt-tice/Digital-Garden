@@ -11,3 +11,5 @@
 Photons produced by lattice vibrations have quantized energy levels. To distinguish these photons from typical ones, they're called *phonons.* 
 
 Phonons are Goldstone-like bosons that come from *spontaneous symmetry breaking* 
+
+* 
