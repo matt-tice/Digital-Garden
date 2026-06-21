@@ -1,0 +1,50 @@
+:PROPERTIES:
+:ID:       b57c1ec3-02b2-4d4f-9170-bf4e6e2d7bdd
+:END:
+#+title: use-package
+#+filetags: :comsci:emacs:
+
+* References
+
+
+* Summary
+
+* During Boot
+
+** Ensure
+
+Makes sure the package is installed. If it isn't already on your hardrive, it gets downloaded
+
+** Init
+
+Code in here is evaluated immediately at startup, *even if the package is deferred*.
+
+** Custom
+
+Similar to init, but can only be used if the package explicitly allows it
+
+* Lazy Loading
+
+These commands will cause the package to load, but only if the specified action is done.
+
+** Commands
+
+Registers certain M-x commands from the package. When any of these commands are run, the package loads.
+
+** Bind
+
+Sets keybindings for specific commands. If any of these bindings is pressed, it loads the package.
+
+** Hook
+
+Specifies certain emacs modes. When that mode is entered, the package is loaded.
+
+** Mode and Interpreter
+
+Registers certain major modes to trigger loading.
+
+* When Package Loads
+
+** Config
+
+Things to do once the package is actually loaded
