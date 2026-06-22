@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       8ce87013-f940-453c-bae7-16bf202c194f
+:END:
+#+title: infrared divergence
+#+filetags: :physics:qft:
+
+* References
+
+* Summary
+

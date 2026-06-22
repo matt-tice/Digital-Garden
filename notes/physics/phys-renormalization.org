@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       fc8354a5-76f3-42c4-8612-cb0f491a3a7b
+:END:
+#+title: renormalization
+#+filetags: :physics:qft:
+
+* References
+
+* Summary
+
+Renormalization arises from the issues with the [[id:61a71036-e556-4e60-8927-f11ef0d00729][interaction picture]].
+
+Because we can't square a delta distribution, we have to find a way to get rid of them, if we want to deal with interactions.
+
+We can try to mollify them in such a way that when the interaction turns off
+\[
+g \to 0
+\]
+we recover the delta distribution. But it turns out that it will *depend on our choice of mollifier*.
+
+If we mollify the interaction term, we get *distribution splitting*. If we mollify the propagator we get *non-local regularization* 
+
+* Distribution Splitting
+
+It turns out that any two choices of mollified interactions differ by a sum of delta function derivatives. The coefficients of this sum (and thus the exact mollified field interaction can only be determined experimentally)
+
+* Non-Local Regularization
+
+If you mollify the spacetime delta distribution, the problem is that you break locality --- the smeared-out fields can interact outside of the light cone

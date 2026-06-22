@@ -1,0 +1,90 @@
+:PROPERTIES:
+:ID:       61a71036-e556-4e60-8927-f11ef0d00729
+:END:
+#+title: interaction picture
+#+filetags: :physics:qft:
+
+* References
+
+* Summary
+
+In the interaction picture, we assume that we can view an interacting field theory as a sum of a free theory, plus an interaction:
+\[
+H = H_{free} + H_{int}.
+\]
+You then try to apply perturbation theory, by making the interaction term small.
+
+As a consequence, your propagator is just a perturbed delta function. The problem is that you can't multiply two delta functions together, but the interaction term takes the form
+\[
+g \phi_{1}(x)\phi_{2}(x)
+\].
+This is the ultraviolet divergence.
+
+Because the divergence happens as soon as you multiply two fields, we have UV divergence already for $\phi^{2}, \phi^{3}$, and $\phi^{4}$ theories.
+
+Which means that the actual free field ($\phi^{2}$) already suffers from UV divergence. 
+
+
+* Assuming Deltas
+
+The reason the UV divergences show up is because we start by asssuming we have perfectly localized particles --- so delta functions show up.
+
+** Wavelets
+
+If you use the wavelet picture, where both position and momentum have width, *there are no UV divergences* 
+
+Here's the trade-off: /how do you know the width of the wavelet?/ 
+
+If you fix a wavelet length, then a moving observer will see a different wavelet length; this breaks Lorentz invariance
+
+This is a key feature of [[id:c13f0cc5-2c19-43ff-bce9-2de29adc569b][loop quantum gravity]], which assumes a minimum length scale.
+If we assume a minimum length, then that means there is actually a *canonical frame of reference* --- the one where the wavelets are at rest
+- a moving observer will see them as smaller than the Planck length, but if that's actually not physical, then the "correct" frame of reference is the one at rest with respect to the wavelengths (so they're precisely the Planck length)
+
+
+*** Experiments
+
+The problem is, if Lorentz invariance is broken, we should see light travelling at different speeds for different frequencies.
+But our experiments watching supernovae (which exhibit both high and lower energy photons) show that light travels the same speed regardless of frequency (or if there is a difference, it's so small that the minimum length would have to be much smaller than the Planck length)
+
+** Doubly Special Relativity
+
+In this setting both the speed of light and the minimum length are invariant for all observers
+- this is achieved by having the actual geometry of spacetime itself changing at high energies
+
+
+** Continuous Wavelet Quantization
+
+In this approach there is no smallest length: wavelets can get arbitrarily small, as long as they keep finite widths.
+
+This *doesn't break Lorentz invariance.* 
+
+Here's the trade-off: since we allow arbitrary widths, we have to end up integrating over all possible widths, which ends up *recreating the UV divergence*
+
+You solve this by performing a kind of cutoff at the smallest width for a fixed experiment (*scale coupling constraints*):
+- by assuming that virtual particles cannot have widths smaller than the external particles bing measured
+
+But this has an issue in QCD
+- [[id:a6e9d072-12f8-4bf2-aed3-52ba691eaa37][asymptotic freedom]] tells us that quarks are free at tiny scales and confined at large scales
+- but the large scales are where the strong force shines; without it, we can't explain why quarks can't be pulled out of a proton
+
+Another issue is that we didn't eliminate [[id:8ce87013-f940-453c-bae7-16bf202c194f][infrared divergence]]
+- you throw in a maximum width cutoff
+- this is actually natural in QCD; it corresponds to how quarks can't escape hadrons: colour confinement
+
+*** Scale-Spacetime Causality
+
+We assume that there's a kind of locality for wavelet width: you can't just interact any two wavelet widths.
+
+This is what happens in [[id:0566c346-92f0-4308-8c39-977208d15c0a][AdS-CFT]] theory: the width parameter is interpretted as a new dimension for a *5d space(width)time*.
+
+This extra dimension is called the *renormalization flow axis* or the *bulk dimension.* 
+
+The new problem: how do we handle gauge groups? Do we need a different gauge group at every scale? Just one big gauge group?
+
+Another problem: we don't live in AdS, we live in de Sitter space (the universe is expanding at an accelerating rate)
+
+
+** String Theory
+
+String theory removes divergences by similarly assuming that we aren't localized at a fixed point

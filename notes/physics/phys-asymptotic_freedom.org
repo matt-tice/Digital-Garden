@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       a6e9d072-12f8-4bf2-aed3-52ba691eaa37
+:END:
+#+title: asymptotic freedom
+#+filetags: :physics:qft:qcd:
+
+* References
+
+* Summary
+
