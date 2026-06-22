@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>interaction picture</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">interaction picture</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>In the interaction picture, we assume that we can view an interacting
+field theory as a sum of a free theory, plus an interaction: <span
+class="math display"><em>H</em> = <em>H</em><sub><em>f</em><em>r</em><em>e</em><em>e</em></sub> + <em>H</em><sub><em>i</em><em>n</em><em>t</em></sub>.</span>
+You then try to apply perturbation theory, by making the interaction
+term small.</p>
+<p>As a consequence, your propagator is just a perturbed delta function.
+The problem is that you can't multiply two delta functions together, but
+the interaction term takes the form <span
+class="math display"><em>g</em><em>ϕ</em><sub>1</sub>(<em>x</em>)<em>ϕ</em><sub>2</sub>(<em>x</em>)</span>.
+This is the ultraviolet divergence.</p>
+<p>Because the divergence happens as soon as you multiply two fields, we
+have UV divergence already for <span
+class="math inline"><em>ϕ</em><sup>2</sup>, <em>ϕ</em><sup>3</sup></span>,
+and <span class="math inline"><em>ϕ</em><sup>4</sup></span>
+theories.</p>
+<p>Which means that the actual free field (<span
+class="math inline"><em>ϕ</em><sup>2</sup></span>) already suffers from
+UV divergence.</p>
+<h1 id="assuming-deltas">Assuming Deltas</h1>
+<p>The reason the UV divergences show up is because we start by
+asssuming we have perfectly localized particles — so delta functions
+show up.</p>
+<h2 id="wavelets">Wavelets</h2>
+<p>If you use the wavelet picture, where both position and momentum have
+width, <strong>there are no UV divergences</strong></p>
+<p>Here's the trade-off: <em>how do you know the width of the
+wavelet?</em></p>
+<p>If you fix a wavelet length, then a moving observer will see a
+different wavelet length; this breaks Lorentz invariance</p>
+<p>This is a key feature of <a
+href="https:/Digital-Garden/physics/phys-loop_quantum_gravity.html">loop
+quantum gravity</a>, which assumes a minimum length scale. If we assume
+a minimum length, then that means there is actually a <strong>canonical
+frame of reference</strong> — the one where the wavelets are at rest</p>
+<ul>
+<li>a moving observer will see them as smaller than the Planck length,
+but if that's actually not physical, then the "correct" frame of
+reference is the one at rest with respect to the wavelengths (so they're
+precisely the Planck length)</li>
+</ul>
+<h3 id="experiments">Experiments</h3>
+<p>The problem is, if Lorentz invariance is broken, we should see light
+travelling at different speeds for different frequencies. But our
+experiments watching supernovae (which exhibit both high and lower
+energy photons) show that light travels the same speed regardless of
+frequency (or if there is a difference, it's so small that the minimum
+length would have to be much smaller than the Planck length)</p>
+<h2 id="doubly-special-relativity">Doubly Special Relativity</h2>
+<p>In this setting both the speed of light and the minimum length are
+invariant for all observers</p>
+<ul>
+<li>this is achieved by having the actual geometry of spacetime itself
+changing at high energies</li>
+</ul>
+<h2 id="continuous-wavelet-quantization">Continuous Wavelet
+Quantization</h2>
+<p>In this approach there is no smallest length: wavelets can get
+arbitrarily small, as long as they keep finite widths.</p>
+<p>This <strong>doesn't break Lorentz invariance.</strong></p>
+<p>Here's the trade-off: since we allow arbitrary widths, we have to end
+up integrating over all possible widths, which ends up
+<strong>recreating the UV divergence</strong></p>
+<p>You solve this by performing a kind of cutoff at the smallest width
+for a fixed experiment (<strong>scale coupling
+constraints</strong>):</p>
+<ul>
+<li>by assuming that virtual particles cannot have widths smaller than
+the external particles bing measured</li>
+</ul>
+<p>But this has an issue in QCD</p>
+<ul>
+<li><a
+href="https:/Digital-Garden/physics/phys-asymptotic_freedom.html">asymptotic
+freedom</a> tells us that quarks are free at tiny scales and confined at
+large scales</li>
+<li>but the large scales are where the strong force shines; without it,
+we can't explain why quarks can't be pulled out of a proton</li>
+</ul>
+<p>Another issue is that we didn't eliminate <a
+href="https:/Digital-Garden/physics/phys-infrared_divergence.html">infrared
+divergence</a></p>
+<ul>
+<li>you throw in a maximum width cutoff</li>
+<li>this is actually natural in QCD; it corresponds to how quarks can't
+escape hadrons: colour confinement</li>
+</ul>
+<h3 id="scale-spacetime-causality">Scale-Spacetime Causality</h3>
+<p>We assume that there's a kind of locality for wavelet width: you
+can't just interact any two wavelet widths.</p>
+<p>This is what happens in <a
+href="https:/Digital-Garden/physics/phys-ads_cft.html">AdS-CFT</a>
+theory: the width parameter is interpretted as a new dimension for a
+<strong>5d space(width)time</strong>.</p>
+<p>This extra dimension is called the <strong>renormalization flow
+axis</strong> or the <strong>bulk dimension.</strong></p>
+<p>The new problem: how do we handle gauge groups? Do we need a
+different gauge group at every scale? Just one big gauge group?</p>
+<p>Another problem: we don't live in AdS, we live in de Sitter space
+(the universe is expanding at an accelerating rate)</p>
+<h2 id="string-theory">String Theory</h2>
+<p>String theory removes divergences by similarly assuming that we
+aren't localized at a fixed point</p>
+</body>
+</html>
