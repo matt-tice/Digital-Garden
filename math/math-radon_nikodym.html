@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Index of physics</title>
+  <title>radon-nikodym</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,38 +166,55 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Index of physics</h1>
+<h1 class="title">radon-nikodym</h1>
 </header>
-<h1 id="notes-in-this-area">Notes in this area:</h1>
-<ul>
-<li><a href="./phys-beyond_the_standard_model.html">phys-beyond the
-standard model</a></li>
-<li><a href="./phys-asymptotic_freedom.html">phys-asymptotic
-freedom</a></li>
-<li><a href="./phys-electricity.html">phys-electricity</a></li>
-<li><a href="./phys-renormalization.html">phys-renormalization</a></li>
-<li><a href="./phys-string_theory.html">phys-string theory</a></li>
-<li><a href="./phys-conformal_field_theories.html">phys-conformal field
-theories</a></li>
-<li><a href="./phys-climate_change.html">phys-climate change</a></li>
-<li><a href="./phys-strongly_correlated_systems.html">phys-strongly
-correlated systems</a></li>
-<li><a href="./phys-loop_quantum_gravity.html">phys-loop quantum
-gravity</a></li>
-<li><a href="./phys-gauge_theory.html">phys-gauge theory</a></li>
-<li><a href="./phys-effective_field_theory.html">phys-effective field
-theory</a></li>
-<li><a href="./phys-plasma.html">phys-plasma</a></li>
-<li><a href="./phys-phonons.html">phys-phonons</a></li>
-<li><a href="./phys-interaction_picture.html">phys-interaction
-picture</a></li>
-<li><a href="./phys-ads_cft.html">phys-ads cft</a></li>
-<li><a href="./phys-electronics.html">phys-electronics</a></li>
-<li><a href="./phys-lattice_qft.html">phys-lattice qft</a></li>
-<li><a href="./phys-small_modular_reactor.html">phys-small modular
-reactor</a></li>
-<li><a href="./phys-infrared_divergence.html">phys-infrared
-divergence</a></li>
-</ul>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>The Radon-Nikodym derivative is the rigorous way of dealing with a
+change of variables.</p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="absolutely-continuous">Absolutely Continuous</h2>
+<div class="definition">
+<p>Given two sigma-finite measures <span
+class="math inline"><em>μ</em>, <em>ν</em></span> on a measurable space,
+we say <span class="math inline"><em>ν</em></span> is <em>absolutely
+continuous</em> with respect to <span
+class="math inline"><em>μ</em></span> (written <span
+class="math inline"><em>ν</em> &lt;  &lt; <em>μ</em></span>) if <span
+class="math display">ker <em>μ</em> ⊆ ker <em>ν</em>.</span> In other
+words, every <span class="math inline"><em>μ</em></span>-null set is
+also a <span class="math inline"><em>ν</em></span>-null set.</p>
+</div>
+<div class="defframe">
+
+</div>
+<h1 id="theorems">Theorems</h1>
+<h2 id="radon-nikodym-theorem">Radon-Nikodym Theorem</h2>
+<div class="theorem">
+<p>If <span class="math inline"><em>ν</em> &lt;  &lt; <em>μ</em></span>,
+there exists a measurable function <span
+class="math inline"><em>f</em></span> such that <span
+class="math display"><em>ν</em>(<em>A</em>) = ∫<sub><em>A</em></sub><em>f</em><em>d</em><em>μ</em></span>
+for all <span class="math inline"><em>A</em></span>. The function <span
+class="math inline"><em>f</em></span> is called the
+<strong>Radon-Nikodym derivative</strong> and denoted <span
+class="math display">$$
+f = \dfrac{d \nu}{d \mu}.
+$$</span></p>
+</div>
+<div class="proof-theorem">
+
+</div>
+<h1 id="free-fields">Free Fields</h1>
+<p>You can define a measure for free field theories, <span
+class="math inline"><em>μ</em><sub>0</sub></span>. You define the
+interacting measure <span class="math inline"><em>ν</em></span> by using
+the RN derivative: <span class="math display">$$
+d \nu(\phi) = \dfrac{1}{Z} e^{-\lambda \int \phi^{4}} d\mu_{0}(\phi)
+$$</span></p>
+<p>As it turns out, in 4D, <span
+class="math inline"><em>ν</em> ⊥ <em>μ</em><sub>0</sub></span> (they're
+<strong>mutually singular</strong>), and so the RN derivative
+<em>doesn't exist</em>.</p>
 </body>
 </html>
