@@ -1,0 +1,102 @@
+:PROPERTIES:
+:ID:       b0aaa7da-7aa1-4af5-8499-53e6420290c1
+:END:
+#+title: von neumann algebras
+#+filetags: :math:operators:
+
+* References
+
+* Summary
+
+
+
+* Murray-von Neumann Classification
+
+We define an equivalence relation on projections
+
+** Type I
+
+Possess a minimum non-zero projection.
+
+Type I algebras are always of the form $\mathcal{B}(H)$.
+
+** Type II
+
+Contains finite projections
+
+** Type III
+
+Every non-zero projection is infinite.
+
+*** Physics
+
+Because there are no minimal projections, there are *no pure states*.
+
+Has no state-independent time evolution.
+
+* Commutative
+
+Every commutative von Neumann algebra is isomorphic to $L^{\infty}(X)$.
+
+* Modular Theory
+
+We take the unbounded operator $S_{0}$ that creates adjoints
+\[
+S_{0} A v = A^{\dagger} v
+\]
+
+We look for the domain of $S_{0}^{*}$
+
+In the case of type I or II, we get $\Delta = 1$
+
+$\omega(y^* x^*) = \omega((\Delta_\omega y)^* x)$
+
+$\sigma_{t}_{}^{}^{\omega} (h) = u_t h u_t^{-1}$ 
+
+
+
+** Cyclic Vectors
+
+The closure of $M(O) v$ is $H$
+
+** Separating Vectors
+
+If $\langle x, v \rangle = 0$ then $x = 0$.
+
+* Pre-von Neumann Algebras
+
+Tomita algebras.
+
+* Predual
+
+The predual is the space of states on a von Neumann algebra.
+
+
+* Maximal Abelian Subalgebra
+
+Selecting an orthonormal basis is the same as picking a complete set of commuting observables
+
+
+
+* Reeh-Schlieder Theorem
+
+Consider an AQFT $\mathcal{A}$ that has
+- a translation group / hamiltonian
+- a purely positive energy spectrum
+- 
+The vacuum state is cyclic for all observable algbras $\mathcal{A}(U)$
+
+This implies that the *vacuum is highly entangled* 
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       fa1fddce-eecb-4423-840a-c9ca8588a8ab
+:END:
+#+title: partial differential equations
+#+filetags: :math:pdes:
+
+* References
+
+* Summary
+
+As it turns out, nice spaces like $C^{\infty}(M), C^{2}(M)$ almost never contain the solutions to interesting partial differential equations.

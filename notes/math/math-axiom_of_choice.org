@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       ec467936-e063-431c-b139-3c0984e1d2af
+:END:
+#+title: axiom of choice
+#+filetags: :math:set_theory:
+
+* References
+
+* Summary
+
+* Measure Theory
+
+AoC allows you to create unmeasurable sets, like the Vitali set.
+
+
+Solovay showed that if we assume the existence of an /inaccessible cardinal/, we can keep Dependent Choice and get *every subset of $\mathbb{R}^{n}$ measurable.*
+
+The problem is, this also gives you that every linear operator on a Hilbert space is automatically bounded and continuous on its domain. Consequently, the unbounded position and momentum operators of quantum mechanics don't show up.

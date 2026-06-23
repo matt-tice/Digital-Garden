@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       1d0e6963-0e2e-450a-9741-ad7eb6150ebb
+:END:
+#+title: koszul duality
+#+filetags: :math:operads:
+
+* References
+
+* Summary
+
+* Definitions
+
+** Quadratic Algebras
+
+#+ATTR_LATEX: :options {Quadratic Algebra} {quad-alg}
+#+begin_definition
+A /quadratic algebra/ is any quotient of the form
+\[
+A = T(V)/\langle R \rangle
+\]
+where $V$ is a finite-dimensional vector space and $R$ is a subspace of relations of degree $2$.
+#+end_definition
+#+begin_defframe
+
+=Symmetric algebra:= Taking $R = \{ x \otimes y - y \otimes x \mid x,y \in V \}$ exhibits $S(V)$ as a quadratic algebra.
+
+=Exterior algebra:= Taking $R = \{ x \otimes y + y \otimes x \mid x,y \in V \}$ exhibits $\Lambda(V)$ as a quadratic algebra.
+
+#+end_defframe
+
+
+** Koszul Dual Algebra
+
+#+ATTR_LATEX: :options {Koszul Dual} {koszul-dual-alg}
+#+begin_definition
+The /Koszul dual/ of a quadratic algebra $A = T(V)/\langle R \rangle$ is the algebra
+\[
+A^{!} = T(V^{*}) / \langle R^{\perp} \rangle
+\],
+where $R^{\perp} \subseteq V^{*} \otimes V^{*}$ is the orthogonal complement under the pairing
+\[
+\langle \cdot , \cdot \rangle: (V^{*} \otimes V^{*}) \otimes (V \otimes V) \rightarrow k.
+\]
+
+#+end_definition
+#+begin_defframe
+
+
+
+#+end_defframe
+

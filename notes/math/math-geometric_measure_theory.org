@@ -18,7 +18,7 @@ Higher-dimensional chains are called *currents*.
 Let $\mathcal{D}^{k}(M)$ be the smooth, compactly supported $k$-forms on $M$. A *k-current* is a continuous linear functional
 \[
 \phi: \mathcal{D}^{k}(M) \to
-\]
+\] F
  
 The space of currents is denoted with a subscript: $\mathcal{D}_{k}$ 
 
@@ -33,6 +33,10 @@ Given a measure $\mu$, we define an $n$-current for each measurable set by
 \]
 
 Null sets are then the zero elements of the chain complex  
+
+** Noether Currents
+
+
 
 * Singularities
 

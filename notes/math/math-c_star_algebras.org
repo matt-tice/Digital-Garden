@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       516aaa52-264a-4e80-95c9-813a9e9e5aae
+:END:
+#+title: c star algebras
+#+filetags: :math:operators:
+
+* References
+
+* Summary
+
+$C^{\infty}(M)$ is a Frechet algebra. Gelfand duality tells us we can reconstruct our space from the commutative C-star algebra of continuous functions.
+
+The smooth functions form a dense subalgebra of this C-star algebra.
+
+The GNS construction says that we take a state and evaluate it on a C-star algebra (and take the closure in the weak operator topology), to get a von Neumann algebra. 

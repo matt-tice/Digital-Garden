@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       f51e858b-d9da-48c6-99bf-17adbf093b33
+:END:
+#+title: algebraic quantum field theory
+#+filetags: :math:aqft:
+
+* References
+
+* Summary
+
+* C-star Algebras
+
+These are not monoids in a monoidal category. But they are the traditional, physics-style AQFT observables.
+
+So mathematical AQFT is unable to distinguish C-star algebras from Banach algebras.
+- they miss the analysis / geometry
+
+The same thing happens with von Neumann algebras.

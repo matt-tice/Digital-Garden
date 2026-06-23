@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       e263097c-b032-4ad0-98ce-2fc371d9b3ec
+:END:
+#+title: spectral theorem
+#+filetags: :math:func_analysis:operators:
+
+* References
+
+* Summary
+
+* Unbounded Operators
+
+We diagonalize the self-adjoint operator as
+\[
+A = \int \lambda dE(\lambda)
+\]
+where $E$ is not a scalar measure, but is rather a map
+\[
+E: \mathcal{B}(\sigma(A)) \rightarrow P(H)
+\]
+where $\mathcal{B}(\sigma(A))$ is the Borel sigma algebra on the spectrum, and $P(H)$ is the space of orthogonal projections on $H$.

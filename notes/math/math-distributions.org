@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       cbf4be4d-4062-4103-9cfb-5337026cd67e
+:END:
+#+title: distributions
+#+filetags: :math:func_analysis:
+
+* References
+
+* Summary
+
+In the classical setup, we start with a commutative C-star algebra of continuous functions on a manifold: $C_{0}(M)$. We pass to a dense subset, like $C^{\infty}(M)$, and use this as our space of test functions.
+
+We can generalize this by replacing our C-star algebra with a von Neumann algebra, and taking a dense subalgebra as our test functions.
+
+* Continuous Functions vanishing at Infinity
+
+** Dense subalgebras
+
+Smooth functions that vanish at infinity
+Compactly supported smooth functions
+Schwartz functions
+Bounded smooth functions
+- this is the largest one
+
+* L-2 Functions
+
+** Dense subalgebras
+
+Compactly supported smooth functions
+Schwartz functions
+Bounded smooth $L^{2}$ functions

@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       7179ebe2-dcb3-4945-905c-8c2efac838b6
+:END:
+#+title: dominated convergence theorem
+#+filetags: :math:measures:measure_theory:
+
+* References
+
+* Summary
+
+We want to know if $f_{n} \rightarrow 0$ pointwise implies that 
+\[
+\lim \int f_{n} d \mu \rightarrow 0.
+\]
+
+This is a question of local versus global behaviour. If the dominated convergence theorem fails, knowing about the local data isn't enough to tell us about what happens globally.
+
+If the DCT succeeds, then we have something like a [[id:435f2de8-a08d-49c0-bdf7-aa63affc91d9][sheaf]]

@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       2168b77d-24a0-4c95-9a9f-e19d9dce977d
+:END:
+#+title: conformal field theories
+#+filetags: :physics:cft:
+
+* References
+
+* Summary
+
+* Operator Product Expansion
+
+\[
+Y(a, z)b = \sum_{n \in \mathbb{Z}} a_n b \, z^{-n-1}
+\]
+
+Parameterized by moduli of punctured Riemann surfaces
+
+** Modular Operads

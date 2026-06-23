@@ -1,0 +1,62 @@
+:PROPERTIES:
+:ID:       b9cb722f-dc78-4a91-b3d3-00684b307586
+:END:
+#+title: radon-nikodym
+#+filetags: :math:func_analysis:
+
+* References
+
+* Summary
+
+The Radon-Nikodym derivative is the rigorous way of dealing with a change of variables.
+
+* Definitions
+
+** Absolutely Continuous
+
+#+ATTR_LATEX: :options {Absolutely Continuous} {abs-continuous-meas}
+#+begin_definition
+Given two sigma-finite measures $\mu, \nu$ on a measurable space, we say $\nu$ is /absolutely continuous/ with respect to $\mu$ (written $\nu << \mu$) if 
+\[
+\ker \mu \subseteq \ker \nu.
+\]
+In other words, every $\mu$-null set is also a $\nu$-null set.
+#+end_definition
+#+begin_defframe
+
+
+
+#+end_defframe
+
+* Theorems
+
+** Radon-Nikodym Theorem
+
+#+ATTR_LATEX: :options {Radon-Nikodym Theorem} {radon-nikodym}
+#+begin_theorem
+If $\nu << \mu$, there exists a measurable function $f$ such that
+\[
+\nu(A) = \int_{A} f d \mu
+\]
+for all $A$. The function $f$ is called the *Radon-Nikodym derivative* and denoted
+\[
+f = \dfrac{d \nu}{d \mu}.
+\]
+
+#+end_theorem
+#+begin_proof-theorem
+
+
+
+#+end_proof-theorem
+
+* Free Fields
+
+You can define a measure for free field theories, $\mu_{0}$. You define the interacting measure $\nu$ by using the RN derivative:
+\[
+d \nu(\phi) = \dfrac{1}{Z} e^{-\lambda \int \phi^{4}} d\mu_{0}(\phi)
+\]
+
+As it turns out, in 4D, $\nu \perp \mu_{0}$ (they're *mutually singular*), and so the RN derivative /doesn't exist/.
+
+
