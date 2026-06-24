@@ -1,0 +1,63 @@
+:PROPERTIES:
+:ID:       513202a8-c95f-40b4-bdd5-6657039cad31
+:END:
+#+title: weight
+#+filetags: :biology:body:medical:
+
+* References
+
+/The metabolic effects of habitual leg shaking: A randomized crossover trial/, Bao et al., 2024.
+
+/Compendium of Physical Activities/
+
+
+* Summary
+
+Lower-intensity movement is more sustainable, leading to high calorie burn over extended periods than short-burst high-intensity exercise.
+
+Lower-intensity movement also tends to burn body fat, rather than carbs, which are burned more in things like sprinting.
+
+* Metabolic Equivalent of Task
+
+A standardized unit where 1 MET corresponds to the energy usage of your body completely at rest.
+
+Calories burned = MET \times Weight in kg \times Duration in hours
+
+145lbs = 65.8 kg
+
+| Activity               | METs |
+|------------------------+------|
+| Sit. still             |  1.0 | 
+| Sit. foot tapping      |  1.5 |
+| Standing               |  1.6 |
+| Sit. leg shaking       |  1.8 |
+|                        |      |
+|                        |      |
+| Stand. swaying         |  2.1 |
+| Slow walking           |  2.5 |
+| Chores                 |  3.0 |
+| Brisk walking          |  4.3 |
+| Karate bounce (kumite) |  5.5 |
+| Light shadowboxing     |  6.0 |
+| Intense shadowboxing   |  9.0 |
+|                        |      |
+
+* Kumite
+
+Tiny plyometric jumps. Keeping a wide stance requires your quadriceps, glutes, and hip stabilizers to stay semi-contracted. Keeping your torso upright requires your abs, obliques, and lower back muscles to stay engaged
+
+** Stretch-Shortening Cycle
+
+
+
+* Shadow Boxing
+
+Burns a crazy amount of calories
+
+Keep a small bend in your elbows even at the end of punches, because you have no bag to absorb the impact.
+
+Keep your hands glued to your face when not punching. Keep your elbows against your ribs, engaging your upper back / shoulders
+
+* Soleus Muscle
+
+A muscle in the calf. It can bear a tremendous amount of weight and doesn't get tired very easily
