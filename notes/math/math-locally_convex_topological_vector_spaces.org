@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       e75f8395-347f-43d9-a298-b2c431afc0ec
+:END:
+#+title: locally convex topological vector spaces
+#+filetags: :math:func_analysis:tvs:lctvs:
+
+* References
+
+* Summary
+
+* Definitions
+
+** Reflexive
+
+A locally convex topological vector space, $V$ is called *reflexive* if $V \cong V^{''}$ by the evaluation map
+
+*** Intuition
+
+Reflexive spaces are something like /finite-dimensional spaces/ 
+- unit balls are weakly compact (compact in the weak topology)
+- 
+
+*** Examples
+
+**** Separable Hilbert spaces
+

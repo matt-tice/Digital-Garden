@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       e3d7bf37-506b-4732-a395-1fae810adae2
+:END:
+#+title: connectedness
+#+filetags: :math:topology:
+
+* References
+
+* Summary
+
+* Definitions
+
+** Connected
+
+*** Examples
+
+**** Topologist's Sine Curve
+
+Connected but not path-connected
+
+** Path-Connected
+
+
+** Locally Connected
+
+* Theorems

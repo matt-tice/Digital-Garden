@@ -1,0 +1,92 @@
+:PROPERTIES:
+:ID:       ba4df075-2c57-4176-b279-4350a7270a76
+:END:
+#+title: compactness
+#+filetags: :math:topology:
+
+* References
+
+* Summary
+
+* Definitions
+
+** Ultrafilters: Compactness
+
+A space is compact if and only if every ultrafilter on it converges to at least one point.
+
+*** Intuition
+
+Really, every ultrafilter will always converge to /something/ --- the thing is, it just might not be in your space; it might be a kind of /infinite point/. The ultrafilter definition of compactness then says that *no limits escape to infinity* 
+
+*** Ultrafilter Lemma
+
+The problem is, /how do we know a space even has an ultrafilter on it?/ The ultrafilter lemma tells you that every space does, but it's equivalent to the axiom of choice.
+
+* Theorems
+
+** Continuous Maps Preserve Compactness
+
+Let $f: A \rightarrow B$ be continuous. Then if $K \subseteq A$ is compact, so is $f(K)$.
+
+#+begin_proof
+Take an open cover $f(K) \subseteq \bigcup_{\alpha} U_{\alpha}$. Then pulling everything back, we have 
+\[
+K \subseteq f^{}^{-1}f(K) \subseteq f^{-1}(\bigcup_{\alpha} U_{\alpha}) = \bigcup_{\alpha} f^{-1}(U_{\alpha})
+\].
+We get a finite subcover, since $K$ is compact, and then push that forward:
+\[
+f(K) \subseteq f(\bigcup_{i} f^{-1}(U_{i})) = f f^{-1}(\bigcup_{i} U_{i}) \subseteq \bigcup_{i} U_{i},
+\]
+getting a finite subcover for $f(K)$.
+#+end_proof
+
+
+
+** Tychonoff's Theorem
+
+Let $\{ C_{\alpha} \}$ be an arbitrary collection of compact spaces. Then $\prod_{\alpha} C_\alpha$ is compact
+
+*** Set Theory
+
+Tychonoff's theorem is equivalent to the [[id:ec467936-e063-431c-b139-3c0984e1d2af][axiom of choice]]
+
+** Inside compact: Closed $\subseteq$ Compact
+
+
+
+** T_2: Compact $\subseteq$ Closed
+
+*** Counterexamples
+
+**** Zariski Topology
+
+Consider the Zariski topology on $\mathbb{R}$: the only closed sets are finite points and the whole space.
+
+Every subset is compact
+- proper open sets are precisely those subsets which have a finite number of points removed from the whole space.
+- given any subset, and an open cover $A \subseteq \bigcup_{\alpha} F_\alpha^c = (\bigcap_{\alpha} F_\alpha )^c$, there will only be a finite number of points missing in the cover (since you're taking the intersection of a collection of finite sets): $A \subseteq \bigcup_{\alpha} F_\alpha^c = F^c$.  
+
+You can then just pick one set for each of these missing points, and that gives you a finite subcover.
+
+Now the set $(0,1)$ is compact but not closed.
+
+** Maps: Compact $\rightarrow$ T_2 are Closed
+:PROPERTIES:
+:ID:       be8fe187-964e-47e3-a501-301da7b3bc2e
+:END:
+
+Let $f: A \to B$ map from a compact space to a Hausdorff one. Then *f is closed*
+
+#+begin_proof
+Let $C \subseteq A$ be closed. Then it is also compact, and so it gets mapped to a compact subset, which is then closed, since $B$ is $T_{2}$.
+#+end_proof
+
+** Continuous Bijections: Compact $\rightarrow$ T_2 are Homeos
+
+#+begin_proof
+[[id:be8fe187-964e-47e3-a501-301da7b3bc2e][Maps: Compact $\rightarrow$ T_2 are Closed]] tells us that our morphism is closed. We can use this to show that $f^{-1}$ is continuous:
+
+Let $C \subseteq A$ be closed. Then $(f^{-1})^{-1} (C) = f(C)$ is closed.
+#+end_proof
+
+

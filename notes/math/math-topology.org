@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       60f46dc7-8811-432f-8555-dc0a2e6314a5
+:END:
+#+title: topology
+#+filetags: :math:topology:
+
+* References
+
+* Summary
+
+* Definitions
+
+** Topology
+
+** Finer Topology
+
+*** Intuition
+
+Adding open sets makes the space *more disconnected*.
+This can destroy things like compactness --- points become too separated
+
+** Coarser Topology
+
+When we take the weak topology we make our topology coarser; the resolution lowers and the unit ball can become compact.

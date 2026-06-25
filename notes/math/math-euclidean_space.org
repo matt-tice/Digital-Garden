@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       c570ba9d-842d-4994-879e-53ee5f617f52
+:END:
+#+title: euclidean space
+#+filetags: :math:reals:geometry:topology:
+
+* References
+
+* Summary
+
+* Theorems
+
+** Heine-Borel
+
+Compact sets are precisely the closed and bounded subsets
+
+** Bolzano-Weierstrass
+
+Compactness is equivalent to sequential compactness
+
+*** The Long Line
+
+Sequentially compact but not compact
+
+

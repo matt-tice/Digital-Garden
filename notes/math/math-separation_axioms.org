@@ -1,0 +1,114 @@
+:PROPERTIES:
+:ID:       16db1d0a-0345-4b59-922f-75ed550db08d
+:END:
+#+title: separation axioms
+#+filetags: :math:topology:
+
+* References
+
+* Summary
+
+The separation axioms are meant to encode a certain concept of /distance/ on your space. Full metric spaces satisfy all of the separation axioms; as you satisfy fewer and fewer of these axioms, your concept of distance weakens accordingly.
+
+* Definitions
+
+** Not even T_0
+
+*** Examples
+
+**** Pseudometric Spaces
+
+** T_0
+
+*** Inuition
+
+When points aren't closed (ie. not $T_{1}$) we can have *generic points* whose closures are massive.
+
+*** Examples
+
+**** Zariski Topology on Spec(R)
+
+$T_{0}$ but not $T_{1}$.
+
+**** Scott Topology
+
+$T_{0}$ but not $T_{1}$
+
+**** Alexandrov Topology on a Poset
+
+$T_{0}$ but not $T_{1}$.
+
+** T_1 (Tychonoff)
+
+A topological space is $T_{1}$ if every singleton is a closed set.
+
+*** Examples
+
+**** Zariski Topology
+
+$T_{1}$ but not $T_{2}$ unless the space is finite
+Every non-empty set is dense
+
+
+** T_2 (Hausdorff)
+
+*** Intuition
+
+Has unique limits for nets and filters
+Compact sets are closed.
+
+*** Examples
+
+**** K-Topology
+
+Let $K = \{ 1/n \mid n \in \mathbb{N}_{> 0} \}$. The K-topology on $\mathbb{R}$ contains all the open intervals plus all sets of the form
+\[
+(a,b) \setminus K
+\]
+
+It's $T_{2}$ but not $T_{3}$.
+
+** T_3 (Regular)
+
+A space is $T_{3}$ if it is $T_{1}$ and every closed set $C$ and point $x \notin C$ can be separated by disjoint open sets.
+
+*** Intuition
+
+The space is locally uniform
+You get to say that closed sets have sharp edges, and points outside of them have a certain amount of distance.
+
+*** Examples
+
+**** Moore-Niemytzki Plane
+
+Consider $\mathbb{H}_{\geq 0} = \{ (x,y) \in \mathbb{R}^{2} \mid y \geq 0 \}$
+
+For points above the x-axis, open sets are the ordinary open sets in $\mathbb{R}^{2}$. For points on the x-axis, basic open neighbourhoods are open disks that hit the x-axis at exactly that point
+
+$T_{3}$ but not $T_{4}$
+
+**** Sorgenfrey Product
+
+$\mathbb{R}_{\ell} \times \mathbb{R}_{\ell}$ is $T_{3}$ but not $T_{4}$.
+
+** T_4 (Normal)
+
+*** Intuition
+
+Helps you to assign things like energy levels, coordinate charts, measures, etc.
+
+*** Examples
+
+**** Sorgenfrey Line
+
+The real line with lower limit topology is $T_{4}$ but not metrizable.
+
+* Theorems
+
+** Urysohn's Lemma
+
+*** Partition of Unity
+
+** 
+
+** Tietze Extension Theorem

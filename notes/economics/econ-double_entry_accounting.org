@@ -2,12 +2,45 @@
 :ID:       52c638bd-6cd9-4049-9a8d-4e2a91a44726
 :END:
 #+title: double entry accounting
-#+filetags: :economics:accounting:
+#+filetags: :economics:accounting:bookkeeping:ledger:
 
 * References
 
 
 * Summary
+
+The essential constaraint is that *everything must balance to zero*
+- money never appears or disappears; it just moves from one account to another
+
+Assets + Expenses + Liabilities + Equity + Income = 0
+
+* Ledger
+
+Every entry has the same format
+
+#+begin_src ledger
+date [status] Payee
+  [Type]:Target:Account             [Cost]
+  [Type]:Source:Account
+#+end_src
+
+=Type= is one of 
+{Assets, Expenses, Liabilities, Equity, Income}
+
+=Status= 
+{* (cleared), }
+
+=Account:= The source and target accounts are arbitrary names you use to denote where the money comes from and goes
+- ex. Food:Groceries
+
+
+** Shortcuts
+
+=C-c C-a:= Add transaction
+
+=C-c C-c:= Aligns the numbers
+
+=TAB:= Autocomplete
 
 * Standard Accounts
 

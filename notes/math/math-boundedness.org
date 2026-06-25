@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:       6119ab67-6fe3-4b23-9c40-51c79997d143
+:END:
+#+title: boundedness
+#+filetags: :math:topology:func_analysis:
+
+* References
+
+* Summary
+
+* Definitions
+
+** von Neumann Boundedness
+
+Let $V$ be a topological vector space. A subset $B \subseteq V$ is /von Neumann bounded/ if for every open neighbourhood of the origin, $U \in \mathcal{N}_{0}$, there is a scalar $\lambda > 0$ such that
+\[
+B \subseteq \alpha U
+\]
+for all $|\alpha| \geq \lambda$.
+
+*** Intuition
+
+In an infinite-dimensional space, bounded sets aren't dimensionally-small (they're not compact); meaning, there's /so much space inside of them/ that they can't be covered well.
+
+But, these spaces can still be *bounded* --- their /points are held (not necessarily close) together/. So there are no flares that escape to infinity, even those the dimensional space between points can be enormous.
+
+** Precompact (Totally Bounded)
+
+** Bornological Spaces
+
+* Theorems
+
+** $T_{2}:$ Compact $\subseteq$ Precompact $\subseteq$ von Neumann Bounded
+
+
+** Mackey-Ulam Theorem
+
+Let $V$ be a locally convex topological vector space. Then a set $B$ is von Neumann bounded if and only if the space is *semi-Montel*.
+
+** Banach-Alaoglu Theorem
+
+Let $N$ be a normed vector space. Then the closed unit ball in $N'$ is compact in the weak topology.
