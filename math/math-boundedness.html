@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>double entry accounting</title>
+  <title>boundedness</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,50 +166,45 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">double entry accounting</h1>
+<h1 class="title">boundedness</h1>
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
-<p>The essential constaraint is that <strong>everything must balance to
-zero</strong></p>
-<ul>
-<li>money never appears or disappears; it just moves from one account to
-another</li>
-</ul>
-<p>Assets + Expenses + Liabilities + Equity + Income = 0</p>
-<h1 id="ledger">Ledger</h1>
-<p>Every entry has the same format</p>
-<pre class="ledger"><code>date [status] Payee
-  [Type]:Target:Account             [Cost]
-  [Type]:Source:Account
-</code></pre>
-<p><code class="verbatim">Type</code> is one of {Assets, Expenses,
-Liabilities, Equity, Income}</p>
-<p><code class="verbatim">Status</code> {* (cleared), }</p>
-<p><code class="verbatim">Account:</code> The source and target accounts
-are arbitrary names you use to denote where the money comes from and
-goes</p>
-<ul>
-<li>ex. Food:Groceries</li>
-</ul>
-<h2 id="shortcuts">Shortcuts</h2>
-<p><code class="verbatim">C-c C-a:</code> Add transaction</p>
-<p><code class="verbatim">C-c C-c:</code> Aligns the numbers</p>
-<p><code class="verbatim">TAB:</code> Autocomplete</p>
-<h1 id="standard-accounts">Standard Accounts</h1>
-<h2 id="assets">Assets</h2>
-<p>Cash, stocks, equipment</p>
-<h2 id="liabilities">Liabilities</h2>
-<p>Margin debt, credit cards, personal line of credit</p>
-<h2 id="equity">Equity</h2>
-<p>Net worth, opening balances, retained earnings</p>
-<p>Equity is really a kind of artificial bookeeping concept. By
-definition, Equity = Assets - Liabilities.</p>
-<p>You can use equity in order to make sure the books always balance in
-a double-entry system.</p>
-<h2 id="income">Income</h2>
-<p>Money flowing in</p>
-<h2 id="expenses">Expenses</h2>
-<p>Money flowing out</p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="von-neumann-boundedness">von Neumann Boundedness</h2>
+<p>Let <span class="math inline"><em>V</em></span> be a topological
+vector space. A subset <span
+class="math inline"><em>B</em> ⊆ <em>V</em></span> is <em>von Neumann
+bounded</em> if for every open neighbourhood of the origin, <span
+class="math inline"><em>U</em> ∈ 𝒩<sub>0</sub></span>, there is a scalar
+<span class="math inline"><em>λ</em> &gt; 0</span> such that <span
+class="math display"><em>B</em> ⊆ <em>α</em><em>U</em></span> for all
+<span class="math inline">|<em>α</em>| ≥ <em>λ</em></span>.</p>
+<h3 id="intuition">Intuition</h3>
+<p>In an infinite-dimensional space, bounded sets aren't
+dimensionally-small (they're not compact); meaning, there's <em>so much
+space inside of them</em> that they can't be covered well.</p>
+<p>But, these spaces can still be <strong>bounded</strong> — their
+<em>points are held (not necessarily close) together</em>. So there are
+no flares that escape to infinity, even those the dimensional space
+between points can be enormous.</p>
+<h2 id="precompact-totally-bounded">Precompact (Totally Bounded)</h2>
+<h2 id="bornological-spaces">Bornological Spaces</h2>
+<h1 id="theorems">Theorems</h1>
+<h2
+id="t_2-compact-subseteq-precompact-subseteq-von-neumann-bounded"><span
+class="math inline"><em>T</em><sub>2</sub>:</span> Compact <span
+class="math inline">⊆</span> Precompact <span
+class="math inline">⊆</span> von Neumann Bounded</h2>
+<h2 id="mackey-ulam-theorem">Mackey-Ulam Theorem</h2>
+<p>Let <span class="math inline"><em>V</em></span> be a locally convex
+topological vector space. Then a set <span
+class="math inline"><em>B</em></span> is von Neumann bounded if and only
+if the space is <strong>semi-Montel</strong>.</p>
+<h2 id="banach-alaoglu-theorem">Banach-Alaoglu Theorem</h2>
+<p>Let <span class="math inline"><em>N</em></span> be a normed vector
+space. Then the closed unit ball in <span
+class="math inline"><em>N</em>′</span> is compact in the weak
+topology.</p>
 </body>
 </html>

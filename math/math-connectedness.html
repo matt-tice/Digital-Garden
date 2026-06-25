@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>double entry accounting</title>
+  <title>connectedness</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,50 +166,19 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">double entry accounting</h1>
+<h1 class="title">connectedness</h1>
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
-<p>The essential constaraint is that <strong>everything must balance to
-zero</strong></p>
-<ul>
-<li>money never appears or disappears; it just moves from one account to
-another</li>
-</ul>
-<p>Assets + Expenses + Liabilities + Equity + Income = 0</p>
-<h1 id="ledger">Ledger</h1>
-<p>Every entry has the same format</p>
-<pre class="ledger"><code>date [status] Payee
-  [Type]:Target:Account             [Cost]
-  [Type]:Source:Account
-</code></pre>
-<p><code class="verbatim">Type</code> is one of {Assets, Expenses,
-Liabilities, Equity, Income}</p>
-<p><code class="verbatim">Status</code> {* (cleared), }</p>
-<p><code class="verbatim">Account:</code> The source and target accounts
-are arbitrary names you use to denote where the money comes from and
-goes</p>
-<ul>
-<li>ex. Food:Groceries</li>
-</ul>
-<h2 id="shortcuts">Shortcuts</h2>
-<p><code class="verbatim">C-c C-a:</code> Add transaction</p>
-<p><code class="verbatim">C-c C-c:</code> Aligns the numbers</p>
-<p><code class="verbatim">TAB:</code> Autocomplete</p>
-<h1 id="standard-accounts">Standard Accounts</h1>
-<h2 id="assets">Assets</h2>
-<p>Cash, stocks, equipment</p>
-<h2 id="liabilities">Liabilities</h2>
-<p>Margin debt, credit cards, personal line of credit</p>
-<h2 id="equity">Equity</h2>
-<p>Net worth, opening balances, retained earnings</p>
-<p>Equity is really a kind of artificial bookeeping concept. By
-definition, Equity = Assets - Liabilities.</p>
-<p>You can use equity in order to make sure the books always balance in
-a double-entry system.</p>
-<h2 id="income">Income</h2>
-<p>Money flowing in</p>
-<h2 id="expenses">Expenses</h2>
-<p>Money flowing out</p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="connected">Connected</h2>
+<h3 id="examples">Examples</h3>
+<ol>
+<li><p>Topologist's Sine Curve</p>
+<p>Connected but not path-connected</p></li>
+</ol>
+<h2 id="path-connected">Path-Connected</h2>
+<h2 id="locally-connected">Locally Connected</h2>
+<h1 id="theorems">Theorems</h1>
 </body>
 </html>

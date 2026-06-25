@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>double entry accounting</title>
+  <title>topology</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,50 +166,19 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">double entry accounting</h1>
+<h1 class="title">topology</h1>
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
-<p>The essential constaraint is that <strong>everything must balance to
-zero</strong></p>
-<ul>
-<li>money never appears or disappears; it just moves from one account to
-another</li>
-</ul>
-<p>Assets + Expenses + Liabilities + Equity + Income = 0</p>
-<h1 id="ledger">Ledger</h1>
-<p>Every entry has the same format</p>
-<pre class="ledger"><code>date [status] Payee
-  [Type]:Target:Account             [Cost]
-  [Type]:Source:Account
-</code></pre>
-<p><code class="verbatim">Type</code> is one of {Assets, Expenses,
-Liabilities, Equity, Income}</p>
-<p><code class="verbatim">Status</code> {* (cleared), }</p>
-<p><code class="verbatim">Account:</code> The source and target accounts
-are arbitrary names you use to denote where the money comes from and
-goes</p>
-<ul>
-<li>ex. Food:Groceries</li>
-</ul>
-<h2 id="shortcuts">Shortcuts</h2>
-<p><code class="verbatim">C-c C-a:</code> Add transaction</p>
-<p><code class="verbatim">C-c C-c:</code> Aligns the numbers</p>
-<p><code class="verbatim">TAB:</code> Autocomplete</p>
-<h1 id="standard-accounts">Standard Accounts</h1>
-<h2 id="assets">Assets</h2>
-<p>Cash, stocks, equipment</p>
-<h2 id="liabilities">Liabilities</h2>
-<p>Margin debt, credit cards, personal line of credit</p>
-<h2 id="equity">Equity</h2>
-<p>Net worth, opening balances, retained earnings</p>
-<p>Equity is really a kind of artificial bookeeping concept. By
-definition, Equity = Assets - Liabilities.</p>
-<p>You can use equity in order to make sure the books always balance in
-a double-entry system.</p>
-<h2 id="income">Income</h2>
-<p>Money flowing in</p>
-<h2 id="expenses">Expenses</h2>
-<p>Money flowing out</p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="topology-1">Topology</h2>
+<h2 id="finer-topology">Finer Topology</h2>
+<h3 id="intuition">Intuition</h3>
+<p>Adding open sets makes the space <strong>more disconnected</strong>.
+This can destroy things like compactness — points become too
+separated</p>
+<h2 id="coarser-topology">Coarser Topology</h2>
+<p>When we take the weak topology we make our topology coarser; the
+resolution lowers and the unit ball can become compact.</p>
 </body>
 </html>

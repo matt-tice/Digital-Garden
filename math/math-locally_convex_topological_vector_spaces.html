@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>double entry accounting</title>
+  <title>locally convex topological vector spaces</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,50 +166,27 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">double entry accounting</h1>
+<h1 class="title">locally convex topological vector spaces</h1>
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
-<p>The essential constaraint is that <strong>everything must balance to
-zero</strong></p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="reflexive">Reflexive</h2>
+<p>A locally convex topological vector space, <span
+class="math inline"><em>V</em></span> is called
+<strong>reflexive</strong> if <span
+class="math inline"><em>V</em> ≅ <em>V</em><sup>″</sup></span> by the
+evaluation map</p>
+<h3 id="intuition">Intuition</h3>
+<p>Reflexive spaces are something like <em>finite-dimensional
+spaces</em></p>
 <ul>
-<li>money never appears or disappears; it just moves from one account to
-another</li>
+<li>unit balls are weakly compact (compact in the weak topology)</li>
+<li></li>
 </ul>
-<p>Assets + Expenses + Liabilities + Equity + Income = 0</p>
-<h1 id="ledger">Ledger</h1>
-<p>Every entry has the same format</p>
-<pre class="ledger"><code>date [status] Payee
-  [Type]:Target:Account             [Cost]
-  [Type]:Source:Account
-</code></pre>
-<p><code class="verbatim">Type</code> is one of {Assets, Expenses,
-Liabilities, Equity, Income}</p>
-<p><code class="verbatim">Status</code> {* (cleared), }</p>
-<p><code class="verbatim">Account:</code> The source and target accounts
-are arbitrary names you use to denote where the money comes from and
-goes</p>
-<ul>
-<li>ex. Food:Groceries</li>
-</ul>
-<h2 id="shortcuts">Shortcuts</h2>
-<p><code class="verbatim">C-c C-a:</code> Add transaction</p>
-<p><code class="verbatim">C-c C-c:</code> Aligns the numbers</p>
-<p><code class="verbatim">TAB:</code> Autocomplete</p>
-<h1 id="standard-accounts">Standard Accounts</h1>
-<h2 id="assets">Assets</h2>
-<p>Cash, stocks, equipment</p>
-<h2 id="liabilities">Liabilities</h2>
-<p>Margin debt, credit cards, personal line of credit</p>
-<h2 id="equity">Equity</h2>
-<p>Net worth, opening balances, retained earnings</p>
-<p>Equity is really a kind of artificial bookeeping concept. By
-definition, Equity = Assets - Liabilities.</p>
-<p>You can use equity in order to make sure the books always balance in
-a double-entry system.</p>
-<h2 id="income">Income</h2>
-<p>Money flowing in</p>
-<h2 id="expenses">Expenses</h2>
-<p>Money flowing out</p>
+<h3 id="examples">Examples</h3>
+<ol>
+<li><p>Separable Hilbert spaces</p></li>
+</ol>
 </body>
 </html>
