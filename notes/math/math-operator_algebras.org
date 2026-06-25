@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       eda02fc6-1215-48ad-8b63-c6d37b92f11c
+:END:
+#+title: operator algebras
+#+filetags: :math:operators:func_analysis:
+
+* References
+
+* Summary
+
+Unlike looking at individual [[id:1c00eb55-101f-4f11-b54d-10e27da4a9f2][operators]], the study of operator algebras focuses on collections of operators that satisfy some algebraic structure conditions.

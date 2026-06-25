@@ -8,8 +8,80 @@
 
 * Summary
 
-* Self-Adjoint
+
+* Definitions
+
+** Types of Operators
+
+*** Self-Adjoint
+
+*** Symmetric
+
+\[
+\langle Ax \mid y \rangle= \langle x \mid Ay \rangle
+\]
+
+*** Closed
+
+*** Continuous
+
+*** Bounded
+
+A linear operator $A: X \rightarrow Y$ is called /bounded/ if it maps bounded subsets to bounded subsets.
+
+* Theorems
 
 ** Spectral Theorem
 
 *** Projection valued measures
+
+** Closed Graph Theorem
+
+A linear map between Banach spaces is continuous if and only if its graph is closed.
+
+
+** Hellinger-Toeplitz
+
+Let $A$ be a symmetric operator defined everywhere on a Hilbert space. Then $A$ is bounded.
+
+** Continuous = Continuous at a Point
+
+** Continuous \subset Bounded
+
+
+
+*** Bounded = Continuous
+
+Let $A$ be a linear operator from a bornological space to a locally convex space. Then $A$ is bounded if and only if it's continuous.
+
+**** Counter-example: Weak Topology
+
+** GNS Theorem
+
+ Every commutative unital \(C^{*}\)-algebra A is isometrically *-isomorphic to C(K), the space of continuous complex-valued functions on a compact Hausdorff space K
+
+Every arbitrary \(C^{*}\)-algebra A admits a faithful, isometric *-representation as a closed subalgebra of B(H), the algebra of bounded operators on some Hilbert space H.
+
+** Double Commutant Theorem
+
+** Kaaplansky Density Theorem
+
+** Tomita-Takesaki Theorem
+
+For any von Neumann algebra in standard form with a cyclic and separating vector, there exists a canonical one-parameter quantum evolution group (modular automorphism group).
+
+** Wintner-Wielandt Theorem
+
+** Stone-von Neumann Theorem
+
+** Mackey-Arens Theorem
+
+** Baire's Category Theorem
+
+** Banach-Alaoglu Theorem
+
+** Krein-Milman Theorem
+
+** Bochner-Minlos Theorem
+
+** Minlos-Sazanov Theorem
