@@ -13,7 +13,6 @@ Physical commodity market
 
 Leveraged financial derivative
 
-
 Something like HOU is designed to deliver 200% of the *daily return* of crude oil futures.
 - it is decidedly /not/ meant to track the /price of oil/ over time
 - the fund resets its leverage every day
