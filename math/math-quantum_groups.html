@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>quantum groups</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">quantum groups</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>Consider two primitive elements <span
+class="math inline"><em>x</em>, <em>y</em></span>. We try to impose a
+quantum deformation <span
+class="math inline"><em>x</em><em>y</em> = <em>q</em><em>y</em><em>x</em></span>.
+But the coproduct is no longer multiplicative</p>
+<p><span
+class="math inline"><em>Δ</em>(<em>x</em>)<em>Δ</em>(<em>y</em>) = <em>x</em><em>y</em> ⊗ 1 + <em>x</em> ⊗ <em>y</em> + <em>y</em> ⊗ <em>x</em> + 1 ⊗ <em>x</em><em>y</em> = <em>q</em><em>y</em><em>x</em> ⊗ 1 + <em>x</em> ⊗ <em>y</em> + <em>y</em> ⊗ <em>x</em> + <em>q</em>(1⊗<em>y</em><em>x</em>)</span>
+<span
+class="math inline"><em>Δ</em>(<em>x</em>)<em>Δ</em>(<em>y</em>) − <em>q</em><em>Δ</em>(<em>y</em>)<em>Δ</em>(<em>x</em>) = <em>x</em> ⊗ <em>y</em> + <em>y</em> ⊗ <em>x</em> − <em>q</em><em>x</em> ⊗ <em>y</em> − <em>q</em><em>y</em> ⊗ <em>x</em></span></p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="left-adjoint-action">Left Adjoint Action</h2>
+<h2 id="dual-pairing">Dual Pairing</h2>
+<p>A <strong>dual pairing</strong> of bialgebras is a non-degenerate
+bilinear form such that <span
+class="math inline">⟨<em>x</em><em>y</em>, <em>z</em>⟩ = ∑⟨<em>x</em>, <em>z</em><sub>(1)</sub>⟩⟨<em>y</em>, <em>z</em><sub>(2)</sub>⟩</span>
+<span
+class="math inline">⟨<em>x</em>, <em>y</em><em>z</em>⟩ = ∑⟨<em>x</em><sub>(1)</sub>, <em>y</em>⟩⟨<em>x</em><sub>(2)</sub>, <em>z</em>⟩</span></p>
+<p>and possibly <span
+class="math inline">⟨<em>S</em>(<em>x</em>), <em>y</em>⟩ = ⟨<em>x</em>, <em>S</em>(<em>y</em>)⟩</span>
+<span
+class="math inline">⟨1, <em>y</em>⟩ = <em>ε</em>(<em>y</em>)</span>
+<span
+class="math inline">⟨<em>x</em>, 1⟩ = <em>ε</em>(<em>x</em>)</span></p>
+<p>A dual pairing between a Hopf algebra and itself is called a
+<strong>Laplace pairing</strong>, but I'll refer to any dual pairing as
+a Laplace pairing.</p>
+<h3 id="coquasitriangular-structure">Coquasitriangular Structure</h3>
+<p>A Laplace pairing is called a <strong>coquasitriangular
+structure</strong> if it also satisfies <span
+class="math display">∑⟨<em>x</em><sub>(1)</sub>, <em>y</em><sub>(1)</sub>⟩<em>x</em><sub>(2)</sub><em>y</em><sub>(2)</sub> = ∑<em>x</em><sub>(1)</sub><em>y</em><sub>(1)</sub>⟨<em>x</em><sub>(2)</sub>, <em>y</em><sub>(2)</sub>⟩</span></p>
+<h2 id="coregular-actions">Coregular Actions</h2>
+<p>Consider a dual pair of bialgebras <span
+class="math inline">⟨<em>A</em>, <em>B</em>⟩ → <em>k</em></span>.</p>
+<p>We have 4 different actions:</p>
+<ol>
+<li>Left action of <span class="math inline"><em>A</em></span> on <span
+class="math inline"><em>B</em></span></li>
+</ol>
+<p><span
+class="math display">⟨<em>a</em>, <em>a</em>′ ⇀ <em>b</em>⟩ = ⟨<em>a</em><em>a</em>′, <em>b</em>⟩ = ∑⟨<em>a</em>, <em>b</em><sub>(1)</sub>⟩⟨<em>a</em>′, <em>b</em><sub>(2)</sub>⟩</span></p>
+<p><span
+class="math inline"><em>a</em>′ ⇀ <em>b</em> = ∑<em>b</em><sub>(1)</sub>⟨<em>a</em>′, <em>b</em><sub>(2)</sub>⟩</span></p>
+<p><code class="verbatim">Mnemonic:</code> a' passes through one factor
+of the coproduct and then pairs with the second factor.</p>
+<ol>
+<li>Right action of <span class="math inline"><em>A</em></span> on <span
+class="math inline"><em>B</em></span></li>
+</ol>
+<p><span
+class="math display">⟨<em>a</em>, <em>b</em> ↼ <em>a</em>′⟩ = ⟨<em>a</em>′<em>a</em>, <em>b</em>⟩ = ∑⟨<em>a</em>′, <em>b</em><sub>(1)</sub>⟩⟨<em>a</em>, <em>b</em><sub>(2)</sub>⟩</span></p>
+<p><span
+class="math inline"><em>b</em> ↼ <em>a</em>′ = ∑⟨<em>a</em>′, <em>b</em><sub>(1)</sub>⟩<em>b</em><sub>(2)</sub></span></p>
+<p><code class="verbatim">Mnemonic:</code> a' passes through one factor
+of the coproduct and then pairs with the first factor.</p>
+<ol>
+<li>Left action of <span class="math inline"><em>B</em></span> on <span
+class="math inline"><em>A</em></span></li>
+</ol>
+<p><span
+class="math display">⟨<em>b</em> ⊳ <em>a</em>, <em>b</em>′⟩ = ⟨<em>a</em>, <em>b</em>′<em>b</em>⟩ = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em>′⟩⟨<em>a</em><sub>(2)</sub>, <em>b</em>⟩</span></p>
+<p>since this holds for all b' we have <span
+class="math inline"><em>b</em> ⊳ <em>a</em> = ∑<em>a</em><sub>(1)</sub>⟨<em>a</em><sub>(2)</sub>, <em>b</em>⟩</span></p>
+<p><code class="verbatim">Mnemonic:</code> b passes through one factor
+of the coproduct and then pairs with the second factor.</p>
+<ol>
+<li>Right action <span class="math inline"><em>B</em></span> on <span
+class="math inline"><em>A</em></span></li>
+</ol>
+<p><span
+class="math display">⟨<em>a</em> ⊲ <em>b</em>, <em>b</em>′⟩ = ⟨<em>a</em>, <em>b</em><em>b</em>′⟩ = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em>⟩⟨<em>a</em><sub>(2)</sub>, <em>b</em>′⟩</span></p>
+<p><span
+class="math inline"><em>a</em> ⊲ <em>b</em> = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em>⟩<em>a</em><sub>(2)</sub></span></p>
+<p><code class="verbatim">Mnemonic:</code> b passes through one factor
+of the coproduct and then pairs with the first factor.</p>
+<h3 id="order">Order</h3>
+<p>Let's check that the ordering is appropriate to give us left/right
+actions</p>
+<ol>
+<li><p><span
+class="math inline">⟨<em>a</em>, <em>a</em>′ ⇀ (<em>a</em>″⇀<em>b</em>)⟩ = ⟨<em>a</em><em>a</em>′, <em>a</em>″ ⇀ <em>b</em>⟩ = ⟨<em>a</em><em>a</em>′<em>a</em>″, <em>b</em>⟩</span></p></li>
+<li><p><span
+class="math inline">⟨<em>a</em>, (<em>b</em>↼<em>a</em>′) ↼ <em>a</em>″⟩ = ⟨<em>a</em>″<em>a</em>, <em>b</em> ↼ <em>a</em>′⟩ = ⟨(<em>a</em>′<em>a</em>″)<em>a</em>, <em>b</em>⟩</span></p></li>
+<li><p><span
+class="math inline">⟨<em>b</em>′ ⊳ (<em>b</em>⊳<em>a</em>), <em>b</em>″⟩ = ⟨<em>b</em> ⊳ <em>a</em>, <em>b</em>″<em>b</em>′⟩ = ⟨<em>a</em>, <em>b</em>″(<em>b</em>′<em>b</em>)⟩</span></p></li>
+<li><p><span
+class="math inline">⟨(<em>a</em>⊲<em>b</em>) ⊲ <em>b</em>′, <em>b</em>″⟩ = ⟨<em>a</em> ⊲ <em>b</em>, <em>b</em>′<em>b</em>″⟩ = ⟨<em>a</em>, <em>b</em><em>b</em>′<em>b</em>″⟩</span></p></li>
+</ol>
+<p>So it's actually pretty easy to tell when you have to swap the order
+of things in the pairing; it happens when you have to move <span
+class="math inline"><em>a</em></span> and <span
+class="math inline"><em>b</em></span> past each other.</p>
+<h3 id="intuition">Intuition</h3>
+<p>Let <span class="math inline"><em>H</em></span> be a
+finite-dimensional Hopf algebra and consider its algebraic dual <span
+class="math inline"><em>H</em><sup>*</sup></span>. We have the
+evaluation pairing <span
+class="math display">⟨<em>ϕ</em>, <em>g</em>⟩ = <em>ϕ</em>(<em>g</em>)</span></p>
+<p>The <strong>left and right coregular actions</strong> of <span
+class="math inline"><em>H</em></span> on <span
+class="math inline"><em>H</em><sup>*</sup></span> are defined by <span
+class="math inline">⟨<em>g</em> ⋅ <em>ϕ</em>, <em>h</em>⟩ = ⟨<em>ϕ</em>, <em>h</em><em>g</em>⟩</span>
+and <span
+class="math inline">⟨<em>ϕ</em> ⋅ <em>g</em>, <em>h</em>⟩ = ⟨<em>ϕ</em>, <em>g</em><em>h</em>⟩</span>.
+In other words, <span
+class="math inline">(<em>g</em>⋅<em>ϕ</em>)(<em>h</em>) = <em>ϕ</em>(<em>h</em><em>g</em>)</span>
+and <span
+class="math inline">(<em>ϕ</em>⋅<em>g</em>)(<em>h</em>) = <em>ϕ</em>(<em>g</em><em>h</em>)</span>.</p>
+<p>Since the pairing is non-degenerate, <span
+class="math inline"><em>g</em> ⋅ <em>ϕ</em></span> and <span
+class="math inline"><em>ϕ</em> ⋅ <em>g</em></span> are determined
+completely by how they pair with all of the <span
+class="math inline"><em>h</em> ∈ <em>H</em></span>.</p>
+<h2 id="heisenberg-double">Heisenberg Double</h2>
+<p><code class="verbatim">Note:</code> Part of the confusion with these
+doubles is that you can define them with either orientation: if you have
+a pairing <span class="math inline">⟨<em>A</em>, <em>B</em>⟩</span>, you
+can get a double <span
+class="math inline"><em>A</em> ⊗ <em>B</em></span> and one <span
+class="math inline"><em>B</em> ⊗ <em>A</em></span>.</p>
+<p>The <strong>Heisenberg doubles</strong> of a dual pair <span
+class="math inline">⟨<em>A</em>, <em>B</em>⟩</span> are algebra
+structures on <span class="math inline"><em>A</em> ⊗ <em>B</em></span>
+and <span class="math inline"><em>B</em> ⊗ <em>A</em></span> given
+by</p>
+<p>On <span class="math inline"><em>A</em> ⊗ <em>B</em></span>: [this is
+like a position representation] [Standard left Heisenberg double] <span
+class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑(<em>b</em><sub>(1)</sub>⊳<em>a</em>) ⊗ <em>b</em><sub>(2)</sub> = ∑<em>a</em><sub>(1)</sub> ⊗ <em>b</em><sub>(2)</sub>⟨<em>a</em><sub>(2)</sub>, <em>b</em><sub>(1)</sub>⟩</span>
+[Standard right Heisenberg double] <span
+class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑(<em>a</em>⊲<em>b</em><sub>(1)</sub>) ⊗ <em>b</em><sub>(2)</sub> = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em><sub>(1)</sub>⟩<em>a</em><sub>(2)</sub> ⊗ <em>b</em><sub>(2)</sub></span>
+[Standard right contraction] <span
+class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑<em>a</em><sub>(1)</sub> ⊗ (<em>b</em><sub></sub>↼<em>a</em><sub>(2)</sub>) = ∑⟨<em>a</em><sub>(2)</sub>, <em>b</em><sub>(1)</sub>⟩<em>a</em><sub>(1)</sub> ⊗ <em>b</em><sub>(2)</sub></span>
+[Standard left contraction] <span
+class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑<em>a</em><sub>(1)</sub> ⊗ (<em>a</em><sub>(2)</sub>⇀<em>b</em>) = ∑⟨<em>a</em><sub>(2)</sub>, <em>b</em><sub>(2)</sub>⟩<em>a</em><sub><sub>(1)</sub></sub> ⊗ <em>b</em><sub>(1)</sub></span></p>
+<p><code class="verbatim">Note:</code> The 1st and 3rd options are
+<strong>the same</strong> (but i don't think they are in the graded
+case?)</p>
+<p>and swapping (1) and (2): <span
+class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑(<em>b</em><sub>(2)</sub>⊳<em>a</em>) ⊗ <em>b</em><sub>(1)</sub></span>
+<span
+class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑(<em>a</em>⊲<em>b</em><sub>(2)</sub>) ⊗ <em>b</em><sub>(1)</sub></span>
+<span
+class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑<em>a</em><sub>(2)</sub> ⊗ (<em>b</em><sub></sub>↼<em>a</em><sub>(1)</sub>)</span>
+<span
+class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑<em>a</em><sub>(2)</sub> ⊗ (<em>a</em><sub>(1)</sub>⇀<em>b</em>)</span></p>
+<p>On <span class="math inline"><em>B</em> ⊗ <em>A</em></span>: [this is
+like a momentum representation] <span
+class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑<em>b</em><sub>(1)</sub> ⊗ (<em>b</em><sub>(2)</sub>⊳<em>a</em>)</span>
+<span
+class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑<em>b</em><sub>(1)</sub> ⊗ (<em>a</em>⊲<em>b</em><sub>(2)</sub>)</span>
+<span
+class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑(<em>a</em><sub>(1)</sub>⇀<em>b</em>) ⊗ <em>a</em><sub>(2)</sub></span>
+<span
+class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑(<em>b</em>↼<em>a</em><sub>(1)</sub>) ⊗ <em>a</em><sub>(2)</sub></span></p>
+<p>and the twists <span
+class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑<em>b</em><sub>(2)</sub> ⊗ (<em>b</em><sub>(1)</sub>⊳<em>a</em>)</span>
+<span
+class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑<em>b</em><sub>(2)</sub> ⊗ (<em>a</em>⊲<em>b</em><sub>(1)</sub>)</span>
+<span
+class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑(<em>a</em><sub>(2)</sub>⇀<em>b</em>) ⊗ <em>a</em><sub>(1)</sub></span>
+<span
+class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑(<em>b</em>↼<em>a</em><sub>(2)</sub>) ⊗ <em>a</em><sub>(1)</sub></span></p>
+<h3 id="preference">Preference</h3>
+<p>I'm going to stick with the <strong>right Heisenberg dual</strong>:
+it keeps <span class="math inline"><em>A</em></span> and <span
+class="math inline"><em>B</em></span> in the right order, and the
+numbers match up nicely</p>
+<p><span
+class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑(<em>a</em>⊲<em>b</em><sub>(1)</sub>) ⊗ <em>b</em><sub>(2)</sub> = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em><sub>(1)</sub>⟩<em>a</em><sub>(2)</sub> ⊗ <em>b</em><sub>(2)</sub></span></p>
+<h3 id="intuition-1">Intuition</h3>
+<p><span class="math inline"><em>H</em><sup>*</sup> ⊗ <em>H</em></span>
+is the quantum analogue of the <em>cotangent bundle</em> or the <em>Weyl
+algebra</em>. It doesn't naturally have a Hopf algebra structure, but we
+can give it one.</p>
+<p>We want <span
+class="math inline">(<em>ϕ</em>⊗1)(1⊗<em>g</em>) = <em>ϕ</em> ⊗ <em>g</em></span>
+and <span
+class="math inline">(1⊗<em>g</em>)(<em>ϕ</em>⊗1) = ∑⟨<em>ϕ</em><sub>(2)</sub><em>g</em><sub>(1)</sub>⟩<em>ϕ</em><sub>(1)</sub> ⊗ <em>g</em><sub>(2)</sub></span></p>
+<h2 id="drinfeld-double">Drinfel'd Double</h2>
+<p><span
+class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑⟨<em>b</em><sub>()</sub>, <em>S</em>(<em>a</em><sub>()</sub>)⟩⟨<em>b</em></span></p>
+<h3 id="intuition-2">Intuition</h3>
+<p>Unlike the Heisenberg double, the Drinfel'd double is designed to be
+a <em>quasitriangular Hopf algebra</em></p>
+<p><span
+class="math inline">(1⊗<em>g</em>)(<em>ϕ</em>⊗1) = ∑⟨<em>ϕ</em><sub>(1)</sub><em>S</em>(<em>g</em><sub>(1)</sub>)⟩⟨<em>ϕ</em><sub>(3)</sub><em>g</em><sub>(3)</sub>⟩<em>ϕ</em><sub>(2)</sub> ⊗ <em>g</em><sub>(2)</sub></span></p>
+</body>
+</html>
