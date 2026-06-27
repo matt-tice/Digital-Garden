@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:       e45c9451-2d49-4214-8064-53b21e1c2990
+:END:
+#+title: dual pairings
+#+filetags: :math:vector_spaces:func_analysis:topology:
+
+* References
+
+* Summary
+
+* Definitions
+
+** Algebraic Dual
+
+** Continuous Dual
+
+** Dual Pairing
+
+** Compatibility with a Pairing
+
+A topology on $V$ is called *compatible with the pairing* $\langle \cdot, \cdot \rangle$ if the continuous dual is $V^{*}$
+
+** Weak Topology
+
+Let $\langle \cdot, \cdot \rangle : V \times W \rightarrow k$ be a non-degenerate pairing. The *weak topology* $\sigma(V,W)$ is the initial topology on all
+\[
+\langle -, w \rangle : V \rightarrow k
+\]
+
+
+** Mackey Topology
+
+* Theorems
+
+** Mackey-Arens Theorem
+
+A locally convex topological vector space $(V, \tau)$ is compatible with a pairing $\langle \cdot, \cdot \rangle$ if and only if 
+\[
+\sigma(V, V') \subseteq \tau \subseteq \tau(V, V')
+\]
+
+where $\sigma(V,V'^{})$ is the weak topology with respect to the evaluation pairing with the continuous linear functionals defined by $\tau$ and $\tau(V, V')$ is the Mackey topology induced by $\tau$.

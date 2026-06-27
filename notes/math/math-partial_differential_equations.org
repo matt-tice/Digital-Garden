@@ -9,3 +9,52 @@
 * Summary
 
 As it turns out, nice spaces like $C^{\infty}(M), C^{2}(M)$ almost never contain the solutions to interesting partial differential equations.
+
+Many physical solutions simply *aren't differentiable.* Which is to say, there is no solution when we interpret derivatives in the traditional way, where we look at derivatives /at points/ and need them to satisfy the equation pointwise.
+
+Instead, we replace these equations with /distributional equations/ 
+
+The downside is that many equations *no longer have unique solutions*
+
+* Viscosity Solutions
+
+You can add in a /friction/ term $\varepsilon$ in order to make the classical equations actually have a solution. You then pick the weak solution which the classical solutions $f_{\varepsilon}$ converge to as $\varepsilon \rightarrow 0$.
+
+* Euler-Lagrange Equations
+
+* Navier-Stokes
+
+Jean Leray showed in 1934 that weak solutions exist. The problem is that we don't know how these solutions behave over time.
+
+\[
+\partial_{t} u + (u \cdot \nabla)u = \nu \Delta u - \nabla p
+\]
+
+where $\nu \Delta u$ is the *viscosity*
+$(u \cdot \nabla)u$ is the *advection/convection* --- this is what givese turbulence.
+
+Solutions $u$ are known to be bounded in $L^{2}$
+\[
+\int | u(x,t) |^{2} dx \leq M
+\]
+but the topology on $L^{2}$, despite being Hilbert, isn't good for PDEs(!)
+
+When it comes to PDEs, you actually want a topology that isn't too coarse; if it's too weak, you allow all kinds of singular solutions
+
+** Intuition
+
+A coarse/weak topology will have very large open sets, relatively speaking, and so it won't be able to regulate the behaviour of functions on a microscopic level --- this is why you end up with non-singular things
+
+* Theorems
+
+** Darboux's Theorem
+
+*** Discontinuities
+
+Consider $f' = g$. If $g$ has a jump discontinuity, then this has no traditional solution. We instead replace it with the weak equation
+\[
+\int u \phi' = - \int g \phi
+\]
+for all $\phi \in C_{c}^{\infty}$.
+
+That is, we ask for $f$ to be the weak derivative of $g$.

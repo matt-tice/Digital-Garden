@@ -12,13 +12,31 @@
 
 ** Topology
 
-** Finer Topology
+** Finer/Stronger Topology
 
 *** Intuition
 
 Adding open sets makes the space *more disconnected*.
 This can destroy things like compactness --- points become too separated
 
-** Coarser Topology
+It's harder for sequences to converge here. As a consequence this space has nicer bounded and continuous functions
+
+This is why finer spaces tend to form algebras: bounded continuous functions $C^{0}$ is a Banach algebra
+
+Sobolev spaces have finer topologies: sequences have to converge in $L^{2}$ and satisfy other constraints.
+
+When we pass to a dense subspace like Schwartz functions $\mathcal{S} \subseteq L^{2}$, we actually have to change the topology in the background to make it usable; we don't just consider the subspace topology
+- if you do, then solutions that start in Schwartz space at $t=0$ can evolve into messy $L^{2}$ functions in the limit
+
+The actual topology on Schwartz space is defined by a countable family of seminorms
+\[
+\|f\|_{\alpha, \beta} = \sup_{x \in \mathbb{R}^n} \left| x^\alpha \partial^\beta f(x) \right|
+\]
+
+There a lot of continuous functions /out/ of a fine space and very few /into/ a fine space.
+
+** Coarser/Weaker Topology
 
 When we take the weak topology we make our topology coarser; the resolution lowers and the unit ball can become compact.
+
+There are a lot of continuous functions /into/ a coarse space and very few /out/ of a coarse space
