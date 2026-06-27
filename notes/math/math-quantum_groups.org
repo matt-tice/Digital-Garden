@@ -1,0 +1,175 @@
+:PROPERTIES:
+:ID:       d0da30a6-24e1-4b5e-bb9a-2e45e450567d
+:END:
+#+title: quantum groups
+#+filetags: :math:hopf_algebras:
+
+* References
+
+* Summary
+
+Consider two primitive elements $x, y$. We try to impose a quantum deformation $xy = q yx$. But the coproduct is no longer multiplicative
+
+$\Delta(x)\Delta(y) = xy \otimes 1 + x \otimes y + y \otimes x + 1 \otimes xy = q yx \otimes 1 + x \otimes y + y \otimes x + q (1 \otimes yx)$ 
+$\Delta (x) \Delta(y) - q  \Delta(y) \Delta(x) = x \otimes y + y \otimes x - q x \otimes y - q y \otimes x$
+
+* Definitions
+
+** Left Adjoint Action
+
+** Dual Pairing
+
+A *dual pairing* of bialgebras is a non-degenerate bilinear form such that
+$\langle xy, z \rangle = \sum \langle x, z_{(1)} \rangle \langle y, z_{(2)} \rangle$
+$\langle x, yz \rangle = \sum \langle x_{(1)}, y \rangle \langle x_{(2)}, z \rangle$
+
+and possibly
+$\langle S(x), y \rangle = \langle x, S(y) \rangle$
+$\langle 1, y \rangle = \varepsilon (y)$
+$\langle x, 1 \rangle = \varepsilon (x)$
+
+A dual pairing between a Hopf algebra and itself is called a *Laplace pairing*, but I'll refer to any dual pairing as a Laplace pairing.
+
+*** Coquasitriangular Structure
+
+A Laplace pairing is called a *coquasitriangular structure* if it also satisfies
+\[
+\sum \langle x_{(1)}, y_{(1)} \rangle x_{(2)} y_{(2)} = \sum x_{(1)} y_{(1)} \langle x_{(2)}, y_{(2)} \rangle 
+\]
+
+** Coregular Actions
+
+Consider a dual pair of bialgebras $\langle A, B \rangle \rightarrow k$.
+
+We have 4 different actions:
+
+1. Left action of $A$ on $B$
+\[
+\langle  a, a' \rightharpoonup  b \rangle = \langle a a', b \rangle= \sum \langle a, b_{(1) }\rangle\langle a', b_{(2)} \rangle
+\]
+
+     $a' \rightharpoonup b = \sum b_{(1)} \langle a', b_{(2)} \rangle$
+
+=Mnemonic:= a' passes through one factor of the coproduct and then pairs with the second factor.
+
+2. Right action of $A$ on $B$
+\[
+\langle a, b \leftharpoonup a' \rangle = \langle a' a, b \rangle = \sum \langle a', b_{(1)} \rangle \langle a, b_{(2)}\rangle
+\]
+ 
+     $b \leftharpoonup a' = \sum \langle a', b_{(1)} \rangle b_{(2)}$
+
+=Mnemonic:= a' passes through one factor of the coproduct and then pairs with the first factor.
+
+
+3. Left action of $B$ on $A$
+\[
+\langle b \triangleright a, b' \rangle = \langle a, b' b\rangle = \sum \langle a_{(1)} , b' \rangle\langle a_{(2)} , b \rangle
+\]
+ 
+    since this holds for all b' we have
+    $b \triangleright a = \sum a_{(1) }\langle a_{(2)}, b \rangle$
+
+=Mnemonic:= b passes through one factor of the coproduct and then pairs with the second factor.
+    
+
+4. Right action $B$ on $A$
+\[
+\langle a \triangleleft b, b' \rangle = \langle a, b b' \rangle = \sum \langle a_{(1)} , b \rangle \langle a_{(2)} , b' \rangle
+\]
+
+     $a \triangleleft b = \sum \langle a_{(1)} , b \rangle a_{(2)}$
+
+=Mnemonic:= b passes through one factor of the coproduct and then pairs with the first factor.
+
+
+*** Order
+
+Let's check that the ordering is appropriate to give us left/right actions
+
+1. $\langle  a, a' \rightharpoonup (a'' \rightharpoonup  b) \rangle = \langle a a', a'' \rightharpoonup b \rangle = \langle a a' a'', b \rangle$
+
+2. $\langle a, (b \leftharpoonup a') \leftharpoonup a'' \rangle  = \langle a'' a, b \leftharpoonup a' \rangle  = \langle (a' a'') a, b \rangle$
+
+3. $\langle b' \triangleright  (b \triangleright a), b'' \rangle = \langle b \triangleright a, b'' b' \rangle = \langle a, b'' (b' b)\rangle$
+
+4. $\langle (a \triangleleft b) \triangleleft b', b'' \rangle = \langle a \triangleleft  b, b' b'' \rangle = \langle a, b b' b'' \rangle$
+
+So it's actually pretty easy to tell when you have to swap the order of things in the pairing; it happens when you have to move $a$ and $b$ past each other.
+
+*** Intuition
+
+Let $H$ be a finite-dimensional Hopf algebra and consider its algebraic dual $H^{*}$. We have the evaluation pairing
+\[
+\langle\phi, g \rangle = \phi(g)
+\]
+
+The *left and right coregular actions* of $H$ on $H^{*}$ are defined by
+$\langle g \cdot \phi, h \rangle = \langle\phi, hg \rangle$ and $\langle \phi \cdot g, h \rangle = \langle\phi, gh\rangle$. In other words,
+$(g \cdot \phi)(h) = \phi(hg)$ and $(\phi \cdot g)(h) = \phi(gh)$.
+
+Since the pairing is non-degenerate, $g \cdot \phi$ and $\phi \cdot g$ are determined completely by how they pair with all of the $h \in H$.
+
+** Heisenberg Double
+
+=Note:= Part of the confusion with these doubles is that you can define them with either orientation: if you have a pairing $\langle A, B \rangle$, you can get a double $A \otimes B$ and one $B \otimes A$.
+
+The *Heisenberg doubles* of a dual pair $\langle A, B \rangle$ are algebra structures on $A \otimes B$ and $B \otimes A$ given by
+
+On $A \otimes B$: [this is like a position representation]
+[Standard left Heisenberg double] 
+   $(1 \otimes b)(a \otimes 1) = \sum (b_{(1)} \triangleright a ) \otimes b_{(2)} = \sum a_{(1)} \otimes b_{(2)} \langle a_{(2)} , b_{(1)} \rangle$ 
+[Standard right Heisenberg double]
+   $(1 \otimes b)(a \otimes 1) = \sum (a \triangleleft b_{(1)}) \otimes b_{(2)} = \sum \langle a_{(1)} , b_{(1)} \rangle a_{(2)} \otimes  b_{(2)}$ 
+[Standard right contraction]
+   $(1 \otimes b)(a \otimes 1) = \sum a_{(1)} \otimes (b_{} \leftharpoonup a_{(2)}) = \sum \langle a_{(2)} , b_{(1)}\rangle a_{(1)} \otimes b_{(2)}$ 
+[Standard left contraction]
+   $(1 \otimes b)(a \otimes 1) = \sum a_{(1)} \otimes (a_{(2)} \rightharpoonup b) = \sum \langle a_{(2)}, b_{(2)}\rangle a_{}_{(1)} \otimes b_{(1)}$
+
+=Note:= The 1st and 3rd options are *the same* (but i don't think they are in the graded case?)
+
+and swapping (1) and (2):
+  $(1 \otimes b)(a \otimes 1) = \sum (b_{(2)} \triangleright a ) \otimes b_{(1)}$
+  $(1 \otimes b)(a \otimes 1) = \sum (a \triangleleft b_{(2)}) \otimes b_{(1)}$
+  $(1 \otimes b)(a \otimes 1) = \sum a_{(2)} \otimes (b_{} \leftharpoonup a_{(1)})$
+  $(1 \otimes b)(a \otimes 1) = \sum a_{(2)} \otimes (a_{(1)} \rightharpoonup b)$
+
+
+On $B \otimes A$: [this is like a momentum representation]
+  $(1 \otimes a)(b \otimes 1) = \sum b_{(1)} \otimes (b_{(2)} \triangleright a)$
+  $(1 \otimes a)(b \otimes 1) = \sum b_{(1)} \otimes (a \triangleleft b_{(2)})$
+  $(1 \otimes a)(b \otimes 1) = \sum (a_{(1)} \rightharpoonup b) \otimes a_{(2)}$
+  $(1 \otimes a)(b \otimes 1) = \sum (b \leftharpoonup a_{(1)}) \otimes a_{(2)}$
+
+and the twists
+  $(1 \otimes a)(b \otimes 1) = \sum b_{(2)} \otimes (b_{(1)} \triangleright a)$
+  $(1 \otimes a)(b \otimes 1) = \sum b_{(2)} \otimes (a \triangleleft b_{(1)})$
+  $(1 \otimes a)(b \otimes 1) = \sum (a_{(2)} \rightharpoonup b) \otimes a_{(1)}$
+  $(1 \otimes a)(b \otimes 1) = \sum (b \leftharpoonup a_{(2)}) \otimes a_{(1)}$
+
+*** Preference
+
+I'm going to stick with the *right Heisenberg dual*: it keeps $A$ and $B$ in the right order, and the numbers match up nicely
+
+ $(1 \otimes b)(a \otimes 1) = \sum (a \triangleleft b_{(1)}) \otimes b_{(2)} = \sum \langle a_{(1)} , b_{(1)} \rangle a_{(2)} \otimes  b_{(2)}$ 
+
+*** Intuition
+
+$H^{*} \otimes H$ is the quantum analogue of the /cotangent bundle/ or the /Weyl algebra/. It doesn't naturally have a Hopf algebra structure, but we can give it one.
+
+We want $(\phi \otimes 1)(1 \otimes g) = \phi \otimes g$ and 
+$(1 \otimes g)(\phi \otimes 1) = \sum \langle \phi_{(2)} g_{(1)} \rangle \phi_{(1)} \otimes g_{(2)}$
+
+
+
+** Drinfel'd Double
+
+
+
+$(1 \otimes a)(b \otimes 1) = \sum \langle b_{()}, S(a_{()}) \rangle\langle b$
+
+*** Intuition
+
+Unlike the Heisenberg double, the Drinfel'd double is designed to be a /quasitriangular Hopf algebra/ 
+
+$(1 \otimes g)(\phi \otimes 1) = \sum \langle \phi_{(1)} S(g_{(1)} ) \rangle  \langle \phi_{(3)} g_{(3)}\rangle \phi_{(2)} \otimes  g_{(2)}$
