@@ -174,5 +174,57 @@
 class="math inline"><em>C</em><sup>∞</sup>(<em>M</em>), <em>C</em><sup>2</sup>(<em>M</em>)</span>
 almost never contain the solutions to interesting partial differential
 equations.</p>
+<p>Many physical solutions simply <strong>aren't
+differentiable.</strong> Which is to say, there is no solution when we
+interpret derivatives in the traditional way, where we look at
+derivatives <em>at points</em> and need them to satisfy the equation
+pointwise.</p>
+<p>Instead, we replace these equations with <em>distributional
+equations</em></p>
+<p>The downside is that many equations <strong>no longer have unique
+solutions</strong></p>
+<h1 id="viscosity-solutions">Viscosity Solutions</h1>
+<p>You can add in a <em>friction</em> term <span
+class="math inline"><em>ε</em></span> in order to make the classical
+equations actually have a solution. You then pick the weak solution
+which the classical solutions <span
+class="math inline"><em>f</em><sub><em>ε</em></sub></span> converge to
+as <span class="math inline"><em>ε</em> → 0</span>.</p>
+<h1 id="euler-lagrange-equations">Euler-Lagrange Equations</h1>
+<h1 id="navier-stokes">Navier-Stokes</h1>
+<p>Jean Leray showed in 1934 that weak solutions exist. The problem is
+that we don't know how these solutions behave over time.</p>
+<p><span
+class="math display">∂<sub><em>t</em></sub><em>u</em> + (<em>u</em>⋅∇)<em>u</em> = <em>ν</em><em>Δ</em><em>u</em> − ∇<em>p</em></span></p>
+<p>where <span class="math inline"><em>ν</em><em>Δ</em><em>u</em></span>
+is the <strong>viscosity</strong> <span
+class="math inline">(<em>u</em>⋅∇)<em>u</em></span> is the
+<strong>advection/convection</strong> — this is what givese
+turbulence.</p>
+<p>Solutions <span class="math inline"><em>u</em></span> are known to be
+bounded in <span class="math inline"><em>L</em><sup>2</sup></span> <span
+class="math display">∫|<em>u</em>(<em>x</em>,<em>t</em>)|<sup>2</sup><em>d</em><em>x</em> ≤ <em>M</em></span>
+but the topology on <span
+class="math inline"><em>L</em><sup>2</sup></span>, despite being
+Hilbert, isn't good for PDEs(!)</p>
+<p>When it comes to PDEs, you actually want a topology that isn't too
+coarse; if it's too weak, you allow all kinds of singular solutions</p>
+<h2 id="intuition">Intuition</h2>
+<p>A coarse/weak topology will have very large open sets, relatively
+speaking, and so it won't be able to regulate the behaviour of functions
+on a microscopic level — this is why you end up with non-singular
+things</p>
+<h1 id="theorems">Theorems</h1>
+<h2 id="darbouxs-theorem">Darboux's Theorem</h2>
+<h3 id="discontinuities">Discontinuities</h3>
+<p>Consider <span class="math inline"><em>f</em>′ = <em>g</em></span>.
+If <span class="math inline"><em>g</em></span> has a jump discontinuity,
+then this has no traditional solution. We instead replace it with the
+weak equation <span
+class="math display">∫<em>u</em><em>ϕ</em>′ =  − ∫<em>g</em><em>ϕ</em></span>
+for all <span
+class="math inline"><em>ϕ</em> ∈ <em>C</em><sub><em>c</em></sub><sup>∞</sup></span>.</p>
+<p>That is, we ask for <span class="math inline"><em>f</em></span> to be
+the weak derivative of <span class="math inline"><em>g</em></span>.</p>
 </body>
 </html>

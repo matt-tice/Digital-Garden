@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>topology</title>
+  <title>dual pairings</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,44 +166,40 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">topology</h1>
+<h1 class="title">dual pairings</h1>
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
 <h1 id="definitions">Definitions</h1>
-<h2 id="topology-1">Topology</h2>
-<h2 id="finerstronger-topology">Finer/Stronger Topology</h2>
-<h3 id="intuition">Intuition</h3>
-<p>Adding open sets makes the space <strong>more disconnected</strong>.
-This can destroy things like compactness — points become too
-separated</p>
-<p>It's harder for sequences to converge here. As a consequence this
-space has nicer bounded and continuous functions</p>
-<p>This is why finer spaces tend to form algebras: bounded continuous
-functions <span class="math inline"><em>C</em><sup>0</sup></span> is a
-Banach algebra</p>
-<p>Sobolev spaces have finer topologies: sequences have to converge in
-<span class="math inline"><em>L</em><sup>2</sup></span> and satisfy
-other constraints.</p>
-<p>When we pass to a dense subspace like Schwartz functions <span
-class="math inline">𝒮 ⊆ <em>L</em><sup>2</sup></span>, we actually have
-to change the topology in the background to make it usable; we don't
-just consider the subspace topology</p>
-<ul>
-<li>if you do, then solutions that start in Schwartz space at <span
-class="math inline"><em>t</em> = 0</span> can evolve into messy <span
-class="math inline"><em>L</em><sup>2</sup></span> functions in the
-limit</li>
-</ul>
-<p>The actual topology on Schwartz space is defined by a countable
-family of seminorms <span
-class="math display">∥<em>f</em>∥<sub><em>α</em>, <em>β</em></sub> = sup<sub><em>x</em> ∈ ℝ<sup><em>n</em></sup></sub>|<em>x</em><sup><em>α</em></sup>∂<sup><em>β</em></sup><em>f</em>(<em>x</em>)|</span></p>
-<p>There a lot of continuous functions <em>out</em> of a fine space and
-very few <em>into</em> a fine space.</p>
-<h2 id="coarserweaker-topology">Coarser/Weaker Topology</h2>
-<p>When we take the weak topology we make our topology coarser; the
-resolution lowers and the unit ball can become compact.</p>
-<p>There are a lot of continuous functions <em>into</em> a coarse space
-and very few <em>out</em> of a coarse space</p>
+<h2 id="algebraic-dual">Algebraic Dual</h2>
+<h2 id="continuous-dual">Continuous Dual</h2>
+<h2 id="dual-pairing">Dual Pairing</h2>
+<h2 id="compatibility-with-a-pairing">Compatibility with a Pairing</h2>
+<p>A topology on <span class="math inline"><em>V</em></span> is called
+<strong>compatible with the pairing</strong> <span
+class="math inline">⟨⋅, ⋅ ⟩</span> if the continuous dual is <span
+class="math inline"><em>V</em><sup>*</sup></span></p>
+<h2 id="weak-topology">Weak Topology</h2>
+<p>Let <span
+class="math inline">⟨⋅, ⋅ ⟩ : <em>V</em> × <em>W</em> → <em>k</em></span>
+be a non-degenerate pairing. The <strong>weak topology</strong> <span
+class="math inline"><em>σ</em>(<em>V</em>,<em>W</em>)</span> is the
+initial topology on all <span
+class="math display">⟨−,<em>w</em>⟩ : <em>V</em> → <em>k</em></span></p>
+<h2 id="mackey-topology">Mackey Topology</h2>
+<h1 id="theorems">Theorems</h1>
+<h2 id="mackey-arens-theorem">Mackey-Arens Theorem</h2>
+<p>A locally convex topological vector space <span
+class="math inline">(<em>V</em>,<em>τ</em>)</span> is compatible with a
+pairing <span class="math inline">⟨⋅, ⋅ ⟩</span> if and only if <span
+class="math display"><em>σ</em>(<em>V</em>,<em>V</em>′) ⊆ <em>τ</em> ⊆ <em>τ</em>(<em>V</em>,<em>V</em>′)</span></p>
+<p>where <span
+class="math inline"><em>σ</em>(<em>V</em>,<em>V</em>′<sup></sup>)</span>
+is the weak topology with respect to the evaluation pairing with the
+continuous linear functionals defined by <span
+class="math inline"><em>τ</em></span> and <span
+class="math inline"><em>τ</em>(<em>V</em>,<em>V</em>′)</span> is the
+Mackey topology induced by <span
+class="math inline"><em>τ</em></span>.</p>
 </body>
 </html>
