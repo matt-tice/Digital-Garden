@@ -35,6 +35,10 @@ Registers certain M-x commands from the package. When any of these commands are 
 
 Sets keybindings for specific commands. If any of these bindings is pressed, it loads the package.
 
+*** Map
+
+This goes inside of =:bind= and tells the compiler to set up certain keybindings once a certain mode-map exists
+
 ** Hook
 
 Specifies certain emacs modes. When that mode is entered, the package is loaded.
