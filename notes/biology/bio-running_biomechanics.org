@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       e50d5c46-3e39-43f7-9ba5-0a51ee0f9f81
+:END:
+#+title: running biomechanics
+#+filetags: :biology:body:fitness:
+
+* References
+
+* Summary
+
+* Body
+
+** Angle
+
+Your body should be slightly leaning forward /from the ankles, not the waist/
+- gravity pulls you forward 
+
+** Feet
+
+*Do not heel-strike when running*
+- the impact is too high
+
+Land on the *ball of your foot*, /underneath your hips/
+
+** Arms
+
+Bend your elbows at 90 deg; drive your elbows forward and back
+
+Keep your shoulders relaxed
