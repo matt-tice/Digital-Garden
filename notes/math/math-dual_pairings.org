@@ -2,7 +2,7 @@
 :ID:       e45c9451-2d49-4214-8064-53b21e1c2990
 :END:
 #+title: dual pairings
-#+filetags: :math:vector_spaces:func_analysis:topology:
+#+filetags: :math:vector_spaces:func_analysis:topology:duality_theory:
 
 * References
 
@@ -22,13 +22,49 @@ A topology on $V$ is called *compatible with the pairing* $\langle \cdot, \cdot 
 
 ** Weak Topology
 
-Let $\langle \cdot, \cdot \rangle : V \times W \rightarrow k$ be a non-degenerate pairing. The *weak topology* $\sigma(V,W)$ is the initial topology on all
+Let $\langle \cdot, \cdot \rangle : V \otimes W \rightarrow k$ be a non-degenerate pairing. The *weak topology on $V$,* $\sigma(V,W)$ is the initial topology on all
 \[
 \langle -, w \rangle : V \rightarrow k
+\]
+Similarly, the weak topology on $W$ is the initial topology on
+\[
+\langle v, - \rangle : W \rightarrow k
+\]
+
+*** Intuition
+
+The weak topology on $V$ is the weakest topology on $V$ such that
+\[
+V' \cong W
+\].
+Similarly, on $W$, it's the weakest topology on $W$ such that
+\[
+W' \cong V.
 \]
 
 
 ** Mackey Topology
+
+Given a dual pairing $\langle \cdot , \cdot  \rangle: X \otimes  Y \rightarrow k$, the *Mackey topology* on $X$ is the strongest topology such that 
+\[
+X' \cong Y
+\].
+Similarly, the Mackey topology on $Y$ is the strongest topology making
+$Y' \cong  X$
+
+** Weak Star Completion
+
+Let $X^{*}$ be the algebraic dual space. Give it the topology induced by the evaluation dual pairing with $X$:
+\[
+\langle \phi, x \rangle = \phi(x)
+\]
+
+This is called the *weak star topology* on $X^{*}$.
+
+Given a subset of linear functionals $A \subseteq X^{*}$ its closure in the weak star topology is called its  
+*weak star completion* 
+
+
 
 * Theorems
 
