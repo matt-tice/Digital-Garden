@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       d55a0d14-1826-4e49-a2a5-b08773e13c74
+:END:
+#+title: adenosine triphosphate
+#+filetags: :biology:energy:body:atp:
+
+* References
+
+* Summary
+
+The three phosphate groups all have a negative charge, and repel each other
+
+ATP is converted into adenosive *diphosphate*, by breaking one of the phosphate groups off. This ADP is then recycled by reattaching the third phosphate groups, using the energy you get from food.

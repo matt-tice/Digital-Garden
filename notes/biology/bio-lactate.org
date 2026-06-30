@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       609d80cf-2ba4-4419-97af-e50c5eaae9ac
+:END:
+#+title: lactate
+#+filetags: :biology:exercise:
+
+* References
+
+* Summary
+
+Crosses the blood-brain barrier through monocarboxylate transporters

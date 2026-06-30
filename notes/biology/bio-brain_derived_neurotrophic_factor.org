@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       e3c3f1eb-4d17-4fe7-a37e-d05dda04b550
+:END:
+#+title: brain-derived neurotrophic factor
+#+filetags: :biology:bdnf:neurons:
+
+* References
+
+* Summary
+
+Stimulates neurogenesis
+
+When bloodflow increases to your brain (for example, during exercise) your neurons get hit with a ton of oxygen, stimulating BDNF

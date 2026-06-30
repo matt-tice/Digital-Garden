@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       e974f8c3-09d6-4e94-aa13-2a787fccd7f6
+:END:
+#+title: pgc-1alpha
+#+filetags: :biology:body:mitochondria:exercise:
+
+* References
+
+* Summary
+
+Exercise activates PGC-1\alpha 
+
+PGC-1\alpha levels spike and hit their highest point roughly *2-3 hours after you stop exercising* 
+You return to baseline about 24 hours later.
+
+Doubling your training actually doesn't produce more mitochrondria
+
+Binds to nuclear respiratory factors NRF-1 and NRF-2

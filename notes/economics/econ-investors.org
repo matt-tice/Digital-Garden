@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       818015c0-1bce-4282-b6dd-53cef3412d20
+:END:
+#+title: investors
+#+filetags: :economics:stocks:market:
+
+* References
+
+* Summary
+
+* Retail
+
+
+* Institutional
+
+Don't chase prices up with market orders
+- large block limit orders
+- VWAP/TWAP
+- 
+
+
+** Venture Exchange
+
+Institutional investors don't typically trade on the venture exchange
+
+Money managers (like the Ontario Teachers' Pension Plan, large mutual funds, etc) are legally bound by *fiduciary duty*, so they won't use the venture exchange
+
+Large insitutional funds usually can't buy stocks with total market caps under $500M
+
+
+** Algorithmic Parent-Child Order Execution Routines
+
+The full *parent order* will be something like /get me 200k shares of ABC between $1.05 and $1.50, tracking the VWAP/ 
+
+This gets split into tiny *child orders* 
+
+*** Volume Weighted Average Price
+
+
+
+*** TWAP

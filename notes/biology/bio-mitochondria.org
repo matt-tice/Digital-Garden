@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       f4926300-773c-4f7c-b552-8ba31db31ebc
+:END:
+#+title: mitochondria
+#+filetags: :biology:cells:
+
+* References
+
+* Summary
+
+* Mitochondrial DNA (mtDNA)
+
+* Mitochondrial Transcription Factor A
+
+A protein that tells the cell to replicate its mtDNA and make the proteins for new mitochondria
+

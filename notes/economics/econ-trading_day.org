@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       84733c8e-c0d1-418e-a25e-6f9e1d126f7c
+:END:
+#+title: trading day
+#+filetags: :economics:trading:stocks:market:
+
+* References
+
+* Summary
+
+
+* Market Open
+
+** Margin Wash
+
+If a stock has been dropping a lot in price, the market open can be heavy with margin call sale orders and panic sells
+- the stock hits its low in the first 15-30min
+
+
+*** Institutional
+
+Institutional investors rarely do large market orders at open, because they're bound by *execution mandates* to minimize slippage
+
+
+** Liquidity Vacuum
+
+In a low-liquidity environment (like the TSX.V) price can swing wildly.
+
+If the aggressive selling stops, the price can rocket quickly if there's a reason to buy
+

@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       62e6f71f-918e-418c-aed1-4d304a610eae
+:END:
+#+title: adenosine
+#+filetags: :biology:rna:
+
+* References
+
+* Summary
+
+Adenosine in your muscles causes local fatigue.
+Adenosine in your brain binds to receptors that trigger sleepiness
+
+Adenosine gets cleared while you sleep
+
+Your brain consumes 20% of your ATP
+
+* Brain
+
+** Sodium-Potassium Pump
+
+Uses 50% of the brain's ATP (10% overall)
+
+** Neurotransmitter Recycling
+
+** Cellular Maintenance
