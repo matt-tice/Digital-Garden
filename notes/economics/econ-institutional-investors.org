@@ -1,0 +1,203 @@
+:PROPERTIES:
+:ID:       818015c0-1bce-4282-b6dd-53cef3412d20
+:END:
+#+title: institutional investors
+#+filetags: :economics:stocks:market:
+
+* References
+
+* Summary
+
+
+* Mandates
+
+A fund's mandate will put requirements on what they can buy and hold.
+
+They might need to satisfy:
+- a certain average [[id:28a5ba1a-fb19-4ed2-93b0-fab55bf7c99f][market cap]]
+- can't hold more than 5% of a company's outstanding float
+
+
+
+** Minimum Deployment
+
+A fund manager might have a limit to the number of stocks they can hold, because they want to make sure that each of the stocks remains heavily researched.
+
+If the fund manager wants a certain minimum amount of diversification in those stocks, each stock might have to be, say at least 3% of the portfolio, which then puts a minimum deployment of capital on each stock
+
+This is why funds end up having to figure out ways to deploy huge amounts of capital without changing the price
+
+
+* Huge Capital
+
+Institutions manage billions of dollars.
+
+If they want to buy $20M in stock of a company that has a daily volume of $5M, they're not going to be able to do that in a single day (or even several days) without causing huge price jumps (because there won't be enough sellers at the lower prices)
+- this is called *adverse price slippage* 
+
+Similarly, if they try to sell too fast, they'll create adverse price slippage
+
+Instutional investing is thus *slow by nature* 
+
+* Careers
+
+Fund managers can absolutely get fired for losing clients' money. They can even get fired if they don't perform well against the indexes or their peers
+- even a temporary pullback will lead to immediate scrutiny
+
+Because of this, fund managers often buy at a premium
+
+** Exempt Market
+
+This is how companies can buy huge blocks of shares without affecting the price they buy in at
+
+Institutions buy /derivatives/
+
+*** Private Placements
+
+Often you'll see a private placement price be way above the current open market price of a stock. This seems odd: if institutions, with all their resources, value the price so much higher, why aren't retail investors buying in at that massive discount, inflating the price?
+
+For one thing, they might be, but often retail investors don't have enough money together to move the price that high. Institutional money can buy millions and millions of shares of companies where the daily trading volume is only a million.
+
+**** Securities Law (Wall Crossing)
+
+Before a broker can reveal any details about an upcoming private placement to an institution, the institution has to sign an NDA to receive *material non-public information* 
+- legally, the stock must then be placed on the institution's /grey list/ --- they can't trade it at all
+- they are legally *insiders* 
+
+Shorting the stock immediately and then buying back the shares at the PP discount would be *insider trading* 
+
+***** Cleansing Window
+
+The institution needs to wait until the PP becomes public information to take any action with their insider knowledge.
+- usually they have to wait 24 to 48 hours after a PP announcement, or at least one full trading session
+
+**** Subscription Receipt Arbitrage
+
+A subscription receipt guarantees the delivery of common shares once the transaction condition is met.
+
+If a stock is trading /higher than the private placement price/, the institution will buy the subscription receipt at the private placement price and short the stock on the open market at the higher price
+
+***** Venture Exchanges
+
+Retail investors can't short venture stocks. Institutions have a way of getting around this
+
+1. Contact prime brokers, who look at all of their network to find passive, long-term investors in that company (usually other funds, but sometimes retail)
+2. The institution borrows those shares from the long-term holder's account and gives the prime broker collateral with a *short rebate* (interest rate), which will be paid out in part to the prime broker, part to the lender, and part to the hedge fund
+3. The institution then immediately /sells everything/ --- this creates *synthetic selling pressure*, driving the price lower
+4. When the private placement is completed, they give back those shares to the lender
+
+This can cause the stock price to fall lower than the private placement price
+- retail investors can have their stop-losses triggered
+- institutions that were holding the stock can have their mandates triggered
+
+
+***** Ceiling
+
+This intense shorting causes the price to stay below the private placement price. Once the PP is complete, the shorted shares are returned, and the price can increase above the now dissipated threshold
+
+Instutional mandates that prevented buying before the private placement contingency went through are now allowed to buy
+
+**** Hold Period
+
+If you buy in a private placement, you have to hold those shares for at least 4 months before you're legally allowed to sell them
+
+**** Contingency Insurance
+
+The private placement contract can say that the purchase is contingent on something occuring (like a merger). The funds are willing to pay the premium for this insurance.
+
+*** Bought Deals
+
+
+*** Block Crossings
+
+If an institution wants to sell 5M shares, the prime broker will shop around for buyers. They look for other institutions who'll buy at a slight discount from the open market (called the *cross price*).
+
+/Canadian securities law/ prevents this trade from being off the books (over-the-counter). But the broker will use a *bypass cross*, entering the buy and sell orders at the same time into the exchange ledger, at exactly the negotiated price.
+
+* Information
+
+Institutional investors have access to far more information than retail investors. 
+
+They can meet one-on-one with the C-Suites of companies, to evaluate their competence
+
+They hire services like *GLG* or *Guidepoint* to arrange calls with former employees, clients, supply-chain partners, etc.
+
+** Required Returns
+
+Instutions put a huge amount of time and resources into researching companies. In order to make this worth their while, they buy and sell in bulk (otherwise if the price goes up, they might not make enough to cover what they spent in research). This also contributes to the huge amounts of capital that institutions try to deploy.
+
+* Tools
+
+** Dark Pools
+
+If block crossings don't work, the institution will use things like *TSX DRK*.
+
+These dark pools remove *pre-trade transparency* 
+- you can't see the public bids and asks
+- you can still see the transaction once it's completed
+
+Dark funds were designed to prevent things like retirement mutual funds from losing a bunch of money by being shorted when they post huge ask orders to pay out retirees
+
+Dark pools have minimum interaction sizes, which prevents tiny orders from pinging the presence of the hidden bid
+
+*** Order Protection Rule
+
+*** Price Improvement Threshold
+
+** Structured Derivatives
+
+** High-Frequency Trading
+
+** Volume-Weighted Average Price
+
+The massive *parent order* is sliced into tiny *child orders* .
+
+An *iceberg protocol* will then only display one of the child orders at a time; if it's bought, the next child order will be posted
+
+This creates a price ceiling that retail investors can't break through
+
+*** Risks
+
+This is usually a last resort for institutions
+- it's transparent: it sends a clear signal that an institution is trying to divest from a stock
+- HFT algorithms will come in like piranhas, and chip away at the institution /within minutes/
+
+VWAP is /deterministic and preset/ --- it decides ahead of time how much of the order to offer in each time blocks (say, every 15min)
+
+HFTs flag this immediately as *passive institutional liquidation*, and will *front-run the slice* 
+- HFTs heavily short the public book ahead of the next expected VWAP order
+- forces VWAP to fill at lower bid, because its deterministic programming won't let it do otherwise
+- HFT buys VWAP at the lower prices to close its shorts
+
+
+** Percentage of Volume Algorithms
+
+** Guerrilla Algorithms
+
+Anti-HFT --- randomize order sizes, switch orders from public to dark pool, to public iceberg, etc.
+
+
+* Venture Exchange
+
+Institutional investors don't typically trade on the venture exchange
+
+Money managers (like the Ontario Teachers' Pension Plan, large mutual funds, etc) are legally bound by *fiduciary duty*, so they won't use the venture exchange
+
+Large insitutional funds usually can't buy stocks with total market caps under $500M
+
+** Private Placements
+
+On the venture exchange, PP are usually /non-brokered/.
+So institutional investors are usually
+- high net worth insiders (HNWs)
+- micro-cap family offices / syndicates
+
+They're more comfortable with illiquidity than large funds, willing to lock up capital for 4 months in exchange for derivatives like warrants.
+
+They usually end up buying at a premium, and are focused on the company's /use of proceeds/
+
+*** Discounts and Minimum Pricing Rules
+
+If a stock's price is under $0.05, the private placement price can't be under $0.05
+- this creates a forced premium
+

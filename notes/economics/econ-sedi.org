@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       0bb08b9c-0799-4cec-86e5-fb1dd61f26f8
+:END:
+#+title: sedi
+#+filetags: :economics:stocks:insiders:
+
+* References
+
+
+* Summary
+
+System for Electronic Disclosure by Insiders
+
+Anyone who owns more than 10% of the voting shares of a company has to report /every single share they buy or sell/ within *5 calendar days* 
+
+
+* Legal
+
+You aren't allowed to webscrape SEDI

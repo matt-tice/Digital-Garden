@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       d761f2d5-6a95-46a4-94a9-ddedc6730ec5
+:END:
+#+title: sedar
+#+filetags: :economics:stocks:corps:
+
+* References
+
+
+* Summary
+
+System for Electronic Document Analysis and Retrieval
+
+It's the central repository for corporate information
+
+All publically traded companies in Canada have to upload their files here
+- financial statements
+- management discussion and analysis (MD&A)
+- press releases
+- rights offering circulars
+- technical reports
+
+
+
+* Report of Exempt Distribution (Form 45-106F1)
+

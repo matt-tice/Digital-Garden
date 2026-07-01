@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       0813bbd5-2e49-44ef-980f-254204df128c
+:END:
+#+title: market pricing
+#+filetags: :economics:markets:stocks:
+
+* References
+
+
+* Summary
+
+Theoretically, there's the Strong Efficient Market Hypothesis --- that everything gets priced in (essentially immediately), so it's impossible to get an edge and beat the market.
+
+This is generally fairly true, but it misses out on key opportunities where a retail investor can beat the market.
+
+* Risk
+
+Most institutional investors have a duty (either legally or pragmatically) to be incredibly careful with their clients' money. This forces them to factor in risk in a much more cautious way than is always necessary or reasonable for a retail investor.
+
+If a small company is undergoing a big change (even one that is very likely going to be positive for its growth), institutions might choose to sell off, lowering the stock price, because even the small amount of risk that things go south for the company could be a huge impact on their investors
+
+* Fired
+
+A fund manager can actually lose their job for holding a microcap through a messy change, if things don't go according to plan
+
+* Growth v. Profit 
+
+When a company suffers a net loss of several million dollars in a quarter, even if it's clearly do to building up their infrastructure, and even if they had a larger revenue, institutional investors might dump them because they have strict rules to not hold stock that don't meet a certain level of gross profit margin or that report a GAAP loss.
