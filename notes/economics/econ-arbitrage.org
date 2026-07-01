@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       dfb79afb-2dd7-4297-8922-ee878c7231c5
+:END:
+#+title: arbitrage
+#+filetags: :economics:stocks:market:
+
+* References
+
+* Summary
+
+* Pure Arbitrage
+
+When an asset is priced differently on two different exchanges
+
+You buy asset X on one exchange for $110 and immediately sell it on a different exchange for $120
+
+* Triangular Arbitrage
+
+Convert currencies A \rightarrow B \rightarrow C \rightarrow A
+
+* Convetible Arbitrage
+
+[[id:818015c0-1bce-4282-b6dd-53cef3412d20][Institutional investors]] take long positions in a company on private placements, while simultaneously shorting the company
+
+* Statistical Arbitrage
+
+Looks for two or more highly correlated assets { A_i } that have *cointegration* --- a linear combination of their prices forms a stationary time series around a constant mean
+
+The arbitrage technique will short the assets above the mean and go long in the ones below
+
+* Volatility Arbitrage
+
+=Delta-neutral hedging:= Constructing a portfolio where the net volatility is zero
+
+* Capital Structure Arbitrage
+
+Companies have both equity and debt. *Merton's model* views equity as a call option on assets, where the strike price is the value of its liabilities
+
+A stock price of a company can change sooner than its bonds reflect the news, or vice versa.
+
+* Index Arbitrage
+
+Sometimes an index actually trades slightly above or below the atual weighted market value of the basket of stocks it's supposed to track
+
+
