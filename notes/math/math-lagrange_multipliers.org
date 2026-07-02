@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       2957fd2a-5e2d-4b46-b9f1-ff868a375873
+:END:
+#+title: lagrange multipliers
+#+filetags: :math:optimization:
+
+* References
+
+* Summary
+
+A tool for finding local max and mins given certain constraints.
+
+You want to maximize $f(x,y)$ subject to a condition $g(x,y) = c$
