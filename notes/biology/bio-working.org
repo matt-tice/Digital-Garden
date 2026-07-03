@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       3208f36e-5a54-4bfd-8bd5-9465bd1e9405
+:END:
+#+title: working
+#+filetags: :biology:body:
+
+* References
+
+* Summary
+
+It's simply unreasonable to expect people to work at maximum capacity for 8 or even 6 hours a day. If you look at people at the top of their fields --- mathematicians, scientists, athletes, artists --- they don't really work more than 4 hours a day at full intensity
+
+* Work Hours
+
+** Poincare
+
+Worked 10am - 12pm and 5pm - 7pm.
+
+He viewed math as something that primarily happens in the background; in your subconscious. He would literally spend the rest of his day doing whatever he wanted: he went to the beach, read, walked, wrote letters, etc.
+
+** Hardy
+
+As much as I don't like a lot of his ideas in /A Mathematician's Apology/, I do generally agree with his perspective that 4 hours of creative work a day is the limit.
+
+** Ignmar Bergman
+
+Wrote 9am - 1pm and took an afternoon nap. Then for the rest of the day he read, took walks, and watched films
+
+** Anders Ericsson
+
+Practiced in 90min blocks for 3.5 hours
+
+** Charles Darwin
+
+Three 1.5 hour blocks
+
+** Immanuel Kant
+
+Was notoriously so consistent with his daily walks that citizens would set their watches by it.
+
+* Academia
+
+Sadly, a lot of academic work is administrative, not research or teaching. 
+
+secretary, travel agent, accountant, IT technician
