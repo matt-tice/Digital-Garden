@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       dd2ce420-c7dd-4511-b5a8-afa92d606cab
+:END:
+#+title: liver
+#+filetags: :biology:body:
+
+* References
+
+* Summary
+
+* [[id:90693255-6072-44fd-91bb-b688d6d3f1fb][Ammonia]]
+
+The liver converts ammonia into urea, which is filtered out of the bloodstream by the [[id:8dada547-abdb-4c47-aa53-73d4e8d137e5][kidneys]]

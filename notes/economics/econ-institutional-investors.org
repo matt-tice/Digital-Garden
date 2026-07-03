@@ -28,7 +28,7 @@ If the fund manager wants a certain minimum amount of diversification in those s
 This is why funds end up having to figure out ways to deploy huge amounts of capital without changing the price
 
 
-* Huge Capital
+* Exempt Market
 
 Institutions manage billions of dollars.
 
@@ -39,26 +39,17 @@ Similarly, if they try to sell too fast, they'll create adverse price slippage
 
 Instutional investing is thus *slow by nature* 
 
-* Careers
-
-Fund managers can absolutely get fired for losing clients' money. They can even get fired if they don't perform well against the indexes or their peers
-- even a temporary pullback will lead to immediate scrutiny
-
-Because of this, fund managers often buy at a premium
-
-** Exempt Market
-
-This is how companies can buy huge blocks of shares without affecting the price they buy in at
+*Exempt markets* are how companies can buy huge blocks of shares without affecting the price they buy in at
 
 Institutions buy /derivatives/
 
-*** Private Placements
+** [[id:513d7c73-b104-47b3-ac43-3adaf8c12225][Private Placements]]
 
 Often you'll see a private placement price be way above the current open market price of a stock. This seems odd: if institutions, with all their resources, value the price so much higher, why aren't retail investors buying in at that massive discount, inflating the price?
 
 For one thing, they might be, but often retail investors don't have enough money together to move the price that high. Institutional money can buy millions and millions of shares of companies where the daily trading volume is only a million.
 
-**** Securities Law (Wall Crossing)
+*** Securities Law (Wall Crossing)
 
 Before a broker can reveal any details about an upcoming private placement to an institution, the institution has to sign an NDA to receive *material non-public information* 
 - legally, the stock must then be placed on the institution's /grey list/ --- they can't trade it at all
@@ -66,18 +57,18 @@ Before a broker can reveal any details about an upcoming private placement to an
 
 Shorting the stock immediately and then buying back the shares at the PP discount would be *insider trading* 
 
-***** Cleansing Window
+**** Cleansing Window
 
 The institution needs to wait until the PP becomes public information to take any action with their insider knowledge.
 - usually they have to wait 24 to 48 hours after a PP announcement, or at least one full trading session
 
-**** Subscription Receipt Arbitrage
+*** Subscription Receipt Arbitrage
 
 A subscription receipt guarantees the delivery of common shares once the transaction condition is met.
 
 If a stock is trading /higher than the private placement price/, the institution will buy the subscription receipt at the private placement price and short the stock on the open market at the higher price
 
-***** Venture Exchanges
+**** Venture Exchanges
 
 Retail investors can't short venture stocks. Institutions have a way of getting around this
 
@@ -91,28 +82,42 @@ This can cause the stock price to fall lower than the private placement price
 - institutions that were holding the stock can have their mandates triggered
 
 
-***** Ceiling
+**** Ceiling
 
 This intense shorting causes the price to stay below the private placement price. Once the PP is complete, the shorted shares are returned, and the price can increase above the now dissipated threshold
 
 Instutional mandates that prevented buying before the private placement contingency went through are now allowed to buy
 
-**** Hold Period
+*** Hold Period
 
 If you buy in a private placement, you have to hold those shares for at least 4 months before you're legally allowed to sell them
 
-**** Contingency Insurance
+*** Contingency Insurance
 
 The private placement contract can say that the purchase is contingent on something occuring (like a merger). The funds are willing to pay the premium for this insurance.
 
-*** Bought Deals
+*** EPS
+
+Something really important to keep in mind is that earnings-per-share /won't update until the contingency clears/
+- this is because the number of common shares isn't considered updated until that point
+
+This wouldn't matter, except that algorithms highly weight EPS, so once the contingency clears (even before the 24 hour window passes that actually converts the subscription receipts to common shares), algorithms will often *dump a stock*, because they view the EPS as having suddenly plummeted
+
+** Bought Deals
 
 
-*** Block Crossings
+** Block Crossings
 
 If an institution wants to sell 5M shares, the prime broker will shop around for buyers. They look for other institutions who'll buy at a slight discount from the open market (called the *cross price*).
 
 /Canadian securities law/ prevents this trade from being off the books (over-the-counter). But the broker will use a *bypass cross*, entering the buy and sell orders at the same time into the exchange ledger, at exactly the negotiated price.
+
+* Careers
+
+Fund managers can absolutely get fired for losing clients' money. They can even get fired if they don't perform well against the indexes or their peers
+- even a temporary pullback will lead to immediate scrutiny
+
+Because of this, fund managers often buy at a premium
 
 * Information
 

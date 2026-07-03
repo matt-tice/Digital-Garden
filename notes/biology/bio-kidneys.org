@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       8dada547-abdb-4c47-aa53-73d4e8d137e5
+:END:
+#+title: kidneys
+#+filetags: :biology:body:
+
+* References
+
+* Summary
+
+* Glomeruli
+
+Tiny blood vessels, that filter proteins from water and waste
+- the protein stays in the bloodstream
+- waste and water goes through
+
+
+
+** Hyperfiltration
+
+Eating too much protein stresses the kidneys by forcing them to process high levels of waste
+
+Blood vessels dilate to increase blood flow to the kidneys, but this *increases the pressure in the glomeruli* 

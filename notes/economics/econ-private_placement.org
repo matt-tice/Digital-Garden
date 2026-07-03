@@ -62,4 +62,9 @@ The company sells shares to clients directly. This saves time and money, and has
 
 ** Subscription Receipts
 
-** 
+Placeholder securities. Investor cash is held in escrow until a specific condition is met (for example, a merger or acquisition).
+
+When the condition is met, the receipts are /halted and delisted/ 
+- the receipts are frozen and can no longer be traded; this allows institutions to tabulate who owns what
+- then the receipts are delisted
+- the next trading day, the common shares are added onto the exchange
