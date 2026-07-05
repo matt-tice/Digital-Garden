@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       8a850866-73e2-4941-8347-c182bddd6682
+:END:
+#+title: monorepos
+#+filetags: :comsci:repository:
+
+* References
+
+* Summary
+
+Monolithic repository.
+
+It means keeping multiple distinct projects together inside one single repo instead of giving each one a separate repo
+- for example, having a bunch of academic paper drafts inside of one repo
+
+The point is that all of the projects in the repo will share resources
+- like a single master bibliography file or style file
+
+

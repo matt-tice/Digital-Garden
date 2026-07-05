@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       850acfa5-3f74-409b-a457-69776905936d
+:END:
+#+title: pulmonary embolism
+#+filetags: :biology:pathology:blood:
+
+* References
+
+* Summary
+
+When a blood clot dislodges and blocks the pulmonary arteries
+
+* Virchow's Triad
+
+1. Intravascular vessel wall damage
+2. Stasis of flow
+3. Hypercoagulable state
+
+
+** Wall Damage
+
+Both vagina birth and cesareans damage the lining of pelvic and uterine blood vessels
+
+** Venous Stasis
+
+High levels of progesterone increase vasodilation
+
+The heavy pregnant uterus compresses the inferior vena cava and pelvic veins
+
+** Hypercoagulability
+
+During pregnancy, the body becomes /hypercoagulable/, in order to prevent fatal hemorrhaging during childbirth
+
+It increases 
+
+It surpresses anticoagulnts like Protein S
+
+A mild hypercoagulable state can /persist for 8 - 12 after birth/
+

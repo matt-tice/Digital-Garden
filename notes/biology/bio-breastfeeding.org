@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       a37d9873-5f9e-4cf8-81a1-c50d56f85a5d
+:END:
+#+title: breastfeeding
+#+filetags: :biology:postpartum:
+
+* References
+
+* Summary
+
+* Oxytocin
+
+During breastfeeding, oxytocin is rapidly released into the bloodstream. It acts on the mammary glands to squeeze the alveoli, so milk is let down into *lactiferous ducts* (this is called the *letdown reflex*)
+
+Suckling at the nipple is relayed to the hypothalamus, which causes the brain to produce the oxytocin and the lactocyctes to produce milk
+
+Oxytocin release has a positive feedback loop, which releases more oxytocin until the triggering event ceases
+
+* Prolactin

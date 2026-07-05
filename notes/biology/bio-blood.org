@@ -21,6 +21,19 @@ White blood cells of the innate immune system that *engulf* and *digest* pathoge
 What you call a bunch of macrophages engulfing a foreign substance
 
 
+* Blood Vessels
+
+1. Arteries
+        - from heart to body
+2. Arterioles
+        - 
+3. Capillaries
+        - exchange chemicals between blood and tissue
+4. Venules
+        - 
+5. Veins
+        - from capillaries to heart
+
 * Tests
 
 
@@ -47,3 +60,27 @@ Measures all the different blood cells
 Sedimentation rate: time for red blood cells to settle at the bottom of a test tube
 
 [[id:89db38a0-0c02-4ab0-aee5-a9b526431852][inflammation]] causes red blood cells to clump together, making them fall to the bottom of the tube faster
+
+* Hemostasis
+
+
+
+** Coagulation
+
+
+
+*** Clots (Thrombi)
+
+Made up of blood parts called *cruor* (mainly red blood cells and fibrin, along with a few platelets)
+
+The platelets and red blood cells form a plug that can block the veins or arteries.
+
+The fibrin forms a mesh
+
+Thrombi are actually natural parst of injury response; they stop further bleeding. 
+
+**** Thrombosis
+
+When a clot obstructs a blood vessel. 
+
+When it impacts the lungs, we're looking at a [[id:850acfa5-3f74-409b-a457-69776905936d][pulmonary embolism]]

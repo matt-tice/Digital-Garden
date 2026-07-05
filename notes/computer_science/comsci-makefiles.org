@@ -11,7 +11,98 @@
 
 Makefiles are collaborations between Make and Bash
 
+** Tabs v.s. Spaces
+
+Every *command line must start with a single tab* 
+- if you use spaces you get the =missing separator= error
+
+* Rules
+
+The general structure of a makefile revolves and *rules:* 
+
+#+begin_src makefile
+target: dependencies
+        system_command
+#+end_src
+
+** Targets
+
+The target is the literal file you want the computer to target
+
+If a file with the target filename is found in the filesystem, Make looks at the dependencies
+- if the dependencies are *newer than the target*, the command is run and the target file is regenerated
+
+
+*** Default
+
+The first target in the file is the default
+- Make will trigger it if no other target is specified
+
+You can specify a target by running =make target_name= 
+
+#+begin_src makefile
+target_name: dependencies
+\t commands
+#+end_src
+
+For some reason I can't get my tabs working inside of the source-block, so I used \t instead.
+
+*** Phony
+
+If you just want Make to run terminal commands and not create any files, you create a *phony target* 
+
+#+begin_src makefile
+.PHONY name
+#+end_src
+
+*** Dynamic Targets
+
+We use *single dollar signs* to represent /Makefile variables/ (as opposed to bash variables) or /call built-in Make functions/ 
+
+=$(MAKE)= runs the command make
+
+
+** Dependencies
+
+When evaluating a target, make will jump down to its dependencies, if they exist
+- if it's not a target, Make will look for the dependency name in the file folder
+       - if it exists, it's used as a raw input
+       - if it doesn't exist, you get an error
+
+** Symbols
+
+=$@= Is shorthand for the name of the current target
+
+=%= is a wildcard
+- you can later reference it with =$*=
+
+=@= tells Make to not echo the command text you wrote
+- by default Make will always *print the literal text of the command*
+- so if you write =echo "hello world"=, Make will print
+
+#+begin_src terminal
+echo "hello world"
+hello world
+#+end_src
+
+** Variables
+
+=:== declares a variable by evaluating the right side immediately
+- this is faster 
+
+=== declares a variable, but it doesn't evaluate the right side until the variable is actually used in a command
+
 * Bash
+
+** Variables
+
+Bash shell variables are denoted with *two dollar signs:* 
+
+#+begin_src makefile
+$$variable
+$$var
+$$name
+#+end_src
 
 ** Redirection
 
@@ -24,13 +115,6 @@ Makefiles are collaborations between Make and Bash
 Bash uses semicolons but Make doesn't. This can lead to some oddness in makefiles --- you have to be clear on where semicolons are necessary and where they aren't.
 
 Bash uses semicolons as a newline symbol
-
-* Make
-
-=$@= Resolves to the name of the target file currently being built
-
-=%= is a wildcard
-- you can later reference it with =$*=
 
 * Comments
 
