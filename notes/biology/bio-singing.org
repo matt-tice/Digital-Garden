@@ -1,0 +1,105 @@
+:PROPERTIES:
+:ID:       e905726f-8605-4bfc-97e9-3faafe0393e1
+:END:
+#+title: singing
+#+filetags: :biology:art:
+
+* References
+
+* Summary
+
+Sound is longitudinal pressure wave. It contains areas of high density (compression) and low density (rarefaction)
+
+When the glottis opens, air particles are pushed through, by subglottal pressure. The actual molecules themselves don't make it very far, and travel relatively slowly. What creates the sound is the molecules colliding with each other: the *collision energy* travels along
+
+=Note:= The *mean free path* of air at atmospheric pressure is only about 68 nm. So air molecules are colliding all the time
+- an average air molecule undergoes about *7B collisions / second* (7 \times 10^9 Hz)
+
+The actual pressure waves produced by the voice are only about 0.1 Pa. But the standard atmospheric pressure is *101,325 Pa*.
+- the fact that our ear is able to discern a 0.0001% change in pressure is absolutely insane.
+
+The smallest sound a human can hear at 1000 Hz is about 20 \times 10^-6 Pa.
+- that causes the eardrum to move 10^-11 m (!!!!) that's *smaller than the diameter of a hydrogen atom*. And we can hear it?!!?
+
+* Air
+
+** Subglottal Pressure
+
+The diaphragm and intercostal muscles regulate the air flow. *Support* is essentially the condition of maintaining *constant subglottal pressure* as volume of air in the lungs decreases.
+
+Subglottal pressure determines the loudness of the voice, by altering the amplitude of the 
+
+As the pressure increases, 
+
+** Maximum Flow Deceleration Rate
+
+The slope of the glottal flow waveform as it falls back to zero.
+
+Acoustic power is propertional to the square of MFDR; if the folds snap shut quickly, the glottal flow stops quickly
+
+** Acoustic Radiation Pressure
+
+The air pressure coming out of the mouth
+
+$P_{a}_{r} \propto P_{s}^{2}$.
+
+** Perceived Loudness
+
+This is the sound pressure level
+
+* Vocal Tract
+
+** Vocal Folds
+
+*** Glottis
+
+The space between the vocal folds
+
+*** Bernoulli Effect
+
+With a narrow glottis, air passing through will actually pull the vocal folds together.
+
+Subglottal pressure pushes the folds back apart. This cycle produces an alternating wave of air, called the *glottal flow.* 
+- the open glottis allows air through; they crash into air molecules above the glottis, creating a pressure wave
+- as the glottis begins to close, the air through the glottis decreases; to make up for the lost air, the air right above the glottis gets pulled forward, lowering the pressure above the glottis.
+- the low pressure causes the folds to shut even faster.
+- while the folds are shut, the pressure wave continues to travel forward, leaving a low pressure region behind.
+
+This is what allows opera singers to produce incredibly loud sound --- they don't increase the subglottal pressure
+
+*** Amplitude
+
+Normally, when someone tries to be loud, they increase their subglottal pressure
+
+Ordinary speakers have a relatively symmetric glottal closure cycle; the folds only close slightly faster than they opened.
+
+Opera singers shape their throat in a specific way that causes the glottis to /close faster/
+- narrowing the epilaryngeal space
+- expanding the pharynx
+A *massive* (as in, it contains a lot of mass) column of air is created right over the glottis. 
+
+*** Acoustic Inertance
+
+$M = \rho L/A$
+M is the inertance, L is the length of the tube, and A is the cross-sectional area
+
+Narrowing the epilaryngeal tube increases the inertance.
+When the air reaches the wide pharynx, the inertance drops
+
+** Larynx
+
+When the larynx is high, the epilaryngeal tube is /short and wide/
+
+** Interarytenoid Muscles
+
+Close the glottis
+
+** Lateral Cricoarytenoid Muscles
+
+Close the glottis
+
+** Cricothyroid Muscle
+
+Tilts the thyroid cartilage forward from the cricoid cartilage. This /increases tension/ on the vocal folds and /thins their mass/.
+
+** Thyroarytenoid Muscles
