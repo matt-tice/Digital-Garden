@@ -1,0 +1,103 @@
+:PROPERTIES:
+:ID:       59b6e690-0d9c-4b60-a94a-226cbb3c1a5d
+:END:
+#+title: amino acids
+#+filetags: :biology:molecules:chemistry:
+
+* References
+
+* Summary
+
+There are 22 amino acids that show up in the genetic code, but there are hundreds found in nature.
+
+The 22 amino acids are called *proteinogenic*.
+
+All of the amino acids have
+- an amino group
+- a double-bonded oxygen
+- a single-bonded hydroxyl group
+- another unique R-group that distinguishes the different AAs.
+
+The oxygen and hydroxyl are called caboxylic acid (COOH).
+- the oxygen holds hydrogen's electron very tightly
+- this allows the hydrogen to break free as an ion (this is why COOH is an /acid/)
+
+The amino group is basic
+- this allows the carboxyl ion to bind with the amino group of another amino acid, forming a chain, called a *peptide bond.* 
+
+* Special Amino Acids
+
+** Selenocysteine
+
+** Pyrrolysine
+
+* Alanine
+
+=R-group:= Methyl group
+
+=Non-essential:= Your body can build it from scratch.
+
+=Hydrophobic:= During protein folding, alanine stays inside the protein.
+
+** Glucose-Alanine Cycle
+
+When your muscles break down proteins, they produce [[id:90693255-6072-44fd-91bb-b688d6d3f1fb][ammonia]], which is then converted into alanine, which is sent through the bloodstream into the [[id:dd2ce420-c7dd-4511-b5a8-afa92d606cab][liver]], where it's converted into glucose.
+
+
+
+* Arginine
+
+* Asparagine
+
+* Aspartic Acid
+
+* Cysteine
+
+* Glutamic Acid
+
+* Glutamine
+
+* Glycine
+
+The smallest AA. It's literally *just a hydrogen atom.* 
+
+* Histidine
+
+* Isoleucine
+
+* Leucine
+
+* Lysine
+
+* Methionine
+
+
+* Phenylalanine
+
+
+* Proline
+
+* Pyrrolysine
+
+* Selenocysteine
+
+* Serine
+
+* Threonine
+
+* Tryptophan
+
+* Tyrosine
+:PROPERTIES:
+:ID:       d35da251-a7a9-4987-82dd-9ca708edd67b
+:END:
+
+Used to make dopamine.
+
+Found in eggs, beef, salmon, and whey proteins.
+
+
+
+* Valine
+
+

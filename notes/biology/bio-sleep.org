@@ -9,6 +9,53 @@
 
 * Summary
 
+* Interstitial Space
+
+The fluid-filled gaps between neurons.
+
+Astrocytes have $\alpha_{1}$ receptors that norepinephrine binds to, triggering calcium ion release. This causes the astrocytes to swell as they absorb more water, causing the narrowing of the interstitial space.
+
+* Meditation
+
+Meditation can actually mimic N1 sleep.
+- intense \theta waves are generated in the prefrontal cortex
+
+The vagus nerve is stimulated by slowed breathing. The vagus nerve mainly sends signals up to the brain, to the *nucleus tractus solitarius.* The NTS then sends inhibitory signals to the locus coeruleus. It also sends excitatory signals to the nucleus basalis and the pedunculopontine nucleus.
+
+The vagus nerve also controls the adrenal glands.
+
+* Stages of Sleep
+
+** NREM Sleep
+
+*** N1
+
+[[id:d6bb9e1b-4d4c-4728-a0a5-656d048fb7ad][Norepinephrine]] begins to drop, expanding the interstitial space.
+
+Theta waves
+
+*** N2
+
+K-complexes (large single delta waves)
+
+sleep spindles
+
+Blood volume drops, creating a low pressure environment that pulls in [[id:05efb201-93e2-440f-9c10-704d35b960ea][cerebrospinal fluid]].
+
+*** N3
+
+** REM Sleep
+
+* Default Mode Network
+
+Similar to sleep, it clears metabolic waste and consolidates memory.
+The DMN is a network of brain regions that are active during mind-wandering.
+
+Alpha and beta waves
+
+During DMN, you have high levels of norepinephrine, which keeps the interstitial space in the brain narrow. So [[id:05efb201-93e2-440f-9c10-704d35b960ea][cerebrospinal fluid]] can't flow deep into the tissue. Some waste clearance does occur, but not much compared to during sleep.
+
+
 * Circadian Rhythm
 
 Our bodies have two clocks:

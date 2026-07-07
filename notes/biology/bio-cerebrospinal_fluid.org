@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       05efb201-93e2-440f-9c10-704d35b960ea
+:END:
+#+title: cerebrospinal fluid
+#+filetags: :biology:brain:nervous_system:
+
+* References
+
+* Summary
+

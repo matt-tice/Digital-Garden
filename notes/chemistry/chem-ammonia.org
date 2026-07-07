@@ -71,3 +71,15 @@ In fact nitrogenases are the /only known enzymes/ that can do nitrogen fixation.
 - So obviously, they're incredibly important for us.
 
 Nitrogenases are produced by certain bacteria, like *cyanobacteria* and *rhizobacteria*.
+
+** Muscles
+
+During exercise, your body will initially burn carbs and fats to generate ATP. But during intense or prolonged exercise, your glucose stores run low, and proteins are broken down instead, creating amino acids that can be converted into fuel.
+
+The stress of intense workouts leads to tears in your muscle proteins. To fix them you have to break down the damaged proteins and replace them.
+
+Carbs and fats contain only carbon, hydrogen, and oxygen. Burning them produces carbon dioxide and water, which you breathe and sweat out.
+
+Proteins contain those *and nitrogen.* When your break down proteins to get energy, the amino (nitrogen) part of the AA is stripped away --- this is called *deamination.* 
+
+The free nitrogen grabs surrounding hydrogen atoms, and forms /ammonia/. This ammonia is then rebound into alanine.

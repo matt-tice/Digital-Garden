@@ -15,9 +15,43 @@ Redundancy:  One of the key organizational principles of biology
 
 ** Broadmann areas: 
 
-** Ion channels:  Dynamical systems
+* Ion channels:  Dynamical systems
 
-** Synapses:  Dynamical systems
+There are 4 main ions in your brain
+1. Sodium (+1)
+2. Potassium (+1)
+3. Calcium (+2)
+4. Chloride (-1)
+
+Typically, an idle neuron has a *resting potential* of about $-70$ mV, relative to the outside of the cell.
+
+
+If a neighbouring neuron fires a potential, it bumps the connected neurons' resting potential to $-55$ mV.
+Voltage-gated *sodium channels* then snap open, sending a plethora of Na ions in, bringing the voltage all the way to $+40$ mV.
+- this then triggers *calcium channels* to open, pushing vesicles of neurotransmitters out to shock the next neuron
+Then voltage-gated *potassium channels* activate, sending potassium ions /out/ of the neuron, lowering the potential back down
+
+** Sodium v.s. Potassium
+
+Both of these ions have a $+1$ charge from their valence shells, but atomically, they're different elements. 
+
+Inside of the brain, ions are never fully isolated; they're always attached to water molecules. This forms what's called a *hydration shell* around the ions.
+
+*** Sodium
+
+Atomic number 11. 
+
+Smaller; water molecules are able to be pulled tightly to the ion, creating a massive (large mass) hydration shell.
+
+*** Potassium
+
+Atomic number 19.
+
+Larger atomic radius; holds a loose light cloud of water molecules.
+
+** P-Loop
+
+* Synapses:  Dynamical systems
 
 ** Nerve cell:  Green's functions and non-linear dynamics and stochastic equaions
 

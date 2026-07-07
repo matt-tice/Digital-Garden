@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       5a0eaaad-ac08-4a69-8b4b-6c6d45d38f66
+:END:
+#+title: amyloid-beta
+#+filetags: :biology:amino_acid:peptide:
+
+* References
+
+* Summary
+
+Amyloid beta (A\beta ) are peptides (chains of amino acids). They're the main component of amyloid plaques found in the brains of people with Alzheimer's.
+
+Early-onset Alzheimer's is known to be due to amyloid beta, but there are other types of Alzheimer's that seem to not be caused by amyloid beta, and some people who have plaque buildup never get Alzheimer's.
+
+It's possible that the plaque buildup is really a /reponse/ to the disease, rather than a cause.

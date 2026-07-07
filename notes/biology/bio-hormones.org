@@ -1,0 +1,188 @@
+:PROPERTIES:
+:ID:       2b12abda-198b-4c2d-b9a7-70bc34901265
+:END:
+#+title: hormones
+#+filetags: :biology:endocrine_system:
+
+* References
+
+* Summary
+
+* Epinephrine
+
+Also called *adrenaline.* Made mainly by the adrenal glands on your [[id:8dada547-abdb-4c47-aa53-73d4e8d137e5][kidneys]]. During stress, the adrenal glands send epinephrine into your bloodstream, spiking your heart rate, dilating your airways and mobilizing glucose
+
+* Serotonin
+:PROPERTIES:
+:ID:       9d00dfdc-507a-46ab-9ffa-03a2d278837f
+:END:
+
+Made in the *Raphe nuclei*
+
+GABA
+
+Derived from the amino acid L-tyrptophan, which is converted into 5-HTP and then into serotonin (5-HT)
+
+Serotonin is a kind of mollifier; it alters the *baseline voltage* of neurons, making them *less reactive* to stress.
+
+Serotonin is converted into melatonin at night.
+
+Serotonin will suppress phasic spikes. The VTA has GABA neurons sitting next to it, that contain 5-HT_2C receptors. When serotonin binds to these, the GABA neurons fire, sending out chloride.
+The chloride freezes the dopamine neurons.
+
+In the prefrontal cortex, serotonin binds to 5-HT_2A receptors on the terminals where dopamine is released.
+
+Serotonin receptors are located all throughout your body.
+
+*Wellbutrin* is an NDRI as opposed to an SSRI
+- ND stands for /norepinephrine and dopamine/
+- instead of blocking serotonin reuptake, it blocks norepinephrine and dopamine reuptake.
+- this is used in compination with an SSRI to balance out the inhibitted dopamine production.
+
+
+
+
+
+** SSRIs
+
+When you take an SSRI, it immediately targets the synaptic cleft. The presynaptic neuron is covered in a protein called SERT (serotonin transporter). 
+
+SERT sucks used serotonin out of the cleft, to recycle it. SSRIs bind into the SERT protein, inhibiting it.
+- the serotonin then pools inside of the synaptic cleft.
+
+Activating the serotonin receptors in the gut triggers nausea
+
+*Sertraline* is designed to inhibit the /dopamine transporter/ slightly.
+
+*** Micro-Rewards
+
+Though SSRIs end up inhibiting phasic dopamine spikes, if you focus on getting lots of tiny dopamine releases, instead of one big one, the SSRI won't necessarily be able to block that. 
+
+You can use this to maintain focus throughout the day.
+
+*** Cold Showers
+
+Actually stimulate 250% dopamine
+
+** 5-HT_1A Autoreceptors
+
+When there's too much serotonin hanging around, these autoreceptors tell the neurons to *stop releasing more serotonin.* 
+
+Over time, if you maintain high serotonin, the 5-HT_1A receptors will be dissolved and the effects of the higher serotonin will finally take hold.
+
+** BDNF
+
+Serotonin stimulates [[id:e3c3f1eb-4d17-4fe7-a37e-d05dda04b550][brain-derived neurotrophic factor]], which in turn stimulates neurogenesis in the hippocampus.
+
+This in turn allows the DMN to change its focus to be less on negative rumination.
+
+* Dopamine
+
+Produced in the *substantia nigra*  and the *ventral tegmental area.* Derived from the amino acid [[id:d35da251-a7a9-4987-82dd-9ca708edd67b][tyrosine]], converted into L-DOPA, and then into dopamine.
+
+Dopamine is actually then used to make norepinephrine!
+
+Dopamine modulates neural plasticity
+
+Dopamine fires whenever your brain detects something *new, unexpected, or potentially rewarding.* For example, when you get a text notification.
+
+Dopamine binds to G-protein coupled receptors (GPCRs) on the dendrites of prefrontal cortex neurons.
+- binds to D1 receptors on non-essential neurons.
+This activates potassium and sodium ions to lower the voltage of the non-essential neurons.
+- this makes it harder for those neurons to fire.
+
+Dopamine acts as an off-switch for *prolactin*.
+- when dopamine is suppressed, prolactin increases, leading to fatigue, muscle weakness, bloating
+
+** Calcium
+
+Intense exercise like HIIT forces calcium ions into your brain's movement and reward pathways, which causes dopaminee vesicles to release their contents. 
+
+** Tonic Dopamine
+
+When you are focusing on a task, your midbrain releases a slow steady stream of *tonic dopamine*. 
+- it binds to the D1 receptors and helps silence the noise of irrelevant neurons.
+
+
+** Phasic Spikes
+
+When a sudden unexpected event happens, like a text message, the ventral tegmental area creates a /burst/ of dopamine, called a phasic spike.
+
+This is too much dopamine for the D1 receptors to handle, so the excess dopamine binds to D2 and D3 receptors.
+
+D2 receptors lower the threshold for neurons to fire
+- this makes everything more distracting
+
+When D2 receptors get hit, the ion channels of your current task pathway get flushed.
+
+*** Down-regulation
+
+When you get consistent phasic spikes, your body will actually *lower your baseline dopamine*, to try to prevent you from overwhelming D1 so much.
+
+This leads you to an ADHD-like baseline, where your baseline is constantly bored and understimulated
+
+*** Addictive Apps
+:PROPERTIES:
+:ID:       fd291087-2f1d-4eeb-ab0f-00f9279cdbb0
+:END:
+
+These are specifically designed to create phasic spikes.
+
+They keep you guessing as to whether you're going to see something interesting or not (what will be on my feed today?)
+- by destroying predictability, they keep phasic responses
+
+Dopamine doesn't care about what a reward is, as long as it's *better or more novel than expected.* 
+
+They remove pagination, so there's no natural stopping point.
+
+Videos that succeed on the algorithm are those which deliver stimulation within the /first 3 seconds/ --- this makes them generate a phasic spike before your prefrontal cortex can determine whether it's worth paying attention to the video
+
+Apps will often *delay notifications* and send you them at random times, to decrease predictability
+
+** Boredom
+
+Being bored is actually *extremely important* to make sure that your dopamine receptors are kept healthy.
+
+Your VTA stops firing phasic spikes.you brain slowly increases the sensitivity and density of your D1 receptors.
+
+During these intentional boredom phases you should *just daydream* 
+- just lie down and stare at the ceiling or sky, and let thoughts come to you
+- drink some tea while staring outside
+
+** Yerkes-Dodson Law
+
+If baseline dopamine and norepinephrine are too low, the brain is understimulated and constantly looks for stimulation. This is correlated with ADHD.
+
+ADHD meds like Adderall or Ritalin bump up baseline dopamine and norepinephrine.
+
+If you have too much dopamine and norepinephrine, you become hyper-vigilant. 
+
+* Norepinephrine
+:PROPERTIES:
+:ID:       d6bb9e1b-4d4c-4728-a0a5-656d048fb7ad
+:END:
+
+Also called *noradrenaline.* Made mainly inside the brain, by the neurons called the *locus coeruleus.* It has influence over your blood pressure.
+
+Norepinephrine keeps your brain alert and vigilant.
+
+The locus coeruleus is packed with *adenosine $A_1$ receptors*. When [[id:d55a0d14-1826-4e49-a2a5-b08773e13c74][ATP]] breaks down, the released adenosine bonds to the A_1 receptors, and causes the neurons to hyperpolarize (drop in voltage)
+- this slows down their firing rate, suppressing the release of norepinephrine
+
+Astrocytes have $\alpha_{1}$ adrenergic receptors which norepinephrine binds to, causing the release of calcium ions inside of the astrocytes. The extra calcium ions, causes the astrocytes to absorb more water, causing the cells to expand and narrowing the interstitial space.
+
+Norepinephrine also binds to $\alpha$-2A receptors on cortical neurons. 
+- this inhibits cyclic AMP, causing the HCN channels to close, preventing electrical leakage, and amplifying the neurons' signals.
+
+* Acetylcholine
+
+Made in the *nucleus basalis of Meynert* and the *pedunculopontine nucleus*. Derived from choline, which is combined with Acetyl-CoA.
+
+It alters cellular permeability
+
+When acetylcholine binds to nicotinic receptors in the brain, which actually makes you more focused.
+- during mediation and N2 sleep, your brain is /actually highly focused!/
+
+When it binds to muscarinic receptors in the body, it slows your heart rate, drops your blood pressure, and relaxes your muscles.
+
+When it's released it slows your heart.
