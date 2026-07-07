@@ -49,36 +49,154 @@ This is the sound pressure level
 
 * Vocal Tract
 
+** Lungs
+
+** Trachea
+
+A rigid tube made of cartilage rings. These are extremely sturdy and prevent your airway from collapsing inward when air gets pulled into the lungs, and the pressure in your trachea decreases.
+
+** Subglottic Space
+
+This sits right below the larynx. The air from the lungs pools here, while the vocal folds are closed.
+
+Eventually the air pressure forces the folds open.
+
+** Larynx
+
+This contains all of the main pieces of your voice:
+
+1. Vocal folds
+2. Glottis
+3. Epilaryngeal space
+
+The larynx is a protective cage made up of cartilage, that sits on top of the trachea.
+
 ** Vocal Folds
+
+
+The vocal folds actually aren't very thin; they're more like a block.
 
 *** Glottis
 
-The space between the vocal folds
+The space between the vocal folds. This is initially shut, but air pressure from the subglottic space pushes it open from the bottom.
 
-*** Bernoulli Effect
+Since the folds have some depth to them, they open from the bottom to the top, which takes a bit of time.
 
-With a narrow glottis, air passing through will actually pull the vocal folds together.
+Now, as the air passes through the glottis, the elasticity of the folds wants to push the glottis closed. But the column of air being pushed through them wants to keep it open.
 
-Subglottal pressure pushes the folds back apart. This cycle produces an alternating wave of air, called the *glottal flow.* 
-- the open glottis allows air through; they crash into air molecules above the glottis, creating a pressure wave
-- as the glottis begins to close, the air through the glottis decreases; to make up for the lost air, the air right above the glottis gets pulled forward, lowering the pressure above the glottis.
-- the low pressure causes the folds to shut even faster.
-- while the folds are shut, the pressure wave continues to travel forward, leaving a low pressure region behind.
+This is where Bernoulli's principle comes into play
 
-This is what allows opera singers to produce incredibly loud sound --- they don't increase the subglottal pressure
+*** Bernoulli's Principle
 
-*** Amplitude
+Bernoulli's principle says that the higher the velocity of a fluid, the lower the pressure.
+- you can think of this as the molecules of the fluids rushing by, so there aren't as many of them moving transversal to the direction of the fluid flow
 
-Normally, when someone tries to be loud, they increase their subglottal pressure
+So when air passes through the glottis, it leaves a lower pressure in its wake, even though there's a /continuous stream of air/. This allows the vocal folds to get pushed together by their internal pressure and elasticity.
 
-Ordinary speakers have a relatively symmetric glottal closure cycle; the folds only close slightly faster than they opened.
+Then air from the lungs pools again, increasing the pressure until the folds open up again. This cycle produces an alternating wave of air, called the *glottal flow.* 
 
-Opera singers shape their throat in a specific way that causes the glottis to /close faster/
-- narrowing the epilaryngeal space
-- expanding the pharynx
-A *massive* (as in, it contains a lot of mass) column of air is created right over the glottis. 
+The glottal flow is what creates sound! Because of atmospheric pressure, there's always some air in our vocal tract already
+- when the open glottis allows air through; it crashes into air molecules already sitting above the glottis, which then crash into the next layer of molecules, and so on, creating a *pressure wavefront*
+- when the glottis closes, there are no new air molecules coming through, so the pressure right above the glottis decreases
 
-*** Acoustic Inertance
+
+**** Rarefaction
+
+As the glottis closes and no new air is coming through, some of the air above the glottis continues moving forward, creating a rarefaction zone (lower pressure) above the glottis.
+
+Now, air molecules aren't all traveling the same direction; there are always some of them are traveling backwards, towards the glottis. When the air gets cut off by the glottis, those air molecules moving backwards will actually move towards the glottis, which also contributes to the rarefaction.
+
+=Note:= If the folds are open, the air after the glottis still crashes into the next bit of air, but there's no area of rarefaction, so instead of a wave with peaks and troughs, you just get a steady block of pressure, which doesn't correspond to sound (or really it's a kind shush or breath-like sound; white noise basically).
+
+**** Bernoulli pt 2.
+
+The rarefaction at the top of the glottis actually allows the vocal folds to close up *at the top*. So now you have the folds closing in both directions (from the bottom and from the top)
+
+This allows the air to get *cut off even faster*.
+
+**** Fourier Series
+
+Fourier theory tells us that the sharper the edges on a periodic function, the more sine waves (i.e. the more overtones) you need to form it. 
+
+When the glottis just closes from the bottom, you get a very slow cutoff of the air, and thus the rarefaction zone is produced smoothly: the pressure drops little by little, as the air is slowly closed off through the glottis.
+
+But if you can clamp the glottis shut at the top and bottom, your pressure wave has a *sharp drop* --- it's basically a *sawtooth wave*! Which means that the sound that will be produced when you have a whole bunch of these sawtooth pieces will have *a ton of higher overtones*
+- this is precisely how opera singers are able to make that operatic, resonant sound: they close the glottis from both the top and bottom, creating a sharp cutoff that corresponds to higher resonance.
+
+But why doesn't everyone sound operatic all the time then?
+
+The key is the /way the air column above the glottis moves/, leaving the rarefaction zone behind.
+- if your throat is too tight, it blocks the air from moving quickly up the vocal tract
+- instead, it moves slowly, the pressure doesn't drop as fast, and the upper glottis doesn't shut fast.
+
+*** Epilaryngeal Space
+
+Sits right on top of the larynx. You need it to act as a smooth transition between the vocal folds and the pharynx (which is just open air inside your throat)
+
+When sound travels between materials with different impedances, a lot of energy reflects at the boundary between the media. This is because the two different media have *different densities and elasticities*.
+
+If you start with loose, light molecules (low density, high elasticity) and go to tight heavy ones
+- the inertia of the heavy molecules causes them to barely move, and the momentum is transferred backwards into the light medium (this is the reflection)
+
+If you start with a dense, inelastic material and go to a light, elastic one
+- the heavy molecules meet no resistance, and so they actually bulge out into the light material, causing a drop in pressure at the location the heavy molecules were initially
+- unfortunately, the light molecules aren't able to take all of the energy of the heavy ones, so a lot of it gets reflected back
+- think of a heavy car hitting a light one; the light car goes flying, but the heavy car also keeps moving, because only a bit of the energy was taken away.
+
+
+**** Physics Derivation
+
+Why does this happen? Well if we look at conservation of momentum:
+
+Say the heavy molecule has speed $v_{0}_{}^{}^{M}$ and mass $M$ and the light one is /initially at rest/ and has mass $m$ and gets accelerated to velocity $v_f^m$_{}^{}. Then by conservation of momentum:
+
+\[
+M v^{M}_{0} = v_{f}^{M} M + v_{f}^{m} m
+\]
+
+Now use conservation of energy:
+
+\[
+m (v_{f}^{m} )^{2} + M (v_{f}^{M})^{2}= M (v_{0}^{M})^{2}
+\]
+
+We rewrite both equations to get
+$M(v_{0}^{M} - v_{f}^{M}) = v_{f}^{m} m$
+$m (v_{f}^{m})^{2} = M(v_{0}^{M} - v_{f}^{M})(v_{0}^{M} + v_{f}^{M})$
+ 
+Yielding $v_{f}^{m} = v_{0}^{M} +v_{f}^{M}$; plugging into the conservation of momentum and rearranging gives
+
+$v_{f}^{m} = \dfrac{2M v_{0}^{M}}{M + m}$
+
+which shows that the final velocity of the smaller particle can never exceed $2 v_{0}^{M}$, and in fact decreases as $m$ decreases.
+
+
+***** Relativity
+
+By the way, close to light speed, this stops holding (this isn't relevant for sound waves, but it's just a cool fun fact). It turns out that if you use the relativistic versions of the equations, heavy molecules can transfer essentially all of their energy to lighter ones in a collision!
+
+This is actually something that produces *cosmic ray air showers* in our upper atmosphere.
+
+**** Acoustic Impedance Matching
+
+So we need the epilaryngeal space to help us match the densities of the vocal folds and the pharynx; otherwise *sound will be lost through reflections.* 
+- even if you get all of those nice resonances from the closing of the upper glottis, you won't be able to hear it if all of the sound gets reflected back down into the vocal folds.
+
+One way around this it to just try to increase the amplitude / energy of the sound --- this is what untrained singers do
+
+** Pharynx
+
+Goes from the top of your larynx to the back of your nose.
+
+Highly muscular, allowing fine control
+
+** Oral Cavity
+
+
+
+** Nasal Cavity
+
+* Acoustic Inertance
 
 $M = \rho L/A$
 M is the inertance, L is the length of the tube, and A is the cross-sectional area
@@ -86,9 +204,9 @@ M is the inertance, L is the length of the tube, and A is the cross-sectional ar
 Narrowing the epilaryngeal tube increases the inertance.
 When the air reaches the wide pharynx, the inertance drops
 
-** Larynx
 
-When the larynx is high, the epilaryngeal tube is /short and wide/
+
+* Muscles
 
 ** Interarytenoid Muscles
 
