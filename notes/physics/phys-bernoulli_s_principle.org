@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:       11a06f4c-fde1-45a9-b0fa-dd2477a19894
+:END:
+#+title: bernoulli's principle
+#+filetags: :physics:fluids:
+
+* References
+
+* Summary
+
+$E = \dfrac{1}{2} \rho v^{2} + P + \rho gh$
+
+The pressure and gravitational potential make up the potential energy.
+
+* Viscosity
+
+Bernoulli's principle requires an *inviscid fluid* (zero viscosity)
+
+Viscosity is really *momentum exchange* between molecules moving at different speeds. This actually *generates heat*; some of the kinetic energy is lost to friction
+
+* Vortices
+
+When fast molecules move past slow ones, some of the fast molecules' energy gets transferred to the slow ones, pulling them along the flow (since molecules are really moving in every direction). The dragging force is called *viscous shear stress* 
+
+At the same time, the slow molecules that the slow boundary is attached to are trying to hold it in place.
+
+This leads to a /rolling/ behaviour that makes the vortices
+- 
+
+The vortex has a centripetal force
+
+* Turbulence
+
+Bernoulli's principle assumes *laminar flow* (all the molecules are traveling in neat, parallel lines).
+
+* Free Jets
+
+When a fluid remains attached to its boundary, it exerts pressure on it. But if it falls away from the boundary, all of a sudden the boundary doesn't have pressure holding it open
+
+** Coanda Effect
+
+the flow will attach to one side of the boundary more than the other
