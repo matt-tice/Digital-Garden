@@ -84,7 +84,6 @@ Since the folds have some depth to them, they open from the bottom to the top, w
 
 Now, as the air passes through the glottis, the elasticity of the folds wants to push the glottis closed. But the column of air being pushed through them wants to keep it open.
 
-This is where Bernoulli's principle comes into play
 
 *** [[id:11a06f4c-fde1-45a9-b0fa-dd2477a19894][Bernoulli's Principle]]
 
@@ -94,29 +93,23 @@ $E = \dfrac{1}{2} \rho v^{2} + P$
 
 If the energy is constant, Bernoulli's law says that increasing the velocity decreases the pressure. Inside the glottis things are a bit different.
 - the above equation holds for *inviscid laminar incompressible flow* that *remains attached to the glottal wall* 
-- in reality, vortices form as the glottis opens
-- and flow separates from the wall: it becomes a *free jet* 
-- air is actually compressible (but it doesn't really happen at the glottal pressures, so this isn't a big factor)
+- in reality, the molecules of air close to the wall remain attached, while those in the center get ripped free, creating a *free jet*
+- this leads to vortices and turbulence forming
+- also air is actually compressible (but it doesn't really happen much at the glottal pressures, so this isn't a big factor)
 
-This is actually *a good thing* --- it allows the pressure inside the glottis to /decrease/, which leads to its closing.
+These more nuanced features are actually *a good thing* --- they allows the pressure inside the glottis to /decrease/, which leads to its closing.
 
-Basically the reason the glottis closes is due to *friction*. The air touching the tissue of the vocal folds travels slower, because of the intermolecular forces between the folds and the air. This eventually causes the air at the boundary to /stop/.
+As the air molecules near the edges bump into the vocal folds, some of that energy is lost as /heat/ --- what that means at the molecular level, is that instead of the kinetic energy going straight into the wall and coming back out, it gets distributed in a number of different random directions. This is *inelastic scattering* 
 
-But how does that work at the molecular level? Heat is really *disordered motion* --- it's not just kinetic energy; it's also about the direction.
+As a consequence, the energy that comes back into the air molecules when the vocal fold pushes back is actually /less than it started with/. In this way, the air molecules on the boundary lose more and more energy, decreasing the internal pressure in the glottis, allowing the vocal folds to *start closing*
 
-When the fluid hits the vocal folds, the energy that goes into the folds gets converted into energy *in all directions* (this is "heat" in the vocal folds). So instead of having nice elastic scattering, where all of the energy goes into the wall, bounces off a molecule, which bounces off of another,... until it slows and comes right back, you instead get the initial energy into the wall broken into tiny bits in every direction, so the amount that comes back to the fluid is much less than originally went into the wall.
+This has /nothing to do with Bernoulli's principle/.
 
-This is the molecular appearance of /heat./ So now the fluid has less energy to push against the wall. But the wall still has the same energy to push back (it didn't lose any energy; it gained a bit in all directions, but the energy into the fluid is still more or less the same). So the glottis starts to close again. 
+Meanwhile, the further you get into the bulk of the fluid, the faster the air travels, because it's not doing inelastic scattering with the folds. It ends up *ripping away* from the boundary air, and becoming a *free jet* that isn't attached to the walls anymore.
 
-Meanwhile, the further you get into the bulk of the fluid, the faster the air travels. 
+The free jet then creates *vortices* and *turbulence*, introducing all kinds of complicated physics.
 
-Because the boundary air lost all of its energy, it can't hold the wall back, and the folds start to collapse inward. As it does this, the flow in the bulk gets ripped away from the boundary air, and becomes a *free jet* that isn't attached to the walls anymore.
-
-The free jet then creates *vortices* and *turbulence*, introducing all kinds of complicated differential equation mess.
-
-When the glottis opens, the energy of the air right at the beginning of the glottis is potential (pressure) energy, that gets converted into kinetic energy, as the air moves into the glottis. By Bernoulli, this decreases the pressure at the mouth of the glottis.
-
-The closure of the glottis is often attributed to Bernoulli's principle... this is more-or-less /wrong/. Bernoulli's principle does play a role, but not a significant one, as we now know.
+**** What is Bernoulli's Principle?
 
 Bernoulli's principle says that in a fluid *with steady flow* the higher the velocity of the fluid, the lower the pressure.
 - this is essentially /conservation of energy./ 
@@ -125,40 +118,30 @@ So for example, if air or water is accelerating (i.e. if a force is acting on it
 
 When the glottis opens, the air that was blocked by it initially accelerates, but this is irrelevant, because the air /wasn't flowing/ just before then (because it was blocked by the closed glottis). So as the air passes through the glottis, it doesn't actually drop the pressure.
 
-What does happen, is that the vocal folds are elastic and the *myoelastic forces try to force them closed*. This seems like it wouldn't work --- the subglottal pressure is able to force them open in the first place, so how could they possibly be strong enough to close back up?
+*** Supraglottal Pressure
 
-The further the glottis opens, the more powerful the elastic restoring force. But it seems like the system should just reach equilibrium: the restoring force should balance with the outward pressure, and the glottis should remain partially open as the air passes through.
+Now, as the air passes through the glottis, it eventually meets the air *above the glottis*; the new air crashes into the air that's sitting there, creating a *pressure wave* that passes through the rest of the vocal tract. These pressure waves are what we interpret as *sound*.
 
-But note that momentum $p = dF/dt$. 
-
-Then air from the lungs pools again, increasing the pressure until the folds open up again. This cycle produces an alternating wave of air, called the *glottal flow.* 
-
-The glottal flow is what creates sound! Because of atmospheric pressure, there's always some air in our vocal tract already
+Because of atmospheric pressure, there's always some air in our vocal tract already
 - when the open glottis allows air through; it crashes into air molecules already sitting above the glottis, which then crash into the next layer of molecules, and so on, creating a *pressure wavefront*
-- when the glottis closes, there are no new air molecules coming through, so the pressure right above the glottis decreases
 
+*** Rarefaction
 
-**** Rarefaction
+As the glottis begins to close, and less air is coming through, the air above the glottis continues moving forward, creating a *rarefaction zone* (lower pressure) above the glottis.
 
-As the glottis closes and no new air is coming through, some of the air above the glottis continues moving forward, creating a rarefaction zone (lower pressure) above the glottis.
+Now, air molecules aren't all traveling the same direction; there are always some of them are traveling backwards, towards the glottis. They'll fall back into the glottis, further empasizing the rarefaction zone.
 
-Now, air molecules aren't all traveling the same direction; there are always some of them are traveling backwards, towards the glottis. When the air gets cut off by the glottis, those air molecules moving backwards will actually move towards the glottis, which also contributes to the rarefaction.
-
-=Note:= If the folds are open, the air after the glottis still crashes into the next bit of air, but there's no area of rarefaction, so instead of a wave with peaks and troughs, you just get a steady block of pressure, which doesn't correspond to sound (or really it's a kind shush or breath-like sound; white noise basically).
-
-**** Bernoulli pt 2.
-
-The rarefaction at the top of the glottis actually allows the vocal folds to close up *at the top*. So now you have the folds closing in both directions (from the bottom and from the top)
+This rarefaction zone sitting right at the top of the glottis allows the myoelastic forces to start to close the glottis *from the top* 
 
 This allows the air to get *cut off even faster*.
 
-**** Fourier Series
+=Note:= If the folds are open, the air after the glottis still crashes into the next bit of air, but there's no area of rarefaction, so instead of a wave with peaks and troughs, you just get a steady block of pressure, which doesn't correspond to sound (or really it's a kind shush or breath-like sound; white noise basically).
+
+*** Fourier Series
 
 Fourier theory tells us that the sharper the edges on a periodic function, the more sine waves (i.e. the more overtones) you need to form it. 
 
-When the glottis just closes from the bottom, you get a very slow cutoff of the air, and thus the rarefaction zone is produced smoothly: the pressure drops little by little, as the air is slowly closed off through the glottis.
-
-But if you can clamp the glottis shut at the top and bottom, your pressure wave has a *sharp drop* --- it's basically a *sawtooth wave*! Which means that the sound that will be produced when you have a whole bunch of these sawtooth pieces will have *a ton of higher overtones*
+If you can clamp the glottis shut quickly at the top and bottom, your pressure wave has a *sharp drop* --- it's basically a *sawtooth wave*! Which means that the sound that will be produced when you have a whole bunch of these sawtooth pieces will have *a ton of higher overtones*
 - this is precisely how opera singers are able to make that operatic, resonant sound: they close the glottis from both the top and bottom, creating a sharp cutoff that corresponds to higher resonance.
 
 But why doesn't everyone sound operatic all the time then?
@@ -167,6 +150,7 @@ The key is the /way the air column above the glottis moves/, leaving the rarefac
 - if your throat is too tight, it blocks the air from moving quickly up the vocal tract
 - instead, it moves slowly, the pressure doesn't drop as fast, and the upper glottis doesn't shut fast.
 
+Opera singers basically make it so that the air above the glottis *rockets forward* 
 
 ** Ventricular Folds
 
@@ -397,6 +381,6 @@ Tilts the thyroid cartilage forward from the cricoid cartilage. This /increases 
 
 * Resonance
 
-** Helmholtz Resonator
+Resonance inside of a cavity is really a property that emerges due to /multiple waves/ --- the reason the epilaryngeal space is able to boost the 3000 Hz frequency, is because when the pressure waves reflect back off of the pharynx and then off of the vocal folds, they constructively interfere with the /next/ group of waves coming through the folds.
 
-Picture a glass bottle with a narrow neck and wide body. If you blow on the top, the Bernoulli principle says the pressure will drop there, and so air from above the bottle will fall into the neck
+More specifically, the 3000 Hz frequencies constructively interfere. It's very much *not* that the epilaryngeal space is generating 3000 Hz frequencies itself; it's just that it provides the right environment for any existing 3000 Hz frequencies to constructively interfere.

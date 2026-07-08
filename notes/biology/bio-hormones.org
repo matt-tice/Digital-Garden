@@ -27,7 +27,9 @@ Serotonin is a kind of mollifier; it alters the *baseline voltage* of neurons, m
 
 Serotonin is converted into melatonin at night.
 
-Serotonin will suppress phasic spikes. The VTA has GABA neurons sitting next to it, that contain 5-HT_2C receptors. When serotonin binds to these, the GABA neurons fire, sending out chloride.
+** Phasic Spike Suppression
+
+Serotonin will *suppress phasic spikes*. The VTA has GABA neurons sitting next to it, that contain 5-HT_2C receptors. When serotonin binds to these, the GABA neurons fire, sending out chloride.
 The chloride freezes the dopamine neurons.
 
 In the prefrontal cortex, serotonin binds to 5-HT_2A receptors on the terminals where dopamine is released.
@@ -38,9 +40,6 @@ Serotonin receptors are located all throughout your body.
 - ND stands for /norepinephrine and dopamine/
 - instead of blocking serotonin reuptake, it blocks norepinephrine and dopamine reuptake.
 - this is used in compination with an SSRI to balance out the inhibitted dopamine production.
-
-
-
 
 
 ** SSRIs
@@ -75,6 +74,14 @@ Over time, if you maintain high serotonin, the 5-HT_1A receptors will be dissolv
 Serotonin stimulates [[id:e3c3f1eb-4d17-4fe7-a37e-d05dda04b550][brain-derived neurotrophic factor]], which in turn stimulates neurogenesis in the hippocampus.
 
 This in turn allows the DMN to change its focus to be less on negative rumination.
+
+** GABA
+
+*** Heroin
+
+Heroin binds to the Mu-Opioid receptors, shutting down the GABA cells. This is what leads to terrible addiction --- you aren't able to suppress the phasic spikes at all, and you get a horriffying amount of dopamine.
+
+DeltaFosB accumulates to critical levels /within weeks/ 
 
 * Dopamine
 
@@ -139,6 +146,20 @@ Videos that succeed on the algorithm are those which deliver stimulation within 
 
 Apps will often *delay notifications* and send you them at random times, to decrease predictability
 
+*** Anger and Outrage
+
+Anger can actually create *some of the largest phasic spikes*. The evolutionary explanation is that we get *angry at threats*, and we need phasic spikes to divert our attention towards those threats.
+
+This is why outrage content is so effective as propaganda and click-bait
+
+It's particularly problematic when it comes to SSRIs
+- because your phasic spikes are surpressed by serotonin, negaive feelings like anger are some of the only things that have high enough spikes to break through.
+
+
+** Willpower
+
+Willpower is heavily determined by dpoamine
+
 ** Boredom
 
 Being bored is actually *extremely important* to make sure that your dopamine receptors are kept healthy.
@@ -156,6 +177,14 @@ If baseline dopamine and norepinephrine are too low, the brain is understimulate
 ADHD meds like Adderall or Ritalin bump up baseline dopamine and norepinephrine.
 
 If you have too much dopamine and norepinephrine, you become hyper-vigilant. 
+
+** Addiction
+
+Addiction is controlled by the *mesolimbic dopamine system* 
+
+Whenever you get a phasic spike, the transcriptor protein DeltaFosB turns on in the nucleus accumbens.
+
+Unlike most proteins, DeltaFosB lasts for weeks or months. Having a lot of DeltaFosB causes your brain to build more dendritic spines
 
 * Norepinephrine
 :PROPERTIES:
@@ -186,3 +215,7 @@ When acetylcholine binds to nicotinic receptors in the brain, which actually mak
 When it binds to muscarinic receptors in the body, it slows your heart rate, drops your blood pressure, and relaxes your muscles.
 
 When it's released it slows your heart.
+
+** Nicotine
+
+When you smoke a cigarette, nicotine hits your brain in /7 seconds/. It binds to the nicotinic receptors in the VTA, sending out a phasic spike of dopamine.
