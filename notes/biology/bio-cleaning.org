@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:       dbc6a55f-d6ca-43e2-8459-acea7d543dd6
+:END:
+#+title: cleaning
+#+filetags: :biology:bacteria:
+
+* References
+
+* Summary
+
+I have OCD around cleanliness. One of the biggest problems for me is that germs are microscopic, so I can't actually see how well I'm doing at making something clean. So part of the purpose of these notes is to help me get a realistic grounding in what it actually takes and how long it takes to clean.
+
+* Soap
+
+Dirt, sweat, sebum, and bacteria are hydrophobic, so you need something to dissolve the lipids they're attached to.
+
+Soap has hydrophobic tails, which latch onto the grease, oils and bacteria and wrap around them to form tiny balls called *micelles.* 
+
+Meanwhile, the hydro-/philic/ heads of the soap molecules stick outwards, and when water hits them, the micelle grabs onto it and gets carried away.
+
+** Time it Takes
+
+Here's the cool thing: the binding between the hydrophobic tails and the dirt, bacteria, etc. is *basically instantaneous.* 
+
+** Too Long
+
+Showering for more than 10 minutes can actually be a bit damaging, surprisingly. 
+
+* Downstream Clean
+
+My OCD often worries that if I don't wash my body from top to bottom, in small chunks, I'll just make myself dirty again.
+- it feels like the dirt from the top will just fall onto my legs, etc. and cause them to get all the germs on them.
+
+The reason this doesn't happen is that micelles *don't break back open*, and furthermore, they're far more attracted to water than to your skin. For dirt to bind to your skin, it needs a dry, calm environment
+
+The surface water on your legs is replaced *several thousand times per minute.*
+
+* Lather
+
+Lather actually corresponds to soap molecules that *have failed to find dirt.* Lather's bubbles is actually the soap molecules *trapping air*, instead of forming micelles.
+
+Instead of looking for suds, cleanliness can be checked by the *slickness* of your body. If the *soap layer feels slick* then you're done.

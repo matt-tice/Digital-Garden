@@ -45,4 +45,18 @@ Hippocampus: Manages and stores memory
 
 ** Cerebellum
 
-* 
+
+** Anterior Cingulate Cortex
+
+The anterior cingulate cortex does *cost-benefit analysis*. When you consider doing an action, the level of dopamine in the ACC tells it how rewarding the action will be.
+
+The norepinephrine level tracks the physical/mental/emotional cost of the action.
+
+The ACC has basically *no dopamine transporters* 
+- this means that the norepinephrine transporters pick up both norepinephrine and dopamine
+
+But sertraline only inhibits the DAT, not the NET. So it has basically no effect on preserving DAT in the anterior cingulate cortex!
+
+The locus coeruleus has the power to directly send norepinephrine to the anterior cingulate cortex
+
+** Prefrontal Cortex

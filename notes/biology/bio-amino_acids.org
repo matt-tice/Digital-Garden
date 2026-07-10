@@ -53,9 +53,26 @@ When your muscles break down proteins, they produce [[id:90693255-6072-44fd-91bb
 
 * Cysteine
 
-* Glutamic Acid
+* Glutamic Acid / Glutamate
+
+When glutamic acid loses its hyroden ion, it's called *glutamate*. Inside your body, glutamic acid is basically always glutamate, so doctors often use the terms interchangeably
+
+Glutamate acts on receptors like NMDA and AMPA and makes sodium channels open, increasing the voltage of neurons.
+
+Glutamate is balanced by GABA
+
+Once glutamate stimulates a brain cell, astrocytes absorb it and convert it into glutamine!
+
+** Excitotoxicity
+
+
+** Monosodium Glutamate (MSG)
+
+A shelf-stable seasoning 
 
 * Glutamine
+
+Made by the astrocytes from glutamate. It's sent to the neurons, which turn it back into glutamate.
 
 * Glycine
 

@@ -34,3 +34,13 @@ The compulsion is your brain trying to break the loop
 ** Caudate Nucleus
 
 Heavily dominated by inhibitory serotonin receptors. These receptors don't activate unless there's a *ton of serotonin* 
+
+*** Washing Hands
+
+Typically when your hands feel dirty, the sensation of washing them sends an "all clear" signal to the caudate nucleus, which then closes the gate on the orbifrontal cortex signals.
+
+
+
+* Avoidance Loop
+
+Once the avoidance happens, you get a small phasic spike of dopamine, which influences DeltaFosB
