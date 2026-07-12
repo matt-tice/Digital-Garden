@@ -2,7 +2,7 @@
 :ID:       31607183-1c72-462f-b733-88810487166a
 :END:
 #+title: brain
-#+filetags: Biology:Neuroscience:
+#+filetags: :Biology:Neuroscience:
 
 * References 
 
@@ -10,7 +10,85 @@
 
 
 
+* Forebrain (Prosencephalon)
+
+The rostral (forward-most) part of the brain (closest to the eyes)
+
+** Telencephalon
+
+This is the *cerebrum*. It's the *largest* part of the brain
+
+*** Frontal Lobe
+
+**** Prefrontal Cortex
+
+Involved in math
+
+***** Dorsolateral Prefrontal Cortex
+
+=Perfect pitch:= This is hyperconnected to the auditory pathways in those with perfect pitch, allowing them to essentially look up the name of a note
+
+***** Orbitofrontal Prefrontal Cortex
+
+**** Broca's Area
+
+*** Parietal Lobe
+
+Involved in math
+
+**** Primary Somatosensory Cortex
+
+**** Intraparietal Sulcus
+
+*** Temporal Lobe
+
+Auditory processing, memory, emotion
+
+**** Wernicke's Area
+
+Language comprehension
+
+**** Hippocampus
+
+*** Occipital Lobe
+
+Visual info
+
+**** Primary Visual Cortex
+
+** Diencephalon
+
+Sits between the telencephalon and mesencephalon
+
+*** Basal Ganglia
+
+Parkinson's 
+Huntington's
+*** Thalamus
+*** Hypothalamus
+*** Subthalamus
+* Midbrain (Mesencephalon)
+** Tectum
+*** Superior Colliculi
+*** Inferior Colliculi
+** Tegmentum
+*** Red Nucles
+*** Periaqueductal Gray
+** Cerebral Peduncles
+* Hindbrain (Rhombencephalon)
+** Metencephalon
+*** Pons
+
+*** Cerebellum
+** Myelencephalon
+*** Medulla
+
+Makes up the lower part of the brainstem
+
+
+
 * Parts
+
 
 
 ** Cerebrum
@@ -60,3 +138,9 @@ But sertraline only inhibits the DAT, not the NET. So it has basically no effect
 The locus coeruleus has the power to directly send norepinephrine to the anterior cingulate cortex
 
 ** Prefrontal Cortex
+
+** Hippocampus
+
+** Parietal Cortex
+
+** Frontal Lobe

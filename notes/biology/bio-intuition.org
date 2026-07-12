@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       a7465554-1954-4f95-b3da-fb1abd868bfd
+:END:
+#+title: intuition
+#+filetags: :biology:psychology:
+
+* References
+
+* Summary
+
+* Dual-Process Theory
+
+The pyschologist Daniel Kahneman broke down thinking into System 1 and System 2:
+
+1. Intuitive
+2. Logical / calculating
+
+This was popularized in his /Thinking Fast and Slow/ 
+
+Explicit memory relies on the *prefrontal cortex* (working memory) and the *hippocampus* (memories).
+
+System 1 relies more on the *basal ganglia* and *cerebellum* 
+
+** Myelination
+
+Once axons are wrapped in myelin, the electrical signals along them speed up by up to 100 times
+- this lets the intuition be instaneous

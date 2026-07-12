@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       e51283d5-7a53-4cee-b9bc-2aae40a82c15
+:END:
+#+title: gamma-aminobutyric acid
+#+filetags: :biology:brain:gaba:neurotransmitter:
+
+* References
+
+* Summary
+
+Calms the nervous system
+
+Balances with [[id:2aebf5bf-2284-49b4-a4fb-7e5e9161f891][Glutamic Acid / Glutamate]]
+
+* Drugs
+
+These bind to GABA receptors, making your brain hyper-sensitive to them
+
+** Valium
+
+** Xanax
+
+** Ambien
+
+** Alcohol
+
+Mimics GABA in the brain

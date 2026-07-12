@@ -8,10 +8,6 @@
 
 * Summary
 
-* Epinephrine
-
-Also called *adrenaline.* Made mainly by the adrenal glands on your [[id:8dada547-abdb-4c47-aa53-73d4e8d137e5][kidneys]]. During stress, the adrenal glands send epinephrine into your bloodstream, spiking your heart rate, dilating your airways and mobilizing glucose
-
 * Serotonin
 :PROPERTIES:
 :ID:       9d00dfdc-507a-46ab-9ffa-03a2d278837f
@@ -222,6 +218,20 @@ The recyclers of dopamine.
 
 There are *essentially no dopamine transporters in the anterior cingulate cortex or prefrontal cortex* 
 
+** Medication
+
+*** Metylphenidate
+
+Things like Ritalin/Concerta
+
+Blocks DAT
+
+*** Amphetamines
+
+Like Adderall/Vyvanse
+
+Causes your neurons to release more dopamine
+
 * Norepinephrine
 :PROPERTIES:
 :ID:       d6bb9e1b-4d4c-4728-a0a5-656d048fb7ad
@@ -229,7 +239,10 @@ There are *essentially no dopamine transporters in the anterior cingulate cortex
 
 Also called *noradrenaline.* Made mainly inside the brain, by the neurons called the *locus coeruleus.* It has influence over your blood pressure.
 
-Norepinephrine keeps your brain alert and vigilant.
+Norepinephrine keeps your brain alert and vigilant. The only time you have basically no norepinephrine is when you're sleeping; it drops to its lowest point during REM sleep.
+- norepinephrine has to do with *external awareness*
+- this is why it drops in sleep
+- whereas acetylcholine is focused more internally, and so rises during REM
 
 The locus coeruleus is packed with *adenosine $A_1$ receptors*. When [[id:d55a0d14-1826-4e49-a2a5-b08773e13c74][ATP]] breaks down, the released adenosine bonds to the A_1 receptors, and causes the neurons to hyperpolarize (drop in voltage)
 - this slows down their firing rate, suppressing the release of norepinephrine
@@ -244,6 +257,10 @@ Norepinephrine also binds to $\alpha$-2A receptors on cortical neurons.
 
 Norepinephrine transporters are the recycler of norepinephrine
 
+* Epinephrine
+
+Also called *adrenaline.* Made mainly by the adrenal glands on your [[id:8dada547-abdb-4c47-aa53-73d4e8d137e5][kidneys]]. During stress, the adrenal glands send epinephrine into your bloodstream, spiking your heart rate, dilating your airways and mobilizing glucose
+
 * Acetylcholine
 
 Made in the *nucleus basalis of Meynert* and the *pedunculopontine nucleus*. Derived from choline, which is combined with Acetyl-CoA.
@@ -257,7 +274,78 @@ When it binds to muscarinic receptors in the body, it slows your heart rate, dro
 
 When it's released it slows your heart.
 
-** Nicotine
+=Focus:= When you start focusing on something, the dorsolateral prefrontal cortex sends a signal to the nucleus basalis to make a phasic spike in acetylcholine
+
+=Cortical:= High during focused periods, low during meditation and N2 sleep. In N3 sleep, acetylcholine is basically zero. Then in REM sleep it gets very high, due to the pons.
+
+=Peripheral:= This acetylcholine is high during meditation, N2, N3 sleep, and low during REM sleep.
+
+=No overload:= Unlike the dopamine system, you can't really overload the acetylcholine system.
+- dopamine has a positive feedback loop, whereas acetylcholine has a negative one
+- acetylcholinesterace is incredibly fast compared to dopamine transporters
+
+
+** Paralysis
+
+High levels of acetylcholine trigger paralysis
+
+** Acetylcholinesterase (AChE)
+
+Converts acetylcholine into choline and acetate. One of the *fastest enzymes* in the body. It destroys acetylcholine within *microseconds* 
+
+*** Hypercholinergic State
+
+
+
+** Nicotinic Receptors
+
+When acetylcholine binds to nicotinic receptors on targetted neurons, it opens up sodium channels; the neurons' potentials become close to firing. This amplifies incoming info on the task at hand
+
+*** Nicotine
 
 When you smoke a cigarette, nicotine hits your brain in /7 seconds/. It binds to the nicotinic receptors in the VTA, sending out a phasic spike of dopamine.
 
+
+
+** Hemicholinium
+
+Blocks choline reuptake
+
+** Vesamicol
+
+Blocks VAChT
+
+** Parasympathetic Nervous System
+
+** Somatic Nervous System
+
+** Sympathetic Nervous System
+
+** Central Nervous System
+
+Acetylcholine is produced from oligodendrocytes. This actually inhibits those oligodendrocyte progenitor cells from maturing into myelinating oligodendrocytes
+- it activates Chrm1
+
+The reason you don't want excess myelination is that it's essentially permanent; if you myelinate incorrect pathways, it's obviously not good; you'd lock in mistakes and random thoughts.
+
+=LTP:= (Long-term potentiation) The acetylcholine essentially marks the pathways that you're training, for later myelination
+
+When you sleep, your acetylcholine drops and the myelin gets produced
+
+=Doom-scrolling:= When you spend all day in /moderate attention/, you sort of sit in the worst possible place with respect to myelination --- your acetylcholine never gets low enough to make mature oligodendrocytes.
+
+*** Multiple Scelrosis
+
+
+
+
+
+** Disease
+
+*** Huntington's
+
+Characterized by decrease in acetylcholine and GABA 
+
+*** Alzheimer's
+
+Treatment relies on AChE inhibitors, to boost remaining ACh

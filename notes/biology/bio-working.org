@@ -237,3 +237,38 @@ Something like Lofi is good because it's so predictable that phasic spikes don't
 
 ** Action-First Dopamine Generation
 
+* Deep Work
+
+When you switch between tasks, a shadow of your first task stays stuck in your attention, called *attention residue.* 
+
+** Multitasking
+
+Because attention residue builds up, multitasking (which is really just incredibly quick context-switching) is *terrible for your focus.* 
+
+* Journalism Method
+
+Journalists need to be able to start working at a moment's notice
+
+** Bookmarks
+
+You leave yourself checkpoints / bookmarks that signal exactly what you should focus on the next time you start working.
+
+Anthony Trollope actually did something similar
+
+** Focus Trigger
+
+** Deadlines
+
+In journalism school, you're given intentionally messy data, and required to turn in a perfect 500-word story within, say 45min; even a minute over time results in a failing grade.
+
+** Inverted Pyramid
+
+=Lead:= 5W's
+
+=Body:= Crucial details, quotes, context
+
+=Tail:= Extra background info
+
+** Beats
+
+

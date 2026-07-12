@@ -9,6 +9,40 @@
 
 * Summary
 
+* Types of Fat
+
+** Brown
+
+Generally considered better for you. Contains *uncoupling protein 1* (UCP1)
+
+Contain iron-rich mitochondria (which is why it's brown)
+
+Concentrated around your neck and collarbones
+
+*** Beige Fat
+
+When you are exposed to cold temperatures, exercise, or fast, some of the white cells *develop mitochondria* and behave like brown fat
+
+*** Cold
+
+You can stimulate BAT with about 2-3 sessions of cold per week (around 4 minutes each)
+
+*** [[id:d6bb9e1b-4d4c-4728-a0a5-656d048fb7ad][Norepinephrine]]
+
+Triggers brown fat
+
+** White
+
+Insulates your body, cushions your organs.
+
+Produces leptin
+
+*** Subcutaneous Fat
+
+*** Visceral Fat
+
+Packed around your abdominal organs
+
 * Resting Metabolic Rate
 
 Surprisingly, your /RMR per pound of muscle/ remains basically the same from age 20 to 60

@@ -54,6 +54,9 @@ When your muscles break down proteins, they produce [[id:90693255-6072-44fd-91bb
 * Cysteine
 
 * Glutamic Acid / Glutamate
+:PROPERTIES:
+:ID:       2aebf5bf-2284-49b4-a4fb-7e5e9161f891
+:END:
 
 When glutamic acid loses its hyroden ion, it's called *glutamate*. Inside your body, glutamic acid is basically always glutamate, so doctors often use the terms interchangeably
 
