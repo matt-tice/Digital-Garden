@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       40edbfd4-0d64-41a9-b45b-f6278cf0181f
+:END:
+#+title: monads
+#+filetags: :math:cats:
+
+* References
+
+
+* Summary
+
+
+* Definitions
+
+** Monads
+
+A *monad* on a category $C$ is a triple $(F, \eta, \mu)$, where $F: C \rightarrow C$ is an endofunctor, and 
+
+$\mu \circ \mu_{F}_{(C)} = \mu \circ F(\mu)$
+
+$\mu \circ \eta = 1 = \mu \circ F(\eta)$
+
+* Examples
+
+* Theorems
+
+** Adjoints give Monads
+
+Let $F \perp G$ be an adjoint pair. Then $(G \circ F, \mu, \eta)$ is a monad.
+
+Dually, $(F \circ G, \Delta , \varepsilon  )$ forms a comonad
+
