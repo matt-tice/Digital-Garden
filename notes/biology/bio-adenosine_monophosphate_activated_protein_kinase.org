@@ -2,16 +2,17 @@
 :ID:       9b70da8f-ab3b-4ee8-85d7-7bca8fe1d957
 :END:
 #+title: adenosine monophosphate-activated protein kinase
-#+filetags: :biology:ampk:
+#+filetags: :biology:ampk:kinase:enzyme:
 
 * References
 
 * Summary
 
+
+
 Turns on [[id:e974f8c3-09d6-4e94-aa13-2a787fccd7f6][pgc-1\alpha]]
 
 Exercising on an empty stomach (low blood sugar) will immediately activate AMPK and will condition your body to burn fat instead of glycogen
-
 
 When your body breaks down [[id:d55a0d14-1826-4e49-a2a5-b08773e13c74][adenosine triphosphate]] for energy, it first turns into adenosine diphosphate (ADP), and eventually into adenosine monophosphate (AMP).
 

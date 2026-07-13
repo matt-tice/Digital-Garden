@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       c64ac514-c4ab-4e11-9741-1760dd8878ae
+:END:
+#+title: hyperpolarization-activated cyclic nucleotide-gated channels
+#+filetags: :biology:brain:hcn:
+
+* References
+
+* Summary
+
+Located along dendritic spines. Opening the HCN channels causes a *drop in membrane input resistance*.
+- input currents leak out of the dendrite before reaching the soma
+
+Elevation of cAMP causes the channels to open
+
+To regain focus, you need to close the HCN channels, requiring suppresion of alpha1/beta1 signaling from [[id:2f5d927b-fbd8-4eb2-9c6a-005f78a1c2aa][norepinephrine]], and phosphodiesterases to degrade the cAMP, and then rebuild the original attractor state through the NMDA loops
+
+* HCN1
+
+* HCN2

@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       4e8c17f6-9244-4ad0-9f24-962eae674dce
+:END:
+#+title: flow state
+#+filetags: :biology:brain:
+
+* References
+
+* Summary
+
+*Transient Hypofrontality Hypothesis*: During a flow state, your prefrontal cortex actually *deactivates*.
+- this allows your inner critic, self-doubt, and self-monitoring to disappear
+
+The [[id:ff008d9b-5b69-4214-bdbb-3cace4500dae][default mode network]] also *turns off* 
+
+* Neurochemicals
+
+Flow states correlate with massive releases of 
+- dopamine
+- norepinephrine
+- endorphins
+- anandamide
+- serotonin
+
+
+* Brain Waves
+
+In flow states, your waves drop into alpha and theta.
+
+* Conditions
+
+You can trigger flow states by working on challenges that are roughly *4% higher than your current skill level* 
+
+Immediate feedback as to whether what you're doing right or wrong is key
+
+You need a *minimum 15-20min* of uninterrupted concentration

@@ -1,0 +1,96 @@
+:PROPERTIES:
+:ID:       2f5d927b-fbd8-4eb2-9c6a-005f78a1c2aa
+:END:
+#+title: norepinephrine
+#+filetags: :biology:neurotransmiter:
+
+* References
+
+* Summary
+
+
+Also called *noradrenaline.* Made mainly inside the brain, by the neurons called the *locus coeruleus.* It has influence over your blood pressure.
+
+Norepinephrine keeps your brain alert and vigilant. The only time you have basically no norepinephrine is when you're sleeping; it drops to its lowest point during REM sleep.
+- norepinephrine has to do with *external awareness*
+- this is why it drops in sleep
+- whereas acetylcholine is focused more internally, and so rises during REM
+
+The locus coeruleus is packed with *adenosine $A_1$ receptors*. When [[id:d55a0d14-1826-4e49-a2a5-b08773e13c74][ATP]] breaks down, the released adenosine bonds to the A_1 receptors, and causes the neurons to hyperpolarize (drop in voltage)
+- this slows down their firing rate, suppressing the release of norepinephrine
+
+Astrocytes have $\alpha_{1}$ adrenergic receptors which norepinephrine binds to, causing the release of calcium ions inside of the astrocytes. The extra calcium ions, causes the astrocytes to absorb more water, causing the cells to expand and narrowing the interstitial space.
+
+Norepinephrine also binds to $\alpha$-2A receptors on cortical neurons. 
+- this inhibits cyclic AMP, causing the HCN channels to close, preventing electrical leakage, and amplifying the neurons' signals.
+
+
+* Receptors
+
+** Alpha-2A
+
+G_i-coupled
+
+The [[id:074d6d1e-c985-4f6b-bfb1-913650132597][Prefrontal Cortex]] dendrites have alpha-2A adrenergic receptors. When norepinephrine binds to them, adenylate cyclase is inhibited and intracellular cyclic AMP is decreased.
+
+This in turn closes hyperpolarization-activated cyclic nucleotide-gated channels (HCN channels)
+- this prevents the leakage of currents out of the dendrite
+- it amplifies the signal of the relevant tasks
+
+The equilibrium dissociation constant (K_d) of NE for alpha-2A is *tiny* 
+- 1 to 4 nM
+
+
+*** G_i Proteins
+
+** Alpha-1
+
+G_q-coupled: they activate phospholiphase C
+
+K_d is about 100 to 300 nM
+
+** Beta-1 and Beta-2
+
+G_s-coupled: 
+
+K_d is about 500 nM to 1 \mu M
+
+* Transporters (NET)
+
+Norepinephrine transporters are the recycler of norepinephrine
+
+The PFC has *low NETs* compared to subcortical regions like the thalamus, hypothalamus, and bed nucleus of the stria terminalis
+
+Clearing NE in the PFC relies on diffusion into neighbouring extracellular spaces and uptake by astrocytic organic cation transporters.
+
+* Phasic Spikes
+
+Much like dopamine, NE also has phasic spikes that disrupt its tonic behaviour
+
+When the locus coeruleus produces a phasic spike, the NE spills over from the alpha-2A receptors to alpha-1 and beta-1 / beta-2 adrenergic receptors. These receptors increase calcium and cAMP, opening up the [[id:c64ac514-c4ab-4e11-9741-1760dd8878ae][hyperpolarization-activated cyclic nucleotide-gated channels]].
+
+This causes a *reset* of the working brain
+
+After a phasic spike it takes *10 to 30 seconds* for local NE to drop back below 100 nM. However this *doesn't close the HCN channels* 
+
+
+It then takes *2 to 3 minutes* for the HCN channels to close. 
+- to close the channels, the cAMP must be broken down, and the calcium has to be cleared
+- you can speed this up with *vagus nerve stimulation*
+- it shifts the LC into a tonic state
+       - vagus nerve stimulation desynchronizes the LC's bursting patterns and makes it become tonic again
+       - the tonic release of NE binds to the alpha-2A receptors, producing G_i alpha, which then inhibits adenylate cyclase, to stop new cAMP production
+- the vagus stimulation also drives the *nucleus basalis of Meynert* to produce acetylcholine in the PFC
+       - ACh binds to M_1 and alpha-7 receptors activating protein phosphatase 1 and phosphatase 2A
+       - these [[id:0caf117c-95f8-4f59-83d2-92c3668a696d][phosphatases]] then strip the phosphate groups from the HCN channels, closing the pore even if cAMP is still elevated
+
+
+
+
+At that point, the attractor state still needs to be rebuilt
+- *attractor reignition* is actually highly energy demanding
+- AMPA priming is very fragile, and minor distractions can break the attractor state immediately
+- the AMPA channels need to be active long enough to depolarize the dendritic spine
+- once that's done, the magnesium blocking the GluN2B-containing NMDA receptors is removed
+- this can take *5 to 20 min* 
+- you can speed this up by keeping an explicit line saying what you're doing, so your brain doesn't need to remember

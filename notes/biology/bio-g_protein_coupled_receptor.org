@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       4400a253-f8e1-40d3-9eb4-95cd89752c63
+:END:
+#+title: g protein-coupled receptor
+#+filetags: :biology:gpcr:protein:
+
+* References
+
+* Summary
+
+Cell-surface proteins.
+
+They're tremendously important in medicine --- they're the target of about *40% of all drugs* 

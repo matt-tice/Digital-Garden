@@ -1,0 +1,194 @@
+:PROPERTIES:
+:ID:       125297de-c559-4e5f-83a5-d084f3cc2366
+:END:
+#+title: dopamine
+#+filetags: :biology:neurotransmiter:
+
+* References
+
+* Summary
+
+
+Produced in the *substantia nigra*  and the *ventral tegmental area.* Derived from the amino acid [[id:d35da251-a7a9-4987-82dd-9ca708edd67b][tyrosine]], converted into L-DOPA, and then into dopamine.
+
+Dopamine is actually then used to make norepinephrine!
+
+Dopamine modulates neural plasticity
+
+Dopamine fires whenever your brain detects something *new, unexpected, or potentially rewarding.* For example, when you get a text notification.
+
+Dopamine binds to G-protein coupled receptors (GPCRs) on the dendrites of prefrontal cortex neurons.
+- binds to D1 receptors on non-essential neurons.
+This activates potassium and sodium ions to lower the voltage of the non-essential neurons.
+- this makes it harder for those neurons to fire.
+
+Dopamine acts as an off-switch for *prolactin*.
+- when dopamine is suppressed, prolactin increases, leading to fatigue, muscle weakness, bloating
+
+** Calcium
+
+Intense exercise like HIIT forces calcium ions into your brain's movement and reward pathways, which causes dopaminee vesicles to release their contents. 
+
+** Cold Showers
+
+Instead of a phasic spike, cold showers actually trigger prolonged tonic baseline dopamine by *250% for 3 - 4 hours*
+
+Your skin has thermal sensors called A-delta and C nerve fibers, which have TRPM8 channels. When you step into cold water, the channels open, sending out a ton of calcium and sodium ions.
+
+The ions first go to the locus coeruleus, causing 530% norepinephrine.
+- this spikes blood pressure
+- drops fatigue
+- causes the gasp reflex
+
+The LC sends signals to the ventral tegmental area and nucleus accumbens. The norepinephrine binds to the alpha-1 adrenergic receptors in the VTA, forcing their calcium channels open, causing the vesicles to dump a continuous flow of dopamine.
+
+You don't need to use water, but water is *25 \times more thermally conductive than air*, so it strips your heat tremendously quickly.
+
+Your *face, forehead, and neck* contain the highest density of cold-shock receptors
+
+You need to stay in cold water for *2 - 3 minutes* 
+
+*** Thermal Glow
+
+When you're done, your skin looks flushed and you start to feel an intense warmth from your core
+
+*** Autonomic Gasp Reflex
+
+I just tried it out; it's pretty crazy how immediate it is; reflexes are fascinating to behold.
+
+When you stick your face in cold water (I looked into the shower head while it was on cold), your chest muscles and diaphragm involuntarily contract. It becomes extremely difficult to try to take a breath, because your body is specifically trying to prevent you from inhaling cold water (it thinks you're drowning)
+
+** Tonic Dopamine
+
+When you are focusing on a task, your midbrain releases a slow steady stream of *tonic dopamine*. 
+- it binds to the D1 receptors and helps silence the noise of irrelevant neurons.
+
+
+* Dopamine Transporters
+
+The recyclers of dopamine.
+
+There are *essentially no dopamine transporters in the anterior cingulate cortex or prefrontal cortex* 
+- in order to clear dopamine from the PFC, the brain actually uses the NETs (lower affinity for DA) and slow catechol-o-methyltransferase
+
+The striatum has a ton of DATs
+
+* Receptors
+
+** D_1 Receptors
+
+Coupled to G_s
+
+Moderate D_1 activation *increases cAMP*, opening HCN channels on specific spines receiving non-task-related inputs
+- this helps the brain ignore irrelevant background input
+
+K_d is relatively low compared to D_2
+- approx 100 to 500 nM
+
+However, in the PFC, D1 receptors *outnumber D2 by 15:1*
+- at under 500 nM, dopamine will bind to the small number of D2 immediately, and the remaining dopamine will go to D1
+
+In the striatum, D1 and D2 are *equal in proportion* but found in *different cell types* 
+- D1: direct pathway spiny projection neurons
+- D2: indirect pathway neurons
+
+G-protein-coupled receptors don't have a static affinity value
+- when coupled to their G-protein they are *high affinity*
+- when uncoupled they are *low affinity* 
+
+In the striatum, the G-proteins of D1 receptors are coupled, making them higher affinity
+
+ enhance IPSCs
+
+D1 \rightarrow PKA \rightarrow cAMP
+
+** D2
+
+Located in the striatum.
+
+When these are stimulated, *GABAergic* output from the triatal indirect pathway is *reduced*
+- the thalamocortical gate is free
+- new rules from the thalamus can enter the PFC
+
+D2 receptors lower the threshold for neurons to fire
+- this makes everything more distracting
+
+When D2 receptors get hit, the ion channels of your current task pathway get flushed.
+
+At around 1 \mu M of dopamine, IPSCs are *suddenly decreased*
+
+
+*** Phasic Spikes
+
+When a sudden unexpected event happens, like a text message, the ventral tegmental area and substantia nigra pars compacta create a /burst/ of dopamine, called a *phasic spike*, which is launched into the *striatum* 
+
+This is too much dopamine for the D1 receptors to handle, so the excess dopamine binds to D2 and D3 receptors.
+
+you need about 1 \mu M of dopamine to trigger the D2 \rightarrow G_i \rightarrow PLC \rightarrow calcium pathway
+
+This will actually activae the phosphatase 1 and 2A, which dephosporylates the D1 pathway
+
+*** Down-regulation
+
+When you get consistent phasic spikes, your body will actually *lower your baseline dopamine*, to try to prevent you from overwhelming D1 so much.
+
+This leads you to an ADHD-like baseline, where your baseline is constantly bored and understimulated
+
+*** Addictive Apps
+:PROPERTIES:
+:ID:       fd291087-2f1d-4eeb-ab0f-00f9279cdbb0
+:END:
+
+These are specifically designed to create phasic spikes.
+
+They keep you guessing as to whether you're going to see something interesting or not (what will be on my feed today?)
+- by destroying predictability, they keep phasic responses
+
+Dopamine doesn't care about what a reward is, as long as it's *better or more novel than expected.* 
+
+They remove pagination, so there's no natural stopping point.
+
+Videos that succeed on the algorithm are those which deliver stimulation within the /first 3 seconds/ --- this makes them generate a phasic spike before your prefrontal cortex can determine whether it's worth paying attention to the video
+
+Apps will often *delay notifications* and send you them at random times, to decrease predictability
+
+*** Anger and Outrage
+
+Anger can actually create *some of the largest phasic spikes*. The evolutionary explanation is that we get *angry at threats*, and we need phasic spikes to divert our attention towards those threats.
+
+This is why outrage content is so effective as propaganda and click-bait
+
+It's particularly problematic when it comes to SSRIs
+- because your phasic spikes are surpressed by serotonin, negaive feelings like anger are some of the only things that have high enough spikes to break through.
+
+
+** Willpower
+
+Willpower is heavily determined by dopamine
+
+** Boredom
+
+Being bored is actually *extremely important* to make sure that your dopamine receptors are kept healthy.
+
+Your VTA stops firing phasic spikes.you brain slowly increases the sensitivity and density of your D1 receptors.
+
+During these intentional boredom phases you should *just daydream* 
+- just lie down and stare at the ceiling or sky, and let thoughts come to you
+- drink some tea while staring outside
+
+** Yerkes-Dodson Law
+
+If baseline dopamine and norepinephrine are too low, the brain is understimulated and constantly looks for stimulation. This is correlated with ADHD.
+
+ADHD meds like Adderall or Ritalin bump up baseline dopamine and norepinephrine.
+
+If you have too much dopamine and norepinephrine, you become hyper-vigilant. 
+
+** Addiction
+
+Addiction is controlled by the *mesolimbic dopamine system* 
+
+Whenever you get a phasic spike, the transcriptor protein DeltaFosB turns on in the nucleus accumbens.
+
+Unlike most proteins, DeltaFosB lasts for weeks or months. Having a lot of DeltaFosB causes your brain to build more dendritic spines
+

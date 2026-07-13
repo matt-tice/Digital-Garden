@@ -80,182 +80,31 @@ Heroin binds to the Mu-Opioid receptors, shutting down the GABA cells. This is w
 
 DeltaFosB accumulates to critical levels /within weeks/ 
 
-* Dopamine
 
-Produced in the *substantia nigra*  and the *ventral tegmental area.* Derived from the amino acid [[id:d35da251-a7a9-4987-82dd-9ca708edd67b][tyrosine]], converted into L-DOPA, and then into dopamine.
+* [[id:125297de-c559-4e5f-83a5-d084f3cc2366][Dopamine]]
 
-Dopamine is actually then used to make norepinephrine!
+The VTA fires in response to *reward prediction errors* 
+- when an outcome is better than expected
+- when stimulus predicts an upcoming reward
 
-Dopamine modulates neural plasticity
+You can spike DA without spiking NE
+- if you learn a cue for a reward, then at the cue, you'll get DA, but since it's expected, not NE
 
-Dopamine fires whenever your brain detects something *new, unexpected, or potentially rewarding.* For example, when you get a text notification.
 
-Dopamine binds to G-protein coupled receptors (GPCRs) on the dendrites of prefrontal cortex neurons.
-- binds to D1 receptors on non-essential neurons.
-This activates potassium and sodium ions to lower the voltage of the non-essential neurons.
-- this makes it harder for those neurons to fire.
 
-Dopamine acts as an off-switch for *prolactin*.
-- when dopamine is suppressed, prolactin increases, leading to fatigue, muscle weakness, bloating
+* [[id:2f5d927b-fbd8-4eb2-9c6a-005f78a1c2aa][Norepinephrine]]
 
-** Calcium
+You can spike NE without spiking DA production
+- novelty without reward (sudden flash of a blue square)
+- unexpected uncertainty
+- environmental changes
+- high-intensity sensory shocks
 
-Intense exercise like HIIT forces calcium ions into your brain's movement and reward pathways, which causes dopaminee vesicles to release their contents. 
+However, because the PFC has few DATs, a phasic spike of NE will take up all of the NETs, leaving the dopamine 
 
-** Cold Showers
+Actually the PFC also has *low NETs* compared to subcortical regions like the thalamus, hypothalamus, and bed nucleus of the stria terminalis
 
-Instead of a phasic spike, cold showers actually trigger prolonged tonic baseline dopamine by *250% for 3 - 4 hours*
-
-Your skin has thermal sensors called A-delta and C nerve fibers, which have TRPM8 channels. When you step into cold water, the channels open, sending out a ton of calcium and sodium ions.
-
-The ions first go to the locus coeruleus, causing 530% norepinephrine.
-- this spikes blood pressure
-- drops fatigue
-- causes the gasp reflex
-
-The LC sends signals to the ventral tegmental area and nucleus accumbens. The norepinephrine binds to the alpha-1 adrenergic receptors in the VTA, forcing their calcium channels open, causing the vesicles to dump a continuous flow of dopamine.
-
-You don't need to use water, but water is *25 \times more thermally conductive than air*, so it strips your heat tremendously quickly.
-
-Your *face, forehead, and neck* contain the highest density of cold-shock receptors
-
-You need to stay in cold water for *2 - 3 minutes* 
-
-*** Thermal Glow
-
-When you're done, your skin looks flushed and you start to feel an intense warmth from your core
-
-*** Autonomic Gasp Reflex
-
-I just tried it out; it's pretty crazy how immediate it is; reflexes are fascinating to behold.
-
-When you stick your face in cold water (I looked into the shower head while it was on cold), your chest muscles and diaphragm involuntarily contract. It becomes extremely difficult to try to take a breath, because your body is specifically trying to prevent you from inhaling cold water (it thinks you're drowning)
-
-** Tonic Dopamine
-
-When you are focusing on a task, your midbrain releases a slow steady stream of *tonic dopamine*. 
-- it binds to the D1 receptors and helps silence the noise of irrelevant neurons.
-
-
-** Phasic Spikes
-
-When a sudden unexpected event happens, like a text message, the ventral tegmental area creates a /burst/ of dopamine, called a phasic spike.
-
-This is too much dopamine for the D1 receptors to handle, so the excess dopamine binds to D2 and D3 receptors.
-
-D2 receptors lower the threshold for neurons to fire
-- this makes everything more distracting
-
-When D2 receptors get hit, the ion channels of your current task pathway get flushed.
-
-*** Down-regulation
-
-When you get consistent phasic spikes, your body will actually *lower your baseline dopamine*, to try to prevent you from overwhelming D1 so much.
-
-This leads you to an ADHD-like baseline, where your baseline is constantly bored and understimulated
-
-*** Addictive Apps
-:PROPERTIES:
-:ID:       fd291087-2f1d-4eeb-ab0f-00f9279cdbb0
-:END:
-
-These are specifically designed to create phasic spikes.
-
-They keep you guessing as to whether you're going to see something interesting or not (what will be on my feed today?)
-- by destroying predictability, they keep phasic responses
-
-Dopamine doesn't care about what a reward is, as long as it's *better or more novel than expected.* 
-
-They remove pagination, so there's no natural stopping point.
-
-Videos that succeed on the algorithm are those which deliver stimulation within the /first 3 seconds/ --- this makes them generate a phasic spike before your prefrontal cortex can determine whether it's worth paying attention to the video
-
-Apps will often *delay notifications* and send you them at random times, to decrease predictability
-
-*** Anger and Outrage
-
-Anger can actually create *some of the largest phasic spikes*. The evolutionary explanation is that we get *angry at threats*, and we need phasic spikes to divert our attention towards those threats.
-
-This is why outrage content is so effective as propaganda and click-bait
-
-It's particularly problematic when it comes to SSRIs
-- because your phasic spikes are surpressed by serotonin, negaive feelings like anger are some of the only things that have high enough spikes to break through.
-
-
-** Willpower
-
-Willpower is heavily determined by dopamine
-
-** Boredom
-
-Being bored is actually *extremely important* to make sure that your dopamine receptors are kept healthy.
-
-Your VTA stops firing phasic spikes.you brain slowly increases the sensitivity and density of your D1 receptors.
-
-During these intentional boredom phases you should *just daydream* 
-- just lie down and stare at the ceiling or sky, and let thoughts come to you
-- drink some tea while staring outside
-
-** Yerkes-Dodson Law
-
-If baseline dopamine and norepinephrine are too low, the brain is understimulated and constantly looks for stimulation. This is correlated with ADHD.
-
-ADHD meds like Adderall or Ritalin bump up baseline dopamine and norepinephrine.
-
-If you have too much dopamine and norepinephrine, you become hyper-vigilant. 
-
-** Addiction
-
-Addiction is controlled by the *mesolimbic dopamine system* 
-
-Whenever you get a phasic spike, the transcriptor protein DeltaFosB turns on in the nucleus accumbens.
-
-Unlike most proteins, DeltaFosB lasts for weeks or months. Having a lot of DeltaFosB causes your brain to build more dendritic spines
-
-** Dopamine Transporters
-
-The recyclers of dopamine.
-
-There are *essentially no dopamine transporters in the anterior cingulate cortex or prefrontal cortex* 
-
-** Medication
-
-*** Metylphenidate
-
-Things like Ritalin/Concerta
-
-Blocks DAT
-
-*** Amphetamines
-
-Like Adderall/Vyvanse
-
-Causes your neurons to release more dopamine
-
-* Norepinephrine
-:PROPERTIES:
-:ID:       d6bb9e1b-4d4c-4728-a0a5-656d048fb7ad
-:END:
-
-Also called *noradrenaline.* Made mainly inside the brain, by the neurons called the *locus coeruleus.* It has influence over your blood pressure.
-
-Norepinephrine keeps your brain alert and vigilant. The only time you have basically no norepinephrine is when you're sleeping; it drops to its lowest point during REM sleep.
-- norepinephrine has to do with *external awareness*
-- this is why it drops in sleep
-- whereas acetylcholine is focused more internally, and so rises during REM
-
-The locus coeruleus is packed with *adenosine $A_1$ receptors*. When [[id:d55a0d14-1826-4e49-a2a5-b08773e13c74][ATP]] breaks down, the released adenosine bonds to the A_1 receptors, and causes the neurons to hyperpolarize (drop in voltage)
-- this slows down their firing rate, suppressing the release of norepinephrine
-
-Astrocytes have $\alpha_{1}$ adrenergic receptors which norepinephrine binds to, causing the release of calcium ions inside of the astrocytes. The extra calcium ions, causes the astrocytes to absorb more water, causing the cells to expand and narrowing the interstitial space.
-
-Norepinephrine also binds to $\alpha$-2A receptors on cortical neurons. 
-- this inhibits cyclic AMP, causing the HCN channels to close, preventing electrical leakage, and amplifying the neurons' signals.
-
-
-** NET
-
-Norepinephrine transporters are the recycler of norepinephrine
+Clearing NE in the PFC relies on diffusion into neighbouring extracellular spaces and uptake by astrocytic organic cation transporters.
 
 * Epinephrine
 
@@ -349,3 +198,5 @@ Characterized by decrease in acetylcholine and GABA
 *** Alzheimer's
 
 Treatment relies on AChE inhibitors, to boost remaining ACh
+
+* Anandamide

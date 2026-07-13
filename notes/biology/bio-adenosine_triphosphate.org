@@ -10,4 +10,22 @@
 
 The three phosphate groups all have a negative charge, and repel each other
 
-ATP is converted into adenosive *diphosphate*, by breaking one of the phosphate groups off. This ADP is then recycled by reattaching the third phosphate groups, using the energy you get from food.
+ATP is converted into adenosine *diphosphate*, by breaking one of the phosphate groups off. This ADP is then recycled by reattaching the third phosphate groups, using the energy you get from food.
+
+* Enzymes
+
+ATP is converted to ADP by *ATPases* 
+
+* Adenosine Diphosphate
+
+* Adenosine Monophosphate
+
+** Cyclic Adenosine Monophosphate
+
+Made from ATP by *adenylyl cyclase*
+
+It activates protein kinase A
+
+It's broken down into AMP by phosphodiesterase (PDE) enzymes
+
+In order to close the [[id:c64ac514-c4ab-4e11-9741-1760dd8878ae][hyperpolarization-activated cyclic nucleotide-gated channels]], c AMP has to be broken down by PDE4, which is attached to the HCN channel, which turns it into 5'-AMP

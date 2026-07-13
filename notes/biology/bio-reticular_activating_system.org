@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       d056d971-88c5-457c-80f0-0c3b41c0bc7a
+:END:
+#+title: reticular activating system
+#+filetags: :biology:brain:
+
+* References
+
+* Summary
+
+A bundle of nerves at the base of your brain. It filters out irrelevant information.

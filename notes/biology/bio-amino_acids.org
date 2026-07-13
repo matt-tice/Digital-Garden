@@ -66,6 +66,14 @@ Glutamate is balanced by GABA
 
 Once glutamate stimulates a brain cell, astrocytes absorb it and convert it into glutamine!
 
+** N-methyl-D-aspartate Receptor
+
+A glutamate receptor in the brain. It acts as a *coincidence detector* 
+
+*** GluN2B
+
+An ion channel
+
 ** Excitotoxicity
 
 

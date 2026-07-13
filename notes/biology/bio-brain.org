@@ -21,12 +21,18 @@ This is the *cerebrum*. It's the *largest* part of the brain
 *** Frontal Lobe
 
 **** Prefrontal Cortex
+:PROPERTIES:
+:ID:       074d6d1e-c985-4f6b-bfb1-913650132597
+:END:
 
+Handles executive functions
 Involved in math
 
 ***** Dorsolateral Prefrontal Cortex
 
 =Perfect pitch:= This is hyperconnected to the auditory pathways in those with perfect pitch, allowing them to essentially look up the name of a note
+
+=Focus:= In a focused state, the dlPFC maintains a *stable attractor network* by persistently firing across the *GluN2B-containing NMDA pathways* 
 
 ***** Orbitofrontal Prefrontal Cortex
 
@@ -65,19 +71,38 @@ Sits between the telencephalon and mesencephalon
 Parkinson's 
 Huntington's
 *** Thalamus
+
+When you hear a phone notification, the thalamus is activated and transmits data to the locus coeruleus in the hindbrain, to produce norepinephrine.
+
 *** Hypothalamus
 *** Subthalamus
 * Midbrain (Mesencephalon)
 ** Tectum
+The dorsal part of the midbrain
+
 *** Superior Colliculi
 *** Inferior Colliculi
 ** Tegmentum
+The ventral part of the midbrain
+
 *** Red Nucles
 *** Periaqueductal Gray
+*** Ventral Tegmental Area
+
+A group of neurons on the floor of the tegmentum. This is where a lot of your dopamine is produced
+
+
 ** Cerebral Peduncles
 * Hindbrain (Rhombencephalon)
 ** Metencephalon
 *** Pons
+**** Locus Coeruleus
+
+Very small (only 10k - 15k neurons)
+
+The brain's main source of [[id:2f5d927b-fbd8-4eb2-9c6a-005f78a1c2aa][norepinephrine]]
+
+Glutamate causes phasic spikes
 
 *** Cerebellum
 ** Myelencephalon

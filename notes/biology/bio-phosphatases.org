@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       0caf117c-95f8-4f59-83d2-92c3668a696d
+:END:
+#+title: phosphatases
+#+filetags: :biology:enzyme:
+
+* References
+
+* Summary
+
+Removes phosphate from an *organic molecule or protein* through hydrolysis
+- they don't handle [[id:d55a0d14-1826-4e49-a2a5-b08773e13c74][ATP]] or its derivatives.
+
+* Protein Phosphatases
+
+* Alkaline Phosphatases (ALP)
+
+* Acid Phosphatases (ACP)

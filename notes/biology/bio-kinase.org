@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       f0a7b2c2-5699-4e8e-b43f-94d63030954a
+:END:
+#+title: kinase
+#+filetags: :biology:enzyme:
+
+* References
+
+* Summary
+
+An enzyme that catalyzes the transfer of a phosphate group from a high-energy molecule (like ATP) to a substrate.
+- this is called *phosphorylation* 
