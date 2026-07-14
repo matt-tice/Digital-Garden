@@ -51,3 +51,15 @@ Interestingly, *fats don't trigger* an insulin responce.
 ** Low Insulin
 
 When insulin is at its lowest baseline, your [[id:dd2ce420-c7dd-4511-b5a8-afa92d606cab][liver]] releases glucose into the blood that goes directly into the brain
+
+* Diabetes
+
+Without treatment, diabetes causes dangerously high blood sugar. But people with diabetes also carry food with them to make sure that in the case that the medicine they take drops their blood sugar too much, they can correct it.
+
+** Type 1
+
+The pancreas can't produce insulin
+
+** Type 2
+
+The body produces insulin, but the cells have developed *insulin resistance*.

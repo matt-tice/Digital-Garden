@@ -16,3 +16,25 @@ So mathematical AQFT is unable to distinguish C-star algebras from Banach algebr
 - they miss the analysis / geometry
 
 The same thing happens with von Neumann algebras.
+
+
+
+* Double Categories
+
+Speaker: Khyathi Komalan
+
+One category version
+Reg(M) is the category whose objects are regions and morphisms are inclusions
+Codomain is von Neumann algebra with unital *-homomoprhisms
+
+What if we also want embeddings that aren't inclusions? Like translations
+
+double category of spacetime is same objects and inclusions are tight maps, embeddings are loose maps
+squares have to commute
+
+von Neumann algebras has ordinary stuff as tight maps and L^2 corresp as loose maps, and squares are intertwiners
+T(a\zeta b) = f(a)T(\zeta) g(b)
+
+then a pseudo double functor is a double-category AQFT
+
+the tight restriction is the ordinary aqft

@@ -1,0 +1,46 @@
+:PROPERTIES:
+:ID:       77b5961b-71c1-410e-8d4e-6e6ba536e9f3
+:END:
+#+title: lipids
+#+filetags: :biology:body:molecules:fats:
+
+* References
+
+
+* Summary
+
+* Saturated Fats
+
+These are /saturated with hydrogen/ 
+
+Their chains lay flat, allowing them to pack together into *solids at room temperature.* 
+
+* Unsaturated Fats
+
+These fats have chains with kinks in them, from the missing hydrogen. This makes them *less stable* at room temperature; they *go rancid* 
+
+** Mono
+
+Have one missing hydrogen pair. This leads them to be liquid at room temperature and thick when chilled.
+
+
+
+** Poly
+
+These are liquid at room temperature and when chilled
+
+Used to build the membranes of your brain cells.
+
+This group contains *essential fatty acids*, which the body *can't produce* on its own.
+
+*** Omega-3s
+
+*** Omega-6s
+
+
+
+* Trans Fats
+
+These are mainly artificial fats produced by pumping hydrogen into vegetable oils to make them solid (to make them more stable at room temperature)
+
+ex. Margarine

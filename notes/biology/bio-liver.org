@@ -24,6 +24,10 @@ Tells the liver to send out its glycogen
 
 lactate, glycerol and amino acids from proteins get converted to glucose
 
+* Autophagy
+
+Your body looks for damaged cells and proteins and breaks those down into amino acids first
+
 * Digestion
 
 Actually uses up a ton of energy

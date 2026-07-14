@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       6f78647d-7698-4a7a-acb3-9bc482b27d96
+:END:
+#+title: double categories
+#+filetags: :math:cats:higher_cats:n_fold_categories:
+
+* References
+
+
+* Summary
+
+Double categories are the most general notion of 2-dimensional categories. 
+
+The vertical and horizontal maps in double categories are *not equivalent* --- this is really important. Double categories don't fit into the paradigm of /higher categories/ (in the sense of n-cats). They're really in the realm of *n-fold categories.* 
+
+The "vertical" maps are really certain /strict/ maps, while the horizontal ones are /weak./ 
+
+
+Bicategories are double categories with *trivial vertical morphisms*. This seems a bit odd, since bicategories have two kinds of morphisms, but the second type of morphisms in bicategories are really the /squares/ of the double categories.
+
+2-categories are strict bicategories, but they can also be expressed as double categories with *trivial horizontal* morphisms. This shows that the vertical and horizontal maps /don't play the same role./ 
+
+
+Category-categories
+
+giuseppe.leoncini1@unimi.it
+
+* n-fold Categories
+
+You define an n-fold category to be a 1-category internal to (n-1)-fold categories.
+
+This has all the problems that internalization normally does: it becomes unwieldly very quickly; so we have an exponentially decreasing understanding of n-fold categories, as $n \rightarrow \infty$.
+
+[2026-07-14 Tue 17:16] There's currently no accepted version of a full 3-fold category as of today, for example.
+
+Nevertheless, n-fold categories are very intriguing and natural --- categories internal to categories is very cool, and also offers up the opportunity to internalize higher categories
