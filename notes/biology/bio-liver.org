@@ -11,3 +11,20 @@
 * [[id:90693255-6072-44fd-91bb-b688d6d3f1fb][Ammonia]]
 
 The liver converts ammonia into urea, which is filtered out of the bloodstream by the [[id:8dada547-abdb-4c47-aa53-73d4e8d137e5][kidneys]]
+
+* Glycogenolysis
+
+The liver stores 100g of glucose in the form of *glycogen*, which is a type of glucose. 
+
+* Glucagon
+
+Tells the liver to send out its glycogen
+
+* Gluconeogenesis
+
+lactate, glycerol and amino acids from proteins get converted to glucose
+
+* Digestion
+
+Actually uses up a ton of energy
+

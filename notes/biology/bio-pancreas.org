@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       233b9c68-bb71-46bb-af29-1e48b14efa79
+:END:
+#+title: pancreas
+#+filetags: :biology:body:organ:
+
+* References
+
+* Summary
+
+The pancreas is a long, flat organ in the abdomen, behind the stomach. 
+
+When you eat a high carb meal, your body makes a lot of glucose by breaking down the carbs. The pancreas tries to clear the glucose from the bloodstream, by producing insulin
+
+* Islets of Langerhans
+
+The beta cells monitor the glucose level in the blood. They release insulin when it gets high enough.
+
+* Glucose
+
+Your brain relies on blood glucose for energy. It actually can just take up the glucose directly; it doesn't need insulin as a facillitator.
+
+** Brain
+
+GLUT1 and GLUT3 transporters
+
+So when you're doing cognitive things, you want to keep your insulin low. 
+- work on an empty stomach
+
+
+** Body
+
+GLUT4 transporters need insulin
+
+When you're doing physical work though, you *don't increase insulin.* If you do, your blood sugar will crash, because your muscles are taking all the glucose. 
+
+When your muscles contract during exercise, they actually can absorb glucose *without insulin*
+
+* Insulin
+
+Allows sells to absorb glucose
+
+If you have a ton of insulin in your system, and the glucose gets absorbed too quickly, you get *hypoglycemia* 
+
+** Fats
+
+Interestingly, *fats don't trigger* an insulin responce.
+
+** Low Insulin
+
+When insulin is at its lowest baseline, your [[id:dd2ce420-c7dd-4511-b5a8-afa92d606cab][liver]] releases glucose into the blood that goes directly into the brain

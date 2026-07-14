@@ -11,3 +11,5 @@
 Stimulates neurogenesis
 
 When bloodflow increases to your brain (for example, during exercise) your neurons get hit with a ton of oxygen, stimulating BDNF
+
+Fasting increases BDNF
