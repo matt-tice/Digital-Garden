@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       0a126740-b6a8-4094-93db-dd815a5257d2
+:END:
+#+title: homotopy (co)limits
+#+filetags: :math:cats:homotopy:
+
+* References
+
+* Summary
+
+When you do ordinary (co)limits in Top, replacing your spaces by homotopy equivalent ones changes the value of the (co)limit to a different homotopy class in general.
+
+The homotopy colimit of 
+
+The pushout of $S^{n} \rightarrow *$ is $S^{n}^{}^{+}^{1}$
+
+The coequalizer becomes the mapping torus
+
+The coequalizer of a single morphism $X \rightarrow Y$ is the mapping cyliner
+
+* Definitions
+
+** Derived Category Version
+
+The homotopy colimit is the left derived functor of the ordinary colimit functor
+
+** Bar Construction
+
+Inside of Top, you can use the bar construction to get homotopy (co)limits.
+
+** Quasicategories
+
+Inside of a quasicategory, a homotopy (co)limit is just the ordinary colimit in that setting

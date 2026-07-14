@@ -23,6 +23,29 @@ Flow states correlate with massive releases of
 - serotonin
 
 
+** Locus Coeruleus
+
+** HCN Channels
+
+Once the HCN channels close, they make it harder to stop flow
+
+This creates an attractor state
+- this is the same as ordinary concentration
+
+Somehow the attractor state in flow is more energy efficient than in ordinary focus, which requires reinforcement from the dorsolateral PFC and anterior cingulate cortex
+
+** Anandamide
+
+Induces *transient hypofrontality* 
+
+** Endorphins
+
+Masks the tiredness signals from adenosine.
+
+** Modular Network Topology
+
+During flow, regions required for the task become highly connected with each other, but isolated from the irrelevant regions.
+
 * Brain Waves
 
 In flow states, your waves drop into alpha and theta.

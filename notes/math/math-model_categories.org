@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       49a6377a-288e-45b0-ae70-ee6d7758d74a
+:END:
+#+title: model categories
+#+filetags: :math:cats:homotopy:
+
+* References
+
+* Summary
+
+* Definitions
+
+* Theorems
+
+** Combinatorial Model Cats are Locally Presentable Quasicats
+
+*** Notes
+
+Quasicategories usually have more than one model-category presentation
+
+** Homotopy Colimits don't satisfy a universal property
+
+** There can be more than one model for a homotopy colimit in a given setting (they're weakly equiv)
+
+This shows up when you're trying to define
+
+$homcolim_{I} hocolim_{J} F \cong hocolim_{I}_{\times_}$
+
+$\alpha : I \rightarrow J$
+F: J \rightarrow
+
+hocolim_I F \cdot \alpha  \rightarrow hocolim_J F
+
+hocolim F \cong F(0)
+
+you don't need it to preserve weak equivalence!
+
+*** Actegories
+
+Categories that are acted on by a monoidal category.
