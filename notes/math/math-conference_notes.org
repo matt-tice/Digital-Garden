@@ -1,0 +1,172 @@
+:PROPERTIES:
+:ID:       d9266e59-b649-4c42-895f-e664d85d21ea
+:END:
+#+title: conference notes
+#+filetags: :math:conferences:
+
+* References
+
+module structures of hopf and frobenius algebras
+so you can imagine I'm looking forward to volumes 2 and 3 of your symmetries of algebras series!
+
+Windsor
+
+
+* Chelsea Walton
+
+
+
+quantum yang baxter
+quantum reflection equation
+R_1_2 K_1 R_2_1 K_2 = K_2 R_1_2 K_1 R_2_1
+
+K_i is a reflection of particle i against the boundary
+
+brochier (2013) - braided c-module category
+(actegory)
+
+the braiding of the action is the reflection
+$\sigma : X \cdot M \rightarrow X\cdot M$
+
+coxeter groups have graphs associated to them
+
+type A gives you yang-baxter
+and so correspond to braided monoidal categories
+
+type B has a single reflection and corresponds to these braided c-module categories
+
+
+
+quasitriangular hopf algebras
+its modules become braided monoidal categories
+
+braided morita equivalence
+between quasitri hopf algebras
+the equivalent is if their (H,R)-mod categories are equivalent
+
+thm shimizu 2010
+braid group represents gives braided morita invar
+
+if braided morita equivalent then represents of braid groups are isomorphism
+
+other side
+
+quasitri h-comodule  algebra
+
+the category of mods is a c-mod category
+to make it braided, you need a K-matrix (like the R-matrix)
+
+you get a braided morita equivalence
+
+fd quasitri coideal subalgs that are braided morita equivalent gives equivalent of represents
+* Categorical Centers
+
+for yang baxter
+take a monoidal category, you get a braided monoidal category 
+- take the drinfled center
+- the drinfled center is braided morita equivalent to the drifeld double modules category (in the fd case)
+
+for the reflection pic
+laugwitz-walton-yakimov (2025)
+- reflective center
+- the reflective algebra is the thing corresponding to the drinfeld double
+
+throw in ribbons and you get modular structures
+* non degeneracy
+
+given a finite tensor braided monoidal category
+
+non deg means that the drinfeld center factorizes
+- ex factorizable hopf algebras
+
+equivalent to a center coend being an actual hopf algebra with a non-degen laplace pairing
+
+[shimizu 2019]
+
+the reflective case
+- the end has a certain non-degen pairing
+- equivalent to being factorizable
+
+future work: quantum group versions of these reflective things
+* Speculations
+
+look at all the coxeter types
+- can you always represent these with string models?
+
+- what's the categorical version?
+
+- is there a physics version of each of these?
+
+- is there a single equation that specializes to yang baxter and the reflection
+* Augustina Czenky 
+
+Tensor categories are the pre-categories of modular tensor categories
+
+You want both an abelian and a monoidal structure
+
+Homs are finite-dimensional  vector spaces.
+
+You want to be rigid: Duals exist
+
+And you need the endomorph of the unit are the base field (aka the unit is simple)
+
+For a mondular category you need
+- a braiding
+
+fusion categories are tensor categories with
+- the category is semisimple
+- the category has fin many simples
+- the rank is defined to be the number of simple objects
+
+A pre-modular category is a ribbon braided fusion category
+- the ribbon is a certain collection of endomorphisms $\theta_{X}: X \rightarrow X$ for all X
+- you can define an *S-matrix*
+- S = Tr(\sigma_X_Y \sigma_Y_X) with X,Y simple
+
+If the S-matrix is invertible, you get a *modular cat* 
+** Example
+
+Tambara-Yamagami
+
+You start with a finite abelian group and take a symmetric bicharacter
+- this should be a laplace pairing on kG
+
+The simple objects are the elements of G along with one additional object
+
+Fusion rules
+$a \otimes b = ab$
+a \otimes x =x \otimes a = x
+x \otimes x = \oplus_a_\in_A a
+
+If the order of the group is odd and the bicharacter is non-degen you get a unique modular structure
+* Problems
+
+Classification: organizing what we know
+- rank finiteness conjecture (2013)
+- only finitely many modular categories of a fixed rank
+
+Construction: new from old
+
+Frobenius-Peron dim
+- if 1 you're called pointed
+- if Z you're equivalent to representations of a quasi-hopf alg
+
+For fusion categories, classification by rank is very hard
+- only done up to rank 2
+
+For modular categories 
+- if fp dim is odd then we know the case of rank \leq 11
+       - you're pointed (classified by group data)
+- in general we have classification up to rank 12
+
+
+Question: Can you find odd FP-dim MTC which is perfect (only invertible object is the unit)?
+- this is very difficult, but people think the answer is no
+
+perfect: evaluation and coevalution are isos
+
+** Future directions
+
+non-algebraically closed field
+char p
+non-semisimple case
