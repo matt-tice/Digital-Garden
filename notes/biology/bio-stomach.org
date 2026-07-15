@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       2f11bcc2-e6cd-457e-8806-58d6e182bd2b
+:END:
+#+title: stomach
+#+filetags: :biology:body:organ:
+
+* References
+
+* Summary
+
+* Stomach Lining
+
+Stomach lining contains nerves called *mechanoreceptors*.
+
+* [[Id:7d45e4a7-7be7-49ed-acf9-dc6495008741][Ghrelin]]
+
+The hunger hormone. It works on a regular clock. If you eat every day at the same time, it will make you feel hungry around that time each day.
+
+If you don't eat, eventually the ghrelin will stop rising and drop back down after about an hour
+

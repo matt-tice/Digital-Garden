@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       13844f4e-4c87-410f-8b21-72d3b7d20439
+:END:
+#+title: coxeter groups
+#+filetags: :math:groups:lie_theory:
+
+* References
+
+* Summary
+
+Coxeter groups are those groups that have presentations of the form
+
+$\langle x_{0}, \ldots, x_{n} \mid (x_{i} x_{j})^{m_{ij}} = 1\rangle$, where $M$ is a symmetric matrix with 1s on the diagonal (so $x_{i}^{2} = 1$).
+
+This determines a graph, called the *Coxeter-Dynkin graph* 
+
+Note that for $i \ne j$ we must have $m_{i}_{j} \geq 2$, since if $m_{i}_{j} = 1$, that implies $x_{i} x_{j} = 1$ so $x_{i} = x_{j}^{-}^{1} = x_{j}$.
+
+When drawing the Coxeter-Dynkin graph you
+- don't draw any edges with $m_{i}_{j} \leq 2$
+- leave the $m_{i}_{j} = 3$ edges unlabelled
+- label the rest of the edges.
+
+
+* Type $A_{n}$
+
+We have generators $x_{n}$, which behave like *adjacent transpositions.* 
+
+This corresponds to *braid groups* and *Yang-Baxter equations* 
+
+* Type $B_{n}$
+
+Correspond to *signed permutations* 
+
+* Type $D_{n}$
+
+Correspond to *even-signed permutations* 
+
+* Type $I_{2}(m)$
+
+Two-dimensional *dihedral groups* 
+
+* Type $E_{6}$
+
+* Type $E_{7}$
+
+* Type $E_{8}$
+
+* Type $F_{4}$
+
+* Type $H_{3}$
+
+* Type $H_{4}$
+
+* Affine Types
