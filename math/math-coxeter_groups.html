@@ -197,6 +197,87 @@ class="math inline"><em>m</em><sub><em>i</em><sub><em>j</em></sub></sub> = 3
 edges unlabelled</li>
 <li>label the rest of the edges.</li>
 </ul>
+<p>If we have <span
+class="math inline">(<em>x</em><sub><em>i</em></sub><em>x</em><sub><em>j</em></sub>)<sup>3</sup> = 1</span>
+that looks like a transposition / braiding</p>
+<p><span
+class="math inline">(<em>x</em><sub><em>i</em></sub><em>x</em><sub><em>j</em></sub>)<sup>2</sup> = <em>x</em><sub><em>j</em></sub><em>x</em><sub><em>i</em></sub></span></p>
+<p>So <span
+class="math inline"><em>x</em><sub><em>i</em></sub><em>x</em><sub><em>j</em></sub><em>x</em><sub><em>i</em></sub> = <em>x</em><sub><em>j</em></sub><em>x</em><sub><em>i</em></sub><em>x</em><sub><em>j</em></sub></span></p>
+<ul>
+<li>this is basically the yang-baxter equation, where you think of <span
+class="math inline"><em>x</em><sub><em>i</em></sub></span> as the swap
+of two adjacent strings.</li>
+</ul>
+<p>If <span
+class="math inline">(<em>x</em><sub><em>i</em></sub><em>x</em><sub><em>j</em></sub>)<sup>4</sup> = 1</span>
+that says</p>
+<p><span
+class="math inline"><em>x</em><sub><em>i</em></sub><em>x</em><sub><em>j</em></sub><em>x</em><sub><em>i</em></sub><em>x</em><sub><em>j</em></sub> = <em>x</em><sub><em>j</em></sub><em>x</em><sub><em>i</em></sub><em>x</em><sub><em>j</em></sub><em>x</em><sub><em>i</em></sub></span></p>
+<p>Somehow x<sub>i</sub> corresponds to taking a loop around a fixed
+pole, and so does x<sub>j</sub></p>
+<ul>
+<li>we can also view it as somehow the x<sub>j</sub> is doing a
+sign-flip</li>
+</ul>
+<p>you think of x<sub>j</sub> as wrapping around a fixed pole, and
+x<sub>i</sub> as just an ordinary transposition</p>
+<ul>
+<li>it's a bit odd; it's saying you take a transposition and then you
+modify it (wrapping around a pole is the same as braiding two things one
+way and then the other)</li>
+</ul>
+<p>Then intuitively, maybe you think of the number as the braiding +
+2</p>
+<ul>
+<li>so 3 corresponds to a single swap</li>
+<li>4 corresponds to a double swap?</li>
+</ul>
+<p>xyxyxy = yxyx</p>
+<p>In xyxyxy = 1 we have the first vertex goes to location 2 then 3 then
+stays, then 2 then 1 then stays</p>
+<ul>
+<li>so it looks like xy1yx1</li>
+</ul>
+<p>In xyxyxyxy = 1 it goes 1 to 2 to 2 to make it work</p>
+<p>xyxyxy = yxyx 1 to 2 to 3 to 3 to 3 to 2 to 1 to 1 compared to 1 to 1
+to 2 to 3 to 3</p>
+<p>so that doesn't work</p>
+<p>(xy)<sup>m</sup> = 1 means that</p>
+<p><strong>crystallographic restriction</strong> in tiling</p>
+<ul>
+<li>you can tile only with shapes with symmetries of order 2,3, 4, or
+6</li>
+</ul>
+<p>somehow you want m/2 strings involved in the reflection</p>
+<ul>
+<li>so like m=2 is a single string</li>
+<li>m=4 is a string and a wall</li>
+</ul>
+<p>but m=3 is braiding so m=5 should be something like braiding and a
+wall?</p>
+<p>maybe m=4 is like a ribbon; like we don't think of wrapping a string
+around a wall, but as a ribbon with a twist? no it's not exactly that.
+oh yeah maybe it is; but it's like a double twist; you cross over
+twice</p>
+<h1 id="lie-groups">Lie Groups</h1>
+<p>Let G be a compact connected Lie group. Then it contains a maximal
+torus (a maximal abelian subgroup isomorphic to <span
+class="math inline"><em>T</em><sup><em>k</em></sup></span>). The Weyl
+group is</p>
+<p><span
+class="math inline"><em>W</em> = <em>N</em><sub><em>G</em></sub>(<em>T</em>)/<em>T</em></span>,
+where <span class="math inline"><em>T</em></span> is the maximal torus.
+The Weyl group turns out to be a <strong>finite Coxeter
+group.</strong></p>
+<p>The maximal torus corresponds to the <strong>Cartan
+subalgebra</strong> of the Lie algebra, <span
+class="math inline">𝔥</span>. We look at <span
+class="math inline">[<em>h</em>,<em>x</em>] = <em>α</em>(<em>h</em>)<em>x</em></span>
+with <span class="math inline"><em>h</em> ∈ 𝔥</span>.</p>
+<p>The linear functionals <span
+class="math inline"><em>α</em> ∈ 𝔥<sup>*</sup></span> are the
+<strong>roots</strong> of the system.</p>
 <h1 id="type-a_n">Type <span
 class="math inline"><em>A</em><sub><em>n</em></sub></span></h1>
 <p>We have generators <span
@@ -204,9 +285,37 @@ class="math inline"><em>x</em><sub><em>n</em></sub></span>, which behave
 like <strong>adjacent transpositions.</strong></p>
 <p>This corresponds to <strong>braid groups</strong> and
 <strong>Yang-Baxter equations</strong></p>
+<p>Has to do with <strong>simplices</strong></p>
+<h2 id="root-system">Root System</h2>
+<p>For the root system our matrix has entries <span
+class="math inline"><em>M</em><sub><em>i</em><sub><em>j</em></sub></sub> = cos (<em>π</em>/<em>m</em><sub><em>i</em><sub><em>j</em></sub></sub>)</span></p>
+<p>We take <span
+class="math inline">⟨<em>x</em><sub><em>i</em></sub>, <em>x</em><sub><em>j</em></sub>⟩ = <em>M</em><sub><em>i</em><sub><em>j</em></sub></sub></span>,
+giving us a bilinear form.</p>
+<p>The idea is that we work in euclidean space and take <span
+class="math inline">⟨<em>x</em><sub><em>i</em></sub>, <em>x</em><sub><em>j</em></sub>⟩ = ∥<em>x</em><sub><em>i</em></sub>∥∥<em>x</em><sub><em>j</em></sub>∥cos (<em>ϕ</em>)</span></p>
+<p>We view <span
+class="math inline">(<em>s</em><sub><em>i</em></sub><em>s</em><sub><em>j</em></sub>)<sup><em>m</em></sup> = 1</span>
+as saying that <span
+class="math inline"><em>s</em><sub><em>i</em></sub><em>s</em><sub><em>j</em></sub></span>
+is a rotation by <span
+class="math inline">2<em>π</em>/<em>m</em></span>. If you have two lines
+over which you reflect, reflecting over them in sequence is the same as
+rotating by <span class="math inline">2<em>θ</em></span>, where θ is the
+angle between the mirrors. So <span
+class="math inline"><em>θ</em> = <em>π</em>/<em>m</em></span></p>
+<p>Now you view the <span
+class="math inline"><em>x</em><sub><em>i</em></sub></span> as the normal
+vectors of the mirrors. You find that <span
+class="math inline"><em>ϕ</em> = <em>π</em> − <em>θ</em></span>, and
+so</p>
+<p><span
+class="math inline">⟨<em>x</em><sub><em>i</em></sub><em>x</em><sub><em>j</em></sub>⟩ =  − ∥<em>x</em><sub><em>i</em></sub>∥∥<em>x</em><sub><em>j</em></sub>∥cos (<em>ϕ</em>/<em>m</em>)</span></p>
+<p>Now let's say we take our vectors to be of the</p>
 <h1 id="type-b_n">Type <span
 class="math inline"><em>B</em><sub><em>n</em></sub></span></h1>
 <p>Correspond to <strong>signed permutations</strong></p>
+<p>Has to do with hypercubes</p>
 <h1 id="type-d_n">Type <span
 class="math inline"><em>D</em><sub><em>n</em></sub></span></h1>
 <p>Correspond to <strong>even-signed permutations</strong></p>
