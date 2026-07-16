@@ -5,20 +5,19 @@
 #+filetags: :math:conferences:presentations:
 
 * References
+ European and Pacific Theoretical Physics
 
-Hi Chelsea,
+Ottawa-Carleton Number Theory Group
 
-I absolutely loved your talk yesterday! I looked up your website afterwards and was pleasantly surprised to find out you're from Detroit: I'm from Windsor. My research is actually focused on the relationships between Frobenius and Hopf algebras, so you can imagine I'm quite looking forward to volumes 2 and 3 of your Symmetries of Algebras series!
+Math Picture Language seminar 
 
-Anyway, I had some thoughts about possible approaches beyond the A_n and B_n cases you outlined - I'm not sure if they'll be any help, but here's what I was thinking:
+European Non-Associative Algebra Seminar
 
-I'm coming at this from a Lie algebra perspective, and so I immediately want to look at Coxeter groups in terms of root systems and the bilinear form $\langle x_i, x_j \rangle = - \|x_i \| \| x_j \| \cos(\pi /m_{ij})$. In the case of A_n, you can take the geometric realization of the root system, embeding it in $\mathbb{R}^{n+1}$: you take an orthonormal basis $\{ e_{i} \}$ and define $x_{i} = e_{i} - e_{i+1}$. Then the standard bilinear form on $\mathbb{R}^{n+1}$ will recover the Coxeter bilinear form up to a scalar. Then I want to say that this is somehow saying that $x_{i}$ corresponds to a braiding of strings $i$ and $i+1$ (moving vertex $i$ over and $i+1$ under, say ).
+NCTS International Geometric Measure Theory Seminar
 
-Fascinatingly, the same approach works for the case of $B_{n}$: your embedding has a series of terms of braiding-shape, $x_{i} = e_{i} - e_{i+1}$ for $1 \leq i \leq n-1$ and then a single string (wall) $x_{n} = e_{n}$. 
+Virtual seminar on geometry with symmetries
 
-For the case of $D_{n}$ you get $x_{i} = e_{i} - e_{i+1}$ for $1 \leq i \leq n-1$ and $x_{n} = e_{n-1} + e_{n}$, I believe, which I'd like to say is 
-
-The exceptional Coxeter groups are all fascinating, because you end up with strange things like $x_{1} = e_{1} - e_{2}$ and $x_{2} = -2 e_{1} + e_{2} + e_{3}$ for the case of $G_{2}$
+CT2026
 
 * Chelsea Walton
 
