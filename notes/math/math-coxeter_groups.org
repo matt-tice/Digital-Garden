@@ -21,6 +21,66 @@ When drawing the Coxeter-Dynkin graph you
 - leave the $m_{i}_{j} = 3$ edges unlabelled
 - label the rest of the edges.
 
+If we have $(x_{i} x_{j})^{3} = 1$ that looks like a transposition / braiding
+
+$(x_{i} x_j)^2 = x_j x_i$
+
+So $x_{i} x_{j} x_{i} = x_{j} x_{i} x_{j}$
+- this is basically the yang-baxter equation, where you think of $x_{i}$ as the swap of two adjacent strings. 
+
+If $(x_{i} x_{j})^{4} = 1$ that says
+
+$x_{i} x_{j} x_{i} x_{j} = x_{j} x_{i} x_{j} x_{i}$
+
+Somehow x_i corresponds to taking a loop around a fixed pole, and so does x_j
+- we can also view it as somehow the x_j is doing a sign-flip
+
+you think of x_j as wrapping around a fixed pole, and x_i as just an ordinary transposition
+- it's a bit odd; it's saying you take a transposition and then you modify it (wrapping around a pole is the same as braiding two things one way and then the other)
+
+Then intuitively, maybe you think of the number as the braiding + 2
+- so 3 corresponds to a single swap
+- 4 corresponds to a double swap?
+
+xyxyxy = yxyx
+
+In xyxyxy = 1
+we have the first vertex goes to location 2 then 3 then stays, then 2 then 1 then stays
+- so it looks like xy1yx1
+
+In xyxyxyxy = 1
+it goes 1 to 2 to 2 to make it work
+
+xyxyxy = yxyx
+1 to 2 to 3 to 3 to 3 to 2 to 1 to 1 compared to
+1 to 1 to 2 to 3 to 3
+
+so that doesn't work
+
+(xy)^m = 1 means that 
+
+*crystallographic restriction* in tiling
+- you can tile only with shapes with symmetries of order 2,3, 4, or 6
+
+somehow you want m/2 strings involved in the reflection
+- so like m=2 is a single string
+- m=4 is a string and a wall
+
+but m=3 is braiding
+so m=5 should be something like braiding and a wall?
+
+maybe m=4 is like a ribbon; like we don't think of wrapping a string around a wall, but as a ribbon with a twist? no it's not exactly that. oh yeah maybe it is; but it's like a double twist; you cross over twice
+
+* Lie Groups
+
+Let G be a compact connected Lie group. Then it contains a maximal torus (a maximal abelian subgroup isomorphic to $T^{k}$). The Weyl group is 
+
+$W = N_{G}(T)/T$, where $T$ is the maximal torus. The Weyl group turns out to be a *finite Coxeter group.* 
+
+The maximal torus corresponds to the *Cartan subalgebra* of the Lie algebra, $\mathfrak{h}$. We look at
+$[h,x] = \alpha (h) x$ with $h \in \mathfrak{h}$. 
+
+The linear functionals $\alpha \in \mathfrak{h}^{*}$ are the *roots* of the system.
 
 * Type $A_{n}$
 
@@ -28,9 +88,33 @@ We have generators $x_{n}$, which behave like *adjacent transpositions.*
 
 This corresponds to *braid groups* and *Yang-Baxter equations* 
 
+Has to do with *simplices* 
+
+** Root System
+
+For the root system our matrix has entries
+$M_{i}_{j} = \cos(\pi /m_{i}_{j})$
+
+We take $\langle x_{i} , x_{j} \rangle = M_{i}_{j}$, giving us a bilinear form. 
+
+The idea is that we work in euclidean space and take
+$\langle x_{i} , x_{j} \rangle = \| x_{i} \| \| x_{j }\| \cos(\phi)$
+
+We view $(s_{i} s_{j})^{m} = 1$ as saying that $s_{i} s_{j}$ is a rotation by $2 \pi /m$. If you have two lines over which you reflect, reflecting over them in sequence is the same as rotating by $2\theta$, where \theta is the angle between the mirrors. So 
+$\theta = \pi /m$
+
+Now you view the $x_{i}$ as the normal vectors of the mirrors. You find that $\phi = \pi - \theta$, and so
+
+$\langle x_{i} x_{j} \rangle = - \|x_{i} \| \| x_{j} \| \cos(\phi/m)$
+
+
+Now let's say we take our vectors to be of the 
+
 * Type $B_{n}$
 
 Correspond to *signed permutations* 
+
+Has to do with hypercubes
 
 * Type $D_{n}$
 

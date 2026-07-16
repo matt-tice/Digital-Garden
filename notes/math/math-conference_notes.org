@@ -170,3 +170,44 @@ perfect: evaluation and coevalution are isos
 non-algebraically closed field
 char p
 non-semisimple case
+
+* Marino Gran
+
+Hopf formulae for cocommutative Hopf algebras
+
+Semiabelian categories
+- non-abelian homological algebra.
+
+Def: finitely complete category with
+- 0 object
+- binary coprods
+- Barr-exact (factor as regular epi followed by mono)
+       - regular epis are pullback stable
+- bourn-protomodular
+
+The canonical morph from coproduct to prod is not an isomorphism
+
+** Hopf Algebras
+
+Take cocommutative hopf algebras. 
+- ex group algebra
+- symmetric algebra
+- tensor algebra
+
+The category of cocommutative Hopf algebras is semi-abelian 
+- it's also strongly protomodular
+
+The category of commutative and cocommutative Hopf algebras is abelian
+
+
+In groups, free resolutions' second homology has a hopf-formula
+
+** Galois Theory
+
+You want to view a Hopf algebra as a quotient of some projective resolution and then take the universal central extension
+
+You get a galois groupoid
+
+** Yang Baxter
+
+A skew brace gives you bijective solutions to YB
