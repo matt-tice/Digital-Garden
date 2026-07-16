@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>manifolds</title>
+  <title>foliations</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,43 +166,25 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">manifolds</h1>
+<h1 class="title">foliations</h1>
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
+<p>A foliation is a way to stratify a space: you create a bunch of
+<em>layers</em> of the space made up of submanifolds. Each layer is
+called a <strong>leaf</strong> of the foliation</p>
 <h1 id="definitions">Definitions</h1>
-<h2 id="coordinate-charts">Coordinate Charts</h2>
-<h2 id="derivatives-on-a-manifold">Derivatives on a Manifold</h2>
-<p>Let <span class="math inline"><em>f</em> : <em>M</em> → ℝ</span>. The
-derivative of <span class="math inline"><em>f</em></span> at a point
-<span class="math inline"><em>p</em></span> is the derivative of the
-composite <span
-class="math inline"><em>f</em> ∘ <em>ϕ</em><sup>−1</sup> : ℝ<sup><em>n</em></sup> → ℝ</span>.</p>
-<h2 id="tangent-space">Tangent Space</h2>
-<p>The tangent space</p>
-<p>linear functionals <span
-class="math inline"><em>ϕ</em> : <em>C</em><sup>∞</sup>(<em>M</em>) → ℝ</span>
-that satisfy the Leibniz rule <span
-class="math inline"><em>ϕ</em>(<em>f</em><em>g</em>) = <em>f</em>(<em>p</em>)<em>ϕ</em>(<em>g</em>) + <em>ϕ</em>(<em>f</em>)<em>g</em>(<em>p</em>)</span></p>
-<h3 id="functional-analysis">Functional Analysis</h3>
-<p>Linear functionals on functions are basically the same data as
-distributions.</p>
-<p>You can view all derivatives (including the higher order ones) as
-distributions as follows: take the continuous dual of smooth compactly
-supported functions <span
-class="math inline">(<em>C</em><sub><em>c</em></sub><sup>∞</sup>(<em>M</em>))′</span>
-and just look at the ones that are supported at exactly the point <span
-class="math inline"><em>p</em></span>.</p>
-<p>Then the ordinary tangent space is equivalent to the subset that
-vanish on constant functions and have first-order support</p>
-<ul>
-<li>this space is called the <strong>first-order homogenous
-distributions concentrated at <span
-class="math inline"><em>p</em></span>.</strong></li>
-</ul>
-<h1 id="theorems">Theorems</h1>
-<h2
-id="derivatives-dont-depend-on-choice-of-coordinate-chart">Derivatives
-don't depend on choice of coordinate chart</h2>
+<h2 id="foliations-1">Foliations</h2>
+<p>A <strong>foliation of degree $k$</strong> of an <span
+class="math inline"><em>n</em></span>-manifold <span
+class="math inline"><em>M</em></span> is a partition of <span
+class="math inline"><em>M</em></span> into connected, <span
+class="math inline"><em>k</em></span>-dimensional submanifolds such that
+for all <span class="math inline"><em>p</em> ∈ <em>M</em></span>, there
+is a local coordinate chart <span
+class="math inline">(<em>x</em><sup><em>i</em></sup>)</span> where the
+leaves are defined by holding the last <span
+class="math inline"><em>n</em> − <em>k</em></span> coordinates
+constant.</p>
 </body>
 </html>

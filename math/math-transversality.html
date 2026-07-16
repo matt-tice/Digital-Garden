@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>manifolds</title>
+  <title>transversality</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,43 +166,67 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">manifolds</h1>
+<h1 class="title">transversality</h1>
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
+<p>Two manifolds intersect transversely if they still intersect after a
+perturbation.</p>
 <h1 id="definitions">Definitions</h1>
-<h2 id="coordinate-charts">Coordinate Charts</h2>
-<h2 id="derivatives-on-a-manifold">Derivatives on a Manifold</h2>
-<p>Let <span class="math inline"><em>f</em> : <em>M</em> → ℝ</span>. The
-derivative of <span class="math inline"><em>f</em></span> at a point
-<span class="math inline"><em>p</em></span> is the derivative of the
-composite <span
-class="math inline"><em>f</em> ∘ <em>ϕ</em><sup>−1</sup> : ℝ<sup><em>n</em></sup> → ℝ</span>.</p>
-<h2 id="tangent-space">Tangent Space</h2>
-<p>The tangent space</p>
-<p>linear functionals <span
-class="math inline"><em>ϕ</em> : <em>C</em><sup>∞</sup>(<em>M</em>) → ℝ</span>
-that satisfy the Leibniz rule <span
-class="math inline"><em>ϕ</em>(<em>f</em><em>g</em>) = <em>f</em>(<em>p</em>)<em>ϕ</em>(<em>g</em>) + <em>ϕ</em>(<em>f</em>)<em>g</em>(<em>p</em>)</span></p>
-<h3 id="functional-analysis">Functional Analysis</h3>
-<p>Linear functionals on functions are basically the same data as
-distributions.</p>
-<p>You can view all derivatives (including the higher order ones) as
-distributions as follows: take the continuous dual of smooth compactly
-supported functions <span
-class="math inline">(<em>C</em><sub><em>c</em></sub><sup>∞</sup>(<em>M</em>))′</span>
-and just look at the ones that are supported at exactly the point <span
+<h2 id="transversality-of-submanifolds">Transversality of
+Submanifolds</h2>
+<p>Two submanifolds <span
+class="math inline"><em>X</em>, <em>Y</em></span> of a
+finite-dimensional <span class="math inline"><em>M</em></span> are said
+to <strong>intersect transversely</strong> if for all <span
+class="math inline"><em>p</em> ∈ <em>X</em> ∩ <em>Y</em></span>, we
+have</p>
+<p><span
+class="math inline"><em>T</em><sub><em>p</em></sub><em>X</em> + <em>T</em><sub><em>p</em></sub><em>Y</em> = <em>T</em><sub><em>p</em></sub><em>M</em></span></p>
+<h2 id="transversality-of-smooth-maps">Transversality of Smooth
+Maps</h2>
+<h2 id="lie-algebra-approach">Lie Algebra Approach</h2>
+<p>We start with a Lie group and pass to the Lie algebra to get the
+infinitesimal generators</p>
+<p><span class="math inline">$X_{p}^{*} = \dfrac{d}{dt}|_{t=0} (\exp(t
+X) p) \in T_{p} M$</span>, where <span
+class="math inline"><em>X</em> ∈ 𝔤</span>.</p>
+<p>The set <span
+class="math inline">{<em>X</em><sub><em>p</em></sub><sup>*</sup>}</span>
+is the tangent space to the G-orbit through <span
 class="math inline"><em>p</em></span>.</p>
-<p>Then the ordinary tangent space is equivalent to the subset that
-vanish on constant functions and have first-order support</p>
-<ul>
-<li>this space is called the <strong>first-order homogenous
-distributions concentrated at <span
-class="math inline"><em>p</em></span>.</strong></li>
-</ul>
+<p>The action of <span class="math inline"><em>G</em></span> is
+<strong>infinitesimally transverse</strong> to the intersection of two
+submanifolds <span class="math inline"><em>A</em>, <em>B</em></span> at
+<span class="math inline"><em>p</em></span> if <span
+class="math inline"><em>T</em><sub><em>p</em></sub><em>A</em> + <em>T</em><sub><em>p</em></sub><em>B</em> + <em>X</em><sub><em>p</em></sub><sup>*</sup> = <em>T</em><sub><em>p</em></sub><em>M</em></span></p>
+<p>We can also define transversality of submanifolds in this language.
+We take the diffeomorphism group to be <span
+class="math inline"><em>G</em></span>. The Lie algebra is the space of
+all smooth vector fields on <span class="math inline"><em>M</em></span>.
+Every such vector field generates a flow</p>
+<p><span
+class="math inline"><em>Φ</em><sub><em>t</em></sub> : <em>M</em> → <em>M</em></span>.
+We view these as our perturbations.</p>
+<p>Consider the evaluation map</p>
+<p><span
+class="math inline"><em>e</em><em>v</em><sub><em>p</em></sub> : <em>Ξ</em>(<em>M</em>) → <em>T</em><sub><em>p</em></sub><em>M</em></span>
+that sends <span
+class="math inline"><em>X</em> → <em>X</em>(<em>p</em>)</span>.</p>
+<p>Now given two submanifolds <span
+class="math inline"><em>A</em>, <em>B</em></span>, we take the Lie
+subalgebras of vector fields tangent to each of them:</p>
+<p><span
+class="math inline">𝔤<sub><em>A</em></sub> = {<em>X</em> ∈ <em>Ξ</em>(<em>M</em>) ∣ <em>X</em>(<em>q</em>) ∈ <em>T</em><sub><em>q</em></sub><em>A</em>, ∀<em>q</em> ∈ <em>A</em>}</span></p>
+<p>We have <span
+class="math inline"><em>e</em><em>v</em><sub><em>p</em></sub>(𝔤<sub><em>A</em></sub>) = <em>T</em><sub><em>p</em></sub><em>A</em></span>.</p>
+<p>Now transversality is precisely the condition that</p>
+<p><span
+class="math inline"><em>e</em><em>v</em><sub><em>p</em></sub>(𝔤<sub><em>A</em></sub>) + <em>e</em><em>v</em><sub><em>p</em></sub>(𝔤<sub><em>B</em></sub>) = <em>e</em><em>v</em><sub><em>p</em></sub>(𝔤)</span></p>
 <h1 id="theorems">Theorems</h1>
 <h2
-id="derivatives-dont-depend-on-choice-of-coordinate-chart">Derivatives
-don't depend on choice of coordinate chart</h2>
+id="tranversal-implies-intersection-is-smooth-submanifold">Tranversal
+implies Intersection is Smooth Submanifold</h2>
+<h2 id="thom-transversality-theorem">Thom Transversality Theorem</h2>
 </body>
 </html>
