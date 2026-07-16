@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       c9a821d0-eefb-47b9-a8a8-4045dc57cd66
+:END:
+#+title: foliations
+#+filetags: :math:geometry:
+
+* References
+
+
+* Summary
+
+A foliation is a way to stratify a space: you create a bunch of /layers/ of the space made up of submanifolds. Each layer is called a *leaf* of the foliation
+
+* Definitions
+
+** Foliations
+
+A *foliation of degree $k$* of an $n$-manifold $M$ is a partition of $M$ into connected, $k$-dimensional submanifolds such that for all $p \in M$, there is a local coordinate chart $(x^{i})$ where the leaves are defined by holding the last $n-k$ coordinates constant.

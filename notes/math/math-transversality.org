@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       041ff88e-765c-4337-b774-36b28df91971
+:END:
+#+title: transversality
+#+filetags: :math:geometry:
+
+* References
+
+
+* Summary
+
+Two manifolds intersect transversely if they still intersect after a perturbation.
+
+* Definitions
+
+** Transversality of Submanifolds
+
+Two submanifolds $X,Y$ of a finite-dimensional $M$ are said to *intersect transversely* if for all $p \in X \cap Y$, we have
+
+$T_{p} X + T_{p} Y = T_{p} M$
+
+** Transversality of Smooth Maps
+
+** Lie Algebra Approach
+
+We start with a Lie group and pass to the Lie algebra to get the infinitesimal generators
+
+$X_{p}^{*} = \dfrac{d}{dt}|_{t=0} (\exp(t X) p) \in T_{p} M$, where $X \in \mathfrak{g}$.
+
+The set $\{ X_{p}^{*} \}$ is the tangent space to the G-orbit through $p$.
+
+The action of $G$ is *infinitesimally transverse* to the intersection of two submanifolds $A, B$ at $p$ if
+$T_{p}A + T_{p} B + {X^{*}_{p}} = T_{p}M$
+
+We can also define transversality of submanifolds in this language. We take the diffeomorphism group to be $G$. The Lie algebra is the space of all smooth vector fields on $M$. Every such vector field generates a flow
+
+$\Phi_{t}: M \rightarrow M$. We view these as our perturbations.
+
+Consider the evaluation map
+
+$ev_{p} : \Xi(M) \rightarrow T_{p}M$ that sends
+$X \rightarrow X(p)$.
+
+Now given two submanifolds $A,B$, we take the Lie subalgebras of vector fields tangent to each of them:
+
+$\mathfrak{g}_{A} = \{ X \in \Xi(M) \mid X(q) \in T_{q} A, \; \forall q \in A \}$
+
+We have $ev_{p}(\mathfrak{g}_{A}) = T_{p}A$.
+
+Now transversality is precisely the condition that
+
+$ev_{p}(\mathfrak{g}_{A}) + ev_{p}(\mathfrak{g}_{B}) = ev_{p}(\mathfrak{g})$
+
+
+
+* Theorems
+
+** Tranversal implies Intersection is Smooth Submanifold
+
+** Thom Transversality Theorem
+

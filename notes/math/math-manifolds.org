@@ -10,3 +10,36 @@
 
 * Summary
 
+
+
+* Definitions
+
+** Coordinate Charts
+
+** Derivatives on a Manifold
+
+Let $f: M \rightarrow \mathbb{R}$. The derivative of $f$ at a point $p$ is the derivative of the composite
+$f \circ \phi^{-1}: \mathbb{R}^{n} \rightarrow \mathbb{R}$.
+
+** Tangent Space
+
+The tangent space
+
+linear functionals $\phi: C^{\infty} (M) \rightarrow \mathbb{R}$ that satisfy the Leibniz rule
+$\phi(fg) = f(p) \phi(g) + \phi(f)g(p)$
+
+*** Functional Analysis
+
+Linear functionals on functions are basically the same data as distributions.
+
+You can view all derivatives (including the higher order ones) as distributions as follows: take the continuous dual of smooth compactly supported functions
+$(C_{c}^{\infty }(M))'$ 
+and just look at the ones that are supported at exactly the point $p$.
+
+Then the ordinary tangent space is equivalent to the subset that vanish on constant functions and have first-order support
+- this space is called the *first-order homogenous distributions concentrated at $p$.* 
+
+* Theorems
+
+** Derivatives don't depend on choice of coordinate chart
+

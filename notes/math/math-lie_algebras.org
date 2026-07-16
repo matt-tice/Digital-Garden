@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       d6b81e46-04a4-4729-b322-b16409bf0283
+:END:
+#+title: lie algebras
+#+filetags: :math:non_assoc:
+
+* References
+
+
+* Summary
+
+* Definitions
+
+* Theorems
+
+** Ado's Theorem
+
+Every finite-dimensional Lie algebra over $\mathbb{R}$ has a faithful finite-dimensional representation 
+
+$\rho: \mathfrak{g} \rightarrow \mathfrak{gl}(N, \mathbb{R})$
+
+So you can view every finite-dimensional real Lie algebra as a Lie algebra of matrices.
+
+** Frobenius Integrability Theorem
+
+[[id:c9a821d0-eefb-47b9-a8a8-4045dc57cd66][foliations]]
