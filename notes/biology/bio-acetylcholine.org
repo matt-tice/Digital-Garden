@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       47913724-022a-4b27-9afd-03a90adc90a4
+:END:
+#+title: acetylcholine
+#+filetags: :biology:neuromodulator:
+
+* References
+
+
+* Summary
+
+* Biphasic Roles
+
+** Tonic
+
+Activates nicotinic receptors and muscarinic receptors to sharpen sensory processing and sustain wakefulness
+
+** Spiked
+
+Activates muscarinic autoreceptors M_2 and M_4. This produces a negative feedback loop that shuts down further acetylcholine release
+
+

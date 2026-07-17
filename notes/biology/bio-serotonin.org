@@ -1,0 +1,180 @@
+:PROPERTIES:
+:ID:       11b78458-ca8d-4fd6-b6a6-e74f310cc98b
+:END:
+#+title: serotonin
+#+filetags: :biology:neurotransmitter:hormone:
+
+* References
+
+
+* Summary
+
+Also called *5-HT*.
+
+Made in the *Raphe nuclei*
+
+GABA
+
+Derived from the amino acid L-tyrptophan, which is converted into 5-HTP and then into serotonin (5-HT)
+
+Serotonin is a kind of mollifier; it alters the *baseline voltage* of neurons, making them *less reactive* to stress.
+
+Serotonin is converted into melatonin at night.
+
+* Raphe Nuclei
+
+Serotonin is produced depending on your behavioural state
+
+| Active          | Highest        |
+| Passive         | High           |
+| Slow-wave sleep | Low            |
+| REM sleep       | Basically zero |
+
+
+* Receptors
+
+Serotonin has *14 different receptor types*. Most of them are *G-protein coupled* 
+
+We measure the affinity for serotonin to bind to a given type of receptor by that receptor's *dissociation constants* $K_{d}$ (equilibrium constant) and $K_{i}$ (inhibition constant). The lower the constant, the higher the affinity.
+
+Serotonin receptors are located all throughout your body.
+
+*Wellbutrin* is an NDRI as opposed to an SSRI
+- ND stands for /norepinephrine and dopamine/
+- instead of blocking serotonin reuptake, it blocks norepinephrine and dopamine reuptake.
+- this is used in compination with an SSRI to balance out the inhibitted dopamine production.
+
+** 5-HT1
+
+=G-protein:= 
+
+*** 5-HT_1A
+
+K_i = 1 to 3 nM
+
+This is actually an *autoreceptor*, located on the raphe nuclei themselves!
+- this allows serotonin to perform a *negative feedback loop*, where its presence in low quantities prevents serotonin spikes.
+
+*** 5-HT_2A
+
+In the prefrontal cortex, serotonin binds to 5-HT_2A receptors on the terminals where dopamine is released.
+
+*** 5-HT_1B
+
+Caudate nucleus
+
+*** 5-HT_1C
+
+*** 5-HT_1D
+
+Caudate nucleus
+
+*** 5-HT_1E
+
+*** 5-HT_1F
+
+** 5-HT_2
+
+=G-protein:= 
+
+*** 5-HT_2A
+
+Caudate nucleus
+
+*** 5-HT_2B
+
+*** 5-HT_2C
+
+K_i = 100 to 300 nM
+
+These trigger down-regulation of dopamine and norepinephrine in the limbic system and cortex
+
+Serotonin will *suppress phasic spikes*. The VTA has GABA neurons sitting next to it, that contain 5-HT_2C receptors. When serotonin binds to these, the GABA neurons fire, sending out chloride.
+The chloride freezes the dopamine neurons.
+
+Located in the hypothalamus
+
+** 5-HT_3
+
+=G-protein:= None
+
+Opens sodium and potassium channels
+
+In the gut
+
+** 5-HT_4
+
+=G-protein:= G_s
+
+Increases cAMP
+Activates protein kinase A
+
+In the gut
+
+** 5-HT_5
+
+*** 5-HT_5A
+
+*** 5-HT_5B
+
+** 5-HT_6
+
+=G-protein:= G_s
+
+Increases cAMP
+
+** 5-HT_7
+
+=G-protein:= G_s
+
+Increases cAMP
+
+K_i = 8 to 15 nM
+
+Used to modulate circadian rhythms in the suprachiasmatic nucleus
+
+* Serotonin Transporter (SERT)
+
+
+
+* SSRIs
+
+When you take an SSRI, it immediately targets the synaptic cleft. The presynaptic neuron is covered in a protein called SERT (serotonin transporter). 
+
+SERT sucks used serotonin out of the cleft, to recycle it. SSRIs bind into the SERT protein, inhibiting it.
+- the serotonin then pools inside of the synaptic cleft.
+
+Activating the serotonin receptors in the gut triggers nausea
+
+*Sertraline* is designed to inhibit the /dopamine transporter/ slightly.
+
+*** Micro-Rewards
+
+Though SSRIs end up inhibiting phasic dopamine spikes, if you focus on getting lots of tiny dopamine releases, instead of one big one, the SSRI won't necessarily be able to block that. 
+
+You can use this to maintain focus throughout the day.
+
+*** Cold Showers
+
+Actually stimulate 250% dopamine
+
+** 5-HT_1A Autoreceptors
+
+When there's too much serotonin hanging around, these autoreceptors tell the neurons to *stop releasing more serotonin.* 
+
+Over time, if you maintain high serotonin, the 5-HT_1A receptors will be dissolved and the effects of the higher serotonin will finally take hold.
+
+** BDNF
+
+Serotonin stimulates [[id:e3c3f1eb-4d17-4fe7-a37e-d05dda04b550][brain-derived neurotrophic factor]], which in turn stimulates neurogenesis in the hippocampus.
+
+This in turn allows the DMN to change its focus to be less on negative rumination.
+
+** GABA
+
+*** Heroin
+
+Heroin binds to the Mu-Opioid receptors, shutting down the GABA cells. This is what leads to terrible addiction --- you aren't able to suppress the phasic spikes at all, and you get a horriffying amount of dopamine.
+
+DeltaFosB accumulates to critical levels /within weeks/ 
+

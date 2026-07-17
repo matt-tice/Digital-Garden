@@ -218,3 +218,122 @@ You get a galois groupoid
 ** Yang Baxter
 
 A skew brace gives you bijective solutions to YB
+
+* James Hefford
+
+Compact Closure formalizes dual objects
+- something like traced
+
+Being partially traced is something like nuclear and trace ideals
+
+These are useful for conformal field theories
+- then you want to look at extended versions of these field theories.
+- james is just looking at extending to the bicategory case
+
+Looking at maps into hilbert spaces from conformal bordism category
+
+Compact closure allows you to define a trace 
+- so I'm thinking it's something like a Type 1 von Neumann algebra.
+- finite-dimensional Hilbert space
+- and d-dim bordisms for any fixed d
+
+
+
+** Partial Compact Closure
+
+- All Hilbert spaces.
+       - The Hilbert-Schmidt maps have transposes
+       - the identity maps are usually not hilbert schmidt
+       - but these maps are actually closed under composition with /any/ map (so it's an ideal)
+
+
+Nuclear ideals
+- assume you have a tensor-star category.
+- the idea is to get something that ends up being all the trace-class maps
+- hilbert schmidt form a nuclear ideal
+- bordism-conf with objects disjoint unions of circles and morphs conformal cobordisms
+       - except this has no identity maps!
+       - If we add in the diffeomorphisms, we fix it, and then the conformal cobordisms form a nuclear ideal
+
+
+the conformal cobordisms are basically the trace class maps
+
+You can define a trace ideal
+- this is really the trace class maps
+
+*** Nuclear Implies Trace
+
+If C has a nuclear ideal it also has a trace ideal
+
+** Field Theories
+
+CFT is a symmetric monoidal functor
+[Segal]
+Z: Bord^conf \rightarrow Hilb
+where each Z(A) is trace class for all A and tr Z(A) = Z(tr A)
+
+but really since Bord isn't a category we really want a /nuclear functor/ to make it more rigorous
+
+** Extended to 2
+
+To get the extended version of the conformal field theory you need to define a 2-trace ideal
+- and you end up using things like biprofunctors, pseudocoends
+
+
+* Aaron Fairbanks
+Comonads as Spaces
+
+
+Comonads on Set give you a generalization of topological spaces
+- the adjunction between Sh(X) and Set is comonadic
+- you can recover the topological space X from the comonad
+
+You can look at comonads on any category but we'll just stick with Set
+
+** Subbasis
+
+P: B \rightarrow Set
+B is the poset of subasic opens
+P is the forgetful functor sending you to a set of points
+
+*** Density Comonad
+
+The left kan ext of P along itself
+
+It's also given by the adj Psh(B) and Set
+
+It's also the free comonadic functor extending P
+
+*** Density Comonads = Topological Spaces
+
+*** Toposes with enough points = Pullback-preserving comonads on Set
+
+They're also called ionads [Richard Garner]
+
+Ionads generalize both top spaces and categories
+
+Categories are the *polynomial comonads* on Set
+
+$x^{3} + x = x(x^{2} + 1)$
+
+corresponds to the category with two objects and two morphisms between them
+
+*** Take density comonad where the subbasis is all sets with surjections
+
+This gives you a one-point space
+
+** Basis
+
+When is a subbasis a basis?
+A functor is dense if the codomain embed in presheaves
+
+$(-)^{F}: $ is fully faithful
+
+A subbasis is a basis if and only if the inclusion into Sh(X) is dense actually!
+
+So a basis is 
+
+S^<P> \rightarrow Psh(B) is an embedding, where the domain is coalgebras
+
+[my building's fire alarm went off and I missed the end of the talk :I]
+

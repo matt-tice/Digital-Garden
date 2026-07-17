@@ -8,6 +8,8 @@
 
 * Summary
 
+Adenosine is produced from [[id:d55a0d14-1826-4e49-a2a5-b08773e13c74][adenosine monophosphate]]
+
 Adenosine in your muscles causes local fatigue.
 Adenosine in your brain binds to receptors that trigger sleepiness
 
@@ -16,6 +18,18 @@ Adenosine gets cleared while you sleep
 Your brain consumes 20% of your ATP
 
 * Brain
+
+** Receptors
+
+Adenosine binds to inhibitory A_1 and excitatory A_2_A receptors.
+
+*** A_1 Receptors
+
+Wake-promoting
+
+*** A_2_A Receptors
+
+Sleep-promoting
 
 ** Sodium-Potassium Pump
 

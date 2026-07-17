@@ -66,6 +66,12 @@ Glutamate is balanced by GABA
 
 Once glutamate stimulates a brain cell, astrocytes absorb it and convert it into glutamine!
 
+Glutamate has a *monophasic behaviour* 
+- the higher your glutamate, the higher the excitation it creates
+- it has no shut-off switch like the neuromodulators
+
+If your glutamate gets too high, you get *excitotoxicity* 
+
 ** N-methyl-D-aspartate Receptor
 
 A glutamate receptor in the brain. It acts as a *coincidence detector* 
@@ -76,6 +82,7 @@ An ion channel
 
 ** Excitotoxicity
 
+Calcium floods the cell and the neuron digests itself from the inside out. This causes *seizures* 
 
 ** Monosodium Glutamate (MSG)
 
@@ -120,7 +127,8 @@ The smallest AA. It's literally *just a hydrogen atom.*
 :ID:       d35da251-a7a9-4987-82dd-9ca708edd67b
 :END:
 
-Used to make dopamine.
+Is converted to L-DOPA, which is used to make [[id:125297de-c559-4e5f-83a5-d084f3cc2366][dopamine,]] by *tyrosine hydroxylase*.
+- tyrosine hydroxylase takes /a lot of energy/ 
 
 Found in eggs, beef, salmon, and whey proteins.
 

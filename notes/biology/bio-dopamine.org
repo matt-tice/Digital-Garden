@@ -64,6 +64,13 @@ When you are focusing on a task, your midbrain releases a slow steady stream of 
 - it binds to the D1 receptors and helps silence the noise of irrelevant neurons.
 
 
+* Breakdown
+
+Dopamine is actually very unstable. When it breaks down through monoamine oxidase or auto-oxidation it creates *highly reactive oxygen species* 
+- hydrogen peroxide
+- quinones
+
+
 * Dopamine Transporters
 
 The recyclers of dopamine.
@@ -74,6 +81,8 @@ There are *essentially no dopamine transporters in the anterior cingulate cortex
 The striatum has a ton of DATs
 
 * Receptors
+
+5 types of receptors
 
 ** D_1 Receptors
 
@@ -162,7 +171,7 @@ It's particularly problematic when it comes to SSRIs
 - because your phasic spikes are surpressed by serotonin, negaive feelings like anger are some of the only things that have high enough spikes to break through.
 
 
-** Willpower
+* Willpower
 
 Willpower is heavily determined by dopamine
 
@@ -192,3 +201,10 @@ Whenever you get a phasic spike, the transcriptor protein DeltaFosB turns on in 
 
 Unlike most proteins, DeltaFosB lasts for weeks or months. Having a lot of DeltaFosB causes your brain to build more dendritic spines
 
+* Drugs
+
+** Cocaine
+
+Blocks a ton of your DATs
+
+** Amphetamines

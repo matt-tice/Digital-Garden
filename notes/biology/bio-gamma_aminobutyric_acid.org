@@ -12,6 +12,12 @@ Calms the nervous system
 
 Balances with [[id:2aebf5bf-2284-49b4-a4fb-7e5e9161f891][Glutamic Acid / Glutamate]]
 
+* Monophasic
+
+Like glutamate, GABA is monophasic: the more of it you have, the more it does; in this case that means it inhibits you more and more
+- can eventually cause coma, and brain death
+- it's intentionally used for clinical anesthesia
+
 * Drugs
 
 These bind to GABA receptors, making your brain hyper-sensitive to them

@@ -11,78 +11,7 @@
 * [[Id:7d45e4a7-7be7-49ed-acf9-dc6495008741][Ghrelin]]
 
 
-* Serotonin
-:PROPERTIES:
-:ID:       9d00dfdc-507a-46ab-9ffa-03a2d278837f
-:END:
-
-Made in the *Raphe nuclei*
-
-GABA
-
-Derived from the amino acid L-tyrptophan, which is converted into 5-HTP and then into serotonin (5-HT)
-
-Serotonin is a kind of mollifier; it alters the *baseline voltage* of neurons, making them *less reactive* to stress.
-
-Serotonin is converted into melatonin at night.
-
-
-** Phasic Spike Suppression
-
-Serotonin will *suppress phasic spikes*. The VTA has GABA neurons sitting next to it, that contain 5-HT_2C receptors. When serotonin binds to these, the GABA neurons fire, sending out chloride.
-The chloride freezes the dopamine neurons.
-
-In the prefrontal cortex, serotonin binds to 5-HT_2A receptors on the terminals where dopamine is released.
-
-Serotonin receptors are located all throughout your body.
-
-*Wellbutrin* is an NDRI as opposed to an SSRI
-- ND stands for /norepinephrine and dopamine/
-- instead of blocking serotonin reuptake, it blocks norepinephrine and dopamine reuptake.
-- this is used in compination with an SSRI to balance out the inhibitted dopamine production.
-
-
-** SSRIs
-
-When you take an SSRI, it immediately targets the synaptic cleft. The presynaptic neuron is covered in a protein called SERT (serotonin transporter). 
-
-SERT sucks used serotonin out of the cleft, to recycle it. SSRIs bind into the SERT protein, inhibiting it.
-- the serotonin then pools inside of the synaptic cleft.
-
-Activating the serotonin receptors in the gut triggers nausea
-
-*Sertraline* is designed to inhibit the /dopamine transporter/ slightly.
-
-*** Micro-Rewards
-
-Though SSRIs end up inhibiting phasic dopamine spikes, if you focus on getting lots of tiny dopamine releases, instead of one big one, the SSRI won't necessarily be able to block that. 
-
-You can use this to maintain focus throughout the day.
-
-*** Cold Showers
-
-Actually stimulate 250% dopamine
-
-** 5-HT_1A Autoreceptors
-
-When there's too much serotonin hanging around, these autoreceptors tell the neurons to *stop releasing more serotonin.* 
-
-Over time, if you maintain high serotonin, the 5-HT_1A receptors will be dissolved and the effects of the higher serotonin will finally take hold.
-
-** BDNF
-
-Serotonin stimulates [[id:e3c3f1eb-4d17-4fe7-a37e-d05dda04b550][brain-derived neurotrophic factor]], which in turn stimulates neurogenesis in the hippocampus.
-
-This in turn allows the DMN to change its focus to be less on negative rumination.
-
-** GABA
-
-*** Heroin
-
-Heroin binds to the Mu-Opioid receptors, shutting down the GABA cells. This is what leads to terrible addiction --- you aren't able to suppress the phasic spikes at all, and you get a horriffying amount of dopamine.
-
-DeltaFosB accumulates to critical levels /within weeks/ 
-
+* [[id:11b78458-ca8d-4fd6-b6a6-e74f310cc98b][Serotonin]]
 
 * [[id:125297de-c559-4e5f-83a5-d084f3cc2366][Dopamine]]
 
