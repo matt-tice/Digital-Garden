@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       b34ba6c2-a966-4c8b-b216-b279c7ecc10b
+:END:
+#+title: gelfand duality
+#+filetags: :math:topology:algebra:
+
+* References
+
+* Summary
+
+Consider the evaluation map at a point
+$ev_{p}: C^{\infty} (U) \rightarrow \mathbb{R}$.
+This is a ring homomorphism. Taking the kernel $\ker ev_{p}$, and noting that $\mathbb{R}$ is a field, we must have that $\ker ev_{p}$ is a /maximal ideal./ 
+
+It turns out every maximal ideal is of this form.
+
+For any ideal $I \triangleleft R$ we look at the maximal ideals that contain it
+$V(I) = \{ M_{p} \in Max(R) \mid I \subseteq M \}$
+
+This is the set of points on which all the functions in $I$ are zero --- it's the *zero set of $I$*.
+
+We define the closed sets to be those of the form $V(I)$. This gives us the *spectral topology* (also called the *Hull-Kernel topology*)
+- it turns out, this is the ordinary topology on $\mathbb{R}^{n}$.
+- this is because every closed set in $\mathbb{R}^{n}$ is the level set of some smooth function: $A = f^{-1} (0)$.
