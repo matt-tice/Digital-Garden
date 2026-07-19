@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       2246dc76-247e-4356-984c-e605885b5f3d
+:END:
+#+title: regular values
+#+filetags: :math:diff_top:diff_geo:
+
+* References
+
+
+* Summary
+
+* Definitions
+
+** Regular Value of a Curve
+
+Let $\gamma: I \rightarrow \mathbb{R}^{n}$ be $C^{1}$. Then $c \in \mathbb{R}^{n}$ is *regular* if 
+
+$\gamma'(t) \ne 0$ for all $t$ such that $\gamma(t) = c$.
+
+If every element of the image is regular, then $\gamma$ is called a *regular curve.* 
+
+*** Intuition
+
+The regular values are the places where $\gamma$ was drawn with a /flowing hand/ --- the curve never stopped in these places, which prevents cusps, corners, etc.
+
+More precisely, if $\gamma'(t) = 0$, then we can't tell what the curve looks like when we move slightly to the left or right: is it increasing or decreasing? So if the function isn't constant, and the value of $\gamma$ eventually changes, then it must be a *sudden change* that can't be accounted for infinitesimally.
+- this is a corner, cusp, etc.
+
+
+**** Note
+
+The curve gamma contains the data of /all of the components/ --- consider a circle, parameterized by 
+        $\gamma(t) = (\sin t, \cos t)$. 
+The top of the circle has zero slope, but the derivative of gamma /is not zero!/ 
+        $\gamma'(0) = (1, 0)$
+
+This is part of the value of taking curves to be the entire data of the function's graph, and not just one of the coordinates; it makes it easier to avoid singularities, as long as they don't appear in all coordinates simultaneously.
+
+* Theorems

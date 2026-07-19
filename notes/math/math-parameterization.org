@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       29c25a72-67b5-4480-b7d1-72adac1f9f7d
+:END:
+#+title: parameterization
+#+filetags: :math:calculus:diff_geo:
+
+* References
+
+
+* Summary
+
+The parameterization of a curve is usually handwaved in calculus; we just say that $(\sin t, \cos t)$ parameterizes the circle $x^{2} + y^{2} = 1$, because they "look the same". But what does that mean?
+
+The parameterization of a curve 
+
+$\gamma: I \rightarrow \mathbb{R}^{n}$.
+
+
+If we have a function $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$ then a 

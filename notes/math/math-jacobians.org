@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       def2136c-2e5b-466f-9660-9ed887b9ac31
+:END:
+#+title: jacobians
+#+filetags: :math:diff_geo:
+
+* References
+
+
+* Summary
+
+The Jacobian of a function is a matrix of all of that functions partial derivatives
+
+We often care about the *rank* of the Jacobian. The rank is the dimension of the image of the matrix.
+
+This is because the Jacobian is really the *data of the tangent space* at a given point.
+
+* Definitions
+
+** Jacobians
+
+Let $f: \mathbb{R}^{m} \rightarrow R^{n}$ be differentiable. The *Jacobian of $f$* is the matrix
+
+$Df_{i}_{j} = \partial_i \partial_{j} f$
+
+*** Rank
+
+The *rank* of a linear transformation is the dimension of the image. 
+
+** Immersions
+
+If $\ker Df = 0$ (the Jacobian is one-to-one) then $f$ is called an *immersion*.
+
+** Submersions
+
+If $Df$ is surjective, then $f$ is called a *submersion.* 
+
+* Theorems

@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       d7a2d6b9-ec10-4421-9452-f5cde99df123
+:END:
+#+title: level sets
+#+filetags: :math:diff_geo:
+
+* References
+
+
+* Summary
+
+Level sets give a nice implicit way of defining shapes. Instead of having to work with complicated maps $f: \mathbb{R}^{m} \rightarrow \mathbb{R}^{n}$, we reexpress them in the form 
+        $g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{}$
+where $g^{-1} (c) = Im(f)$, for some chosen $c$ (usually picked to be zero).
+
+Except we *can't usually do this*. The codomain usually can't be made to just be scalars; in general you need it to be $\mathbb{R}^{n-m}$. But you also usually *can't get the full domain* --- you can only do this locally (because you want $g$ to be a smooth function, you can't just arbitrarily define it, so sometimes there's no way to make it capture all of the image of $f$).
+- also, the preimage of a point is going to be closed, since the point is closed, so if the image of $f$ isn't closed, we can't capture it globally anyway
+
+But notice something else: in doing this we are *not capturing all the data of f* 
+- we're throwing away the domain data, in order to capture the image.
+- physically, we just care about the /shape that f draws/, not /how/ it draws it.
+
+
+* Definitions
+
+* Theorems
+
+** thing
+
+If $f: \mathbb{R}^{m} \rightarrow \mathbb{R}^{m}$ is a smooth embedding then for every $p \in Im(f)$, there is an open neighbourhood $p \in U \subseteq \mathbb{R}^{n}$ and smooth map $g_{p}: U \rightarrow \mathbb{R}^{n-m}$ such that
+
+      1. $p$ is a *regular value* of $g$
+      2. $g^{-1} (p) = Im(f) \cap U$
+

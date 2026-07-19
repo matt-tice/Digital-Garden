@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       08cb63c9-24aa-45b0-8fc4-456f104fba54
+:END:
+#+title: tangent space
+#+filetags: :math:diff_geo:
+
+* References
+
+
+* Summary
+
+* Definitions
+
+** Tangent Spaces (extrinsic)
+
+Let $p \in M \subseteq \mathbb{R}^{n}$ be a point on a manifold (defined as a subspace of Euclidean space). Then the *tangent space* at $p$ is 
+
+$T_{p}M = \{ \gamma'(0) \mid \gamma: I \rightarrow M$ for all intervals $I$ and smooth $\gamma \}$
+
+** Tangent Spaces (derivations)
+
+** Tangent Spaces (charts)
+
+* Theorems
