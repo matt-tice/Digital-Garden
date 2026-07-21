@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       1bb42781-c058-4b0a-a14f-860286f56466
+:END:
+#+title: seeds
+#+filetags: :biology:plants:nutrition:
+
+* References
+
+* Summary
+
+* Sunflower Seeds
+
+** Nutrition
+
+High in *vitamin E* 
+
+Magnesium and selenium
+
+* Pumpkin Seeds
+
+** Nutrition
+
+Unusually *high in protein* for a seed
+
+One of the *best sources of magnesium* out of all foods!
+
+Have a surprising amount of *iron.* 

@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       30ee338d-9e9e-42c6-9b83-3c043555a62a
+:END:
+#+title: fruits
+#+filetags: :biology:nutrition:
+
+* References
+
+* Summary
+
+* Cell Structure
+
+** Cellulose
+
+The walls of fruit cells (like all plant cells) is an *insoluble fiber* called *cellulose.* There is also *soluble fiber*, like *pectin,* gluing the cellulose together. It also connects separate plant cells together
+
+** Inside the cell
+
+Inside of the cell is a collection of water and natural sugars (fructose and glucose) 
+
+Because the natural sugars are contained inside the cellulose, it takes a longer time for the body to be able to release them. As you begin to digest the plant cells, the insoluble fiber mixes with the water inside of the cells, creating a *gel-like substance*, which traps the sugars, further slowing the propagation of the sugars.

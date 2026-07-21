@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       0aabe210-e966-48f9-b9ba-ee95741ea9ab
+:END:
+#+title: nutrition
+#+filetags: :biology:
+
+* References
+
+* Summary
+
+* Micronutrients
+
+* Macronutrients
+
+** Natural Sugars
+
+Unlike added sugars, these are bound to water and fiber, which slow digestion
+
+** Protein
+
+0.8g/kg * weight (kg) / day
+
+** Fiber
+
+25-38g / day
+
+* Minerals
+
+** Sodium
+
+Excess sodium draws water into the bloodstream. This *increases blood pressure* 
+
+** Calcium
+
+** Potassium
+
+** Iron
