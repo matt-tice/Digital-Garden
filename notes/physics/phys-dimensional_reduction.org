@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       ad7f0ccb-3f2c-4811-a855-14e332e9417b
+:END:
+#+title: dimensional reduction
+#+filetags: :physics:math:
+
+* References
+
+* Summary
+
+This is what happens in string theory when you compactify dimensions
+
+* Kaluza-Klein

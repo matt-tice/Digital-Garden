@@ -1,0 +1,197 @@
+:PROPERTIES:
+:ID:       2d82b7e0-703b-4e07-9630-ab21e88e7304
+:END:
+#+title: topological quantum field theories
+#+filetags: :math:tqft:physics:
+
+* References
+
+* Summary
+
+* Chern-Simons Theory
+
+** Intro
+
+This is the canonical example of a topological quantum field theory from a mathematical physics perspective.
+
+It's based on Yang-Mills theory.
+
+In Yang-Mills theory, we start with a smooth orientable, compact manifold $M$ without boundary and a metric $g$, which we use to construct the *Hodge star operator* $\star$. The action takes the form
+
+$S_{\text{Yang-Mills}} = \dfrac{1}{2g^{2}} \int_{M} Tr(F \wedge \star F)$
+
+where $F$ is the curvature 2-form $F = dA + A \wedge A$. In local coordinates this is
+$F_{\mu\nu} = \partial_{\mu} A_{\nu} - \partial_{\nu} A_{\mu} + [A_{\mu}, A_{\nu}]$
+
+For Chern-Simons theory, we take a smooth, compact, oriented *3-manifold* $M$ without boundary, equipped with a principal $G$-bundle $P$, for a compact Lie group $G$.
+
+We then take a *connection 1-form* $A \in \Omega^{1}(M, \mathfrak{g})$. The Chern-Simons action is then
+
+$S_{\text{Chern-Simons}} = \dfrac{k}{4 \pi } \int_{M} Tr(A \wedge dA + \dfrac{2}{3} A \wedge A \wedge A)$
+
+=Note:= $A$ is a *Lie-algebra-valued* differential form, not a scalar valued one. This is why we don't have $A \wedge A = 0$.
+
+=Lie-algebra forms:= These have the general shape $A = \sum_{i} A_{i} dx^{i}$, where $A_{i} \in \mathfrak{g}$ are matrices.
+
+*** Example
+
+If $A = A_{1} dx^{1} + A_{2} dx^{2}$, then $A \wedge A = A_1 A_2 dx^{1} \wedge dx^{2} + A_{1} A_{2} dx^{2} \wedge dx^{1} + 0 + 0 = [A_{1} , A_{2}] dx^{1} \wedge dx^{2}$
+
+*** Applying the Trace
+
+$Tr(A \wedge B) = (-1)^{\abs{A} \abs{B}} Tr(B \wedge A)$.
+
+In particular $Tr(A^{\wedge 4}) = (-1)^{1 \times 3} Tr(A^{\wedge 4})$, and so it must be zero.
+
+*** Hodge Star
+
+In 4D, the Hodge star is an idempotent endomorphism on 2-forms, so we can decompose any 2-form as
+
+$F = F^{+} + F^{-}$, where $F^{\pm} = \dfrac{1}{2}(F \pm \star F)$ are (anti)symmetric
+
+=Note:= $F^{+} \wedge F^{-} = 0$. Thus we can write
+
+\begin{equation*}
+Tr(F \wedge F) = Tr(F^{+ \wedge 2}) + Tr(F^{- \wedge 2}).
+\end{equation*}
+
+** Exact Case
+
+In the case that $M$ is itself a boundary of a 4-manifold $X$, we would have
+
+\begin{align*}
+d  Tr(A \wedge dA + \dfrac{2}{3} A \wedge A \wedge A) &= Tr(d (A \wedge dA) + \dfrac{2}{3} d(A \wedge A \wedge A)) \\
+&= Tr(dA \wedge dA - A \wedge d^{2} A + \dfrac{2}{3} (dA \wedge A \wedge A - A \wedge dA \wedge A + A \wedge A \wedge dA)) \\
+&= Tr(dA \wedge dA + 2 dA \wedge A \wedge A)
+\end{align*}
+
+We also have
+
+\begin{align*}
+Tr(F \wedge F) &= Tr((dA + A \wedge A) \wedge (dA + A \wedge A) ) \\
+&= Tr(dA \wedge dA + dA \wedge A \wedge A + A \wedge A \wedge dA + A \wedge A \wedge A \wedge A)
+\end{align*}
+
+$Tr(A^{\wedge  4}) = 0$. So we have
+
+$Tr(F \wedge F) = d Tr(A \wedge dA + \dfrac{2}{3} A \wedge A \wedge A)$
+
+This means that $Tr(F \wedge F)$ is *exact*, so integrating over it is equivalent to integrating over the boundary:
+
+$\int_X Tr(F \wedge F) = \int_{\partial X = M} Tr(A \wedge dA + \dfrac{2}{3} A \wedge A \wedge A)$,
+
+recovering the Chern-Simons action in the case that $F = \star F$ (the field is *self-dual*)
+- these self-dual fields are called *instantons*
+
+Now let's write $F = F^{+} + F^{-}$. 
+
+And so $\star F = F^{+} - F^{-}$. We get
+
+$S_{\text{Yang-Mills}}(F) \sim \int Tr(F \wedge \star F) = \int Tr(F^{+ \wedge 2}) - \int Tr(F^{- \wedge 2})$
+
+$S_{\text{Yang-Mills}} (F) = S_{\text{Chern-Simons}}(F^{+}) - S_{\text{Yang-Mills}}(F^{-})$
+
+=Hyperplane:= The Chern-Simons part of the theory corresponds to a particular hyperplane
+
+** Fractional Quantum Hall Effect
+
+** 3D Quantum Gravity
+
+* Flat Connections
+
+* Floer Homology
+
+* Functorial Field Theories
+
+** Topological quantum field theory 
+
+We take closed, oriented 2-manifolds, and assign them finite-dimensional Hilbert spaces, called the *spaces of conformal blocks* 
+
+Then the 3-manifolds (the cobordisms) give us a few things:
+- when we have the shape $\partial_{i} M = \emptyset$, $\partial_{f} M = \Sigma$, then our field theory is assigning a state vector of Hilbert space on $\Sigma$.
+- when $\partial_{i} M = \emptyset$, $\partial_{f} M = \emptyset$, we get a map $\mathbb{C} \rightarrow \mathbb{C}$, which just picks out a single complex number. The is the *partition function* or *topological invariant* of the theory.
+
+
+*** Chern-Simons
+
+Consider a theory with $M = \Sigma \times \mathbb{R}$. We write
+
+=Phase space:= Ends up being the moduli space of flat connections on $\Sigma$ modulo gauge transformations, which is finite-dimensional.
+
+=Geometric Quantization:= We want to quantize this classical phase space. We pick a [[id:21b669d8-5f1a-4f81-b2ad-e5593eb97239][complex structure]] on $\Sigma$, turning it into a *Riemann surface*. The moduli space becomes a *Kahler manifold*. The Hilbert space ends up being a 0-cohomology (sheaf cohomology) of moduli space.
+
+=Kodaira Vanishing Theorem:= Tells us that in this case the higher cohomology is zero.
+
+**** Wilson Loops
+
+In the case that $M$ has no boundary, we get that $Z(M)$ assigns a number; this is the path integral
+
+$Z(M) = \int e^{i S[A]} dA$
+
+$Z(M) = \int \frac{\mathcal{D}A}{\text{Vol}(\text{Gauge})} \exp\left( i \frac{k}{4\pi} \int_M \text{Tr}\left(A \wedge dA + \frac{2}{3}A^3\right) \right)$
+
+When $M = S^{3}$, we get the topological invariant of the sphere. 
+
+This is the vacuum expectation value. But we can also look at higher correlation functions. This is where the Wilson loops come in:
+
+Start with a knot $K: S^{1} \rightarrow M$ and a finite-dimensional representation of the gauge group, $\rho$. The corresponding *Wilson loop operator* is defined to be
+
+$W_{\rho} (K) = \text{Tr}_{\rho} [ \mathcal{P} \exp (\int_{K} A)]$.
+
+where $\mathcal{P}$ is the path-ordering operator. The matrix $U(K) = \mathcal{P} \exp (\int_{K} A)$ is called the *holonomy matrix.* 
+
+Now, $\langle W_{\rho}(K)\rangle$ is a topological invariant.
+
+Now instead of looking at this correlator, we can instead change our space $M$, so that it *contains a hole / defect* --- that topological defect is its boundary, and it's precisely the knot $K$ that we want to take the correlator of. We can think of it like a tunnel through the sphere $S^{3}$.
+
+**** Jones Polynomial
+
+In the case $G = SU(2)$ and $\rho$ is the fundamental representation, you get the Jones polynomial *skein relation* being satisfied by the Wilson loop correlator.
+
+** Donaldson-Witten
+
+We consider *anti-instantons* $\star F = - F$.
+
+We find that the moduli space of these anti-instantons is *non-compact* 
+
+=Uhlenbeck compactness:= Donaldson used this compactification to try to compute integrals on the moduli space.
+
+=Supersymmetry:= This is actually the *high energy limit* of $N=2$ supersymmetric Yang-Mills.
+
+** Seibrg-Witten
+
+We pick a spin structure on a 4-manifold with positive spinor bundle $S$ and determinant line bundle $L = \det(S)$. The fields are a $U(1)$ connection on $L$ and a positive spinor $\psi \in \Gamma(S)$.
+
+Turns out, the *moduli space is compact* 
+
+=Supersymmetry:= This is actually the *low energy limit* of $N=2$ supersymmetric Yang-Mills.
+
+*** Gromov-Witten
+
+When $M$ is a symplectic 4-manifold, the Seiberg-Witten invariants are equal to the Gromov-Witten invariants obtained from counting pseudo-holomorphic curves.
+
+* Ultraviolet Divergence
+
+Generally, in local quantum field theories, we have that the two-point correlator behaves like
+
+$\langle \phi(x) \phi(y) \rangle \sim \dfrac{1}{| x - y|^{d-2}}$
+
+This creates an *ultraviolet divergence* when we try to bring the points together. 
+
+Also, when you try to construct a Hilbert space, you find that it can't be finite-dimensional: 
+
+** Chern-Simons
+
+We don't have a metric in Chern-Simons thory, so we can actually avoid this UV problem. This allows us to get finite-dimensional Hilbert spaces and have *extreme locality* --- this is where the *Cobordism Hypothesis* comes in
+- because we can chop things up into arbitrarily small points, the full topological quantum field theory ends up being completely determined by what happens on a single point.
+
+
+** UV Finite
+
+In the case of theories that we can make UV finite, we can also get something like the cobordism hypothesis
+
+Witten used a topological twist:
+
+=Topological twist:= 
+
+What ends up happening is that the physical observables end up being /metric independent/ 

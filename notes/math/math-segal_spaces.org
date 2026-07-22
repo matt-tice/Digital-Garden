@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       d46419c6-25cf-427a-8460-2199a7dd34fa
+:END:
+#+title: segal spaces
+#+filetags: :math:cats:tqft:higher_cats:
+
+* References
+
+
+
+* Summary
+
