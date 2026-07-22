@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>topological quantum field theories</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">topological quantum field theories</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<h1 id="chern-simons-theory">Chern-Simons Theory</h1>
+<h2 id="intro">Intro</h2>
+<p>This is the canonical example of a topological quantum field theory
+from a mathematical physics perspective.</p>
+<p>It's based on Yang-Mills theory.</p>
+<p>In Yang-Mills theory, we start with a smooth orientable, compact
+manifold <span class="math inline"><em>M</em></span> without boundary
+and a metric <span class="math inline"><em>g</em></span>, which we use
+to construct the <strong>Hodge star operator</strong> <span
+class="math inline">⋆</span>. The action takes the form</p>
+<p><span class="math inline">$S_{\text{Yang-Mills}} = \dfrac{1}{2g^{2}}
+\int_{M} Tr(F \wedge \star F)$</span></p>
+<p>where <span class="math inline"><em>F</em></span> is the curvature
+2-form <span
+class="math inline"><em>F</em> = <em>d</em><em>A</em> + <em>A</em> ∧ <em>A</em></span>.
+In local coordinates this is <span
+class="math inline"><em>F</em><sub><em>μ</em><em>ν</em></sub> = ∂<sub><em>μ</em></sub><em>A</em><sub><em>ν</em></sub> − ∂<sub><em>ν</em></sub><em>A</em><sub><em>μ</em></sub> + [<em>A</em><sub><em>μ</em></sub>,<em>A</em><sub><em>ν</em></sub>]</span></p>
+<p>For Chern-Simons theory, we take a smooth, compact, oriented
+<strong>3-manifold</strong> <span class="math inline"><em>M</em></span>
+without boundary, equipped with a principal <span
+class="math inline"><em>G</em></span>-bundle <span
+class="math inline"><em>P</em></span>, for a compact Lie group <span
+class="math inline"><em>G</em></span>.</p>
+<p>We then take a <strong>connection 1-form</strong> <span
+class="math inline"><em>A</em> ∈ <em>Ω</em><sup>1</sup>(<em>M</em>,𝔤)</span>.
+The Chern-Simons action is then</p>
+<p><span class="math inline">$S_{\text{Chern-Simons}} = \dfrac{k}{4 \pi
+} \int_{M} Tr(A \wedge dA + \dfrac{2}{3} A \wedge A \wedge
+A)$</span></p>
+<p><code class="verbatim">Note:</code> <span
+class="math inline"><em>A</em></span> is a
+<strong>Lie-algebra-valued</strong> differential form, not a scalar
+valued one. This is why we don't have <span
+class="math inline"><em>A</em> ∧ <em>A</em> = 0</span>.</p>
+<p><code class="verbatim">Lie-algebra forms:</code> These have the
+general shape <span
+class="math inline"><em>A</em> = ∑<sub><em>i</em></sub><em>A</em><sub><em>i</em></sub><em>d</em><em>x</em><sup><em>i</em></sup></span>,
+where <span
+class="math inline"><em>A</em><sub><em>i</em></sub> ∈ 𝔤</span> are
+matrices.</p>
+<h3 id="example">Example</h3>
+<p>If <span
+class="math inline"><em>A</em> = <em>A</em><sub>1</sub><em>d</em><em>x</em><sup>1</sup> + <em>A</em><sub>2</sub><em>d</em><em>x</em><sup>2</sup></span>,
+then <span
+class="math inline"><em>A</em> ∧ <em>A</em> = <em>A</em><sub>1</sub><em>A</em><sub>2</sub><em>d</em><em>x</em><sup>1</sup> ∧ <em>d</em><em>x</em><sup>2</sup> + <em>A</em><sub>1</sub><em>A</em><sub>2</sub><em>d</em><em>x</em><sup>2</sup> ∧ <em>d</em><em>x</em><sup>1</sup> + 0 + 0 = [<em>A</em><sub>1</sub>,<em>A</em><sub>2</sub>]<em>d</em><em>x</em><sup>1</sup> ∧ <em>d</em><em>x</em><sup>2</sup></span></p>
+<h3 id="applying-the-trace">Applying the Trace</h3>
+<p><span class="math inline">$Tr(A \wedge B) = (-1)^{\abs{A} \abs{B}}
+Tr(B \wedge A)$</span>.</p>
+<p>In particular <span
+class="math inline"><em>T</em><em>r</em>(<em>A</em><sup>∧4</sup>) = (−1)<sup>1 × 3</sup><em>T</em><em>r</em>(<em>A</em><sup>∧4</sup>)</span>,
+and so it must be zero.</p>
+<h3 id="hodge-star">Hodge Star</h3>
+<p>In 4D, the Hodge star is an idempotent endomorphism on 2-forms, so we
+can decompose any 2-form as</p>
+<p><span
+class="math inline"><em>F</em> = <em>F</em><sup>+</sup> + <em>F</em><sup>−</sup></span>,
+where <span class="math inline">$F^{\pm} = \dfrac{1}{2}(F \pm \star
+F)$</span> are (anti)symmetric</p>
+<p><code class="verbatim">Note:</code> <span
+class="math inline"><em>F</em><sup>+</sup> ∧ <em>F</em><sup>−</sup> = 0</span>.
+Thus we can write</p>
+<h2 id="exact-case">Exact Case</h2>
+<p>In the case that <span class="math inline"><em>M</em></span> is
+itself a boundary of a 4-manifold <span
+class="math inline"><em>X</em></span>, we would have</p>
+<p>We also have</p>
+<p><span
+class="math inline"><em>T</em><em>r</em>(<em>A</em><sup>∧4</sup>) = 0</span>.
+So we have</p>
+<p><span class="math inline">$Tr(F \wedge F) = d Tr(A \wedge dA +
+\dfrac{2}{3} A \wedge A \wedge A)$</span></p>
+<p>This means that <span
+class="math inline"><em>T</em><em>r</em>(<em>F</em>∧<em>F</em>)</span>
+is <strong>exact</strong>, so integrating over it is equivalent to
+integrating over the boundary:</p>
+<p><span class="math inline">$\int_X Tr(F \wedge F) = \int_{\partial X =
+M} Tr(A \wedge dA + \dfrac{2}{3} A \wedge A \wedge A)$</span>,</p>
+<p>recovering the Chern-Simons action in the case that <span
+class="math inline"><em>F</em> =  ⋆ <em>F</em></span> (the field is
+<strong>self-dual</strong>)</p>
+<ul>
+<li>these self-dual fields are called <strong>instantons</strong></li>
+</ul>
+<p>Now let's write <span
+class="math inline"><em>F</em> = <em>F</em><sup>+</sup> + <em>F</em><sup>−</sup></span>.</p>
+<p>And so <span
+class="math inline"> ⋆ <em>F</em> = <em>F</em><sup>+</sup> − <em>F</em><sup>−</sup></span>.
+We get</p>
+<p><span
+class="math inline"><em>S</em><sub>Yang-Mills</sub>(<em>F</em>) ∼ ∫<em>T</em><em>r</em>(<em>F</em>∧⋆<em>F</em>) = ∫<em>T</em><em>r</em>(<em>F</em><sup>+ ∧ 2</sup>) − ∫<em>T</em><em>r</em>(<em>F</em><sup>− ∧ 2</sup>)</span></p>
+<p><span
+class="math inline"><em>S</em><sub>Yang-Mills</sub>(<em>F</em>) = <em>S</em><sub>Chern-Simons</sub>(<em>F</em><sup>+</sup>) − <em>S</em><sub>Yang-Mills</sub>(<em>F</em><sup>−</sup>)</span></p>
+<p><code class="verbatim">Hyperplane:</code> The Chern-Simons part of
+the theory corresponds to a particular hyperplane</p>
+<h2 id="fractional-quantum-hall-effect">Fractional Quantum Hall
+Effect</h2>
+<h2 id="d-quantum-gravity">3D Quantum Gravity</h2>
+<h1 id="flat-connections">Flat Connections</h1>
+<h1 id="floer-homology">Floer Homology</h1>
+<h1 id="functorial-field-theories">Functorial Field Theories</h1>
+<h2 id="topological-quantum-field-theory">Topological quantum field
+theory</h2>
+<p>We take closed, oriented 2-manifolds, and assign them
+finite-dimensional Hilbert spaces, called the <strong>spaces of
+conformal blocks</strong></p>
+<p>Then the 3-manifolds (the cobordisms) give us a few things:</p>
+<ul>
+<li>when we have the shape <span
+class="math inline">∂<sub><em>i</em></sub><em>M</em> = ∅</span>, <span
+class="math inline">∂<sub><em>f</em></sub><em>M</em> = <em>Σ</em></span>,
+then our field theory is assigning a state vector of Hilbert space on
+<span class="math inline"><em>Σ</em></span>.</li>
+<li>when <span
+class="math inline">∂<sub><em>i</em></sub><em>M</em> = ∅</span>, <span
+class="math inline">∂<sub><em>f</em></sub><em>M</em> = ∅</span>, we get
+a map <span class="math inline">ℂ → ℂ</span>, which just picks out a
+single complex number. The is the <strong>partition function</strong> or
+<strong>topological invariant</strong> of the theory.</li>
+</ul>
+<h3 id="chern-simons">Chern-Simons</h3>
+<p>Consider a theory with <span
+class="math inline"><em>M</em> = <em>Σ</em> × ℝ</span>. We write</p>
+<p><code class="verbatim">Phase space:</code> Ends up being the moduli
+space of flat connections on <span class="math inline"><em>Σ</em></span>
+modulo gauge transformations, which is finite-dimensional.</p>
+<p><code class="verbatim">Geometric Quantization:</code> We want to
+quantize this classical phase space. We pick a <a
+href="https:/Digital-Garden/math/math-complex_structure.html">complex
+structure</a> on <span class="math inline"><em>Σ</em></span>, turning it
+into a <strong>Riemann surface</strong>. The moduli space becomes a
+<strong>Kahler manifold</strong>. The Hilbert space ends up being a
+0-cohomology (sheaf cohomology) of moduli space.</p>
+<p><code class="verbatim">Kodaira Vanishing Theorem:</code> Tells us
+that in this case the higher cohomology is zero.</p>
+<ol>
+<li><p>Wilson Loops</p>
+<p>In the case that <span class="math inline"><em>M</em></span> has no
+boundary, we get that <span
+class="math inline"><em>Z</em>(<em>M</em>)</span> assigns a number; this
+is the path integral</p>
+<p><span
+class="math inline"><em>Z</em>(<em>M</em>) = ∫<em>e</em><sup><em>i</em><em>S</em>[<em>A</em>]</sup><em>d</em><em>A</em></span></p>
+<p><span class="math inline">$Z(M) = \int
+\frac{\mathcal{D}A}{\text{Vol}(\text{Gauge})} \exp\left( i
+\frac{k}{4\pi} \int_M \text{Tr}\left(A \wedge dA + \frac{2}{3}A^3\right)
+\right)$</span></p>
+<p>When <span
+class="math inline"><em>M</em> = <em>S</em><sup>3</sup></span>, we get
+the topological invariant of the sphere.</p>
+<p>This is the vacuum expectation value. But we can also look at higher
+correlation functions. This is where the Wilson loops come in:</p>
+<p>Start with a knot <span
+class="math inline"><em>K</em> : <em>S</em><sup>1</sup> → <em>M</em></span>
+and a finite-dimensional representation of the gauge group, <span
+class="math inline"><em>ρ</em></span>. The corresponding <strong>Wilson
+loop operator</strong> is defined to be</p>
+<p><span
+class="math inline"><em>W</em><sub><em>ρ</em></sub>(<em>K</em>) = Tr<sub><em>ρ</em></sub>[𝒫exp(∫<sub><em>K</em></sub><em>A</em>)]</span>.</p>
+<p>where <span class="math inline">𝒫</span> is the path-ordering
+operator. The matrix <span
+class="math inline"><em>U</em>(<em>K</em>) = 𝒫exp (∫<sub><em>K</em></sub><em>A</em>)</span>
+is called the <strong>holonomy matrix.</strong></p>
+<p>Now, <span
+class="math inline">⟨<em>W</em><sub><em>ρ</em></sub>(<em>K</em>)⟩</span>
+is a topological invariant.</p>
+<p>Now instead of looking at this correlator, we can instead change our
+space <span class="math inline"><em>M</em></span>, so that it
+<strong>contains a hole / defect</strong> — that topological defect is
+its boundary, and it's precisely the knot <span
+class="math inline"><em>K</em></span> that we want to take the
+correlator of. We can think of it like a tunnel through the sphere <span
+class="math inline"><em>S</em><sup>3</sup></span>.</p></li>
+<li><p>Jones Polynomial</p>
+<p>In the case <span
+class="math inline"><em>G</em> = <em>S</em><em>U</em>(2)</span> and
+<span class="math inline"><em>ρ</em></span> is the fundamental
+representation, you get the Jones polynomial <strong>skein
+relation</strong> being satisfied by the Wilson loop
+correlator.</p></li>
+</ol>
+<h2 id="donaldson-witten">Donaldson-Witten</h2>
+<p>We consider <strong>anti-instantons</strong> <span
+class="math inline"> ⋆ <em>F</em> =  − <em>F</em></span>.</p>
+<p>We find that the moduli space of these anti-instantons is
+<strong>non-compact</strong></p>
+<p><code class="verbatim">Uhlenbeck compactness:</code> Donaldson used
+this compactification to try to compute integrals on the moduli
+space.</p>
+<p><code class="verbatim">Supersymmetry:</code> This is actually the
+<strong>high energy limit</strong> of <span
+class="math inline"><em>N</em> = 2</span> supersymmetric Yang-Mills.</p>
+<h2 id="seibrg-witten">Seibrg-Witten</h2>
+<p>We pick a spin structure on a 4-manifold with positive spinor bundle
+<span class="math inline"><em>S</em></span> and determinant line bundle
+<span class="math inline"><em>L</em> = det (<em>S</em>)</span>. The
+fields are a <span class="math inline"><em>U</em>(1)</span> connection
+on <span class="math inline"><em>L</em></span> and a positive spinor
+<span
+class="math inline"><em>ψ</em> ∈ <em>Γ</em>(<em>S</em>)</span>.</p>
+<p>Turns out, the <strong>moduli space is compact</strong></p>
+<p><code class="verbatim">Supersymmetry:</code> This is actually the
+<strong>low energy limit</strong> of <span
+class="math inline"><em>N</em> = 2</span> supersymmetric Yang-Mills.</p>
+<h3 id="gromov-witten">Gromov-Witten</h3>
+<p>When <span class="math inline"><em>M</em></span> is a symplectic
+4-manifold, the Seiberg-Witten invariants are equal to the Gromov-Witten
+invariants obtained from counting pseudo-holomorphic curves.</p>
+<h1 id="ultraviolet-divergence">Ultraviolet Divergence</h1>
+<p>Generally, in local quantum field theories, we have that the
+two-point correlator behaves like</p>
+<p><span class="math inline">$\langle \phi(x) \phi(y) \rangle \sim
+\dfrac{1}{| x - y|^{d-2}}$</span></p>
+<p>This creates an <strong>ultraviolet divergence</strong> when we try
+to bring the points together.</p>
+<p>Also, when you try to construct a Hilbert space, you find that it
+can't be finite-dimensional:</p>
+<h2 id="chern-simons-1">Chern-Simons</h2>
+<p>We don't have a metric in Chern-Simons thory, so we can actually
+avoid this UV problem. This allows us to get finite-dimensional Hilbert
+spaces and have <strong>extreme locality</strong> — this is where the
+<strong>Cobordism Hypothesis</strong> comes in</p>
+<ul>
+<li>because we can chop things up into arbitrarily small points, the
+full topological quantum field theory ends up being completely
+determined by what happens on a single point.</li>
+</ul>
+<h2 id="uv-finite">UV Finite</h2>
+<p>In the case of theories that we can make UV finite, we can also get
+something like the cobordism hypothesis</p>
+<p>Witten used a topological twist:</p>
+<p><code class="verbatim">Topological twist:</code></p>
+<p>What ends up happening is that the physical observables end up being
+<em>metric independent</em></p>
+</body>
+</html>
