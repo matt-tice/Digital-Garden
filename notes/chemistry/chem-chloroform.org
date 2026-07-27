@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       4f865070-a544-4f75-83c5-b3ebc4e171bf
+:END:
+#+title: chloroform
+#+filetags: :chemistry:dangerous:
+
+* References
+
+* Summary
+
+Chloroform dissolves easily in fats
+
+* Imbibing
+
+DO NOT INJEST
+- even tiny amounts can be fatal to an adult
+
+
+* Inhaling
+
+Unlike in movies, it would actually take several minutes of continuous inhalation to induce anesthesia
+
+Also the dosage difference between being knocked out and being killed is tiny
+
+* Teflon
+
+Chloroform is used to produce chlorodifluoromethane, which is the main compound used in making Teflon! (for non-stick cookware)
+

@@ -1,0 +1,64 @@
+:PROPERTIES:
+:ID:       edfd70c6-b36d-429f-93bb-272fd763e7ee
+:END:
+#+title: chronotype
+#+filetags: :biology:brain:sleep:night_owl:early_bird:
+
+* References
+
+* Summary
+
+* Circadian Schedules
+
+** Early Bird
+
+Short natural clock cycle (under 24 hours)
+- so they naturally want to pull their schedule forward
+
+Steep, high amplitude curve
+- intense spike of morning cortisol
+- rapid dramaic drop in energy at night
+
+Core temperature minimum at 4am, then increases rapidly
+
+Melatonin produced 2 hours before they fall asleep
+
+** Night Owl
+
+Wider and flatter curves than early birds'
+
+Long natural clock cycle (over 24 hours; 24.3 - 24.5 hours)
+- their bodies want to drift later every day
+
+Low amplitude, flatter curve
+- cortisol rises slowly and peaks in the late afternoon
+- slowly fades at night
+
+Core temperature minimum around 6-7am and rises slowly
+- waking up early can leave them deeply groggy
+
+Melatonin produced at slower rate; takes longer for them to sleep after melatonin starts being produced (3-4 hours)
+
+* Sentinel Hypothesis
+
+=1966:= Frederick Synder proposed the idea that we have different chronotypes due to it facilitating at least one member of the tribe always being awake and alert to watch over the group
+
+=Hadza Study:= 
+
+** Grandparent Hypothesis
+
+* Free-Running Rhythm
+
+Left to their own devices, night owls would continue to drift and eventually become early birds
+
+** Entrainment
+
+The suprachiasmatic nucleus in your brain resets your internal clock, using external cues called *zeitgebers* 
+
+
+
+* Social Jetlag
+
+Because society is based around a 9-5 schedule, night owls typically suffer a kind of social jetlag, because they're forced to work against their body's natural circadian rhythm, leading to chronic sleep debt and circadian disruption.
+
+As a consequence, early birds tend to be a bit more productive in practice

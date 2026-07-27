@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       c4d2282b-954a-4f06-8d1c-ce79da68e585
+:END:
+#+title: dementia
+#+filetags: :biology:brain:pathology:
+
+* References
+
+* Summary
+
+* Alzheimer's
+
+Caused by a build-up of amyloid-beta and tau proteins. 
+
+Degrades the PFC and hippocampus
+- the degradation of the dorsal lateral PFC causes loss of the sense of time
+- this can cause patients to think they live in the past, think only minutes are passing when it's hours
+- impacts on the hippocampus cause problems with memory
+-
+- 
+
+
+* Vascular Demensia
+
+
+temporal confusion
+disorientation about day or year
+
+* Dementia with Lewy Bodies
+
+affects attention and alterness
+
+organizing tasks and telling time
+
+* Frontotemporal Dementia
+
+Impacts personality
