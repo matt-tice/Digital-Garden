@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       b1dfccfe-0bcd-4fb8-b67c-fd29a6dc4dea
+:END:
+#+title: pushkin
+#+filetags: :literature:author:russian:
+
+* References
+
+* Summary
+
+* Style
+
+Like Dante, Pushkin led the way to a reformulation of his language. Prior to Pushkin, Russian literature was written in a very heavy, traditional style. Pushkin took it and made it sound more colloquial.
+
+You'll find with Pushkin that a lot of his sentences and phrasings are very simple; he was intentionally avoiding the rambling style of his predecessors. He doesn't rely very much on adjectives.
+
+
+** Russian
+
+It's really difficult to appreciate Pushkin in English, because his language is so simple; it just feels flat, and almost amateurish. The Russian language has a number of features that make the text more intricate in its original language.
+
+Russian is highly inflected, so Pushkin has a lot more room to play with word order, creating this subtle rhythm
+
+Russian has a very rich noun-vocabulary; so instead of using adjectives, you can find the perfect noun to convey a moment; this is hard to translate into English, which relies more on adjectives
+
+Ex. Dostopamyatnuyu
+- dosto (worthy)
+- pamyat (memory)
+
+** French
+
