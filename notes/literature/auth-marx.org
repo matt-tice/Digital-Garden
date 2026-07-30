@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       4e9d2c54-c176-4979-ae2e-a67ca86f30b9
 :END:
-#+title: marx
+#+title: Marx
 #+filetags: Philosophy:Economics:
 
 Circa: 1818--1883
@@ -33,3 +33,4 @@ Kant
 - /die Analyse der Metamorphose der Ware/ 
 
 Very basic verbs (to be, to have, to want)
+
