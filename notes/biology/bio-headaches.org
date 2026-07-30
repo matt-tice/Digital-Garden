@@ -1,0 +1,65 @@
+:PROPERTIES:
+:ID:       25ae1120-eb50-47f6-9e9f-c8158362fc45
+:END:
+#+title: headaches
+#+filetags: :medical:brain:
+
+* References
+
+
+
+* Summary
+
+The brain consumes about 20% of our energy. When the brain has an energy deficit, it can trigger a headache
+
+* Pain
+
+The brain itself *cannot feel pain* 
+- pain receptors are called [[id:4fb546c3-2514-43f1-a6f2-ed3a961e1ea4][nociceptors]]
+
+The pain comes from blood vessels, muscles, nerves, and membranes wrapping the brain
+
+
+* Vision
+
+30%-50% of our brain is for processing vision
+
+* Trigeminal Nerve System
+
+The main sensory system for your face / head. The nerves wrap tightly around the meningeal blood vessels, making the blood vessels very sensitive triggers for pain
+- usually nerve fibers run parallel to blood vessels
+
+The TNS sends a signal to the brainstem, which goes to the thalamus
+
+* Inflammation
+
+** Calcitonin Gene-Related Peptide
+
+CGRP is an inflammatory [[id:765617bc-dc4c-47cc-ba47-2c61cef0edd1][neuropeptide]]
+- causes blood vessels in the meninges to dilate and swell
+- this in turn pushes on pain fibers
+
+As the heart pumps blood through the swollen vessels, you end up getting a *rhythmic pain* sensation (throbbing)
+
+* Central Sensitization
+
+People with chronic headaches get their neurons hyper-reactive, making even minor things like standard light become painful
+
+* Types
+
+** Primary
+
+*** Tension headaces
+
+*** Migraines
+
+** Secondary
+
+The headache is a side effect of another condition
+
+*** Sinus infections
+
+*** Dehydration
+
+Causes brain volume reduction
+- the dural membranes get stretched

@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       d2869441-fefc-409a-8ad4-e146d4dbd2c3
+:END:
+#+title: pain
+#+filetags: :medicine:
+
+* References
+
+
+
+* Summary
+
+
+* Types
+
+C fibers are unmyelinated
+- they create dull, aching, throbbing, or burning pain
+
+** Sharp / Stabbing (Somatic)
+
+A-delta fibers are myelinated, allowing incredibly fast signals
+
+They're highly *localized* pain
+
+** Cramping (Visceral)
+
+** Throbbing (Vascular)
+
+This is due to blood vessels swelling and pressing on nerves.
+
+This usually happens in cramped areas, like your skull. If it occurs in an open area like the abdomen, it's usually an emergency
+
+** Burning

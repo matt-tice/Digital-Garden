@@ -1,0 +1,82 @@
+:PROPERTIES:
+:ID:       af993d91-3152-4bda-a2ec-b870c2b57f6f
+:END:
+#+title: deficit
+#+filetags: :economics:government:
+
+* References
+
+
+
+* Summary
+
+A deficit is when a government *spends more money than it collects through tax* in a year.
+- in order to finance this, they *issue bonds* (the money has to come from somewhere)
+- countries, banks, and people buy the bonds, giving the government money to spend, and in return the government promises to pay back the loan with interest
+
+Alternatively, you could just print more money, but that would increase inflation rapidly
+
+* Bond Yields
+
+If a country's debt increases, and they need to issue more bonds to cover the interest, they become forced to sell the bonds with a *higher yield* 
+- in supply and demand you always assume /saturation/; in this case, that when the previous bonds were issued, people bought their full
+       - so when the new bonds come out, if they're the same yield or worse, no one's going to buy them
+       - so you have to offer a higher yield, which hasn't become saturated yet
+
+
+** Trickle-Down
+
+Consumer loans and interest rates increase
+- credit cards
+- mortgages
+- car loans
+- business loans
+
+Companies move money into the bonds, which means they have less for expansion and hiring
+- decreases employment
+- eventually drags down GDP and wages
+
+
+** Chicken
+
+Why don't governments play Chicken and fix the price, knowing that if they can't sell their bonds, they won't have the money to pay investors back?
+- governments have far more pressure on them to stay afloat than companies
+       - the government would run out of money *within days* if no one bought the bonds
+- investors are allowed to *sell bonds after they buy them*, so they can always get some money back if the government tries to play this game
+
+
+*** Game Theory
+
+There's some fascinating psychology and math going on here. I'm enthralled by the question of why the government can't just say "here's the price, take it or leave it"
+
+
+* Markets
+
+** Primary
+
+Where the government sells new bonds
+
+** Secondary
+
+Where investors trade bonds with each other
+
+There's *no holding limit or penalties* --- you can sell bonds as soon as you buy them
+
+* National Debt
+
+* Inflation
+
+If the government tries to print more money to pay off the deficit, they introduce money *without changing the amount of goods available* 
+- because the amount of goods available relative to the amount of cash people have has now decreased, the market increases the price of goods to catch up
+- the currency correspondingly loses value
+
+
+* Debt Spirals
+
+When a company like the US owes trillions due to bonds, the interest it has to pay yearly is gargantuan. If it's too big to cover with taxes, the government has to *sell new bonds* just to pay the interest on the old ones
+
+** Austerity
+
+When the government cuts funding in order to save money, to pay down the debt
+
+
