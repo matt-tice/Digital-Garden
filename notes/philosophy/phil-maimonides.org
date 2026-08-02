@@ -1,0 +1,81 @@
+:PROPERTIES:
+:ID:       12d03549-ed3b-4e1d-9659-6eb3b4131b2c
+:END:
+#+title: Maimonides
+#+filetags: :philosophy:Maimon:Rambam:jewish:
+
+* References
+
+
+
+* Summary
+
+Wrote a 14 volume compendium on Jewish law: the /Mishneh Torah/ 
+
+/Guide of the Perplexed/ seeks to resolve the conflict between religious and secular knowledge.
+
+* Influenced by
+
+Neo-platonized Aristotelianism
+
+* Guide of the Perplexed
+
+There are 613 original commandments in the Torah. Maimonides argues that all of them are designed to fulfill the /first two/: 
+        1. Belief in the existence of God
+        2. Rejection of idolatry
+
+To fulfill these, you need to believe in a timeless, changeless, immaterial deity, who is *one* in every respect and unlike anything in the created order.
+- rejecting any of these premises makes you an idolater, regardless of how many of the other commandments you fulfill
+- to worship God under a false description is not to worship God at all
+
+For Maimonides, Adam must have had the most perfect metaphysical knowledge of God, and therefore must have believed in the above properties. Adam's knowledge was lost during the time of Enosh and was rediscovered by Abraham
+- Maimonides argues that Abraham must have rediscovered these truths about God
+- then argues that these truths were passed down to Isaac and Jacob, but lost during slavery under Egypt, when the Israelites adopted pagan beliefs
+
+When Moses came along, had he just offered another philosophical deduction of these truths, they would eventually be forgotten again. So he instead offered a *blueprint for a social order* designed to help the people remember their history and the principles on which the people was founded
+
+** Greek philosophy
+
+Maimonides argues that *ma'aseh bereishit* in the Jewish tradition was what the Greeks eventually taught as physics, and *ma'aseh merkavah* was the Greeks' metaphysics. In this way, the Jewish tradition was *philosophical from the beginning* 
+
+Why isn't that made more clear in the Bible? For Maimonides, the philosophy was too complex for the average person to grasp, so it was instead presented through parables.
+
+** Contemporary thought
+
+Maimonides believed that in his time people had again lost the tradition that began in Israel; they now pray to a material God and interpret the Bible literally.
+
+So for Maimonides, progress in science and philosophy really meant going backwards, to the original knowledge of Moses and the patriarchs.
+
+** Metaphors
+
+Maimonides is explicitly against interpretting the Bible literal. For him, the end goal should be to see beyond the Bible.
+
+For example, "seeing God" in the Bible, for Maimonides meant to have a certain intellectual insight, like how you see a proof of a theorem. Similarly, God being "close" meant that he was close in the sense that you're close to finding a proof. God "speaking" to a prophet meant that the prophet understood what God wanted.
+
+** Bible as primary
+
+The Bible is a source of truth. Therefore, anything that's demonstrated which contradicts an interpretation of the Bible is really demonstrating that that particular interpretation is wrong.
+
+** God as One
+
+God has no complexity or multiplicity, is completely indivisible causally and conceptually, objectively, and subjectively
+
+In particular, God is *not all-knowing, all-powerful, and all good*, in the sense of having these 3 separate properties
+
+Part of the problem with a composite God is that you then have to ask where the composites came from; it seems like they would necessarily be prior to God
+
+So you actually can't say that God is the /most powerful/ thing in existence, because by definition that means you're subsuming God under a category of "things"
+- so God needs to be some "kind" of set of sets which isn't really a kind at all
+
+For Maimonides it is logically impossible to compare God with anything in the created order; to say God is more powerful than a human makes no sense, because to do so necessarily means viewing humans and God as the same kind, to make that comparison, which isn't the case.
+
+This brings up one of Maimonides' most clever ideas: we can *describe God through negation* 
+- to say that God is powerful really means /God is not lacking in power/
+- we mean this in the *constructivist* sense: that it is the case that God does not have the property of lacking in power; that doesn't necessarily mean that God does have the property of having power: excluded middle doesn't necessarily hold
+- and indeed it doesn't for Maimonides: because God can't be said to have possess power in the sense of humans (due to incomparability), saying that "God is powerful" means both "God does not lack power" and "God does not possess power in a way that makes it comparable to anything in the created order."
+
+
+*** Qualities of God
+
+It's impossible to know properties that God possesses. When we say "God is merciful" or angry that really is describing /God's impact on nature/: the effects of God's actions resemble the effects of our own under merciful or angry circumstances. The most we can do is compare physical things that God produces, rather than comparing God himself.
+- Maimonides calls these *attributes of action* 

@@ -2,7 +2,7 @@
 :ID:       d0102706-2dd3-4880-9906-c1041399436b
 :END:
 #+title: international law
-#+filetags: Law
+#+filetags: :Law:
 
 * References
 
@@ -30,3 +30,92 @@ Alternatively, some states try to argue that we have, as a third category,
 
 3. *Prevention*: taking anticipatory action against emerging threats
 
+   
+* International Criminal Court
+
+Neither Israel nor the US is a member of the ICC
+
+The ICC only prosecutes *individuals.* In order to prosecute someone, one of two conditions needs to hold:
+
+1. The accused is a citizen of an ICC member nation
+2. The crime took place on the territory of an ICC member nation
+
+* International Court of Justice
+
+The ICJ handles *state-versus-state* cases.
+
+Every UN state is party to the ICJ statute. But the ICJ only handles cases in which *both parties agree to go to court* 
+
+Because Israel signed the 1948 Genocide Convention, and Article IX has a clause that says any dispute regarding the treaty must go to the ICJ, they're legally bound to do so.
+
+The ICJ has *zero enforcement power* 
+- the entirety of enforcement is handled by the Security Council, under Article 94 of the UN Charter
+- this allows them to issue global sanctions, asset freezes, arms embargos, or a military intervention or peacekeeping deployment
+
+However, under UN Resolution 377 the General Assembly can use the *Uniting for Peace* mechanism
+- passing such a UP resolution creates a non-binding recommendation
+
+The most likely outcome of a guilty ruling by the ICJ in the case of a SC veto, is that the guilty nation will suffer severe economic collapse due to corporations and sovereign wealth funds legally and reputationally being required to divest
+- this is what happened to South Africa after apartheid
+
+The ICJ's ruling *cannot be appealed* 
+
+** Timeline
+
+Because there's no appeals process, it typically takes 3-7 years for a verdict
+
+*** Provisional Measures
+
+The Court first adopts provisional measures, to try to limit irreversible harm while the court begins its multi-year process. This is when they decide whether allegations of genocide are *plausible* 
+- if so, they issue an emergency order that legally compels all UN nations that signed the Genocide Convention to prevent genocide
+
+
+**** Plausability
+
+This is an incredibly important topic, because /legal plausibility in the context of the ICJ/ is *not plausibility in the colloquial sense*. It doesn't mean "likely". And in particular, the ICJ doesn't determine that a /crime/ is plausible.
+- for example, the ICJ *can't determine that it's plausible that Israel is committing a genocide*
+       - which makes sense: how could they possible determine that while in a stage before they're allowed to hear any arguments, or have even established jurisdiction?
+
+=Legal plausibility:= This means that the right being claimed by the applicant 
+    1. exists
+    2. is protected under international law
+
+In the case of Israel, South Africa demonstrated to the ICJ that Palestinians in Gaza have a *right to be protected from genocide* and South Africa has a *right to demand compliance with the Genocide Convention*.
+
+
+*** Jurisdiction (1-3 years)
+
+The Court first (before looking at any evidence) debates whether it has legal right to hear the case.
+
+The accused is allowed to file Preliminary Objections, arguing that the ICJ doesn't have jurisdiction, or that the filing country has no legal standing, or that proper diplomatic steps weren't followed
+
+**** Hybrid
+
+Israel took a hybrid approach, where they decided to combine the jurisdiction and merits phase into one. This speeds things up by years, and risks public sentiment not having enough time to cool down.
+- 
+
+*** Merits (2-4 years)
+
+If they establish jurisdiction, they can start the actual trial. 
+
+**** Memorials
+
+Several years are spent submitting and going through written evidence (called *memorials* ), totaling thousands of pages. Each country is given up to a year just to read and respond to the other side's documents
+
+Then other states are allowed to intervene and submit their own documents.
+
+**** Intervention
+
+Third-party nations are allowed to submit formal declarations supporting one side or the other.
+
+Under Artcle 63 of the ICJ Statute
+- inteventions are *not allowed to submit evidence*
+- they can only submit a brief abstract legal opinion stating *how they believe a specific word of line in the Genocide Convention should be interpreted in general* 
+
+**** Hearing
+
+At the very end, weeks of formal public hearings occur during which the judges question legal teams and examine the evidence
+
+*** Deliberation
+
+It then takes around 6 months to a year for the judges to deliberate and write the final judgment

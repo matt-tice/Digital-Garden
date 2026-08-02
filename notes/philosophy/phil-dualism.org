@@ -1,0 +1,59 @@
+:PROPERTIES:
+:ID:       ecf5e737-4b33-4189-9f21-b5cdb9f7295b
+:END:
+#+title: dualism
+#+filetags: :philosophy:mind:
+
+* References
+
+
+
+* Summary
+
+* Epiphenomenalism
+
+There is a /you/ distinct from your body, but it doesn't influence any of the physical things that happen; the body behaves like a physicalist would think, but you experience the different chemicals, electrical signals, etc. as subjective sensations
+
+* Substance Dualism
+
+The brain is physical and the mind is non-physical and they interact in both directions.
+
+Your brain's chemicals, etc. cause you to experience qualia, but also you can exert your will to force your body to do things.
+
+* Emergent dualism
+
+The mind isn't separate, but is a non-physical entity that /emerges/ from the physical brain
+
+* Panpsychism
+
+Consciousness is a fundamental property of the universe, like mass or charge. 
+
+** Constitutive panpsychism
+
+Consciousness is like mass in that it behaves differently, the more of it that you have. Just like how a neutron star or black hole has very different properties from an egg, a human being's amount of consciousness gives rise to different properties than a rock
+
+** Integrated Information Theory
+
+By Giulio Tononi
+
+Attempts to calculate the level of consciousness $\Phi$ that a system has.
+
+It's very similar to overall magnetism; fundamental particles have a degree of consciousness (like they have spin), but they typically cancel each other out, through their random directions. A magnetic field arises in a ferromagnetic material due to the structural alignment of the spins.
+
+** Combination Problem
+
+/How do tiny pieces of consciousness in particles aggregate to form a single *seamless* human mind/? 
+
+*** Subject-Addition Problem
+
+We can't quite treat consciousness like magnetism, because it doesn't seem to add up in the same way. When spins line up, they don't create a new metaphysical entity; it's just a bunch of tiny spins. Is consciousness like this? If so, why can't we put a bunch of people in a room and get a larger consciousness?
+
+The real problem is /what is the process through which consciousness forms from smaller pieces?/ 
+
+If we combined a bunch of individual's consciousnesses, would they still be conscious inside of the larger consciousness? Or at the human level, what happened to all the little bits of consciousness that our particles have?
+
+*** The Qualia Problem
+
+Posed by Philip Goff
+
+Qualia is non-physical. So where does it come from? If individual particles have it, then how do you get a macroscopic version? It doesn't seem like we can add feelings up

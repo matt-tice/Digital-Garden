@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       6ee6a255-7128-4ac9-8f08-2c06a04ab1ab
+:END:
+#+title: qualia
+#+filetags: :philosophy:mind:
+
+* References
+
+
+* Summary
+
+Qualia is all about subjectivity.
+
+Neuroscience can look at things like electrical signals in the brain, neurotransmitters being released, etc. But it doesn't tell us anything about how those physical things become the subjective sensations we have.
+
+For example, we know that dopamine gives us motivation, but we don't know why it makes us /feel/ motivated. We know about the correlation, but not the causation
+
+As far as we know, the brain is the only thing in the universe that has the ability to analyze itself in a reflective, subjective way
+
+We can feel like lying in bed all day, recognize that that feeling is somehow due to a lack of dopamine in the basal ganglia, and yet will ourselves to get up anyway. How we manage to do that, is completely unknown.
+- physicalists would argue that there's a competing neural network that concludes that it's worth getting up anyway and overrides the stay-in-bed feeling, by producing other things like norepinephrine
+- but this doesn't really explain whether the other neural network is causing the behaviour and feeling of will, or if we have a will that manifests itself as that other neural network's activity, or something else entirely

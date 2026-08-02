@@ -1,0 +1,73 @@
+:PROPERTIES:
+:ID:       c860b9b0-b315-41ea-93f2-9b977f6084a1
+:END:
+#+title: genetics
+#+filetags: :biology:
+
+* References
+
+
+
+* Summary
+
+* MTHFR
+
+*Methyl-tetra-hydro-folate* (active methylfolate) *reductase* 
+
+A [[id:e11f71f5-60e8-4a08-ad5a-90ea2fd05eb9][reductase]] *adds electrons* to a molecule. MTHFR adds electrons (reduces) methylene-folate to turn it into methyl-tetra-hydro-folate.
+
+The MTHFR enzyme takes folate (vitamin B9) and uses it to make neurotransmitters.
+- folate is made into methylfolate, which then can be used to make dopamine, norepinephrine, and serotonin
+
+On the other hand, unmethylated folate is used to build new cells and repair DNA
+- it's a kind of healing supply
+
+** C677T Mutation
+
+40-50% of European and Hispanic people have at least one copy of this variant.
+
+Fascinatingly, it helps protect against malaria. Malaria works by hijacking your folate cycle, in order to replicate itself 
+
+* CYP1a2: rs762551
+
+Controls the cytochrome P450 enzyme in the liver, which *breaks down caffeine* 
+- AA: fast metabolizer
+- AC or CC: low metabolizer
+
+
+* MTNR1A: rs2119882
+
+Encodes melatonin receptors
+- CC: early bird
+- CT or TT: morning grogginess
+
+
+* VDR: rs1544410
+
+Vitamin D receptor
+- GG: typical vitamin D receptor sensitivity
+- AG or AA: reduced receptor sensitivity; you need more vitamin D to get the same effects
+
+
+* PEMT: rs12325817
+
+Choline production
+- GG: normal
+- CG or CC: slow production
+
+
+* BDNF: rs6265
+
+[[Id:e3c3f1eb-4d17-4fe7-a37e-d05dda04b550][Brain-derived neurotrophic factor]] controls neuroplasticity
+
+- GG: standard BDNF production
+- AG or AA: reduction in BDNF production
+
+Having AA actually gives you better working memory and focus in calm, highly structured environments
+
+* COMT: rs4680
+
+** Val/Met
+
+
+* SERT: rs25531

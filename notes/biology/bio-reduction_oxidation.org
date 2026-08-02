@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       e11f71f5-60e8-4a08-ad5a-90ea2fd05eb9
+:END:
+#+title: reduction-oxidation
+#+filetags: :biology:redox:
+
+* References
+
+
+
+* Summary
+
+*Reduction adds* electrons.
+
+*Oxidation removes* electrons.
+
+* Reduction
+
+*Reduction adds* electrons. This makes the molecule *more stable*.
+
+* Oxidation
+
+*Oxidation removes* electrons. This makes the molecule *more reactive*.
+
+** Oxidative stress
+
+* Glutathione
+
+The main antioxidant in the body
+
+* Free radicals

@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       15232afd-c06b-4579-9301-5f5ee3bd4fc2
+:END:
+#+title: transmission theory of mind
+#+filetags: :philosophy:mind:james:
+
+* References
+
+
+
+* Summary
+
+William James argued that the brain doesn't manufacture consciousness, but rather, the brain is a receiver of your consciousness, which exists external to it. The neurotransmitters, your genetics, etc. are the unique physical structure that interprets the signal of your consciousness, but they aren't your consciousness itself
