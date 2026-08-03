@@ -8,6 +8,12 @@
 
 * Summary
 
+Your stomach churns food for 2-4 hours before it passes on. It tries to turn liquify the chewed up food (called a *bolus*) into a uniform paste called *chyme.* 
+
+It then goes to the [[id:503a8f58-b152-420b-a4b4-c2d202fe84b5][small intestine]]
+
+* Pepsin
+
 * Stomach Lining
 
 Stomach lining contains nerves called *mechanoreceptors*.

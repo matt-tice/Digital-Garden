@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       503a8f58-b152-420b-a4b4-c2d202fe84b5
+:END:
+#+title: small intestine
+#+filetags: :body:
+
+* References
+
+
+
+* Summary
+
+20ft long!
+
+Your [[id:233b9c68-bb71-46bb-af29-1e48b14efa79][pancreas]] and [[id:ec79bf0b-b5a7-411b-89de-23f52a32479f][gallbladder]] are attached to the small intestine and flood it with enzymes to break down proteins, fats, and carbs into tiny molecules that can *enter the bloodstream* 
+
+What remains is passed to the [[id:82a32b0b-6fb0-4be4-8f24-6af5854fc870][colon]]

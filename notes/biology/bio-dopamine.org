@@ -86,20 +86,27 @@ The striatum has a ton of DATs
 
 ** D_1 Receptors
 
-Coupled to G_s
+=G-protein:= Coupled to G_s
 
-Moderate D_1 activation *increases cAMP*, opening HCN channels on specific spines receiving non-task-related inputs
+=Role:= Stimulate cell activity. Moderate D_1 activation *increases cAMP*, opening HCN channels on specific spines receiving non-task-related inputs
 - this helps the brain ignore irrelevant background input
 
-K_d is relatively low compared to D_2
+=Affinity:= K_d is relatively low compared to D_2
 - approx 100 to 500 nM
 
-However, in the PFC, D1 receptors *outnumber D2 by 15:1*
+*** Prefrontal Cortex
+
+In the PFC, D1 receptors *outnumber D2 by 15:1*
 - at under 500 nM, dopamine will bind to the small number of D2 immediately, and the remaining dopamine will go to D1
+
+*** Striatum
 
 In the striatum, D1 and D2 are *equal in proportion* but found in *different cell types* 
 - D1: direct pathway spiny projection neurons
 - D2: indirect pathway neurons
+
+
+*** G-protein receptors
 
 G-protein-coupled receptors don't have a static affinity value
 - when coupled to their G-protein they are *high affinity*
@@ -113,7 +120,9 @@ D1 \rightarrow PKA \rightarrow cAMP
 
 ** D2
 
-Located in the striatum.
+=G-protein:= 
+
+=Role:= Decreases cAMP. When dopamine binds to D2 receptors on task neurons, it decreases cAMP, closing those particular HCN channels
 
 When these are stimulated, *GABAergic* output from the triatal indirect pathway is *reduced*
 - the thalamocortical gate is free
@@ -126,6 +135,18 @@ When D2 receptors get hit, the ion channels of your current task pathway get flu
 
 At around 1 \mu M of dopamine, IPSCs are *suddenly decreased*
 
+*** Striatum
+
+=rs1800497:= If you carry the T-allele (aka the A1 allele) your D2 density in the striatum is reduced by 35%. So even at baseline 
+
+=G-protein:= Heavily coupled to G_i and G_o proteins, lowering affinity
+
+The D2 receptors are bound to first here, and close the HCN channels to help you maintain focus
+
+
+*** Prefrontal Cortex
+
+There are very few D2 receptors here, so they're pretty much always activated.
 
 *** Phasic Spikes
 

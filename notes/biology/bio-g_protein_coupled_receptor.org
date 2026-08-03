@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       4400a253-f8e1-40d3-9eb4-95cd89752c63
 :END:
-#+title: g protein-coupled receptor
+#+title: g-protein coupled receptor
 #+filetags: :biology:gpcr:protein:
 
 * References
@@ -11,3 +11,57 @@
 Cell-surface proteins.
 
 They're tremendously important in medicine --- they're the target of about *40% of all drugs* 
+
+A family of different genes. Contains over *800 different human genes* 
+
+* Shape
+
+A g-protein coupled receptor is a *single protein chain* that weaves in and out of a cell's outer membrane, like a piece of thread. It weaves in and out *exactly 7 times* 
+
+The part of the GPCR that's outside of the cell catches a specific chemical
+
+The part on the inside of the cell latches onto a *G-protein* 
+
+* Process
+
+1. A molecule binds to the outside part of a GPCR
+2. The binding causes the GPCR to change its shape by twisting
+3. The twisting of the GPCR *breaks the G-protein* on the inside
+4. The pieces of the broken G-protein do things like travel to ion channels or activate enzymes
+
+
+* Types
+
+** Sensory receptors
+
+These make up most of your GPCR. In fact most of your GPCR are dedicated specifically to *smell* and *vision* 
+
+** Adrenergic and Monoamine Receptors
+
+Listen for stress hormones and neuotransmitters
+
+** Peptide receptors
+
+Look for large hormone molecules. They control things like hunger, growth, immune responses
+
+* G-proteins
+
+The subscript of a G-protein tells you what the protein does when it's broken by the GPCR
+
+** Types
+
+*** G_s
+
+=Stimulatory:= activates *adenylyl cyclase*, which floods the cell with cyclic adenosine monophospate (cAMP)
+
+*** G_i / G_o
+
+=Inhibitory:= shuts down adenylyl cyclase, draining the cell of cAMP
+
+*** G_q
+
+=Quake:= activates *phosolipase C*, which slices up membrane fats into IP_3 and DAG. IP_3 causes a massive release of *calcium* from the endoplasmic reticulum. DAG tries to grab floating *protein kinase C* 
+
+*** G_{12/13}
+
+=Builder:= controls the cell's physical shape (the actin cytoskeleton)

@@ -21,6 +21,20 @@ Serotonin is a kind of mollifier; it alters the *baseline voltage* of neurons, m
 
 Serotonin is converted into melatonin at night.
 
+* Creation
+
+** MTHFR
+
+Your body takes folate from food and uses the MTHFR enzyme to turn it into L-methylfolate, which can then be used to *make all sorts of neurotransmitters*, including serotonin
+
+Methylfolate becomes BH4 (tetrahydrobiopterin)
+
+** TPH2
+
+Tryptophan (an amino acid) is converted into 5-HTP by the TPH2 enzyme, using BH4
+
+
+
 * Raphe Nuclei
 
 Serotonin is produced depending on your behavioural state
@@ -55,13 +69,27 @@ K_i = 1 to 3 nM
 This is actually an *autoreceptor*, located on the raphe nuclei themselves!
 - this allows serotonin to perform a *negative feedback loop*, where its presence in low quantities prevents serotonin spikes.
 
+When the synaptic cleft is flooded with serotonin, the molecules that don't get taken up by the transporters, or bound to 5-HT_2A receptors might bind to the 5-HT_1A autoreceptors
+- these autoreceptors trigger a slowdown of release of new serotonin into the cleft!
+
 *** 5-HT_2A
+:PROPERTIES:
+:ID:       fb999753-7c40-4ce6-87bd-5d6e179f7647
+:END:
+
+Located in the cerebral cortex and the autonomic nervous system
+
+=Role:= amplifies environmental signals.
 
 In the prefrontal cortex, serotonin binds to 5-HT_2A receptors on the terminals where dopamine is released.
+
+
 
 *** 5-HT_1B
 
 Caudate nucleus
+
+=Role:= Brake for blood vessels and release of neurotransmitters
 
 *** 5-HT_1C
 
@@ -135,9 +163,11 @@ Used to modulate circadian rhythms in the suprachiasmatic nucleus
 
 * Serotonin Transporter (SERT)
 
+Sits on the wall of the *sending neuron* (the one releasing the serotonin into the synaptic cleft). When serotonin is released, it bounces around in the cleft; if it hits a receptor, it binds to it. If it hits a transporter, it gets reabsorbed
 
+The serotonin that gets attached to a receptor eventually falls off and starts bouncing around again in the cleft, eventually either getting reabsorbed or binding to a receptor.
 
-* SSRIs
+** SSRIs
 
 When you take an SSRI, it immediately targets the synaptic cleft. The presynaptic neuron is covered in a protein called SERT (serotonin transporter). 
 
@@ -148,33 +178,42 @@ Activating the serotonin receptors in the gut triggers nausea
 
 *Sertraline* is designed to inhibit the /dopamine transporter/ slightly.
 
-*** Micro-Rewards
+**** Micro-Rewards
 
 Though SSRIs end up inhibiting phasic dopamine spikes, if you focus on getting lots of tiny dopamine releases, instead of one big one, the SSRI won't necessarily be able to block that. 
 
 You can use this to maintain focus throughout the day.
 
-*** Cold Showers
+**** Cold Showers
 
 Actually stimulate 250% dopamine
 
-** 5-HT_1A Autoreceptors
+*** 5-HT_1A Autoreceptors
 
 When there's too much serotonin hanging around, these autoreceptors tell the neurons to *stop releasing more serotonin.* 
 
 Over time, if you maintain high serotonin, the 5-HT_1A receptors will be dissolved and the effects of the higher serotonin will finally take hold.
 
-** BDNF
+*** BDNF
 
 Serotonin stimulates [[id:e3c3f1eb-4d17-4fe7-a37e-d05dda04b550][brain-derived neurotrophic factor]], which in turn stimulates neurogenesis in the hippocampus.
 
 This in turn allows the DMN to change its focus to be less on negative rumination.
 
-** GABA
+*** GABA
 
-*** Heroin
+**** Heroin
 
 Heroin binds to the Mu-Opioid receptors, shutting down the GABA cells. This is what leads to terrible addiction --- you aren't able to suppress the phasic spikes at all, and you get a horriffying amount of dopamine.
 
 DeltaFosB accumulates to critical levels /within weeks/ 
 
+* Monoamine Oxidase A
+
+This enzyme [[id:e11f71f5-60e8-4a08-ad5a-90ea2fd05eb9][oxidizes]] 
+
+It turns serotonin that's hanging around in the cleft into 5-HIAA, which you expel in your urine.
+
+* Astrocytes
+
+If serotonin leaks out of the cleft, it's absorbed by astrocytes and broken down

@@ -10,6 +10,173 @@
 
 * Summary
 
+SNP ids are *assigned chronologically*
+- so numbers that are similar to each other were found around the same time, but they don't necessarily have anything to do with one another
+
+There are a huge variety of genes. You can break them down into a few families:
+        1. Enzymes
+        2. Receptors
+        3. Transcription factors
+        4. Ion channels
+        5. Structural proteins
+
+
+** Format
+
+| rsID | Chromosome | Genomic Position | Genotype |
+| 1234 |          3 |             2345 | CC       |
+
+** Homozygous (Duplicates)
+
+Most of your genome will have the same letter repeated: AA, CC, etc.
+This is because humans *share 99.9% of our DNA* 
+
+* ADRA2A
+
+Alpha-2a receptor to turn off norepinephrine
+
+** rs1800544
+
+*** CC
+
+Standard
+
+*** GG
+
+Increased density and sensitivity of alpha-2a receptors
+
+* ADRB1
+
+Beta-1 Adrenergic Receptor
+
+** rs1801253
+
+*** CC
+
+Hyper-reactive beta receptor. Your body reacts instantly to norepinephrine, causing your heart to race, palms to sweat, ec.
+
+*** GG
+
+Muted physical response from norepinephrine
+
+* BDNF: rs6265
+
+[[Id:e3c3f1eb-4d17-4fe7-a37e-d05dda04b550][Brain-derived neurotrophic factor]] controls neuroplasticity
+
+- GG: standard BDNF production
+- AG or AA: reduction in BDNF production
+
+Having AA actually gives you better working memory and focus in calm, highly structured environments
+
+
+* C-1019G
+
+** rs6295
+
+Marker for the 5-HT_1A autoreceptor
+
+*** CC
+Typical number of autoreceptors
+
+*** GG
+A ton of extra autoreceptors
+
+* CLOCK 
+
+** rs1801260
+
+* COMT
+** rs4680
+
+*** GG
+
+Clears adrenaline and dopamine fast
+
+*** AA
+
+Adrenaline and dopamine clears slowly
+
+* CYP1a2: rs762551
+
+Controls the cytochrome P450 enzyme in the liver, which *breaks down caffeine* 
+- AA: fast metabolizer
+- AC or CC: low metabolizer
+
+
+* DBH
+
+Dopamine beta-hydroxlase
+
+Controls conversion of dopamine into norepinephrine
+
+** rs1611115
+
+*** CT
+You convert dopamine into NE a bit slower than normal
+
+*** CC
+Typical
+
+*** TT
+
+* DRD2: rs1800497
+
+Influences the density of dopamine D2 receptors. Carrying a T allele is associated with *fewer D2* receptors.
+
+This impacts the striatum
+
+
+
+* GAD1
+
+** rs3749034
+
+
+
+* HTR1B
+
+The 5-HT_1B receptor
+
+* HTR2A
+
+Determines sensitivity of serotonin [[id:fb999753-7c40-4ce6-87bd-5d6e179f7647][5-HT_2A]] receptors in the [[id:074d6d1e-c985-4f6b-bfb1-913650132597][prefrontal cortex]] and autonomic nervous system
+
+** rs6311
+
+*** TT
+
+An increased density of serotonin receptors
+
+*** CC
+
+
+** rs6313
+
+
+
+* HTR2C
+
+The 5-HT_2C receptor, which controls serotonin's suppression of dopamine and norepinephrine production
+
+** rs1150226
+
+*** AG
+
+*** AA
+
+*** GG
+
+* MAOA
+
+** rs6323
+
+Breaks down serotonin and dopamine
+*** GG
+
+Clears serotonin, adrenaline, and norepinephrine quickly
+
+*** TT
+
 * MTHFR
 
 *Methyl-tetra-hydro-folate* (active methylfolate) *reductase* 
@@ -22,32 +189,55 @@ The MTHFR enzyme takes folate (vitamin B9) and uses it to make neurotransmitters
 On the other hand, unmethylated folate is used to build new cells and repair DNA
 - it's a kind of healing supply
 
-** C677T Mutation
+** rs1801133
+
+*** C677T Mutation
 
 40-50% of European and Hispanic people have at least one copy of this variant.
 
 Fascinatingly, it helps protect against malaria. Malaria works by hijacking your folate cycle, in order to replicate itself 
 
-* CYP1a2: rs762551
+**** CT / AG
 
-Controls the cytochrome P450 enzyme in the liver, which *breaks down caffeine* 
-- AA: fast metabolizer
-- AC or CC: low metabolizer
+Reduces enzyme efficiency by 25%
 
+**** TT / AA
 
-* MTNR1A: rs2119882
+Reduces enzyme efficiency by up to 70%
+
+** rs1801131
+
+* MTNR1A
+** rs2119882
 
 Encodes melatonin receptors
 - CC: early bird
 - CT or TT: morning grogginess
+* MTR
 
+Uses B12 and folate to clear homocysteine and make methionine.
+** rs1805087
+* MTRR A66G
 
-* VDR: rs1544410
+Recycles vitamin B12
 
-Vitamin D receptor
-- GG: typical vitamin D receptor sensitivity
-- AG or AA: reduced receptor sensitivity; you need more vitamin D to get the same effects
+** rs1801394
 
+*** GG
+
+Slower B12 recycling
+
+*** AA
+
+*** AG
+
+* PDE4D 
+
+** rs7414831
+
+How efficiently your brain expresses PDE4D, which is used to vacuum up cAMP in the prefrontal cortex (since there are few D2 receptors there to do it)
+
+** rs918592
 
 * PEMT: rs12325817
 
@@ -56,18 +246,71 @@ Choline production
 - CG or CC: slow production
 
 
-* BDNF: rs6265
-
-[[Id:e3c3f1eb-4d17-4fe7-a37e-d05dda04b550][Brain-derived neurotrophic factor]] controls neuroplasticity
-
-- GG: standard BDNF production
-- AG or AA: reduction in BDNF production
-
-Having AA actually gives you better working memory and focus in calm, highly structured environments
-
-* COMT: rs4680
-
-** Val/Met
-
+* PER3: rs5743618
 
 * SERT: rs25531
+
+
+* SLC19a1
+
+Solute Carrier Family 19 Member 1
+
+Controls how well cells absorb folate into your cells, from your bloodstream
+
+** rs1051266
+
+*** CC
+
+*** CT
+Reduced folate transport
+
+*** TT
+
+* SLC6A2
+
+Norepinephrine transporter
+
+** rs28386840
+
+*** TT
+
+Typical
+
+*** CC
+
+Fewer NET
+
+* SLC6a4
+
+Regulates the serotonin transporter
+
+** rs25531
+
+*** CC
+
+Typical amount of transporters
+
+*** GG
+
+Fewer transporters
+
+* TPH2
+
+TPH2 builds [[id:11b78458-ca8d-4fd6-b6a6-e74f310cc98b][serotonin]]
+
+** rs4570625
+
+*** TT
+Typical
+
+*** GG
+Slashes brain serotonin production rate
+
+* VDR
+** rs1544410
+
+Vitamin D receptor
+- GG: typical vitamin D receptor sensitivity
+- AG or AA: reduced receptor sensitivity; you need more vitamin D to get the same effects
+
+

@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       82a32b0b-6fb0-4be4-8f24-6af5854fc870
+:END:
+#+title: colon
+#+filetags: :biology:body:organ:large:intestine:
+
+* References
+
+
+
+* Summary
+
+The large intestine (aka the colon) *does not produce enzymes*. Its role is to *absorb water.* It also houses your *microbiome.* 
+
+* Fiber
+
+Your colon microbiome breaks down fiber through *fermentation*. This process produces hydrogen and methane gas. 
+
+** Too much fiber
+
+If you have too much fiber (for instance if you don't chew seeds and just swallow them whole) you get a ton of gas, causing the walls of the intestines to expand (*bloating*). This will trigger muscle spasms (*cramping*)
+
+
