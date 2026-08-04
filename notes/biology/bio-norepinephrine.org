@@ -28,6 +28,9 @@ Norepinephrine also binds to $\alpha$-2A receptors on cortical neurons.
 * Receptors
 
 ** Alpha-2A
+:PROPERTIES:
+:ID:       3c52971e-9be2-4477-9ef0-6c4077067292
+:END:
 
 G_i-coupled
 

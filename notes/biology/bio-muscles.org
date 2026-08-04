@@ -8,6 +8,12 @@
 
 * Summary
 
+* Sarcomeres
+
+Muscles are made up of sarcomeres, which contract
+
+The end of a sarcomere is a *z-disc* 
+
 * Soreness
 
 ** Delayed Onset Muscle Soreness

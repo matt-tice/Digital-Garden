@@ -14,6 +14,16 @@ It then goes to the [[id:503a8f58-b152-420b-a4b4-c2d202fe84b5][small intestine]]
 
 * Pepsin
 
+* Hormones
+
+When you eat food and the stomach stretches, it releases PYY, GLP-1, and CCK. The *vagus nerve* carries these to the brainstem
+
+The hypothalamus processes this information and then stops producing ghrelin, letting you feel full
+
+** FTO
+
+The FTO (AT) variation makes the hypothalamus more resistant to the signal from the vagus nerve, so it takes longer for it to notice that you should be feeling full
+
 * Stomach Lining
 
 Stomach lining contains nerves called *mechanoreceptors*.
@@ -22,5 +32,22 @@ Stomach lining contains nerves called *mechanoreceptors*.
 
 The hunger hormone. It works on a regular clock. If you eat every day at the same time, it will make you feel hungry around that time each day.
 
-If you don't eat, eventually the ghrelin will stop rising and drop back down after about an hour
+* Fasting
 
+If you don't eat, eventually the *ghrelin will stop rising* and drop back down after about an hour
+
+Hunger in general isn't necessarily due to lacking energy; it's just due to having ghrelin
+
+** [[Id:9b70da8f-ab3b-4ee8-85d7-7bca8fe1d957][Adenosine monophosphate-activated protein kinase]]
+
+When your cells start running out of glucose, AMPK turns on, which tells them to start burning fat for energy
+
+** Autophagy
+
+Extended fasting triggers autophagy, where your body recycles damaged proteins and old mitochondria 
+
+* Not eating enough
+
+If you consistently don't eat enough, your thyroid will slow down your baseline metabolism: the basal metabolic rate will lower, making you *feel chronically cold*, especially in your hands and feet
+
+When you don't eat enough, the steady drip of leptin ceases as fat cells shrink

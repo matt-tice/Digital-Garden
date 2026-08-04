@@ -96,11 +96,15 @@ Clears adrenaline and dopamine fast
 
 Adrenaline and dopamine clears slowly
 
-* CYP1a2: rs762551
+* CYP1a2: 
 
 Controls the cytochrome P450 enzyme in the liver, which *breaks down caffeine* 
-- AA: fast metabolizer
-- AC or CC: low metabolizer
+
+** rs762551
+*** AA
+Fast metabolizer
+*** AC or CC
+Slow metabolizer
 
 
 * DBH
@@ -126,6 +130,17 @@ Influences the density of dopamine D2 receptors. Carrying a T allele is associat
 This impacts the striatum
 
 
+* FTO
+
+Highly active in the hypothalamus, which controls *hunger* 
+
+** r9939609
+
+*** TT
+Typical
+
+*** AA
+Produce more FTO mRNA, delaying the fullness signal; creates higher cravings and causes the body to store energy more efficiently
 
 * GAD1
 
@@ -166,6 +181,20 @@ The 5-HT_2C receptor, which controls serotonin's suppression of dopamine and nor
 
 *** GG
 
+* LEPR
+
+** rs1137100
+
+*** AA
+
+Typical
+Highly sensitive leptin tracking
+
+
+*** GG
+
+Risk of youth-onset type 2 diabetes
+
 * MAOA
 
 ** rs6323
@@ -176,6 +205,20 @@ Breaks down serotonin and dopamine
 Clears serotonin, adrenaline, and norepinephrine quickly
 
 *** TT
+
+* MC4R
+Melanocortin 4 Receptor. Sits in the leptin pathway of the brain. Leptin tells the brain to stop eating, the MC4 receptor is the thing receiving the signal from leptin
+
+** rs17782313
+
+*** TT
+
+Typical
+
+*** CC
+
+Desensitizes the MC4R. Lowers the resting metabolic rate and increases drive to eat snacks
+
 
 * MTHFR
 
