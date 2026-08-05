@@ -48,20 +48,22 @@ Look for large hormone molecules. They control things like hunger, growth, immun
 
 The subscript of a G-protein tells you what the protein does when it's broken by the GPCR
 
-** Types
 
-*** G_s
 
-=Stimulatory:= activates *adenylyl cyclase*, which floods the cell with cyclic adenosine monophospate (cAMP)
+** G_s
 
-*** G_i / G_o
+=Stimulatory:= activates *adenylyl cyclase*, which converts ATP into *cyclic adenosine monophospate* (cAMP)
+
+High levels of cAMP activate *protein kinase A*, which in turn opens cyclic nucleotide-gated channels, allowing sodium to rush into the cell
+
+** G_i / G_o
 
 =Inhibitory:= shuts down adenylyl cyclase, draining the cell of cAMP
 
-*** G_q
+** G_q
 
 =Quake:= activates *phosolipase C*, which slices up membrane fats into IP_3 and DAG. IP_3 causes a massive release of *calcium* from the endoplasmic reticulum. DAG tries to grab floating *protein kinase C* 
 
-*** G_{12/13}
+** G_{12/13}
 
 =Builder:= controls the cell's physical shape (the actin cytoskeleton)

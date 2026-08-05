@@ -2,12 +2,11 @@
 :ID:       2f5d927b-fbd8-4eb2-9c6a-005f78a1c2aa
 :END:
 #+title: norepinephrine
-#+filetags: :biology:neurotransmiter:
+#+filetags: :biology:neurotransmiter:catecholamine:
 
 * References
 
 * Summary
-
 
 Also called *noradrenaline.* Made mainly inside the brain, by the neurons called the *locus coeruleus.* It has influence over your blood pressure.
 
@@ -25,6 +24,17 @@ Norepinephrine also binds to $\alpha$-2A receptors on cortical neurons.
 - this inhibits cyclic AMP, causing the HCN channels to close, preventing electrical leakage, and amplifying the neurons' signals.
 
 
+
+* Synthesis
+
+** Locus Coeruleus
+
+NE is synthesized from [[id:d35da251-a7a9-4987-82dd-9ca708edd67b][tyrosine]] in a multi-step process:
+        1. tyrosine becomes L-DOPA by *tyrosine hydroxlase*
+        2. L-DOPA is converted to dopamine by *DOPA decarboxylase*
+        3. Dopamine is converted to NE by *dopamine \beta-hydroxylase*
+        4. Norepinephrine is converted to [[id:c81efd7b-f8ce-48ca-9ad4-31557473a4ed][epinephrine]] by *phenylethanolamine N-methyltransferase* (PNMT)
+
 * Receptors
 
 ** Alpha-2A
@@ -32,31 +42,66 @@ Norepinephrine also binds to $\alpha$-2A receptors on cortical neurons.
 :ID:       3c52971e-9be2-4477-9ef0-6c4077067292
 :END:
 
-G_i-coupled
+=GPCR:=  G_i-coupled
+                - inhibits adenylyl cyclase, lowering cAMP
+                - lower cAMP inactivates protein kinase A
+                - this closes [[id:c64ac514-c4ab-4e11-9741-1760dd8878ae][hyperpolarization-activated cyclic nucleotide-gated channels]]
+                - this prevents the leakage of currents out of the dendrite
+                - hence it amplifies the signal of the relevant tasks
 
-The [[id:074d6d1e-c985-4f6b-bfb1-913650132597][Prefrontal Cortex]] dendrites have alpha-2A adrenergic receptors. When norepinephrine binds to them, adenylate cyclase is inhibited and intracellular cyclic AMP is decreased.
+=Location:= 
+                - The [[id:074d6d1e-c985-4f6b-bfb1-913650132597][Prefrontal Cortex]] dendrites have *postsynaptic* alpha-2A adrenergic receptors for *working memory, focus, and inhibition* 
+                - Sympathetic nerve ending have *presynaptic* receptors
+                - *Locus coeruleus* and *nucleus tractus solitarii* determine the blood pressure and heart rate
 
-This in turn closes hyperpolarization-activated cyclic nucleotide-gated channels (HCN channels)
-- this prevents the leakage of currents out of the dendrite
-- it amplifies the signal of the relevant tasks
-
-The equilibrium dissociation constant (K_d) of NE for alpha-2A is *tiny* 
-- 1 to 4 nM
+=K_d:= *tiny* 1 to 4 nM
 
 
-*** G_i Proteins
 
 ** Alpha-1
 
-G_q-coupled: they activate phospholiphase C
+=G-protein:= G_q. They activate phospholiphase C
+                - cause vasoconstriction
 
-K_d is about 100 to 300 nM
+=K_d:= 100 to 300 nM
 
-** Beta-1 and Beta-2
+** Beta-1
 
-G_s-coupled: 
+=G-protein:= G_s
+                - binding increases heart rate and force of contraction
 
-K_d is about 500 nM to 1 \mu M
+=Location:= Heart
+
+=K_d:= 500 nM to 1 \mu M
+
+** Beta-2
+
+=G-protein:= G_s
+                - binding causes *bronchodilation* and *vasodilation*
+                - epinephrine activates \beta-2 more easily than norepinephrine
+                       - this is why epinephrine is used to treat *apaphylactic shock* 
+
+=Location:= Bronchioles (lungs) and blood vessels supplying skeletal muscle
+
+=K_d:= 500 nM to 1 \mu M
+
+* ATP
+
+Norepinephrine tells cells to use ATP
+- beta1 and beta2 receptors are G_s coupled
+
+
+* Pathologies
+
+** Panic Attack / PTSD
+
+Imagine you have a lot of NE but not much dopamine or seratonin. Your locus coeruleus and amygdala are being highly stimulated
+
+Your brain is in fight-or-flight, but you can't do anything about it. This is called *catatonic panic* 
+
+Imagine your adrenaline is also low; then you only feel the panic in your brain, but not in your body
+
+
 
 * Transporters (NET)
 
@@ -97,3 +142,9 @@ At that point, the attractor state still needs to be rebuilt
 - once that's done, the magnesium blocking the GluN2B-containing NMDA receptors is removed
 - this can take *5 to 20 min* 
 - you can speed this up by keeping an explicit line saying what you're doing, so your brain doesn't need to remember
+
+
+* Task-switching
+
+When you switch tasks, your tonic NE rises
+Causes a flood of norepinephrine

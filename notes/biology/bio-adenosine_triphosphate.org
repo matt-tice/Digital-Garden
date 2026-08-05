@@ -20,12 +20,16 @@ ATP is converted to ADP by *ATPases*
 
 * Adenosine Monophosphate
 
-** Cyclic Adenosine Monophosphate
+* Cyclic Adenosine Monophosphate
 
-Made from ATP by *adenylyl cyclase*
+Made from ATP by *adenylyl cyclase*, which strips off two phosphates and curls the AMP into a ring, releasing *pyrophosphate* 
 
 It activates protein kinase A
 
 It's broken down into AMP by phosphodiesterase (PDE) enzymes
 
-In order to close the [[id:c64ac514-c4ab-4e11-9741-1760dd8878ae][hyperpolarization-activated cyclic nucleotide-gated channels]], c AMP has to be broken down by PDE4, which is attached to the HCN channel, which turns it into 5'-AMP
+In order to close the [[id:c64ac514-c4ab-4e11-9741-1760dd8878ae][hyperpolarization-activated cyclic nucleotide-gated channels]], cAMP has to be broken down by PDE4, which is attached to the HCN channel, which turns it into 5'-AMP
+
+* Mitochondria
+
+They glue phosphates back onto ADP and AMP

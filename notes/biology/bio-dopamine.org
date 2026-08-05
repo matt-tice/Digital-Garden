@@ -99,6 +99,8 @@ The striatum has a ton of DATs
 In the PFC, D1 receptors *outnumber D2 by 15:1*
 - at under 500 nM, dopamine will bind to the small number of D2 immediately, and the remaining dopamine will go to D1
 
+=Roles:= *arousal filters* 
+
 *** Striatum
 
 In the striatum, D1 and D2 are *equal in proportion* but found in *different cell types* 
@@ -137,12 +139,13 @@ At around 1 \mu M of dopamine, IPSCs are *suddenly decreased*
 
 *** Striatum
 
-=rs1800497:= If you carry the T-allele (aka the A1 allele) your D2 density in the striatum is reduced by 35%. So even at baseline 
+=rs1800497:= If you carry the T-allele (aka the A1 allele) your D2 density in the striatum is reduced by 35%. 
 
 =G-protein:= Heavily coupled to G_i and G_o proteins, lowering affinity
 
 The D2 receptors are bound to first here, and close the HCN channels to help you maintain focus
 
+=Roles:= The striatum is related to the *reward and motor pathways* 
 
 *** Prefrontal Cortex
 
@@ -182,7 +185,7 @@ Videos that succeed on the algorithm are those which deliver stimulation within 
 
 Apps will often *delay notifications* and send you them at random times, to decrease predictability
 
-*** Anger and Outrage
+**** Anger and Outrage
 
 Anger can actually create *some of the largest phasic spikes*. The evolutionary explanation is that we get *angry at threats*, and we need phasic spikes to divert our attention towards those threats.
 
@@ -191,6 +194,21 @@ This is why outrage content is so effective as propaganda and click-bait
 It's particularly problematic when it comes to SSRIs
 - because your phasic spikes are surpressed by serotonin, negaive feelings like anger are some of the only things that have high enough spikes to break through.
 
+
+*** Randomness
+
+Maximum entropy (true randomness) delivers the largest amount of dopamine
+
+
+
+* ATP
+
+* Pathologies
+
+** Mania / Hyper-fixation
+
+If you have a lot of dopamine, but little NE or serotonin, you can be highly fixated on a task, but you won't feel any anxiety or interest in moving around
+- you might just sit and stare at something like a screen for 8 hours, forgetting to eat, sleep, or go to the bathroom
 
 * Willpower
 

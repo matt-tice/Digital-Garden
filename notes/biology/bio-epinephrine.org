@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       c81efd7b-f8ce-48ca-9ad4-31557473a4ed
+:END:
+#+title: epinephrine
+#+filetags: :biology:catecholamine:adrenaline:
+
+* References
+
+
+
+* Summary
+
+
+* Pathologies
+
+
+** Peripheral sympathetic dominance
+Imagine you have high adrenaline but low NE. Adrenaline can't cross the blood-brain barrier, so it will only influence your body; your body will be in *fight-or-flight*, but your mind will be calm --- your heart will be pounding, your breathing shallow, but your mind will not feel it, and may even feel *unfocused*

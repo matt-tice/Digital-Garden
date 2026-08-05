@@ -97,10 +97,13 @@ A group of neurons on the floor of the tegmentum. This is where a lot of your do
 ** Metencephalon
 *** Pons
 **** Locus Coeruleus
+:PROPERTIES:
+:ID:       a619e39f-11a2-48eb-bc9e-1ee54b6fe11d
+:END:
 
-Very small (only 10k - 15k neurons)
+*Very small* (only 10k - 15k neurons), but very important
+        - The brain's main source of [[id:2f5d927b-fbd8-4eb2-9c6a-005f78a1c2aa][norepinephrine]]
 
-The brain's main source of [[id:2f5d927b-fbd8-4eb2-9c6a-005f78a1c2aa][norepinephrine]]
 
 Glutamate causes phasic spikes
 

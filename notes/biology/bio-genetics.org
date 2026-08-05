@@ -158,16 +158,21 @@ Determines sensitivity of serotonin [[id:fb999753-7c40-4ce6-87bd-5d6e179f7647][5
 
 ** rs6311
 
+You have to be careful about whether you're reading in the forward strand direction or backwards. Below I'm using the *forward strand* 
+
 *** TT
 
 An increased density of serotonin receptors
 
 *** CC
 
+Fewer 5-HT_2A receptors
 
 ** rs6313
 
+*** TT
 
+*** CC
 
 * HTR2C
 

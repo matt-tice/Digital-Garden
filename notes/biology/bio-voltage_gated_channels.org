@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       dd542a18-ff0e-433f-8a79-d438f6e18548
+:END:
+#+title: voltage-gated channels
+#+filetags: :biology:brain:protein:ion_channel:
+
+* References
+
+* Summary
+
+
+At rest, a neuron has a negative charge (approximately $-70 mV$). Voltage-gated channels are shut at this voltage. When a neighbouring neuron sends it signal, the voltage is made a bit more positive.
+
+If the voltage of a neuron reaches a certain threshold (usually $-55mV$), the voltage-gated channel opens.
+
+* Sodium channels
+
+Voltage-gated sodium channels open *very fast* once the threshold is reached. Sodium rushes into the cell, and the voltage spikes to $+30mV$
+
+** Anesthetic
+
+Lidocaine blocks voltage-gated sodium channels, preventing you from getting pain signals
+
+* Potassium channels
+
+Voltage-gated potassium channels open *with a slight delay*. Potassium rushes out of the cell, dropping the neuron to its resting negative state.
+

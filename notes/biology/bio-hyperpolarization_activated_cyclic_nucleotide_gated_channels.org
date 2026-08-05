@@ -2,7 +2,7 @@
 :ID:       c64ac514-c4ab-4e11-9741-1760dd8878ae
 :END:
 #+title: hyperpolarization-activated cyclic nucleotide-gated channels
-#+filetags: :biology:brain:hcn:
+#+filetags: :biology:brain:hcn:voltage_gated:channel:
 
 * References
 
@@ -11,7 +11,24 @@
 Located along dendritic spines. Opening the HCN channels causes a *drop in membrane input resistance*.
 - input currents leak out of the dendrite before reaching the soma
 
-Elevation of cAMP causes the channels to open
+
+
+* Voltage-gated channel
+
+Most channels in the brain open when the cell gets more positive (depolarized). HCN channels open when the cell gets *more negative* --- this is called *hyperpolarization* 
+
+HCN channels are *cation* channels for both *sodium and potassium*. The current made up of these ions is the *I_h current* 
+        - sodium tries to enter the cell
+        - potassium tries to leave the cell
+        - all in all, more sodium comes in than potassium goes out
+        - so the cell *gains charge* when the channel is open
+        - this helps *reset the cell*, since it started off hyperpolarized (very negative)
+
+* Open
+
+*Elevation of cAMP* causes the channels to open. When this happens, a *leak current flows* across the dendritic membrane
+
+* Closed
 
 To regain focus, you need to close the HCN channels, requiring suppresion of alpha1/beta1 signaling from [[id:2f5d927b-fbd8-4eb2-9c6a-005f78a1c2aa][norepinephrine]], and phosphodiesterases to degrade the cAMP, and then rebuild the original attractor state through the NMDA loops
 

@@ -1,0 +1,68 @@
+:PROPERTIES:
+:ID:       921e5518-af6b-4e53-b0bb-d2d757ab88f3
+:END:
+#+title: ion channels
+#+filetags: :biology:brain:
+
+* References
+
+
+
+* Summary
+
+* Types
+
+Ion channels are classified by what causes them to open
+
+** [[id:dd542a18-ff0e-433f-8a79-d438f6e18548][voltage-gated channels]]
+
+** Ligand-gated channels
+
+** Mechanosensitive channels
+
+** Leak channels
+
+Permanently open
+
+
+* Calcium
+
+Stored in the *endoplasmic reticulum* and also found outside of the cell
+
+** G_s Receptors
+
+G_s increases cAMP 
+
+opens calcium channels
+
+** G_q Receptors
+
+G_q activates phospholipase C (PLC), which creates IP_3, which then opens up the endoplasmic reticulum's calcium store, *releasing it* 
+
+** G_i receptors
+
+The *voltage-gated calcium channels* get plugged, *preventing calcium entry* 
+
+* Sodium
+
+Located *outside* of the cell. In order to raise the voltage and make it easier for the neuron to fire, sodium is taken into the cell.
+
+The unique ion that generates the *action potential* 
+
+** G_s receptors
+
+Opens sodium channels
+
+* Potassium
+
+Located *inside* of the cell. In order to lower the voltage and make it harder for the neuron to fire, potassium gets released out of the cell.
+
+Used to return the neuron to its original potential state (by being released)
+
+** G_i Receptors
+
+G_i releases the \beta\gamma subunit, which attaches to and opens the *GIRK channels* (G-protein-activated inwardly rectifying potassium), which allows potassium *out of the cell* 
+
+* Chlorine
+
+Located outside of the cell. When it gets let into the cell, it makes it harder for the neuron to fire
