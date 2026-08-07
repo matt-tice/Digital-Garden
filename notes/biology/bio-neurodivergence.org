@@ -1,0 +1,49 @@
+:PROPERTIES:
+:ID:       0a68834c-451c-40ea-8bf9-412fe5f3bc3d
+:END:
+#+title: neurodivergence
+#+filetags: :biology:psychology:
+
+* References
+
+
+
+* Summary
+
+In the past, neurodivergent traits were seen as isolated features (ie you were autistic /or/ you had ADHD). Nowadays, researchers understand that if you're neurodivergent, you likely have a *bundle* of neurodivergent traits
+        - this is sometimes called *multi-neurodivergent* or *complex neurovariant*
+
+
+* ADHD
+
+Characterized by *low tonic dopamine* 
+
+** Rejection Sensitivite Dysphoria
+
+** Reward Deficiency Syndrome
+
+Characterized by *few D2 receptors* or low tonic dopamine
+
+* Autism
+
+Characterized by a *lack of synaptic pruning during childhood*. This can cause things like *synesthesia* 
+
+People with autism or ADHD often have internal voices / internal committees that they engage in long, complex dialogue with
+
+* Dissociative Identity Disorder
+
+Frequent time loss
+
+Internal arguing
+
+Depersonalization
+
+* Schizophrenia
+
+Alters how your brain processes external data, making it difficult to tell if something is real or not
+
+External voices (from the walls, a passing car, etc.) They speak with you, rather than arguing with each other
+
+flat affect, social withdrawl, lack of motivation
+
+
