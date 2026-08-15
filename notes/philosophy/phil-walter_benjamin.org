@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       09f3f7e8-375a-4fc3-a714-7cf9d6c2ab83
+:END:
+#+title: walter benjamin
+#+filetags: :philosophy:art:
+
+* References
+
+
+
+* Summary
+
+
+* The Work of Art in the Age of Mechanical Reproduction
+
+
+=Aura:= The /here-and-now-ness/ of a work of art. It keeps the artwork *distant, sacred, and untouchable* 
+
+=Mass reproduction:= Destroys the aura. Photography, printing presses, film, allow artwork to be copied; you can take a photo of the Mona Lisa and look at it in your living room. The mystique - the aura - is killed, and art is given to the people.
+
+Traditional art positions itself as a higher figure, and trains viewers to subjugate themselves to authority. Mass-produced art is a *tool for communicating working-class reality* 
+
+=Distraction:= Unlike Adorno, who thought that consuming art passively was a serious problem, and reinforced passivity, Benjamin believed that it allowed people to break free from authoritarian control and view the work as a *distracted critic* 
