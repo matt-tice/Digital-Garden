@@ -13,15 +13,13 @@
 A collection of philosophers and social scientists associated with the *Institut für Sozialforschung* (Institute for Social Research)
 
 
-* Members
-
-** Max Horkheimer
+* Max Horkheimer
 
 Developed the field of *critical theory*, which he called *materialism*. It's highly based off of /Marxism/
         - social philosophy, for Horkheimer needs to focus on *alleviating suffering*
 
 
-*** Hegel
+** Hegel
 
 Horkheimer doesn't like Hegel. Horkheimer claims Hegel /transfigued oppression/, by subjugating suffering to reason: individual human experience is only understood within the rational progression of the /eternal life of Spirit/ 
         - this separates thinkers from the reality of human suffering
@@ -34,7 +32,7 @@ The goal of materialist research is to solve both of these problems. It should e
 
 He and Adorno (his teacher) wrote *Dialectic of Enlightenment* 
 
-*** Eclipse of Reason (1947)
+** Eclipse of Reason (1947)
 
 This work is about *how reason collapses into irrationality* through *instrumental concerns*
 
@@ -46,7 +44,7 @@ This work is about *how reason collapses into irrationality* through *instrument
 
 =Objective reason:= The metaphysical systems of Plato, Hegel, etc. It seeks to *center truth and meaning*. These are the /proper ends of thought./ 
 
-*** Dialectic of Enlightenment
+** Dialectic of Enlightenment
 
 =Enlightenment:= It functioned as the *advancement of instrumental reason*; and through this process, it grew to be *in conflict with itself* 
 
@@ -56,11 +54,11 @@ This work is about *how reason collapses into irrationality* through *instrument
 
 =Culture:= Instrumental rationality has taken culture and made it a part of an industrial model, leading to *homogenization*. This only way to survive is to become incorporated into it
 
-*** Background
+** Background
 
 Born into a conservative Jewish family in 1895, the only son
 
-** Theodor Adorno
+* Theodor Adorno
 
 Studied with Eduard Steuermann and Alban Berg
 
@@ -68,13 +66,13 @@ Studied with Eduard Steuermann and Alban Berg
 
 =Linguistic philosophy:= 
 
-*** Karl Marx
+** Karl Marx
 
 Adorno reads Marx as a *Hegelian materialist* whose critique of capitalism *includes a critique of the ideologies that capitalism requires* 
 
 =Culture:= Orthodox Marxism views culture as part of the *superstructure*, therefore determined by (and reflects) the economic base
 
-**** Culture industry
+*** Culture industry
 
 This is Adorno's idea based off of Marx. It looks at how *entertainment functions in mass society* 
 
@@ -82,7 +80,7 @@ Entertainment exists in a /cycle of manupulation and retroactive need/
 
 =Commodities:= Mass cultural products function as commodities, and thereby *reinforce empirical social reality*; they /[idolize] the existing order/ 
 
-*** Theses on the Language of the Philosopher
+** Theses on the Language of the Philosopher
 
 Adorno rejects positivist (what he called "idealist") theories that attempt to *distinguish linguistic form from its content* and treat things as /functions of thought/. 
         - these theories take /reason/ as the primary architect of art
@@ -90,11 +88,11 @@ Adorno rejects positivist (what he called "idealist") theories that attempt to *
         - what can be known in these theories is precisely what can be communicated through language
 
 
-**** Heidegger
+*** Heidegger
 
 Adorno also rejects Heidegger's approach for straying too far into abstraction, and not looking at how concepts get concretized in history and words.
 
-**** Adorno's approach
+*** Adorno's approach
 
 /Through language history wins a share of truth/ 
 /History and truth meet in the word/ 
@@ -108,13 +106,13 @@ Adorno also rejects Heidegger's approach for straying too far into abstraction, 
         2. =Expression:= (Ausdruck) Non-conceptual, evocative, gestural
 
 
-*** Negative dialectics
+** Negative dialectics
 
-*** The Actuality of Philosophy
+** The Actuality of Philosophy
 
 Highly based on Walter Benjamin.
 
-*** Dialectic of Enlightenment (1939 - 1944)
+** Dialectic of Enlightenment (1939 - 1944)
 
 Written by Adorno and Horkheimer while in exile in California. It's a critique of reason, society, and the self in Western modernity. Adorno considered this his *main work* 
 
@@ -133,7 +131,7 @@ Written by Adorno and Horkheimer while in exile in California. It's a critique o
 
         But when humans, in pursuit of science, cut themselves off from nature, the purpose for which they live falls away, and the *means becomes the end* 
 
-**** Technology
+*** Technology
 
 Technology moves to isolate an individual from their consciousness.
         - the telephone allowed the user to be the subject, to play a role as a participant
@@ -141,7 +139,7 @@ Technology moves to isolate an individual from their consciousness.
 
 Amateur filmakers, broadcasters, etc. are admonished as /amateur/, and their work is controlled by talent scouts, studio competitions, etc. that are curated by the establishment
 
-**** The Odyssey
+*** The Odyssey
 
 The Grundtext (fundamental text) of European civilization
 
@@ -149,7 +147,7 @@ Odysseus is the *prototype of the bourgeois individual*. He represents the faile
         - he only gets past the sirens by making himself /thing-like/, without hearing, being tied to a mast
 
 
-**** Suspension of the Dialectic
+*** Suspension of the Dialectic
 
 Adorno and Horkheimer view the dialectic between myth and enlightment to be at a point of *aporia*; it recognizes its own controdiction
 
@@ -160,23 +158,23 @@ You rethink the assumptions. For Adorno, this means rethinking the material, soc
 
 To overcome the dialectic, enlightenment has to *reflect on itself* 
 
-**** Habermas
+*** Habermas
 
 Created an influential line of criticism against Adorno and Horkheimer's work: why should we conflate instrumental rationality and rationality tout court? why should we conflate rationality with power?
 
 =Normative deficit:= Adorno and Horkheimer's work tries to attack a totalitarian nature in Enlightment by using none other than the tools of the Enlightenment itself! It is /a critique that attacks the presuppositions of its own validity/. It is therefore imposible for them to practice true determinate negation; they are merely negating on an *ad hoc basis* 
 
-*** Music
+** Music
 
 =Culture industry:= Popular music existed as part of the culture industry; this music was mass-produced, formulaic, standardized and designed to make money. It offers an *illusion of choice* while *enforcing social conformity* 
 
-**** Jazz
+*** Jazz
 
 Adorno *hated jazz*. For him, jazz was the canonical masquerade; it presented itself as a way of escaping from rigidity, but inevitably was bound by the underlying rhythm.
 
 With that basis, it's hard to imagine Adorno liked /any/ music. But he did --- he liked *Schoenberg's atonality*, which he viewed as intentionally denying the temptation of commercialization
 
-**** Bach and Mozart
+*** Bach and Mozart
 
 Suprisingly, Adorno also liked people like Bach and Mozart. This seems tremendously odd, considering that Bach's entire ouvre was designed as a way to pay the bills while *reinforcing the cultural standards of the Lutheran church*, and therefore seems to pretty conclusively be part of the culture industry.
 
@@ -188,14 +186,90 @@ And, again, Adorno was unable to see any degree of rebellion, or wrestling again
 
 =Unity:= Bach's work employed each note for the purposes of internal consistency; its end was not eliciting a particular emotion from the audience
 
-*** Karl Popper
+*** War of the Worlds
 
-*** Antisemitism
+Adorno viewed Orson Welles radio production of /The War of the Worlds/ as a demonstration of the weak will of the public and the ability of the culture industry to influence thought.
 
-** Jürgen Habermas
+Oddly, he again rejected affording the modern artist the praise of fighting against the confines of their medium; for him, Welles' wasn't rebelling or making a statement (even though that was his intention), he was simply a tool of the culture industry.
+
+** Karl Popper
+
+** Antisemitism
+
+* Herbert Marcuse
+
+=Literature:= Marcuse was a huge fan of literature, particularly revolutionary work.
+
+=Crisis of Marxism:= 
+
+=Dialectic:= Art is produced in a repressive / oppressive society. It thereby exists in conflict inherently. This dialectic between liberation and domination is a focus of Marcuse's work.
+
+
+** Der deutsche Künstlerroman (1922)
+
+The artist (der Künstler) represents a form of *radical subjectivity* 
+
+=Epic poetry:= Deals with the origin and development of a people and culture.
+
+=The novel:= Focuses on *longing and striving*. It indicates *alienation from social life*. In this we already see the influence of Marxism on Marcuse's thought.
+
+=Artists:= Experience a gap between the ideal and the real. Imagining an ideal existence while living in the trauma of real life produces a sense of alienation in the artist, which is the *catalyst for social change*.
+
+** The Aesthetic Dimension: Towards a Critique of Marxist Aesthetics (1978)
+
+* Walter Benjamin
+
+* Jürgen Habermas
+
+
+* Other
+
 
 ** Felix Weil
 
 ** Friedrich Pollock
 
 ** Hans-Georg Gadamer
+
+=Hermeneutics:= Heavily influenced by Heidegger. He identifies hermeneutics with phenomenology, like Heidegger did. He wants to explain the nature of understanding, but he actually disagrees with earlier approaches to looking at interpretive methods. He *rejects founding understanding on any fixed set of rules* 
+
+=Gespräch:= 
+
+*** The Greeks
+
+Gadamer was highly influenced by Plato and Aristotle
+
+=Plato:= Gadamer rejected the idea that there was any hidden doctrine in Plato's work
+
+=Phronesis:= This is a concept from Book Four of /Nichomachean Ethics/. Heidegger thought of it as a way of giving emphasis to our being-in-the-world, and giving insight into our practical and existential situations. Phronesis is a kind of *self-knowledge* 
+
+
+
+
+** Paul Ricoeur
+
+** Wilhelm Dilthey
+
+=Hermeneutics:= Viewed hermeneutics as the proper way to recover meaning in the human sciences. The idea was that we need a way to make social sciences more "scientific"
+
+=Psychology:= Dilthey's approach was to design a kind of psychology that would explain how to properly interpret things.
+
+** Martin Heidegger
+
+*** The Hermeneutics of Facticity
+
+Hermeneutics for Heidegger was the means of investigating factical existence. It wasn't a kind of theory or scientific approach; it was 
+
+All understanding was already given over to /die Sachen selbst/ (the things themselves). For example, to understand a particular piece of art, we need to already possess some understanding of that work --- enough to even formulate the question of /what is it saying?/ 
+
+=Being-in-the-world:= In order to understand /anything/ we must already be *in the world*, /alongside/ that which we want to understand. All understanding is therefore based in a prior *ontological understanding*  
+
+=Laying-bare:= Hermeneutics is then the attempt to make this *situatedness explicit*. The problem is that in order to understand this situatedness, we must already presuppose the situatedness, since it exists prior to every understanding. 
+
+=Phenomenology:= Because we already situated inside of this context of understanding, for Heidegger, hermeneutics is identical with phenomenology.
+
+** Schleiermacher
+
+** Gianni Vattimo
+
+One of Hans-Georg Gadamer's students
