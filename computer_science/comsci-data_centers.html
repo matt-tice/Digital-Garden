@@ -174,7 +174,18 @@ href="https://www.oilandgas360.com/data-centers-in-america-digital-infrastructur
 Centers in America: Digital infrastructure, energy reality, and the rise
 of closed loop systems</a>, Greg Barnett, Oil and Gas 360 (2026).</p>
 <h1 id="summary">Summary</h1>
-<h2 id="uses">Uses</h2>
+<h1 id="google">Google</h1>
+<p>Uses <strong>tensor processing units</strong>, rather than GPUs. TPUs
+have slightly lower energy usage.</p>
+<p>Since 2015, google has been making custom TPUs for things like
+powering Google Search</p>
+<ul>
+<li>TPUs are strictly designed for matrix multiplication, as opposed to
+GPUs, which have control logic and memory fetching</li>
+<li>once you start a TPU process, it never reads or writes to external
+memory</li>
+</ul>
+<h1 id="uses">Uses</h1>
 <ul>
 <li>AI / machine learning</li>
 <li>Cloud computing</li>
@@ -184,6 +195,67 @@ of closed loop systems</a>, Greg Barnett, Oil and Gas 360 (2026).</p>
 <li>Healthcare data and diagnostics</li>
 <li>Industrial automation and logistics</li>
 </ul>
+<h2 id="cloud-computing">Cloud Computing</h2>
+<ul>
+<li>Web hosting</li>
+<li>Corporate databases</li>
+<li>Email</li>
+<li>Video streaming (Netflix)</li>
+<li>Software as a service</li>
+</ul>
+<h3 id="resource-usage">Resource Usage</h3>
+<p>Relatively little. CPUs are mainly used. Single racks use about 10-15
+kW</p>
+<p>Because of the lower power usage, they can often get away with air
+cooling. Alternatively, there's mild evaporation-assisted cooling.</p>
+<ul>
+<li>2 L / kWh</li>
+</ul>
+<h2 id="ai-training">AI Training</h2>
+<p>Processing pentabytes of data</p>
+<h3 id="resource-usage-1">Resource Usage</h3>
+<p>Very high</p>
+<p>Uses hundreds of thousands of GPUs, which can pull up to <strong>1.2
+kW per chip</strong> 150-230 kW per rack</p>
+<p>Air cooling is ruled out by the high heat, so you need
+<strong>direct-to-chip liquid cooling</strong></p>
+<ul>
+<li>5 L/Kwh</li>
+</ul>
+<h2 id="ai-inference">AI Inference</h2>
+<p>Running a trained model to answer prompts</p>
+<h3 id="resource-usage-2">Resource Usage</h3>
+<p>Moderate per request, but massive at scale</p>
+<ul>
+<li>individual prompts use about 0.25 - 2 Wh (approx. an LED light bulb
+being run for 1.5 - 12 minutes)</li>
+<li>but billions of queries per day</li>
+</ul>
+<p>10 to 50 basic queries can evaporate 500 mL of water</p>
+<p>Water usage is 9L / kWh</p>
+<p>Images take <strong>5-30 times more energy</strong> (about as much as
+charging a smartphone from 0 to 100%). And <strong>20-100 times more
+water</strong> (about 500 mL)</p>
+<p>5 sec of video generation can take a <strong>further 30-150 times
+more energy</strong> (running a dishwasher for a cycle)</p>
+<ul>
+<li>on the low end, this is about as much as watching <strong>one hour
+of netflix in 4K</strong></li>
+</ul>
+<h3 id="usage-limits">Usage Limits</h3>
+<p>The free tier of something ChatGPT, Claude, or Gemini puts you around
+10-80 Wh / day (about as much as a fridge uses running for 1 hour)</p>
+<ul>
+<li>for Gemini, it's about 12-24 Wh / day for basic chats; if you try to
+skirt around this with images or documentd-contexted prompts, you'll get
+capped around 50 Wh / day</li>
+<li>this equates to around 26 mL / day for maxing out text prompts</li>
+</ul>
+<h2 id="high-performance-computing">High-Performance Computing</h2>
+<p>Weather forecasting, scientific research, cryptography</p>
+<h3 id="resource-usage-3">Resource Usage</h3>
+<p>High bursts of energy</p>
+<p>High water usage</p>
 <h1 id="energy">Energy</h1>
 <p>24/7 baseload demand Long-duration loads</p>
 <h2 id="water">Water</h2>
@@ -195,6 +267,12 @@ Cooling</h3>
 <ul>
 <li>can also use air-cooled systems</li>
 </ul>
+<h2 id="location">Location</h2>
+<p>Data centers are meant to couple into business or consumer-use
+infrastructure. This makes them <strong>bunch together</strong>, leading
+to heavy loads on the power grids in those locations.</p>
+<p>Northern Virginia has the world's largest concentration of data
+centers</p>
 <h1 id="financials">Financials</h1>
 <p>Large, creditworthy Willing to contract for firm capacity Tolerance
 for on-site or behind-the-meter solutions</p>
