@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       61720e74-9cba-4f36-846b-b4fcc61ec1e3
 :END:
-#+title: alfred jules ayer
+#+title: Alfred Jules Ayer
 #+filetags: :philosophy:logic:positivism:empiricism:
 
 * References

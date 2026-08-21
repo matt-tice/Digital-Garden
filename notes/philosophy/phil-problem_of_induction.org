@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       171a06b1-ca8b-4ad6-8347-9ec588d3b121
+:END:
+#+title: problem of induction
+#+filetags: :math:philosophy:
+
+* References
+
+
+
+* Summary
+
+The problem of induction is the following: /how do we logically justify that knowing things about the past informs us about the future?/ 
+
+This is obviously an important problem in the philosophy of science.
+
+* Hume
+
+Introduced the problem of induction. He viewed inductive reasoning as circular: the only reason we use it, is because it /worked in the past./ But using taking that leap from it being useful in the past to being useful subsequently is precisely the problem of induction in the first place.
+
+=Deduction:= We can't prove induction deductively, because there's nothing inherently contradictory in the inductive reasoning failing to hold.
+
+=Observation:= We also can't prove induction empirically, because that brings us to the circular argument: to jump from empirical observation to a conclusion requires induction to hold.

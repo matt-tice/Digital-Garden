@@ -13,3 +13,35 @@
 * Moritz Schlick
 
 Feigl's teacher and a huge inspiration on him.
+
+* Chance and law: an epistemological analysis of the roles of probability and induction in the natural sciences (1927)
+
+Feigel's PhD thesis, inspired by Edgar Zilsel's /Das Anwendungsproblem/ (1916)
+
+=Hume:= Feigel used pragmatism
+
+=Induction:= The [[id:171a06b1-ca8b-4ad6-8347-9ec588d3b121][problem of induction]] can't be solved using probability. We can only /vindicate/, rather than validate induction. That is, we cannot actually prove that induction is logical. We can only attempt to justify its use.
+
+For Feigel *probability depends on induction*, not the other way around. Induction must be taken as a pragmatic axiom.
+
+=Frequency:= Feigel used a frequency interpretation of probability.
+
+* Theorie und Erfahrung in der Physik (1929)
+
+Feigel considers quantum mechanics and criticizes both Kantianism and conventionalism
+
+=Realist:= Feigel argues for a /critical realist/ approach to the relationship between theory and experience in physics. He actually did believe that scientific theories described real things in the world.
+
+* Logical Positivism: A New Movement in European Philosophy (1931)
+
+Written with Blumberg
+
+=Positivism:= LP is viewed as the synthesis of two traditions: the positivistic-empirical and mathematical logic. We must distinguish between analytic and synthetic propositions.
+
+=Logic:= Like Wittgenstein, Feigel and Blumberg saw logic, by its very nature, as being tautological; it is only speaking about the internal structure of language. This is in contrast to empiricist approaches to logic and math.
+
+=Erkenntnis:= "Knowledge proper". Objectivity.
+
+=Erlebnis:= "Immediate experience". Subjectivity.
+
+=Knowledge:= Is defined as *the communicable*: it communicates *structure* 

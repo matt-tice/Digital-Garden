@@ -82,6 +82,29 @@ Truth is a *univocal designation*
 
 * Die philosophische Bedeutung des Relativitätsprinzips (1915)
 
-* Raum und Zeit in der gegenwärtigen Physik
+* Raum und Zeit in der gegenwärtigen Physik. Zur Einführung in das Verständnis der allgemeinen Relativitätstheorie (1917)
 
-* (1917)
+* Allgemeine Erkenntnislehre (1918)
+
+=Axioms:= Schlick looked to the work of Pasch, Hilbert, and Poincaré to borrow the idea of defining a concept by axioms. Those mathematicians were looking at non-euclidean geometry, and thus modifying the underlying axioms. By modifying the axioms, they viewed themselves as altering the *meaning of the relevant terms*. For example, "point" changes its meaning, depending on the underlying axioms that set up the geometry.
+
+For Schlick, concepts are *imaginary things* (Gedankendinge), which allow us to designate objects for our cognition. Like how latitiude and longitude allow you to designate position
+
+* Erleben, Erkennen, Metaphysik (1926)
+
+=Erleben:= Experience
+
+=Erkennen:= Cognition
+
+
+* Logical Positivism
+
+** Die Wende der Philosophie (1930)
+
+The function of philosophy is the *linguistic analysis of meaning* 
+
+** Positivismus und Realismus (1932)
+
+A reply to Planck
+
+=Logical positivism:= For Schlick, this is the philosophical view that experience is the source of all scientific knowledge
