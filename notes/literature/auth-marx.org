@@ -2,7 +2,7 @@
 :ID:       4e9d2c54-c176-4979-ae2e-a67ca86f30b9
 :END:
 #+title: Marx
-#+filetags: Philosophy:Economics:
+#+filetags: :Philosophy:Economics:
 
 Circa: 1818--1883
 

@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       a7b16f1e-2948-4781-91e1-4909bcb4ce23
+:END:
+#+title: vienna circle
+#+filetags: :philosophy:empiricism:
+
+* References
+
+
+
+* Summary
+
+Their goal was to reconceptualize empiricism in terms of science.
+
+* Anti-Metaphysics
+
+The VC was very against metaphysics. They viewed it to be *complete nonsense.* 
+
+* Members
+
+** Moritz Schlick
+
+** Friedrich Waismann
+
+** [[id:a6310988-d503-4651-8478-72b8b7ca0cd3][Herbert Feigl]]
+
+** Marcel Natkin
+
+** Karl Menger
+
+** Kurt Gödel
+
+** Hans Hahn
+
+** Olga Hahn-Neurath
+
+** Philipp Frank
+
+** Otto Neurath
+
+** Viktor Kraft
+
+** Theodor Radacovic
+
+** Gustav Bergmann
+
+** Rudolf Carnap

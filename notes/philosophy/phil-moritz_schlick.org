@@ -1,0 +1,87 @@
+:PROPERTIES:
+:ID:       b6675c1c-9b59-43c3-80bd-baa89b854803
+:END:
+#+title: Moritz Schlick
+#+filetags: :philosophy:empiricism:positivism:vienna:
+
+* References
+
+
+
+* Summary
+
+Originally trained in physics. At the time (late 19th century), physicists were almost always interested also in philosophy.
+
+* Inspirations
+
+** Helmholtz
+
+Influenced by Kant
+
+*** Handuch der physiologischen Optik (1856)
+
+=Signs:= Perceptions are *signs* --- placeholders for what they signify. At the same time, they don't actually resemble the signifieds in any way.
+
+The structures of signs tells us about the corresponding structure of their signifieds. This implies a causal link in perception that is *antithetical to Kant's* 
+        - for Kant, there were no unobservable causes of observable phenomena
+
+
+*** On the Facts of Perception
+
+Helmholtz changed his mind, to make his thoughts more Kantian.
+
+Rather than the signs being caused by unseen signifieds, what we really understand when looking at signs is our own perceptions. We then make a conceptual leap, interpretting it as saying something about the underlying sources, even though it isn't.
+
+** Planck
+
+Influenced by Kant and by Helmholtz
+
+=Signs:= For Planck, signs didn't tell us directly about the external world, but rather give us something to interpret.
+
+=Relations:= We cannot know the inherent nature of things, only the complex web of relations connecting things together. Planck's theory of knowledge is fundamentally *structuralist* 
+
+*** The Unity of the Physical Universe (1908)
+
+An argument against Ernst Mach's phenomenalistic and empiricist philosophy of science.
+
+Mach didn't believe in underlying physical objects.
+
+=Objective:= For Planck, physical objects are objective, in the Kantian sense, because they embody the /lawfulness of appearances/ 
+
+** Schopenhauer
+
+** Nietzsche
+
+** Alois Riehl
+
+** Richard Avenarius
+
+* Über die Reflexion des Lichts in einer inhomogen Schicht (1904)
+
+Schlick's PhD thesis
+
+* Lebensweisheit (1908)
+
+* Die Grenze der naturwissenschaftlichen und philosophischen Begriffsbildung (1910)
+
+=Telos:= The goal of science is the *reduction of phenomena to relationships* which are governed by laws. In this way, we turn individual events into specific instances of more general regular behaviour
+
+* Das Wesen der Wahrheit nach der modernen Logik (1910)
+
+Schlick's habilitation
+
+=Rickert:= A critique of Heinrich Rickert
+
+Truth is a *univocal designation*
+
+* Was ist Erkenntnis? (1911)
+
+=Intuition:= 
+
+=Concepts:= Ideas with /precisely defined/ contents
+
+* Die philosophische Bedeutung des Relativitätsprinzips (1915)
+
+* Raum und Zeit in der gegenwärtigen Physik
+
+* (1917)

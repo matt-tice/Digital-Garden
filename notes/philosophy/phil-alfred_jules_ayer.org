@@ -1,0 +1,62 @@
+:PROPERTIES:
+:ID:       61720e74-9cba-4f36-846b-b4fcc61ec1e3
+:END:
+#+title: alfred jules ayer
+#+filetags: :philosophy:logic:positivism:empiricism:
+
+* References
+
+
+
+* Summary
+
+Tried to continue the tradition of British Empiricism of Locke, Hume, and Russell
+
+Opposed to *synthetic a priori knowledge* 
+
+* Vienna Circle
+
+* Language, Truth, and Logic (1936)
+
+=Goal:= The goal of philosophy is not to establish first principles, nor is it to vindicate scientific statements. Philosophy is *fundamentally linguistic* --- the propositions in philosophy are not factual. Philosophy is *not scientific* (ie not empirical). It is about *uncovering hidden logical structure* 
+
+=Kinds:= Philosophy is about *types of expressions* 
+
+** Russell
+
+=Descriptions:= 
+
+
+For Ayer, philosophy *reveals a hidden logical structure*: we start with ordinary language, and reveal the underlying logic contained within our statements.
+
+** Science
+
+Science is made up of speculation (the realm of the scientists) and logic (the realm of the philosophers). But the speculative part is actually the essence of science: in order to be good at the philosophy of science, one must first "understand science" in the speculative sense:
+
+        "...if anything is to be achieved in the philosophy of physics, it must come from the inside..."
+
+** Metaphysics
+
+Logical positivism thinks *metaphysics is nonsense.* Only verifiable (empirical) propositions are meaningful; this makes metaphysics nonsense ipso facto: it purports to be about non-empirical things.
+
+* CS Peirce
+
+* Frank Ramsey
+
+=Primary system:= 
+
+Ayer associates this with the *factual content* of a theory
+
+=Secondary system:= 
+
+Ayer links this with the purely formal side of a theory
+
+* The Theoretician's Dilemma, Hempel (1958)
+
+Ayer agrees that quantitative concepts in science cannot be defined "in terms of what is actually observable". We necessarily link *concepts to other concepts*
+
+        - ex. we relate "being an oak" with "sprung from an acorn"
+
+=Causal:= Statements of causation always involve some kind of generalization (under circumstances A, events B will occur; meaning, )
+
+
