@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       e9e76503-0cd7-48d5-937a-40281b5780af
+:END:
+#+title: Arthur Schopenhauer
+#+filetags: :philosophy:
+
+* References
+
+
+
+* Summary
+
+One of the first 19th century philosophers to argue that the universe is *irrational* 
+
+* Inspirations
+
+Heavily inspired by Plato and Kant
+
+* The Fourfold Root of the Principle of Sufficient Reason (1813)
+
+Schopenhauer's PhD thesis. It looks at how people tend to assume the universe is rational and understandable.
+
+This is in dialogue with Leibniz, who defined the *principle of sufficient reason* in his /Monadology/ 
+
+=PoSR:= There is no fact or truth that lacks a sufficient reason why it should be the way that it is and not otherwise.
+
+Kant viewed human rationality as lacking the ability to deal with transcendental questions: and you knowledge is limited by our specific capacities for organizing our field of sensation.
+
+=Subject-Object:= Schopenhauer said, to use the PoSR, we need to have some fact that needs explaining. But then we need to have both (1) a subject that thinks (about) (2) an object to be explained.
+
+* The World as Will and Representation
+
+This book is working in response to a Cartesian tradition that led to German Idealism. The German Idealists associated self-consciousness with divine creation. The logic of the Idealists was modeled on the structure of self-consciousness: the dialectic. Not only was this logic seen as mirroring human creations that come out of thought, but it was also seen as the nature of reality itself.
+
+Schopenhauer didn't really like this: he viewed it as elevating self-consciousness to a metaphysical object. Nevertheless, he does believe that there is a *supreme principle* of the universe which can be *obtained through introspection*, and that this singular principle is enough to understand the whole world (the world being various iterations of this principle).
+
+=Will:= The supreme principle that governs the universe. It is a mindless, aimless, /non-rational/ *impulse* that fits at the foundation of everything, including our instincts.
+
+Schopenhauer wasn't the first to conceive of the world as Will or action (Fichte already did this). However, Schopenhauer's Will is unique in that it's *not rational* 
+
+=Our selves:= We are the unique object in the universe (*relative to ourselves*) that we perceive in two distinct ways: as objects living in the universe, and as objects we *inhabit*. Our selves as objects in the universe is *representation* (objective), while the inhabited version is *Will* (subjective)
+
+When we move our hand, the subjective desire to move our hand *is the same thing* as the physical movement of the hand; it's just that the desire is Will and the physical movement is representation (Will translated into an external object).
+
+=Will:= We are /not/ the unique things with Will. In fact, all things in the universe have this double-nature of the internal inhabiting and the external representation. The *world itself* has these two aspects.
+
+=Representation:= Representations are /relative/. Something is /my/ representation, in that it is represented to me; it's my perception of the object.

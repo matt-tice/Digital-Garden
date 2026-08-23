@@ -2,7 +2,7 @@
 :ID:       af993d91-3152-4bda-a2ec-b870c2b57f6f
 :END:
 #+title: deficit
-#+filetags: :economics:government:
+#+filetags: :economics:government:bonds:debt:
 
 * References
 
