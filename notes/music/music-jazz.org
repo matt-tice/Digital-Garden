@@ -1,0 +1,91 @@
+:PROPERTIES:
+:ID:       e7dcaa67-e6a0-4e8b-8f8d-59bed00d31dd
+:END:
+#+title: jazz
+#+filetags: :music:
+
+* References
+
+
+
+* Summary
+
+* Ragtime
+
+=Written:= 
+
+* Stride
+
+Developed in Harlem 
+
+James P. Johnson
+Fat Waller
+Art Tatum
+
+=Improv:= In contrast with ragtime, stride was mainly improvised.
+
+* Swing
+
+Swing music was massive and for the masses. It was played in orchestras in ballrooms where people were expected to dance.
+
+=Diatonic:= Focused on triads and sixths.
+
+=Call and response:= 
+
+=Little improv:= Because the orchestras were so large, there was little room for improvisation. There would be designated soloists, and they typically only got eight or sixteen bars.
+
+
+* Bebop
+
+Charlie Parker
+Dizzzy Gillespie
+Thelonius Monk
+Bud Powell
+
+=Altered chords:= You got all the 9ths, 11ths, 13ths, b9s, #9s, b5s, #5s
+
+=Bebop scale:= (1-2-3-4-5-6-b7-7) kept the chord tones on the downbeat, by putting an extra space before the tonic got hit
+
+=Enclosures:= Soloists liked to play one note above and one note below a chord tone, before actually hitting it.
+
+* Modal Jazz
+
+Miles Davis
+John Coltrane
+
+=Static chords:= You stayed on the same chord for eight, or 16 or 32 meaures.
+
+=Quartal chords:= 
+
+* Cool Jazz
+
+Miles Davis
+Dave Brubeck
+Gerry Mulligan
+
+=Counterpoint:= 
+
+=Time signatures:= 
+
+=Weird instruments:= 
+
+* Hard Bop
+
+Art Blakey
+Horace Silver
+
+=Blues scale:= The heavy theory was dialed back.
+
+=Plagal:= Lots of really nice IV-I movements. Not as much ii-V-I
+
+* Post-Bop
+
+Wayne Shorter
+Herbie Hancock
+Ornette Coleman
+
+=Non-functional:= 
+
+=Polychords:= 
+
+=Harmolodics:= 
