@@ -2,7 +2,7 @@
 :ID:       9e2eb54f-e86d-4bdb-8577-f63a91074ab6
 :END:
 #+title: asian financial crisis
-#+filetags: Economics : Crisis
+#+filetags: :Economics:Crisis:
 
 * References 
 

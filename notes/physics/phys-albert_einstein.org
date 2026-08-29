@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       83fe858a-5161-45f4-89c1-c82be4e98438
+:END:
+#+title: albert einstein
+#+filetags: :physics:physicist:
+
+* References
+
+
+
+* Summary
+
+* Politics
+
+** Pacifism
+
+** Democratic Socialism
+
+Einstein was explicitly anti-fascist and critical of capitalism
+
+*** Why Socialism (1949)
+
+** World government
+
+After WW2, Einstein felt like nuclear weapons couldn't be trusted to individual countries, and the only way forward was to entrust them to a *world government* 
+
+=1947:= Soviet scientists argued against Einstein, viewing any attempt at a world government as a capitalist hegemonic trap
+
+* Soviets
+
+** Dialectical Materialism
+
+Einstein's theories were in direct contradiction with Stalin's mandated science of dialectical materialism.
+
+=$E=mc^{2}$:= The equivalence of mass and energy was seen as making Einstein's theory *non-material*, and hence, bourgeois.
+
+=Relativity:= The idea that time and space depend on relative frames of view was antithetical to the objectivism of Soviet science.
+
+=Spying:= The Soviets actually sent a spy after Einstein --- Margarita Konenkova started a romantic relationship with Einstein after his wife died and had a mission to gather information on Princeton and Los Alamos scientists' knowledge.
+

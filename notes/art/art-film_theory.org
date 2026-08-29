@@ -1,0 +1,152 @@
+:PROPERTIES:
+:ID:       97e97f29-c697-4b05-b8bf-7ffde73a6d23
+:END:
+#+title: film theory
+#+filetags: :art:philosophy:
+
+* References
+
+
+
+* Summary
+
+* Ontology
+
+What makes film an art?
+
+** The Photoplay: A Psychological Study, Hugo Münsterberg (1916)
+
+=Silent:= This essay was written during the silent film era.
+
+Cinematic techniques, like flashbacks, close-ups, and edits, distinguish it from theatre, and make it a unique artform.
+
+=Objectifications:= How are viewers able to understand these cinematic techniques? The techniques are really *objectifications of mental processes* --- a close-up objectifies focus
+
+* Formalist / Expressionist
+
+Rudolf Arnheim
+
+Cinema is art precisely because it doesn't replicate reality: the physical limitations of the medium force the director to make artistic choices
+
+=Talkies:= Adding speech to movies actually *reduces their artistic merit*, diluting the cinematic medium. The silent film is art because it focuses on *bodies in motion*
+
+* Realist
+
+
+** The Ontology of the Photographic Image, André Bazin
+
+The power of cinema is its photographic realism: it preserves time. By having long shots, you allow the viewer to autonomously explore the image, rather than enforcing a singular interpretation
+
+=Photography:= Because film is based on photography, it has a *realist nature* 
+
+=Time:= The artistry of film is its ability to present the real world *frozen in time* 
+
+=Examples:= Bazin loves film makers like Jean Renoir, Orson Welles, and the Italian neo-Realists
+
+** Kendall Walton (1984)
+
+=Transparency:= 
+
+** Gregory Currie
+
+Rejects the transparency thesis
+
+=Realism:= Currie views the realism of a film stemming from the represented objects triggering the same cognitive processes that occur when we look at the corresponding real objects.
+
+* Marxist
+
+Sergei Eisenstein
+
+=Montage:= The collision of images forms a dialectic which the viewer synthesizes
+
+* Director-as-Author
+
+=Criticisms:= One of the main issues with auteur theory, is that by focusing solely on the individual, it ignores the broader context of the instutional settings in which these films were made.
+
+** Francois Truffaut
+
+Asserted that the director was the *auteur* --- the author of the work. He was against the dominant mode of filmmaking at the time, that simply adapted books to the screen. For Truffaut, in order to create good art, the director needed to have *complete control*, creating not only the direction, but writing the screenplay as well.
+
+** Andrew Sarris
+
+Took up Truffaut's cause in order to legitimize film studies as a discipline. We should focus on the *entire ouvre* of a given director, not just individual works.
+
+* Emotional Engagement
+
+Why do we care about what happens to fictional characters?
+
+=Identification:= Film theorists often reject the idea that our emotional engagement truly comes from identifying with the characters: we seem to have emotional reactions even to characters we don't identify with.
+
+** Simulation
+
+=Off-line:= Imaging a situation uses the same emotions as if you actually were in it, it's just that you *don't act on it*.
+
+This is used to explain why we enjoy watching things we'd hate to experience in real life: experiencing an emotion off-line is a pleasurable thing to us.
+
+=Criticism:= Simulation theory doesn't explain what it means for an emotion to be off-line.
+
+** Thought Theory
+
+We can have emotional responses to mere thoughts. The thoughts that we have while watching a film are what trigger our emotional states.
+
+=Criticism:= why does a mere thought, as opposed only to a belief, evoke an emotional response Beliefs seem stronger than thoughts; more assured. So why is a thought enough?
+
+* Narration
+
+** Unreliable Narrators
+
+*** Letter from an Unknown Woman, Max Ophul (1948)
+
+*** George Wilson (1986)
+
+Unreliable narrators necessarily imply an actually character that does the narrating.
+
+*** Gregory Currie (1995)
+
+Unreliable narrators don't necessarily imply a narrating-character; they might just imply an unreliable film-maker
+
+** Implicit Narrators
+
+Do all films have narrators, even if a given film doesn't have an explicit narrator?
+
+*** Wilson (1997)
+
+Imagined Seeing Hypothess
+
+When we watch a movie, we imagine ourselves as looking into the world of the story
+
+* Nöel Carroll (1988)
+
+Argued that the classical film theorists like Bazin and Arnheim falsely conflated certain /styles/ of filmmaking, with film's inherent nature. 
+
+* Apparatus Theory
+
+Jean-Louis Baudry
+
+The structure of cinema, with its dark theatre, bright projected film, and a passive audience indoctornates people. It creates the *illusion of an all-knowing subject* 
+
+* Psychoanalysis
+
+** Visual Pleasure and Narrative Cinema Laura Mulvey (1975)
+
+The male gaze
+
+=Scopophilia:= 
+
+** Cognitive Film Theory
+
+Focuses on viewers' *conscious processing* of films. They view film theory as /a science/ 
+
+* Post-Modernism
+
+** Cinema I and Cinema II 
+
+The dividing line is WW2 --- prior to it, cinema was based on logic and cause-and-effect. After WW2, the characters and time become fragmented and non-linear
+
+* Analytic Film Theory
+
+Uses analytic philosophy
+
+Noël Carroll 
+Berys Gaut
+
