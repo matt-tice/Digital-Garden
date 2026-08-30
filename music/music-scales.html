@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>scales</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">scales</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>Under each scale, I'll write down each of the corresponding modes</p>
+<p>But I'll also write down a table for the different possibilities of
+flattening or sharpening notes</p>
+<h1 id="terminology">Terminology</h1>
+<p>I'll use the following convention:</p>
+<p><code class="verbatim">Major:</code> Natural 3</p>
+<p><code class="verbatim">Minor:</code> b3</p>
+<p><code class="verbatim">Dominant:</code> b7</p>
+<p><code class="verbatim">Harmonic:</code> Natural 7</p>
+<h1 id="table">Table</h1>
+<p>It seems like we can flatten any of the degrees 2, 3, 5, 6, 7,
+without any trouble. Flattening the fourth degree is a bit more subtle,
+since if you don't also flatten the third, the fourth and third collapse
+into the same note.</p>
+<p>There are quite a few combinations, then. I guess <span
+class="math inline">2<sup>5</sup> = 32</span>, just for flattening. So,
+for the sake of formatting, instead of having one large table, I'll
+probably split it up into multiple smaller tables</p>
+<h2 id="single-flats">Single Flats</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Flats</td>
+</tr>
+<tr class="even">
+<td>Ionian b2</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Melodic min</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>Harmonic maj</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Mixolydian</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<h2 id="two-flats">Two Flats</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td>Neapolitan maj</td>
+<td>23</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>25</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>26</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>27</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>35</td>
+</tr>
+<tr class="even">
+<td>Harmonic min</td>
+<td>36</td>
+</tr>
+<tr class="odd">
+<td>Dorian</td>
+<td>37</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>56</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>57</td>
+</tr>
+<tr class="even">
+<td>Melodic maj</td>
+<td>67</td>
+</tr>
+</tbody>
+</table>
+<h2 id="three-flats">Three Flats</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>235</td>
+</tr>
+<tr class="even">
+<td>Neapolitan min</td>
+<td>236</td>
+</tr>
+<tr class="odd">
+<td>Dorian b2</td>
+<td>237</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>256</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>257</td>
+</tr>
+<tr class="even">
+<td>Phrygian dom</td>
+<td>267</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>356</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>357</td>
+</tr>
+<tr class="odd">
+<td>Aeolian</td>
+<td>367</td>
+</tr>
+<tr class="even">
+<td>Locrian maj</td>
+<td>567</td>
+</tr>
+</tbody>
+</table>
+<h2 id="four-or-five-flats">Four or Five Flats</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td>Harmonic locrian</td>
+<td>2356</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Locrian #6</td>
+<td>2357</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Phrygian</td>
+<td>2367</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Locrian maj</td>
+<td>2567</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Half-diminished</td>
+<td>3567</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Locrian</td>
+<td>23567</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="neapolitan-scale">Neapolitan Scale</h1>
+<h1 id="major-scale">Major Scale</h1>
+<p><code class="verbatim">Ionian:</code> Major scale</p>
+<p><code class="verbatim">Dorian:</code> Minor scale with a raised 6
+(flat 3, 7)</p>
+<p><code class="verbatim">Phrygian:</code> Minor scale with b2 (flat 2,
+3, 6, 7)</p>
+<p><code class="verbatim">Lydian:</code> Major scale with #4</p>
+<p><code class="verbatim">Mixolydian:</code> Major scale with b7</p>
+<p><code class="verbatim">Aeolian:</code> Minor scale (flat 3, 6, 7)</p>
+<p><code class="verbatim">Locrian:</code> Minor scale with flat 2 and
+flat 5 (flat 2, 3, 5, 6, 7)</p>
+<h1 id="harmonic-minor-scale">Harmonic Minor Scale</h1>
+<p><code class="verbatim">Harmonic:</code> Flat 3, 6</p>
+<p><code class="verbatim">Locrian sharp 6:</code> Flat 2, 3, 5, 7</p>
+<p><code class="verbatim">Ionian sharp 5:</code> #5</p>
+<p><code class="verbatim">Dorian sharp 4:</code> Flat 3, 7 and #4</p>
+<p><code class="verbatim">Phrygian dominant:</code> Flat 2, 6, 7</p>
+<p><code class="verbatim">Lydian sharp 2:</code> Sharp 2, 4</p>
+<p><code class="verbatim">Ultralocrian:</code> Flat 2, 3, 4, 5, 6,
+bb7</p>
+<h1 id="melodic-minor-scale">Melodic Minor Scale</h1>
+<p><code class="verbatim">Melodic:</code> Flat 3</p>
+<p><code class="verbatim">Dorian b2:</code> Flat 2, 3, 7</p>
+<p><code class="verbatim">Lydian augmented:</code> Sharp 4, 5</p>
+<p><code class="verbatim">Lydian dominant:</code> Sharp 4, b7</p>
+<p><code class="verbatim">Melodic major:</code> Flat 6, 7</p>
+<p><code class="verbatim">Locrian 2:</code> Flat 3, 5, 6, 7</p>
+<p><code class="verbatim">Altered:</code> Flat 2, 3, 4, 5, 6, 7</p>
+</body>
+</html>
