@@ -1,0 +1,129 @@
+:PROPERTIES:
+:ID:       8df545a4-3b7f-4dbe-882b-543d8ba16794
+:END:
+#+title: scales
+#+filetags: :music:modes:
+
+* References
+
+
+
+* Summary
+
+Under each scale, I'll write down each of the corresponding modes
+
+But I'll also write down a table for the different possibilities of flattening or sharpening notes
+
+* Terminology
+
+I'll use the following convention:
+
+=Major:= Natural 3
+
+=Minor:= b3
+
+=Dominant:= b7
+
+=Harmonic:= Natural 7
+
+* Table
+
+It seems like we can flatten any of the degrees 2, 3, 5, 6, 7, without any trouble. Flattening the fourth degree is a bit more subtle, since if you don't also flatten the third, the fourth and third collapse into the same note.
+
+There are quite a few combinations, then. I guess $2^{5} = 32$, just for flattening. So, for the sake of formatting, instead of having one large table, I'll probably split it up into multiple smaller tables
+
+** Single Flats
+
+|              | Flats |
+| Ionian b2    |     2 |
+| Melodic min  |     3 |
+|              |     5 |
+| Harmonic maj |     6 |
+| Mixolydian   |     7 |
+
+** Two Flats
+
+| Neapolitan maj | 23 |
+|                | 25 |
+|                | 26 |
+|                | 27 |
+|                | 35 |
+| Harmonic min   | 36 |
+| Dorian         | 37 |
+|                | 56 |
+|                | 57 |
+| Melodic maj    | 67 |
+
+** Three Flats
+
+|                | 235 |
+| Neapolitan min | 236 |
+| Dorian b2      | 237 |
+|                | 256 |
+|                | 257 |
+| Phrygian dom   | 267 |
+|                | 356 |
+|                | 357 |
+| Aeolian        | 367 |
+| Locrian maj    | 567 |
+
+** Four or Five Flats
+
+| Harmonic locrian |  2356 |   |
+| Locrian #6       |  2357 |   |
+| Phrygian         |  2367 |   |
+| Locrian maj      |  2567 |   |
+| Half-diminished  |  3567 |   |
+| Locrian          | 23567 |   |
+
+
+* Neapolitan Scale
+
+* Major Scale
+
+=Ionian:= Major scale
+
+=Dorian:= Minor scale with a raised 6 (flat 3, 7)
+
+=Phrygian:= Minor scale with b2 (flat 2, 3, 6, 7)
+
+=Lydian:= Major scale with #4
+
+=Mixolydian:= Major scale with b7
+
+=Aeolian:= Minor scale (flat 3, 6, 7)
+
+=Locrian:= Minor scale with flat 2 and flat 5 (flat 2, 3, 5, 6, 7)
+
+* Harmonic Minor Scale
+
+=Harmonic:= Flat 3, 6
+
+=Locrian sharp 6:= Flat 2, 3, 5, 7
+
+=Ionian sharp 5:=  #5
+
+=Dorian sharp 4:= Flat 3, 7 and #4
+
+=Phrygian dominant:= Flat 2, 6, 7
+
+=Lydian sharp 2:= Sharp 2, 4
+
+=Ultralocrian:= Flat 2, 3, 4, 5, 6, bb7
+
+* Melodic Minor Scale
+
+
+=Melodic:= Flat 3
+
+=Dorian b2:= Flat 2, 3, 7
+
+=Lydian augmented:= Sharp 4, 5
+
+=Lydian dominant:= Sharp 4, b7
+
+=Melodic major:= Flat 6, 7
+
+=Locrian 2:= Flat 3, 5, 6, 7
+
+=Altered:= Flat 2, 3, 4, 5, 6, 7
