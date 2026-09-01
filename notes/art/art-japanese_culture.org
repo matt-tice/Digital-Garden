@@ -1,0 +1,320 @@
+:PROPERTIES:
+:ID:       a7468a99-d0f6-4bc3-b0bd-3b2950fc776c
+:END:
+#+title: japanese art
+#+filetags: :art:
+
+* References
+
+
+
+* Summary
+
+Common themes:
+        * postwar trauma
+        * rapid industrialization
+        * social anxiety
+
+
+
+* Atom Bombs
+
+The legacy of the atomic bombs dropped (uniquely) on Japan, along with the fire bombings appears in the so-called *aesthetics of disaster*. We often see seemingly insurmountable power levied against a society.
+
+The destructive force seems to *come out of nowhere* and authority is *unable to stop it* 
+
+** Segmenation of time
+
+Japanese cultural consciousness often splits the world into *two eras*: before and after the bomb
+
+*** Evangelion
+
+Life is split before and after the first impact.
+
+*** 999
+
+Junpei and Akane are trapped in an insection of timelines, because of the events that happened in the previous Nonary Game.
+
+
+
+** Disaster
+
+*** Akira
+
+*** Godzilla
+
+*** Neon Genesis Evangelion
+
+
+=Generational trauma:= The fact that only children can pilot the EVA ties into the overall theme of children wrestling with their parents' failures --- this is the *Second Impact*; the world has already ended once, and the previous generation was unable to stop it
+
+
+** Fragility
+
+The deployment of the atomic bomb exposed a distressing irony: it harbored immense power, and yet humans were to fragile and emotionally immature to wield it safely. This is often expressed in japanese art by *childlike figures with immense power* 
+
+*** One punch man
+
+Tatsumaki
+
+*** Evangelion
+
+Rei
+
+*** Haruhi Suzumiya
+
+Both Haruhi and Nagatoxs
+
+* Modernization
+
+** Conformity
+
+*** Mura Hachibu
+
+This is a vicious process of social ostracization that happens in Japanese villages when someone acts outside the group
+** Environmental
+
+
+Japan's rapid modernization destroyed a lot of nature and rural settlements in order to build up its industry. We see this reflected in a lot of media that harkens back to a greener era
+
+
+*** Pokemon
+
+The creator, Satoshi Tajiri, based the premise on his childhood hobby of catching insects, which he saw die with the rapid urbanization of Japan --- people spent less time outside, and animals like insects lost their habitats
+
+*** Animal crossing
+
+** Hikikomori
+
+Isolated protagonists who get transported to another world (isekai) are a direct stand-in for Japan ending its years of isolation under threat by the US during the Meiji era
+
+We can also look at this from an economic perspective: during the 1960s, all the way up to the 80s, Japan had a booming economy. This was achieved by the strict regulation of social roles: men became salarymen, and women, professional housewives. In exchange, they got *lifetime employment*, steady promotion, and a solid middle-class lifestyle. 
+
+After the 1990s bubble burst, Japan culturally realized their insecurity through the economy. Mass layoffs, little hiring, and quality of life recession were huge shocks. This functioned as a *broken promise* to the people who dedicated 80hour work weeks to upholding the system for decades.
+
+The response was to *double-down:* anything that strayed outside of the strict social roles was cause for being fired, or not being hired. In *order to survive*, citizens had to *hyper-conform*
+
+=Personal responsibility:= Note that Japanese culture /heavily/ prioritizes the individual's responsibility to the collective; instead of critiquing the system, the natural thing to do was to view not being able to get a job as a *personal moral failing.* This also goes back to the idea that /disaster is natural/ 
+
+=Freeters:= Those who couldn't get steady employment, and so attempted continual part-time work
+
+=Hikikomori:= An intense social withdrawl, caused by not being able to meet rigid social standards
+
+*** Pokemon Exclusives
+
+Shigeru Miyamoto and Satoshi Tajiri intentionally designed version-exclusive pokemon for the sake of fighting against hikikomori
+
+*** Fire Emblem
+
+The *support conversations* 
+
+
+** Industrialization / Westernization
+
+In both the Meiji Restoration and the Post-WW2 American occupation, Japan went through a rapid westernization process; its cultural and spiritual heritage was pushed to the background
+
+*** Final Fantasy 7
+
+The Shinra company represents the Westernization draining the /Lifestream/ (a stand in for, in particular, Shinto animism)
+
+
+* Religion
+
+** Buddhism
+
+*** Mono no aware
+
+True beauty is found in that which is fleeting
+
+*** Dharmakaya
+
+The cosmic consciousness or universal buddha-nature
+
+This is sometimes viewed quite negatively in japanese media, because it ties in with the *conformity* that post-war japan enforced
+
+**** Evangelion
+
+*** Bodhisattva
+
+An enlightened being that stays behind to help mortals achieve peace themselves 
+
+*** Mahoraga
+
+A race of deity-like snake beings
+
+*** Twelve Heavenly Generals
+
+They guard Yakushi Hyorai, the Buddha of Medicine and Healing
+
+*** Dharmachakra
+
+The wheel of dharma, representing the endless cycle
+
+*** Mudras
+
+Sacred ritual hand gestures used in Shingon (Esoteric Buddhism) and Hinduism
+
+**** Naruto
+
+Specifically its hand signs are drawn from *kuji-in*, which blends Buddhism, Shintoism, and Taoism. They were originally designed to help warriors focus and clear their minds before battle
+
+In Taoism, each zodiac animal corresponds to a specific *energy path in the body*. So flashing each of the hand signs in Naruto corresponds to altering the flow of chakra with each sign
+
+**** Jujutsu kaisen
+
+*** Mandala
+
+A sacred cosmic world that is a given deity's pure realm
+
+**** Jujutsu kaisen
+
+The domain expansions
+
+** Folklore
+
+=Sukuna:= Found in the /Nihon Shoki/ (720 AD). His name means /honoured shrine/ 
+
+** Shinto 
+
+*** Izanagi and Izanami
+
+=Izanagi:= The primordial god in Shinto. His wife is Izanami. When she dies, he goes to the underworld (yomi) to bring her back. Sadly, he finds her body rotting and covered in maggots. He flees, but having touched death, his body is corrupted with *kegare* 
+
+He performs misogi, and as he washes his face, three deities are born:
+        * From his left eye, *Amaterasu* (Sun goddess)
+        * From his right eye, *Tsukuyomi* (Moon god)
+        * From his nose, *Susanoo* (Storm god)
+
+=Naruto:= This obviously is referenced in Sasuke's powers. The mangekyo sharingan is obtained through witnessing traumatic death, reflecting Izanagi's interaction with his wife's body. In Naruto there are also forbidden eye techniques called Izanagi (which turns the user's death into an illusion at the cost of an eye; used repeatedly by Danzo) and Izanami (trapping the target's mind in an infinite time loop; used on Kabuto)
+
+=Orochimaru:= Susanoo is exiled from Heaven after destroying Amaterasu's rice fields. He redeems himself by killing the eight-headed snake, *Yamata no Orochi* using a legendary sword
+
+*** Taizokai / Kongokai
+
+*** Kami and Rei
+
+In Shinto, kami (spirit) resides in all things, from animals to lightning.
+
+Destruction and natural disasters aren't "evil". They exhibit the disatisfaction of spirits. The way out isn't to defeat it, but to pacify it; come to terms with it
+
+**** Pokemon
+
+You battle with pokemon respectfully; they often test you, and you can think of catching them as them deeming you worthy. You form partnerships
+
+
+*** Tokusa no Kanda no Takara
+
+The *ten sacred treasures* said to possess the power to revive the dead
+
+*** Yorishiro
+
+In order to communicate with people, a kami needs to possess a physical vessel. Historically, these were actually *young, prepubescent girls*, chosen because of their ritual purity and emptiness. This translates directly to the trope of an ancient all powerful figure taking the form of a little girl
+
+**** Shaman King
+
+The shamans channel spirits into physical media like swords
+
+**** One Piece
+
+You can view consuming a devil fruit as an act of yorishiro
+
+**** Fire Emblem
+
+Tiki or Myrrh
+
+**** Haruhi Suzumiya
+
+Haruhi
+
+*** Kegare and Kiyome
+
+=Kegare:= When a human dies with deep negative emotions, their spirit becomes heavy
+
+=Kiyome:= 
+
+=Misogi:= A cleansing ritual
+
+**** Jujutsu Kaisen
+
+Curses are born from the cursed energy that leaks out of humans
+
+* Moe and Kawaii
+
+Kawaii is a kind of therapy and escape for the traumatized
+
+=Moe:= a protective, affectionate response toward vulnerable characters.
+
+
+
+* Family
+
+** Parental Failures
+
+Many antagonists aren't pure evil cutouts, they're people that raised you: teachers, mothers, fathers, mentors. Often, they're *possessed* by a corrupting force --- this represents the corruption of imperialism and corporate greed that Japan suffered
+
+=Juken Jigoku:= (Examination hell) The intense period of japanese entrance exams that you have to take to try to get into a good university. 
+
+*** Fire Emblem Three Houses
+
+The academic institution is literally a war academy training soldiers, and the rivalry between students ends up being reinscribed as actual bloody conflict in the second half of the game, where your house has to fight against former classmates
+
+*** Breath of Fire 1
+
+At the very end of the game you get to see your sister again, but she fights you, being controlled by Jade
+
+*** Persona 5
+
+The villains are corrupt authority members (teachers, politicians, CEOs) demanding obedience
+
+** Fatherless children
+
+After WW2, the cultural patriarch role was deconstructed by force --- fathers were by-and-large killed in battle, or became *salarymen*, who /disappeared from the family/, forced into harsh corporate timetables
+
+*** Pokemon
+
+*** Full Metal Alchemist
+
+*** Neon Genesis Evangelion
+
+*** Attack on Titan
+
+*** Astroboy
+
+He's built by a grieving scientist, and then rejected and sold by that same man
+
+* Military disposability
+
+In WW2, Japanese soldiers were completely disposable, culminating in the *kamikaze* and ** (where soldiers would be ordered to kill themselves, rather than surrender)
+
+** Fire emblem
+
+Gives all of the main characters not only a life, relationships, and backstory, but also *permadeath*; it directly confronts the dehumanized perception of Imperial Japan's military
+
+This is further developed in Three Houses, where you are forced to fight and kill the students you previously taught --- unlike in previous games where every enemy soldier is faceless or presented as evil.
+
+* Time Loops
+
+This is a way of processing the collective grief over a horrible series of events that can't be undone
+
+It also speaks to the repetitive nature of the unyielding social roles that citizens are expected to adopt
+
+** Haruhi Suzumiya
+
+The time loop is done in order to prevent the ending of the world; Haruhi is a clear stand-in for the destructive, unexplainable, natural force.
+
+For Haruhi, the loop is a subconscious manifestation of her unwillingness to grow up.
+
+** Higurashi
+
+The timeloop takes place in 1983, and focuses on a *dam*; the Tokyo village wants to flood a rural village in order to build a dam. This was actually something that happened routinely during Japan's rapid modernization
+
+** Steins Gate
+
+** Bravely Default
+
+** 999
+
+
+** Naruto
+
+The Izanami technique was designed as a punishment for those who abused Izanagi. It traps the target in a time loop until they come to terms with their actions and mistakes
