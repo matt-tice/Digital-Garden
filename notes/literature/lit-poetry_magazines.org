@@ -1,0 +1,102 @@
+:PROPERTIES:
+:ID:       098a97ee-9398-499b-bb3d-8e06acc3d0cb
+:END:
+#+title: poetry magazines
+#+filetags: :poetry:publishing:
+
+* References
+
+
+
+* Summary
+
+** My thoughts
+
+I hate the MFA style. any static movement feels like the death of poetry to me; it's just too neat, too marketable, even while magazines claim they want something unique. especially in an age of ai and heavy capitalism, any stagnart art can get co-opted and pumped out by automation faster than artists can perfect it; i feel like poetry needs to be less about trying to write in preferred styles, and more about trying to constantly make something different --- staying put just feels like plating a feast for neural networks
+
+* We're looking for...
+
+A lot of literature magazines will write something like 
+
+        /We're looking for poems that move us; that break and reconstruct us; challenge and recontextualize our identities and societies...etc. etc./
+
+without any useful info on what that subjective prattle means
+
+Supposedly, a lot of journals will just straight-up copy and paste or do a derivative knock off of other journals' desiderata, because it sounds fancy. If true, that's a hilarious irony from those that would immediately reject and shake a finger at similarly derivative poetry.
+
+* Funding
+
+Most *university-affiliated* literary magazines are funded by student activity fees, English departments and university endowments. Which means that funding agents have a stake in the game.
+
+This often leads these magazines to restrict publication to *university-affiliated members*
+
+It also works as a kind of branding: if someone the university-affiliated mag publishes goes on to be famous, the university can use it to strengthen their own name.
+
+* MFA Voice
+
+There's a particular style that dominates lit magazines. Hence it's inherently ai-adoptable
+
+** Structure
+
+1. A mundane scene
+2. A shift in tone / memory which the scene triggers
+3. Epiphany / philosophical proposition
+
+** Unrhymed Couplets
+
+The two-line couplets are a kind of pause button for a population that is accustomed to skimming and scrolling
+
+You get a lot of sentences that are broken not only in a new line, but also a new stanza, which has a slightly different effect
+
+** First-Person
+
+Poets seem to love first-person nowadays. A lot of poetry is a version of a first-person narrative about some *small moment* in the narrator's life. It usually pivots to some *philosophical assertion* at the very end.
+
+* Submission windows
+
+Submit at the *beginning of a submission window* whenever you can. With AI especially, slush piles are colossal.
+
+At the beginning of a window, editors are looking for reasons to say yes --- think of them like young, world-empassioned protagonists, seeking out brilliant adventures.
+
+At the end of a window, they're the grizzled neighbour with decades of lost sleep dangling from their eyes so low, their chin weeps.
+
+=Procrastinators:= I am often a part of the procrastinator wave. Don't be part of the procrastinator wave. Don't be submitting in the last 48 hours of a window; the editors have little space left, and consequently need to find reasons to say no to a piece and reduce the size of the deluge.
+
+=Rolling:= Most journals *read submissions immediately*, as opposed to waiting until the window closes
+
+=Secretary problem:= In math, this problem is basically, given a stream of choices (say, of potential poems to publish) and you have to say yes or no to each immediately. Not knowing if future choices are going to be better or worse than the current ones, how do you decide when to stop looking, and select from the current crop? Mathematically, you would want to ignore the first few choices, in order to establish a baseline. But this is only because you have to immediately decide whether to accept or reject. In publishing, you can hold on to poems (it's literally called the "hold pile") to decide later
+
+=Intravalue:= When curating poems, editors want all the poems to relate to one another in some way. If you're selected early, you get to be part of the poems that get to /decide/ the criteria. If you're late, you have very fine criteria you have to match
+
+** Exceptions
+
+Single-winner contests that offer large cash prizes usually do wait until the end of the window to evaluate, and compare poems head-to-head
+
+
+* AI
+
+Because ai is on the scene now, it's exponentially more difficult to get your work to stand out to the masthead. One way of getting around the issue is to try to construct poems using methods that LLMs don't know how to properly navigate.
+
+** White space
+
+AI doesn't know how to use white space effectively, since it's just a prediction engine. You have to focus on where the use of whitespace can /mean something/ if you cultivate it carefully 
+
+** Dissonance
+
+A lot of AI poetry just sounds /rigid/ --- it's hard to explain why, but it just sounds as if you were playing a series of perfect fifths over and over; there's no *dissonance* to the work; no jagged edges
+
+** Self-Reference
+
+Not necessarily in a heavy-handed way: I mean more like the way that certain lines or word choices in the poem will reflect ones from earlier on. The poem is a unified, interconnected whole, not just a one-dimensional train of thought.
+
+** Idiosyncratic imagery
+
+AI imagery is ludicrously cliche. Hyper-specific imagery can be really effective
+
+** Lyricality
+
+AI language is very un-musical; it's bad at rhythm, assonance, syllable length etc. Sadly, a lot of free verse is bad at these as well (arguably, that's a huge reason why AI is so bad at them)
+
+Any complex internal rhyme, rhythm changes, etc. are very human
+
+** 
