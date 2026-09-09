@@ -1,0 +1,130 @@
+:PROPERTIES:
+:ID:       0c12c039-f583-4fcd-b937-ce05ac69ac0f
+:END:
+#+title: Harlem Renaissance
+#+filetags: :movement:literature:
+
+* References
+
+
+
+* Summary
+
+=Individual:= The Harlem Renaissance focused on the *expression of the individual* Black American.
+
+* Inspirations
+
+=Paul Laurence Dunbar:= Wrote in a combination of "high" European, formal voice and "low" AAE
+
+=Francis Ellen Watkins Harper:= 
+
+=Phillis Wheatley:= 
+
+=W.E.B. Dubois:= His essay /The Talented Tenth/, which appeared in the collection /The Negro Problem/, argued that a particular class of Black people in the US would / should lead and improve the Black community; the Tenth were those Black American men that got a college (classical) education. Langston Hughes was very against this concept. He hated the idea that Black people had to *capitulate to white structures*
+
+
+* Inspired
+
+* Philosophers
+
+** W.E.B. Dubois
+
+=Propaganda:= Dubois believed that all Black art must be *propaganda*, designed to demonstrate to the whites that Black people were just as talented as them.
+
+
+** Alain LeRoy Locke
+
+=Propaganda:= Thought that Dubois was wrong for sending Black artists on a propagandic quest. The primary responsibility of any artist is to communicate something *universal* 
+
+=Ethnic race:= Locke argued that race was primarily *social and cultural* not biological. 
+
+=Politics:= He considered it sometimes useful to think and act as members of a race, even while trying to destroy racial categories.
+
+=Pluralism:= Artists don't need to prove anything to white society
+
+*** The New Negro (1925)
+
+An anthology of poetry, essays, plays, music and portraiture by both white and Black artists.
+
+=Individuality:= This anthology demonstrated "Negro art" as an expression of the individual Black artist, as opposed to the dominant viewpoint at the time, which was that "Negro art" was simply a cultural category 
+
+For Locke, prior Negro art was designed to play by the rules of the European art movements; it sought to demonstrate that the Negro was "civilized" and could meaningfully contribute to American (read: white) society. Naturaly, this forced older Negro art to be filled with stereotypes (positive or negative)
+
+In the mind of America, says Locke, "the Negro has been more of a formula than a human being—a something to be argued about, condemned or defended..." This also points to work like Booker T. Washington's /The Negro Problem/ 
+
+=Ghettoization:= Locke argues that in being forced to refer to simply a cultural category; a "question" to be investigated; Negro art is cut off from the rest of society. Worse Black people do it to themselves: forcing art to serve propaganda, forcing Black people to be a social category means to force the individual Black person to be and view themself as a "social problem". They can't focus on themselves as individuals; they exist secondarily to, and through the lens of, social justice
+
+
+** Charles S. Johnson
+
+** Marcus Garvey
+
+Black Nationalism
+
+** George Schuyler
+
+Debated constantly with Langston Hughes
+
+*** Negro-Art Hokum (1926)
+
+Satire that mocked the idea that there was any real difference between Black and white art.
+
+** Jessie Redmon Fauset
+
+Discovered and mentored Langston Hughes, Countee Cullen, and Jean Toomer
+
+* Poets
+
+** Langston Hughes
+
+Inspired heavily by the Blues, boogie-woogie and stride
+
+His word choice and structure was often simplistic, which led to a lot of criticism, from both Black and white audiences.
+
+=Respectability politics:= Black middle and upper class folk wanted to claim the place of their community through beating white people at their own game: creating European "sophisticated" art
+
+*** The Weary Blues (1926)
+
+The beginning of jazz poetry
+
+*** The Negro Artist and the Racial Mountain (1926)
+
+Black artists should stop trying to copy white European forms, and instead need to find their unique voice
+
+        "We younger Negro artists who create now intend to express our individual dark-skinned selves without fear or shame. If white people are pleased we are glad. If they are not, it doesn’t matter. We know we are beautiful. And ugly too. The tom-tom cries and the tom-tom laughs. If colored people are pleased we are glad. If they are not, their displeasure doesn’t matter either. We build our temples for tomorrow, strong as we know how, and we stand on top of the mountain, free within ourselves."
+
+*** Fine Clothes to the Jew (1927)
+
+Received *a ton of criticism*. The /Pittsburgh Courier/ called him "the poet low-rate of Harlem". Other publications called Langston Hughes a "sewer dweller", his poetry "of the gutter"
+
+=Noble primitivism:= Some white audiences praised Hughes, but only in that they viewed his work as  uncorrupted by "higher" civilization 
+
+*** 200 Years of Afro-American Poetry (1965)
+
+Dunbar was destroyed by white expectations; he was able to craft traditional European poetry better than a lot of white authors, but they didn't care --- they just wanted to laugh at the dialect
+
+** Zora Neale Hurston
+
+*** Their Eyes Were Watching God (1937)
+
+
+** Countee Cullen
+
+Loved John Keats and Phillis Wheatley 
+
+** Claude McKay 
+
+*** Home to Harlem (1928)
+
+
+** Jean Toomer
+
+*** Cane (1923)
+
+** James Weldon Johnson
+
+*** The Book of American Negro Poetry (1922)
+
+He talked about Phillis Wheatley, FEWH, and Dunbar
+
+=AAE:= Johnson felt that "dialect poetry" was over; it could only exhibit humour or pathos

@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       16a4a04e-898a-48f5-8ff8-a7d6f8008cf1
+:END:
+#+title: miscarriage
+#+filetags: :pregnancy:biology:medicine:
+
+* References
+
+
+
+* Summary
+
+* Early miscarriage
+
+The endometrium breaks down. This is often due to a *genetic abnormality* that prevents the endometrium from developing properly.
+
+When the egg is fertilized if there are too many or too few chromosomes, it usually can't form the placenta properly. This prevents the hCG from being continually produced, allowing the corpus luteum to die off, lowering progestone before the placenta can create its own, and finally causing the endometrium to break down
+
+* Luteal phase defect
+
+Sometimes the embryo is perfectly fine, but the corpus luteum just doesn't produce enough progesterone to maintain the endometrium long enough for the placenta to take over.
+
+In this case, because the embryo is healthy and will eventually produce a functioning placenta, taking progesterone supplements can help maintain the endometrium long enough for the placenta to develop

@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       96b16f96-5984-45dd-a693-595527fbd2e0
+:END:
+#+title: triboelectric series
+#+filetags: :physics:
+
+* References
+
+
+
+* Summary
+
+How easily materials give or accept electrons
+
+Things like hair and glass like to *lose* electrons.
+Plastic and polyester like to *gain* electrons.
+
+Meanwhile, cotton is neutral.
+
+
+* Hyperbaric Chambers
+
+This is why if you're in a extremely oxygenated environment, you aren't allowed to wear synthetics or have any plastic

@@ -1,0 +1,157 @@
+:PROPERTIES:
+:ID:       1be3c404-695a-44b0-a839-51588c56a2ee
+:END:
+#+title: abortion
+#+filetags: :biology:medicine:pregnancy:
+
+* References
+
+
+
+* Summary
+
+* Types
+
+** Medication abortion
+
+Blocks the uterus from receiving progesterone, allowing the endometrium to die and be flushed out along with the embryo
+
+*** Mifepristone
+
+This is the first pill you take. Its molecular structure is extremely similar to progesterone, allowing it to fit into the progesterone receptors in the endometrium. This prevents the actual progesterone from reaching the endometrium. 
+
+Since the mifepristone isn't actually progesterone, it doesn't maintain the uterine lining
+
+*** Misoprostol
+
+This is taken 24-48 hours after the first pill. It essentially stimulates labour.
+
+=Cervix:= It causes the cervix to soften and open, and the uterine muscles to contract, removing the lining.
+
+** Procedural abortion
+
+Gentle medical suction is used to empty the uterus of the lining. 
+
+*** Vacuum aspiration
+
+The uterus has multiple layers. The endometrium is the inner layer, while the outer layer is the *myometrium* (which produces contractions). The endometrium itself has two layers: the *functional layer* or functionalis (which is the layer that is shed during menstruation) and the *basal layer* or basalis (which produces stem cells that replenish the functionl layer)
+
+
+=Cleavage plane:= This sits between the basal layer and the functional layer. 
+
+=Cannula:= A small, thin, flexible plastic tube. It has a smooth blunt end to reduce risk of scratching the uterus, and it has smooth openings on the side
+
+Doctors are able to use gentle suction to remove the functional layer without harming the basal layer. Once the functional layer is removed, the myometrium contracts strongly, which prevents any bleeding.
+
+The doctor can also tell when the functional layer is gone, because the basal layer has a different texture
+
+** Dilation and Evacuation
+
+This is done during the second-trimester
+
+The cervix needs to be opened much wider in this procedure. This usually occurs the day before the actual abortion
+
+*** Opening the cervix
+
+=Osmotic dilators:= Sterile sticks made of *seaweed* (laminaria) or synthetics are inserted into the cervix, to act like sponges and absorb moisture. As they do, they slowly grow, pushing the cervix gently open
+
+=Misoprostol:= Can be used to soften the cervical tissue
+
+*** Evacuation
+
+Forceps are used to gently grab and remove the tissue
+
+At the end of the procedure, a cannula is used to remove the functional layer of the endometrium
+
+** Induction abortion
+
+This is rarely used, except in cases of severe fetal abnormalities. This requires being *admitted to a hospital* or a highly specialized clinic.
+
+=Labour:= Labour is induced through a combination of mifepritone and misoprostol
+
+
+
+* Requirements and Limitations
+
+** On request
+
+Abortions that don't require medical or personal justification to be done are called *on request* (or elective)
+
+=Not allowed:= In around 20 countries, abortion is illegal *under under circumstance.* This includes Malta, El Salvador, and the Philippines.
+
+=12-14 weeks:= This is the standard limit on elective abortions. This is *during the first trimester*, and so is done using the cannula. The embryo is considered a fetus at *11 weeks* (which is eight weeks after fertilization). This timeline limit for elective abortion is written to allow a buffer window
+
+=24 weeks:= A smaller group of countries, like the UK allow up to 24 weeks
+
+=No limit:= A few nations, like Canada and New Zealand, have completely decriminalized abortion, allowing you to /legally/ have an abortion at any stage. However, *doctors won't do it past 24 weeks* due to safety concerns 
+
+** On specific grounds
+
+Abortion performed due to rape, health risks, or fatal fetal abnormalities
+
+=Rape:= Most countries allow timeline extensions in the case of rape of 20 to 24 weeks. 
+
+=Severe abnormalities:= In the case of severe/fatal genetic defects discovered during the *anatomy ultrasound* (which is standard around 18 to 20 weeks), countries like the UK, France, and Canada will allow later abortions, as long as *a medical board approves* 
+
+=Maternal life:= Almost any country that allows abortions in some cases will allow abortions at any time if the mother's *life or long term health is at risk* 
+
+
+** United States
+
+Because the US has healthcare determined at the state, rather than federal level, things are more complex there.
+
+=Supreme court:= The SC overturned national protections for abortion, allowing it to be determined at the state level.
+
+=Total bans:= Around 13 states ban abortion at all stages
+
+=6 weeks:= Some states ban it after six weeks, which is widely regarded as unreasonable, as many people don't know they're pregnant until week 7 (pregnancy can be determined between 4 and 7 weeks, but the timing highly depends on the person's individual biology and whether their body's reaction to pregancy exhibits symptoms or signals earlier or later). Some people (with highly irregular cycles, PCOS, or that just don't exhibit symptoms) don't end up discovering that they're pregnant until *10 to 12 weeks*
+
+=No limit:= About nine states and Washington DC have no legal limits, and leave it up to the doctors.
+
+*** Roe v. Wade
+
+This case hinged on the interpretations of the *14th Amendment*, which protects a citizen's right to /liberty/ and /due process/ 
+
+=1973:= The Supreme Court determined that the right to liberty *includes a right to privacy*. It was concluded that this right to privacy included a woman's right to make her own reproductive choices without government interference.
+
+=2022:= The Supreme Court (with a new set of justices) determined that a right that isn't explicitly mentioned in the Constitution can only be protected by the Constitution if it's /deeply rooted in the nation's history and tradition./ Because abortion was heavily restricted in the 1800s, they concluded that abortion didn't meet the requirement and overturned it, handing the power back to individual states.
+
+It is /highly unusual/ for the Supreme Court to overturn a previous ruling. However, it has happened about 150 times in American history.
+
+=Stare decisis:= The SC strongly avoids overturning previous rulings. The doctrine of stare decisis tells the court to follow historical precedent. However, they are allowed to overturn things if they really want to. In order to maintain legitimacy as a *non-political body*, the Court tries to avoid voting based on political affiliation: for decades, even conservative justices didn't try to overturn Roe v. Wade
+
+=1992:= In fact, in 1992, the Court had a 7-2 majority of Republican-appointed justices. People expected them to overturn Roe v. Wade, but *three conservative justices* argued in favour of the previous ruling. 
+
+**** Federalist Society
+
+After 1992, the anti-abortion movement formed the Federalist Society, to vet young conservative lawyers, to come up with a list of potential Court candidates that would be willing to overturn Roe. They didn't necessarily look for lawyers who were outspoken against abortion; they focused on those that took an *originalist* interpretation of the Constitution
+
+**** 2016 -- 2020
+
+=2016:= Justice Antonin Scalia dies. President Obama nominates Merrick Garland to fill the seat. Mitch McConnell (the Senate Majority Leader) blocks the nomination by refusing to even hold a hearing.
+
+=Senate Majority Leader:= The Leader gets to decide the daily agenda for the Senate. It's completely legal for them to just *not schedule any time* for a vote or debate on a given issue.
+
+Additionally, McConnell coordinated with the Republican chairman of the Senate Judiciary Committee (who do a public hearing of any nominee before the nominee is considered by the full Senate). The SJC agreed to *refuse to hold hearings* or even meet with Judge Garland.
+
+=Trump:= McConnell was able to block the hearings *for 293 days* until Trump won the presidency. At which point, Trump nominates Neil Gorsuch, who is confirmed by Congress.
+
+=2018:= Justice Anthony Kennedy retires. He was one of the conservative justices that upheld Roe in 1992. He is replaced with Brett Kavanaugh by Trump.
+
+=2020:= Weeks before the 2020 election, Justice Ruth Bader Ginsburg dies. The Senate rushes a confirmation of Amy Coney Barrett before the election
+
+** Canada
+
+=1988:= The SC struck down its old abortion law as unconstitutional. This means that you cannot be criminally prosecuted over getting an abortion. This /does not/ mean that doctors have to give you one
+
+=Up to 24 weeks:= You can typically get one upon request, and it will even be covered by provincial health insurance
+
+Week 24 is the start of the third trimester. There is *no clinic in Canada* that offers elective abortions after *23 weeks and 6 days*. As soon as it becomes the third trimester, you cannot get an elective abortion.
+
+The only third trimester abortions are done in cases of *severe abnormalities* or the *risk of deah* 
+
+=Training:= It's important to understand that it's not just about the ethical aspects of abortion; you have to be *specially trained*
+to perform third trimester abortions safely, and *almost no one in the world is*. Ironically, patients are often referred to doctors in the states in the case that a third trimester abortion is approved
+
+=Conscientious objection:= Any individual doctor is legally allowed to not provide an abortion due to personal, moral, or religious reasons. However they must immediately refer the patient to a *non-objecting colleague* or a public health service. This is mandated by their duty for patient care.
+

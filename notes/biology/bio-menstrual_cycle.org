@@ -2,10 +2,78 @@
 :ID:       4a26e0f9-ddf8-4f90-9d27-ced85f950feb
 :END:
 #+title: menstrual cycle
-#+filetags: :biology:body:
+#+filetags: :biology:body:period:hormones:
 
 * References
 
 * Summary
 
-* Progesterone
+
+* Hormones
+
+At the beginning of your period, both estrogen and progesterone are low. 
+
+** Follicle-Stimulating Hormone
+
+When your period starts, your brain releases Follicle-Stimulating Hormone (FSH) which signals to the ovaries to start maturing eggs.
+
+** Estrogen
+
+Estrogen is *produced by the egg follicles*. It causes the endometrium to thicken with blood vessels and tissue.
+
+It also creates a thin cervical mucus to aid in sperm's travel
+
+** Luteinizing Hormone
+
+Produced by the pituitary gland. 
+
+*** LH Surge
+
+The sudden spike in LH triggers *ovulation.* 
+
+=Ovulation:= This is the process of the most dominant follicle bursting open to *release an egg.* Ordinarily, only the /single/ most dominant follicle opens. 
+
+Estrogen signals the body to grow the uterine lining, mature the egg, and trigger ovulation
+
+=SA/DA:= Estrogen actually boosts serotonin and dopamine
+
+=Skin:= Estrogen promotes collagen production, keeping your skin hydrated
+
+** Progesterone
+
+Once ovulation occurs, the empty follicle transforms into a *gland* called the *corpus luteum*, which *creates progesterone* 
+
+=Endometrium:= Progesterone is the signal to *stop growing new tissue* in the endometrium. The tissue that's already there starts to get spongier
+
+=Calm:= Progesterone calms the nervous system and promotes deep sleep.
+
+=Slow digestion:= Progesterone also slows digestion, allowing you to absorb more nutrients from the same amount of food.
+
+=Period:= After about two weeks, the corpus luteum dies off, ceasing the flow of progesterone. Without the progesterone, the uterine lining can't be maintained, and so breaks down, and this is your *period*.
+
+=Oily:= Progesterone stimulates sebum glands
+
+=Temperature:= Increasing progesterone also increases your body temperature
+
+*** Fertilization
+
+If an egg is fertilized, it travels down the fallopian tube to get to the uterine lining. This takes about a week.
+
+Once it gets to the lining, it implants itself and its outermost cells enter into the lining. These cells are called the chorionic cells, and they eventually become the *placenta*
+
+Once the egg implants into the lining, it starts producing *Human Chorionic Gonadotropin* (hCG)
+
+** Human Chorionic Gonadotropin
+
+=Chorion:= This is the outermost membrane of a developing embryo. Once the egg is implanted into the endometrium, the chorion starts developing into the placenta. The chorion comes from the trophoblasts of the blastocyst (the ball of cells that the fertilized egg turns into)
+
+=Syncytiotrophoblast:= The trophoblast cells form this outer layer, which ends up producing hCG into the bloodstream
+
+=Pregnancy tests:= This is what they're testing for.
+
+=Corpus luteum:= hCG tells the corpus luteum to stick around and *increase* its production of progesterone. This prevents the uterine lining from collapsing (and thus you don't get a period)
+
+The corpus luteum can only survive for another *7 to 10 weeks* before finally dying off. During this time the *placenta* develops, and produces its own progesterone! This is called the *luteal-placental shift* 
+
+* Corpus Luteum
+

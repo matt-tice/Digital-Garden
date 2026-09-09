@@ -1,0 +1,109 @@
+:PROPERTIES:
+:ID:       b0bdb0e3-53e7-427a-9c7c-5bd55fac1a56
+:END:
+#+title: confessional poetry
+#+filetags: :literature:art:
+
+* References
+
+
+
+* Summary
+
+
+1950s - 1960s
+
+Confessional poetry was a response to Modernism and its *detached, academic* style. In response, confessional focused on the *personal taboo*: mental illness, trauma, domestic life.
+
+Today (c. 2026) the confessional style is still prominent, but it doesn't have the same tooth, as it often discusses topics that are tame or mainstream (mental illness like anxiety and depression, as opposed to more demonized ones like NPD/BPD)
+
+* Inspirations
+
+=Nuclear family:= The idealized family structure was replaced in Confessional by the broken realities of divorce, alcoholism, depression, and violence
+
+=Modernism:= Confessionals hated Eliot, who wanted poetry to /escape from personality/ (/Tradition and the Individual Talent/, 1919); for the Confessionals, poetry was personality
+
+=Objective correlative:= Eliot's idea: you can't just say you're sad; you have to use objects and situations to evoke the emotion 
+
+=Fictional authors:= [[id:660b791c-cae3-4203-81e9-2f562f131d53][William Butler Yeats]] and Ezra Pound used a lot of mythology and fictional personas to speak for them. Similarly, in the Victorian era, authors like Robert Browning used the dramatic monologue of fictional characters to express taboo topics. Confessionals took a slightly different approach: while John Berryman *denied that Henry's narration was actually him*, Robert Lowell and Snodgrass wrote very *explicitly about themselves*.
+
+Lowell actually criticized Berryman for this. Later critics pointed out that Berryman doesn't only do this, he also writes in a *minstrel dialect*, having Henry speak as a character called "Mr. Bones"
+
+=New Criticism:= Poems were treated as self-contained objects. You shouldn't look to understanding the author in in order to understand the poem, because everything you need is already in the poem itself. Confessionals forced the reader to interact with both the author and the poem at the same time, especially to understand its meaning
+
+=What you know:= Mark Twain said to /write what you know/ --- meaning, Americans should stop trying to /write like Europeans/; they should express the unique character of American life. Confessional poets didn't follow this exactly; but they did sort of an extreme analogy, wherein they wrote literally about themselves
+
+* Inspired
+
+=Death of the Author:= 
+
+=Slop:= Sexton and Berryman both criticized poets who mistook suffering for art; Confessional was powerful not just because it was autobiographical, but because it confession was crafted into a work of art
+
+* Aspects
+
+=Autobiographical:= Confessional allowed and encouraged the poet to write about their own experiences, in the first-person
+
+=Taboo:= Suicide, mental illness, addiction, sex
+
+* Essays
+
+** Poetry as Confession, M.L. Rosenthal (1959)
+
+Confession is poetry that *removes the mask of the author*
+
+=Vulnerability:= 
+
+** A Note on Henry, John Berryman
+
+Written about /The Dream Songs/. He tells the reader that the narrator of the poems is not the author John Berryman
+
+
+
+* Poets
+
+** W.D. Snodgrass
+
+The inspiration for Robert Lowell. He wrote about the pain of his divorce
+
+*** Heart's Needle (1959)
+
+** Robert Lowell
+
+Published letters from his wife without her permission
+
+*** Life Studies (1959)
+
+Wrote about his manic depression and ancestral trauma
+
+In reviewing it, M.L. Rosenthal coined the term *Confessional Poetry* 
+** Sylvia Plath
+
+** Anne Sexton
+
+Unlike Lowell, who was well-off, Sexton was middle-class. She wrote of the suburban life of a housewife, in all honesty: abortion, menstruation, masturbation, postpartum depression, the fear of killing her children
+
+=Therapy:= Sexton started writing because her therapist thought it would be a good way to process her trauma
+
+=Subconscious:= She approached poetry as a way of engaging with her subconscious
+
+=Performance:= She liked to perform her poems, sometimes with a band called /Anne Sexton and Her Kind/ 
+
+=Criticism:= Critics felt like she was turning away from art and just doing *emotional exhibitionism* 
+
+*** To Bedlam and Part Way Back (1960)
+
+Motherhood, menstruation, mental breakdowns
+
+*** Freak Show
+
+** John Berryman
+
+*** The Dream Songs (1964)
+
+Berryman writes of a fractured self, named Henry, who also exists as a blackface character called Mr Bones by Henry's unnamed friend.
+
+=Pronouns:= Berryman speaks not only as the authorial-I, but as other pronouns: he, we, you 
+
+=Form:= All of the Dream Songs are three stanzas of six lines each (so 666)
+
+=Voice:= The poetry constantly jumps between high and low voice, slang, archaic words, slant rhyme and full
