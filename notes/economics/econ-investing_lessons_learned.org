@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       89035bed-7c5e-4243-9f3e-2462ee72eeb4
+:END:
+#+title: investing lessons learned
+#+filetags: :failure:economics:
+
+* References
+
+
+
+* Summary
+
+Lessons I've learned (often the hard way) since starting to invest and trade in May 2025.
+
+* Margin requirements change
+
+* Some stocks really are predictable
+
+* Use strict stop losses Always
+
+* Don't doubt stock movement
+
+I've spent too many trading days (weeks, months) expecting a correction on dying stocks, or waiting for a price to drop while suffering opportunity cost.
+
+
+
+* Save margin space

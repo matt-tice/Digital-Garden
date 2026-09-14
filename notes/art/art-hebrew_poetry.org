@@ -1,0 +1,105 @@
+:PROPERTIES:
+:ID:       62a6bcc7-18c1-4efe-ac1b-42d5fab950ea
+:END:
+#+title: hebrew poetry
+#+filetags: :art:
+
+* References
+
+
+
+* Summary
+
+Hebrew was mainly a textual language until the 1940s
+
+* Language features
+
+** Shoresh
+
+Hebrew is built on three-letter consonant roots, called *shoresh*. This allows a connection between certain words that seem unrelated in english
+
+For example, bitachon (security), bitchah (trust), beten (pregnancy) go together musically and psychologically
+
+** Gender
+
+Every noun is gendered. Poets will use this in anthropomorphizing things like the sun, wind, or Jerusalem.
+
+A man walking through Jerusalem can have this nice structure of he was versus she was
+
+** Alphabet
+
+=Gematria:= Every Hebrew letter is strongly associated with a number. Poets will choose words whose shoresh adds up to a significant number, like 18 (life)
+
+* Biblical poetry
+
+Doesn't use rhyme or strict metre. 
+
+=Parallelism:= The underlying structure of biblical poetry is a balance between *two halves* of a verse. Ideas replace syllables
+
+=Synonym:= The second line reinforces the first
+
+The heavens declare the glory of God
+and the sky proclaims his handiwork 
+
+=Antithesis:= The second line demonstrates the opposite of the first
+
+For the Lord watches over the way of the righteous
+but the way of the wicked leads to destruction
+
+=Rhythm:= There is usually a triplet rhythm in the language used; it's usually a single line split into two, where one half has three stressed words and the other has two or three
+
+** Psalms
+
+** Song of Songs
+
+** Job
+
+* Golden Age (10 - 12th century)
+
+Combined Hebrew and Arabic poetry
+
+=Meter:= Arabic poetry measures using short versus long syllables. Hebrew doesn't make this distinction, so poets used artificial short syllables like the *sheva vowel* 
+
+=Monorhyme:= Entire poems would end on the same syllable, rather than english poetry that often pairs up endings before switching to new syllables to rhyme
+
+=Muwashshah:= A stanza-based poem (strophic) with a recurring refrain
+
+** Yehuda Halevi
+
+** Shmuel HaNagid
+
+
+* Modern Hebrew
+
+When Hebrew was revived as a spoken language, different people spoke it differently. 
+
+=Ashkenazi:= Stressed the penultimate syllable. Poets would use iambic or trochaic rhythms
+
+=Sephardic:= Stressed the final syllable
+
+* Prophets
+
+Poets in Israel are considered an extension of the prophetic tradition; speaking as the collective soul of the nation and detailing uncomfortable truth
+
+* Natan Alterman
+
+* Likrat (Towards)
+
+=Free verse:= People stopped using the Ashkenazi pronunciation and pivoted to free verse poetry
+
+** Yehuda Amichai
+
+He was born Ludwig Pfeuffer in Germany. His family fled the Nazis when he was 12. He changed his last name to Amichai (my nation lives)
+
+=Military:= Amichai fought in WWII, the 1948 War of Independence, and the wars in 1956 and 1973.
+
+=Colloquial:= Used colloquial language. Dealt with small domestic details
+
+=Religion:= He used biblical references, expressions from the Talmud, and liturgical language alongside modern slang
+
+
+
+*** Influenced
+
+Ted Hughes, who ended up translating his work into english
+

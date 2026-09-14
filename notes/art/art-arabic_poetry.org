@@ -1,0 +1,70 @@
+:PROPERTIES:
+:ID:       c6f04862-d031-40c5-b70d-7a15bf71eef3
+:END:
+#+title: arabic poetry
+#+filetags: :art:
+
+* References
+
+
+* Language structure
+
+** Consonant roots
+
+Like [[id:62a6bcc7-18c1-4efe-ac1b-42d5fab950ea][hebrew poetry]] arabic words are built on three-letter consonant root, allowing connections between words that are unrelated in english
+
+** Balagha
+
+The classical science of Arabic rhetoric. One of the really cool things it does is it examines how *altering word order* changes the emotion of a line
+
+Arabic is an inflected language, allowing a huge variety of word orders
+
+** Huge vocabulary
+
+Love, sadness, and the desert all have wide and subtle vocabularies associated to them.
+
+* Classical Arabic poetry
+
+** Diwan al-Arab
+
+*** Qasida
+
+A traditional poem
+
+** Al-Bihar (the seas)
+
+The 16 classical meters defined by *Al-Khalil ibn Ahmad al-Farahidi* 
+
+=Syllables:= They are either short or long. The 16 classical meters are imagined as seas that the poet swims through
+
+=Moving consonants:= have vowels
+
+=Quiescent consonants:= don't have voweels
+
+** Bayt (House)
+
+Each line is a bayt, which is self-contained
+
+=Halves:= Each bayt has two halves: the sadr (chest / first half) and the 'ajuz (rump / second half)
+
+=Qafiyah:= Every line ends on the same letter and vowel sound
+
+
+* Tafila Poetry (free verse)
+
+Abandoned the bayt and qafiyah
+
+=Tafila:= A single metrical foot (something like an iamb). It would be repeated and unequal number of times per line
+
+** Nazik al-Malaika
+
+** Badr Shakir al-Sayyab
+
+
+** Mahmoud Darwish
+
+=Colloquial:= Took classical arabic and infused it with modern colloquial speech
+
+=Nakba:= The collective trauma of loss
+
+*** A Soldier Dreams of White Lilies
