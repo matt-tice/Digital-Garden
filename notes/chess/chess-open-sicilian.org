@@ -1,0 +1,150 @@
+:PROPERTIES:
+:ID:       07edf063-870f-4804-ad68-83df493ef345
+:END:
+#+title: open sicilian
+#+filetags: :chess:opening:
+
+* References
+
+
+
+* Summary
+
+In the open sicilian we've traded off Black's c-pawn; this immediately *weakens the d6 square*, since only one pawn defends it.
+
+Similarly, losing the white d-pawn weakens c3 
+
+There are three questions that define Black's structure in the open sicilian:
+
+        1. e6 or d6?
+        2. Nc6 or Nf6?
+        3. fianchetto or not?
+
+* Pawns
+
+** d6
+
+=e5:= Suggests playing e5. The immediate consequence is also signaling that the *d5 square will be weak* (without the e6 pawn to guard it). This has some interesting features:
+
+        * white will try to place a knight on d5
+        * the closed e-file grants each side king safety
+
+** e6
+
+=Black's lB:= Blocks Black's light square bishop from facing the kingside
+
+=d6:= *Weak*. It has a more subtle effect on Black's dark square bishop: e6 weakens the d6 square even further (because Black's c-pawn was traded off, d6 starts out weak), so Black's dark bishop needs to protect it. If instead we have Bg7, white will try to play Nb5 and Bf4 to target d6.
+
+=Queenside:= Black will often launch a queenside attack with a6 b5 and Bb7. This moves the light bishop out from being blocked by e6, and aims it at e4
+
+=d5:= Black really wants to get d5; it will use Bb7, Nf6
+
+** e5
+
+
+
+* All Knights
+
+The classical and four knights sicilians are very balanced
+
+** Classical
+
+=d6:= Bolsters e5. Weakens d5 if e5 is played.
+
+=Nc6:= Pressures d4 and e5
+
+=Nf6:= Pressures e4 and d5. This is a direct threat to white's e4 pawn
+
+=Balance:= The pawn and knight together guard all of the central squares.
+
+
+| Pawn       | d6        |
+| Knight     | Nc6 & Nf6 |
+| Fianchetto | No        |
+
+
+** Four knights
+
+| Pawn       | e6        |
+| Knight     | Nc6 & Nf6 |
+| Fianchetto | No        |
+
+=e6:= Strengthens d5
+
+=Nc6:= Pressures d4 and e5
+
+=Nf6:= Pressures e4 and d5
+
+=Balance:= The knights and pawn together guard all of the central squares
+
+**** Pin
+
+=Features:= Instead of playing Nc6, black plays Bb4
+
+* Taimanov
+
+=e6:= Strengthens d5
+
+=Nc6:= Pressures d4 and e5. Without having Nf6, there's nothing for white to attack directly with a pawn storm on the kingside. 
+
+=Balance:= Together, the pawn on e6 and knight on c6 give strength to d4, d5, and e5
+
+| Pawn       | e6  |
+| Knight     | Nc6 |
+| Fianchetto | No  |
+
+
+* Kan
+
+=e6:= Strengthens d5
+
+=a6:= 
+
+| Pawn       | e6 |
+| Knight     | No |
+| Fianchetto | No |
+
+
+* Najdorf
+
+| Pawn       | d6 |
+| Knight     | No |
+| Fianchetto | No |
+
+=d6:= Bolsters e5. Weakens d5 if e5 is played.
+
+=a6:= Instead of developing a knight, black chooses to play a6
+
+
+* Dragon
+
+
+| Pawn       | d6  |
+| Knight     | Nf6 |
+| Fianchetto | Yes |
+
+=d6:= Bolsters e5. Weakens d5 if e5 is played.
+
+=Nf6:= Pressures e4 and d5
+
+=Bb7:= 
+
+* Sveshnikov
+
+=Features:= All four knights and e5 (black)
+
+| Pawn       | e5          |
+| Knights    | Nc6 and Nf6 |
+| Fianchetto | No          |
+
+
+* Lowenthal
+
+=Features:= Nc6, e5 (black) and Nd4
+
+| Pawn       | e5  |
+| Knight     | Nc6 |
+| Fianchetto | No  |
+
+
+** Kalashnikov
