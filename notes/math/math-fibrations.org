@@ -1,0 +1,73 @@
+:PROPERTIES:
+:ID:       25b52283-b7cd-4262-912f-aee13e7764bf
+:END:
+#+title: fibrations
+#+filetags: :math:cats:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Total and base space
+
+Given any functor \(F: \mathcal{C} \rightarrow \mathcal{D}\) we call \(\mathcal{C}\) the *total space*, and \(\mathcal{D}\) the *base space*. 
+
+** Strict fiber of a functor
+
+For any object \(B \in \mathcal{D}\), the *strict fibre* \(\mathcal{C}_{B}\) is 
+\[
+\mathcal{C}_{B} = \{ (A,f) \mid F(A) = B \text{ and } F(f) = id_{B} \}
+\]
+
+Every strict fiber gives us a category whose objects are the objects \(A\) and morphisms are the morphisms \(f\) for all \((A,f) \in \mathcal{C}_{B}\). Note that each \(f\), since it gets sent to \(id_{B}\), must be a map between two objects \(A_{1}, A_{2}\) with \(F(A_{1}) = F(A_{2}) = B\), so \(f\) sits inside the induced category.
+
+By abuse of notation, we'll denote the induced category as \(\mathcal{C}_{B}\) as well.
+
+=Vertical morphisms:= The morphisms in the category \(\mathcal{C}_{B}\) are called *vertical* 
+
+** Essential fibre of a functor
+
+For any object \(B \in \mathcal{D}\), the *essential fibre* \(F^{-1} (B)\) is 
+\[
+F^{-1} (B) = \{ (A, f) \mid F(f): F(A) \rightarrow B \text{ is an isomorphism} \}
+\]
+
+So it's basically the comma or slice category over the object \(B\), but you restrict to only considering isomorphisms.
+
+\[
+F^{-1} (F(B))= \{ (A, f) \mid F(f): F(A) \rightarrow F(B) \text{ is an isomorphism} \}
+\]
+
+This will include all objects isomorphic to \(B\):
+         if \(A \cong^{f} B\) then \((A,f) \in F^{-1} (F(B))\)
+
+But not everything in the fiber will be of this form. 
+
+** Cartesian
+
+A morphism \(f: A \rightarrow B\) in \(\mathcal{C}\) is called *F-cartesian* (or just cartesian) if the following universal property is satisfied:
+
+For all \(F(h): F(X) \rightarrow F(B)\) and \(\phi: F(X) \rightarrow F(A)\) such that \(F(h) = \phi F(f)\), there is a *unique* \(g: X \rightarrow A\) such that \(\phi = F(g)\) and \(gf = h\).
+
+** Grothendieck fibration
+
+\(F: \mathcal{C} \rightarrow \mathcal{D}\) is a *Grothendieck fibration* if for all \(\phi: A \rightarrow F(B)\), there is some cartesian map \(f: X \rightarrow B\) such that \(\phi = F(f)\). 
+
+The choice of \(f\) for all \(\phi\) is called a *cleavage* 
+
+=Fiber:= Taking the essential fiber
+
+*** Discrete fibration
+
+A Grothendieck fibration is *discrete* if there is a unique \(f: X \rightarrow B\) with \(\phi = F(f)\).
+
+
+* Theorems
+
+
+* Examples
