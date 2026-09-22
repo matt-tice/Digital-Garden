@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>vector bundles</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">vector bundles</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<h1 id="definitions">Definitions</h1>
+<h2 id="smooth-vector-bundle-of-rank-n">Smooth vector bundle of rank
+n</h2>
+<p>Let <span class="math inline"><em>M</em></span> be a smooth manifold.
+A <strong>smooth vector bundle of rank n</strong> over <span
+class="math inline"><em>M</em></span> is a bundle <span
+class="math display"><em>π</em> : <em>E</em> → <em>M</em></span> where
+each fiber <span
+class="math inline"><em>π</em><sup>−1</sup>(<em>x</em>)</span> is a
+vector space of dimension <span class="math inline"><em>n</em></span>,
+and</p>
+<p><code class="verbatim">Locally trivial:</code> For all <span
+class="math inline"><em>x</em> ∈ <em>M</em></span>, there is a
+neighbourhood <span
+class="math inline"><em>U</em><sub><em>x</em></sub></span> and a
+diffeomorphism <span
+class="math inline"><em>ϕ</em> : <em>π</em><sup>−1</sup>(<em>U</em>) → <em>U</em> × <em>k</em><sup><em>n</em></sup></span>
+such that</p>
+<p><span
+class="math inline"><em>ϕ</em>|<sub><em>π</em><sup>−1</sup>(<em>x</em>)</sub> : <em>π</em><sup>−1</sup>(<em>x</em>) → {<em>x</em>} × <em>k</em><sup><em>n</em></sup> ≅ <em>k</em><sup><em>n</em></sup></span>
+is a linear isomorphism</p>
+<p><span
+class="math inline"><em>π</em> ∘ <em>ϕ</em><sup>−1</sup>(<em>x</em>,<em>v</em>) = <em>x</em></span>
+for all <span
+class="math inline"><em>v</em> ∈ <em>k</em><sup><em>n</em></sup></span>[2026-09-21
+Mon 14:27].</p>
+<h3 id="other-categories">Other categories</h3>
+<p>You can instead consider topological vector bundles, replacing
+everywhere the smooth structure by continuous</p>
+<h2 id="sections-of-a-bundle">Sections of a bundle</h2>
+<p>Given a vector bundle <span
+class="math inline"><em>π</em> : <em>E</em> → <em>M</em></span>, a
+section is a map <span
+class="math inline"><em>σ</em> : <em>M</em> → <em>E</em></span> such
+that <span
+class="math inline"><em>σ</em><em>π</em> = 1<sub><em>M</em></sub></span>.</p>
+<p>Similarly, you can define a section on any open set in <span
+class="math inline"><em>M</em></span>.</p>
+<p><code class="verbatim">Notation:</code> We write the sections on an
+open set <span class="math inline"><em>U</em></span> as <span
+class="math inline"><em>Γ</em>(<em>U</em>)</span>.</p>
+<p><code class="verbatim">Sheaf:</code> Sections form a sheaf</p>
+<h2 id="connections">Connections</h2>
+<p>A <strong>connection</strong> is a linear map of sheaves</p>
+<p><span
+class="math inline">∇ : <em>Γ</em>(<em>M</em>) → <em>Ω</em><sub><em>M</em></sub><sup>1</sup>⊗<sub>𝒪<sub><em>M</em></sub></sub><em>Γ</em>(<em>M</em>)</span></p>
+<p>such that</p>
+<p><code class="verbatim">Leibniz rule:</code> <span
+class="math inline">∇(<em>f</em><em>σ</em>) = <em>d</em><em>f</em> ⊗ <em>σ</em> + <em>f</em>∇(<em>σ</em>)</span></p>
+<p>where <span class="math inline">𝒪<sub><em>M</em></sub></span> is the
+sheaf of regular or holomorphic functions on <span
+class="math inline"><em>M</em>.</span></p>
+<h2 id="directional-derivative">Directional derivative</h2>
+<p>Given any vector field <span class="math inline"><em>ζ</em></span> we
+define the directional derivative with respect to <span
+class="math inline"><em>ζ</em></span> by <span
+class="math display">∇<sub><em>ζ</em></sub>(<em>σ</em>) = ⟨∇(<em>σ</em>), <em>ζ</em>⟩</span></p>
+<h3 id="intuition">Intuition</h3>
+<p>The connection allows us to define a first (directional) derivative.
+To get higher derivatives, we need to extend <span
+class="math inline">∇</span> to act on higher differential forms.</p>
+<h2 id="flat-integrable-connection">Flat / integrable connection</h2>
+<p>A <strong>flat</strong> or integrable connection is a connection such
+that <span
+class="math display">[∇<sub><em>α</em></sub>,∇<sub><em>β</em></sub>] = ∇<sub>[<em>α</em>,<em>β</em>]</sub></span>
+for all vector fields <span
+class="math inline"><em>α</em>, <em>β</em></span>.</p>
+<h3 id="intuition-1">Intuition</h3>
+<p>When the connection is flat, the only way parallel transport can be
+path-dependent is when paths wrap around singularities</p>
+<h2 id="curvature">Curvature</h2>
+<h3 id="curls">Curls</h3>
+<p>The curl of a vector field is its curvature</p>
+<p>Flat connections have vanishing curvature</p>
+<h1 id="theorems">Theorems</h1>
+<h2 id="flat-connections-are-holonomic-d-modules">Flat connections are
+holonomic D-modules</h2>
+<h1 id="examples">Examples</h1>
+<h2 id="tangent-bundle">Tangent bundle</h2>
+</body>
+</html>

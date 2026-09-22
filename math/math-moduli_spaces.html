@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>moduli spaces</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">moduli spaces</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>The idea of a moduli space is that points in the space parameterize
+<strong>isomorphism classes</strong> of some objects.</p>
+<h1 id="definitions">Definitions</h1>
+<h1 id="theorems">Theorems</h1>
+<h2 id="narasimhan-seshadri-theorem">Narasimhan-Seshadri theorem</h2>
+<h2 id="hilbert-mumford-criterion">Hilbert-Mumford criterion</h2>
+<h2 id="symplectic-reduction">Symplectic reduction</h2>
+<h1 id="examples">Examples</h1>
+<h2 id="grassmannians">Grassmannians</h2>
+<p><code class="verbatim">Goal:</code> Given a vector space <span
+class="math inline"><em>V</em></span>, you want to classify all <span
+class="math inline"><em>k</em></span>-dimensional subspaces, where the
+isomorphism classes are <strong>isomorphisms of sets</strong>
+(bijections). So two different subspaces of dimension <span
+class="math inline"><em>k</em></span> are considered equivalent if and
+only if they're literally the exact same set.</p>
+<p><code class="verbatim">Notation:</code> <span
+class="math inline"><em>G</em><em>r</em><sub><em>k</em></sub>(<em>V</em>)</span>
+is the set of all <span
+class="math inline"><em>k</em></span>-dimensional subspaces of a vector
+space <span class="math inline"><em>V</em>.</span></p>
+<h3 id="construction-1">Construction 1:</h3>
+<p><code class="verbatim">Construction:</code> For each subspace, we
+choose a basis. Once we have a basis, all other choices of basis for
+that particular subspace are just going to be given by actions of the
+general linear group <span
+class="math inline"><em>G</em><em>L</em><sub><em>k</em></sub></span>.
+Choosing a basis for a <span
+class="math inline"><em>k</em></span>-dimensional subspace is the same
+as picking a rank <span class="math inline"><em>k</em></span>, <span
+class="math inline">(<em>n</em>×<em>n</em>)</span> matrix</p>
+<p>The problem is that if we use <span
+class="math inline"><em>n</em> × <em>n</em></span> matrices, we not only
+need to quotient out by the action of <span
+class="math inline"><em>G</em><em>L</em><sub><em>k</em></sub></span>, we
+also need to quotient out by switching things into the <span
+class="math inline">(<em>n</em>−<em>k</em>)</span> other positions. For
+example, if <span
+class="math inline"><em>k</em> = 2, <em>n</em> = 10</span> then having a
+matrix of all zeros, except in the first two rows should correspond to
+the same subspace as the matrix that moves the non-zero rows to the
+bottom.</p>
+<p>To avoid this extra redundancy (or <em>gauge freedom</em>) we can use
+<span class="math inline">Mat<sup>*</sup>(<em>k</em>,<em>n</em>)</span>,
+the set of <span class="math inline">(<em>k</em>×<em>n</em>)</span>
+matrices of rank <span class="math inline"><em>k</em></span>. Then we
+have</p>
+<p><span
+class="math display"><em>G</em><em>r</em><sub><em>k</em></sub>(<em>V</em>) ≅ Mat<sup>*</sup>(<em>k</em>,<em>n</em>)/<em>G</em><em>L</em><sub><em>k</em></sub>.</span></p>
+<h3 id="construction-2">Construction 2:</h3>
+<p>Instead of working with <em>any</em> basis, we can do the same type
+of construction, restricting to <strong>orthonormal bases</strong>:</p>
+<p>We first take any orthonormal basis on <span
+class="math inline"><em>V</em></span>, which corresponds to an element
+of <span class="math inline"><em>O</em>(<em>n</em>)</span>.</p>
+<h3 id="construction-3">Construction 3:</h3>
+<p>We use <a
+href="https:/Digital-Garden/math/math-projections.html">projections</a></p>
+<p><span
+class="math display"><em>G</em><em>r</em><sub><em>k</em></sub> = {<em>P</em> ∣ <em>P</em><sup>2</sup> = <em>P</em>, <em>P</em> = <em>P</em><sup>†</sup>, <em>T</em><em>r</em>(<em>P</em>) = <em>k</em>}</span></p>
+<p><code class="verbatim">Physics:</code> <span
+class="math inline"><em>G</em><em>r</em><sub>1</sub>(ℂ<sup><em>n</em></sup>)</span>
+is then the space of <strong>pure states</strong></p>
+<h3 id="plücker-coordinates">Plücker coordinates</h3>
+<h3 id="tautological-bundle">Tautological bundle</h3>
+<p>The fiber above any point in the Grassmanian is literally the
+subspace that point represents</p>
+<h3 id="schubert-cells">Schubert cells</h3>
+<h2 id="elliptic-curves">Elliptic Curves</h2>
+<h2 id="riemann-surfaces">Riemann Surfaces</h2>
+<h2 id="teichmüller-space">Teichmüller Space</h2>
+<h2 id="deligne-mumford-compactification">Deligne-Mumford
+Compactification</h2>
+<h2 id="mapping-class-groups">Mapping Class Groups</h2>
+<h1 id="invariants">Invariants</h1>
+<h2 id="donaldson-invariants">Donaldson invariants</h2>
+<h2 id="seiberg-witten-invariants">Seiberg-Witten invariants</h2>
+<h2 id="gromov-witten-invariants">Gromov-Witten invariants</h2>
+<h1 id="mirror-symmetry">Mirror symmetry</h1>
+<h1 id="deformation-theory">Deformation theory</h1>
+</body>
+</html>
