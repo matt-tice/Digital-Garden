@@ -1,0 +1,94 @@
+:PROPERTIES:
+:ID:       daf7f720-0455-48c8-b401-8ead485f26d7
+:END:
+#+title: moduli spaces
+#+filetags: :math:geometry:
+
+* References
+
+
+
+* Summary
+
+The idea of a moduli space is that points in the space parameterize *isomorphism classes* of some objects.
+
+* Definitions
+
+
+
+
+* Theorems
+
+** Narasimhan-Seshadri theorem
+
+** Hilbert-Mumford criterion
+
+** Symplectic reduction
+
+* Examples
+
+** Grassmannians
+
+=Goal:= Given a vector space \(V\), you want to classify all \(k\)-dimensional subspaces, where the isomorphism classes are *isomorphisms of sets* (bijections). So two different subspaces of dimension \(k\) are considered equivalent if and only if they're literally the exact same set. 
+
+=Notation:= \(Gr_{k}(V)\) is the set of all \(k\)-dimensional subspaces of a vector space \(V.\)
+
+*** Construction 1: 
+
+=Construction:= For each subspace, we choose a basis. Once we have a basis, all other choices of basis for that particular subspace are just going to be given by actions of the general linear group \(GL_{k}\). Choosing a basis for a \(k\)-dimensional subspace is the same as picking a rank \(k\),  \((n \times n)\) matrix
+
+The problem is that if we use \(n \times n\) matrices, we not only need to quotient out by the action of \(GL_{k}\), we also need to quotient out by switching things into the \((n-k)\) other positions. For example, if \(k=2, n = 10\) then having a matrix of all zeros, except in the first two rows should correspond to the same subspace as the matrix that moves the non-zero rows to the bottom.
+
+To avoid this extra redundancy (or /gauge freedom/) we can use \(\operatorname{Mat}^{*}(k,n)\), the set of \((k \times n)\) matrices of rank \(k\). Then we have
+
+\[
+Gr_{k}(V) \cong \operatorname{Mat}^{*}(k,n) / GL_{k}.
+\]
+
+*** Construction 2:
+
+Instead of working with /any/ basis, we can do the same type of construction, restricting to *orthonormal bases*: 
+
+We first take any orthonormal basis on \(V\), which corresponds to an element of \(O(n)\). 
+
+*** Construction 3:
+
+We use [[id:c9ac9cd8-3df1-404c-a92e-45e315603bef][projections]]
+
+\[
+Gr_{k} = \{ P \mid P^{2} = P, P = P^{\dagger}, Tr(P) = k \}
+\]
+
+=Physics:= \(Gr_{1} (\mathbb{C}^{n})\) is then the space of *pure states*
+
+*** Plücker coordinates
+
+*** Tautological bundle
+
+The fiber above any point in the Grassmanian is literally the subspace that point represents 
+
+*** Schubert cells
+
+
+
+** Elliptic Curves
+
+** Riemann Surfaces
+
+** Teichmüller Space
+
+** Deligne-Mumford Compactification
+
+** Mapping Class Groups
+
+* Invariants
+
+** Donaldson invariants
+
+** Seiberg-Witten invariants
+
+** Gromov-Witten invariants
+
+* Mirror symmetry
+
+* Deformation theory

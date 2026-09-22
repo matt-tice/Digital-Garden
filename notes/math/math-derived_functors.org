@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       8971b09b-ec27-4d55-92d5-f9fd29183eb9
+:END:
+#+title: derived functors
+#+filetags: :math:alg_top:
+
+* References
+
+
+
+* Summary
+
+1. Take an object (like a sheaf)
+2. Take a resolution
+3. Apply a functor (like taking global sections)
+4. Take the cohomology of the resulting complex
+        - this step loses a lot of information
+        - if you want to keep that info, you look at [[id:c425042c-5f39-44db-953f-8aedfda7e2ba][derived categories]]
+
+What you get out the other side is a *derived functor*.
+
+
+* Definitions
+
+
+
+
+* Theorems
+
+* Examples

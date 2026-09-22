@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       c9ac9cd8-3df1-404c-a92e-45e315603bef
+:END:
+#+title: projections
+#+filetags: :math:linear_alg:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Projection
+
+A linear transformation \(P\) on a vector space \(V\) is called a *projection* if \(P^{2} = P\).
+
+** Orthogonal projection
+
+Let \(V\) be a Hilbert space. An *orthogonal projection* \(P\) is a projection such that 
+\[
+\langle Px, y \rangle = \langle x, Py\rangle
+\]
+
+=Note:= Annoyingly, orthogonal projections are not orthogonal matrices. They're Hermitian matrices. The terminology comes from the fact that the image and kernel are *orthogonal as subspaces*.
+
+
+* Theorems
+
+** Orthogonal subspaces
+
+Let \(P\) be an orthogonal projection. Then 
+\[
+\ker \oplus \operatorname{Im} \cong V
+\]
+
+*** Proof
+
+Let \(x \in V\) and write \(x = Px + (x - Px) \in \ker + \operatorname{Im}\). 
+
+And if \(x \in \ker \cap \operatorname{Im}\), we would have \(x = Px = 0\).
+
+** Orthogonal projections are bounded
+
+*** Proof
+
+Using Cauchy-Schwarz,
+\(\langle Px, Px \rangle = \langle P^{2} x, x \rangle = \langle Px, x\rangle\leq \sqrt{\langle Px, Px \rangle \langle x,x\rangle}\)
+
+So \(\| Px \| = \sqrt{\langle Px, Px \rangle} \leq \| x \| \).
+
+** Projections are open maps
+
+** Hilbert projection theorem
+
+* Examples

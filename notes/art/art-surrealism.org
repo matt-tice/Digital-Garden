@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       7f4891bb-e0ab-49b9-b8da-4441ec4b511a
+:END:
+#+title: surrealism
+#+filetags: :art:
+
+* References
+
+
+
+* Summary
+
+=Randomness:= Was viewed as a way of breaking through to the unconscious
+
+* Techniques
+
+** Automatism
+
+The goal is to write faster than the conscious mind can think
+
+** Cadavre Exquis (exquisite corpse)
+
+A bunch of artists get together, each writing a word or drawing a section of a body on a piece of paper. They then cover what they made and pass the paper to the next person, who adds to the work without seeing what the previous person did
+
+** Le Hasard Objectif
+
+** Frottage
+
+Marx Ernst laid paper over textured surfaces like floorboards or leaves, and rub a pencil over it. He would use this as a baseline for the full piece
+
+** Coulage
+
+Pouring molten material into cold water, letting it instantly freeze into a random shape, and then interpretting it
+
+** If/when
+
+Two players: A and B
+
+A writes a conditional clause starting with /if/ or /when/ 
+
+Player B doesn't see what A wrote, but writes a consequence
+
+
+
+* Authors
+
+** André Breton

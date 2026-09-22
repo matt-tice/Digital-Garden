@@ -1,0 +1,46 @@
+:PROPERTIES:
+:ID:       c425042c-5f39-44db-953f-8aedfda7e2ba
+:END:
+#+title: derived categories
+#+filetags: :math:alg_top:cats:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+=Chain complexes:= [[id:fdde2b71-a9d9-4ed5-97e5-b6d89e128b50][chain complexes]] have a certain amount of flexibility inherent to them --- they allow you to take an algebraic structure and encode extra information about how it /stretches/ (in a metaphorical sense).
+
+=Manifolds:= If \(M\) is a smooth, compact, oriented manifold of dimension \(n\), Poincaré duality says
+\[
+H^{i}(M, \mathbb{C}) \cong H^{n-i}(M,\mathbb{C})^{*}
+\]
+
+=Singularities:= Destroy Poincaré duality. 
+
+=Verdier duality:= 
+
+
+* Theorems
+
+** Homological mirror symmetry
+
+There is an equivalence of derived categories:
+
+\[
+D^{b} (Fuk(M)) \cong D^{b}(Coh(Y))
+\]
+
+between the derived category of the Fukaya category of a manifold \(M\), and the derived category of coherent sheaves on the dual manifold \(Y\)
+
+* Examples
+
+** Coherent Sheaves
+
+=String theory:= This is where the B-model D-branes live: they're chain complexes of coherent sheaves
+
+** Fukaya category

@@ -1,0 +1,63 @@
+:PROPERTIES:
+:ID:       e66d6d6d-7aaa-4735-b51d-33a838f45c05
+:END:
+#+title: oulipo
+#+filetags: :literature:poetry:
+
+* References
+
+
+
+* Summary
+
+=1960s:= The movement was started by french mathematicians and wriers. 
+
+=Title:= The full title is /Ouvroir de Littérature Potentielle/ 
+
+=Constraints:= The Oulipians believed that true creative freedom comes from strict, intentional constraints on your work
+
+=Bad freedom:= Too much freedom leads to predictability and writer's block 
+
+* Ideas
+
+** N+7
+
+Replace every noun in an existing piece by one seven words down in the dictionary
+
+** Lipogram
+
+Banning a particular letter of the alphabet in a work
+
+** Snowball
+
+Each line is one word long, and each of those words increases by one letter each time
+
+** Palindromes
+
+Reads the same forwards and backwards
+
+** Prisoner's constraint
+
+You aren't allowed to use any letters that have descenders or ascenders: for example b or d
+
+That leaves aceimnorsuvwxz
+
+
+
+* Authors
+
+** Raymond Queneau
+
+*** Cent mille milliards de poèmes
+
+** Georges Perec
+
+*** La Disparition
+
+** Italo Calvino
+
+*** Invisible cities
+
+* Ouxpo
+
+A generalization to other mediums

@@ -52,6 +52,12 @@ You get a lot of sentences that are broken not only in a new line, but also a ne
 
 Poets seem to love first-person nowadays. A lot of poetry is a version of a first-person narrative about some *small moment* in the narrator's life. It usually pivots to some *philosophical assertion* at the very end.
 
+** Titles
+
+Poets learn to treat the title of a poem as another line of the poem; poems are rarely just titled "sonnet 3" anymore. 
+
+=Context:= MFA titles normally set the scene of the poem
+
 * Submission windows
 
 Submit at the *beginning of a submission window* whenever you can. With AI especially, slush piles are colossal.

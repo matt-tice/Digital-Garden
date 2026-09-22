@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       45b12a63-0944-4334-90a8-a50284abe870
+:END:
+#+title: perverse sheaves
+#+filetags: :math:geometry:
+
+* References
+
+
+
+* Summary
+
+These things show up when you want to work with differential equations that have *singularities* 
+
+Ordinarily, when working with [[id:a3ec7f7f-0799-4e6d-980d-e14c5c7617f9][vector bundles]] and connections, if there are no singularities, our solutions form a *local system* --- the transition maps are constant.
+
+The singularities force us to chop up our space into different regions; each one of these regions forms a local system, and then we stitch them all together with a *constructible sheaf*.
+
+=The problem:= Constructible sheaves don't have Poincaré duality. You can restore it by replacing a single sheaf with a *chain complex of constructible sheaves*, called a perverse sheaf
+
+* Definitions
+
+** Perverse Sheaf
+
+
+
+
+* Theorems
+
+* Examples

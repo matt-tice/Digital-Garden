@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       1548f3c3-d914-4452-94ab-267b0ea89b9d
+:END:
+#+title: opening principles
+#+filetags: :chess:
+
+* References
+
+
+
+* Summary
+
+* Center control
+
+One of the reasons the center is so important is because it's the point of *symmetry breaking* on the board. 
+
+** Attacks in the center
+
+Whenever the opponent plays on the flank, you should try to respond in the center. For example *a3, h3, a6, h6* are all flank moves
+
+* Develop pieces
+
+* Threats
+
+** Avoid empty threats
+
+* Trades
+
+** Bishops and knights
+
+Don't trade them for no reason
+
+* Pawns
+
+** Doubled
+
+You want to avoid doubled pawns
+
+* Bishops
+
+Develop them *outside of the pawn chain* 
+
+* Rooks
+
+Go on the files that you expect to open
+
+* Closed positions
+
+Don't close the position down arbitrarily
+
+In these positions, you want to *take space* and use *prophylaxis* 
+
+* Open positions
+
+Speed is imperative in these positions. Taking back pawns is not a good use of time --- *develop your pieces* 

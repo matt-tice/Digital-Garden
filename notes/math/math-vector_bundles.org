@@ -1,0 +1,93 @@
+:PROPERTIES:
+:ID:       a3ec7f7f-0799-4e6d-980d-e14c5c7617f9
+:END:
+#+title: vector bundles
+#+filetags: :math:geometry:bundles:diff_geometry:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Smooth vector bundle of rank n
+
+Let \(M\) be a smooth manifold. A *smooth vector bundle of rank n* over \(M\) is a bundle
+\[
+\pi : E \rightarrow M
+\]
+where each fiber \(\pi^{-1}(x)\) is a vector space of dimension \(n\), and 
+
+=Locally trivial:= For all \(x \in M\), there is a neighbourhood \(U_{x}\) and a diffeomorphism \(\phi: \pi^{-1} (U) \rightarrow U \times k^{n}\) such that 
+
+        \(\phi|_{\pi^{-1} (x)} : \pi^{-1} (x) \rightarrow \{ x \} \times k^{n} \cong k^{n} \) is a linear isomorphism 
+
+        \(\pi \circ \phi^{-1} (x,v) = x\) for all \(v \in k^{n} \)[2026-09-21 Mon 14:27].
+
+*** Other categories 
+
+You can instead consider topological vector bundles, replacing everywhere the smooth structure by continuous 
+
+** Sections of a bundle
+
+Given a vector bundle \(\pi : E \rightarrow M\), a section is a map \(\sigma : M \rightarrow E\) such that \(\sigma \pi = 1_{M}\).
+
+Similarly, you can define a section on any open set in \(M\).
+
+=Notation:= We write the sections on an open set \(U\) as \(\Gamma(U)\).
+
+=Sheaf:= Sections form a sheaf
+
+** Connections
+
+A *connection* is a linear map of sheaves
+
+\(\nabla: \Gamma(M) \rightarrow \Omega_{M}^{1} \otimes_{\mathcal{O}_{M}} \Gamma(M)\)
+
+such that 
+
+=Leibniz rule:= \(\nabla(f \sigma ) = df \otimes  \sigma  + f \nabla(\sigma ) \)
+
+where \(\mathcal{O}_{M}\) is the sheaf of regular or holomorphic functions on \(M.\)
+
+** Directional derivative
+
+Given any vector field \(\zeta \) we define the directional derivative with respect to \(\zeta\) by 
+\[
+\nabla_{\zeta} (\sigma ) = \langle \nabla(\sigma ), \zeta\rangle
+\]
+
+*** Intuition
+
+The connection allows us to define a first (directional) derivative. To get higher derivatives, we need to extend \(\nabla\) to act on higher differential forms.
+
+** Flat / integrable connection
+
+A *flat* or integrable connection is a connection such that 
+\[
+[\nabla_{\alpha} , \nabla_{\beta }  ] = \nabla_{[\alpha , \beta ]}
+\]
+for all vector fields \(\alpha , \beta \).
+
+*** Intuition
+
+When the connection is flat, the only way parallel transport can be path-dependent is when paths wrap around singularities
+
+** Curvature
+
+*** Curls
+
+The curl of a vector field is its curvature
+
+Flat connections have vanishing curvature
+
+* Theorems
+
+** Flat connections are holonomic D-modules
+
+* Examples
+
+** Tangent bundle

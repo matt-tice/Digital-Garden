@@ -1,0 +1,253 @@
+:PROPERTIES:
+:ID:       af6e1442-858e-42ec-93aa-b4d5a31dd28a
+:END:
+#+title: (co)homology
+#+filetags: :math:alg_top:
+
+* References
+
+
+
+* Summary
+
+ker d_n / im d_{n+1}
+
+** Differential Operators
+
+If we view d as a kind of linear differential operator, or a system of equations, then
+- the cycles are *homogeneous solutions*: d(f) = 0.
+- the boundaries are *integrable:* f = d(g).
+
+The homology then tells you about the *non-integrable solutions.*  
+
+*** Example: Electromagnetism
+
+In EM, Maxwell's equations tell us
+\nabla\cdot B = 0
+So the magnetic field is a cycle. But when doing calculations, we often want to integrate the magnetic field, in order to compute things about it; so we need B to be /integrable/
+- so we want it to be a boundary.
+This means that we need
+B = \nabla \times A
+This says that there is a *magnetic potential* A, that generates the actual magnetic field.
+
+In fact, looking at the de Rham complex, *Helmholtz's theorem* says that for R^N, the (co)homology at the level of the magnetic field is zero (every magnetic field satisfying Maxwell's equations is integrable).
+
+**** Aharonov-Bohm Effect
+
+When you puncture R, you get non-trivial cohomology
+- so there are certain *obstructions* (non-integrable solutions).
+- In particular, there are fields with zero curl that /aren't gradients./
+  
+
+** Cohomology
+
+Coboundaries are *flat* or *path-independent* or *conservative*
+- if you take any two paths from the same starting point to the same ending point, you get the same result (of taking the integral over the path, say)
+- so there's no energy being lost anywhere, in a certain sense
+
+Using Poincaré duality, we have that
+<d f , \gamma> = <f, \partial \gamma>
+where d is the codifferential, and \partial is the differential, and the pairing is integrating the function (cochain) over the space (chain).
+
+A coboundary is g = df. So for coboundaries
+<g, \gamma> = <f, \partial\gamma>
+So g is determined by just the boundary (paths through the bulk are irrelevant).
+
+A cocycle will satisfy 
+<f, \partial \gamma> = <0, \gamma> = 0 for all \gamma.
+So it has *no information on the boundary*
+- it's "path independent" on the boundary, in a higher dimensional sense
+- *any two half-coverings of the boundary* give the same integral
+
+But think about what this means:
+when we take two half-coverings, we're just taking two pieces of the boundary, and saying they stitch together to form the whole boundary (they don't literally need to have the same size, any 2-block partition will work). So there's a *glue-line* that you're stitching the coverings together on.
+
+But no matter how you move, stretch, contract, etc. the covering pieces, the fact that they come together at the glue-line means they enclose a bulk --- they're the boundary of /something/. So the integral of each piece will always be the same!
+So if you take just one of the two coverings, no matter how you move it around, its integral will never change, as long as you keep the glue-line fixed in place.
+- this is absolutely fascinating!
+
+By the way, you need to keep the glue-line the same, because if you don't one will be bigger than the other, and so you can't stitch the two versions together to enclose a bulk.  
+
+But note that here, this only works when we're integrating over \partial \gamma. So /by assumption/ there's a bulk, \gamma.
+In other words, a cocycle is something that, if you have a bulk, becomes path independent on the boundary.
+- so the cocycle *adds no information to the bulk*
+- this in turn means that the only way you can get non-trivial info from the bulk is if the actual geometry of the bulk is non-trivial (for example, there's a hole in it)
+
+Cocycles can *suck the information* from the boundary into the bulk. The boundary data is trivial; all that matters is what's in the bulk  
+
+
+*** Mapping Cones
+
+A mapping cone of a function
+f: X \to Y
+glues a cone-version of X onto Y, along f.
+You first form the mapping cylinder X \times I, and then glue an end on Y, and then collapse the other end to a point.
+
+Our perspective on cocycles then tells us that a cocycle's integral won't change, as you deform X, as long as you keep f fixed.
+
+*** Cohomology
+
+Cohomology is then very interesting: think of the mapping cone, or half a sphere. Being a cocycle for the hemisphere means you can deform the hemisphere and nothing changes.
+
+But that hemisphere is actually the *bulk for the gluing line*!
+Which means that deforming the hemisphere also won't change coboundaries on the gluing line.
+
+Consider the pair of pants cobordism M. We break it into 3 parts:
+1. the 1d rims \Gamma = \partial \Sigma
+2. the 2d surface \Sigma = \partial M
+3. the 3d bulk M
+
+What we found above is that the cocycles and coboundaries don't notice the shape of the cobordism at all, other than the fact that it has a certain number of rims.
+- in other words, they only care about the topological class of the cobordism
+- this is how we see a *topological quantum field theory* arising: taking path integrals is independent of the world-sheet defining the cobordism
+
+
+
+*** Chern Classes
+
+The first Chern class is a 2-cocycle
+So it's something that has no boundary data
+- it can't see boundaries of 3d objects
+
+** Topological String Theory
+
+In the A-model you basically work with a pair of pants where you collapse all three of the rims to points
+- this is the /virtual holomorphic sphere/
+
+The theory is topological in the sense that d \omega = 0 (\omega is a cycle), for an appropriate d
+- this says that you can change the metric of your pants
+- and even if you do that, you have certain *Gromov-Witten invariants* (the integral on the surface, of \omega)
+
+The idea of *quantum cohomology* is that you study maps
+f: S^2 \to X
+that hit three different cycles in the manifold X (the collapsed rims of the pants)
+
+You think of the map f as a kind of non-local communication between the cycles (strings)
+
+* Definitions
+
+** Homology
+
+Let \(C_{\bullet}\) be a chain complex
+\[
+\ldots \rightarrow C_{n}_{+}_{1} \xrightarrow{d_{n+1}} C_{n} \rightarrow \ldots
+\]
+
+The *cycles* are defined to be 
+\[
+Z_{n} = \ker d_{n}
+\]
+
+The boundaries are 
+\[
+B_{n} = \operatorname{im} d_{n}_{+}_{1}
+\]
+
+The homology is
+\[
+H_{n} = Z_{n} / B_{n} = \ker d_{n} / \operatorname{im} d_{n}_{+}_{1}.
+\]
+
+
+
+** Change of coefficients
+
+* Theorems
+
+** Universal coefficient theorem
+
+** de Rham's Theorem
+
+\[
+H^{k}_{\text{de Rham}} (M) \cong  H_{\text{singular}}^k (M; \mathbb{R})
+\]
+
+** Poincaré duality
+
+Let \(M\) be a smooth, compact, \(n\)-dimensional manifold. Then
+
+\[
+H^{k}(M) \cong H_{n-k}(M)
+\]
+
+=Singularities:= In the case of singularities, PD breaks, and we need to replace it with *intersection homology* 
+
+** Eilenberg-MacLane spaces
+
+\[
+H^{k}_{\text{group}} (G) \cong H^{k}_{\text{singular}}(K(G,1))
+\]
+
+
+* Examples
+
+** Simplicial
+
+=Probes:= Simplices. We perform a triangulation of our space
+
+=Loop quantum gravity:= In spin foam models, we discretize spacetime into a simplicial complex.
+
+=Ponzano-Regge models:= 
+
+=Turaev-Viro TQFT:= 3d quantum gravity has no local degrees of freedom; so you get a tqft.
+
+
+*** Definition
+
+Let \(X\) be a simplicial complex and \(C_{k}(X)\) be the free module generated by the \(k\)-simplices in \(X.\)
+
+
+
+** Singular
+
+=Probes:= Continuous maps of simplices
+
+** de Rham
+
+=Probes:= Smooth differential forms
+
+** Sheaf
+
+=Probes:= Sections of a sheaf
+
+Our coefficients are a sheaf called the *coefficient system*. The constant sheaf  \(\mathbb{R}\) recovers singular cohomology.
+
+** Intersection
+
+=Probes:= Chain complexes
+
+The goal is to restore Poincaré duality to spaces with singularities
+
+=String theory:= This is relevant in string theory compactifications
+
+** Group
+
+=Probes:= 
+
+Measures group actions
+
+** Lie algebra
+
+=Probes:= 
+
+** Morse
+
+** Elliptic
+
+** Quantum Elliptic
+
+** Big quantum
+
+=Frobenius manifold:= The cohomology becomes a Frobenius manifold (a manifold where the tangent spaces are all Frobenius algebras)
+
+** Quantum
+
+=Correlation functions:= This is related to the correlation functions of the A-model
+
+=Closed strings:= 
+
+** Floer
+
+=Open strings:= 
+
+** Equivariant
