@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>measure theory</title>
+  <title>measures</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,47 +166,66 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">measure theory</h1>
+<h1 class="title">measures</h1>
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
-<p>There are some spaces that even manifolds can't keep track of; this
-is mainly where Lebesgue integration comes in.</p>
-<p>This leads to things like dominated convergence.</p>
-<p>Oh here's a fascinating thing I just learned: in undergraduate vector
-calculus, we have formulas like</p>
-<p><span
-class="math display">∫<sub><em>γ</em></sub><em>f</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>γ</em>(<em>t</em>))|<em>γ</em>′(<em>t</em>)|<em>d</em><em>t</em>.</span></p>
-<p><span
-class="math display">∫<sub><em>γ</em></sub><em>F</em>(<em>γ</em>) ⋅ <em>d</em><em>γ</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>F</em>(<em>γ</em>(<em>t</em>)) ⋅ <em>γ</em>′(<em>t</em>)<em>d</em><em>t</em>.</span></p>
-<p>This is actually a <strong>measure-theoretic integral</strong>, not a
-calculus on manifolds one. This starts to explain why I have difficulty
-understanding how differential forms fit into vector calculus. The
-calculus on manifolds set up is where you deal with the formal calculus
-of differentials; so in that case you're working with things like <span
-class="math inline"><em>P</em><em>d</em><em>x</em> + <em>Q</em><em>d</em><em>y</em>.</span>
-The problem, I'm now realizing is that my professors would jump back and
-forth between these two paradigms, without making it clear what they
-were doing.</p>
-<p>How can you tell when it's a measure-theoretic integral? Whenever it
-has an aspect that depends on coordinates — dot products, norms — it's
-measure theory.</p>
 <h1 id="definitions">Definitions</h1>
-<h2 id="sigma-algebra"><a
-href="https:/Digital-Garden/math/math-sigma_algebra.html">sigma
-algebra</a></h2>
-<h2 id="measure">Measure</h2>
-<h1 id="outer-measure">Outer Measure</h1>
-<p>λ<sup>*</sup>(A) = inf { ∑<sub>i</sub> ℓ(I<sub>i</sub>) | A ⊆
-∪<sub>i</sub> I<sub>i</sub> }</p>
-<p>where I<sub>i</sub> are intervals and ℓ is their length</p>
-<p>Replacing the sums by finite ones gives the <strong>Jordan
-content</strong></p>
-<ul>
-<li>it's not countably additive</li>
-</ul>
+<h2 id="measure-on-a-measurable-space">Measure on a measurable
+space</h2>
+<p>Let <span class="math inline">(<em>X</em>,<em>Σ</em>)</span> be a
+measurable space (a set and a sigma algebra). A function <span
+class="math inline"><em>μ</em> : <em>Σ</em> → [0,∞]</span> is a
+<strong>measure</strong> if <span
+class="math inline">$\mu(\sum_{k=1}^{N} A_{k}) = \sum_{k}_{}_{=}_{1}^{N}
+\mu(A_{k}) $</span> where <span
+class="math inline"><em>A</em> + <em>B</em></span> denotes the union of
+two disjoint sets.</p>
+<h3 id="notes">Notes</h3>
+<p><code class="verbatim">Empty measure:</code> Most times you'll see
+also the condition that <span
+class="math inline"><em>μ</em>(∅) = 0</span>, but this is satisfied
+automatically as long as there's <strong>at least one set of finite
+measure</strong>, since <span
+class="math inline"><em>μ</em>(<em>A</em>) = <em>μ</em>(<em>A</em>+∅) = <em>μ</em>(<em>A</em>) + <em>μ</em>(∅)</span>
+so if <span class="math inline"><em>μ</em>(<em>A</em>) &lt; ∞</span> ,
+we can subtract it from both sides, to get <span
+class="math inline"><em>μ</em>(∅) = 0.</span></p>
+<p><code class="verbatim">Countable additivity:</code> Usually this is
+assumed, but I'd like to do as much as I can in the finite world before
+switching to the countable case.</p>
+<h2 id="signed-measure">Signed measure</h2>
 <h1 id="theorems">Theorems</h1>
-<h2 id="banach-tarski-paradox">Banach-Tarski paradox</h2>
+<h2 id="monotone">Monotone</h2>
+<p>Let <span class="math inline"><em>μ</em></span> be a (non-signed)
+measure. If <span class="math inline"><em>A</em> ⊆ <em>B</em></span>
+then <span
+class="math inline"><em>μ</em>(<em>A</em>) ≤ <em>μ</em>(<em>B</em>)</span>.</p>
+<h3 id="proof">Proof</h3>
+<p>We have <span
+class="math inline"><em>μ</em>(<em>B</em>) = <em>μ</em>(<em>A</em>+<em>B</em>\<em>A</em>) = <em>μ</em>(<em>A</em>) + <em>μ</em>(<em>B</em>\<em>A</em>) ≥ <em>μ</em>(<em>A</em>)</span></p>
+<p>since <span
+class="math inline"><em>μ</em>(<em>B</em>\<em>A</em>) ≥ 0</span>.</p>
+<h2 id="continuity-from-below">Continuity from below</h2>
+<h2 id="continuity-from-above">Continuity from above</h2>
 <h1 id="examples">Examples</h1>
+<h2 id="counting-measure">Counting measure</h2>
+<h2 id="lebesgue-measure">Lebesgue measure</h2>
+<h2 id="arc-length">Arc length</h2>
+<h2 id="haar-measure">Haar measure</h2>
+<h2 id="riemannian-manifold">Riemannian manifold</h2>
+<h2 id="hausdorff-measure">Hausdorff measure</h2>
+<h2 id="probability-distributions">Probability distributions</h2>
+<h2 id="dirac-measure">Dirac measure</h2>
+<h2 id="borel-measure">Borel measure</h2>
+<h2 id="jordan-measure">Jordan measure</h2>
+<h2 id="ergodic-measure">Ergodic measure</h2>
+<h2 id="gaussian-measure">Gaussian measure</h2>
+<h2 id="baire-measure">Baire measure</h2>
+<h2 id="young-measure">Young measure</h2>
+<h2 id="loeb-measure">Loeb measure</h2>
+<h2 id="liouville-measure">Liouville measure</h2>
+<h2 id="gibbs-measure">Gibbs measure</h2>
+<h2 id="radon-measures">Radon measures</h2>
 </body>
 </html>

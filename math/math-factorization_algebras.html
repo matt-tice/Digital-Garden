@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>measure theory</title>
+  <title>factorization algebras</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,47 +166,52 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">measure theory</h1>
+<h1 class="title">factorization algebras</h1>
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
-<p>There are some spaces that even manifolds can't keep track of; this
-is mainly where Lebesgue integration comes in.</p>
-<p>This leads to things like dominated convergence.</p>
-<p>Oh here's a fascinating thing I just learned: in undergraduate vector
-calculus, we have formulas like</p>
-<p><span
-class="math display">∫<sub><em>γ</em></sub><em>f</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>γ</em>(<em>t</em>))|<em>γ</em>′(<em>t</em>)|<em>d</em><em>t</em>.</span></p>
-<p><span
-class="math display">∫<sub><em>γ</em></sub><em>F</em>(<em>γ</em>) ⋅ <em>d</em><em>γ</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>F</em>(<em>γ</em>(<em>t</em>)) ⋅ <em>γ</em>′(<em>t</em>)<em>d</em><em>t</em>.</span></p>
-<p>This is actually a <strong>measure-theoretic integral</strong>, not a
-calculus on manifolds one. This starts to explain why I have difficulty
-understanding how differential forms fit into vector calculus. The
-calculus on manifolds set up is where you deal with the formal calculus
-of differentials; so in that case you're working with things like <span
-class="math inline"><em>P</em><em>d</em><em>x</em> + <em>Q</em><em>d</em><em>y</em>.</span>
-The problem, I'm now realizing is that my professors would jump back and
-forth between these two paradigms, without making it clear what they
-were doing.</p>
-<p>How can you tell when it's a measure-theoretic integral? Whenever it
-has an aspect that depends on coordinates — dot products, norms — it's
-measure theory.</p>
+<p>Factorization algebras are cosheafs of observables.</p>
+<p><code class="verbatim">AQFTs:</code> The main problem with AQFTs is
+that it's incredibly difficult to handle PDEs on Lorentzian manifolds.
+Factorization algebras let you do quantum field theory on Lorentzian or
+Euclidean manifolds. So what happens in practice, is that people who
+work on factorization algebras just work on
+Euclidean/topological/conformal field theories</p>
+<p>In other words, factorization algebras don't give you any way to fix
+the analytic issues in QFTs.</p>
+<p><code class="verbatim">Wick rotation:</code> We don't know how to do
+it in curved spacetimes.</p>
+<p><code class="verbatim">Perturbation:</code> Factorization algebras
+are mainly useful for perturbative field theories. They can only handle
+non-perturbative things when they're topological, conformal, etc. This
+is the setting of <strong>chiral algebraic geometry</strong></p>
+<p><code class="verbatim">Renormalization:</code> In quantum field
+theory we can't evaluate operators at individual points or compute
+propagators at a point, rather than an interval. In factorization
+algebras, the way you handle this is you define your operators to live
+on open discs which are not allowed to overlap. When we look at
+short-distance behaviour, we use the <strong>Wilsonian renormalization
+group.</strong></p>
+<p><code class="verbatim">Quantum anomaly:</code> This is when the
+differential <span
+class="math inline"><em>d</em><sup>2</sup> ≠ 0.</span></p>
+<p><code class="verbatim">BRST:</code></p>
+<p><code class="verbatim">BV:</code> The chain map is essentially the
+equations of motion. The elements of the homology are observables acting
+on a field. So the cohomology basically says that we only care about how
+observables look <strong>on-shell</strong> (in the kernel of the chain
+map)</p>
+<p><code class="verbatim">Factorization homology:</code> This is a
+local-to-global process (a derived coend) that spits out a
+<strong>homology complex</strong> . The cohomology of the chain complex
+that factorization homology gives you, ends up being the full Hilbert
+space / space of states on your manifold.</p>
+<p><code class="verbatim">Operad:</code> A factorization algebra is
+really an algebra over a little-disk-like operad, where each disk is
+embedded into a fixed manifold.</p>
+<p><code class="verbatim">Operator product expansion:</code></p>
 <h1 id="definitions">Definitions</h1>
-<h2 id="sigma-algebra"><a
-href="https:/Digital-Garden/math/math-sigma_algebra.html">sigma
-algebra</a></h2>
-<h2 id="measure">Measure</h2>
-<h1 id="outer-measure">Outer Measure</h1>
-<p>λ<sup>*</sup>(A) = inf { ∑<sub>i</sub> ℓ(I<sub>i</sub>) | A ⊆
-∪<sub>i</sub> I<sub>i</sub> }</p>
-<p>where I<sub>i</sub> are intervals and ℓ is their length</p>
-<p>Replacing the sums by finite ones gives the <strong>Jordan
-content</strong></p>
-<ul>
-<li>it's not countably additive</li>
-</ul>
 <h1 id="theorems">Theorems</h1>
-<h2 id="banach-tarski-paradox">Banach-Tarski paradox</h2>
 <h1 id="examples">Examples</h1>
 </body>
 </html>

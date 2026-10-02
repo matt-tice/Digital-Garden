@@ -170,24 +170,52 @@
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
-<h1 id="ends">Ends</h1>
+<p>Coends basically have the following shape: you take an algebraic
+structure (covariant), and a geometric structure (contravariant) and you
+glue things together to form a global structure.</p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="ends">Ends</h2>
 <p>Let <span
-class="math inline"><em>F</em> : <em>C</em><sup><em>o</em><em>p</em></sup> × <em>C</em> → 𝒱</span>
-A <strong>wedge</strong> w → F is a collection of maps <span
+class="math inline"><em>F</em> : 𝒞<sup><em>o</em><em>p</em></sup> × 𝒞 → 𝒱</span>
+be an enriched functor, where <span class="math inline">𝒱</span> is a
+symmetric monoidal category and <span class="math inline">𝒞</span> is
+<span class="math inline">𝒱</span>-enriched.</p>
+<p>Consider the product over all objects in <span
+class="math inline">𝒞</span>, <span
+class="math inline">∏<sub><em>A</em></sub>Mor(<em>A</em>,<em>A</em>)</span>.</p>
+<p>A <strong>wedge</strong> <span
+class="math inline"><em>w</em> → <em>F</em></span> is an object <span
+class="math inline"><em>w</em></span> and a collection of maps <span
 class="math inline"><em>w</em><sub><em>A</em></sub> : <em>w</em> → <em>F</em>(<em>A</em>,<em>A</em>)</span>
-such that</p>
+such that the following commutes</p>
+<p>w → F(A,A) ↓ ↓ F(B,B) <span class="math inline">$
+\xrightarrow{(f,1)}$</span> F(A,B)</p>
+<p>for all <span
+class="math inline"><em>f</em> : <em>A</em> → <em>B</em></span>.</p>
 <p>An <strong>end</strong> is a universal wedge</p>
-<h2 id="intuition">Intuition</h2>
+<h3 id="intuition">Intuition</h3>
+<p>Ends are ways of taking two kinds of structure and restricting to
+those pieces which behave the same in both structures.</p>
+<p><code class="verbatim">Natural transformations:</code> These are the
+main example. The two types of structure are precomposition and
+postcomposition</p>
 <p>Think of the maps <span
 class="math inline"><em>w</em><sub><em>A</em></sub> : <em>w</em> → <em>F</em>(<em>A</em>,<em>A</em>)</span>
 as something like the maps that make up a natural transformation</p>
 <p>Because your end is a limit, you're basically looking at a collection
 {w<sub>A</sub>} such that they are invariant under altering the
 components of F(A, B) independently</p>
-<h1 id="coends">Coends</h1>
-<p>F(A, A) → F(A, B) ↓ ↓ F(B, A) → w</p>
+<h2 id="coends">Coends</h2>
+<p>F(A, A) <span class="math inline">$\xrightarrow{(1,f)}$</span> F(A,
+B) ↓ ↓ F(B, A) → w</p>
 <p>We denote the coend by ∫<sup>A</sup> F(A, A)</p>
-<h2 id="intuition-1">Intuition</h2>
+<h3 id="intuition-1">Intuition</h3>
+<p>Unlike an end, which restricts to compatible structure; the coend
+glues two different kinds of structure together</p>
+<p><code class="verbatim">Geometric realization:</code> Glues together
+the simplicial set blueprint with actual physical simplices</p>
+<p><code class="verbatim">Tensor modules:</code> Glues together two
+different modules</p>
 <p>The maps <span
 class="math inline"><em>w</em><sub><em>A</em></sub> : <em>F</em>(<em>A</em>,<em>A</em>) → <em>w</em></span>
 define your gluing</p>
@@ -196,11 +224,12 @@ F(A, B) independently.</p>
 <p>This is meant to be something like the <strong>tensor product of
 modules</strong></p>
 <ul>
-<li>In M ⊗ N, you have α m ⊗ n = m ⊗ α n</li>
+<li>In M ⊗ N, you have <span
+class="math inline"><em>α</em><em>m</em> ⊗ <em>n</em> = <em>m</em> ⊗ <em>α</em><em>n</em></span></li>
 </ul>
 <p>Similarly, here you want to think of C (its morphisms) as your ring,
 and the functors as your modules.</p>
-<h2 id="left-kan-extensions">Left Kan Extensions</h2>
+<h3 id="left-kan-extensions">Left Kan Extensions</h3>
 <p>If we have F: C → D and K: C → E</p>
 <p>C → D ↓ E</p>
 <p>The <strong>left Kan extension of F along K</strong> is</p>
@@ -209,5 +238,83 @@ and the functors as your modules.</p>
 <h1 id="yoneda">Yoneda</h1>
 <p>∫<sup>A</sup> Mor(A,B) ⊗ F(A) ≅ F(B)</p>
 <p>∫<sub>A</sub> Hom(Mor(B, A), F(A)) ≅ F(B)</p>
+<h1 id="examples">Examples</h1>
+<h2 id="geometric-realization">Geometric realization <span class="tag"
+data-tag-name="coends"><span class="smallcaps">coends</span></span></h2>
+<p><code class="verbatim">Algebra:</code> The simplex functor <span
+class="math inline"><em>Δ</em> → Top</span> that assigns a physical
+simplex to each combinatorial simplex.</p>
+<p><code class="verbatim">Geometry:</code> We look at a fixed simplicial
+set <span
+class="math inline"><em>X</em> : <em>Δ</em><sup><em>o</em><sup><em>p</em></sup></sup> → Set</span>.</p>
+<h2 id="tensor-product-of-modules">Tensor product of modules <span
+class="tag" data-tag-name="coends"><span
+class="smallcaps">coends</span></span></h2>
+<p>Take a ring viewed as an abelian-enriched one object category.</p>
+<p><code class="verbatim">Algebra:</code> A left <span
+class="math inline"><em>R</em></span>-module <span
+class="math inline"><em>N</em> : <em>R</em> → <em>A</em><em>b</em></span></p>
+<p><code class="verbatim">Geometry:</code> A right <span
+class="math inline"><em>R</em></span>-module <span
+class="math inline"><em>M</em> : <em>R</em><sup><em>o</em><sup><em>p</em></sup></sup> → <em>A</em><em>b</em></span></p>
+<p><span
+class="math display"><em>M</em>⊗<sub><em>R</em></sub><em>N</em> = ∫<sup><em>R</em></sup><em>M</em> × <em>N</em>.</span></p>
+<h2 id="kan-extensions">Kan extensions <span class="tag"
+data-tag-name="coends"><span class="smallcaps">coends</span></span></h2>
+<p><code class="verbatim">Algebra:</code> Some functor that carries
+algebraic data, which you'd like to extend to a larger space <span
+class="math inline"><em>G</em> : 𝒞 → ℰ</span></p>
+<p><code class="verbatim">Geometry:</code> A hom-functor <span
+class="math inline">Mor (<em>F</em>(−),<em>X</em>) : 𝒞<sup><em>o</em><sup><em>p</em></sup></sup> → Set</span></p>
+<p>The left Kan extension is <span
+class="math display">∫<sup><em>c</em> ∈ 𝒞</sup>Mor(<em>F</em>(<em>c</em>),<em>X</em>) × <em>G</em>(<em>c</em>).</span></p>
+<h2 id="group-actions">Group actions <span class="tag"
+data-tag-name="coends"><span class="smallcaps">coends</span></span></h2>
+<p>If <span class="math inline"><em>G</em></span> acts on a topological
+space <span class="math inline"><em>X</em></span>, you often want to
+look at the orbit space <span
+class="math inline"><em>X</em>/<em>G</em>.</span></p>
+<p><code class="verbatim">Algebra:</code> We take a trivial map from the
+delooping of <span class="math inline"><em>G</em></span> to the
+singleton. <span
+class="math inline"><em>B</em><em>G</em> → Top</span>.</p>
+<p><code class="verbatim">Geometry:</code> We take the map <span
+class="math inline"><em>B</em><em>G</em><sup><em>o</em><sup><em>p</em></sup></sup> → Top</span>
+that sends the unique object to the space <span
+class="math inline"><em>X</em></span>, and the maps to a right
+action.</p>
+<p>The orbit space is the coend <span
+class="math display"><em>X</em>/<em>G</em> = ∫<sup><em>B</em><em>G</em></sup><em>X</em> ×  * .</span></p>
+<h2 id="sieves">Sieves <span class="tag" data-tag-name="ends"><span
+class="smallcaps">ends</span></span></h2>
+<p>Consider the category of open sets of a manifold</p>
+<p><code class="verbatim">Algebra:</code> A functor assigning smooth
+functions to each open set <span
+class="math inline">Open(<em>M</em>) → Alg</span></p>
+<p><code class="verbatim">Geometry:</code> The open sets <span
+class="math inline">Open (<em>M</em>)<sup><em>o</em><sup><em>p</em></sup></sup> → Top</span></p>
+<p>The end takes all of the open sets and produces the global functions
+that can be appropriately restricted to each local open set.</p>
+<h2 id="natural-transformations">Natural transformations <span
+class="tag" data-tag-name="ends"><span
+class="smallcaps">ends</span></span></h2>
+<p><code class="verbatim">Algebra:</code></p>
+<p><code class="verbatim">Geometry:</code></p>
+<h2 id="group-invariants">Group Invariants <span class="tag"
+data-tag-name="ends"><span class="smallcaps">ends</span></span></h2>
+<p>We again consider the delooping of some group acting on a space.</p>
+<p><code class="verbatim">Algebra:</code> We take the representation of
+<span class="math inline"><em>G</em></span> acting on the left on our
+space <span class="math inline"><em>B</em><em>G</em> → Top</span>.</p>
+<p><code class="verbatim">Geometry:</code> We take the map <span
+class="math inline"><em>B</em><em>G</em><sup><em>o</em><sup><em>p</em></sup></sup> → Top</span>
+that sends the unique object to the singleton.</p>
+<p>The end is the space of <span
+class="math inline"><em>G</em></span>-invariants</p>
+<p><span
+class="math display">∫<sub><em>B</em><em>G</em></sub>Mor(*,<em>X</em>)</span></p>
+<h2 id="section"></h2>
+<p><code class="verbatim">Algebra:</code></p>
+<p><code class="verbatim">Geometry:</code></p>
 </body>
 </html>

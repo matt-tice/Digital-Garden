@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>measure theory</title>
+  <title>principal bundles</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,47 +166,59 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">measure theory</h1>
+<h1 class="title">principal bundles</h1>
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
-<p>There are some spaces that even manifolds can't keep track of; this
-is mainly where Lebesgue integration comes in.</p>
-<p>This leads to things like dominated convergence.</p>
-<p>Oh here's a fascinating thing I just learned: in undergraduate vector
-calculus, we have formulas like</p>
-<p><span
-class="math display">∫<sub><em>γ</em></sub><em>f</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>γ</em>(<em>t</em>))|<em>γ</em>′(<em>t</em>)|<em>d</em><em>t</em>.</span></p>
-<p><span
-class="math display">∫<sub><em>γ</em></sub><em>F</em>(<em>γ</em>) ⋅ <em>d</em><em>γ</em> = ∫<sub><em>a</em></sub><sup><em>b</em></sup><em>F</em>(<em>γ</em>(<em>t</em>)) ⋅ <em>γ</em>′(<em>t</em>)<em>d</em><em>t</em>.</span></p>
-<p>This is actually a <strong>measure-theoretic integral</strong>, not a
-calculus on manifolds one. This starts to explain why I have difficulty
-understanding how differential forms fit into vector calculus. The
-calculus on manifolds set up is where you deal with the formal calculus
-of differentials; so in that case you're working with things like <span
-class="math inline"><em>P</em><em>d</em><em>x</em> + <em>Q</em><em>d</em><em>y</em>.</span>
-The problem, I'm now realizing is that my professors would jump back and
-forth between these two paradigms, without making it clear what they
-were doing.</p>
-<p>How can you tell when it's a measure-theoretic integral? Whenever it
-has an aspect that depends on coordinates — dot products, norms — it's
-measure theory.</p>
 <h1 id="definitions">Definitions</h1>
-<h2 id="sigma-algebra"><a
-href="https:/Digital-Garden/math/math-sigma_algebra.html">sigma
-algebra</a></h2>
-<h2 id="measure">Measure</h2>
-<h1 id="outer-measure">Outer Measure</h1>
-<p>λ<sup>*</sup>(A) = inf { ∑<sub>i</sub> ℓ(I<sub>i</sub>) | A ⊆
-∪<sub>i</sub> I<sub>i</sub> }</p>
-<p>where I<sub>i</sub> are intervals and ℓ is their length</p>
-<p>Replacing the sums by finite ones gives the <strong>Jordan
-content</strong></p>
-<ul>
-<li>it's not countably additive</li>
-</ul>
+<h2 id="principal-g-bundle">Principal <span
+class="math inline"><em>G</em></span>-bundle</h2>
+<p>Let <span class="math inline"><em>G</em></span> be a topological
+group. A <strong>principal <span
+class="math inline"><em>G</em></span>-bundle</strong> is a fiber bundle
+<span class="math inline"><em>π</em> : <em>P</em> → <em>M</em></span>
+along with a continuous action <span
+class="math display"><em>G</em> × <em>P</em> → <em>P</em></span> such
+that <span class="math inline"><em>G</em></span> preserves the fibers of
+<span class="math inline"><em>P</em></span> and acts <em>freely</em> and
+<em>transitively</em> such that the map <span
+class="math inline"><em>G</em> → <em>P</em><sub><em>x</em></sub></span>
+<span class="math display"><em>g</em> → <em>g</em><em>x</em></span></p>
+<p><code class="verbatim">Transitive / free:</code> This ensures that
+the fibers themselves can be identified with the group <span
+class="math inline"><em>G</em>.</span> This is what normally happens in
+physics gauge theory models, which is why you often say that the gauge
+fields are themselves elements of the Lie group (or Lie algebra).</p>
+<p><code class="verbatim">Non-free:</code> When you drop the assumption
+of the action being free, the non-trivial stabilizers require you to
+consider <strong>orbifolds</strong> and <strong>algebraic
+stacks</strong></p>
+<h2 id="quotient">Quotient</h2>
+<p><code class="verbatim">String theory:</code> In string theory, you
+<strong>start with the total space</strong>. Spacetime is really a
+derived concept: by taking the quotient of the total space <span
+class="math inline"><em>P</em>/<em>G</em></span>, you get what spacetime
+looks like. This is also how you try to quantum gravity in the string
+theory world.</p>
+<p><code class="verbatim">Symplectic reduction:</code> <span
+class="math inline"><em>P</em></span> is your phase space and the
+quotient is the reduced phase space</p>
+<p><code class="verbatim">Moduli space:</code> <span
+class="math inline"><em>P</em></span> is the infinite-dimensional
+manifold of all possible connections on a bundle. The group <span
+class="math inline"><em>G</em></span> is the global gauge
+transformations. The quotient <span
+class="math inline"><em>P</em>/<em>G</em></span> is the moduli space of
+physical gauge configurations</p>
+<p><code class="verbatim">Symmetry breaking:</code> <span
+class="math inline"><em>G</em></span> represents the unbroken
+symmetries, while the actual ground state of the universe is only
+invariant under a <em>subgroup of symmetries</em> <span
+class="math inline"><em>H</em> ≤ <em>G</em></span>. The manifold of
+possible equivalent ground states is <span
+class="math inline"><em>G</em>/<em>H</em></span>. The coordinates
+corespond to <strong>Goldstone bosons</strong></p>
 <h1 id="theorems">Theorems</h1>
-<h2 id="banach-tarski-paradox">Banach-Tarski paradox</h2>
 <h1 id="examples">Examples</h1>
 </body>
 </html>

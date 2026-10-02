@@ -170,7 +170,80 @@
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
+<h1 id="definitions">Definitions</h1>
+<h2 id="wilson-loops">Wilson loops</h2>
+<h3 id="intuition">Intuition</h3>
+<p>These arose in studying quantum chromodynamics</p>
+<p>A Wilson loop (in spacetime) is what you get when you track the phase
+shift of a particle moving in a closed loop in spacetime.</p>
+<p><code class="verbatim">Confinement:</code> They were first invented
+as a way of explaining why quarks are never found in isolation</p>
+<p><code class="verbatim">Experiment:</code> We imagine a
+quark-antiquark pair blinking into existence at a positive separation,
+and trace their paths in spacetime, and then they blink out of
+existence. If you just have the quarks behaving independently, you get
+two separate curves. It turns out that the thing you get <strong>is not
+gauge invariant.</strong> But you can make it gauge invariant if you
+connect these two curves into a loop — in order to do so, you need to
+say that when the particles pop into/out of existence, they have
+something <strong>linking them together</strong></p>
+<p><code class="verbatim">Expectation value:</code> If you compute the
+expectation value of a Wilson loop, the integral you take basically
+fills in the loop, so you get a world sheet. It turns out <span
+class="math display">⟨<em>W</em><sub><em>C</em></sub>⟩ ∼ <em>e</em><sup>−<em>V</em>(<em>R</em>)<em>T</em></sup>, <em>T</em> → ∞</span>
+where <span class="math inline"><em>R</em></span> is the separation
+between the particles</p>
+<p>In EM your potential dies off as <span
+class="math inline">1/<em>R</em></span>, but it turns out for QCD that
+the potential increases as <span class="math inline"><em>R</em></span>.
+This is why quarks are <strong>confined</strong></p>
+<p><code class="verbatim">TQFT:</code> However, if you calculate Wilson
+loops in a <span class="math inline">(2+1)</span>-dimensional TQFT, the
+<span class="math inline"><em>R</em></span> and <span
+class="math inline"><em>T</em></span> dependence disappears; quarks (or
+their tqft equivalents) don't have confinement; the only thing that
+matters is how the worldlines are <strong>braided</strong>. The
+particles in the TQFT are <strong>anyons</strong></p>
+<p>The expectation value of the Wilson loops in this case is the
+<strong>Jones polynomial</strong></p>
+<h2 id="wilson-junction">Wilson junction</h2>
+<p>This is the baryonic version of the Wilson loop</p>
+<p>The structure you get looks like an <span
+class="math inline"><em>M</em><sub>3</sub></span> lattice</p>
+<h1 id="examples">Examples</h1>
+<h2 id="wittens-tqft">Witten's TQFT</h2>
+<p><code class="verbatim">Starting place:</code> Take an <span
+class="math inline">𝒩 = 2</span> supersymmetric Yang-Mills theory in
+4D.</p>
+<h1 id="bf-theory"><span class="math inline"><em>B</em><em>F</em></span>
+Theory</h1>
+<p>If we try to do <a
+href="https:/Digital-Garden/physics/phys-yang_mills_field_theory.html">Yang-Mills
+theory</a> in the case that we don't have a metric, we immediately run
+into a problem: we can't define a Hodge star operator, and thus we have
+no obvious way of defining an action for our theory.</p>
+<p>To fix this, we assume that there's some other independent field,
+given by an <span
+class="math inline">(<em>n</em>−<em>k</em>)</span>-form <span
+class="math inline"><em>B</em></span>, so your action is <span
+class="math display">∫<em>T</em><em>r</em>(<em>B</em>∧<em>F</em>)</span></p>
 <h1 id="chern-simons-theory">Chern-Simons Theory</h1>
+<p>In the case that your manifold is <strong>three-dimensional</strong>,
+the obvious thing to do is to try to take <span
+class="math inline">∫<em>T</em><em>r</em>(<em>A</em>∧<em>F</em>)</span>.</p>
+<p>It turns out, this doesn't work — it <strong>isn't
+gauge-invariant</strong> If you expand out everything, you find <span
+class="math inline"><em>T</em><em>r</em>(<em>A</em>∧<em>F</em>) = <em>T</em><em>r</em>(<em>A</em>∧<em>d</em><em>A</em>)</span></p>
+<p>The differential <span class="math inline"><em>d</em></span> breaks
+the gauge-invariance</p>
+<p><code class="verbatim">Solution:</code> The actual Chern-Simons
+functional comes from mathematics: in four dimensions the <strong>second
+Chern class</strong> has the form <span
+class="math display"><em>T</em><em>r</em>(<em>F</em>∧<em>F</em>)</span>.
+You then try to work backwards; since your manifold is only three
+dimensional, you try to write <span
+class="math inline"><em>T</em><em>r</em>(<em>F</em>∧<em>F</em>)</span>
+as an exterior derivative of a three-form.</p>
 <h2 id="intro">Intro</h2>
 <p>This is the canonical example of a topological quantum field theory
 from a mathematical physics perspective.</p>

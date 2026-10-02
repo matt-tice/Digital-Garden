@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>yang-mills field theory</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">yang-mills field theory</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p>In Yang-Mills theories the idea is that you want to construct a Hodge
+star operator, which you use to measure the strength of the gauge
+field's curvature</p>
+<p>The intuition is that</p>
+<p><code class="verbatim">Gauge theory:</code> Your gauge field is a
+connection. The strength of this field is the curvature — a two-form
+taking values in the Lie algebra of the gauge group</p>
+<p><code class="verbatim">Hodge:</code> The Hodge star operator maps any
+<span class="math inline"><em>k</em></span>-form to an <span
+class="math inline">(<em>n</em>−<em>k</em>)</span>-form. The nice thing
+about this is that it lets you construct an <span
+class="math inline"><em>n</em></span>-form from your field strength very
+easily: if <span class="math inline"><em>F</em></span> is your
+curvature, then <span
+class="math display"><em>F</em> ∧  ⋆ <em>F</em></span> is an <span
+class="math inline"><em>n</em></span>-form, and thus can be integrated
+to give you the action of the theory <span
+class="math display">𝒮<sub>YM</sub> = ∫<sub><em>M</em></sub>Tr (<em>F</em>∧⋆<em>F</em>)</span>.</p>
+<p><code class="verbatim">Note:</code> We take the trace because
+Yang-Mills fields are Lie algebra valued (which we view as
+matrices).</p>
+<p><code class="verbatim">Hodge theory:</code> Yang-Mills is like Hodge
+theory, but instead of working with differential forms on a manifold,
+you look at differential forms that take values in a vector bundle</p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="lie-algebra-valued-differential-forms">Lie algebra valued
+differential forms</h2>
+<p>Let <span class="math inline"><em>M</em></span> be a smooth manifold
+and <span class="math inline">𝔤</span> be a Lie algebra. A <span
+class="math inline">𝔤</span>-valued <span
+class="math inline"><em>k</em></span>-form is a section of the bundle
+<span
+class="math display">⋀<sup><em>k</em><sup></sup></sup><em>T</em><sup>*</sup><em>M</em> ⊗ 𝔤</span></p>
+<h3 id="intuition">Intuition</h3>
+<p>Instead of ordinary differential forms, we have differential forms
+where Lie algebra elements are grafted onto them.</p>
+<h3 id="ex-gauge-potential">Ex: Gauge potential</h3>
+<p>A Yang-Mills gauge potential is a <span
+class="math inline">𝔤</span>-valued <span
+class="math inline">1</span>-form.</p>
+<h2 id="exterior-covariant-derivative">Exterior covariant
+derivative</h2>
+<p>Let <span class="math inline"><em>A</em></span> be a connection</p>
+<p><span
+class="math display"><em>D</em><sub><em>A</em></sub><em>α</em> = <em>d</em><em>α</em> + [<em>A</em>,<em>α</em>]<sub>∧</sub></span>
+, where <span class="math inline"><em>α</em></span> is a <span
+class="math inline">𝔤</span>-valued <span
+class="math inline"><em>k</em></span>-form, and <span
+class="math display">[<em>A</em>,<em>α</em>]<sub>∧</sub> = <em>A</em> ∧ <em>α</em> − (−1)<sup><em>k</em></sup><em>α</em> ∧ <em>A</em>.</span></p>
+<h2 id="graded-lie-bracket">Graded Lie bracket</h2>
+<p><span
+class="math display">[<em>α</em>,<em>β</em>]<sub>∧</sub> = ∑<sub><em>a</em>, <em>b</em></sub>(<em>α</em><sup><em>a</em></sup>∧<em>β</em><sup><em>b</em></sup>) ⊗ [<em>T</em><sub><em>a</em></sub>,<em>T</em><sub><em>b</em></sub>]</span>
+Also called the <strong>wedge-bracket.</strong></p>
+<h2 id="yang-mills-curvature">Yang-Mills curvature</h2>
+<p><span class="math display">$$
+F = dA + \dfrac{1}{2}[A, A]_{\wedge }
+$$</span></p>
+<p>It turns out that <span
+class="math display"><em>D</em><sub><em>A</em></sub><sup>2</sup><em>ϕ</em> = [<em>F</em>,<em>ϕ</em>]</span></p>
+<p>So <span class="math inline"><em>F</em></span> measures the failure
+of the covariant derivative to be a chain map.</p>
+<h2 id="yang-mills-equations">Yang-Mills equations</h2>
+<p>Let <span class="math inline"><em>D</em></span> be the
+gauge-covariant derivative. The Yang-Mills equations with respect to
+<span class="math inline"><em>D</em></span>, are <span
+class="math display"><em>D</em><em>F</em> = 0</span> <span
+class="math display"><em>D</em> ⋆ <em>F</em> = 0</span></p>
+<h2 id="instantons">Instantons</h2>
+<p>In the case of dimension <span class="math inline">4</span>, the
+Hodge star operator maps two-forms to two-forms. Since <span
+class="math inline">⋆<sup>2</sup> = 1</span>, we can decompose all
+two-forms into two types:</p>
+<p><code class="verbatim">Self-dual:</code> <span
+class="math inline"><em>F</em> =  ⋆ <em>F</em></span>. These are called
+<strong>instantons</strong></p>
+<p><code class="verbatim">Anti self-dual:</code> <span
+class="math inline"><em>F</em> =  −  ⋆ <em>F</em></span>.</p>
+<h1 id="examples">Examples</h1>
+<h2 id="u1"><span class="math inline"><em>U</em>(1)</span></h2>
+<h2 id="section"></h2>
+</body>
+</html>
