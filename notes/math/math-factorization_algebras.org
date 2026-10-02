@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       b3ce6f58-5794-4d92-bfc1-77adb928c7a1
+:END:
+#+title: factorization algebras
+#+filetags: :math:physics:qft:euclidean:tqfts:
+
+* References
+
+
+
+* Summary
+
+Factorization algebras are cosheafs of observables.
+
+=AQFTs:= The main problem with AQFTs is that it's incredibly difficult to handle PDEs on Lorentzian manifolds. Factorization algebras let you do quantum field theory on Lorentzian or Euclidean manifolds. So what happens in practice, is that people who work on factorization algebras just work on Euclidean/topological/conformal field theories
+
+In other words, factorization algebras don't give you any way to fix the analytic issues in QFTs.
+
+=Wick rotation:= We don't know how to do it in curved spacetimes.
+
+=Perturbation:= Factorization algebras are mainly useful for perturbative field theories. They can only handle non-perturbative things when they're topological, conformal, etc. This is the setting of *chiral algebraic geometry* 
+
+=Renormalization:= In quantum field theory we can't evaluate operators at individual points or compute propagators at a point, rather than an interval. In factorization algebras, the way you handle this is you define your operators to live on open discs which are not allowed to overlap. When we look at short-distance behaviour, we use the *Wilsonian renormalization group.* 
+
+=Quantum anomaly:= This is when the differential \(d^{2} \ne 0.\)
+
+=BRST:= 
+
+=BV:= The chain map is essentially the equations of motion. The elements of the homology are observables acting on a field. So the cohomology basically says that we only care about how observables look *on-shell* (in the kernel of the chain map)
+
+=Factorization homology:= This is a local-to-global process (a derived coend) that spits out a *homology complex* . The cohomology of the chain complex that factorization homology gives you, ends up being the full Hilbert space / space of states on your manifold. 
+
+=Operad:= A factorization algebra is really an algebra over a little-disk-like operad, where each disk is embedded into a fixed manifold.
+
+=Operator product expansion:= 
+
+* Definitions
+
+
+
+
+* Theorems
+
+* Examples

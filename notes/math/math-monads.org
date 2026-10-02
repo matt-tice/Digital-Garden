@@ -9,6 +9,11 @@
 
 * Summary
 
+Monads have two pieces:
+
+=Unit:= A kind of free operation --- it takes in elements and spits out formal things.
+
+=Multiplication:= A kind of concatenation
 
 * Definitions
 

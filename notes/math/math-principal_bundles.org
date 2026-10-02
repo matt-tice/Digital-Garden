@@ -1,0 +1,46 @@
+:PROPERTIES:
+:ID:       bed0fa7e-be6b-4113-8ab6-b03230fd170e
+:END:
+#+title: principal bundles
+#+filetags: :math:diff_geo:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Principal $G$-bundle
+
+Let \(G\) be a topological group. A *principal \(G\)-bundle* is a fiber bundle \(\pi : P \rightarrow M\) along with a continuous action
+\[
+G \times P \rightarrow P
+\]
+such that \(G\) preserves the fibers of \(P\) and acts /freely/ and /transitively/ such that the map \(G \rightarrow P_{x}\)
+\[
+g \rightarrow gx
+\]
+
+=Transitive / free:= This ensures that the fibers themselves can be identified with the group \(G.\) This is what normally happens in physics gauge theory models, which is why you often say that the gauge fields are themselves elements of the Lie group (or Lie algebra).
+
+=Non-free:= When you drop the assumption of the action being free, the non-trivial stabilizers require you to consider *orbifolds* and *algebraic stacks* 
+
+** Quotient
+
+
+=String theory:= In string theory, you *start with the total space*. Spacetime is really a derived concept: by taking the quotient of the total space \(P/G\), you get what spacetime looks like. This is also how you try to quantum gravity in the string theory world.
+
+=Symplectic reduction:= \(P\) is your phase space and the quotient is the reduced phase space
+
+=Moduli space:= \(P\) is the infinite-dimensional manifold of all possible connections on a bundle. The group \(G\) is the global gauge transformations. The quotient \(P/G\) is the moduli space of physical gauge configurations
+
+=Symmetry breaking:= \(G\) represents the unbroken symmetries, while the actual ground state of the universe is only invariant under a /subgroup of symmetries/ \(H \leq G\). The manifold of possible equivalent ground states is \(G/H\). The coordinates corespond to *Goldstone bosons* 
+
+
+
+* Theorems
+
+* Examples

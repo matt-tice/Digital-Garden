@@ -9,6 +9,17 @@
 
 * Summary
 
+=Bar:= The bar construction takes a weak algebraic structure (like a homotopical structure) and replaces it by a strict (non-homotopy) structure, by first considering all formal compositions, and then quotienting out by certain relations.
+
+It's called the bar construction, because you write a formal composition of algebraic elements using bars:
+\[
+[x_{1} \mid x_{2} \mid \ldots \mid x_{n}]
+\].
+These formal compositions are then interpretted as *simplices.* This allows you to turn *algebraic structure into spaces* 
+
+=Cobar:= Breaks things into *formal decompositions*. This is very useful with quasicategories: there is no single composition of \(1\)-morphisms --- given a \(2\)-simplex, it's really a collection of two different paths that are homoptic (as witnessed by the \(2\)-simplex). The cobar construction then breaks this simplex down into a sum of the different constituent \(1\)-simplices. This allows you to turn *spaces into coalgebraic structure* 
+
+
 Uses differential graded (co)operads to introduce homotopy.
 
 Two steps:

@@ -1,0 +1,108 @@
+:PROPERTIES:
+:ID:       beb0fb6e-9b8a-4f4f-8264-8e4c56a3b9c1
+:END:
+#+title: yang-mills field theory
+#+filetags: :qft:physics:gauge:
+
+* References
+
+
+
+* Summary
+
+
+In Yang-Mills theories the idea is that you want to construct a Hodge star operator, which you use to measure the strength of the gauge field's curvature
+
+The intuition is that 
+
+=Gauge theory:= Your gauge field is a connection. The strength of this field is the curvature --- a two-form taking values in the Lie algebra of the gauge group
+
+=Hodge:= The Hodge star operator maps any \(k\)-form to an \((n-k)\)-form. The nice thing about this is that it lets you construct an \(n\)-form from your field strength very easily: if \(F\) is your curvature, then 
+\[
+F \wedge \star F
+\]
+is an \(n\)-form, and thus can be integrated to give you the action of the theory
+\[
+\mathcal{S}_{\text{YM}} = \int_{M} \operatorname{Tr}(F \wedge \star F)
+\].
+
+=Note:= We take the trace because Yang-Mills fields are Lie algebra valued (which we view as matrices).
+
+=Hodge theory:= Yang-Mills is like Hodge theory, but instead of working with differential forms on a manifold, you look at differential forms that take values in a vector bundle
+
+* Definitions
+
+** Lie algebra valued differential forms
+
+Let \(M\) be a smooth manifold and \(\mathfrak{g}\) be a Lie algebra. A \(\mathfrak{g}\)-valued \(k\)-form is a section of the bundle
+\[
+\bigwedge^{k}^{} T^{*} M \otimes \mathfrak{g}
+\]
+
+*** Intuition
+
+Instead of ordinary differential forms, we have differential forms where Lie algebra elements are grafted onto them.
+
+*** Ex: Gauge potential
+
+A Yang-Mills gauge potential is a \(\mathfrak{g}\)-valued \(1\)-form.
+
+** Exterior covariant derivative
+
+Let \(A\) be a connection
+
+\[
+D_{A} \alpha = d \alpha + [A, \alpha ]_{\wedge }
+\] ,
+where \(\alpha \) is a \(\mathfrak{g}\)-valued \(k\)-form, and 
+\[
+[A, \alpha ]_{\wedge} = A \wedge \alpha - (-1)^{k} \alpha \wedge A. 
+\]
+
+** Graded Lie bracket
+
+\[
+[\alpha , \beta ]_{\wedge} = \sum_{a,b} (\alpha^{a} \wedge  \beta^{b}) \otimes [T_{a}, T_{b}] 
+\]
+Also called the *wedge-bracket.* 
+
+** Yang-Mills curvature
+
+\[
+F = dA + \dfrac{1}{2}[A, A]_{\wedge }
+\]
+
+It turns out that 
+\[
+D_{A}^{2} \phi = [F, \phi]
+\]
+
+So \(F\) measures the failure of the covariant derivative to be a chain map.
+
+** Yang-Mills equations
+Let \(D\) be the gauge-covariant derivative. The Yang-Mills equations with respect to \(D\), are 
+\[
+DF = 0
+\]
+\[
+D \star F = 0
+\]
+
+** Instantons
+
+In the case of dimension \(4\), the Hodge star operator maps two-forms to two-forms. Since \(\star^{2}= 1\), we can decompose all two-forms into two types:
+
+=Self-dual:= \(F = \star F\). These are called *instantons* 
+
+=Anti self-dual:= \(F = -\star F\).
+
+
+
+
+* Examples
+
+** \(U(1)\)
+
+
+
+** 

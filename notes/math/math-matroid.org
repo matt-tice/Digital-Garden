@@ -1,0 +1,110 @@
+:PROPERTIES:
+:ID:       cacd7d47-b344-4926-9cb4-43cd8b8e295d
+:END:
+#+title: matroids
+#+filetags: :math:combinatorics:geometry:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Matroid (independence)
+
+A *matroid* \((A, \Sigma )\) is a set \(A\) and a collection of subsets \(\Sigma \) such that 
+\(\emptyset \in \Sigma \)
+If \(A \subseteq B \in \Sigma \) then \(A \in \Sigma \).
+If \(A,B \in \Sigma \) and \(|A| < |B|\), there is some \(b \in B\) such that \(A \cup \{ b \} \in \Sigma \).
+
+=Dependent:= Sets in \(\Sigma \) are called *independent;* all other sets are called *dependent* 
+
+=Bases:= A maximal set in \(\Sigma \) is called a *basis*.
+
+=Circuits:= A minimal dependent set is called a *circuit* 
+
+** Matroid (bases)
+
+A *matroid* \((A, \mathcal{B})\) is a set \(A\) and a collection of subsets \(\mathcal{B}\) such that 
+
+\(\mathcal{B} \ne \emptyset\)
+If    \(U,V \in \mathcal{B}\)  and \(u \in U \setminus V \) then there is some \(v \in V \setminus U\) such that \( (U \setminus \{u \}) \cup \{ v \} \in \mathcal{B}\).
+
+
+** Matroid (closure)
+
+A *closure operator* on a set \(A\) is a function \(\phi: P(A) \rightarrow P(A)\) such that 
+\(U \subseteq \phi(U)\)
+\(\phi^{2} = \phi\)
+If \(U \subseteq V\) then \(\phi(U) \subseteq \phi(V).\)
+
+A *matroid* is a closure operator  \(\phi: P(A) \rightarrow P(A)\) such that 
+        If \(x \in \phi(U \cup \{ y \}) \setminus \phi(U) \) then \(y \in \phi(U \cup \{ x \}) \setminus \phi(U)\).
+
+=Flats:= A set such that \(\phi(U) = U\) is called *closed* or *flat.* The set of flats of a closure operator is denoted \(\mathcal{C}_{\phi}\)
+
+** Matroid (flats)
+
+A matroid is a closure operator \(\phi: P(A) \rightarrow P(A)\) such that 
+
+\(A \in \mathcal{C}_{\phi}\)
+If   \(U,V \in \mathcal{C}_{\phi}\) then \(U \cap V \in \mathcal{C}_{\phi.}\)
+\(U \in \mathcal{C}_{\phi} \) then for each \(x \in U^{c}\) there is exactly one \(V_{x} \in \mathcal{C}_{\phi}\) such that \(x \in V_{x}\) and \(U \subseteq V_{x}\), where \(U\) is maximal in \(V_{x}\).
+
+=Unions:= Flats are almost never closed under unions
+
+
+** Matroid (rank)
+
+A matroid is a pair \((A, \rho)\) where \(\rho: P(A) \rightarrow \mathbb{N}_{\geq 0}\)   satisfies
+
+\(\rho(X) \leq |X| \)
+\(\rho(X \cup Y) + \rho(X \cap Y) \leq \rho(X) + \rho(Y)\)
+If \(X \subseteq  Y\) then \(\rho(X) \leq \rho(Y)\)
+
+We call \(\rho\) the *rank function.* 
+
+=Nullity:= We call \(|X| - \rho(X)\) the *nullity* of \(X.\)
+
+
+** Matroid (hyperplanes)
+
+** Matroid (graphoid)
+
+
+
+** Möbius function
+
+** Nerve of a poset
+
+* Theorems
+
+** Lattice of flats
+
+The collection of all flats forms a lattice
+
+
+** Matroids are wedges of spheres up to homotopy
+
+** Euler characteristic of a matroid
+
+** Matroids are shellable
+
+** Chow ring
+
+** Chow ring is hard lefschetz
+
+** Chow ring is Hodge-Riemann
+
+** Differential forms
+
+* Examples
+
+** Vector matroids
+
+** Algebraic matroids
+
+** Graphic matroids

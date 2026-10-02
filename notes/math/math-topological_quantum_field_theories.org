@@ -8,7 +8,73 @@
 
 * Summary
 
+* Definitions
+
+** Wilson loops
+
+
+*** Intuition
+
+These arose in studying quantum chromodynamics
+
+A Wilson loop  (in spacetime) is what you get when you track the phase shift of a particle moving in a closed loop in spacetime.
+
+=Confinement:= They were first invented as a way of explaining why quarks are never found in isolation
+
+=Experiment:= We imagine a quark-antiquark pair blinking into existence at a positive separation, and trace their paths in spacetime, and then they blink out of existence. If you just have the quarks behaving independently, you get two separate curves. It turns out that the thing you get *is not gauge invariant.* But you can make it gauge invariant if you connect these two curves into a loop --- in order to do so, you need to say that when the particles pop into/out of existence, they have something *linking them together* 
+
+=Expectation value:= If you compute the expectation value of a Wilson loop, the integral you take basically fills in the loop, so you get a world sheet. It turns out
+\[
+\langle W_{C} \rangle \sim e^{-V(R) T}, \; T \rightarrow \infty
+\]
+where \(R\) is the separation between the particles
+
+In EM your potential dies off as \(1/R\), but it turns out for QCD that the potential increases as \(R\). This is why quarks are *confined* 
+
+=TQFT:= However, if you calculate Wilson loops in a \((2+1)\)-dimensional TQFT, the \(R\) and \(T\) dependence disappears; quarks (or their tqft equivalents) don't have confinement; the only thing that matters is how the worldlines are *braided*. The particles in the TQFT are *anyons* 
+
+The expectation value of the Wilson loops in this case is the *Jones polynomial* 
+
+** Wilson junction
+
+This is the baryonic version of the Wilson loop
+
+The structure you get looks like an \(M_{3}\) lattice
+
+
+
+* Examples
+
+** Witten's TQFT
+
+=Starting place:= Take an \(\mathcal{N} = 2\) supersymmetric Yang-Mills theory in 4D. 
+
+* \(BF\) Theory
+
+If we try to do [[id:beb0fb6e-9b8a-4f4f-8264-8e4c56a3b9c1][Yang-Mills theory]] in the case that we don't have a metric, we immediately run into a problem: we can't define a Hodge star operator, and thus we have no obvious way of defining an action for our theory.
+
+To fix this, we assume that there's some other independent field, given by an \((n-k)\)-form \(B\), so your action is 
+\[
+\int Tr(B \wedge F)
+\]
+
+
 * Chern-Simons Theory
+
+In the case that your manifold is *three-dimensional*, the obvious thing to do is to try to take \(\int Tr(A \wedge F)\). 
+
+It turns out, this doesn't work --- it *isn't gauge-invariant* 
+If you expand out everything, you find
+\(Tr(A \wedge F) = Tr(A \wedge dA)\)
+
+The differential \(d\) breaks the gauge-invariance
+
+=Solution:= The actual Chern-Simons functional comes from mathematics: in four dimensions the *second Chern class* has the form
+\[
+Tr(F \wedge F)
+\].
+You then try to work backwards; since your manifold is only three dimensional, you try to write \(Tr(F \wedge F)\) as an exterior derivative of a three-form.
+
 
 ** Intro
 

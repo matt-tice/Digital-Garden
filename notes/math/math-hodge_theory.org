@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       4639b263-1c53-4821-86b8-eb12ffaec614
+:END:
+#+title: hodge theory
+#+filetags: :math:topology:analysis:
+
+* References
+
+
+
+* Summary
+
+
+Hodge theory is about the relationship between the global structure of a manifold, and calculus on that manifold.
+
+=Goal:= Given a de Rham cohomology class, how do you find a nice representative?
+
+Once you have the Hodge star, you define an inner product on differential forms by 
+\[
+\langle \alpha , \beta \rangle = \int \alpha \wedge \star \beta .
+\]
+
+You then define the codifferential
+
+* Definitions
+
+** Hodge star operator
+
+** Inner product of forms
+
+** Codifferential
+
+** Laplace-Beltrami operator
+
+\[
+\Delta = d \delta  + \delta  d.
+\]
+
+** Harmonic forms
+
+A form \(\omega\) is called *harmonic* if 
+\[
+\Delta \omega = 0.
+\]
+
+** Dirichlet energy functional
+
+\[
+\int \omega \wedge \star \omega
+\]
+
+
+This is essentially the same type of thing as the Yang-Mills action.
+
+* Theorems
+
+** Hodge decomposition theorem
+
+Every cohomology class contains precisely one harmonic form
+
+* Examples

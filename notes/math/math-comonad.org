@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       a844206b-ee19-4663-bb3a-cf6f4d907c17
+:END:
+#+title: comonad
+#+filetags: :math:cats:
+
+* References
+
+
+
+* Summary
+
+Comonads involve looking at maps from a monad into a space. So if you take a free monad, the comonad looks at how free formal compositions can actually be viewed as real products
+
+=Resolution:= 
+
+* Definitions
+
+
+
+
+* Theorems
+
+* Examples

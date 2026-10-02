@@ -9,41 +9,68 @@
 
 * Summary
 
-* Ends
+Coends basically have the following shape: you take an algebraic structure (covariant), and a geometric structure (contravariant) and you glue things together to form a global structure.
 
-Let $F: C^{op} \times C \to \mathcal{V}$
-A *wedge* w \to F is a collection of maps $w_A: w \to F(A, A)$ such that 
+* Definitions
+
+** Ends
+
+Let $F: \mathcal{C}^{op} \times \mathcal{C} \to \mathcal{V}$ be an enriched functor, where \(\mathcal{V}\) is a symmetric monoidal category and \(\mathcal{C}\) is \(\mathcal{V}\)-enriched.
+
+Consider the product over all objects in \(\mathcal{C}\),     \( \prod_{A} \text{Mor}(A,A)\). 
+
+
+
+A *wedge* \(w \to F\) is an object \(w\) and a collection of maps $w_A: w \to F(A, A)$ such that the following commutes
+
+w           \rightarrow       F(A,A)
+\downarrow                            \downarrow
+F(B,B)  \( \xrightarrow{(f,1)}\)      F(A,B)
+
+for all \(f: A \rightarrow B\).
 
 An *end* is a universal wedge
 
-** Intuition
+*** Intuition
+
+Ends are ways of taking two kinds of structure and restricting to those pieces which behave the same in both structures.
+
+=Natural transformations:= These are the main example. The two types of structure are precomposition and postcomposition
 
 Think of the maps $w_A: w \to F(A, A)$ as something like the maps that make up a natural transformation
 
 Because your end is a limit, you're basically looking at a collection {w_A} such that they are invariant under altering the components of F(A, B) independently 
 
 
-* Coends
+** Coends
 
-F(A, A) \to F(A, B)
-\downarrow                  \downarrow
-F(B, A) \to w
+
+
+F(A, A) \(\xrightarrow{(1,f)}\) F(A, B)
+\downarrow                          \downarrow
+F(B, A)     \to       w
 
 We denote the coend by
 \int^A F(A, A)
 
-** Intuition
+*** Intuition
+
+Unlike an end, which restricts to compatible structure; the coend glues two different kinds of structure together
+
+=Geometric realization:= Glues together the simplicial set blueprint with actual physical simplices
+
+=Tensor modules:= Glues together two different modules
 
 The maps $w_{A}: F(A, A) \to w$ define your gluing
 
 You essentially glue together the maps that change the components of F(A, B) independently.
 
 This is meant to be something like the *tensor product of modules*
-- In M \otimes N, you have \alpha m \otimes n = m \otimes \alpha n
+- In M \otimes N, you have \(\alpha m \otimes  n = m \otimes  \alpha  n\)
 
 Similarly, here you want to think of C (its morphisms) as your ring, and the functors as your modules.
 
-** Left Kan Extensions
+*** Left Kan Extensions
 
 If we have F: C \to D  and K: C \to E
 
@@ -62,3 +89,85 @@ where \cdot is the copwoer
 \int^A Mor(A,B) \otimes F(A) \cong F(B)
 
 \int_A Hom(Mor(B, A), F(A)) \cong F(B)
+
+
+* Examples
+
+** Geometric realization                                            :coends:
+
+=Algebra:= The simplex functor \(\Delta \rightarrow \text{Top}\) that assigns a physical simplex to each combinatorial simplex.
+
+=Geometry:= We look at a fixed simplicial set \( X: \Delta^{o}^{p} \rightarrow \text{Set} \).
+
+** Tensor product of modules                                        :coends:
+
+Take a ring viewed as an abelian-enriched one object category.
+
+=Algebra:= A left \(R\)-module \(N: R \rightarrow Ab\)
+
+=Geometry:= A right \(R\)-module \(M: R^{o}^{p} \rightarrow Ab\)
+
+\[
+M \otimes_{R }N = \int^{R} M \times N.
+\]
+
+** Kan extensions                                                   :coends:
+
+=Algebra:= Some functor that carries algebraic data, which you'd like to extend to a larger space \(G: \mathcal{C} \rightarrow \mathcal{E}\)
+
+=Geometry:= A hom-functor \(\operatorname{Mor}(F(-), X): \mathcal{C}^{o}^{p} \rightarrow \text{Set}\)
+
+The left Kan extension is 
+\[
+\int^{c \in \mathcal{C}} \text{Mor}(F(c), X) \times G(c). 
+\]
+
+** Group actions                                                    :coends:
+
+If \(G\) acts on a topological space \(X\), you often want to look at the orbit space \(X/G.\)
+
+=Algebra:= We take a trivial map from the delooping of \(G\) to the singleton. \(BG \rightarrow \text{Top}\).
+
+=Geometry:= We take the map \(BG^{o}^{p} \rightarrow \text{Top}\) that sends the unique object to the space \(X\), and the maps to a right action.
+
+The orbit space is the coend
+\[
+X/G = \int^{BG} X \times *.
+\]
+
+** Sieves                                                             :ends:
+
+Consider the category of open sets of a manifold
+
+=Algebra:= A functor assigning smooth functions to each open set \(\text{Open}(M) \rightarrow \text{Alg}\)
+
+=Geometry:= The open sets \(\operatorname{Open}(M)^{o}^{p} \rightarrow \text{Top}\)
+
+The end takes all of the open sets and produces the global functions that can be appropriately restricted to each local open set.
+
+** Natural transformations                                            :ends:
+
+=Algebra:= 
+
+=Geometry:= 
+
+** Group Invariants                                                   :ends:
+
+We again consider the delooping of some group acting on a space.
+
+=Algebra:= We take the representation of \(G\) acting on the left on our space \(BG \rightarrow \text{Top}\).
+
+=Geometry:= We take the map \(BG^{o}^{p} \rightarrow \text{Top}\) that sends the unique object to the singleton.
+
+The end is the space of \(G\)-invariants
+
+\[
+\int_{BG} \text{Mor}(*, X)
+\]
+
+
+** 
+
+=Algebra:= 
+
+=Geometry:= 

@@ -1,0 +1,86 @@
+:PROPERTIES:
+:ID:       07fd4be4-02c8-4e89-b713-09e14b387801
+:END:
+#+title: measures
+#+filetags: :math:measure_theory:analysis:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Measure on a measurable space
+
+Let \((X, \Sigma )\) be a measurable space (a set and a sigma algebra). A function \(\mu: \Sigma \rightarrow [0, \infty]\) is a *measure* if 
+        \(\mu(\sum_{k=1}^{N} A_{k}) = \sum_{k}_{}_{=}_{1}^{N} \mu(A_{k}) \)
+where \(A +B \) denotes the union of two disjoint sets.
+
+*** Notes
+
+=Empty measure:= Most times you'll see also the condition that \(\mu(\emptyset) = 0 \), but this is satisfied automatically as long as there's *at least one set of finite measure*, since
+        \(\mu(A) = \mu(A + \emptyset) = \mu(A) + \mu(\emptyset)\)
+so if \(\mu(A) < \infty\) , we can subtract it from both sides, to get \(\mu(\emptyset) = 0.\)
+
+=Countable additivity:= Usually this is assumed, but I'd like to do as much as I can in the finite world before switching to the countable case.
+
+ 
+** Signed measure
+
+* Theorems
+
+** Monotone
+
+Let \(\mu\) be a (non-signed) measure. 
+If \(A \subseteq B\) then \(\mu(A) \leq \mu(B) \).
+
+*** Proof
+
+We have \(\mu(B) = \mu(A + B \setminus A) = \mu(A) + \mu(B \setminus A) \geq \mu(A)\)
+
+since \(\mu(B \setminus A) \geq 0 \).
+
+** Continuity from below
+
+** Continuity from above
+
+* Examples
+
+** Counting measure
+
+** Lebesgue measure
+
+** Arc length
+
+** Haar measure
+
+** Riemannian manifold
+
+** Hausdorff measure
+
+** Probability distributions
+
+** Dirac measure
+
+** Borel measure
+
+** Jordan measure
+
+** Ergodic measure
+
+** Gaussian measure
+
+** Baire measure
+
+** Young measure
+
+** Loeb measure
+
+** Liouville measure
+
+** Gibbs measure
+
+** Radon measures

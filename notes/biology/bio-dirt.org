@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       8cae0719-8f8f-41f6-ac6d-f218b6cfe26b
+:END:
+#+title: dirt
+#+filetags: :biology:germs:gross:
+
+* References
+
+
+
+* Summary
+
+
+
+
+* Natural sterilization
+
+=UV radiation:= 
+
+Human pathogens are very sensitive; they are used to living inside of a warm, wet, dark environment, not outside.
+
+=Desiccation:= Pathogens need moisture to survive. The wind, open air, evaporation, kill off pathogens faster than what happens inside on plastic surfaces
+
+* Dilution
+
+Every step an animal takes will wipe away a huge amount of the germs 
+
+It usually takes thousands to millions of cells to actually get you sick
+
+* Specialization
+
+Organisms outside evolved to live outside, not in the human body
+
+** Moisture
+
+Bacteria and fungi *need water to replicate*. As soon as a surface is dry, they stop replicating.
+
+** Nutrients
+
+
+
+** Washing dishes
+
+If you're washing dishes and food water splashed on you, it will disperse through the fabric of your clothes, increasing the surface area, and making it easier for it to evaporate. Your body heat, along with the airflow will help the splash dry.
+
+Dishwater containing microscopic food particles actually doesn't contain enough nutrients to fuel a population explosion of pathogens. You need something like a towel soaked in milk
+
+* Bird poop
+
+There are dangerous diseases linked to bird poop: histoplasmosis or cryptococcosis. But actually, they *aren't carried by the bird* --- they're caused by *fungi that live in the dirt* 
+
+=Chemicals:= Bird poop is high in nitrogen and nutrients. When it lands in the soil, it can help the fungus in the soil grow
+
+=Fungus:= The actual danger of the fungus comes from disturbing the spores. You have to shovel up the soil or something.
+
+=Body temp:= Birds have much higher body temperatures than humans (around 40 to 42 degrees celsius, compared to our 37)
+
+=Dried:= Dried bird poop that's been in the sun and wind has had most of its bacteria destroyed.

@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       97cd9dd6-e97c-4202-b597-7f73a088e15c
+:END:
+#+title: quasicategories
+#+filetags: :math:higher_categories:categories:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Categorical truncation
+
+Let \(X_{\bullet}\) be a quasicategory. The \(n\)-truncation replaces \(k\)-morphisms by their equivalence classes up to homotopy.
+
+*** Homotopy category
+
+This is the *\(1\)-truncation* of a quasicategory
+
+
+* Theorems
+
+* Examples

@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       0d2faa35-c75f-41e3-ad8e-545d4ab9a800
+:END:
+#+title: supersymmetric yang mills
+#+filetags: :qft:supersymmetry:physics:
+
+* References
+
+
+
+* Summary
+
+\(\mathcal{N}\) counts the number of supersymmetry generators
+
+Supersymmetry essentially means that we have operators \(Q_{i}, i =1, \ldots, \mathcal{N}\) called *supercharges* which map bosons back and forth to fermions
+
+
+=Spinors on curved space:= Fermions are very difficult to treat in curved spacetime --- as spinors, their values depend on the orientation of the curvature, which makes taking path integrals over them very hard
+
+In \(\mathcal{N} = 2\) Yang-Mills, your connection \(A\) has to have two superpartners, which are both fermions. Witten in his [[id:2d82b7e0-703b-4e07-9630-ab21e88e7304][topological quantum field theory]] reexpressed the equations in terms of differential forms, which allowed him to solve it
+

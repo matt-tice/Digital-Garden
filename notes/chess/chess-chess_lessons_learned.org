@@ -1,0 +1,75 @@
+:PROPERTIES:
+:ID:       b3fca255-b9a3-4a0c-b4b3-917c86df562e
+:END:
+#+title: chess lessons learned
+#+filetags: :lessons:chess:
+
+* References
+
+
+
+* Summary
+
+
+collapse the pawn that's furthest ahead
+attack when you defend
+in the french, bring the queen's knight to c5 through a4
+knight next to king is ok
+don't trade pieces when you're winning
+don't trade pieces when it's equal
+always look for tactics
+don't push pawns into an opponent's forward v
+four pieces in the attack allows one to sack
+
+check if a piece can escape at the end of a line
+
+* Pawns
+
+** Triangles
+
+*** Don't allow the sideways triangle 
+
+For example, pawns on e3, f4, e5
+
+*** Don't attack the northern triangle 
+facing away
+
+*** Do attack the southern triangle
+
+Attack triangles facing towards you
+
+** Attack the half isolated pawn
+
+** Doubled pawns
+
+*** Are strong in the center
+
+** f3
+
+*** Conditions for playing
+
+Play it only if your opponent's dark bishop and queen are blocked in by both pawns
+
+** Skipped pawns
+
+If there are two pawns with an open file between them, the pawns are *very vulnerable* 
+
+** Don't push the pawn past your rook
+
+If you're defending a pawn from the side with your rook, it's extremely dangerous to push it further
+
+* Modern opening
+
+Two pawns in the center and then flank pawns
+
+* Geometry
+
+** Two pieces diagonally
+
+=Knight:= Can fork them 
+
+=Bishop:= Can skewer them 
+
+** Diagonal in front of king
+
+Can be used to cut the king off; for example, from castling
