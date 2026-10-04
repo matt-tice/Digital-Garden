@@ -49,7 +49,7 @@ The structure you get looks like an \(M_{3}\) lattice
 
 =Starting place:= Take an \(\mathcal{N} = 2\) supersymmetric Yang-Mills theory in 4D. 
 
-* \(BF\) Theory
+** \(BF\) Theory
 
 If we try to do [[id:beb0fb6e-9b8a-4f4f-8264-8e4c56a3b9c1][Yang-Mills theory]] in the case that we don't have a metric, we immediately run into a problem: we can't define a Hodge star operator, and thus we have no obvious way of defining an action for our theory.
 
@@ -59,7 +59,7 @@ To fix this, we assume that there's some other independent field, given by an \(
 \]
 
 
-* Chern-Simons Theory
+** Chern-Simons Theory
 
 In the case that your manifold is *three-dimensional*, the obvious thing to do is to try to take \(\int Tr(A \wedge F)\). 
 
@@ -76,7 +76,7 @@ Tr(F \wedge F)
 You then try to work backwards; since your manifold is only three dimensional, you try to write \(Tr(F \wedge F)\) as an exterior derivative of a three-form.
 
 
-** Intro
+*** Intro
 
 This is the canonical example of a topological quantum field theory from a mathematical physics perspective.
 
@@ -99,17 +99,17 @@ $S_{\text{Chern-Simons}} = \dfrac{k}{4 \pi } \int_{M} Tr(A \wedge dA + \dfrac{2}
 
 =Lie-algebra forms:= These have the general shape $A = \sum_{i} A_{i} dx^{i}$, where $A_{i} \in \mathfrak{g}$ are matrices.
 
-*** Example
+**** Example
 
 If $A = A_{1} dx^{1} + A_{2} dx^{2}$, then $A \wedge A = A_1 A_2 dx^{1} \wedge dx^{2} + A_{1} A_{2} dx^{2} \wedge dx^{1} + 0 + 0 = [A_{1} , A_{2}] dx^{1} \wedge dx^{2}$
 
-*** Applying the Trace
+**** Applying the Trace
 
 $Tr(A \wedge B) = (-1)^{\abs{A} \abs{B}} Tr(B \wedge A)$.
 
 In particular $Tr(A^{\wedge 4}) = (-1)^{1 \times 3} Tr(A^{\wedge 4})$, and so it must be zero.
 
-*** Hodge Star
+**** Hodge Star
 
 In 4D, the Hodge star is an idempotent endomorphism on 2-forms, so we can decompose any 2-form as
 

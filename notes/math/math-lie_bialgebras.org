@@ -1,0 +1,65 @@
+:PROPERTIES:
+:ID:       3e44671e-7d94-4f23-b9d6-b00f96148c8a
+:END:
+#+title: lie bialgebras
+#+filetags: :math:coalgebras:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Lie coalgebra
+
+A *Lie coalgebra* \((\mathfrak{g}, \delta )\) is a vector space \(\mathfrak{g}\), along with a map
+\[
+\delta : \mathfrak{g} \rightarrow \mathfrak{g} \otimes  \mathfrak{g}
+\]
+which satisfies
+=Anti cocommutativity:=   \(\sum x_{(1)} \otimes x_{(2)} = - \sum x_{(2)} \otimes x_{(1)}\)
+
+=Cojacobi:= \((1 + \zeta + \zeta^{2}) \circ (\delta \otimes 1) \circ \delta = 0  \)
+where \(\zeta: A \otimes B \otimes C \rightarrow B \otimes C \otimes  A\) is a cyclic permutation.
+
+*** Dual
+
+If you take the dual of a Lie coalgebra you get the *convolution Lie algebra.* 
+
+
+
+** Lie bialgebra
+
+A *Lie bialgebra* \((\mathfrak{g}, \delta , [\cdot ,\cdot ])\) is a Lie algebra and Lie coalgebra which satisfies the compatibility condition
+\[
+\delta ([x,y]) = \sum [x, \delta(y)_{(1)}] \otimes \delta(y)_{(2)}  + \delta(y)_{(1) } \otimes [x, \delta(y)_{(2)} ] - [y, \delta(x)_{(1)}] \otimes \delta(x)_{(2)}  + \delta(x)_{(1)} \otimes [y, \delta(x)_{(2)} ]
+\]
+
+=Notation:= Define \( ad_{x}(\delta(y) ) = \sum [x, \delta(y)_{(1)}] \otimes \delta(y)_{(2)}  + \delta(y)_{(1)} [x, \delta(y)_{(2)} ] \). Then the above compatibility condition can be expressed as
+\[
+\delta [x,y] = ad_{x}(\delta (y)) - ad_{y} (\delta (x)).
+\]
+
+*** Intuition
+
+Recall that the Jacobi identity is
+\[
+[x,[y,z]] + [y, [z,x]] + [z, [x,y]] = 0
+\]
+So \(ad_{z}_{}[x,y] = -ad_{x}[y,z] - ad_{y}[z,x]\)
+
+Thus
+\[
+ad_{z}[x,y] = ad_{x} (ad_{z}(y)) - ad_{y} (ad_{z}(x))
+\].
+
+If we replace \(ad_{z}\) by \(\delta \) , this is the compatibility condition for Lie bialgebras.
+
+This is what the compatibility condition is modelling; just like how the coproduct in a bialgebra needs to be multiplicative, the cobracket in a Lie bialgebra needs to be Jacobian.
+
+* Theorems
+
+* Examples

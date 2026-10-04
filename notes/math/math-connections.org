@@ -1,0 +1,144 @@
+:PROPERTIES:
+:ID:       7abc01c6-d425-470e-8e74-914fc08df895
+:END:
+#+title: connections
+#+filetags: :math:geometry:bundles:
+
+* References
+
+
+
+* Summary
+
+When we work with [[id:a3ec7f7f-0799-4e6d-980d-e14c5c7617f9][vector bundles]], there is no built-in way to add vectors in two different fibers (for example, in two different tangent spaces). This makes defining derivatives of *sections of the bundle* a non-starter.
+
+This is an important distinction, because it's perfectly possible to define derivatives of /functions on a differentiable manifold/ (\(f: M \rightarrow \mathbb{R}\)) --- you pull back the strucure to Euclidean space. Given any curve on the manifold \(\gamma : \mathbb{R} \rightarrow M\), you just take the derivative of the composition \(f \circ \gamma\).
+
+The reason this works is because the function \(f\) is mapping into *just one space.* We can actually interpret what's happening as there being a trivial bundle \(M \times \mathbb{R} \rightarrow M\), which has the same fiber everywhere. One really nice property is that for trivial bundles you can always do this --- there's always a canonical connection called a *flat connection* which views all the fibers as being the same 
+
+Connections are, by definition, a way to interact vectors in two different fibers
+
+* Definitions
+
+** Tensor product of vector bundles
+
+Let \(E,F \rightarrow M\) be vector bundles. The *tensor bundle* \(E \otimes F \rightarrow M\) is the vector bundle whose fiber over each point is 
+\[
+E_{x} \otimes  F_{x}
+\].
+
+** Direct sum of vector bundles
+
+Let \(E,F \rightarrow M\) be vector bundles. The *direct sum* (or *Whitney sum*) \(E \oplus F \rightarrow M\) of these bundles is the vector bundle whose fiber over each point is 
+\[
+E_{x} \oplus F_{x}.
+\]
+
+** Connection
+
+Let \(\pi : E \rightarrow M\) be a real vector bundle, and let \(\Gamma\)(E) be the space of sections on the bundle \(E\). A *connection* is a linear map \(\nabla: \Gamma(E ) \rightarrow \Gamma( T^{*}M \otimes E )\) such that 
+\[
+\nabla(fs) = df \otimes  s + f \nabla s
+\]
+for all functions \(f\) and sections \(s\)
+
+*** Intuition
+
+Given a section of the tensor bundle \(\nabla f : M \rightarrow T^{*}M \otimes E\), we have a sum of tensors of vectors at every point on the manifold: 
+\[
+(\nabla f)_{x} \in T^{*}M_{x} \otimes E_{x}.
+\]
+
+The cotangent space allows us to take in vectors and spit out numbers: \((\nabla f)_{x} (v) \in E_{x}\), for all \(v \in T_{x} M\).
+
+Thinking about this in terms of pairings, \((\nabla f)_{x} (v)\) is taking the pairing of \(v\) with the first tensor factor of \((\nabla f)_{x}\) and then leaving the second tensor factor alone.
+
+** Directional derivative
+
+** Pullback bundle
+
+** Parallel transport
+
+Let \(\nabla\) be a connection on a bundle \(E \rightarrow M\) and \(s \in \Gamma\) be a section. Then for any curve \(\gamma: [0,1] \rightarrow M\) we say that *\(s\) is parallel along \(\gamma\)* if
+\[
+\nabla_{\gamma'} s = 0.
+\]
+
+*** Note
+
+For all \(\gamma\) and for all \(v \in E\), there is a unique parallel \(s_{\gamma, v}\) such that 
+\[
+s_{\gamma, v}(0) = v.
+\]
+
+The *parallel transport map* \(\tau_{\gamma} : E_{x} \rightarrow E_{y}\) is defined by
+\[
+\tau_{\gamma} (v) = s_{\gamma, v}(1).
+\]
+ 
+** Holonomy groups
+
+Let \(E \rightarrow M\) be a bundle with connection. For any point \(x \in M\), the *holonomy group at \(x\)* is 
+\[
+\operatorname{Hol}_{x} = \{ \tau_{\gamma} | \gamma \text{ is a loop based at } x \}.
+\]
+
+** Dual bundle
+
+
+
+** Curvature
+
+Let \(E \rightarrow M\) be a bundle with connection. The *curvature* of the connection is a two-form \(F_{\nabla} \in \Gamma(\bigwedge^{2} T^{*}M \otimes E^{*} \otimes  E)\) defined by 
+\[
+F_{\nabla} (X, Y)(s) = \nabla_{X} \nabla_{Y} s - \nabla_{Y} \nabla_{X} s - \nabla_{[X,Y]} s
+\]
+for all tangent vector fields \(X,Y : M \rightarrow TM\) and sections \(s \in \Gamma(E). \)
+
+** Vertical bundle
+
+Let \(\pi : E \rightarrow M\) be a smooth fiber bundle. The *vertical bundle* is  \(\ker (d \pi )\) of the map
+\[
+d\pi : TE \rightarrow TM
+\]
+
+*** Intuition
+
+** Ehresmann connection
+
+Let \(\pi : E \rightarrow M\) be a smooth fiber bundle. An *Ehresmann connection* (or *horizontal bundle*) is a subbundle \(H\) of \(TE\) such that 
+\[
+TE \cong H \oplus \ker (d \pi )
+\]
+
+*** Intuition
+
+These are connections that we can define on *any fiber bundle* --- not just vector bundles.
+
+** Covariant derivative
+
+** Affine connection
+
+Affine connections are connections on the tangent bundle
+
+
+* Theorems
+
+* Examples
+
+** Trivial bundles
+
+Let \(M \times \mathbb{R}^{k} \rightarrow M\) be a trivial bundle. Then we can pick a global basis of sections \(e_{1}, \ldots, e_{k}\).
+
+The trivial (flat) connection \(\nabla^{0}\) is defined by 
+\[
+\nabla_{v}^{}_{}^{0} e_{i} = 0
+\]
+for all tangent vectors \(v\). 
+
+We then can compute the general action of the directional derivative by
+\[
+\nabla^{0}_{v} s = \sum (v \cdot s^{i}) e_{i}
+\]
+
+=Holonomy:= Trivial

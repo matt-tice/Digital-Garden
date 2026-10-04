@@ -58,6 +58,16 @@ If there are two pawns with an open file between them, the pawns are *very vulne
 
 If you're defending a pawn from the side with your rook, it's extremely dangerous to push it further
 
+** Passed pawns
+
+*** Skewer to stop it
+
+One way to stop a passed pawn is to skewer it to another piece
+
+* Skewers
+
+** Allow your opponent to take a pawn, then skewer
+
 * Modern opening
 
 Two pawns in the center and then flank pawns
@@ -73,3 +83,11 @@ Two pawns in the center and then flank pawns
 ** Diagonal in front of king
 
 Can be used to cut the king off; for example, from castling
+
+* Don't attack into a pawn
+
+Don't offer to trade pieces, if the opponent can block you with a pawn, gaining tempo
+
+* Checks
+
+Bring your queen closer into the attack whenever you check with it
