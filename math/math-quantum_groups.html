@@ -179,6 +179,41 @@ But the coproduct is no longer multiplicative</p>
 class="math inline"><em>Δ</em>(<em>x</em>)<em>Δ</em>(<em>y</em>) = <em>x</em><em>y</em> ⊗ 1 + <em>x</em> ⊗ <em>y</em> + <em>y</em> ⊗ <em>x</em> + 1 ⊗ <em>x</em><em>y</em> = <em>q</em><em>y</em><em>x</em> ⊗ 1 + <em>x</em> ⊗ <em>y</em> + <em>y</em> ⊗ <em>x</em> + <em>q</em>(1⊗<em>y</em><em>x</em>)</span>
 <span
 class="math inline"><em>Δ</em>(<em>x</em>)<em>Δ</em>(<em>y</em>) − <em>q</em><em>Δ</em>(<em>y</em>)<em>Δ</em>(<em>x</em>) = <em>x</em> ⊗ <em>y</em> + <em>y</em> ⊗ <em>x</em> − <em>q</em><em>x</em> ⊗ <em>y</em> − <em>q</em><em>y</em> ⊗ <em>x</em></span></p>
+<h2 id="topological-quantum-field-theories">Topological quantum field
+theories</h2>
+<p>If we take a 3D spacetime, with particles confined to move in two
+spatial dimensions, the <em>braiding</em> of the particles becomes
+extremely important: we get a system of <strong>anyons.</strong></p>
+<p>To represent this mathematically, we need some kind of algebraic
+representation of the braid group on our space of states.</p>
+<p>We first look for representations that act on tensor products
+individually: <span
+class="math display"><em>ϕ</em> ⋅ (<em>x</em>⊗<em>y</em>) = <em>ϕ</em>(<em>x</em>) ⊗ <em>ϕ</em>(<em>y</em>).</span></p>
+<p>Here's the problem: if you try to impose symmetries on this system
+(for instance, an <span
+class="math inline"><em>S</em><em>U</em>(2)</span> gauge symmetry), you
+find that the only representations are by the symmetric group (ie
+permutations), which don't really braid, since if you swap two particles
+twice you get the identity transformation.</p>
+<p>The reason this happens is because in order for the braiding other be
+<em>compatible with the symmetry</em>, you need that the action of the
+braid representation <strong>commutes</strong> with the action of the
+gauge group.</p>
+<p><code class="verbatim">Solution:</code> You can fix this by replacing
+the symmetric group by a <strong>quantum group</strong>. The idea is
+that you still have something that will commute with the action of the
+gauge group, but the way the quantum group acts on the state space is
+different. Specifically, you insist that there's a particular
+compatibility condition on how the quantum group acts on tensor
+products: <span
+class="math display"><em>ϕ</em>(<em>x</em>⊗<em>y</em>) = ∑<em>ϕ</em><sub>(1)</sub>(<em>x</em>) ⊗ <em>ϕ</em><sub>(2)</sub>(<em>y</em>)</span>
+This gives you a <strong>Hopf module</strong> rather than an ordinary
+module.</p>
+<p>Our original attempt at finding a suitable representation of the
+braid group then can be understood as looking at a grouplike Hopf
+algebra.</p>
+<p>It turns out that the appropriate thing to look at are
+<strong>non-cocommutative quantum groups.</strong></p>
 <h1 id="definitions">Definitions</h1>
 <h2 id="left-adjoint-action">Left Adjoint Action</h2>
 <h2 id="dual-pairing">Dual Pairing</h2>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>chess lessons learned</title>
+  <title>lie bialgebras</title>
   <style>
     html {
       color: #1a1a1a;
@@ -166,61 +166,50 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">chess lessons learned</h1>
+<h1 class="title">lie bialgebras</h1>
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
-<p>collapse the pawn that's furthest ahead attack when you defend in the
-french, bring the queen's knight to c5 through a4 knight next to king is
-ok don't trade pieces when you're winning don't trade pieces when it's
-equal always look for tactics don't push pawns into an opponent's
-forward v four pieces in the attack allows one to sack</p>
-<p>check if a piece can escape at the end of a line</p>
-<h1 id="pawns">Pawns</h1>
-<h2 id="triangles">Triangles</h2>
-<h3 id="dont-allow-the-sideways-triangle">Don't allow the sideways
-triangle</h3>
-<p>For example, pawns on e3, f4, e5</p>
-<h3 id="dont-attack-the-northern-triangle">Don't attack the northern
-triangle</h3>
-<p>facing away</p>
-<h3 id="do-attack-the-southern-triangle">Do attack the southern
-triangle</h3>
-<p>Attack triangles facing towards you</p>
-<h2 id="attack-the-half-isolated-pawn">Attack the half isolated
-pawn</h2>
-<h2 id="doubled-pawns">Doubled pawns</h2>
-<h3 id="are-strong-in-the-center">Are strong in the center</h3>
-<h2 id="f3">f3</h2>
-<h3 id="conditions-for-playing">Conditions for playing</h3>
-<p>Play it only if your opponent's dark bishop and queen are blocked in
-by both pawns</p>
-<h2 id="skipped-pawns">Skipped pawns</h2>
-<p>If there are two pawns with an open file between them, the pawns are
-<strong>very vulnerable</strong></p>
-<h2 id="dont-push-the-pawn-past-your-rook">Don't push the pawn past your
-rook</h2>
-<p>If you're defending a pawn from the side with your rook, it's
-extremely dangerous to push it further</p>
-<h2 id="passed-pawns">Passed pawns</h2>
-<h3 id="skewer-to-stop-it">Skewer to stop it</h3>
-<p>One way to stop a passed pawn is to skewer it to another piece</p>
-<h1 id="skewers">Skewers</h1>
-<h2 id="allow-your-opponent-to-take-a-pawn-then-skewer">Allow your
-opponent to take a pawn, then skewer</h2>
-<h1 id="modern-opening">Modern opening</h1>
-<p>Two pawns in the center and then flank pawns</p>
-<h1 id="geometry">Geometry</h1>
-<h2 id="two-pieces-diagonally">Two pieces diagonally</h2>
-<p><code class="verbatim">Knight:</code> Can fork them</p>
-<p><code class="verbatim">Bishop:</code> Can skewer them</p>
-<h2 id="diagonal-in-front-of-king">Diagonal in front of king</h2>
-<p>Can be used to cut the king off; for example, from castling</p>
-<h1 id="dont-attack-into-a-pawn">Don't attack into a pawn</h1>
-<p>Don't offer to trade pieces, if the opponent can block you with a
-pawn, gaining tempo</p>
-<h1 id="checks">Checks</h1>
-<p>Bring your queen closer into the attack whenever you check with
-it</p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="lie-coalgebra">Lie coalgebra</h2>
+<p>A <strong>Lie coalgebra</strong> <span
+class="math inline">(𝔤,<em>δ</em>)</span> is a vector space <span
+class="math inline">𝔤</span>, along with a map <span
+class="math display"><em>δ</em> : 𝔤 → 𝔤 ⊗ 𝔤</span> which satisfies <code
+class="verbatim">Anti cocommutativity:</code> <span
+class="math inline">∑<em>x</em><sub>(1)</sub> ⊗ <em>x</em><sub>(2)</sub> =  − ∑<em>x</em><sub>(2)</sub> ⊗ <em>x</em><sub>(1)</sub></span></p>
+<p><code class="verbatim">Cojacobi:</code> <span
+class="math inline">(1+<em>ζ</em>+<em>ζ</em><sup>2</sup>) ∘ (<em>δ</em>⊗1) ∘ <em>δ</em> = 0</span>
+where <span
+class="math inline"><em>ζ</em> : <em>A</em> ⊗ <em>B</em> ⊗ <em>C</em> → <em>B</em> ⊗ <em>C</em> ⊗ <em>A</em></span>
+is a cyclic permutation.</p>
+<h3 id="dual">Dual</h3>
+<p>If you take the dual of a Lie coalgebra you get the
+<strong>convolution Lie algebra.</strong></p>
+<h2 id="lie-bialgebra">Lie bialgebra</h2>
+<p>A <strong>Lie bialgebra</strong> <span
+class="math inline">(𝔤,<em>δ</em>,[⋅,⋅])</span> is a Lie algebra and Lie
+coalgebra which satisfies the compatibility condition <span
+class="math display"><em>δ</em>([<em>x</em>,<em>y</em>]) = ∑[<em>x</em>,<em>δ</em>(<em>y</em>)<sub>(1)</sub>] ⊗ <em>δ</em>(<em>y</em>)<sub>(2)</sub> + <em>δ</em>(<em>y</em>)<sub>(1)</sub> ⊗ [<em>x</em>,<em>δ</em>(<em>y</em>)<sub>(2)</sub>] − [<em>y</em>,<em>δ</em>(<em>x</em>)<sub>(1)</sub>] ⊗ <em>δ</em>(<em>x</em>)<sub>(2)</sub> + <em>δ</em>(<em>x</em>)<sub>(1)</sub> ⊗ [<em>y</em>,<em>δ</em>(<em>x</em>)<sub>(2)</sub>]</span></p>
+<p><code class="verbatim">Notation:</code> Define <span
+class="math inline"><em>a</em><em>d</em><sub><em>x</em></sub>(<em>δ</em>(<em>y</em>)) = ∑[<em>x</em>,<em>δ</em>(<em>y</em>)<sub>(1)</sub>] ⊗ <em>δ</em>(<em>y</em>)<sub>(2)</sub> + <em>δ</em>(<em>y</em>)<sub>(1)</sub>[<em>x</em>,<em>δ</em>(<em>y</em>)<sub>(2)</sub>]</span>.
+Then the above compatibility condition can be expressed as <span
+class="math display"><em>δ</em>[<em>x</em>,<em>y</em>] = <em>a</em><em>d</em><sub><em>x</em></sub>(<em>δ</em>(<em>y</em>)) − <em>a</em><em>d</em><sub><em>y</em></sub>(<em>δ</em>(<em>x</em>)).</span></p>
+<h3 id="intuition">Intuition</h3>
+<p>Recall that the Jacobi identity is <span
+class="math display">[<em>x</em>,[<em>y</em>,<em>z</em>]] + [<em>y</em>,[<em>z</em>,<em>x</em>]] + [<em>z</em>,[<em>x</em>,<em>y</em>]] = 0</span>
+So <span
+class="math inline"><em>a</em><em>d</em><sub><em>z</em><sub></sub></sub>[<em>x</em>,<em>y</em>] =  − <em>a</em><em>d</em><sub><em>x</em></sub>[<em>y</em>,<em>z</em>] − <em>a</em><em>d</em><sub><em>y</em></sub>[<em>z</em>,<em>x</em>]</span></p>
+<p>Thus <span
+class="math display"><em>a</em><em>d</em><sub><em>z</em></sub>[<em>x</em>,<em>y</em>] = <em>a</em><em>d</em><sub><em>x</em></sub>(<em>a</em><em>d</em><sub><em>z</em></sub>(<em>y</em>)) − <em>a</em><em>d</em><sub><em>y</em></sub>(<em>a</em><em>d</em><sub><em>z</em></sub>(<em>x</em>))</span>.</p>
+<p>If we replace <span
+class="math inline"><em>a</em><em>d</em><sub><em>z</em></sub></span> by
+<span class="math inline"><em>δ</em></span> , this is the compatibility
+condition for Lie bialgebras.</p>
+<p>This is what the compatibility condition is modelling; just like how
+the coproduct in a bialgebra needs to be multiplicative, the cobracket
+in a Lie bialgebra needs to be Jacobian.</p>
+<h1 id="theorems">Theorems</h1>
+<h1 id="examples">Examples</h1>
 </body>
 </html>
