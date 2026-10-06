@@ -8,12 +8,23 @@
 
 * Summary
 
+Topological quantum field theory is normally some topological variation on a [[id:beb0fb6e-9b8a-4f4f-8264-8e4c56a3b9c1][yang-mills field theory]]. We either remove the metric (Chern-Simons) or we start with the metric and pass into a subspace that doesn't use the metric (Witten)
+
 * Definitions
 
 ** Wilson loops
 
+Given a [[id:beb0fb6e-9b8a-4f4f-8264-8e4c56a3b9c1][yang-mills field theory]] with connection \(A\) on a spacetime manifold, the Wilson loop operator is
+\[
+W(\gamma) = Tr( \mathcal{P} e ^{i \int_{\gamma} A_{\mu} dx^{\mu}})
+\]
+for any closed loop \(\gamma\), where \(\mathcal{P}\) is the /path-ordering operator/ 
 
-*** Intuition
+*** Parallel transport
+
+We are parallel transporting the /wavefunction/ 
+
+*** Physics Intuition
 
 These arose in studying quantum chromodynamics
 
@@ -61,19 +72,27 @@ To fix this, we assume that there's some other independent field, given by an \(
 
 ** Chern-Simons Theory
 
-In the case that your manifold is *three-dimensional*, the obvious thing to do is to try to take \(\int Tr(A \wedge F)\). 
+In Yang-Mills, you start with a closed orientable (pseudo)Riemannian manifold with a principal \(G\) bundle and connection \(A.\) The metric allows you to define a Hodge star operator, which then gives you the ability to form an integral
+\[
+\int_{M} Tr(F \wedge \star F)
+\]
+which is the *Yang-Mills action*, where \(F = dA + A \wedge A\) is the curvature.
 
-It turns out, this doesn't work --- it *isn't gauge-invariant* 
-If you expand out everything, you find
-\(Tr(A \wedge F) = Tr(A \wedge dA)\)
+If we don't have a metric, we can't get a Hodge star operator, so we need something else to integrate. 
 
-The differential \(d\) breaks the gauge-invariance
+=3D:= In the case that your manifold \(M\) is *three-dimensional*, the obvious thing to do is to try to take \(\int Tr(A \wedge F)\). 
+
+It turns out, this doesn't work --- it *isn't gauge-invariant*. If we take a gauge transformation \(A \rightarrow g^{-1} A g + g^{-1} d g\) (note that this transformation shows up because of the fact that we use the *covariant derivative* \(A + d\))
+
+
 
 =Solution:= The actual Chern-Simons functional comes from mathematics: in four dimensions the *second Chern class* has the form
 \[
 Tr(F \wedge F)
 \].
 You then try to work backwards; since your manifold is only three dimensional, you try to write \(Tr(F \wedge F)\) as an exterior derivative of a three-form.
+
+\(A \wedge A\) is a *self-interaction* 
 
 
 *** Intro
@@ -82,14 +101,18 @@ This is the canonical example of a topological quantum field theory from a mathe
 
 It's based on Yang-Mills theory.
 
-In Yang-Mills theory, we start with a smooth orientable, compact manifold $M$ without boundary and a metric $g$, which we use to construct the *Hodge star operator* $\star$. The action takes the form
+In Yang-Mills theory, we start with a smooth orientable, compact manifold $M$ without boundary and a metric $g$, which we use to construct the *Hodge star operator* $\star$. 
+
+=Conditions:= Compactness allows us to easily integrate over everything. The metric and orientability give us the Hodge star operator. The orientability is also necessary to define a global integral. And the lack of boundary makes it so that we don't have to keep track of boundary conditions
+
+=Action:= The action takes the form
 
 $S_{\text{Yang-Mills}} = \dfrac{1}{2g^{2}} \int_{M} Tr(F \wedge \star F)$
 
 where $F$ is the curvature 2-form $F = dA + A \wedge A$. In local coordinates this is
 $F_{\mu\nu} = \partial_{\mu} A_{\nu} - \partial_{\nu} A_{\mu} + [A_{\mu}, A_{\nu}]$
 
-For Chern-Simons theory, we take a smooth, compact, oriented *3-manifold* $M$ without boundary, equipped with a principal $G$-bundle $P$, for a compact Lie group $G$.
+=Removing the metric:= What if we don't have a metric? For Chern-Simons theory, we take a smooth, compact, oriented *3-manifold* $M$ without boundary, equipped with a principal $G$-bundle $P$, for a compact Lie group $G$.
 
 We then take a *connection 1-form* $A \in \Omega^{1}(M, \mathfrak{g})$. The Chern-Simons action is then
 
@@ -177,6 +200,30 @@ Then the 3-manifolds (the cobordisms) give us a few things:
 - when we have the shape $\partial_{i} M = \emptyset$, $\partial_{f} M = \Sigma$, then our field theory is assigning a state vector of Hilbert space on $\Sigma$.
 - when $\partial_{i} M = \emptyset$, $\partial_{f} M = \emptyset$, we get a map $\mathbb{C} \rightarrow \mathbb{C}$, which just picks out a single complex number. The is the *partition function* or *topological invariant* of the theory.
 
+=How this works in physics:= If we take an integral over a manifold with boundary, we need to keep track of the boundary conditions
+\[
+\Phi(\varphi) = \int_{\phi|_{\partial M} = \varphi} D\phi e^{-S[\phi]} .
+\]
+For every boundary condition \(\varphi\), we get a different result on our integral. The functional \(\Phi\) is an element of a vector space, which turns out to be a Hilbert space.
+
+=Question:= Why do we have more than one element in our Hilbert space? What are all these different functionals that we get? 
+
+=Answer:= The integral I wrote above is integrating over the manifold \(M\). This manifold is the *cobordism.* We get a different functional for every possible cobordism that maps \(\emptyset \rightarrow \partial M\). So really, what we should write is that we have a fixed boundary \(\Sigma  \), and the Hilbert space assigned to \(\Sigma \) is made up of functionals like 
+\[
+\Phi_{M}(\varphi) = \int_{\phi|_{\Sigma } = \varphi} D\phi e^{-S[\phi]} ,
+\]
+where \( \partial M = \Sigma .\)
+
+We can also use other functionals, like correlation functions, I assume.
+
+=Note:= This relies on there being topologically distinct cobordisms that have the same boundary. This is very much a thing. As a basic example, take any two closed manifolds; they both have empty boundaries. As a more complicated example, take some manifold with whatever boundary and then *add a handle to it.* That's a great trick.
+
+=Duals:= You interpret cobordisms \(\emptyset \rightarrow \Sigma \) and \(\Sigma \rightarrow \emptyset\) as duals (one is a bra, the other a ket). Then the expectation value is a map \(\emptyset \rightarrow \emptyset.\) This corresponds to a path integral over the whole closed manifold
+
+=Surgery:= This allows you to compute the actual path integrals over the closed manifold by doing surgery and keeping track of the boundaries with Hilbert spaces. That's a pretty neat trick.
+
+=Topological defects:= You can also place wilson lines inside of the cobordism. These are 1D curves, and the idea is that you work with boundaries that are allowed *marked points* (the end points of the wilson lines.)
+
 
 *** Chern-Simons
 
@@ -184,7 +231,7 @@ Consider a theory with $M = \Sigma \times \mathbb{R}$. We write
 
 =Phase space:= Ends up being the moduli space of flat connections on $\Sigma$ modulo gauge transformations, which is finite-dimensional.
 
-=Geometric Quantization:= We want to quantize this classical phase space. We pick a [[id:21b669d8-5f1a-4f81-b2ad-e5593eb97239][complex structure]] on $\Sigma$, turning it into a *Riemann surface*. The moduli space becomes a *Kahler manifold*. The Hilbert space ends up being a 0-cohomology (sheaf cohomology) of moduli space.
+=Geometric Quantization:= We want to quantize this classical phase space. We pick a [[id:21b669d8-5f1a-4f81-b2ad-e5593eb97239][complex structure]] on $\Sigma$, turning it into a *Riemann surface*. The moduli space becomes a *Kähler manifold*. The Hilbert space ends up being a 0-cohomology (sheaf cohomology) of moduli space.
 
 =Kodaira Vanishing Theorem:= Tells us that in this case the higher cohomology is zero.
 

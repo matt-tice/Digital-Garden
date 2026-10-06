@@ -140,11 +140,15 @@ The classical and four knights sicilians are very balanced
 
 * Lowenthal
 
+One of my favourites
+
 =Features:= Nc6, e5 (black) and Nd4
 
 | Pawn       | e5  |
 | Knight     | Nc6 |
 | Fianchetto | No  |
+
+If you can get the queen onto d6, black will probably play Qe7, which you respond to by Qd1; it doesn't block in any of your pieces, and your queen is perfectly safe
 
 
 ** Kalashnikov

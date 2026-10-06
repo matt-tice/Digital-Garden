@@ -13,6 +13,15 @@
 
 
 
+
+* Dosage
+
+=Infectious dose:= The amount of a pathogen you actually need to ingest in order to get sick.
+
+=Low dose:= Norovirus
+
+=High dose:= Most common bacteria require thousands to millions of cells to subvert your immune system (this is why people don't constantly get sick)
+
 * Natural sterilization
 
 =UV radiation:= 
@@ -35,6 +44,42 @@ Organisms outside evolved to live outside, not in the human body
 
 Bacteria and fungi *need water to replicate*. As soon as a surface is dry, they stop replicating.
 
+On the other hand, they *don't need water to survive.* They often enter a dormant state in the absence of water: 
+
+*** Shields
+
+=Spores:= Bacteria like /clostridium difficile/ can form hard protective shells called *spores*
+
+=Biofilms:= Multiple bacteria cells can group together to form a *biofilm* which is highly resistant to drying out.
+
+=Envelopes:= Influenza and coronavirus have outer, fatty membranes. These membranes are fragile, and only last hours or days. These are the viruses that alcohol-based *hand sanitizer* is effective on; it will dissolve the envelope.
+
+=Proteins:= Norovirus don't have an envelope, but they have an outer shell of proteins that helps prevent them from drying out. Norovirus is remarkably potent; its outer shell helps it survive in your stomach acid, and eventually reach your intestines
+
+*** Surfaces
+
+=Non-porous:= Steel, plastic, glass. Allow droplets to pool together and dry very slowly. Phones, keyboards, doorknobs, pushbars, bus rails.
+
+=Porous:= Fabric, paper, cardboard. Draw moisture away from pathogens immediately.
+
+**** Transfer efficiency
+
+Only a small percent of the germs on a surface will stick to your skin when you touch it
+
+=Dry hands:= Even fewer germs will stick to dry hands.
+
+** Life cycle
+
+Germs will degrade over time. Even if they're still present on your smartphone, they can get *inactivated*
+
+=Viruses:= Viruses are tiny capsules that contain genetic code. If the capsule is damage or the code is corrupted, it becomes harmless.
+
+=Capsid denaturation:= The protective protein shell of a virus is called a *capsid*. The capsid contains receptor-binding proteins that will interact with your cells. Desiccation and heat will warp these proteins, causing them to no longer be able to bind to your cells
+
+=Genome fragmentation:= UV light and oxidation will cause the DNA or RNA in a virus to be destroyed, rendering the virus incapable from using your cells to replicate
+
+=Membrane rupture:= Soap and alcohol-based hand sanitizers will dissolve the envelope of enveloped viruses, causing them to fall apart. 
+
 ** Nutrients
 
 
@@ -56,3 +101,21 @@ There are dangerous diseases linked to bird poop: histoplasmosis or cryptococcos
 =Body temp:= Birds have much higher body temperatures than humans (around 40 to 42 degrees celsius, compared to our 37)
 
 =Dried:= Dried bird poop that's been in the sun and wind has had most of its bacteria destroyed.
+
+* Hand washing
+
+Proper 30sec hand washing achieves between *99.99% and 99.9999%* reduction in pathogen population for norovirus. For many other pathogens, it's *even more effective!* 
+
+=Transients:= Hand washing works by removing transient pathogens (the ones that live on the very surface of the skin; which you picked up from things like doorknobs). 
+
+=Residents:= This flora is your body's natural protection. They live *deep inside your pores, hair follicles, and skin ridges*. Soap doesn't penetrate that far, allowing this flora to remain safe.
+
+=Stratum corneum:= The outer layer of your skin, made up of dead skin cells, connected by lipids.
+
+=Acid mantle:= A slightly acidic film produced by your skin, made of sebum and sweat. It helps prevent the growth of bacteria. It replenishes itself about 20 to 30min after hand washing.
+
+* Norovirus
+
+Norovirus causes *gastroenteritis.* It causes diarrhea, vomiting, and stomach pain, and is one of the most highly infectious viruses in the world. But symptoms only last a couple days.
+
+=Immunity:= Once you get norovirus, you're immune for around 6 months to 2 years. On top of that around 20% of Caucasians are *naturally immune* to norovirus! They don't have the FUT2 gene, which in turn causes them to not develop Histo-Blood Group Antigens on their gut linings, which is where the norovirus wants to bind to

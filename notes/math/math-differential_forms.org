@@ -1,0 +1,108 @@
+:PROPERTIES:
+:ID:       3d020fb1-f931-4b60-b205-dfd769db4f40
+:END:
+#+title: differential forms
+#+filetags: :math:geometry:algebra:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+
+
+** Differential forms
+
+Let \(M\) be a smooth manifold and take the exterior bundle of the cotangent bundle \(\Lambda (T^{*} M)\). A *differential form* is a smooth section of the exterior bundle
+\[
+\omega: M \rightarrow \Lambda (T^{*} M).
+\]
+
+A form that lands entirely in \(\Lambda^{k} T^{*} M \) is called a *\(k\)-form*.
+
+=Notation:= We denote the space of \(k\)-forms by \(\Omega^{k}M\)
+
+** Vector-valued differential forms
+
+Let \(M\) be a smooth manifold with vector bundle \(E \rightarrow M\). A *differential form* is a smooth section of the exterior bundle
+\[
+\omega: M \rightarrow \Lambda (T^{*} M) \otimes  E.
+\]
+
+*** FAQ
+
+=Question:= Why don't we just take \(\Lambda (E)\)  ? 
+
+=Answer:= That is actually used, but for a different purpose: the goal of a differential form is to /act on tangent vectors/, which is why we maintain the cotangent part. Taking the exterior bundle directly is used instead for things like *characteristic classes* 
+
+=Question:= \(\Lambda (T^{*} M)\) is an algebra at each point. So what if we assume \(E\) is also an algebra fiberwise?
+
+=Answer:= This actually shows up in gauge theory! Along with noncommutative geometry and index theory
+
+For example, consider taking \(End(E)\), where \(E\) is a vector bundle. You get *matrix-valued differential forms.* This is highly relevant in gauge theories of qft
+
+You can take bundles of *clifford algebras*, which allow you to define the *Dirac operator* --- this shows up in noncommutative geometry.
+
+If we take \(E = \mathbb{C}\), we get *complex differential forms*, which show up in Kähler and algebraic geometry.
+
+** Differential of a function
+
+** Exterior derivative
+
+Let \(M\) be a smooth manifold and \(\Omega^{k} M\) be its space of \(k\)-forms. We define the *exterior derivative* \(d: \Omega^{k} M \rightarrow \Omega^{k+1} M\) by the following axioms
+
+        1. For any \(f \in \Omega^{0} M\), \(df\) is the /differential/ of \(f.\)
+        2. \(d(a \alpha  + b \beta ) = a d(\alpha ) + b d(\beta )\) for all \(a,b \in k\) and \(\alpha , \beta \in \Omega^{k} M\)
+        3. \(d(\alpha \wedge \beta ) = d \alpha \wedge \beta + (-1)^{|\alpha |} \alpha \wedge d \beta \)
+        4. \(d^{2} \alpha = 0\)
+
+
+*** Coordinates
+
+If we have a local coordinate system \(x^{i} : U \rightarrow \mathbb{R} \), the exterior derivative of \(\omega = \sum f_{I} dx^{i_{1}} \wedge \ldots \wedge  dx^{i_n}\) is 
+\[
+d \omega = \sum  df_{I} \wedge dx^{i_{1}} \wedge \ldots \wedge dx^{i_{n}}
+\]
+
+
+** Lie algebra valued forms
+
+
+*** Wedge product
+
+Let \(A\) be a Lie algebra valued one-form. Then
+\[
+A \wedge A = \dfrac{1}{2} \sum_{ab\mu\nu}_{} [\lambda_{a} , \lambda_{b}] A_{\mu}^{a} A^{b}_{\nu} (dx^{\mu} \wedge dx^{\nu})
+\] 
+
+
+** Integrating a form
+
+By definition, the integral of a \(k\)-form whose coordinates are in order is
+\[
+\int f dx^{1} \wedge \ldots \wedge dx^{k} \equiv \int f dx^{1} \ldots dx^{k}
+\]
+where the integral on the right is the Riemann integral,
+
+=Note:= if you swap around the \(dx^{i}\), you pick up signs before integrating.
+
+*** Jacobians
+
+If you change coordinate systems, you automatically get the Jacobian appearing: if 
+\(dx^{i}^{}^{}^{} = \sum \alpha_{ij} dy^{j}^{}^{} \) 
+then
+\[
+\bigwedge_{i} dx^{i} = 
+\] 
+
+
+* Theorems
+
+* Examples
+
+
+** Symplectic forms

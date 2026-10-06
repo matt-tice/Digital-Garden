@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       a87208d7-5ac7-4fe0-93ac-e5a8b522c8b6
+:END:
+#+title: indian defenses
+#+filetags: :chess:openings:
+
+* References
+
+
+
+* Summary
+
+One of the biggest questions in the indian defenses, when you have pawns on c4,c5,d4,d5, is what and when to take
+
+=dxc4:= You pretty much always want to take the c4 pawn first, because when white recaptures with the bishop, it can be pushed away while you gain space, with a6 b5. The c5 pawn that you still have, you can keep defended or trade, depending on the position
+
+
+* Nimzo-Indian
+
+We pin the knight on c3 right away. 
+
+=Bd2:= If white breaks the pin, we respond with *c5* --- this is a really great move, because white has no immediate way of taking that pawn if we play right --- we can always defend it, or threaten to double white's pawns, etc.

@@ -23,6 +23,23 @@ four pieces in the attack allows one to sack
 
 check if a piece can escape at the end of a line
 
+
+* Psychology
+
+** Music
+
+*** No lyrics
+
+It doesn't matter how good or bad the artist is, lyrics are far far too distracting
+
+Jazz actually is a pretty good choice if we just need something to help us keep our momentum, which is the main reason I use music --- to try to maintain my speed
+
+** Tilt
+
+If you're upset you already lost. If you're frustrated, angry, sad, jealous, anxious, the outcome of the game is irrelevant; you won't improve.
+
+You can only improve when you have a blank mind; one that's ready for playing to learn.
+
 * Pawns
 
 ** Triangles
@@ -64,9 +81,18 @@ If you're defending a pawn from the side with your rook, it's extremely dangerou
 
 One way to stop a passed pawn is to skewer it to another piece
 
+
+** Don't push the only pawn defending a piece
+
+
 * Skewers
 
 ** Allow your opponent to take a pawn, then skewer
+
+
+** Look for almost skewers
+
+If you have a queen and king on the same diagonal, with one other piece blocking the queen, look for a way to remove that piece
 
 * Modern opening
 
@@ -91,3 +117,9 @@ Don't offer to trade pieces, if the opponent can block you with a pawn, gaining 
 * Checks
 
 Bring your queen closer into the attack whenever you check with it
+
+* Knights
+
+** Kill the caro knight
+
+Black's knights in the caro-kann can be scary

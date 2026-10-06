@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       4ebd23ba-945e-4817-839a-c4401279e564
+:END:
+#+title: caro-kann
+#+filetags: :chess:opening:
+
+* References
+
+
+
+* Summary
+
+When you chase the bishop off to the side immediately go for *Qh5!* 

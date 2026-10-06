@@ -91,3 +91,14 @@ Flat connections have vanishing curvature
 * Examples
 
 ** Tangent bundle
+
+
+** Spinor bundles
+
+Given a vector space \(V\), with an inner product, we can take its Clifford algebra \(Cl(V)\). A *spinor space* is any irreducible module of \(Cl(V)\).  
+
+Spinor bundles are vector bundles that are fiberwise spinor spaces
+
+As it turns out, it's difficult to make a spinor bundle smooth. The *spin group* is what's used to determine when you can get a spinor bundle.
+
+This is also related to cohomology: a spinor bundle exists if and only if the *second Stiefel-Whitney class is zero* 
