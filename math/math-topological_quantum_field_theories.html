@@ -170,9 +170,26 @@
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
+<p>Topological quantum field theory is normally some topological
+variation on a <a
+href="https:/Digital-Garden/physics/phys-yang_mills_field_theory.html">yang-mills
+field theory</a>. We either remove the metric (Chern-Simons) or we start
+with the metric and pass into a subspace that doesn't use the metric
+(Witten)</p>
 <h1 id="definitions">Definitions</h1>
 <h2 id="wilson-loops">Wilson loops</h2>
-<h3 id="intuition">Intuition</h3>
+<p>Given a <a
+href="https:/Digital-Garden/physics/phys-yang_mills_field_theory.html">yang-mills
+field theory</a> with connection <span
+class="math inline"><em>A</em></span> on a spacetime manifold, the
+Wilson loop operator is <span
+class="math display"><em>W</em>(<em>γ</em>) = <em>T</em><em>r</em>(𝒫<em>e</em><sup><em>i</em>∫<sub><em>γ</em></sub><em>A</em><sub><em>μ</em></sub><em>d</em><em>x</em><sup><em>μ</em></sup></sup>)</span>
+for any closed loop <span class="math inline"><em>γ</em></span>, where
+<span class="math inline">𝒫</span> is the <em>path-ordering
+operator</em></p>
+<h3 id="parallel-transport">Parallel transport</h3>
+<p>We are parallel transporting the <em>wavefunction</em></p>
+<h3 id="physics-intuition">Physics Intuition</h3>
 <p>These arose in studying quantum chromodynamics</p>
 <p>A Wilson loop (in spacetime) is what you get when you track the phase
 shift of a particle moving in a closed loop in spacetime.</p>
@@ -228,14 +245,28 @@ class="math inline">(<em>n</em>−<em>k</em>)</span>-form <span
 class="math inline"><em>B</em></span>, so your action is <span
 class="math display">∫<em>T</em><em>r</em>(<em>B</em>∧<em>F</em>)</span></p>
 <h2 id="chern-simons-theory">Chern-Simons Theory</h2>
-<p>In the case that your manifold is <strong>three-dimensional</strong>,
-the obvious thing to do is to try to take <span
+<p>In Yang-Mills, you start with a closed orientable (pseudo)Riemannian
+manifold with a principal <span class="math inline"><em>G</em></span>
+bundle and connection <span class="math inline"><em>A</em>.</span> The
+metric allows you to define a Hodge star operator, which then gives you
+the ability to form an integral <span
+class="math display">∫<sub><em>M</em></sub><em>T</em><em>r</em>(<em>F</em>∧⋆<em>F</em>)</span>
+which is the <strong>Yang-Mills action</strong>, where <span
+class="math inline"><em>F</em> = <em>d</em><em>A</em> + <em>A</em> ∧ <em>A</em></span>
+is the curvature.</p>
+<p>If we don't have a metric, we can't get a Hodge star operator, so we
+need something else to integrate.</p>
+<p><code class="verbatim">3D:</code> In the case that your manifold
+<span class="math inline"><em>M</em></span> is
+<strong>three-dimensional</strong>, the obvious thing to do is to try to
+take <span
 class="math inline">∫<em>T</em><em>r</em>(<em>A</em>∧<em>F</em>)</span>.</p>
 <p>It turns out, this doesn't work — it <strong>isn't
-gauge-invariant</strong> If you expand out everything, you find <span
-class="math inline"><em>T</em><em>r</em>(<em>A</em>∧<em>F</em>) = <em>T</em><em>r</em>(<em>A</em>∧<em>d</em><em>A</em>)</span></p>
-<p>The differential <span class="math inline"><em>d</em></span> breaks
-the gauge-invariance</p>
+gauge-invariant</strong>. If we take a gauge transformation <span
+class="math inline"><em>A</em> → <em>g</em><sup>−1</sup><em>A</em><em>g</em> + <em>g</em><sup>−1</sup><em>d</em><em>g</em></span>
+(note that this transformation shows up because of the fact that we use
+the <strong>covariant derivative</strong> <span
+class="math inline"><em>A</em> + <em>d</em></span>)</p>
 <p><code class="verbatim">Solution:</code> The actual Chern-Simons
 functional comes from mathematics: in four dimensions the <strong>second
 Chern class</strong> has the form <span
@@ -244,6 +275,8 @@ You then try to work backwards; since your manifold is only three
 dimensional, you try to write <span
 class="math inline"><em>T</em><em>r</em>(<em>F</em>∧<em>F</em>)</span>
 as an exterior derivative of a three-form.</p>
+<p><span class="math inline"><em>A</em> ∧ <em>A</em></span> is a
+<strong>self-interaction</strong></p>
 <h3 id="intro">Intro</h3>
 <p>This is the canonical example of a topological quantum field theory
 from a mathematical physics perspective.</p>
@@ -252,7 +285,13 @@ from a mathematical physics perspective.</p>
 manifold <span class="math inline"><em>M</em></span> without boundary
 and a metric <span class="math inline"><em>g</em></span>, which we use
 to construct the <strong>Hodge star operator</strong> <span
-class="math inline">⋆</span>. The action takes the form</p>
+class="math inline">⋆</span>.</p>
+<p><code class="verbatim">Conditions:</code> Compactness allows us to
+easily integrate over everything. The metric and orientability give us
+the Hodge star operator. The orientability is also necessary to define a
+global integral. And the lack of boundary makes it so that we don't have
+to keep track of boundary conditions</p>
+<p><code class="verbatim">Action:</code> The action takes the form</p>
 <p><span class="math inline">$S_{\text{Yang-Mills}} = \dfrac{1}{2g^{2}}
 \int_{M} Tr(F \wedge \star F)$</span></p>
 <p>where <span class="math inline"><em>F</em></span> is the curvature
@@ -260,10 +299,11 @@ class="math inline">⋆</span>. The action takes the form</p>
 class="math inline"><em>F</em> = <em>d</em><em>A</em> + <em>A</em> ∧ <em>A</em></span>.
 In local coordinates this is <span
 class="math inline"><em>F</em><sub><em>μ</em><em>ν</em></sub> = ∂<sub><em>μ</em></sub><em>A</em><sub><em>ν</em></sub> − ∂<sub><em>ν</em></sub><em>A</em><sub><em>μ</em></sub> + [<em>A</em><sub><em>μ</em></sub>,<em>A</em><sub><em>ν</em></sub>]</span></p>
-<p>For Chern-Simons theory, we take a smooth, compact, oriented
-<strong>3-manifold</strong> <span class="math inline"><em>M</em></span>
-without boundary, equipped with a principal <span
-class="math inline"><em>G</em></span>-bundle <span
+<p><code class="verbatim">Removing the metric:</code> What if we don't
+have a metric? For Chern-Simons theory, we take a smooth, compact,
+oriented <strong>3-manifold</strong> <span
+class="math inline"><em>M</em></span> without boundary, equipped with a
+principal <span class="math inline"><em>G</em></span>-bundle <span
 class="math inline"><em>P</em></span>, for a compact Lie group <span
 class="math inline"><em>G</em></span>.</p>
 <p>We then take a <strong>connection 1-form</strong> <span
@@ -364,6 +404,51 @@ a map <span class="math inline">ℂ → ℂ</span>, which just picks out a
 single complex number. The is the <strong>partition function</strong> or
 <strong>topological invariant</strong> of the theory.</li>
 </ul>
+<p><code class="verbatim">How this works in physics:</code> If we take
+an integral over a manifold with boundary, we need to keep track of the
+boundary conditions <span
+class="math display"><em>Φ</em>(<em>φ</em>) = ∫<sub><em>ϕ</em>|<sub>∂<em>M</em></sub> = <em>φ</em></sub><em>D</em><em>ϕ</em><em>e</em><sup>−<em>S</em>[<em>ϕ</em>]</sup>.</span>
+For every boundary condition <span
+class="math inline"><em>φ</em></span>, we get a different result on our
+integral. The functional <span class="math inline"><em>Φ</em></span> is
+an element of a vector space, which turns out to be a Hilbert space.</p>
+<p><code class="verbatim">Question:</code> Why do we have more than one
+element in our Hilbert space? What are all these different functionals
+that we get?</p>
+<p><code class="verbatim">Answer:</code> The integral I wrote above is
+integrating over the manifold <span
+class="math inline"><em>M</em></span>. This manifold is the
+<strong>cobordism.</strong> We get a different functional for every
+possible cobordism that maps <span
+class="math inline">∅ → ∂<em>M</em></span>. So really, what we should
+write is that we have a fixed boundary <span
+class="math inline"><em>Σ</em></span>, and the Hilbert space assigned to
+<span class="math inline"><em>Σ</em></span> is made up of functionals
+like <span
+class="math display"><em>Φ</em><sub><em>M</em></sub>(<em>φ</em>) = ∫<sub><em>ϕ</em>|<sub><em>Σ</em></sub> = <em>φ</em></sub><em>D</em><em>ϕ</em><em>e</em><sup>−<em>S</em>[<em>ϕ</em>]</sup>,</span>
+where <span class="math inline">∂<em>M</em> = <em>Σ</em>.</span></p>
+<p>We can also use other functionals, like correlation functions, I
+assume.</p>
+<p><code class="verbatim">Note:</code> This relies on there being
+topologically distinct cobordisms that have the same boundary. This is
+very much a thing. As a basic example, take any two closed manifolds;
+they both have empty boundaries. As a more complicated example, take
+some manifold with whatever boundary and then <strong>add a handle to
+it.</strong> That's a great trick.</p>
+<p><code class="verbatim">Duals:</code> You interpret cobordisms <span
+class="math inline">∅ → <em>Σ</em></span> and <span
+class="math inline"><em>Σ</em> → ∅</span> as duals (one is a bra, the
+other a ket). Then the expectation value is a map <span
+class="math inline">∅ → ∅.</span> This corresponds to a path integral
+over the whole closed manifold</p>
+<p><code class="verbatim">Surgery:</code> This allows you to compute the
+actual path integrals over the closed manifold by doing surgery and
+keeping track of the boundaries with Hilbert spaces. That's a pretty
+neat trick.</p>
+<p><code class="verbatim">Topological defects:</code> You can also place
+wilson lines inside of the cobordism. These are 1D curves, and the idea
+is that you work with boundaries that are allowed <strong>marked
+points</strong> (the end points of the wilson lines.)</p>
 <h3 id="chern-simons">Chern-Simons</h3>
 <p>Consider a theory with <span
 class="math inline"><em>M</em> = <em>Σ</em> × ℝ</span>. We write</p>
@@ -375,7 +460,7 @@ quantize this classical phase space. We pick a <a
 href="https:/Digital-Garden/math/math-complex_structure.html">complex
 structure</a> on <span class="math inline"><em>Σ</em></span>, turning it
 into a <strong>Riemann surface</strong>. The moduli space becomes a
-<strong>Kahler manifold</strong>. The Hilbert space ends up being a
+<strong>Kähler manifold</strong>. The Hilbert space ends up being a
 0-cohomology (sheaf cohomology) of moduli space.</p>
 <p><code class="verbatim">Kodaira Vanishing Theorem:</code> Tells us
 that in this case the higher cohomology is zero.</p>

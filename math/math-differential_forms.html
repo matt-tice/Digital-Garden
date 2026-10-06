@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>differential forms</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">differential forms</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<h1 id="definitions">Definitions</h1>
+<h2 id="differential-forms-1">Differential forms</h2>
+<p>Let <span class="math inline"><em>M</em></span> be a smooth manifold
+and take the exterior bundle of the cotangent bundle <span
+class="math inline"><em>Λ</em>(<em>T</em><sup>*</sup><em>M</em>)</span>.
+A <strong>differential form</strong> is a smooth section of the exterior
+bundle <span
+class="math display"><em>ω</em> : <em>M</em> → <em>Λ</em>(<em>T</em><sup>*</sup><em>M</em>).</span></p>
+<p>A form that lands entirely in <span
+class="math inline"><em>Λ</em><sup><em>k</em></sup><em>T</em><sup>*</sup><em>M</em></span>
+is called a <strong><span
+class="math inline"><em>k</em></span>-form</strong>.</p>
+<p><code class="verbatim">Notation:</code> We denote the space of <span
+class="math inline"><em>k</em></span>-forms by <span
+class="math inline"><em>Ω</em><sup><em>k</em></sup><em>M</em></span></p>
+<h2 id="vector-valued-differential-forms">Vector-valued differential
+forms</h2>
+<p>Let <span class="math inline"><em>M</em></span> be a smooth manifold
+with vector bundle <span
+class="math inline"><em>E</em> → <em>M</em></span>. A
+<strong>differential form</strong> is a smooth section of the exterior
+bundle <span
+class="math display"><em>ω</em> : <em>M</em> → <em>Λ</em>(<em>T</em><sup>*</sup><em>M</em>) ⊗ <em>E</em>.</span></p>
+<h3 id="faq">FAQ</h3>
+<p><code class="verbatim">Question:</code> Why don't we just take <span
+class="math inline"><em>Λ</em>(<em>E</em>)</span> ?</p>
+<p><code class="verbatim">Answer:</code> That is actually used, but for
+a different purpose: the goal of a differential form is to <em>act on
+tangent vectors</em>, which is why we maintain the cotangent part.
+Taking the exterior bundle directly is used instead for things like
+<strong>characteristic classes</strong></p>
+<p><code class="verbatim">Question:</code> <span
+class="math inline"><em>Λ</em>(<em>T</em><sup>*</sup><em>M</em>)</span>
+is an algebra at each point. So what if we assume <span
+class="math inline"><em>E</em></span> is also an algebra fiberwise?</p>
+<p><code class="verbatim">Answer:</code> This actually shows up in gauge
+theory! Along with noncommutative geometry and index theory</p>
+<p>For example, consider taking <span
+class="math inline"><em>E</em><em>n</em><em>d</em>(<em>E</em>)</span>,
+where <span class="math inline"><em>E</em></span> is a vector bundle.
+You get <strong>matrix-valued differential forms.</strong> This is
+highly relevant in gauge theories of qft</p>
+<p>You can take bundles of <strong>clifford algebras</strong>, which
+allow you to define the <strong>Dirac operator</strong> — this shows up
+in noncommutative geometry.</p>
+<p>If we take <span class="math inline"><em>E</em> = ℂ</span>, we get
+<strong>complex differential forms</strong>, which show up in Kähler and
+algebraic geometry.</p>
+<h2 id="differential-of-a-function">Differential of a function</h2>
+<h2 id="exterior-derivative">Exterior derivative</h2>
+<p>Let <span class="math inline"><em>M</em></span> be a smooth manifold
+and <span
+class="math inline"><em>Ω</em><sup><em>k</em></sup><em>M</em></span> be
+its space of <span class="math inline"><em>k</em></span>-forms. We
+define the <strong>exterior derivative</strong> <span
+class="math inline"><em>d</em> : <em>Ω</em><sup><em>k</em></sup><em>M</em> → <em>Ω</em><sup><em>k</em> + 1</sup><em>M</em></span>
+by the following axioms</p>
+<ol>
+<li>For any <span
+class="math inline"><em>f</em> ∈ <em>Ω</em><sup>0</sup><em>M</em></span>,
+<span class="math inline"><em>d</em><em>f</em></span> is the
+<em>differential</em> of <span
+class="math inline"><em>f</em>.</span></li>
+<li><span
+class="math inline"><em>d</em>(<em>a</em><em>α</em>+<em>b</em><em>β</em>) = <em>a</em><em>d</em>(<em>α</em>) + <em>b</em><em>d</em>(<em>β</em>)</span>
+for all <span
+class="math inline"><em>a</em>, <em>b</em> ∈ <em>k</em></span> and <span
+class="math inline"><em>α</em>, <em>β</em> ∈ <em>Ω</em><sup><em>k</em></sup><em>M</em></span></li>
+<li><span
+class="math inline"><em>d</em>(<em>α</em>∧<em>β</em>) = <em>d</em><em>α</em> ∧ <em>β</em> + (−1)<sup>|<em>α</em>|</sup><em>α</em> ∧ <em>d</em><em>β</em></span></li>
+<li><span
+class="math inline"><em>d</em><sup>2</sup><em>α</em> = 0</span></li>
+</ol>
+<h3 id="coordinates">Coordinates</h3>
+<p>If we have a local coordinate system <span
+class="math inline"><em>x</em><sup><em>i</em></sup> : <em>U</em> → ℝ</span>,
+the exterior derivative of <span
+class="math inline"><em>ω</em> = ∑<em>f</em><sub><em>I</em></sub><em>d</em><em>x</em><sup><em>i</em><sub>1</sub></sup> ∧ … ∧ <em>d</em><em>x</em><sup><em>i</em><sub><em>n</em></sub></sup></span>
+is <span
+class="math display"><em>d</em><em>ω</em> = ∑<em>d</em><em>f</em><sub><em>I</em></sub> ∧ <em>d</em><em>x</em><sup><em>i</em><sub>1</sub></sup> ∧ … ∧ <em>d</em><em>x</em><sup><em>i</em><sub><em>n</em></sub></sup></span></p>
+<h2 id="lie-algebra-valued-forms">Lie algebra valued forms</h2>
+<h3 id="wedge-product">Wedge product</h3>
+<p>Let <span class="math inline"><em>A</em></span> be a Lie algebra
+valued one-form. Then <span class="math display">$$
+A \wedge A = \dfrac{1}{2} \sum_{ab\mu\nu}_{} [\lambda_{a} , \lambda_{b}]
+A_{\mu}^{a} A^{b}_{\nu} (dx^{\mu} \wedge dx^{\nu})
+$$</span></p>
+<h2 id="integrating-a-form">Integrating a form</h2>
+<p>By definition, the integral of a <span
+class="math inline"><em>k</em></span>-form whose coordinates are in
+order is <span
+class="math display">∫<em>f</em><em>d</em><em>x</em><sup>1</sup> ∧ … ∧ <em>d</em><em>x</em><sup><em>k</em></sup> ≡ ∫<em>f</em><em>d</em><em>x</em><sup>1</sup>…<em>d</em><em>x</em><sup><em>k</em></sup></span>
+where the integral on the right is the Riemann integral,</p>
+<p><code class="verbatim">Note:</code> if you swap around the <span
+class="math inline"><em>d</em><em>x</em><sup><em>i</em></sup></span>,
+you pick up signs before integrating.</p>
+<h3 id="jacobians">Jacobians</h3>
+<p>If you change coordinate systems, you automatically get the Jacobian
+appearing: if <span
+class="math inline"><em>d</em><em>x</em><sup><em>i</em><sup><sup><sup></sup></sup></sup></sup> = ∑<em>α</em><sub><em>i</em><em>j</em></sub><em>d</em><em>y</em><sup><em>j</em><sup><sup></sup></sup></sup></span>
+then <span
+class="math display">⋀<sub><em>i</em></sub><em>d</em><em>x</em><sup><em>i</em></sup>=</span></p>
+<h1 id="theorems">Theorems</h1>
+<h1 id="examples">Examples</h1>
+<h2 id="symplectic-forms">Symplectic forms</h2>
+</body>
+</html>
