@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       daae4516-41e9-4657-85a3-e3013ff31330
+:END:
+#+title: calabi-yau manifolds
+#+filetags: :math:physics:geometry:string_theory:
+
+* References
+
+
+
+* Summary
+
+Complex manifold
+Kähler
+Trivial first Chern class
+
+
+
+* Definitions
+
+
+
+
+* Theorems
+
+* Examples
+
+** Elliptic curves
+
+** K3 Surfaces
+
+** Calabi-Yau Threefolds

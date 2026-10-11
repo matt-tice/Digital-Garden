@@ -1,0 +1,140 @@
+:PROPERTIES:
+:ID:       4b44d2ee-3bd0-486a-8d89-337284f5722d
+:END:
+#+title: molds
+#+filetags: :biology:fungi:
+
+* References
+
+
+
+* Summary
+
+Molds are types of fungi that belong (mainly) to the phylas /Ascomycota/ or /Zygomycota/ 
+
+Individual spores will germinate and grow outward at an *equal rate in all directions*. Over time the circles will merge into irregular shapes
+
+Because of the aerial hyphae used in sporulation, it almost always looks fuzzy, velvety, cottony, hairy, or powerdery.
+
+=Colour-gradient:= The pigment is contained in the conidia, so young mold will actually be white or colourless. This causes mold to have a colour-gradient --- the outermost mold is light or translucent
+
+* Structure
+
+=Hyphae:= A microscopic, tube-like filament. They branch out like roots to gather more food from a source. What we see macroscopically as /mold/ is really just a huge aggregate of hyphae!
+
+=Mycelium:= The network that hyphae form
+
+=Conidiophores:= The stalks/stems that mold produces, which holds the spores. Each conidiophore is topped with *conidia*. The conidiophores are what gives the mold its fuzzy texture.
+
+=Conidia:= The spores of the mold.
+
+=Spores:= When environmental conditions shift, causing a drop in moisture or nutrients, the mycelium transitions to a /reproductive phase/, in which it aerializes hyphae called *conidiophores* or *sporangiophores* that contain the spores of the mold, called *conidia.* 
+
+=Colour:= The pigment of the mycelium is inside of the conidia.
+
+* Growth
+
+=Germination:= The dehydrated spore first absorbs free water. It then has to break down sugars to have the energy to grow
+
+=Apical:= Hyphae grow from their tips; this is called *apical growth.* They produce exoenzymes to break down organic compounds like cellulose, so they can absorb the nutrients
+
+=Water activity:= The amount of unbound water molecules available. Pure distilled water was \(a_{w} = 1\), fresh bread has \(a_{w} \approx 0.97\). Most molds need at least \(a_{w} = 0.8\) to germinate
+
+* Types
+
+
+** Ascomycota
+
+Members of this phylum are commonly called *sac fungi* or *ascomycetes.* 
+
+=Septate hyphae:= The hyphae are divided into little rooms by cross-walls called *septa*. Each septum has a central pore that allows cytoplasm through (and sometimes nuclei)
+
+=Ascus:= This is the defining feature of this phylum. Asci are special spore-bearing cells. The spores they produce are called *ascospores* 
+
+=Ascospores:= Each ascus produces usually *eight ascospores.*
+
+*** Examples 
+
+**** Penicillium
+
+Highly acid-tolerant. That's why you're likely to find it in tomato sauce, where many bacteria wouldn't like the environment
+
+***** Penicillium chrysogenum
+
+=Growth:= Dense, flat, velvety colonies
+
+=Colour:= Starts white, turns blue-green
+
+=Structure:= Conidiophores branch out symmetrically to form a structure that looks like a broom
+
+**** Aspergillus
+
+The chief competitor to penicillium in food spoilage
+
+They often start *bright yellow* and then become browner as they mature.
+
+***** Aspergillus niger
+
+Commonly confused with Stachybotrys
+
+=Structure:= Single smooth stalks terminate in large globes called vesicles, which are covered in asci. Microscopically it looks like a field of dandelions, where the dandelions are the condidae.
+
+**** Stachybotrys chartarum
+
+=Appearance:= Slimy; targets complex cellulose fibers and requires materials to be continuously soaked for weeks.
+
+=Structure:= Dark septate hyphae. Conidiophores end in clusters of ellipse-shaped cells (*phialides*) that look like a closed fist
+
+**** Cladosporium
+
+Olive green or brown patches
+
+**** Alternaria
+
+Fuzzy, dark brown or black
+
+**** Aureobasidium pullulans
+
+Slimy pinkish-white film that matures into dark brown/black
+
+** Zygomycota
+
+=Aseptate hyphae:= The hyphae are wide hollow tubes. Thousands of nuclei share the same space. This allows rapid sharing of nutrients. As a consequence, these molds grow *incredibly fast.* 
+
+=Water:= Require incredibly high water activity to grow
+
+=Zygosporangium:= Inside of this dark, thick-walled structure, two compatible *gametangia* fuse to form a *zygospore*. This fusion process is called *karyogamy*
+
+=Zygospores:= Each zygosporangium produces a *single* large zygospore. They are typically produced when the zygosoprangium is physically ruptured
+
+*** Examples
+
+**** Rhizopus stolonifer
+
+This is common bread mold
+
+=Appearance:= White fuzzy circles with dark centers
+
+=Structure:= Has an interesting root structure --- there are horizontal hyphae called *stolons* that rapidly claim territory over a surface like bread. Then at the base of the conidiophores there are filaments that look like tree roots, called *rhizoids.* The black dots in the center of the white are the mature, spore-filled *sporangia*.
+
+=Heat:= The internal temperature of bread when baked is around 95 celsius, and vegetative cells and asexual sporangiospores of rhizopus die around only 60 celsius.
+
+**** Mucor mucedo
+
+=Appearance:= Exceptionally tall, fluffy mats (can be several centimeters!)
+
+=Structure:= No rhizoids. Sporangiophores hold single globular sporangia that break open even under a breath
+
+**** Pilobolus
+
+Grows on herbivore manure
+
+=Structure:= Sub-sporangial vesicle that is *light-sensitive*. It can literally launch itself *up to two meters* towards the sunlight
+
+*** Mucoromycota
+
+*** Zoopagomycota
+
+* Mycotoxins
+
+Molds produce mycotoxins in order to *poison the environment*, to remove competition.

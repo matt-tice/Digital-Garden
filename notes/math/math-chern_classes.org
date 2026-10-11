@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       5f773599-6061-4d13-b691-937b9994eb5d
+:END:
+#+title: chern classes
+#+filetags: :math:bundles:cohomology:
+
+* References
+
+
+
+* Summary
+
+Consider complex [[id:a3ec7f7f-0799-4e6d-980d-e14c5c7617f9][vector bundles]]
+
+=First class:= 
+
+=Second class:= 
+
+* Definitions
+
+
+
+
+* Theorems
+
+* Examples
