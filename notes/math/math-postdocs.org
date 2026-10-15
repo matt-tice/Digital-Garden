@@ -1,0 +1,213 @@
+:PROPERTIES:
+:ID:       6154b4ae-5654-4fcf-9455-5253b4e8d8ad
+:END:
+#+title: postdocs
+#+filetags: :math:jobs:
+
+
+* Summary
+
+I wanted to make this file to start to track the areas that I'm noticing job postings in 
+
+* Algebra
+
+** Representation theory
+
+** Groups
+
+*** Geometric group theory
+
+*** Polish groups
+
+* Analysis
+
+** Geometric analysis
+
+** On metric spaces
+
+** C* Algebras
+
+*** Noncommutative geometry
+
+** PDEs
+
+*** General relativity
+
+*** Singularities
+
+*** Plasmas
+
+*** Regularity theory
+
+*** Elliptic / parabolic
+
+*** Potential theory
+
+*** Harmonic analysis
+
+*** Cacluus of variations
+
+
+
+* Combinatorics
+
+** Algebraic
+
+** Extremal
+
+** Graph theory
+
+*** Extremal
+
+*** Structural
+
+*** Ramsey theory
+
+** Number theory
+
+** Matroids
+
+** Probabilistic
+
+* Dynamics
+
+** Complex and Algebraic
+
+* Foundations
+
+** Model theory
+
+** Descriptive set theory
+
+** Computability theory
+
+* Geometry
+
+** Algebraic geometry
+
+** Complex geometry
+
+** Differential geometry
+
+*** Curvature
+
+** Euclidean lattices
+
+** Hyperbolic geometry
+
+** Moduli spaces
+
+** Surface groups
+
+** Teichmuller theory
+
+* Number theory
+
+** Algebraic
+
+*** Galois representations
+
+*** Algebraic Ktheory
+
+** Langlands
+
+** Arithmetic / Automorphic forms
+
+** p-adic Hodge theory
+
+* Random matrices
+
+* Mathematical physics
+
+** Holography
+
+*** Celestial holography
+
+** Fluid mechanics
+
+** Mirror symmetry
+
+* Topology
+
+** Low dimensional
+
+** Cohomology
+
+*** Lie groups
+
+*** K-Groups
+
+* Computation
+
+** High performance computing
+
+*** GPU acceleration
+
+** Neural networks
+
+** Proof formalization
+
+** Machine learning
+
+*** Inverse problems
+
+*** Weather prediction
+
+*** PDEs
+
+*** Geometry
+
+*** Stats
+
+*** Mathematical foundations of AI
+
+*** Deep learning
+
+*** Federated learning
+
+** Data science
+
+*** Big data
+
+** Simulations
+
+*** Cellular dynamics
+
+*** Plasmas
+
+*** Fusion
+
+*** Quantum device simulation
+
+** Neuroscience
+
+*** Algebraic topology
+
+* Quantum computing
+
+** LDPC Codes
+
+* Stats
+
+** High-dimensional
+
+*** Biological data
+
+*** Environmental data
+
+** Insurance
+
+** Arithmetic stats
+
+* Finance
+
+* Probability
+
+** Measures
+
+*** Information measures
+
+*** Concentration of measure
+
+** KPZ universality class
+
