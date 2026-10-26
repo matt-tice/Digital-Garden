@@ -1,0 +1,87 @@
+:PROPERTIES:
+:ID:       30f27e03-8817-4d96-a9fa-4e06ce880c93
+:END:
+#+title: hypergeometric series
+#+filetags: :math:analysis:
+
+* References
+
+
+
+* Summary
+
+=Ratios:= Analysts like to look at and classify series in terms of the ratios of consecutive coefficients: \(a_{n+1}/a_{n}\). The reason for this, is that this is something like a discrete version of 
+
+We think of the shift operator \(T(a_{n}) = a_{n+1}\) as the discrete version of the 
+
+The shift operator in quantum mechanics is the exponential of the momentum operator
+
+\(f(x+h) - f(x) \approx h f'(x)\)
+
+\(f(x+h)/f(x) \approx h f'(x)/f(x) + 1\)
+
+* Definitions
+
+** Geometric series
+
+A series \(\sum_{n} a_{n} x^{n} \) is called *geometric* if there is a constant \(R\) such that 
+\[
+\dfrac{a_{n+1}}{a_{n}} = R, \quad \forall n
+\]
+
+** Hypergeometric series
+
+A series \(\sum_{n} a_{n} x^{n} \) is called *hypergeometric* if 
+\[
+\dfrac{a_{n+1}}{a_{n}} = \dfrac{A(n)}{B(n)}, \quad \forall n
+\]
+
+is a rational function in \(n.\)
+
+*** Notes
+
+Assuming we're working over an algebraically closed field, we factor the numerator and denominator as
+
+\(A(n) = (n - a_{1}) \ldots (n - a_{p})\)  and \(B(n) = (n-b_{1}) \ldots (n - b_{q})\)
+
+Then since \(a_{n+1} = \dfrac{A(n)}{B(n)} a_{n }= \dfrac{A(n)}{B(n)} \ldots \dfrac{A(0)}{B(0)} a_{0}    \) 
+
+We get terms like \((n - a_{1})(n - 1 - a_{1} ) \ldots (n - n - a_{1})\)
+
+=Convention:= The standard way to write these things is to factor it as \((n + a_{1} ) \ldots \)  (so you just take my \(a_{1} \rightarrow -a_{1}\)) and then write 
+
+\((a + n) ( a + (n-1)) \ldots a = (a)_{n}\) 
+This is called the *Pochhammer symbol.* 
+
+Then all together we can write our hypergeometric series as 
+
+\[
+F_{p,q}(\bar{a} , \bar{b}, z) = \sum \dfrac{a_{0} (a_{1})_{k} \ldots (a_{p})_{k}}{b_{0} (b_{1})_{k} \ldots (b_{q})_{k} } z^{k}
+\]
+
+=Convention:= Some other conventions are to assume \(a_{0} , b_{0} = 1\) and that the first non-trivial root of \(B(n)\) is \(b_{1} = 1\), so that \( (b_{1})_{k} = (1)_{k} = k! \) , allowing you to have something like \(z^{k} / k!\) , making your series look like an exponential type of thing. In this case, they'll assume you have \(q+1\) roots on the bottom, so you write
+
+\[
+F_{p,q}(\bar{a} , \bar{b}, z) = \sum \dfrac{(a_{1})_{k} \ldots (a_{p})_{k}}{(b_{1})_{k} \ldots (b_{q})_{k} } \dfrac{z^{k}}{k!}
+\]
+
+
+** Asymptotic series
+
+A series \(\sum_{n} a_{n} x^{n} \) is called *hypergeometric* if 
+\[
+\dfrac{a_{n+1}}{a_{n}} = A(n)
+\]
+
+is a polynomial function in \(n.\)
+
+
+* Theorems
+
+** Ratio test
+
+** Malmquist's theorem
+
+*** Riccati Equations
+
+* Examples

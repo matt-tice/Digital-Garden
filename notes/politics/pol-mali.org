@@ -2,7 +2,7 @@
 :ID:       2d7079f3-e328-4215-ba0e-2eac0054a95e
 :END:
 #+title: Mali
-#+filetags: :Politics:Sahel:
+#+filetags: :Politics:Sahel:w_africa:
 
 
 * References
@@ -12,19 +12,145 @@
 
 Neighbours Algeria
 
+* Culture
+
 * Economics
 
-* Relationships
+** Imports
 
-** USA
+** Agriculture
 
-*** 2025
+** Mining
 
-Travel ban on US citizens in response to US restrictions on themp
+=Gold:= 
+
+* Education
+
+* Geography
+
+=Huge:= Largest country in west Africa, and eighth-largest on the continent.
+
+=Landlocked:= 
+
+
+
+
+** Sahara (North)
+
+=Sahara desert:= Covers *65% of the country.* Shifting sand dunes, gravel plains, rugged rocks; hot, barren.
+
+=Desertification:= The Sahara is slowly *expanding southward* each year, destroying farmland.
+
+=Nomads:= Indigenous groups like the *Tuareg*
+
+** Sahelian (Center)
+
+=Semi-arid:= Dry, sandy plains, sparse shrubs, baobab trees.
+
+=Bandiagara Escarpment:= A massive cliff. The *Dogon* people live there.
+
+=Hombori Tondo:= A huge mountain with a flat top
+
+=Niger river:= The most important geographic feature of Mali. Creates the *Inland Niger Delta*, which is incredibly fertile.  It is an oasis in the middle of Mali. Used for transporting goods, fishing, and growing crops.
+
+** Sudanic (South)
+
+=Wet:= Regular rainfall. The vast majority of the population live here. 
+
+=Forests:= 
+
+=Grasslands:= 
+
+=Agriculture:= 
+
+** West
+
+=Senegal river:= Runs through the western part of the country. Used for energy and agriculture. 
+
+=River basin:= The Senegal river basin is the lowest part of the country
 
 * Military
+
+** JNIM
+
+=Trade:= Frequently target fuel convoys and commercial trucks along the corridors to the coast.
 
 ** 2022
 
 *** Operation Barkhane Ends
 France withdrew its military forces after the military junta demanded its exit
+
+=Russia:= Mali decided to use Russian mercenary groups (the Africa Corps) to fight against internal jihadist groups.
+
+=Neighbouring concerns:= Mali's neighbours are increasingly worried that Mali's conflict will spill into their territory.
+
+* Politics
+
+** Coup d'état (2012)
+
+** Coup d'état (2020)
+
+** Coup d'état (2021)
+
+The Malian army captured President Bah N'daw, PM Moctar Ouane, and Minister of Defence Souleymane
+
+** Withdrawl from ECOWAS (2025)
+
+Mali grew frustrated with sanctions and criticism towards its non-democratic governance, and decided to withdraw from the *Economic Community of West African States* on January 29, 2025
+
+** Alliance of Sahel States
+
+Mali, Niger, and Burkina Faso joined together to form the AES (Alliance of Sahel States) to support each other in dealing with jihadist attacks.
+
+*** Joint parliament (2026)
+
+The goal is to eventually form a *single confederation*, with free trade, shared market, and potentially a single currency.
+
+* Relationships
+
+** Algeria
+
+=Separatists:= 
+
+*** Algiers Accord (2015)
+
+
+Mali accuses Algeria of interfering with its sovereignty
+
+** Burkina Faso
+
+** Côte d'Ivoire
+
+=Ports:= Abidjan and San Pedro handle a lot of Malian trade
+
+** Guinea
+
+=Strengthening:= The relationship between Guinea and Mali has been steadily improving.
+
+=Port of Conakry:= Mali has usage and port space at the Port of Conakry.
+
+=Land transfer:= Mali gave Guinea land to build transport infrastructure
+
+** Mauritania
+
+** Russia
+
+=Military:= 
+
+** Senegal
+
+=Dakar-Bamako corridor:= The most critical trade route for Mali. Mali makes up *26%* of Senegal's exports
+
+=Saint-Louis:= A huge project is underway to connect Ambidédi in western Mali to Saint-Louis on the coast of Senegal.
+
+** Togo
+
+=Port of Lomé:= Used when the traditional routes through Senegal or Cote d'Ivoire have political blockades
+
+
+** USA
+
+*** 2025
+
+Travel ban on US citizens in response to US restrictions on them
+

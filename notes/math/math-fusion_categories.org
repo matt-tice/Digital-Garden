@@ -1,0 +1,126 @@
+:PROPERTIES:
+:ID:       c2f88b43-d5db-4994-86ce-3eb83a7f69a9
+:END:
+#+title: fusion categories
+#+filetags: :math:categories:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Dualizable object in a monoidal category
+
+An object in a monoidal category \(A \in \mathcal{C}\) is *right dualizable* if there is an object \(A^{*}\) and morphisms
+\[
+\varepsilon_{A}: A^{*} \otimes A \rightarrow 1 \quad \eta_{A}: 1 \rightarrow A \otimes  A^{*}
+\]
+such that 
+\[
+\eta_{A} \otimes 1_{A^{*}}\circ \alpha \circ 1_{A^{*}} \otimes \varepsilon_{A} = \lambda^{-1}_{A^{*}} \circ \rho_{A^{*}}
+\]
+and 
+\[
+1_{A} \otimes \eta_{A}\circ \alpha \circ \varepsilon_{A } \otimes  1_{A} = \rho^{-1}_{A} \circ \lambda_{A}
+\]
+
+=Invertible:= In the case that *\varepsilon, \eta* are isomorphisms, we call \(A\) an *invertible object.* 
+
+*** Terminology
+
+Other people will call this a /left/ dual. I'm using right dual to signify that the unit-like map \(\eta: 1 \rightarrow A \otimes A^{*} \) puts the dual on the right of the tensor product, with the intuition that a unit should be something like the existence of the object.
+
+** Rigid monoidal category
+
+A category \(\mathcal{C}\) is *right rigid* if every object has a right dual. Similarly it is left rigid if every object has a left dual. A *rigid* category is one that is both left and right rigid.
+
+** Compact closed category 
+
+** Simple object in a category with terminal objects
+
+Let \(\mathcal{C}\) be a category with a terminal object \(\bullet.\) An object \(A\) is *simple* if every coequalizer of the form
+\[
+E \rightrightarrows A \rightarrow Q
+\]
+has \(Q \cong 1\) or \(Q \cong A\)
+
+** Semisimple cat
+
+An abelian category \(\mathcal{C}\) is *semisimple,* if every object is a direct sum of finitely many simple objects.
+
+** Fusion category
+
+A *fusion category* \(C\) is a rigid, semisimple, Vect-enriched monoidal category, with only finitely many  simple objects (up to isomorphism), and such that the endomorphisms of the unit object just form the ground field \(k.\)
+
+*** Intuition
+
+The goal of a fusion category is to study how objects combine
+
+Since every object can be written as a direct sum of finitely many simple objects, and there are only finitely many simple objects, \(X_{i}\), we have a kind of *structure coefficient* equivalence that we can write:
+
+\[
+X_{i} \otimes X_{j} \cong \bigoplus_{k} N_{ij}^{k} X_{k}.
+\]
+where \(N_{ij}^k \in \mathbb{N}_{\geq 0}\).
+
+=Endomorphisms of unit:= 
+
+=Tannaka duality:= Every fusion category is the representation category of a weak Hopf algebra.
+
+** Ribbon category
+
+A *ribbon category* is a rigid braided monoidal category \((\mathcal{B}, \otimes , \sigma )\) along with a natural isomorphism \(\theta: I \rightarrow I\) from the identity functor to itself, called a *twist* such that 
+
+\[
+\theta_{A \otimes B} = \sigma_{BA} \circ \sigma_{AB} \circ \theta_{A} \otimes \theta_{B}
+\]
+\(\theta_{1} = id\), where \(1\) is the monoidal unit
+\(\theta_{A^{*}} = \theta_{A}^{*}\)
+
+*** Intuition
+
+These categories look at how things knot and twist together
+
+=Twist:= The twist operation is meant to account for the *spin* of a particle. As it turns out, the world lines of anyons shouldn't really be thought of as world /lines/, but rather world /ribbons,/ where the extra dimension corresponds to the spin
+
+=Quantum groups:= Finite-dimensional representations of a quantum group form ribbon categories.
+
+** Modular tensor category
+
+A *modular tensor category* is a ribbon and fusion category \(\mathcal{C}\) which satisfies a non-degeneracy condition
+
+*** Intuition
+
+These are similar to ribbon categories, but prevent certain kinds of singularities that can show up in the knots
+
+Let \(\{ X_{i} \}\) be a set of representatives of the simple objects.
+
+=Trace:= Let \(f: A \rightarrow A\) be an endomorphism. We define the trace of \(f\) by
+
+\[
+Tr(f) = \varepsilon \circ (id_{A^{*}} \otimes  (f \circ \theta_{A}) ) \circ (id_{A} \otimes  \theta_{A^{*}}) \circ \sigma_{A^{*}A} \circ \eta
+\]
+
+It's similar to the ordinary trace, but we have a twisting action on both strands. Note that \(Tr(f) : 1 \rightarrow 1\) is a member of the endomorphism ring of the vacuum, which by the definition of a fusion category, is isomorphic to the ground field. So \(Tr(f) \in k.\)
+
+In the case that your category is the standard category of vector spaces, you get back the ordinary trace (because the twist is trivial there).
+
+=S-matrix:= To form the Smatrix, we take the trace of a double braiding:
+
+\[
+S_{ij} = Tr(\sigma_{A_{j} A_{i}} \circ \sigma_{A_{i} A_{j}} )
+\]
+
+=Non-degeneracy:= The non-degeneracy condition is equivalent to the Smatrix being non-degenerate.
+
+=TQFTs:= Modular tensor categories describe \(2+1\) dimensional topological quantum field theory.
+
+=Modular group:= 
+
+* Theorems
+
+* Examples

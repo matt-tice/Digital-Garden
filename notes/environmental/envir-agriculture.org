@@ -1,0 +1,148 @@
+:PROPERTIES:
+:ID:       d58cc77f-7694-4b81-b421-429f573daf04
+:END:
+#+title: agriculture
+#+filetags: :environment:farming:
+
+* References
+
+
+
+* Summary
+
+* Climate
+
+=Frost-free period:= The length of the period determines which crops can grow, since it dicates how much time there is for the seed to mature.
+
+* Soil
+
+[[id:b4a7ea2f-116c-48c1-912f-2dd170441702][River]] deltas provide excellent fertile soil, carrying nutrients down from the mountains.
+
+* Irrigation
+
+Necessary to direct river water during periods of drought.
+
+* Drainage systems
+
+For protecting fields during floods.
+
+* Types of crops
+
+** Food crops
+
+Grown for human consumption.
+
+*** Grains
+
+=Storage:= Grains are dry, compact, and packed with complex carbs. This allows them to be *stored for years* without spoilage. This helped civilizations weather winters, seiges, and droughts.
+
+=Caryopsis:= 
+
+**** Wheat
+
+=Fibers:= Wheat has a very *deep root* system. The roots seek out moisture on their own.
+
+=Climate:= Temperate
+
+=Water:= Moderate water needs. Excess water can cause the wheat to rot or sprout early.
+
+=Soil:= Loamy, well-drained
+
+=Mesopotamia:= 
+
+=Fertile Crescent:= 
+
+***** Processing
+
+Wheat *requires processing* --- milling into flour and baking into bread. This led to the *development of industry.* 
+
+**** Barley
+
+**** Rice
+
+=Structure:= Contains special tissues called *aerenchyma.* It pulls oxygen from the air, through its leaves, down into the roots. This allows the stalks of the rice to be heavily submerged in water, while the ends poke above the water.
+
+=Climate:= Hot, humid
+
+=Water:= Massive amount (1200mm annually). Traditionally grown in *flooded fields* called *paddies.* Having a flooded field isn't actually necessary, but it's useful at killing competing plants which can't handle being submerged.
+
+=Soil:= 
+
+***** Farming
+
+Incredibly labour intensive. *Entire communities* need to work together to build complex irrigation and maintain mud dykes.
+
+=Society:= This coordinated heavily influenced the social culture in East and Southeast Asia
+
+=Irrigation:= 
+
+=Mud dykes:= 
+
+**** Maize
+
+=C4 photosynthesis:= An incredibly powerful form of photosynthesis. This allows maize to capture sunlight at an incredible speed, giving *more calories per acre* than almost any other grain.
+
+=Climate:= Warm, sunny
+
+=Water:= 
+
+=Soil:= Rich, nitrogen-heavy. Requires a ton of nutrients
+
+***** Farming
+
+Maize doesn't have a tough outer hull, making it *easy to harvest and process* by hand. 
+
+=Nitrogen:= Because maize requires a ton of nitrogen to grow, to make sure that it doesn't take all of the nitrogen from the soil, Mesoamerican civilizations invented the *Milpa system*, which plants beans (which introduce nitrogen back into the soil) alongside maize, and squash (which shade the ground to prevent evaporation)
+
+*** Fruits
+
+*** Vegetables
+
+**** Potatoes
+
+=Climate:= Cool
+
+=Soil:= Rocky, loose. 
+
+
+** Feed crops
+
+Grown for livestock consumption.
+
+*** Oats
+
+*** Clover
+
+*** Alfalfa
+
+** Fiber crops
+
+Turned into textiles, paper, and structural materials
+
+*** Cotton
+
+*** Flax
+
+*** Hemp
+
+*** Bamboo
+
+** Oil crops
+
+Oils are extracted from these crops; these oils are then used in cooking, industry, and biofuels
+
+*** Canola
+
+*** Sunflowers
+
+*** Soybeans
+
+** Industrial crops
+
+Crops cultivated as raw materials for factory production
+
+*** Rubber
+
+** Ornamental crops
+
+Grown for aesthetic purposes, like landscaping or decoration.

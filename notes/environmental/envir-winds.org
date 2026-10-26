@@ -1,0 +1,82 @@
+:PROPERTIES:
+:ID:       71fc5ab4-9ea5-43f2-86b4-b916a83e21a6
+:END:
+#+title: winds
+#+filetags: :environment:air:
+
+* References
+
+
+
+* Summary
+
+* The sun
+
+Surprisingly, *winds come from the sun!* More precisely, because hot air rises, in regions where the sun hits, the air gets further away from the earth's surface, creating *low pressure near the surface* and *high pressure higher up*. On the other hand, since cold air sinks, the poles have low-hanging air, creating *high pressure near the surface* and *low pressure higher up*.
+
+=Flow:= Because of these high and low pressure regions, air will flow from the high pressure to the low pressure. So the natural direction for the air to flow is from the equator up into the sky (because of the sun heating it), to the sky around the poles (which are low pressure), down to the surface near the poles (from the cold), down to the surface of the equator (low pressure).
+
+=Rotation:= Because the earth rotates, the natural path of the air is disrupted, in the *Coriolis effect.* The earth *rotates from west to east.* The equator rotates much faster than the poles, causing the distortion of the air currents.
+
+=Distortion:= In the Northern Hemisphere, winds are deflected to their right (to the west), and in the Southern Hemisphere, they are deflected to their left (to the west). This ends up creating three types of winds in each hemisphere: trades (flowing from east to west), westerlies (west to east), and polar easterlies (also east to west)
+
+* Jet stream
+
+An *extremely fast* moving wind high in the atmosphere that acts as a boundary between the cold polar air and warm tropical air.
+
+=Flow:= West to east at around 300 to 400 km/h
+
+=Location:= 30k to 50k feet above the Earth's surface. It's where airplanes fly.
+
+** Cause
+
+The jet stream comes from the *collision of hot and cold air* high up in the atmosphere.
+
+The high air around the equator that rises up wants to head to the polar region with lower pressure in the upper atmosphere. The greater the temperature difference between the equator and the poles, the faster the jet stream travels.
+
+=Rotation:= The Coriolis effect sends the jet stream to the west.
+
+** Types
+
+=Polar jet stream:= The most powerful jet stream. Forms where the polar air meets the mid-latitude air. There's a very large temperature differential between these two airs.
+
+=Subtropical jet stream:= Forms around 30 degrees latitude, where mid-latitude air meets hot equatorial air. Sits higher up in the atmosphere, but is weaker, because the temperature contrast isn't as drastic.
+
+* Climate change
+
+** Arctic amplification
+
+Because the Arctic is warming *four times faster than the rest of the globe* the temperature differential between the equator and poles is shrinking, which in turn weakens the flow from the equator to the poles.
+
+=Rossby waves:= When the temperature differential weakens, the Jet Stream slows 
+
+** Wind slowing
+
+When the temperature differential weakens and the speed of the wind movement from the equator to the poles slows, it causes weather events to *prolong* 
+
+=Prolonged heat waves:= 
+
+
+=Flooding:= Low pressure storms stall over a single region, unable to move away, causing enormous rainfall.
+
+** Polar vortex
+
+
+
+** Weak ocean currents
+
+* El Niño
+
+* Prevailing winds
+
+Winds that blow predominantly in one specific direction.
+
+** Trade winds (easterlies)
+
+The trade winds are *east-to-west* blowing winds that flow in the equatorial region
+
+=Colonialism:= These are the winds that captains used to sail to the Americas.
+
+** Westerlies
+
+These winds blow *west-to-east*. They sit in the *middle latitudes* (between 30 and 60 degress latitude)

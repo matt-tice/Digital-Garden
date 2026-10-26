@@ -1,0 +1,84 @@
+:PROPERTIES:
+:ID:       6bb7cd35-e20f-4fa3-a800-9055cf1ce91e
+:END:
+#+title: q-calculus
+#+filetags: :math:hopf:bialgebras:discrete:quantum:deformation:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** \(q\)-numbers
+
+\[
+[n]_{q} = \dfrac{1-q^{n}}{1-q} = 1 + q + \ldots + q^{n-1}
+\]
+
+
+** \(q\)-factorials
+
+\[
+[n]_{q}! = [n]_{q} \ldots [1]_{q} = \dfrac{(1-q^{n}) \ldots(1-q)}{(1-q)^n}
+\]
+
+** \(q\)-Pochhammer symbol
+
+\[
+(a; q)_{n}  = \prod_{k=0}^{n-1} (1-aq^{k})
+\]
+
+** \(q\)-Derivative
+
+\[
+D_{q} f(x) = \dfrac{f(qx) - f(x)}{(q-1)x}
+\]
+
+** \(q\)-Integral
+
+
+
+* Theorems
+
+
+** Drinfeld-Jimbo quantum groups
+
+
+
+\[
+[E,F] = \dfrac{K - K^{-1} }{q - q^{-1} }
+\]
+
+\[
+\Delta E = E \otimes 1 + K \otimes E
+\]
+
+\[
+\sum (-1)^{k} \binom{n}{k}_{q} E_{i}^{n-k} E_{j} E_{i}^{k} = 0
+\]
+
+
+=Rigid deformation:= Has the same number of representations, with the same dimensions as the classical case.
+
+* Examples
+
+** Quantum \(\mathfrak{sl}_{2}\)
+
+We have three generators \(E, F, H\) with 
+\([H,E]=2E,\quad [H,F]=-2F,\quad [E,F]=H\)
+
+We try to deform the coproduct on \(E, F\) and then apply \(\Delta H = [\Delta E, \Delta F]\).
+
+\(\sum E_{1} F_{1'} \otimes E_{2} F_{2'} - F_{1'} E_{1} \otimes F_{2'} E_{2}\)
+
+We want to have a kind of braiding show up when we apply our operators. For instance \(E(\phi \psi) = E(\phi) \psi + q \phi E(\psi)\)
+
+The motivation is that if instead of thinking about applying \(E\) to each of \(\phi, \psi\), we keep \(E\) fixed in the same spot, and swap \(\phi, \psi\) in the second term, picking up the phase factor (thinking of this like the quantum plane, where \(\phi \psi = q \psi \phi\)).
+
+But really we should probably pick up \(q^{2}\), because we have to swap \(\phi, \psi\) and then swap \(\phi, E(\psi)\).
+
+Actually, maybe the way to motivate it is to look at the derivative and say you're basically applying the \(Q\)-structure from my thesis? Because here now it looks a lot like the graded setting, which is what my \(Q\)-bialgebras generalize.
