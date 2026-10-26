@@ -60,6 +60,10 @@
     img {
       max-width: 100%;
     }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.4em;
     }
@@ -103,8 +107,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -176,7 +180,7 @@ quantum deformation <span
 class="math inline"><em>x</em><em>y</em> = <em>q</em><em>y</em><em>x</em></span>.
 But the coproduct is no longer multiplicative</p>
 <p><span
-class="math inline"><em>Δ</em>(<em>x</em>)<em>Δ</em>(<em>y</em>) = <em>x</em><em>y</em> ⊗ 1 + <em>x</em> ⊗ <em>y</em> + <em>y</em> ⊗ <em>x</em> + 1 ⊗ <em>x</em><em>y</em> = <em>q</em><em>y</em><em>x</em> ⊗ 1 + <em>x</em> ⊗ <em>y</em> + <em>y</em> ⊗ <em>x</em> + <em>q</em>(1⊗<em>y</em><em>x</em>)</span>
+class="math inline"><em>Δ</em>(<em>x</em>)<em>Δ</em>(<em>y</em>) = <em>x</em><em>y</em> ⊗ 1 + <em>x</em> ⊗ <em>y</em> + <em>y</em> ⊗ <em>x</em> + 1 ⊗ <em>x</em><em>y</em> = <em>q</em><em>y</em><em>x</em> ⊗ 1 + <em>x</em> ⊗ <em>y</em> + <em>y</em> ⊗ <em>x</em> + <em>q</em>(1 ⊗ <em>y</em><em>x</em>)</span>
 <span
 class="math inline"><em>Δ</em>(<em>x</em>)<em>Δ</em>(<em>y</em>) − <em>q</em><em>Δ</em>(<em>y</em>)<em>Δ</em>(<em>x</em>) = <em>x</em> ⊗ <em>y</em> + <em>y</em> ⊗ <em>x</em> − <em>q</em><em>x</em> ⊗ <em>y</em> − <em>q</em><em>y</em> ⊗ <em>x</em></span></p>
 <h2 id="topological-quantum-field-theories">Topological quantum field
@@ -188,7 +192,7 @@ extremely important: we get a system of <strong>anyons.</strong></p>
 representation of the braid group on our space of states.</p>
 <p>We first look for representations that act on tensor products
 individually: <span
-class="math display"><em>ϕ</em> ⋅ (<em>x</em>⊗<em>y</em>) = <em>ϕ</em>(<em>x</em>) ⊗ <em>ϕ</em>(<em>y</em>).</span></p>
+class="math display"><em>ϕ</em> ⋅ (<em>x</em> ⊗ <em>y</em>) = <em>ϕ</em>(<em>x</em>) ⊗ <em>ϕ</em>(<em>y</em>).</span></p>
 <p>Here's the problem: if you try to impose symmetries on this system
 (for instance, an <span
 class="math inline"><em>S</em><em>U</em>(2)</span> gauge symmetry), you
@@ -206,7 +210,7 @@ gauge group, but the way the quantum group acts on the state space is
 different. Specifically, you insist that there's a particular
 compatibility condition on how the quantum group acts on tensor
 products: <span
-class="math display"><em>ϕ</em>(<em>x</em>⊗<em>y</em>) = ∑<em>ϕ</em><sub>(1)</sub>(<em>x</em>) ⊗ <em>ϕ</em><sub>(2)</sub>(<em>y</em>)</span>
+class="math display"><em>ϕ</em>(<em>x</em> ⊗ <em>y</em>) = ∑<em>ϕ</em><sub>(1)</sub>(<em>x</em>) ⊗ <em>ϕ</em><sub>(2)</sub>(<em>y</em>)</span>
 This gives you a <strong>Hopf module</strong> rather than an ordinary
 module.</p>
 <p>Our original attempt at finding a suitable representation of the
@@ -225,11 +229,11 @@ class="math inline"><em>H</em></span> is an element <span
 class="math inline"><em>R</em> ∈ <em>H</em> ⊗ <em>H</em></span> such
 that</p>
 <p><span
-class="math inline"><em>R</em><em>Δ</em>(<em>x</em>)<em>R</em><sup>−1</sup> = (<em>τ</em>∘<em>Δ</em>)(<em>x</em>)</span>,
+class="math inline"><em>R</em><em>Δ</em>(<em>x</em>)<em>R</em><sup>−1</sup> = (<em>τ</em> ∘ <em>Δ</em>)(<em>x</em>)</span>,
 for all <span class="math inline"><em>x</em> ∈ <em>H</em></span> <span
-class="math inline">(<em>Δ</em>⊗1)(<em>R</em>) = <em>R</em><sub>13</sub><em>R</em><sub>23</sub></span>
+class="math inline">(<em>Δ</em> ⊗ 1)(<em>R</em>) = <em>R</em><sub>13</sub><em>R</em><sub>23</sub></span>
 <span
-class="math inline">(1⊗<em>Δ</em>)(<em>R</em>) = <em>R</em><sub>13</sub><em>R</em><sub>12</sub></span></p>
+class="math inline">(1 ⊗ <em>Δ</em>)(<em>R</em>) = <em>R</em><sub>13</sub><em>R</em><sub>12</sub></span></p>
 <p>where <span
 class="math inline"><em>R</em><sub><em>i</em><em>j</em></sub></span>
 denotes the first tensor factor of matrix <span
@@ -242,22 +246,22 @@ class="math display"><em>R</em><sub>13</sub> = ∑<em>R</em><sub>(1)</sub>�
 <p>The actual braiding operation will be <span
 class="math inline"><em>τ</em> ∘ <em>R</em></span></p>
 <p>Take the first axiom and write it like <span
-class="math inline"><em>R</em><em>Δ</em>(<em>x</em>) = (<em>τ</em>∘<em>Δ</em>)(<em>x</em>)<em>R</em></span>.
+class="math inline"><em>R</em><em>Δ</em>(<em>x</em>) = (<em>τ</em> ∘ <em>Δ</em>)(<em>x</em>)<em>R</em></span>.
 Now let <span
 class="math inline"><em>x</em> ∈ <em>H</em> ⊗ <em>H</em></span> and
 consider <span
-class="math inline">(<em>τ</em>∘<em>Δ</em>⊗1)(<em>x</em>)</span>, where
-we're expanding on the first tensor factor</p>
+class="math inline">(<em>τ</em> ∘ <em>Δ</em> ⊗ 1)(<em>x</em>)</span>,
+where we're expanding on the first tensor factor</p>
 <p>Since <span
 class="math inline"><em>R</em><sub>12</sub> = <em>R</em> ⊗ 1</span>, we
-have</p>
+have </p>
 <p>We then set <span class="math inline"><em>x</em> = <em>R</em></span>
 and apply the second axiom to write this as <span
-class="math display">(<em>τ</em>∘<em>Δ</em>⊗1)(<em>R</em>)<em>R</em><sub>12</sub> = <em>R</em><sub>12</sub><em>R</em><sub>13</sub><em>R</em><sub>23</sub>.</span>
+class="math display">(<em>τ</em> ∘ <em>Δ</em> ⊗ 1)(<em>R</em>)<em>R</em><sub>12</sub> = <em>R</em><sub>12</sub><em>R</em><sub>13</sub><em>R</em><sub>23</sub>.</span>
 And then we write the left hand side as <span
-class="math display">((<em>τ</em>⊗1)∘(<em>Δ</em>⊗1)(<em>R</em>))<em>R</em><sub>12</sub> = (<em>τ</em>⊗1)(<em>R</em><sub>13</sub><em>R</em><sub>23</sub>)<em>R</em><sub>12</sub></span>
+class="math display">((<em>τ</em> ⊗ 1) ∘ (<em>Δ</em> ⊗ 1)(<em>R</em>))<em>R</em><sub>12</sub> = (<em>τ</em> ⊗ 1)(<em>R</em><sub>13</sub><em>R</em><sub>23</sub>)<em>R</em><sub>12</sub></span>
 Then applying the permutation, we get <span
-class="math display">(<em>τ</em>⊗1)(<em>R</em><sub>13</sub><em>R</em><sub>23</sub>)<em>R</em><sub>12</sub> = <em>R</em><sub>23</sub><em>R</em><sub>13</sub><em>R</em><sub>12</sub></span></p>
+class="math display">(<em>τ</em> ⊗ 1)(<em>R</em><sub>13</sub><em>R</em><sub>23</sub>)<em>R</em><sub>12</sub> = <em>R</em><sub>23</sub><em>R</em><sub>13</sub><em>R</em><sub>12</sub></span></p>
 <p>We acquire the <strong>algebraic Yang-Baxter equations</strong> <span
 class="math display"><em>R</em><sub>23</sub><em>R</em><sub>13</sub><em>R</em><sub>12</sub> = <em>R</em><sub>12</sub><em>R</em><sub>13</sub><em>R</em><sub>23</sub>.</span></p>
 <h3 id="constant-r-matrix">Constant R matrix</h3>
@@ -299,9 +303,9 @@ class="math inline">⟨<em>A</em>, <em>B</em>⟩ → <em>k</em></span>.</p
 class="math inline"><em>B</em></span></li>
 </ol>
 <p><span
-class="math display">⟨<em>a</em>, <em>a</em>′ ⇀ <em>b</em>⟩ = ⟨<em>a</em><em>a</em>′, <em>b</em>⟩ = ∑⟨<em>a</em>, <em>b</em><sub>(1)</sub>⟩⟨<em>a</em>′, <em>b</em><sub>(2)</sub>⟩</span></p>
+class="math display">⟨<em>a</em>, <em>a</em><sup>′</sup> ⇀ <em>b</em>⟩ = ⟨<em>a</em><em>a</em><sup>′</sup>, <em>b</em>⟩ = ∑⟨<em>a</em>, <em>b</em><sub>(1)</sub>⟩⟨<em>a</em><sup>′</sup>, <em>b</em><sub>(2)</sub>⟩</span></p>
 <p><span
-class="math inline"><em>a</em>′ ⇀ <em>b</em> = ∑<em>b</em><sub>(1)</sub>⟨<em>a</em>′, <em>b</em><sub>(2)</sub>⟩</span></p>
+class="math inline"><em>a</em><sup>′</sup> ⇀ <em>b</em> = ∑<em>b</em><sub>(1)</sub>⟨<em>a</em><sup>′</sup>, <em>b</em><sub>(2)</sub>⟩</span></p>
 <p><code class="verbatim">Mnemonic:</code> a' passes through one factor
 of the coproduct and then pairs with the second factor.</p>
 <ol>
@@ -309,9 +313,9 @@ of the coproduct and then pairs with the second factor.</p>
 class="math inline"><em>B</em></span></li>
 </ol>
 <p><span
-class="math display">⟨<em>a</em>, <em>b</em> ↼ <em>a</em>′⟩ = ⟨<em>a</em>′<em>a</em>, <em>b</em>⟩ = ∑⟨<em>a</em>′, <em>b</em><sub>(1)</sub>⟩⟨<em>a</em>, <em>b</em><sub>(2)</sub>⟩</span></p>
+class="math display">⟨<em>a</em>, <em>b</em> ↼ <em>a</em><sup>′</sup>⟩ = ⟨<em>a</em><sup>′</sup><em>a</em>, <em>b</em>⟩ = ∑⟨<em>a</em><sup>′</sup>, <em>b</em><sub>(1)</sub>⟩⟨<em>a</em>, <em>b</em><sub>(2)</sub>⟩</span></p>
 <p><span
-class="math inline"><em>b</em> ↼ <em>a</em>′ = ∑⟨<em>a</em>′, <em>b</em><sub>(1)</sub>⟩<em>b</em><sub>(2)</sub></span></p>
+class="math inline"><em>b</em> ↼ <em>a</em><sup>′</sup> = ∑⟨<em>a</em><sup>′</sup>, <em>b</em><sub>(1)</sub>⟩<em>b</em><sub>(2)</sub></span></p>
 <p><code class="verbatim">Mnemonic:</code> a' passes through one factor
 of the coproduct and then pairs with the first factor.</p>
 <ol>
@@ -319,7 +323,7 @@ of the coproduct and then pairs with the first factor.</p>
 class="math inline"><em>A</em></span></li>
 </ol>
 <p><span
-class="math display">⟨<em>b</em> ⊳ <em>a</em>, <em>b</em>′⟩ = ⟨<em>a</em>, <em>b</em>′<em>b</em>⟩ = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em>′⟩⟨<em>a</em><sub>(2)</sub>, <em>b</em>⟩</span></p>
+class="math display">⟨<em>b</em> ⊳ <em>a</em>, <em>b</em><sup>′</sup>⟩ = ⟨<em>a</em>, <em>b</em><sup>′</sup><em>b</em>⟩ = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em><sup>′</sup>⟩⟨<em>a</em><sub>(2)</sub>, <em>b</em>⟩</span></p>
 <p>since this holds for all b' we have <span
 class="math inline"><em>b</em> ⊳ <em>a</em> = ∑<em>a</em><sub>(1)</sub>⟨<em>a</em><sub>(2)</sub>, <em>b</em>⟩</span></p>
 <p><code class="verbatim">Mnemonic:</code> b passes through one factor
@@ -329,7 +333,7 @@ of the coproduct and then pairs with the second factor.</p>
 class="math inline"><em>A</em></span></li>
 </ol>
 <p><span
-class="math display">⟨<em>a</em> ⊲ <em>b</em>, <em>b</em>′⟩ = ⟨<em>a</em>, <em>b</em><em>b</em>′⟩ = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em>⟩⟨<em>a</em><sub>(2)</sub>, <em>b</em>′⟩</span></p>
+class="math display">⟨<em>a</em> ⊲ <em>b</em>, <em>b</em><sup>′</sup>⟩ = ⟨<em>a</em>, <em>b</em><em>b</em><sup>′</sup>⟩ = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em>⟩⟨<em>a</em><sub>(2)</sub>, <em>b</em><sup>′</sup>⟩</span></p>
 <p><span
 class="math inline"><em>a</em> ⊲ <em>b</em> = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em>⟩<em>a</em><sub>(2)</sub></span></p>
 <p><code class="verbatim">Mnemonic:</code> b passes through one factor
@@ -339,13 +343,13 @@ of the coproduct and then pairs with the first factor.</p>
 actions</p>
 <ol>
 <li><p><span
-class="math inline">⟨<em>a</em>, <em>a</em>′ ⇀ (<em>a</em>″⇀<em>b</em>)⟩ = ⟨<em>a</em><em>a</em>′, <em>a</em>″ ⇀ <em>b</em>⟩ = ⟨<em>a</em><em>a</em>′<em>a</em>″, <em>b</em>⟩</span></p></li>
+class="math inline">⟨<em>a</em>, <em>a</em><sup>′</sup> ⇀ (<em>a</em><sup>″</sup> ⇀ <em>b</em>)⟩ = ⟨<em>a</em><em>a</em><sup>′</sup>, <em>a</em><sup>″</sup> ⇀ <em>b</em>⟩ = ⟨<em>a</em><em>a</em><sup>′</sup><em>a</em><sup>″</sup>, <em>b</em>⟩</span></p></li>
 <li><p><span
-class="math inline">⟨<em>a</em>, (<em>b</em>↼<em>a</em>′) ↼ <em>a</em>″⟩ = ⟨<em>a</em>″<em>a</em>, <em>b</em> ↼ <em>a</em>′⟩ = ⟨(<em>a</em>′<em>a</em>″)<em>a</em>, <em>b</em>⟩</span></p></li>
+class="math inline">⟨<em>a</em>, (<em>b</em> ↼ <em>a</em><sup>′</sup>) ↼ <em>a</em><sup>″</sup>⟩ = ⟨<em>a</em><sup>″</sup><em>a</em>, <em>b</em> ↼ <em>a</em><sup>′</sup>⟩ = ⟨(<em>a</em><sup>′</sup><em>a</em><sup>″</sup>)<em>a</em>, <em>b</em>⟩</span></p></li>
 <li><p><span
-class="math inline">⟨<em>b</em>′ ⊳ (<em>b</em>⊳<em>a</em>), <em>b</em>″⟩ = ⟨<em>b</em> ⊳ <em>a</em>, <em>b</em>″<em>b</em>′⟩ = ⟨<em>a</em>, <em>b</em>″(<em>b</em>′<em>b</em>)⟩</span></p></li>
+class="math inline">⟨<em>b</em><sup>′</sup> ⊳ (<em>b</em> ⊳ <em>a</em>), <em>b</em><sup>″</sup>⟩ = ⟨<em>b</em> ⊳ <em>a</em>, <em>b</em><sup>″</sup><em>b</em><sup>′</sup>⟩ = ⟨<em>a</em>, <em>b</em><sup>″</sup>(<em>b</em><sup>′</sup><em>b</em>)⟩</span></p></li>
 <li><p><span
-class="math inline">⟨(<em>a</em>⊲<em>b</em>) ⊲ <em>b</em>′, <em>b</em>″⟩ = ⟨<em>a</em> ⊲ <em>b</em>, <em>b</em>′<em>b</em>″⟩ = ⟨<em>a</em>, <em>b</em><em>b</em>′<em>b</em>″⟩</span></p></li>
+class="math inline">⟨(<em>a</em> ⊲ <em>b</em>) ⊲ <em>b</em><sup>′</sup>, <em>b</em><sup>″</sup>⟩ = ⟨<em>a</em> ⊲ <em>b</em>, <em>b</em><sup>′</sup><em>b</em><sup>″</sup>⟩ = ⟨<em>a</em>, <em>b</em><em>b</em><sup>′</sup><em>b</em><sup>″</sup>⟩</span></p></li>
 </ol>
 <p>So it's actually pretty easy to tell when you have to swap the order
 of things in the pairing; it happens when you have to move <span
@@ -364,9 +368,9 @@ class="math inline">⟨<em>g</em> ⋅ <em>ϕ</em>, <em>h</em>⟩ = ⟨
 and <span
 class="math inline">⟨<em>ϕ</em> ⋅ <em>g</em>, <em>h</em>⟩ = ⟨<em>ϕ</em>, <em>g</em><em>h</em>⟩</span>.
 In other words, <span
-class="math inline">(<em>g</em>⋅<em>ϕ</em>)(<em>h</em>) = <em>ϕ</em>(<em>h</em><em>g</em>)</span>
+class="math inline">(<em>g</em> ⋅ <em>ϕ</em>)(<em>h</em>) = <em>ϕ</em>(<em>h</em><em>g</em>)</span>
 and <span
-class="math inline">(<em>ϕ</em>⋅<em>g</em>)(<em>h</em>) = <em>ϕ</em>(<em>g</em><em>h</em>)</span>.</p>
+class="math inline">(<em>ϕ</em> ⋅ <em>g</em>)(<em>h</em>) = <em>ϕ</em>(<em>g</em><em>h</em>)</span>.</p>
 <p>Since the pairing is non-degenerate, <span
 class="math inline"><em>g</em> ⋅ <em>ϕ</em></span> and <span
 class="math inline"><em>ϕ</em> ⋅ <em>g</em></span> are determined
@@ -386,75 +390,150 @@ and <span class="math inline"><em>B</em> ⊗ <em>A</em></span> given
 by</p>
 <p>On <span class="math inline"><em>A</em> ⊗ <em>B</em></span>: [this is
 like a position representation] [Standard left Heisenberg double] <span
-class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑(<em>b</em><sub>(1)</sub>⊳<em>a</em>) ⊗ <em>b</em><sub>(2)</sub> = ∑<em>a</em><sub>(1)</sub> ⊗ <em>b</em><sub>(2)</sub>⟨<em>a</em><sub>(2)</sub>, <em>b</em><sub>(1)</sub>⟩</span>
+class="math inline">(1 ⊗ <em>b</em>)(<em>a</em> ⊗ 1) = ∑(<em>b</em><sub>(1)</sub> ⊳ <em>a</em>) ⊗ <em>b</em><sub>(2)</sub> = ∑<em>a</em><sub>(1)</sub> ⊗ <em>b</em><sub>(2)</sub>⟨<em>a</em><sub>(2)</sub>, <em>b</em><sub>(1)</sub>⟩</span>
 [Standard right Heisenberg double] <span
-class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑(<em>a</em>⊲<em>b</em><sub>(1)</sub>) ⊗ <em>b</em><sub>(2)</sub> = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em><sub>(1)</sub>⟩<em>a</em><sub>(2)</sub> ⊗ <em>b</em><sub>(2)</sub></span>
+class="math inline">(1 ⊗ <em>b</em>)(<em>a</em> ⊗ 1) = ∑(<em>a</em> ⊲ <em>b</em><sub>(1)</sub>) ⊗ <em>b</em><sub>(2)</sub> = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em><sub>(1)</sub>⟩<em>a</em><sub>(2)</sub> ⊗ <em>b</em><sub>(2)</sub></span>
 [Standard right contraction] <span
-class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑<em>a</em><sub>(1)</sub> ⊗ (<em>b</em><sub></sub>↼<em>a</em><sub>(2)</sub>) = ∑⟨<em>a</em><sub>(2)</sub>, <em>b</em><sub>(1)</sub>⟩<em>a</em><sub>(1)</sub> ⊗ <em>b</em><sub>(2)</sub></span>
+class="math inline">(1 ⊗ <em>b</em>)(<em>a</em> ⊗ 1) = ∑<em>a</em><sub>(1)</sub> ⊗ (<em>b</em><sub></sub> ↼ <em>a</em><sub>(2)</sub>) = ∑⟨<em>a</em><sub>(2)</sub>, <em>b</em><sub>(1)</sub>⟩<em>a</em><sub>(1)</sub> ⊗ <em>b</em><sub>(2)</sub></span>
 [Standard left contraction] <span
-class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑<em>a</em><sub>(1)</sub> ⊗ (<em>a</em><sub>(2)</sub>⇀<em>b</em>) = ∑⟨<em>a</em><sub>(2)</sub>, <em>b</em><sub>(2)</sub>⟩<em>a</em><sub><sub>(1)</sub></sub> ⊗ <em>b</em><sub>(1)</sub></span></p>
+class="math inline">(1 ⊗ <em>b</em>)(<em>a</em> ⊗ 1) = ∑<em>a</em><sub>(1)</sub> ⊗ (<em>a</em><sub>(2)</sub> ⇀ <em>b</em>) = ∑⟨<em>a</em><sub>(2)</sub>, <em>b</em><sub>(2)</sub>⟩<em>a</em><sub><sub>(1)</sub></sub> ⊗ <em>b</em><sub>(1)</sub></span></p>
 <p><code class="verbatim">Note:</code> The 1st and 3rd options are
 <strong>the same</strong> (but i don't think they are in the graded
 case?)</p>
 <p>and swapping (1) and (2): <span
-class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑(<em>b</em><sub>(2)</sub>⊳<em>a</em>) ⊗ <em>b</em><sub>(1)</sub></span>
+class="math inline">(1 ⊗ <em>b</em>)(<em>a</em> ⊗ 1) = ∑(<em>b</em><sub>(2)</sub> ⊳ <em>a</em>) ⊗ <em>b</em><sub>(1)</sub></span>
 <span
-class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑(<em>a</em>⊲<em>b</em><sub>(2)</sub>) ⊗ <em>b</em><sub>(1)</sub></span>
+class="math inline">(1 ⊗ <em>b</em>)(<em>a</em> ⊗ 1) = ∑(<em>a</em> ⊲ <em>b</em><sub>(2)</sub>) ⊗ <em>b</em><sub>(1)</sub></span>
 <span
-class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑<em>a</em><sub>(2)</sub> ⊗ (<em>b</em><sub></sub>↼<em>a</em><sub>(1)</sub>)</span>
+class="math inline">(1 ⊗ <em>b</em>)(<em>a</em> ⊗ 1) = ∑<em>a</em><sub>(2)</sub> ⊗ (<em>b</em><sub></sub> ↼ <em>a</em><sub>(1)</sub>)</span>
 <span
-class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑<em>a</em><sub>(2)</sub> ⊗ (<em>a</em><sub>(1)</sub>⇀<em>b</em>)</span></p>
+class="math inline">(1 ⊗ <em>b</em>)(<em>a</em> ⊗ 1) = ∑<em>a</em><sub>(2)</sub> ⊗ (<em>a</em><sub>(1)</sub> ⇀ <em>b</em>)</span></p>
 <p>On <span class="math inline"><em>B</em> ⊗ <em>A</em></span>: [this is
 like a momentum representation] <span
-class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑<em>b</em><sub>(1)</sub> ⊗ (<em>b</em><sub>(2)</sub>⊳<em>a</em>)</span>
+class="math inline">(1 ⊗ <em>a</em>)(<em>b</em> ⊗ 1) = ∑<em>b</em><sub>(1)</sub> ⊗ (<em>b</em><sub>(2)</sub> ⊳ <em>a</em>)</span>
 <span
-class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑<em>b</em><sub>(1)</sub> ⊗ (<em>a</em>⊲<em>b</em><sub>(2)</sub>)</span>
+class="math inline">(1 ⊗ <em>a</em>)(<em>b</em> ⊗ 1) = ∑<em>b</em><sub>(1)</sub> ⊗ (<em>a</em> ⊲ <em>b</em><sub>(2)</sub>)</span>
 <span
-class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑(<em>a</em><sub>(1)</sub>⇀<em>b</em>) ⊗ <em>a</em><sub>(2)</sub></span>
+class="math inline">(1 ⊗ <em>a</em>)(<em>b</em> ⊗ 1) = ∑(<em>a</em><sub>(1)</sub> ⇀ <em>b</em>) ⊗ <em>a</em><sub>(2)</sub></span>
 <span
-class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑(<em>b</em>↼<em>a</em><sub>(1)</sub>) ⊗ <em>a</em><sub>(2)</sub></span></p>
+class="math inline">(1 ⊗ <em>a</em>)(<em>b</em> ⊗ 1) = ∑(<em>b</em> ↼ <em>a</em><sub>(1)</sub>) ⊗ <em>a</em><sub>(2)</sub></span></p>
 <p>and the twists <span
-class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑<em>b</em><sub>(2)</sub> ⊗ (<em>b</em><sub>(1)</sub>⊳<em>a</em>)</span>
+class="math inline">(1 ⊗ <em>a</em>)(<em>b</em> ⊗ 1) = ∑<em>b</em><sub>(2)</sub> ⊗ (<em>b</em><sub>(1)</sub> ⊳ <em>a</em>)</span>
 <span
-class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑<em>b</em><sub>(2)</sub> ⊗ (<em>a</em>⊲<em>b</em><sub>(1)</sub>)</span>
+class="math inline">(1 ⊗ <em>a</em>)(<em>b</em> ⊗ 1) = ∑<em>b</em><sub>(2)</sub> ⊗ (<em>a</em> ⊲ <em>b</em><sub>(1)</sub>)</span>
 <span
-class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑(<em>a</em><sub>(2)</sub>⇀<em>b</em>) ⊗ <em>a</em><sub>(1)</sub></span>
+class="math inline">(1 ⊗ <em>a</em>)(<em>b</em> ⊗ 1) = ∑(<em>a</em><sub>(2)</sub> ⇀ <em>b</em>) ⊗ <em>a</em><sub>(1)</sub></span>
 <span
-class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑(<em>b</em>↼<em>a</em><sub>(2)</sub>) ⊗ <em>a</em><sub>(1)</sub></span></p>
+class="math inline">(1 ⊗ <em>a</em>)(<em>b</em> ⊗ 1) = ∑(<em>b</em> ↼ <em>a</em><sub>(2)</sub>) ⊗ <em>a</em><sub>(1)</sub></span></p>
 <h3 id="preference">Preference</h3>
 <p>I'm going to stick with the <strong>right Heisenberg dual</strong>:
 it keeps <span class="math inline"><em>A</em></span> and <span
 class="math inline"><em>B</em></span> in the right order, and the
 numbers match up nicely</p>
 <p><span
-class="math inline">(1⊗<em>b</em>)(<em>a</em>⊗1) = ∑(<em>a</em>⊲<em>b</em><sub>(1)</sub>) ⊗ <em>b</em><sub>(2)</sub> = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em><sub>(1)</sub>⟩<em>a</em><sub>(2)</sub> ⊗ <em>b</em><sub>(2)</sub></span></p>
+class="math inline">(1 ⊗ <em>b</em>)(<em>a</em> ⊗ 1) = ∑(<em>a</em> ⊲ <em>b</em><sub>(1)</sub>) ⊗ <em>b</em><sub>(2)</sub> = ∑⟨<em>a</em><sub>(1)</sub>, <em>b</em><sub>(1)</sub>⟩<em>a</em><sub>(2)</sub> ⊗ <em>b</em><sub>(2)</sub></span></p>
 <h3 id="intuition-1">Intuition</h3>
 <p><span class="math inline"><em>H</em><sup>*</sup> ⊗ <em>H</em></span>
 is the quantum analogue of the <em>cotangent bundle</em> or the <em>Weyl
 algebra</em>. It doesn't naturally have a Hopf algebra structure, but we
 can give it one.</p>
 <p>We want <span
-class="math inline">(<em>ϕ</em>⊗1)(1⊗<em>g</em>) = <em>ϕ</em> ⊗ <em>g</em></span>
+class="math inline">(<em>ϕ</em> ⊗ 1)(1 ⊗ <em>g</em>) = <em>ϕ</em> ⊗ <em>g</em></span>
 and <span
-class="math inline">(1⊗<em>g</em>)(<em>ϕ</em>⊗1) = ∑⟨<em>ϕ</em><sub>(2)</sub><em>g</em><sub>(1)</sub>⟩<em>ϕ</em><sub>(1)</sub> ⊗ <em>g</em><sub>(2)</sub></span></p>
+class="math inline">(1 ⊗ <em>g</em>)(<em>ϕ</em> ⊗ 1) = ∑⟨<em>ϕ</em><sub>(2)</sub><em>g</em><sub>(1)</sub>⟩<em>ϕ</em><sub>(1)</sub> ⊗ <em>g</em><sub>(2)</sub></span></p>
 <h2 id="drinfeld-double">Drinfel'd Double</h2>
 <p><span
-class="math inline">(1⊗<em>a</em>)(<em>b</em>⊗1) = ∑⟨<em>b</em><sub>()</sub>, <em>S</em>(<em>a</em><sub>()</sub>)⟩⟨<em>b</em></span></p>
+class="math inline">(1 ⊗ <em>a</em>)(<em>b</em> ⊗ 1) = ∑⟨<em>b</em><sub>()</sub>, <em>S</em>(<em>a</em><sub>()</sub>)⟩⟨<em>b</em></span></p>
 <h3 id="intuition-2">Intuition</h3>
 <p>Unlike the Heisenberg double, the Drinfel'd double is designed to be
 a <em>quasitriangular Hopf algebra</em></p>
 <p><span
-class="math inline">(1⊗<em>g</em>)(<em>ϕ</em>⊗1) = ∑⟨<em>ϕ</em><sub>(1)</sub><em>S</em>(<em>g</em><sub>(1)</sub>)⟩⟨<em>ϕ</em><sub>(3)</sub><em>g</em><sub>(3)</sub>⟩<em>ϕ</em><sub>(2)</sub> ⊗ <em>g</em><sub>(2)</sub></span></p>
+class="math inline">(1 ⊗ <em>g</em>)(<em>ϕ</em> ⊗ 1) = ∑⟨<em>ϕ</em><sub>(1)</sub><em>S</em>(<em>g</em><sub>(1)</sub>)⟩⟨<em>ϕ</em><sub>(3)</sub><em>g</em><sub>(3)</sub>⟩<em>ϕ</em><sub>(2)</sub> ⊗ <em>g</em><sub>(2)</sub></span></p>
+<h1 id="theorems">Theorems</h1>
+<h2 id="no-grouplikes-in-primitive-generated">No grouplikes in primitive
+generated</h2>
+<p>Let <span class="math inline"><em>H</em></span> be a Hopf algebra
+generated as an algebra by its primitive elements. Then the set of
+grouplike elements is trivial.</p>
+<h3 id="notes">Notes</h3>
+<p>This is Lemma 2.6.13 in <em>Hopf Algebras, Quantum Groups, and
+Topological Field Theory,</em> by Schweigert</p>
 <h1 id="examples">Examples</h1>
 <h2 id="h_4"><span
 class="math inline"><em>H</em><sub>4</sub></span></h2>
 <p>We take a 4D vector space generated by <span
 class="math inline">{1, <em>g</em>, <em>x</em>, <em>g</em><em>x</em>}</span>,
 where <span
-class="math inline"><em>g</em><sup>2</sup> = 1, <em>x</em><sup>2</sup> = 0, <em>g</em><em>x</em> =  − <em>x</em><em>g</em></span>.</p>
+class="math inline"><em>g</em><sup>2</sup> = 1, <em>x</em><sup>2</sup> = 0, <em>g</em><em>x</em> = −<em>x</em><em>g</em></span>.</p>
 <p><span
 class="math display"><em>Δ</em><em>x</em> = <em>x</em> ⊗ 1 + <em>g</em> ⊗ <em>x</em></span>
 and <span
 class="math inline"><em>Δ</em><em>g</em> = <em>g</em> ⊗ <em>g</em>.</span></p>
+<h2 id="u_q-mathfraksl_2"><span
+class="math inline"><em>U</em><sub><em>q</em></sub>(𝔰𝔩<sub>2</sub>)</span></h2>
+<h2 id="sl_2q"><span
+class="math inline"><em>S</em><em>L</em><sub>2</sub><sup><em>q</em></sup></span></h2>
+<p>Consider the action of a <span class="math inline">2 × 2</span>
+matrix on the quantum plane. We have <span
+class="math inline"><em>e</em><sub>1</sub><em>e</em><sub>2</sub> = <em>q</em><em>e</em><sub>2</sub><em>e</em><sub>1</sub></span>.</p>
+<p>If the coefficients of our matrix are <span
+class="math inline"><em>M</em><sub><em>i</em><em>j</em></sub></span>,
+with</p>
+<p><span
+class="math inline"><em>M</em><em>x</em> = ∑<sub><em>j</em></sub><em>M</em><sub><em>i</em><em>j</em></sub><em>x</em><sub><em>j</em></sub><em>e</em><sub><em>i</em></sub></span></p>
+<p>We must map back to the quantum plane, so</p>
+<p><span
+class="math inline">(<em>M</em><em>x</em>)<sub>1</sub>(<em>M</em><em>x</em>)<sub>2</sub> = <em>q</em>(<em>M</em><em>x</em>)<sub>2</sub>(<em>M</em><em>x</em>)<sub>1</sub></span></p>
+<p>Let <span
+class="math inline"><em>M</em><sub>11</sub> = <em>α</em>, <em>M</em><sub>12</sub> = <em>β</em>, <em>M</em><sub>21</sub> = <em>γ</em>, <em>M</em><sub>22</sub> = <em>δ</em>.</span></p>
+<p>Then our condition is </p>
+<p>So <span
+class="math inline"><em>α</em><em>γ</em> = <em>q</em><em>γ</em><em>α</em></span>
+, <span
+class="math inline"><em>β</em><em>δ</em> = <em>q</em><em>δ</em><em>β</em></span>,
+and <span
+class="math inline"><em>β</em><em>γ</em> + <em>q</em><em>α</em><em>δ</em> = <em>q</em><sup>2</sup><em>γ</em><em>β</em> + <em>q</em><em>δ</em><em>α</em></span>.
+We can rewrite this latter equation as <span
+class="math inline"><em>α</em><em>δ</em> − <em>δ</em><em>α</em> = <em>q</em><em>γ</em><em>β</em> − <em>q</em><sup>−1</sup><em>β</em><em>γ</em>.</span></p>
+<p>This is the bosonic version of the quantum deformation. In order to
+get the supersymmetric version (which is what people usually use) we
+also need to preserve fermionic coordinates: <span
+class="math inline"><em>x</em><sup>2</sup> = <em>y</em><sup>2</sup> = 0, <em>q</em><em>x</em><em>y</em> = −<em>y</em><em>x</em></span></p>
+<p><code class="verbatim">Note:</code> you could instead require <span
+class="math inline"><em>x</em><em>y</em> = −<em>q</em><em>y</em><em>x</em></span>,
+but you'd get relations like <span
+class="math inline"><em>β</em><em>α</em> = −<em>q</em><em>α</em><em>β</em></span>,
+so I'm just picking the defining equations in such a way as to get nice
+relations in the end.</p>
+<p>Enforcing these gives us <span
+class="math inline">(<em>α</em><em>e</em><sub>1</sub> + <em>β</em><em>e</em><sub>2</sub>)<sup>2</sup> = 0 + (−<em>q</em><sup>−1</sup><em>α</em><em>β</em> + <em>β</em><em>α</em>)<em>e</em><sub>2</sub><em>e</em><sub>1</sub> = 0</span>
+<span
+class="math inline">(<em>γ</em><em>e</em><sub>1</sub> + <em>δ</em><em>e</em><sub>2</sub>)<sup>2</sup> = 0 + (−<em>q</em><sup>−1</sup><em>γ</em><em>δ</em> + <em>δ</em><em>γ</em>)<em>e</em><sub>2</sub><em>e</em><sub>1</sub> = 0</span>
+<span
+class="math inline">(<em>α</em><em>e</em><sub>1</sub> + <em>β</em><em>e</em><sub>2</sub>)(<em>γ</em><em>e</em><sub>1</sub> + <em>δ</em><em>e</em><sub>2</sub>) = (<em>α</em><em>δ</em> − <em>q</em><em>β</em><em>γ</em>)<em>e</em><sub>1</sub><em>e</em><sub>2</sub></span>
+<span
+class="math inline">(<em>γ</em><em>e</em><sub>1</sub> + <em>δ</em><em>e</em><sub>2</sub>)(<em>α</em><em>e</em><sub>1</sub> + <em>β</em><em>e</em><sub>2</sub>) = (<em>γ</em><em>β</em> − <em>q</em><em>δ</em><em>α</em>)<em>e</em><sub>1</sub><em>e</em><sub>2</sub></span></p>
+<p>So <span
+class="math inline"><em>α</em><em>β</em> = <em>q</em><em>β</em><em>α</em>, <em>γ</em><em>δ</em> = <em>q</em><em>δ</em><em>γ</em></span>
+and <span
+class="math inline">−<em>q</em><em>α</em><em>δ</em> + <em>q</em><sup>2</sup><em>β</em><em>γ</em> = <em>γ</em><em>β</em> − <em>q</em><em>δ</em><em>α</em></span></p>
+<p>The last equation implies <span
+class="math inline"><em>α</em><em>δ</em> − <em>δ</em><em>α</em> = <em>q</em><em>β</em><em>γ</em> − <em>q</em><sup>−1</sup><em>γ</em><em>β</em></span></p>
+<p>Combining this with <span
+class="math inline"><em>α</em><em>δ</em> − <em>δ</em><em>α</em> = <em>q</em><em>γ</em><em>β</em> − <em>q</em><sup>−1</sup><em>β</em><em>γ</em></span>,
+we have</p>
+<p><span
+class="math inline"><em>q</em><em>γ</em><em>β</em> − <em>q</em><sup>−1</sup><em>β</em><em>γ</em> = <em>q</em><em>β</em><em>γ</em> − <em>q</em><sup>−1</sup><em>γ</em><em>β</em></span>,
+so <span
+class="math inline">(<em>q</em> + <em>q</em><sup>−1</sup>)<em>γ</em><em>β</em> = (<em>q</em> + <em>q</em><sup>−1</sup>)<em>β</em><em>γ</em></span>
+and thus <span
+class="math inline"><em>β</em><em>γ</em> = <em>γ</em><em>β</em></span></p>
+<p><code class="verbatim">Determinant:</code> The final equation we have
+to impose is on the quantum determinant, which is defined to be <span
+class="math inline"><em>α</em><em>δ</em> − <em>q</em><em>β</em><em>γ</em></span>.
+If we set this to one, we get <span
+class="math inline"><em>S</em><em>L</em><sub>2</sub><sup><em>q</em></sup></span>;
+if we set it to just be non-zero, we get <span
+class="math inline"><em>G</em><em>L</em><sub>2</sub><sup><em>q</em></sup></span>.</p>
 </body>
 </html>

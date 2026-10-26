@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>q-calculus</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">q-calculus</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<h1 id="definitions">Definitions</h1>
+<h2 id="q-numbers"><span
+class="math inline"><em>q</em></span>-numbers</h2>
+<p><span class="math display">$$
+[n]_{q} = \dfrac{1-q^{n}}{1-q} = 1 + q + \ldots + q^{n-1}
+$$</span></p>
+<h2 id="q-factorials"><span
+class="math inline"><em>q</em></span>-factorials</h2>
+<p><span class="math display">$$
+[n]_{q}! = [n]_{q} \ldots [1]_{q} = \dfrac{(1-q^{n})
+\ldots(1-q)}{(1-q)^n}
+$$</span></p>
+<h2 id="q-pochhammer-symbol"><span
+class="math inline"><em>q</em></span>-Pochhammer symbol</h2>
+<p><span class="math display">$$
+(a; q)_{n}  = \prod_{k=0}^{n-1} (1-aq^{k})
+$$</span></p>
+<h2 id="q-derivative"><span
+class="math inline"><em>q</em></span>-Derivative</h2>
+<p><span class="math display">$$
+D_{q} f(x) = \dfrac{f(qx) - f(x)}{(q-1)x}
+$$</span></p>
+<h2 id="q-integral"><span
+class="math inline"><em>q</em></span>-Integral</h2>
+<h1 id="theorems">Theorems</h1>
+<h2 id="drinfeld-jimbo-quantum-groups">Drinfeld-Jimbo quantum
+groups</h2>
+<p><span class="math display">$$
+[E,F] = \dfrac{K - K^{-1} }{q - q^{-1} }
+$$</span></p>
+<p><span
+class="math display"><em>Δ</em><em>E</em> = <em>E</em> ⊗ 1 + <em>K</em> ⊗ <em>E</em></span></p>
+<p><span class="math display">$$
+\sum (-1)^{k} \binom{n}{k}_{q} E_{i}^{n-k} E_{j} E_{i}^{k} = 0
+$$</span></p>
+<p><code class="verbatim">Rigid deformation:</code> Has the same number
+of representations, with the same dimensions as the classical case.</p>
+<h1 id="examples">Examples</h1>
+<h2 id="quantum-mathfraksl_2">Quantum <span
+class="math inline">𝔰𝔩<sub>2</sub></span></h2>
+<p>We have three generators <span
+class="math inline"><em>E</em>, <em>F</em>, <em>H</em></span> with <span
+class="math inline">[<em>H</em>, <em>E</em>] = 2<em>E</em>,  [<em>H</em>, <em>F</em>] = −2<em>F</em>,  [<em>E</em>, <em>F</em>] = <em>H</em></span></p>
+<p>We try to deform the coproduct on <span
+class="math inline"><em>E</em>, <em>F</em></span> and then apply <span
+class="math inline"><em>Δ</em><em>H</em> = [<em>Δ</em><em>E</em>, <em>Δ</em><em>F</em>]</span>.</p>
+<p><span
+class="math inline">∑<em>E</em><sub>1</sub><em>F</em><sub>1<sup>′</sup></sub> ⊗ <em>E</em><sub>2</sub><em>F</em><sub>2<sup>′</sup></sub> − <em>F</em><sub>1<sup>′</sup></sub><em>E</em><sub>1</sub> ⊗ <em>F</em><sub>2<sup>′</sup></sub><em>E</em><sub>2</sub></span></p>
+<p>We want to have a kind of braiding show up when we apply our
+operators. For instance <span
+class="math inline"><em>E</em>(<em>ϕ</em><em>ψ</em>) = <em>E</em>(<em>ϕ</em>)<em>ψ</em> + <em>q</em><em>ϕ</em><em>E</em>(<em>ψ</em>)</span></p>
+<p>The motivation is that if instead of thinking about applying <span
+class="math inline"><em>E</em></span> to each of <span
+class="math inline"><em>ϕ</em>, <em>ψ</em></span>, we keep <span
+class="math inline"><em>E</em></span> fixed in the same spot, and swap
+<span class="math inline"><em>ϕ</em>, <em>ψ</em></span> in the second
+term, picking up the phase factor (thinking of this like the quantum
+plane, where <span
+class="math inline"><em>ϕ</em><em>ψ</em> = <em>q</em><em>ψ</em><em>ϕ</em></span>).</p>
+<p>But really we should probably pick up <span
+class="math inline"><em>q</em><sup>2</sup></span>, because we have to
+swap <span class="math inline"><em>ϕ</em>, <em>ψ</em></span> and then
+swap <span
+class="math inline"><em>ϕ</em>, <em>E</em>(<em>ψ</em>)</span>.</p>
+<p>Actually, maybe the way to motivate it is to look at the derivative
+and say you're basically applying the <span
+class="math inline"><em>Q</em></span>-structure from my thesis? Because
+here now it looks a lot like the graded setting, which is what my <span
+class="math inline"><em>Q</em></span>-bialgebras generalize.</p>
+</body>
+</html>
