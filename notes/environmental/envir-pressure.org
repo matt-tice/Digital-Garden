@@ -1,0 +1,56 @@
+:PROPERTIES:
+:ID:       7e5c4845-d713-45de-a4eb-a79971d74918
+:END:
+#+title: pressure
+#+filetags: :environmental:physics:
+
+* References
+
+
+
+* Summary
+
+Air moves from high to low pressure
+
+* High pressure
+
+** Compressional heating
+
+A massive column of air sinks towards the earth. As it sinks, it compresses under its own weight, and heats up.
+
+** Stagnant air
+
+As the heavy air sinks, it squashes wind currents, keeping the air near the ground very stagnant.
+
+The sinking air also prevents warm surface moisture from rising, cooling and forming clouds. 
+
+Without clouds, there's less to shield the earth from the sun. The ground heats up, radiating heat back into the air
+
+** Allergens
+
+Trapped air also traps humidity, allergens, and pollutants close to the ground.
+
+** Movement
+
+Eventually the heat dome will end 
+
+Stronger, faster-moving weather systems will crash into the high-pressure system, pushing it away
+
+Surface heat will also combat the heat dome, as it tries to rise. Eventually the surface of the earth gets so hot that the surface air pushes through the high pressure system.
+
+=Thermal low:= Because the air near the surface of the earth is heating up and rising, it creates a sheet of low pressure, called a *thermal low*. This allows cooler, denser air masses from nearby regions to enter. When the cool air arrives, it slides under the huge column of hot stagnant air, forcing it up. The part at the top that reaches the jet stream gets *pushed away.* 
+
+Also as the air rises, it rapidly cools in the upper atmosphere, making it less able to hold moisture, and causing rain. This also relieves the pressure, because the water isn't hanging around in the air.
+
+* Heat dome
+
+
+* Body acclimation
+
+Your body will actually make physical changes to adapt to whatever environment you're living in.
+
+** Thyroid
+
+** Baseline metabolic rate
+
+** Vasoconstriction

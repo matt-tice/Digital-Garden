@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       8ee062cd-366b-4252-ace5-c9f7ae18e5be
+:END:
+#+title: lagrangians
+#+filetags: :physics:qft:
+
+* References
+
+
+
+* Summary
+
+Not every physical quantum field theory can be acquired from taking a classical Lagrangian and quantizing.
+        * this tends to happen for *strongly coupled QFTs*, because quantizing a classical theory usually involves taking a non-interacting classical field theory, and using the coupling constant as a perturbation of interactions.
+        * this is related to *quantum parameter locking* 
+
+Moreover, there are some quantum field theories that have no Lagrangian at all! 
+        * \((2,0)\) superconformal field theory in 6D. It describes strings and membranes moving in 6D. It looks at the *self-dual three-form field strength* 
+        * the main problem is that if you try to write out a Lagrangian, the kinetic energy term blows up
+        * *This where the *bootstrap method* comes in --- you start with the observables and a number of assumptions like unitarity, locality, and conformal symmetry, and together they're enough to let you work out the correlation functions
+

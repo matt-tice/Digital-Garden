@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       2c327b92-931f-4748-8ae8-31ed7a1210cf
+:END:
+#+title: copowers
+#+filetags: :math:categories:
+
+* References
+
+
+
+* Summary
+
+\[
+\mathcal{C}(V \cdot A , B ) \cong  \mathcal{V}(V, \mathcal{C}(A,B))
+\]
+
+
+* Definitions
+
+
+
+
+* Theorems
+
+* Examples

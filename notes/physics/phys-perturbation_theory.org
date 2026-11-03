@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       c6b8bedf-cf5a-4e06-881a-b660ca22f322
+:END:
+#+title: perturbation theory
+#+filetags: :physics:qft:
+
+* References
+
+
+
+* Summary
+
+I'd thought that all perturbation theory was about getting particles to high energies in order to reduce their interactions --- that's actually not true --- the theories for which this works, like QCD, are called *asymptotically free.* 
+
+QED, on the other hand, actually *increases interactions* with increasing energy; this is really surprising to me; but the first reason for my misconception is that it increases /really slowly/ --- so even at the highest energies humans will ever reasonably be able to make, it's still perturbative. I knew that QED was perturbative at high energies, so I must have just assumed that it was also asymptotically free.
+
+The other reason for the misconception is that I'd thought you could just increase the kinetic energy of a particle, without increasing its interaction energies. So for instance, if we take a simple Lagrangian like
+\[
+{L}(\phi) = \partial^{\mu} \phi \partial_{\mu} \phi - m^{2} \phi^{2} - \dfrac{\lambda}{4!} \phi^{4}
+\]
+
+I'd figured you could just speed up the particle, increasing the first two terms, and making the \(\lambda\) term small in comparison, and then use it as a perturbation.
+
+As it turns out this stops working *when you quantize* --- in the classical theory, \(\lambda\) is just a fixed number. But once you quantize, it becomes something dependent on energy. This feature is called a *quantum anomaly* and is related to things like *Landau poles* and *renormalization.* 
+

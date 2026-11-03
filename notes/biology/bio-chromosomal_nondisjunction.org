@@ -1,0 +1,104 @@
+:PROPERTIES:
+:ID:       4d408d13-bf5e-4b41-80a5-223cfb8262e6
+:END:
+#+title: chromosomal nondisjunction
+#+filetags: :biology:genetics:
+
+* References
+
+
+
+* Summary
+
+Nondisjunction is the failure of homologous chromosomes or sister chromatids to separate properly during cell division. 
+
+This leads to some cells having more chromosomes than usual and some having fewer
+
+* Age
+
+Risk of meiotic nondisjunction increases sharply with advanced maternal age: around age 30 to 35, and an exponential rise after age 40.
+
+Over time the proteins that hold sister chromatids together gradually degrade
+
+* Types
+
+* 
+
+=Homologous:= Chromosomes that are homologous are of the same type (one from the mother and one from the father). They have the same length, shape, centromere position, and gene sequence.
+
+=Sister:= Sister chromatids are formed when DNA replicates; it's the duplication of a chromosome.
+
+=Centromere:= Where sister chromatids are joined together
+
+** Interphase
+
+The 46 chromosomes are duplicated into 46 pairs of sister chromatids. 
+
+** Meiosis I
+
+At this point the chromosomes are all in diploid form (they're pairs of sister chromatids, bonded at the centromere).
+
+*** Prophase I
+
+=Synapsis:= Homologous diploid chromosomes pair up. Each of the 
+
+=Crossing over:= Paired chromosomes exchange genetic material at the *chiasmata* 
+
+=Oocytes:= Also known as egg cells. After forming during embryonic development, oocytes stay in prophase I *for decades* until ovulation
+
+*** Metaphase I
+
+=Tetrads:= 
+
+*** Anaphase I
+
+=Spindles:= Homologous chromosomes (still diploids) are now pulled apart to separate sides of the cell by the spindle fibers
+
+=Nondisjunction:= 
+
+
+*** Telophase I
+
+The two sides of the cell form two separate nuclei containing their respective diploids
+
+=Cytokinesis:= The cytoplasm splits into two new cells
+
+** Meiosis II
+
+Meiosis II is the process of separating sister chromatids without changing the total number of chromosomes. 
+
+*** Prophase II
+
+*** Metaphase II
+
+Chromosomes line up in the middle of the cell
+
+*** Anaphase II
+
+The sister chromatids are broken apart and pulled to opposite sides of the cell
+
+=Nondisjunction:= 
+
+*** Telophase II
+
+The two sides of the cell form two separate nuclei containing their respective chromatids
+
+=Cytokinesis:= The cytoplasm splits into two new cells. Each new cell contains 23 chromosomes
+
+
+** Mitosis
+
+Failure of a pair of sister chromosomes to separate here 
+
+*** Prophase
+
+*** Metaphase
+
+*** Anaphase
+
+*** Telophase
+
+
+* Trisomy 21 (Down syndrome)
+
+Caused by an extra full or partial copy of chromosome 21 due to nondisjunction. This is the most common cause of down syndrome (95%). Other causes are *translocation* (part of chromosome 21 attaches to a different chromosome) and *mosaicism* (some cells have an extra copy of chromosome 21 while others have the typical two copies)

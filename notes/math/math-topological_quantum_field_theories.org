@@ -88,8 +88,8 @@ It turns out, this doesn't work --- it *isn't gauge-invariant*. If we take a gau
 
 =Solution:= The actual Chern-Simons functional comes from mathematics: in four dimensions the *second Chern class* has the form
 \[
-Tr(F \wedge F)
-\].
+Tr(F \wedge F).
+\]
 You then try to work backwards; since your manifold is only three dimensional, you try to write \(Tr(F \wedge F)\) as an exterior derivative of a three-form.
 
 \(A \wedge A\) is a *self-interaction* 
@@ -106,8 +106,9 @@ In Yang-Mills theory, we start with a smooth orientable, compact manifold $M$ wi
 =Conditions:= Compactness allows us to easily integrate over everything. The metric and orientability give us the Hodge star operator. The orientability is also necessary to define a global integral. And the lack of boundary makes it so that we don't have to keep track of boundary conditions
 
 =Action:= The action takes the form
-
-$S_{\text{Yang-Mills}} = \dfrac{1}{2g^{2}} \int_{M} Tr(F \wedge \star F)$
+\[
+S_{\text{Yang-Mills}} = \dfrac{1}{2g^{2}} \int_{M} Tr(F \wedge \star F)
+\]
 
 where $F$ is the curvature 2-form $F = dA + A \wedge A$. In local coordinates this is
 $F_{\mu\nu} = \partial_{\mu} A_{\nu} - \partial_{\nu} A_{\mu} + [A_{\mu}, A_{\nu}]$
@@ -115,8 +116,10 @@ $F_{\mu\nu} = \partial_{\mu} A_{\nu} - \partial_{\nu} A_{\mu} + [A_{\mu}, A_{\nu
 =Removing the metric:= What if we don't have a metric? For Chern-Simons theory, we take a smooth, compact, oriented *3-manifold* $M$ without boundary, equipped with a principal $G$-bundle $P$, for a compact Lie group $G$.
 
 We then take a *connection 1-form* $A \in \Omega^{1}(M, \mathfrak{g})$. The Chern-Simons action is then
+\[
+S_{\text{Chern-Simons}} = \dfrac{k}{4 \pi } \int_{M} Tr(A \wedge dA + \dfrac{2}{3} A \wedge A \wedge A).
+\]
 
-$S_{\text{Chern-Simons}} = \dfrac{k}{4 \pi } \int_{M} Tr(A \wedge dA + \dfrac{2}{3} A \wedge A \wedge A)$
 
 =Note:= $A$ is a *Lie-algebra-valued* differential form, not a scalar valued one. This is why we don't have $A \wedge A = 0$.
 

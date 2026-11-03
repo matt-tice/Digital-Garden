@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       c01c8961-5e41-4df7-be83-71854dfe0a2c
+:END:
+#+title: noses
+#+filetags: :medical:body:biology:
+
+* References
+
+
+
+* Summary
+
+* Dryness
+
+=Inflammation:= When dry air desiccates the nasal lining, the *blood vessels dilate*.
+
+=Pressue:= The extra blood increases the pressure, causing plasma fluid to leak through the vessel walls into the surrounding tissue and surface of the nasal passage, moisturizing it.
+
+=Temperature:= The influx of warm blood heats up the air entering the nose
+
+=Goblet cells:= Are stimulated to ramp up production of watery secretions
+
+=Paracellular water transport:= This increases, as tiny channels between cells are opened, to allow water move directly from deeper tissues onto the exposed epithelial surface

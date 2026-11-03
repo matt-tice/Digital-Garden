@@ -1,0 +1,59 @@
+:PROPERTIES:
+:ID:       3fc9bbab-de98-4b7b-9813-9438a70578b3
+:END:
+#+title: operads
+#+filetags: :math:properads:props:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Symmetric sequence
+
+Let \(C\) be a set. Define \(S[C]\) to be the category whose objects are pairs \((A, f)\), where \(A\) is a finite set and \(f: A \rightarrow C\) is a set map. Morphisms \((A,f) \rightarrow (B, g)\) in this category are maps \(\phi : A \rightarrow B\)  such that 
+\[
+f = g \circ \phi
+\]
+
+
+A *symmetric sequence* is a functor
+\[
+F: S[C] \times C \rightarrow \mathcal{V}
+\]
+
+*** Intuition
+
+The category \(S[C]\) is really almost the *category of elements* of the presheaf \(\operatorname{Mor}(-, C)\)
+
+=Grothendieck construction:= 
+
+** Symmetric sequence
+
+Let \(C\) be a set. The groupoid \(S[C]\) has as objects pairs \((\bar{x}, \sigma )\) where \(\bar{x}\) is a finite sequence of elements of \(C\) of length \(n \geq 0\) , and \(\sigma \in S_{n}\) is a permuation.
+
+The morphisms are all permutations, with the action \((\bar{x}, \sigma ) \)
+
+finite sequences (including empty sequences) of elements of \(C\), and as morphisms all bijections on the indices.
+
+A *symmetric \(C\)-sequence* in a symmetric monoidal category  \(\mathcal{V}\) is a functor
+\[
+F: S[C]^{op} \times C \rightarrow \mathcal{V}
+\]
+
+*** Intuition
+
+=Permutations:= Since \(S[C]\) has all bijections, each of the permutation groups acts on all the appropriately sized sequences.
+
+=Bijections:= The action of a bijection \(\sigma \) is defined on the indices. If we have a constant sequence \(\)
+
+The maps have to have two indices, to allow you to utilize the action of the symmetric group. If we think about it in terms of *string diagrams*, one of the indices corresponds to the order that you write terms down at the bottom of the tree, while the other corresponds to the order that you twist the wires into above your sequence.
+
+
+* Theorems
+
+* Examples
