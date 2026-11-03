@@ -60,6 +60,10 @@
     img {
       max-width: 100%;
     }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.4em;
     }
@@ -103,8 +107,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -215,8 +219,8 @@ class="math inline">1/<em>R</em></span>, but it turns out for QCD that
 the potential increases as <span class="math inline"><em>R</em></span>.
 This is why quarks are <strong>confined</strong></p>
 <p><code class="verbatim">TQFT:</code> However, if you calculate Wilson
-loops in a <span class="math inline">(2+1)</span>-dimensional TQFT, the
-<span class="math inline"><em>R</em></span> and <span
+loops in a <span class="math inline">(2 + 1)</span>-dimensional TQFT,
+the <span class="math inline"><em>R</em></span> and <span
 class="math inline"><em>T</em></span> dependence disappears; quarks (or
 their tqft equivalents) don't have confinement; the only thing that
 matters is how the worldlines are <strong>braided</strong>. The
@@ -241,16 +245,16 @@ into a problem: we can't define a Hodge star operator, and thus we have
 no obvious way of defining an action for our theory.</p>
 <p>To fix this, we assume that there's some other independent field,
 given by an <span
-class="math inline">(<em>n</em>−<em>k</em>)</span>-form <span
+class="math inline">(<em>n</em> − <em>k</em>)</span>-form <span
 class="math inline"><em>B</em></span>, so your action is <span
-class="math display">∫<em>T</em><em>r</em>(<em>B</em>∧<em>F</em>)</span></p>
+class="math display">∫<em>T</em><em>r</em>(<em>B</em> ∧ <em>F</em>)</span></p>
 <h2 id="chern-simons-theory">Chern-Simons Theory</h2>
 <p>In Yang-Mills, you start with a closed orientable (pseudo)Riemannian
 manifold with a principal <span class="math inline"><em>G</em></span>
 bundle and connection <span class="math inline"><em>A</em>.</span> The
 metric allows you to define a Hodge star operator, which then gives you
 the ability to form an integral <span
-class="math display">∫<sub><em>M</em></sub><em>T</em><em>r</em>(<em>F</em>∧⋆<em>F</em>)</span>
+class="math display">∫<sub><em>M</em></sub><em>T</em><em>r</em>(<em>F</em> ∧ ⋆<em>F</em>)</span>
 which is the <strong>Yang-Mills action</strong>, where <span
 class="math inline"><em>F</em> = <em>d</em><em>A</em> + <em>A</em> ∧ <em>A</em></span>
 is the curvature.</p>
@@ -260,7 +264,7 @@ need something else to integrate.</p>
 <span class="math inline"><em>M</em></span> is
 <strong>three-dimensional</strong>, the obvious thing to do is to try to
 take <span
-class="math inline">∫<em>T</em><em>r</em>(<em>A</em>∧<em>F</em>)</span>.</p>
+class="math inline">∫<em>T</em><em>r</em>(<em>A</em> ∧ <em>F</em>)</span>.</p>
 <p>It turns out, this doesn't work — it <strong>isn't
 gauge-invariant</strong>. If we take a gauge transformation <span
 class="math inline"><em>A</em> → <em>g</em><sup>−1</sup><em>A</em><em>g</em> + <em>g</em><sup>−1</sup><em>d</em><em>g</em></span>
@@ -270,10 +274,10 @@ class="math inline"><em>A</em> + <em>d</em></span>)</p>
 <p><code class="verbatim">Solution:</code> The actual Chern-Simons
 functional comes from mathematics: in four dimensions the <strong>second
 Chern class</strong> has the form <span
-class="math display"><em>T</em><em>r</em>(<em>F</em>∧<em>F</em>)</span>.
+class="math display"><em>T</em><em>r</em>(<em>F</em> ∧ <em>F</em>).</span>
 You then try to work backwards; since your manifold is only three
 dimensional, you try to write <span
-class="math inline"><em>T</em><em>r</em>(<em>F</em>∧<em>F</em>)</span>
+class="math inline"><em>T</em><em>r</em>(<em>F</em> ∧ <em>F</em>)</span>
 as an exterior derivative of a three-form.</p>
 <p><span class="math inline"><em>A</em> ∧ <em>A</em></span> is a
 <strong>self-interaction</strong></p>
@@ -291,14 +295,15 @@ easily integrate over everything. The metric and orientability give us
 the Hodge star operator. The orientability is also necessary to define a
 global integral. And the lack of boundary makes it so that we don't have
 to keep track of boundary conditions</p>
-<p><code class="verbatim">Action:</code> The action takes the form</p>
-<p><span class="math inline">$S_{\text{Yang-Mills}} = \dfrac{1}{2g^{2}}
-\int_{M} Tr(F \wedge \star F)$</span></p>
+<p><code class="verbatim">Action:</code> The action takes the form <span
+class="math display">$$
+S_{\text{Yang-Mills}} = \dfrac{1}{2g^{2}} \int_{M} Tr(F \wedge \star F)
+$$</span></p>
 <p>where <span class="math inline"><em>F</em></span> is the curvature
 2-form <span
 class="math inline"><em>F</em> = <em>d</em><em>A</em> + <em>A</em> ∧ <em>A</em></span>.
 In local coordinates this is <span
-class="math inline"><em>F</em><sub><em>μ</em><em>ν</em></sub> = ∂<sub><em>μ</em></sub><em>A</em><sub><em>ν</em></sub> − ∂<sub><em>ν</em></sub><em>A</em><sub><em>μ</em></sub> + [<em>A</em><sub><em>μ</em></sub>,<em>A</em><sub><em>ν</em></sub>]</span></p>
+class="math inline"><em>F</em><sub><em>μ</em><em>ν</em></sub> = ∂<sub><em>μ</em></sub><em>A</em><sub><em>ν</em></sub> − ∂<sub><em>ν</em></sub><em>A</em><sub><em>μ</em></sub> + [<em>A</em><sub><em>μ</em></sub>, <em>A</em><sub><em>ν</em></sub>]</span></p>
 <p><code class="verbatim">Removing the metric:</code> What if we don't
 have a metric? For Chern-Simons theory, we take a smooth, compact,
 oriented <strong>3-manifold</strong> <span
@@ -307,11 +312,11 @@ principal <span class="math inline"><em>G</em></span>-bundle <span
 class="math inline"><em>P</em></span>, for a compact Lie group <span
 class="math inline"><em>G</em></span>.</p>
 <p>We then take a <strong>connection 1-form</strong> <span
-class="math inline"><em>A</em> ∈ <em>Ω</em><sup>1</sup>(<em>M</em>,𝔤)</span>.
-The Chern-Simons action is then</p>
-<p><span class="math inline">$S_{\text{Chern-Simons}} = \dfrac{k}{4 \pi
-} \int_{M} Tr(A \wedge dA + \dfrac{2}{3} A \wedge A \wedge
-A)$</span></p>
+class="math inline"><em>A</em> ∈ <em>Ω</em><sup>1</sup>(<em>M</em>, 𝔤)</span>.
+The Chern-Simons action is then <span class="math display">$$
+S_{\text{Chern-Simons}} = \dfrac{k}{4 \pi } \int_{M} Tr(A \wedge dA +
+\dfrac{2}{3} A \wedge A \wedge A).
+$$</span></p>
 <p><code class="verbatim">Note:</code> <span
 class="math inline"><em>A</em></span> is a
 <strong>Lie-algebra-valued</strong> differential form, not a scalar
@@ -328,7 +333,7 @@ matrices.</p>
 <p>If <span
 class="math inline"><em>A</em> = <em>A</em><sub>1</sub><em>d</em><em>x</em><sup>1</sup> + <em>A</em><sub>2</sub><em>d</em><em>x</em><sup>2</sup></span>,
 then <span
-class="math inline"><em>A</em> ∧ <em>A</em> = <em>A</em><sub>1</sub><em>A</em><sub>2</sub><em>d</em><em>x</em><sup>1</sup> ∧ <em>d</em><em>x</em><sup>2</sup> + <em>A</em><sub>1</sub><em>A</em><sub>2</sub><em>d</em><em>x</em><sup>2</sup> ∧ <em>d</em><em>x</em><sup>1</sup> + 0 + 0 = [<em>A</em><sub>1</sub>,<em>A</em><sub>2</sub>]<em>d</em><em>x</em><sup>1</sup> ∧ <em>d</em><em>x</em><sup>2</sup></span></p></li>
+class="math inline"><em>A</em> ∧ <em>A</em> = <em>A</em><sub>1</sub><em>A</em><sub>2</sub><em>d</em><em>x</em><sup>1</sup> ∧ <em>d</em><em>x</em><sup>2</sup> + <em>A</em><sub>1</sub><em>A</em><sub>2</sub><em>d</em><em>x</em><sup>2</sup> ∧ <em>d</em><em>x</em><sup>1</sup> + 0 + 0 = [<em>A</em><sub>1</sub>, <em>A</em><sub>2</sub>]<em>d</em><em>x</em><sup>1</sup> ∧ <em>d</em><em>x</em><sup>2</sup></span></p></li>
 <li><p>Applying the Trace</p>
 <p><span class="math inline">$Tr(A \wedge B) = (-1)^{\abs{A} \abs{B}}
 Tr(B \wedge A)$</span>.</p>
@@ -344,26 +349,29 @@ where <span class="math inline">$F^{\pm} = \dfrac{1}{2}(F \pm \star
 F)$</span> are (anti)symmetric</p>
 <p><code class="verbatim">Note:</code> <span
 class="math inline"><em>F</em><sup>+</sup> ∧ <em>F</em><sup>−</sup> = 0</span>.
-Thus we can write</p></li>
+Thus we can write</p>
+<p></p></li>
 </ol>
 <h2 id="exact-case">Exact Case</h2>
 <p>In the case that <span class="math inline"><em>M</em></span> is
 itself a boundary of a 4-manifold <span
 class="math inline"><em>X</em></span>, we would have</p>
+<p></p>
 <p>We also have</p>
+<p></p>
 <p><span
 class="math inline"><em>T</em><em>r</em>(<em>A</em><sup>∧4</sup>) = 0</span>.
 So we have</p>
 <p><span class="math inline">$Tr(F \wedge F) = d Tr(A \wedge dA +
 \dfrac{2}{3} A \wedge A \wedge A)$</span></p>
 <p>This means that <span
-class="math inline"><em>T</em><em>r</em>(<em>F</em>∧<em>F</em>)</span>
+class="math inline"><em>T</em><em>r</em>(<em>F</em> ∧ <em>F</em>)</span>
 is <strong>exact</strong>, so integrating over it is equivalent to
 integrating over the boundary:</p>
 <p><span class="math inline">$\int_X Tr(F \wedge F) = \int_{\partial X =
 M} Tr(A \wedge dA + \dfrac{2}{3} A \wedge A \wedge A)$</span>,</p>
 <p>recovering the Chern-Simons action in the case that <span
-class="math inline"><em>F</em> =  ⋆ <em>F</em></span> (the field is
+class="math inline"><em>F</em> = ⋆<em>F</em></span> (the field is
 <strong>self-dual</strong>)</p>
 <ul>
 <li>these self-dual fields are called <strong>instantons</strong></li>
@@ -371,10 +379,10 @@ class="math inline"><em>F</em> =  ⋆ <em>F</em></span> (the field is
 <p>Now let's write <span
 class="math inline"><em>F</em> = <em>F</em><sup>+</sup> + <em>F</em><sup>−</sup></span>.</p>
 <p>And so <span
-class="math inline"> ⋆ <em>F</em> = <em>F</em><sup>+</sup> − <em>F</em><sup>−</sup></span>.
+class="math inline">⋆<em>F</em> = <em>F</em><sup>+</sup> − <em>F</em><sup>−</sup></span>.
 We get</p>
 <p><span
-class="math inline"><em>S</em><sub>Yang-Mills</sub>(<em>F</em>) ∼ ∫<em>T</em><em>r</em>(<em>F</em>∧⋆<em>F</em>) = ∫<em>T</em><em>r</em>(<em>F</em><sup>+ ∧ 2</sup>) − ∫<em>T</em><em>r</em>(<em>F</em><sup>− ∧ 2</sup>)</span></p>
+class="math inline"><em>S</em><sub>Yang-Mills</sub>(<em>F</em>) ∼ ∫<em>T</em><em>r</em>(<em>F</em> ∧ ⋆<em>F</em>) = ∫<em>T</em><em>r</em>(<em>F</em><sup>+ ∧ 2</sup>) − ∫<em>T</em><em>r</em>(<em>F</em><sup>− ∧ 2</sup>)</span></p>
 <p><span
 class="math inline"><em>S</em><sub>Yang-Mills</sub>(<em>F</em>) = <em>S</em><sub>Chern-Simons</sub>(<em>F</em><sup>+</sup>) − <em>S</em><sub>Yang-Mills</sub>(<em>F</em><sup>−</sup>)</span></p>
 <p><code class="verbatim">Hyperplane:</code> The Chern-Simons part of
@@ -487,7 +495,7 @@ and a finite-dimensional representation of the gauge group, <span
 class="math inline"><em>ρ</em></span>. The corresponding <strong>Wilson
 loop operator</strong> is defined to be</p>
 <p><span
-class="math inline"><em>W</em><sub><em>ρ</em></sub>(<em>K</em>) = Tr<sub><em>ρ</em></sub>[𝒫exp(∫<sub><em>K</em></sub><em>A</em>)]</span>.</p>
+class="math inline"><em>W</em><sub><em>ρ</em></sub>(<em>K</em>) = Tr<sub><em>ρ</em></sub>[𝒫exp (∫<sub><em>K</em></sub><em>A</em>)]</span>.</p>
 <p>where <span class="math inline">𝒫</span> is the path-ordering
 operator. The matrix <span
 class="math inline"><em>U</em>(<em>K</em>) = 𝒫exp (∫<sub><em>K</em></sub><em>A</em>)</span>
@@ -512,7 +520,7 @@ correlator.</p></li>
 </ol>
 <h2 id="donaldson-witten">Donaldson-Witten</h2>
 <p>We consider <strong>anti-instantons</strong> <span
-class="math inline"> ⋆ <em>F</em> =  − <em>F</em></span>.</p>
+class="math inline">⋆<em>F</em> = −<em>F</em></span>.</p>
 <p>We find that the moduli space of these anti-instantons is
 <strong>non-compact</strong></p>
 <p><code class="verbatim">Uhlenbeck compactness:</code> Donaldson used

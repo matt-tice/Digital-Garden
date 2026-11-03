@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>operads</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">operads</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<h1 id="definitions">Definitions</h1>
+<h2 id="symmetric-sequence">Symmetric sequence</h2>
+<p>Let <span class="math inline"><em>C</em></span> be a set. Define
+<span class="math inline"><em>S</em>[<em>C</em>]</span> to be the
+category whose objects are pairs <span
+class="math inline">(<em>A</em>, <em>f</em>)</span>, where <span
+class="math inline"><em>A</em></span> is a finite set and <span
+class="math inline"><em>f</em> : <em>A</em> → <em>C</em></span> is a set
+map. Morphisms <span
+class="math inline">(<em>A</em>, <em>f</em>) → (<em>B</em>, <em>g</em>)</span>
+in this category are maps <span
+class="math inline"><em>ϕ</em> : <em>A</em> → <em>B</em></span> such
+that <span
+class="math display"><em>f</em> = <em>g</em> ∘ <em>ϕ</em></span></p>
+<p>A <strong>symmetric sequence</strong> is a functor <span
+class="math display"><em>F</em> : <em>S</em>[<em>C</em>] × <em>C</em> → 𝒱</span></p>
+<h3 id="intuition">Intuition</h3>
+<p>The category <span class="math inline"><em>S</em>[<em>C</em>]</span>
+is really almost the <strong>category of elements</strong> of the
+presheaf <span class="math inline">Mor (−, <em>C</em>)</span></p>
+<p><code class="verbatim">Grothendieck construction:</code></p>
+<h2 id="symmetric-sequence-1">Symmetric sequence</h2>
+<p>Let <span class="math inline"><em>C</em></span> be a set. The
+groupoid <span class="math inline"><em>S</em>[<em>C</em>]</span> has as
+objects pairs <span class="math inline">(<em>x̄</em>, <em>σ</em>)</span>
+where <span class="math inline"><em>x̄</em></span> is a finite sequence
+of elements of <span class="math inline"><em>C</em></span> of length
+<span class="math inline"><em>n</em> ≥ 0</span> , and <span
+class="math inline"><em>σ</em> ∈ <em>S</em><sub><em>n</em></sub></span>
+is a permuation.</p>
+<p>The morphisms are all permutations, with the action <span
+class="math inline">(<em>x̄</em>, <em>σ</em>)</span></p>
+<p>finite sequences (including empty sequences) of elements of <span
+class="math inline"><em>C</em></span>, and as morphisms all bijections
+on the indices.</p>
+<p>A <strong>symmetric <span
+class="math inline"><em>C</em></span>-sequence</strong> in a symmetric
+monoidal category <span class="math inline">𝒱</span> is a functor <span
+class="math display"><em>F</em> : <em>S</em>[<em>C</em>]<sup><em>o</em><em>p</em></sup> × <em>C</em> → 𝒱</span></p>
+<h3 id="intuition-1">Intuition</h3>
+<p><code class="verbatim">Permutations:</code> Since <span
+class="math inline"><em>S</em>[<em>C</em>]</span> has all bijections,
+each of the permutation groups acts on all the appropriately sized
+sequences.</p>
+<p><code class="verbatim">Bijections:</code> The action of a bijection
+<span class="math inline"><em>σ</em></span> is defined on the indices.
+If we have a constant sequence <span class="math inline"></span></p>
+<p>The maps have to have two indices, to allow you to utilize the action
+of the symmetric group. If we think about it in terms of <strong>string
+diagrams</strong>, one of the indices corresponds to the order that you
+write terms down at the bottom of the tree, while the other corresponds
+to the order that you twist the wires into above your sequence.</p>
+<h1 id="theorems">Theorems</h1>
+<h1 id="examples">Examples</h1>
+</body>
+</html>
