@@ -9,6 +9,7 @@
 
 I wanted to make this file to start to track the areas that I'm noticing job postings in 
 
+
 * Algebra
 
 ** Representation theory
@@ -18,6 +19,7 @@ I wanted to make this file to start to track the areas that I'm noticing job pos
 *** Geometric group theory
 
 *** Polish groups
+
 
 * Analysis
 
@@ -48,6 +50,7 @@ I wanted to make this file to start to track the areas that I'm noticing job pos
 *** Cacluus of variations
 
 
+*** Geometric theory of PDEs
 
 * Combinatorics
 
@@ -127,15 +130,19 @@ I wanted to make this file to start to track the areas that I'm noticing job pos
 
 ** Mirror symmetry
 
+
 * Topology
 
 ** Low dimensional
+
+*** Knot theory
 
 ** Cohomology
 
 *** Lie groups
 
 *** K-Groups
+
 
 * Computation
 
@@ -183,9 +190,11 @@ I wanted to make this file to start to track the areas that I'm noticing job pos
 
 *** Algebraic topology
 
+
 * Quantum computing
 
 ** LDPC Codes
+
 
 * Stats
 
@@ -199,7 +208,9 @@ I wanted to make this file to start to track the areas that I'm noticing job pos
 
 ** Arithmetic stats
 
+
 * Finance
+
 
 * Probability
 

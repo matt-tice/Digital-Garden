@@ -1,0 +1,59 @@
+:PROPERTIES:
+:ID:       60138cd4-ac21-475e-b1f3-e528c1b49a5e
+:END:
+#+title: energy storage
+#+filetags: :physics:
+
+* References
+
+
+
+* Summary
+
+* Daily storage
+
+* Seasonal energy storage
+
+One of the most difficult problems in the world is storing energy for multiple seasons. Traditional approaches like batteries don't work, because they lose their charge over months and can't be scaled to powering a whole country without being extremely expensive
+
+=Production and demand:= One of the biggest issues in green energy is the mismatch between when energy gets produced, and when it gets used --- solar thrives in the summer, wind peaks in the spring and winter, hydro is strong in the spring thaw and summer rains. But human need rarely aligns neatly with peak energy production.
+
+** Finances
+
+A standard battery grid asset might charge and discharge around once a day, which generates a lot of revenue down the line, as it's used to power industry. 
+
+Season storage facilities on the other hand, only charge and discharge once a year. This creates a huge issue: in order to be cost effective, seasonal storage needs to be massively cheaper upfront than lithium-ion batteries
+
+** Discharge
+
+All batteries lose a small percentage of their capacity each week in the form of heat. Over six months, a huge amount of energy gets lost.
+
+
+
+** Round-trip Efficiency
+
+To store energy, you usually convert it into a different form (for example, turning electricity into a gas or chemical that you later convert back into energy). But if the RTE is low, you need to create a huge amount of energy in the summer, just to recover a bit of it in the winter
+
+** Pumped Thermal Energy Storage
+
+Uses electricity to *run a heat pump*, storing heat in crushed rock/sand, and cold in a liquid.
+
+Its materials are actually very cheap. The problem is that it has low electrical-to-electrical efficiency (55%) and heavy thermal leakage
+
+** Green Hydrogen / Ammonia
+
+Uses eletricity to split water, and stores the hydrogen in underground salt caverns.
+
+There is *very low discharge* and high energy density. The main problem is a terrible RTE (40%) and high infrastructure cost
+
+** Enhanced Pumped-Storage Hydro
+
+Pumps water uphill in the summer into a reservoir and releases it in the winter.
+
+This has *great efficiency* (75%). But it requires a massive environmental footprint to build new reservoirs and can only be used for hydro. Also a lot of water just evaporates while it's sitting there for half a year.
+
+** Iron-Air / Flow Batteries
+
+Uses oxidation (rusting) and de-oxidation of iron to store and release electrons. 
+
+*Very cheap* raw materials, and very safe. But it has low energy density by volume
