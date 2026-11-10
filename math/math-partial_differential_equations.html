@@ -60,6 +60,10 @@
     img {
       max-width: 100%;
     }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.4em;
     }
@@ -103,8 +107,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -183,6 +187,318 @@ pointwise.</p>
 equations</em></p>
 <p>The downside is that many equations <strong>no longer have unique
 solutions</strong></p>
+<h1 id="free-scalar-field">Free Scalar Field</h1>
+<h2 id="partial-differential-equations-1">Partial differential
+equations</h2>
+<p><code class="verbatim">Linear:</code> In the modern landscape, when
+we want to solve or formalize linear PDEs, we basically always use
+<strong>distributions</strong>, rather than functions — in other words,
+we define differential equations on distributions. Then there are
+certain theorems that allow you to show that a distribution-solution to
+a differential equation corresponds to an actual function in certain
+cases.</p>
+<ul>
+<li>things like <strong>elliptic regularity</strong></li>
+</ul>
+<p><code class="verbatim">Nonlinear:</code> Because distributions don't
+multiply nicely together, it's hard to deal with non-linear pdes in a
+distribution setting, so people will either use the <strong>Colombeau
+algebra</strong> (which allows you to multiply distributions inside of a
+larger algebra at the cost of only allowing ) or <strong>viscocity
+solutions</strong>.</p>
+<p>But for this talk, we'll just focus on linear PDEs</p>
+<h3 id="distributions">Distributions</h3>
+<p>Let <span class="math inline"><em>F</em></span> be some
+<strong>algebra</strong> of integrable functions (compact support,
+Schwartz, etc.). We'll generally work with Schwartz space for our
+physics examples since we need solutions that exist as plane waves an
+thus aren't localized in a compact region</p>
+<p>A <strong>distribution</strong> is a continuous linear functional
+<span class="math inline"><em>ϕ</em> : <em>F</em> → ℝ</span>. So the
+space of distributions in the continuous dual <span
+class="math inline"><em>F</em><sup>′</sup></span>.</p>
+<p><code class="verbatim">Schwartz functions:</code> The space of
+Schwartz functions is denoted <span
+class="math inline">𝒮(ℝ<sup><em>n</em></sup>)</span> and consists of the
+smooth functions <span
+class="math inline"><em>f</em> : ℝ<sup><em>n</em></sup> → ℝ</span>,
+<span
+class="math inline"><em>f</em> ∈ <em>C</em><sup>∞</sup>(ℝ<sup><em>n</em></sup>)</span>
+such that</p>
+<p><span
+class="math display">sup<sub><em>x</em></sub>|<em>x</em><sup><em>α</em></sup>(∂<sup><em>β</em></sup><em>f</em>)| &lt; ∞</span></p>
+<p>for all multi-indices <span
+class="math inline"><em>α</em>, <em>β</em></span>.</p>
+<p>In other words, you can take any monomial and multiply it by any
+derivatives of <span class="math inline"><em>f</em></span> and the least
+upper bound is bounded. So as you go off to infinity in some direction
+in <span class="math inline">ℝ<sup><em>n</em></sup></span>, your
+function and all of its derivatives have to decay faster than any <span
+class="math inline">$\dfrac{1}{x^{\alpha}}$</span> (so that there isn't
+some large <span class="math inline"><em>x</em></span> that skyrockets
+the value)</p>
+<p>We call Schwartz functions <em>rapidly decreasing</em></p>
+<p><code class="verbatim">Examples:</code> Smooth functions with compact
+support, and <span class="math inline">$x^{\alpha }e^{-a \| x
+\|^{2}$</span> where <span
+class="math inline"><em>a</em> &gt; 0</span>.</p>
+<p><code class="verbatim">Tempered distributions:</code> The
+distributions on Schwartz space are called tempered distributions and
+denoted <span
+class="math inline">𝒮(ℝ<sup><em>n</em></sup>)<sup>′</sup></span>.</p>
+<p>These tempered distributions are what we use in our PDEs.</p>
+<p>We write the action of distributions on our test functions with a
+bilinear form <span
+class="math inline">⟨⋅, ⋅⟩ : <em>F</em><sup>′</sup> ⊗ <em>F</em> → ℝ</span>.</p>
+<p><code class="verbatim">Examples:</code> Given any Schwartz function
+<span class="math inline"><em>f</em></span>, we have an induced
+distribution <span
+class="math display">⟨<em>f</em>, −⟩[<em>g</em>] = ∫<em>f</em>(<em>x</em>)<em>g</em>(<em>x</em>)<em>d</em><em>x</em></span></p>
+<p>Delta function <span
+class="math inline"><em>δ</em><sub><em>y</em></sub>[<em>f</em>] = <em>f</em>(<em>y</em>)</span>.
+We often see physicists write <span
+class="math display">∫<em>δ</em>(<em>x</em> − <em>y</em>)<em>f</em>(<em>x</em>)<em>d</em><em>x</em> = <em>f</em>(<em>y</em>)</span>
+What this really means is <span
+class="math inline">⟨<em>δ</em><sub><em>y</em></sub>, <em>f</em>⟩ = <em>f</em>(<em>y</em>)</span></p>
+<h3 id="manipulating-distributions">Manipulating distributions</h3>
+<p>The main philosophy behind distributions is that you push off
+everything acting on the distribution onto the test functions</p>
+<p><code class="verbatim">Weak derivatives:</code> If we have a ordinary
+functions, and we use integration by parts we have <span
+class="math display">∫(∂<em>f</em>(<em>x</em>))<em>g</em>(<em>x</em>) = −∫<em>f</em>(<em>x</em>)∂<em>g</em>(<em>x</em>) + Boundary</span></p>
+<p>We assume that we're working with functions that go to zero on the
+boundary of our domain of integration (like Schwartz functions or
+compactly supported functions), so the boundary term disappears. Then in
+the language of distributions we have <span
+class="math display">⟨∂<em>f</em>, <em>g</em>⟩ = −⟨<em>f</em>, ∂<em>g</em>⟩.</span></p>
+<p>For any distribution <span class="math inline"><em>ϕ</em></span>, we
+define the <strong>weak derivative</strong> <span
+class="math inline">∂<em>ϕ</em></span> to be a distribution such that
+<span
+class="math inline">⟨∂<em>ϕ</em>, <em>g</em>⟩ = −⟨<em>ϕ</em>, ∂<em>g</em>⟩</span>
+for all test functions <span
+class="math inline"><em>g</em> ∈ <em>F</em></span>.</p>
+<p><code class="verbatim">Multiplication:</code> Given a test function
+<span class="math inline"><em>f</em></span> and distribution <span
+class="math inline"><em>ϕ</em></span>, we define the distribution <span
+class="math inline"><em>f</em><em>ϕ</em></span> to be such that <span
+class="math display">⟨<em>f</em><em>ϕ</em>, <em>g</em>⟩ = ⟨<em>ϕ</em>, <em>f</em><em>g</em>⟩</span>
+for all test functions <span class="math inline"><em>g</em></span>. Here
+we're using the fact that our test functions form an algebra.</p>
+<p><code class="verbatim">Fourier transform:</code> Similarly, we can
+define the <strong>Fourier transform</strong> of a distribution by <span
+class="math display">⟨ℱ[<em>ϕ</em>]), <em>f</em>⟩ = ⟨<em>ϕ</em>, ℱ[<em>f</em>]⟩</span>
+for all <span class="math inline"><em>f</em> ∈ <em>F</em></span>.</p>
+<p>The Fourier transform on a function is defined to be <span
+class="math display">ℱ[<em>f</em>](<em>x</em>) = ∫<sub>ℝ<sup><em>n</em></sup></sub><em>f</em>(<em>x</em>)<em>e</em><sup>−<em>i</em><em>k</em> ⋅ <em>x</em></sup><em>d</em><em>x</em></span></p>
+<p>And <span class="math display">$$
+\mathcal{F}^{-1} [f](k) = \dfrac{1}{(2 \pi )^{n}}\int_{\mathbb{R}^{n}}
+f(k) e^{i k \cdot x} dk
+$$</span></p>
+<p>where <span class="math inline"><em>d</em><em>x</em></span> is the
+Lebesgue measure.</p>
+<p>This is an <em>automorphism on <span
+class="math inline">𝒮(ℝ<sup><em>n</em></sup>)</span>.</em></p>
+<p><code class="verbatim">Uncertainty principle:</code> The HUP and
+Paley-Wiener theorems tell us that the Fourier transform of a compactly
+supported function doesn't have compact support. This is why we don't
+end up using compactly supported functions</p>
+<p><code class="verbatim">Fourier + derivatives:</code> If we view <span
+class="math inline"><em>e</em><sup>−<em>i</em><em>k</em> ⋅ <em>x</em></sup></span>
+as a distribution, we have <span
+class="math inline">ℱ[<em>f</em>] = ⟨<em>e</em><sup>−<em>i</em><em>k</em> ⋅ <em>x</em></sup>, <em>f</em>⟩</span>.
+Then <span
+class="math inline">ℱ[∂<sub><em>μ</em></sub><em>f</em>] = ⟨<em>e</em><sup>−<em>i</em><em>k</em> ⋅ <em>x</em></sup>, ∂<sub><em>μ</em></sub><em>f</em>⟩ = −⟨∂<sub><em>μ</em></sub><em>e</em><sup>−<em>i</em><em>k</em> ⋅ <em>x</em></sup>, <em>f</em>⟩ = <em>i</em><em>k</em><sub><em>μ</em></sub>⟨<em>e</em><sup>−<em>i</em><em>k</em> ⋅ <em>x</em></sup>, <em>f</em>⟩</span>.
+So</p>
+<p><span
+class="math display">ℱ[∂<sub><em>μ</em></sub><em>f</em>] = <em>i</em><em>k</em><sub><em>μ</em></sub>ℱ[<em>f</em>]</span></p>
+<ol>
+<li><p>What you can't do</p>
+<p><code class="verbatim">Can't multiply distributions:</code> The main
+example is <span
+class="math inline"><em>x</em><em>δ</em><em>x</em><sup>−1</sup></span>,
+which can't be defined associatively.</p>
+<p><code class="verbatim">No evaluation at a point:</code> You also
+can't evaluate distributions at individual points; only on test
+functions. This is related to the Heisenberg Uncertainty Principle; we
+can't really talk about individual points any more than we can talk
+about infinite momenta or infinite energy.</p></li>
+</ol>
+<h2 id="klein-gordon">Klein Gordon</h2>
+<p><code class="verbatim">PDE:</code> We want to look at the equation
+<span
+class="math display">(−∂<sub><em>t</em></sub><sup>2</sup> + ∂<sub><em>x</em></sub><sup>2</sup> + ∂<sub><em>y</em></sub><sup>2</sup> + ∂<sub><em>z</em></sub><sup>2</sup> + <em>m</em><sup>2</sup>)<em>ϕ</em> = 0</span>
+where <span class="math inline"><em>ϕ</em></span> is a distribution. So
+this is really <span
+class="math display">⟨<em>ϕ</em>, <em>D</em><em>f</em>⟩ = 0</span> for
+all test functions <span class="math inline"><em>f</em></span>, where
+<span
+class="math inline"><em>D</em> = −∂<sub><em>t</em></sub><sup>2</sup> + ∂<sub><em>x</em></sub><sup>2</sup> + ∂<sub><em>y</em></sub><sup>2</sup> + ∂<sub><em>z</em></sub><sup>2</sup> + <em>m</em><sup>2</sup></span>.</p>
+<p>We apply the Fourier transform. Note that because the Fourier
+transform is pushed onto the test functions, it's always the case that
+<span
+class="math display">⟨<em>ϕ</em>, <em>f</em>⟩ = ⟨ℱ[<em>ϕ</em>], ℱ<sup>−1</sup>[<em>f</em>]⟩ = ⟨ℱ<sup>−1</sup>[<em>ϕ</em>], ℱ[<em>f</em>]⟩</span></p>
+<p>We'll look at <span
+class="math inline">⟨ℱ[<em>ϕ</em>], <em>D</em><em>f</em>⟩ = ⟨<em>ϕ</em>, ℱ[<em>D</em><em>f</em>]⟩ = 0</span>.
+Now <span
+class="math display">ℱ[<em>D</em><em>f</em>] = (<em>i</em><sup>2</sup>(−<em>k</em><sub>0</sub><sup>2</sup> + <em>k</em><sub>1</sub><sup>2</sup> + <em>k</em><sub>2</sub><sup>2</sup> + <em>k</em><sub>3</sub><sup>2</sup>) + <em>m</em><sup>2</sup>)ℱ[<em>f</em>]</span></p>
+<p>So <span
+class="math inline">ℱ[<em>D</em><em>f</em>] = (<em>k</em><sub>0</sub><sup>2</sup> − <em>k̄</em> ⋅ <em>k̄</em> + <em>m</em><sup>2</sup>)ℱ[<em>f</em>]</span>.</p>
+<p>So now <span
+class="math inline">⟨<em>ϕ</em>, ℱ[<em>D</em><em>f</em>]⟩ = ⟨<em>ϕ</em>, (<em>k</em><sub>0</sub><sup>2</sup> − <em>k̄</em> ⋅ <em>k̄</em> + <em>m</em><sup>2</sup>)ℱ[<em>f</em>]⟩ = 0</span></p>
+<h3 id="delta-function">Delta function</h3>
+<p>Now whenever we have a distributional equation of the form <span
+class="math display">⟨<em>ϕ</em>, <em>λ</em>(<em>k</em>)<em>f</em>(<em>k</em>)⟩ = 0</span>
+for all <span class="math inline"><em>f</em></span>, we get a delta
+function as our solution.</p>
+<p><code class="verbatim">Support:</code> Let <span
+class="math inline"><em>U</em></span> be an open set such that <span
+class="math inline"><em>λ</em>(<em>k</em>) ≠ 0</span> for all <span
+class="math inline"><em>k</em> ∈ <em>U</em></span>. Then since the above
+equation has to hold for all <span
+class="math inline"><em>f</em></span>, we can take <span
+class="math inline"><em>f</em> = <em>λ</em><sup>−1</sup>(<em>k</em>)</span>,
+and we find that <span class="math inline"><em>ϕ</em></span> must be
+zero in this region. So non-trivial solutions must only have support in
+the surface where <span
+class="math inline"><em>λ</em>(<em>k</em>) = 0</span>. More precisely,
+we can take <span
+class="math inline"><em>f</em> = <em>λ</em><sup>−1</sup>(<em>k</em>)<em>h</em>(<em>k</em>)</span>
+for any test function <span
+class="math inline"><em>h</em>(<em>k</em>)</span>, which shows that
+<span class="math inline">⟨<em>ϕ</em>, <em>h</em>⟩ = 0</span> for all
+<span class="math inline"><em>h</em></span> with support in <span
+class="math inline"><em>U</em></span>. This shows that <span
+class="math inline"><em>ϕ</em></span> goes to zero outside of test
+functions with support in <span
+class="math inline"><em>λ</em>(<em>k</em>) = 0</span>.</p>
+<p>It turns out that this forces <span
+class="math display"><em>ϕ</em> = <em>δ</em>(<em>λ</em>(<em>k</em>))<em>ψ</em>(<em>k</em>)</span>
+where <span
+class="math inline"><em>ψ</em>(<em>k</em>) ∈ 𝒮(ℝ<sup><em>n</em></sup>)</span>
+is a test function</p>
+<p><code class="verbatim">Composition:</code> And where <span
+class="math inline"><em>δ</em>(<em>λ</em>(<em>k</em>))</span> is the
+distribution defined by <span class="math display">$$
+\delta (\lambda(k))[f] \equiv \int_{k \mid \lambda(k)=0}
+\dfrac{1}{|\nabla \lambda(k)|} f(k) \psi(k)
+$$</span></p>
+<p>where <span class="math inline"><em>ψ</em></span> is a test
+function.</p>
+<p>In the discrete case (when <span
+class="math inline"><em>n</em> = 1</span> in <span
+class="math inline">ℝ<sup><em>n</em></sup></span>) we have <span
+class="math inline">$\langle \delta (\lambda(k)) \psi, \lambda f \rangle
+= \sum_{i} \lambda(k_{i}) \psi(k_{i}) f(k_{i})
+\dfrac{1}{|\lambda'(k_{i})|}  = 0 $</span>.</p>
+<p>If <span class="math inline"><em>λ</em></span> has higher order roots
+(meaning <span
+class="math inline"><em>λ</em><sup>′</sup>(<em>k</em><sub><em>i</em></sub>) = 0</span>),
+we have to be more careful, and we get higher and higher order
+derivatives showing up. But for our case we can stop at order one.</p>
+<h3 id="back-to-our-problem">Back to our problem</h3>
+<p>In our case <span
+class="math inline"><em>λ</em>(<em>k</em>) = (<em>k</em><sub>0</sub><sup>2</sup> − <em>k̄</em> ⋅ <em>k̄</em> + <em>m</em><sup>2</sup>)</span>,
+so</p>
+<p><span
+class="math display"><em>ϕ</em> = <em>δ</em>(<em>k</em><sub>0</sub><sup>2</sup> − <em>k̄</em> ⋅ <em>k̄</em> + <em>m</em><sup>2</sup>)<em>ψ</em>(<em>k</em>)</span></p>
+<p>Note that <span class="math inline"><em>ϕ</em></span> is
+<strong>living in momentum space</strong>; it acts on test functions in
+momentum space, like <span
+class="math inline">ℱ[<em>D</em><em>f</em>]</span> , where <span
+class="math inline"><em>f</em></span> is in position space.</p>
+<p><code class="verbatim">Hyperboloid:</code> The condition <span
+class="math inline"><em>k</em><sub>0</sub><sup>2</sup> − <em>k̄</em> ⋅ <em>k̄</em> + <em>m</em><sup>2</sup> = 0</span>
+defines <strong>two sheet hyperboloid</strong>, where the sheets
+correspond to the sign of <span
+class="math inline"><em>k</em><sub>0</sub></span>. Actually, now that I
+look at this, you want to define things so that <span
+class="math inline"><em>m</em><sup>2</sup></span> and <span
+class="math inline"><em>k̄</em> ⋅ <em>k̄</em></span> have the <strong>same
+sign</strong>; otherwise you get imaginary mass. That's fine; we just
+replace <span
+class="math inline"><em>m</em> → <em>i</em><em>m</em></span>.</p>
+<p><code class="verbatim">Delta function:</code> Using our identity for
+delta function composition, we have (for any <span
+class="math inline"><em>h</em>(<em>k</em>)</span> in momentum space)
+<span class="math display">$$
+[\phi](h) = \int_{\Sigma} \dfrac{1}{\sqrt{4 \sum_{i} k_{i}^{2}}} h(k)
+\psi(k) dk
+$$</span></p>
+<p>where <span class="math inline">$\Sigma = \{k \mid k_{0}^{2} -
+\sum_{i=1}^{3} k_{i}^{2} = m^{2} \}   $</span>. In particular we can
+define <span class="math inline">$E_{k} \equiv |k_{0}| = \sqrt{ \bar{k}
+\cdot  \bar{k} + m^{2}}$</span>. Then we want to do a change of
+variables.</p>
+<p><code class="verbatim">Vector calculus:</code> Whenever we integrate
+over a surface defined by <span
+class="math inline"><em>g</em>(<em>k</em><sub>0</sub>, …, <em>k</em><sub>3</sub>) = 0</span>,
+we can change the variables to get</p>
+<p><span class="math display">$$
+d \sigma  = \dfrac{\| \nabla g \|}{|\partial_{k_{0}} g|} d^{3} k
+$$</span></p>
+<p>In our case <span class="math inline">$d \sigma  =
+\dfrac{2\sqrt{k_{0}^{2} + \bar{k} \cdot  \bar{k}}}{2 |k_{0}|}
+d^{3}k$</span></p>
+<p>Thus our integral can be expressed as</p>
+<p><span class="math display">$$
+\int_{\mathbb{R}^{3}} \dfrac{1}{2 \sqrt{k_{0}^{2} + \bar{k}
+\cdot  \bar{k}}} }\dfrac{2\sqrt{k_{0}^{2} + \bar{k} \cdot  \bar{k}}}{2
+|k_{0}|} ( h(E_{k} , k) \psi(E_{k}, k) + h(-E_{k}, k) \psi(-E_{k}, k) )
+$$</span></p>
+<p>So <span class="math display">$$
+\phi(h) = \int_{\mathbb{R}^{3}} \dfrac{1}{2 E_{k}} (h(E_{k}, k)
+\psi(E_{k}, k) + h(-E_{k}, k) \psi(-E_{k}, k))
+$$</span></p>
+<p><code class="verbatim">Transform back:</code> Now if we want to view
+things in position space, we apply the identity <span
+class="math inline">⟨<em>ϕ</em>, <em>h</em>⟩ = ⟨ℱ[<em>ϕ</em>], ℱ<sup>−1</sup>[<em>h</em>]⟩</span>.
+Now if <span class="math display">$$
+f(x) = \mathcal{F}^{-1} [h] = \dfrac{1}{(2 \pi )^{4}} \int h(k) e^{i k
+\cdot x} dk
+$$</span> then we have <span
+class="math display"><em>h</em>(<em>k</em>) = ∫<em>f</em>(<em>x</em>)<em>e</em><sup>−<em>i</em>(<em>k</em> ⋅ <em>x</em>)</sup><em>d</em><em>x</em></span>
+where here I mean <span
+class="math inline"><em>k</em> ⋅ <em>x</em> = <em>k</em><sub>0</sub><em>x</em><sub>0</sub> + <em>k</em><sub>1</sub><em>x</em><sub>1</sub> + <em>k</em><sub>2</sub><em>x</em><sub>2</sub> + <em>k</em><sub>3</sub><em>x</em><sub>3</sub></span>.</p>
+<p>And since our <span class="math inline"><em>h</em></span> has a fixed
+value of <span
+class="math inline"><em>k</em><sub>0</sub> = <em>E</em><sub><em>k</em></sub></span>,
+we have <span
+class="math display"><em>h</em>(<em>E</em><sub><em>k</em></sub>, <em>k</em>) = ∫<em>f</em>(<em>x</em>, <em>t</em>)<em>e</em><sup>−<em>i</em>(<em>E</em><sub><em>k</em></sub><em>t</em> + <em>k̄</em> ⋅ <em>x̄</em>)</sup><em>d</em><em>x</em><em>d</em><em>t</em></span></p>
+<p>So we get <span class="math display">$$
+\mathcal{F}[\phi](f) = \int_{\mathbb{R}^{4}} dxdt  \int_{\mathbb{R}^{3}}
+\dfrac{1}{2 E_{k}} (e^{-i(E_{k}t + \bar{x}\cdot \bar{k})}f(x,t)
+\psi(E_{k}, k) + e^{-i(-E_{k}t + \bar{x}\cdot \bar{k})}f(x,t)
+\psi(-E_{k}, k))
+$$</span></p>
+<p>Since this holds for all <span class="math inline"><em>f</em></span>,
+we get that <span class="math inline">ℱ[<em>ϕ</em>]</span> as a
+distribution has an associated function:</p>
+<p><span class="math display">$$
+\int_{\mathbb{R}^{3}} \dfrac{1}{2 E_{k}} (e^{-i(E_{k}t + \bar{x}\cdot
+\bar{k})} \psi(E_{k}, k) + e^{-i(-E_{k}t + \bar{x}\cdot \bar{k})}
+\psi(-E_{k}, k))
+$$</span></p>
+<h3 id="conclusion">Conclusion</h3>
+<p>The solution to the Klein Gordon equation is an actual function:
+<span class="math display">$$
+\int_{\mathbb{R}^{3}} \dfrac{1}{2 E_{k}} (e^{-i(E_{k}t + \bar{x}\cdot
+\bar{k})} \psi(E_{k}, k) + e^{-i(-E_{k}t + \bar{x}\cdot \bar{k})}
+\psi(-E_{k}, k))
+$$</span></p>
+<p>We usually denote <span
+class="math inline"><em>ψ</em>(−<em>E</em><sub><em>k</em></sub>, <em>k</em>) = <em>ψ</em><sup>†</sup>(<em>E</em><sub><em>k</em></sub>, <em>k</em>)</span>
+and call psi <span class="math inline"><em>a</em>(<em>k</em>)</span>, so
+our solution is</p>
+<p><span class="math display">$$
+\int_{\mathbb{R}^{3}} \dfrac{1}{2 E_{k}} (e^{-i(E_{k}t + \bar{x}\cdot
+\bar{k})} a(k) + e^{i(E_{k}t - \bar{x}\cdot \bar{k})} a^{\dagger}(k))
+$$</span></p>
+<h3 id="other-raw-notes">Other raw notes</h3>
+<p><code class="verbatim">Setup:</code> <span
+class="math inline">ℝ<sup>4</sup> ≅ ℝ<sup>3, 1</sup></span> as both
+smooth manifolds and topological vector spaces. They only differ in
+terms of the geometry (metric) laid on top.</p>
 <h1 id="viscosity-solutions">Viscosity Solutions</h1>
 <p>You can add in a <em>friction</em> term <span
 class="math inline"><em>ε</em></span> in order to make the classical
@@ -195,15 +511,15 @@ as <span class="math inline"><em>ε</em> → 0</span>.</p>
 <p>Jean Leray showed in 1934 that weak solutions exist. The problem is
 that we don't know how these solutions behave over time.</p>
 <p><span
-class="math display">∂<sub><em>t</em></sub><em>u</em> + (<em>u</em>⋅∇)<em>u</em> = <em>ν</em><em>Δ</em><em>u</em> − ∇<em>p</em></span></p>
+class="math display">∂<sub><em>t</em></sub><em>u</em> + (<em>u</em> ⋅ ∇)<em>u</em> = <em>ν</em><em>Δ</em><em>u</em> − ∇<em>p</em></span></p>
 <p>where <span class="math inline"><em>ν</em><em>Δ</em><em>u</em></span>
 is the <strong>viscosity</strong> <span
-class="math inline">(<em>u</em>⋅∇)<em>u</em></span> is the
+class="math inline">(<em>u</em> ⋅ ∇)<em>u</em></span> is the
 <strong>advection/convection</strong> — this is what givese
 turbulence.</p>
 <p>Solutions <span class="math inline"><em>u</em></span> are known to be
 bounded in <span class="math inline"><em>L</em><sup>2</sup></span> <span
-class="math display">∫|<em>u</em>(<em>x</em>,<em>t</em>)|<sup>2</sup><em>d</em><em>x</em> ≤ <em>M</em></span>
+class="math display">∫|<em>u</em>(<em>x</em>, <em>t</em>)|<sup>2</sup><em>d</em><em>x</em> ≤ <em>M</em></span>
 but the topology on <span
 class="math inline"><em>L</em><sup>2</sup></span>, despite being
 Hilbert, isn't good for PDEs(!)</p>
@@ -217,11 +533,12 @@ things</p>
 <h1 id="theorems">Theorems</h1>
 <h2 id="darbouxs-theorem">Darboux's Theorem</h2>
 <h3 id="discontinuities">Discontinuities</h3>
-<p>Consider <span class="math inline"><em>f</em>′ = <em>g</em></span>.
-If <span class="math inline"><em>g</em></span> has a jump discontinuity,
-then this has no traditional solution. We instead replace it with the
-weak equation <span
-class="math display">∫<em>u</em><em>ϕ</em>′ =  − ∫<em>g</em><em>ϕ</em></span>
+<p>Consider <span
+class="math inline"><em>f</em><sup>′</sup> = <em>g</em></span>. If <span
+class="math inline"><em>g</em></span> has a jump discontinuity, then
+this has no traditional solution. We instead replace it with the weak
+equation <span
+class="math display">∫<em>u</em><em>ϕ</em><sup>′</sup> = −∫<em>g</em><em>ϕ</em></span>
 for all <span
 class="math inline"><em>ϕ</em> ∈ <em>C</em><sub><em>c</em></sub><sup>∞</sup></span>.</p>
 <p>That is, we ask for <span class="math inline"><em>f</em></span> to be

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>options</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">options</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p><code class="verbatim">ITM:</code> (In the money)</p>
+<h1 id="types">Types</h1>
+<h2 id="calls">Calls</h2>
+<h2 id="puts">Puts</h2>
+<h2 id="long">Long</h2>
+<p>Long options are the ones that <strong>you buy</strong></p>
+<h2 id="short">Short</h2>
+<p>These are options that you <strong>sell</strong></p>
+<h1 id="composition">Composition</h1>
+<p>The price of an option is made up of two parts: the intrisic value
+and the premium.</p>
+<p><code class="verbatim">Intrinsic value:</code> This is the difference
+between the strike price and the current price of the stock. If you
+bought the stock right now at the call price, or sold it at the put
+price, this is how much profit you'd make.</p>
+<p><code class="verbatim">Premium:</code> This is an extra amount tacked
+onto the price that corresponds to <strong>how much people want to buy
+the option</strong>. Another way of looking at it, is it's a measure of
+<strong>how much insurance</strong> the option has of you not losing all
+your money (which is why it tells you if people want to buy it). Options
+with low premiums are very likely to expire worthless, while higher
+premiums correspond to options that give you a higher chance of
+profitting.</p>
+<h1 id="the-greeks">The Greeks</h1>
+<h2 id="theta">Theta</h2>
+<p>This is arguably the most important of the variables. It basically
+tells you <strong>how much the price drops</strong> each day,
+<strong>even if the stock doesn't move</strong>.</p>
+<p>Why does such a thing even exist? As an option gets closer to expiry,
+people are less likely to buy it, since it becomes less likely that
+it'll actually pay off, since there's very little time left for the
+stock to move in the desired direction. To account for this, the option
+price (premium) has to drop accordingly, to get people to want to
+purchase it</p>
+<h3 id="decay-curve">Decay Curve</h3>
+<p>Theta decay is <strong>highly non-linear</strong> — at around 30 days
+out from expiry or longer, it sits close to zero. Within about a week
+out theta has a linear behaviour, and within the last day or two, theta
+is extremely high, and kills the premium incredibly quickly, leaving the
+option with zero premium by expiry.</p>
+<h3 id="range">Range</h3>
+<p><code class="verbatim">-0.01 to -0.03</code> In long-term options
+with 45+ days to expiration</p>
+<p><code class="verbatim">-0.03 to -0.1</code> Within the 14 to 30 day
+window</p>
+<p><code class="verbatim">Under -0.1</code> The final seven days or
+so</p>
+<h2 id="delta">Delta</h2>
+<p>This measures how the premium changes as the stock changes. It tells
+you the expected change in the premium for every $1 move of the stock
+price.</p>
+<p>Delta has an absolute value in <span
+class="math inline">[0, 1]</span></p>
+<p><code class="verbatim">Positive/negative:</code> Since puts become
+more valuable as the stock decreases in price, the delta is negative for
+puts, while it's positive for calls.</p>
+<p>Delta is telling you something about the volatility of the option
+price.</p>
+<p><code class="verbatim">Probability:</code> The absolute value of
+delta is used as an estimate for the probability that the option will
+expire ITM.</p>
+<h3 id="range-1">Range</h3>
+<p><code class="verbatim">0 to 0.3</code> Far OTM options. These are
+<strong>basically lottery tickets</strong>; it's so unlikely that you're
+going to profit off of them that the premium will only change if there's
+massive price movement.</p>
+<p><code class="verbatim">0.3 to 0.6</code> ATM (at-the-money). Since
+it's sitting right around the stock price, things could go either way.
+Therefore any small change in the price has a big impact in whether or
+not your option expires worthless, creating a larger delta.</p>
+<p><code class="verbatim">0.6 to 1</code> Deep ITM. It behaves very
+similarly to raw shares of a stock, which is why the change in premium
+becomes close to 100% of the change in stock price — since it's assured
+that your option will expire ITM, the value of the option is entirely
+determined by the premium, and thus it matches the value of the stock
+essentially one-to-one.</p>
+<h2 id="gamma">Gamma</h2>
+<p>This is basically a measure of <strong>acceleration</strong>. It
+tells you the expected change in delta per $1 move in stock price.</p>
+<p><code class="verbatim">Consistency:</code> Gamma/acceleration becomes
+important when you have a sustained movement in a direction. The longer
+the stock is moving in the same direction, the more time the
+acceleration has to increase, and therefore the faster delta will
+increase.</p>
+<h3 id="range-2">Range</h3>
+<p>Gamma increases the closer the stock price gets to the strike
+price</p>
+<p><code class="verbatim">Under 5% of delta:</code> A highly stable
+delta. Occurs when an option is deep OTM or deep ITM, or when there are
+60+ days to expiry.</p>
+<p><code class="verbatim">Around 10% of delta:</code> Standard monthly
+contracts hovering near the strike price, but not right at it.</p>
+<p><code class="verbatim">Over 15% of delta:</code> When an option is
+right at the strike price with under seven days to expiry.</p>
+<h2 id="implied-volatility">Implied Volatility</h2>
+<p>This should probably be called <strong>assumed volatility.</strong>
+Unlike historic volatility which is a measure of how a stock actually
+moved in the past, implied volatility is a measure of <strong>how wildly
+the market thinks</strong> a stock's price will change in the future. In
+other words, it's a measure of how stable the market thinks a stock
+price is.</p>
+<p><code class="verbatim">Anticipation:</code> Implied volatility spikes
+around things like earnings or big events happening in the world.</p>
+<p><code class="verbatim">Relief:</code> Once earnings are over, or the
+market digests the events happening in the world, the volatility will
+drop back down.</p>
+<p><code class="verbatim">Value:</code> Implied volatility is given as a
+<strong>percentage.</strong></p>
+<h3 id="range-3">Range</h3>
+<p><code class="verbatim">Under 0.02</code> Typical for
+<strong>extremely-short-dated contracts</strong>, like 1DTEs. Also shows
+up for low-priced stocks under $15</p>
+<p><code class="verbatim">0.02 - 0.1</code> Appears in standard monthly
+contracts on stocks with double-digit prices.</p>
+<p><code class="verbatim">Over 0.1</code> Common in high-priced stocks
+like Shopify and contracts with <strong>60+ DTE</strong> — since there
+is longer to expiry, there's more time for large price swings to
+happen.</p>
+<h2 id="vega">Vega</h2>
+<p>Tells you how much the premium changes based on a 1% shift in implied
+volatility</p>
+<p><code class="verbatim">Sign:</code> Long options have positive vega
+(they increase in value when volatility rises), whereas short options
+have negative vega (they crave stability).</p>
+<p><code class="verbatim">Don't buy in volatility:</code> When the
+market anticipates a big move and IV increases, vega causes the premium
+to change. But this means that if you buy an option during a volatile
+time, the premium is inflated. Once the situation relaxes, volatility
+decreases, and all of a sudden your option loses value. This is called
+the <strong>IV Crush</strong>.</p>
+<h3 id="range-4">Range</h3>
+<p><code class="verbatim">Under 20%</code> Stable. Big blue-chips have
+IVs in here.</p>
+<p><code class="verbatim">20% - 50%</code> This is normal for large-cap
+technology stocks, growth stocks.</p>
+<p><code class="verbatim">50% +</code> These are highly unstable stocks:
+high-growth tech, biotech awaiting clinical trial results, and any stock
+right ahead of earnings.</p>
+<h1 id="strategies">Strategies</h1>
+<h2 id="stock-replacement">Stock replacement</h2>
+<p>Buying deep ITM calls with deltas close to one. This seems odd,
+because on the surface it looks the same as just buying the stock, since
+delta is so high.</p>
+<p><code class="verbatim">Leverage:</code> Buying calls instead of the
+raw stock gives you massive leverage; you don't need to buy the actual
+stock; you just buy the contract, which is priced significantly
+less.</p>
+<p><code class="verbatim">Insurance:</code> Because it's a call, the
+maximum you can ever lose is the amount you paid to buy the contract. If
+you bought the raw stock, it would be so expensive to get the same
+number of shares, that you'd lose a tremendous amount of money if the
+stock falls</p>
+<p><code class="verbatim">No margin:</code> Another nice thing about
+deep in the money calls is that their leverage has no margin fees</p>
+<p><code class="verbatim">Expiry:</code> One of the main disadvantages
+is that you need to time things properly, because eventually the option
+will expire. It is fundamentally a temporary asset.</p>
+<p><code class="verbatim">No dividends:</code> This is the other
+tradeoff; since you don't actually own the stock, you don't get
+dividends.</p>
+<h2 id="spreads">Spreads</h2>
+<p>The strategy is to buy one option and <strong>immediately sell a
+cheaper option</strong> of the same type, further out.</p>
+<h3 id="vertical">Vertical</h3>
+<p>These are also called <strong>debit spreads</strong>. Instead of</p>
+<h2 id="volatility-strategies">Volatility strategies</h2>
+<p>These are strategies you use if you don't want your profit to depend
+on the direction the price moves, but rather the <strong>amount of
+movement</strong></p>
+<h3 id="the-straddle">The Straddle</h3>
+<p>You buy an ATM call and ATM put simultaneously, with the same strike
+and expiration.</p>
+<p>The idea is that if there's a massive movement in either direction,
+one of the options will rocket in price while the other has a limit to
+how low it can sink. As long as the stock moves enough, you'll make a
+profit.</p>
+<p><code class="verbatim">Vega Crush:</code> If the stock moves
+sideways, you'll lose a ton of money</p>
+<h3 id="the-iron-condor">The Iron Condor</h3>
+<p>You simultaneously sell an OTM put spread and an OTM call spread (a
+total of four options: two in each spread)</p>
+<p>The goal is that you're setting up a box in which you expect the
+stock price to stay within. As long as it stays in there, all four
+options decay to zero and you pocket the money</p>
+<h2 id="income-strategies">Income strategies</h2>
+<h3 id="covered-calls">Covered calls</h3>
+<p>You own 100 shares of a stock and you sell an OTM call option against
+your shares. You immediately get a cash premium. If the contract expires
+OTM, you keep both the premium and your original shares.</p>
+<p>If the stock surges past your strike price, you have to sell your
+shares, <em>but</em> you set the strike price high enough that you still
+make some profit (just not as much as you'd make by holding the raw
+stock)</p>
+<h3 id="protective-puts">Protective puts</h3>
+<p>You own 100 shares of a stock and buy an OTM put.</p>
+<p>This is like buying home insurance. If the stock drops, your put
+increases in value dollar-for-dollar (since it's deep OTM)</p>
+</body>
+</html>
