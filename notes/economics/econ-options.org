@@ -1,0 +1,183 @@
+:PROPERTIES:
+:ID:       6a779558-395c-4a76-85b9-c6883290856d
+:END:
+#+title: options
+#+filetags: :economics:finance:derivatives:
+
+* References
+
+
+
+* Summary
+
+=ITM:= (In the money)
+
+* Types
+
+** Calls
+
+** Puts
+
+** Long
+
+Long options are the ones that *you buy* 
+
+** Short
+
+These are options that you *sell* 
+
+* Composition
+
+The price of an option is made up of two parts: the intrisic value and the premium. 
+
+=Intrinsic value:= This is the difference between the strike price and the current price of the stock. If you bought the stock right now at the call price, or sold it at the put price, this is how much profit you'd make.
+
+=Premium:= This is an extra amount tacked onto the price that corresponds to *how much people want to buy the option*. Another way of looking at it, is it's a measure of *how much insurance* the option has of you not losing all your money (which is why it tells you if people want to buy it). Options with low premiums are very likely to expire worthless, while higher premiums correspond to options that give you a higher chance of profitting.
+
+* The Greeks
+
+** Theta
+
+This is arguably the most important of the variables. It basically tells you *how much the price drops* each day, *even if the stock doesn't move*.
+
+Why does such a thing even exist? As an option gets closer to expiry, people are less likely to buy it, since it becomes less likely that it'll actually pay off, since there's very little time left for the stock to move in the desired direction. To account for this, the option price (premium) has to drop accordingly, to get people to want to purchase it
+
+*** Decay Curve
+
+Theta decay is *highly non-linear* --- at around 30 days out from expiry or longer, it sits close to zero. Within about a week out theta has a linear behaviour, and within the last day or two, theta is extremely high, and kills the premium incredibly quickly, leaving the option with zero premium by expiry.
+
+
+*** Range
+
+=-0.01 to -0.03= In long-term options with 45+ days to expiration
+
+=-0.03 to -0.1= Within the 14 to 30 day window
+
+=Under -0.1= The final seven days or so
+
+** Delta
+
+This measures how the premium changes as the stock changes. It tells you the expected change in the premium for every $1 move of the stock price.
+
+Delta has an absolute value in $[0,1]$
+
+=Positive/negative:= Since puts become more valuable as the stock decreases in price, the delta is negative for puts, while it's positive for calls.
+
+Delta is telling you something about the volatility of the option price.
+
+=Probability:= The absolute value of delta is used as an estimate for the probability that the option will expire ITM.
+
+*** Range
+
+=0 to 0.3= Far OTM options. These are *basically lottery tickets*; it's so unlikely that you're going to profit off of them that the premium will only change if there's massive price movement.
+
+=0.3 to 0.6= ATM (at-the-money). Since it's sitting right around the stock price, things could go either way. Therefore any small change in the price has a big impact in whether or not your option expires worthless, creating a larger delta.
+
+=0.6 to 1= Deep ITM. It behaves very similarly to raw shares of a stock, which is why the change in premium becomes close to 100% of the change in stock price --- since it's assured that your option will expire ITM, the value of the option is entirely determined by the premium, and thus it matches the value of the stock essentially one-to-one.
+
+** Gamma
+
+This is basically a measure of *acceleration*. It tells you the expected change in delta per $1 move in stock price.
+
+=Consistency:= Gamma/acceleration becomes important when you have a sustained movement in a direction. The longer the stock is moving in the same direction, the more time the acceleration has to increase, and therefore the faster delta will increase.
+
+*** Range
+
+Gamma increases the closer the stock price gets to the strike price
+
+=Under 5% of delta:= A highly stable delta. Occurs when an option is deep OTM or deep ITM, or when there are 60+ days to expiry.
+
+=Around 10% of delta:= Standard monthly contracts hovering near the strike price, but not right at it.
+
+=Over 15% of delta:= When an option is right at the strike price with under seven days to expiry.
+
+
+** Implied Volatility
+
+This should probably be called *assumed volatility.* Unlike historic volatility which is a measure of how a stock actually moved in the past, implied volatility is a measure of *how wildly the market thinks* a stock's price will change in the future. In other words, it's a measure of how stable the market thinks a stock price is.
+
+=Anticipation:= Implied volatility spikes around things like earnings or big events happening in the world.
+
+=Relief:= Once earnings are over, or the market digests the events happening in the world, the volatility will drop back down.
+
+=Value:= Implied volatility is given as a *percentage.* 
+
+*** Range
+
+=Under 0.02= Typical for *extremely-short-dated contracts*, like 1DTEs. Also shows up for low-priced stocks under $15
+
+=0.02 - 0.1= Appears in standard monthly contracts on stocks with double-digit prices. 
+
+=Over 0.1= Common in high-priced stocks like Shopify and contracts with *60+ DTE* --- since there is longer to expiry, there's more time for large price swings to happen.
+
+** Vega
+
+Tells you how much the premium changes based on a 1% shift in implied volatility
+
+=Sign:= Long options have positive vega (they increase in value when volatility rises), whereas short options have negative vega (they crave stability).
+
+=Don't buy in volatility:= When the market anticipates a big move and IV increases, vega causes the premium to change. But this means that if you buy an option during a volatile time, the premium is inflated. Once the situation relaxes, volatility decreases, and all of a sudden your option loses value. This is called the *IV Crush*.
+
+*** Range 
+
+=Under 20%= Stable. Big blue-chips have IVs in here.
+
+=20% - 50%= This is normal for large-cap technology stocks, growth stocks. 
+
+=50% += These are highly unstable stocks: high-growth tech, biotech awaiting clinical trial results, and any stock right ahead of earnings.
+
+* Strategies
+
+** Stock replacement
+
+Buying deep ITM calls with deltas close to one. This seems odd, because on the surface it looks the same as just buying the stock, since delta is so high.
+
+=Leverage:= Buying calls instead of the raw stock gives you massive leverage; you don't need to buy the actual stock; you just buy the contract, which is priced significantly less.
+
+=Insurance:= Because it's a call, the maximum you can ever lose is the amount you paid to buy the contract. If you bought the raw stock, it would be so expensive to get the same number of shares, that you'd lose a tremendous amount of money if the stock falls
+
+=No margin:= Another nice thing about deep in the money calls is that their leverage has no margin fees
+
+=Expiry:= One of the main disadvantages is that you need to time things properly, because eventually the option will expire. It is fundamentally a temporary asset.
+
+=No dividends:= This is the other tradeoff; since you don't actually own the stock, you don't get dividends.
+
+** Spreads
+
+The strategy is to buy one option and *immediately sell a cheaper option* of the same type, further out.
+
+*** Vertical
+
+These are also called *debit spreads*. Instead of 
+
+** Volatility strategies
+
+These are strategies you use if you don't want your profit to depend on the direction the price moves, but rather the *amount of movement*
+
+*** The Straddle
+
+You buy an ATM call and ATM put simultaneously, with the same strike and expiration.
+
+The idea is that if there's a massive movement in either direction, one of the options will rocket in price while the other has a limit to how low it can sink. As long as the stock moves enough, you'll make a profit.
+
+=Vega Crush:= If the stock moves sideways, you'll lose a ton of money
+
+*** The Iron Condor
+
+You simultaneously sell an OTM put spread and an OTM call spread (a total of four options: two in each spread)
+
+The goal is that you're setting up a box in which you expect the stock price to stay within. As long as it stays in there, all four options decay to zero and you pocket the money
+
+** Income strategies
+
+*** Covered calls
+
+You own 100 shares of a stock and you sell an OTM call option against your shares. You immediately get a cash premium. If the contract expires OTM, you keep both the premium and your original shares.
+
+If the stock surges past your strike price, you have to sell your shares, /but/ you set the strike price high enough that you still make some profit (just not as much as you'd make by holding the raw stock)
+
+*** Protective puts
+
+You own 100 shares of a stock and buy an OTM put.
+
+This is like buying home insurance. If the stock drops, your put increases in value dollar-for-dollar (since it's deep OTM)

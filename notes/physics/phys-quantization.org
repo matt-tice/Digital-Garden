@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       5428fb35-d4c9-4e19-a7dd-ccbb0ab1d636
+:END:
+#+title: quantization
+#+filetags: :physics:
+
+* References
+
+
+
+* Summary
+
+Here's the idea: 
+
+=Heisenberg:= We try to use the Heisenberg picture from quantum mechanics: operators should evolve in time, and states remain time-independent. Because quantum field theory is meant to be relativistic, we can't just take time evolution, we need our operators to depend on both time and space: \(\phi(x_{0}, x_{1}, x_{2}, x_{3})\)
+
+=Uncertainty:= But as it turns out, we can't /really/ define our quantum fields pointwise over the manifold --- because of Heisenberg's uncertainty principle, knowing precise points would correspond to infinite momentum and energy, which takes the form of *ultraviolet divergences*. So really the proper thing to do is to take *operator-valued distributions*. 
+
+=Quantum field:= Then a quantum field has the form \(\phi(f) = \int f(x) \phi(x) \) --- the test function \(f\) acts as a kind of mollifier. Then the action is defined to be
+\[
+\phi(f) | v \rangle = \int f(x) \phi(x) | v \rangle
+\]
+for any state in the Hilbert space.
+
+=Evaluation:= But how do we actually evaluate this integral? The easiest way is to take our state \(v\) to be a mutual eigenvector of a basis of operators for \(\phi(x)\). In other words, if we have some operators \(\{ a_{i}(x) \}\) such that \(\phi(x) = \sum_{i} g_{i}(x) a_{i}(x)\) and \(a_{i}(x) |v\rangle = \lambda_{i} |v\rangle\), then we can write
+
+\[
+\phi(f) | v \rangle = (\sum_{i} \int f(x) g_{i}(x) \lambda_{i} ) | v \rangle
+\]
+and evaluate this interval of scalar functions.
+
+=Vacuum:= What physicists decide to do is to take \(v\) to be the vacuum state, and our basis to be creation/annihilation operators on \(v\)
+
+Also we don't just want to write \(\phi(x)\) as a sum; we need it to be an integral
+
+** Quantization
+
+The quantum version of the classical field is taken by assumption to just be the classical version's form, but we use creation and annihilation operators
+

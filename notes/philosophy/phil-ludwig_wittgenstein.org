@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       f87e3420-7ed2-45f5-99d7-e148e1623122
+:END:
+#+title: ludwig wittgenstein
+#+filetags: :philosophy:logic:semantics:language:
+
+* References
+
+
+
+* Summary
+
+* Tractatus
+
+=Goal:= to understand the limits of our ability to *express thoughts* 
+
+=Die Welt:= Wittgenstein's view is that we can only meaningfully talk about things that are expressible (perhaps by definition). So when he talks about /the world/, he means the world inasmuch as we can meaningfully communicate things about it --- because all of our written and spoken expression, including in his book, is passed through the river of language to be interpretable, we can't talk about the whole of things that exist including hos irrespective of our communication; we can only talk about things that we can talk about.
+
+So when he says /Die Welt ist alles, was der Fall ist./ he means "the communicable world is all (by which I mean all those things that are communicable as being the case)"

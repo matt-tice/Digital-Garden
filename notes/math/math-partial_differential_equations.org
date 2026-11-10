@@ -16,6 +16,254 @@ Instead, we replace these equations with /distributional equations/
 
 The downside is that many equations *no longer have unique solutions*
 
+* Free Scalar Field
+
+** Partial differential equations
+
+
+=Linear:= In the modern landscape, when we want to solve or formalize linear PDEs, we basically always use *distributions*, rather than functions --- in other words, we define differential equations on distributions. Then there are certain theorems that allow you to show that a distribution-solution to a differential equation corresponds to an actual function in certain cases.
+
+        - things like *elliptic regularity* 
+
+=Nonlinear:= Because distributions don't multiply nicely together, it's hard to deal with non-linear pdes in a distribution setting, so people will either use the *Colombeau algebra* (which allows you to multiply distributions inside of a larger algebra at the cost of only allowing ) or *viscocity solutions*.
+
+But for this talk, we'll just focus on linear PDEs 
+
+*** Distributions
+
+Let \(F\) be some *algebra*  of integrable functions (compact support, Schwartz, etc.). We'll generally work with Schwartz space for our physics examples since we need solutions that exist as plane waves an thus aren't localized in a compact region
+
+A *distribution* is a continuous linear functional \(\phi: F \rightarrow \mathbb{R} \). So the space of distributions in the continuous dual \(F'\). 
+
+=Schwartz functions:= The space of Schwartz functions is denoted \(\mathcal{S}(\mathbb{R}^{n})\) and consists of the smooth functions \(f: \mathbb{R}^{n} \rightarrow \mathbb{R}\), \(f \in C^{\infty}(\mathbb{R}^{n})\) such that 
+
+\[
+\sup_{x} |x^{\alpha} (\partial^{\beta} f)| < \infty 
+\]
+
+for all multi-indices \(\alpha , \beta \).
+
+In other words, you can take any monomial and multiply it by any derivatives of \(f\) and the least upper bound is bounded. So as you go off to infinity in some direction in \(\mathbb{R}^{n}\), your function and all of its derivatives have to decay faster than any \(\dfrac{1}{x^{\alpha}}\) (so that there isn't some large \(x\) that skyrockets the value)
+
+We call Schwartz functions /rapidly decreasing/ 
+
+=Examples:= Smooth functions with compact support, and \(x^{\alpha }e^{-a \| x \|^{2}\) where \(a > 0\).
+
+=Tempered distributions:= The distributions on Schwartz space are called tempered distributions and denoted \(\mathcal{S}(\mathbb{R}^{n})'\).
+
+These tempered distributions are what we use in our PDEs.
+
+We write the action of distributions on our test functions with a bilinear form \(\langle \cdot , \cdot \rangle: F' \otimes  F \rightarrow \mathbb{R}\).
+
+
+=Examples:= Given any Schwartz function \(f\), we have an induced distribution
+\[
+\langle f, - \rangle[g] = \int f(x)g(x) dx
+\]
+
+Delta function \(\delta_{y}[f] = f(y)\). We often see physicists write 
+\[
+\int  \delta(x-y) f(x) dx = f(y)
+\]
+What this really means is \(\langle \delta_{y} , f \rangle = f(y)\)
+
+*** Manipulating distributions
+
+The main philosophy behind distributions is that you push off everything acting on the distribution onto the test functions
+
+=Weak derivatives:= If we have a ordinary functions, and we use integration by parts we have 
+\[
+\int (\partial f(x)) g(x) = - \int f(x) \partial g(x) + \text{Boundary}
+\]
+
+We assume that we're working with functions that go to zero on the boundary of our domain of integration (like Schwartz functions or compactly supported functions), so the boundary term disappears. Then in the language of distributions we have
+\[
+\langle \partial f, g \rangle = - \langle f, \partial g \rangle.
+\]
+
+For any distribution \(\phi\), we define the *weak derivative* \(\partial \phi\) to be a distribution such that \(\langle \partial \phi, g \rangle = - \langle \phi, \partial g \rangle\) for all test functions \(g \in F\).
+
+=Multiplication:= Given a test function \(f\) and distribution \(\phi\), we define the distribution \(f \phi\) to be such that 
+\[
+\langle f \phi, g \rangle = \langle \phi, fg \rangle
+\]
+for all test functions \(g\). Here we're using the fact that our test functions form an algebra.
+
+=Fourier transform:= Similarly, we can define the *Fourier transform* of a distribution by
+\[
+\langle \mathcal{F}[\phi]) , f \rangle = \langle \phi, \mathcal{F}[f] \rangle
+\]
+for all \(f \in F\).
+
+The Fourier transform on a function is defined to be 
+\[
+\mathcal{F}[f](x) = \int_{\mathbb{R}^{n}} f(x) e^{-i k \cdot x} dx
+\]
+
+And 
+\[
+\mathcal{F}^{-1} [f](k) = \dfrac{1}{(2 \pi )^{n}}\int_{\mathbb{R}^{n}} f(k) e^{i k \cdot x} dk
+\]
+
+where \(dx\) is the Lebesgue measure.
+
+This is an /automorphism on \(\mathcal{S}(\mathbb{R}^{n})\)./ 
+
+=Uncertainty principle:= The HUP and Paley-Wiener theorems tell us that the Fourier transform of a compactly supported function doesn't have compact support. This is why we don't end up using compactly supported functions
+
+
+
+=Fourier + derivatives:= If we view \(e^{-i k\cdot x}\) as a distribution, we have \(\mathcal{F}[f] = \langle e^{-ik\cdot x} , f \rangle\). Then \(\mathcal{F}[\partial_{\mu} f] = \langle e^{-ik\cdot x} , \partial_{\mu} f \rangle = - \langle \partial_{\mu} e^{-ik\cdot x} , f \rangle = i k_{\mu} \langle e^{-ik\cdot x} , f \rangle\). So 
+
+\[
+\mathcal{F}[\partial_{\mu} f] =i k_{\mu} \mathcal{F}[f]
+\]
+
+
+
+**** What you can't do
+
+=Can't multiply distributions:= The main example is \(x \delta x^{-1}  \), which can't be defined associatively.
+
+=No evaluation at a point:= You also can't evaluate distributions at individual points; only on test functions. This is related to the Heisenberg Uncertainty Principle; we can't really talk about individual points any more than we can talk about infinite momenta or infinite energy.
+
+** Klein Gordon
+
+=PDE:= We want to look at the equation 
+\[
+(-\partial^{2}_{t} + \partial^{2}_{x} + \partial^{2}_{y} + \partial_{z}^{2} + m^{2}) \phi = 0
+\]
+where \(\phi\) is a distribution. So this is really 
+\[
+\langle \phi, Df \rangle = 0
+\]
+for all test functions \(f\), where \(D = -\partial^{2}_{t} + \partial^{2}_{x} + \partial^{2}_{y} + \partial_{z}^{2} + m^{2} \).
+
+We apply the Fourier transform. Note that because the Fourier transform is pushed onto the test functions, it's always the case that 
+\[
+\langle \phi, f \rangle = \langle \mathcal{F}[\phi], \mathcal{F}^{-1} [f] \rangle =  \langle \mathcal{F}^{-1} [\phi], \mathcal{F} [f] \rangle
+\]
+
+We'll look at \(\langle \mathcal{F}[\phi],   Df \rangle = \langle \phi, \mathcal{F}[Df] \rangle = 0\).  Now 
+\[
+\mathcal{F}[Df] = (i^{2}(- k_{0}^{2} + k_{1}^{2} + k^{2}_{2} + k_{3}^{2}) + m^{2}) \mathcal{F}[f]
+\]
+
+So \(\mathcal{F}[Df] = (k_{0}^{2} - \bar{k}\cdot \bar{k} + m^{2}) \mathcal{F}[f]\).
+
+So now \(\langle \phi, \mathcal{F}[Df] \rangle = \langle \phi, (k_{0}^{2} - \bar{k}\cdot \bar{k} + m^{2}) \mathcal{F}[f] \rangle =0\)
+
+*** Delta function
+
+Now whenever we have a distributional equation of the form
+\[
+\langle \phi, \lambda(k) f(k) \rangle= 0
+\]
+for all \(f\), we get a delta function as our solution.
+
+=Support:= Let \(U\) be an open set such that \(\lambda(k) \ne 0\) for all \(k \in U\). Then since the above equation has to hold for all \(f\), we can take \(f = \lambda^{-1} (k)\), and we find that \(\phi\) must be zero in this region. So non-trivial solutions must only have support in the surface where \(\lambda(k) = 0\). More precisely, we can take \(f = \lambda^{-1} (k) h(k)\) for any test function \(h(k)\), which shows that \(\langle \phi, h \rangle = 0\) for all \(h\) with support in \(U\). This shows that \(\phi\) goes to zero outside of test functions with support in \(\lambda(k) = 0\). 
+
+It turns out that this forces 
+\[
+\phi = \delta(\lambda(k)) \psi(k)
+\]
+where \(\psi(k) \in \mathcal{S}(\mathbb{R}^{n})\) is a test function
+
+=Composition:= And where \(\delta (\lambda(k))\) is the distribution defined by
+\[
+\delta (\lambda(k))[f] \equiv \int_{k \mid \lambda(k)=0} \dfrac{1}{|\nabla \lambda(k)|} f(k) \psi(k)
+\] 
+
+where \(\psi\) is a test function. 
+
+In the discrete case (when \(n=1\) in \(\mathbb{R}^{n}\)) we have \(\langle \delta (\lambda(k)) \psi, \lambda f \rangle = \sum_{i} \lambda(k_{i}) \psi(k_{i}) f(k_{i}) \dfrac{1}{|\lambda'(k_{i})|}  = 0 \).
+
+If \(\lambda\) has higher order roots (meaning \( \lambda'(k_{i}) = 0\)), we have to be more careful, and we get higher and higher order derivatives showing up. But for our case we can stop at order one.
+
+*** Back to our problem
+
+In our case \(\lambda(k) = (k_{0}^{2} - \bar{k}\cdot \bar{k} + m^{2}) \), so 
+
+\[
+\phi = \delta (k_{0}^{2} - \bar{k}\cdot \bar{k} + m^{2}) \psi(k)
+\]
+
+Note that \(\phi\) is *living in momentum space*; it acts on test functions in momentum space, like \(\mathcal{F}[Df]\) , where \(f\) is in position space. 
+
+=Hyperboloid:= The condition \(k_{0}^{2} - \bar{k} \cdot  \bar{k} + m^{2} = 0\) defines  *two sheet hyperboloid*, where the sheets correspond to the sign of \(k_{0}\). Actually, now that I look at this, you want to define things so that \(m^{2}\) and \(\bar{k} \cdot \bar{k}\) have the *same sign*; otherwise you get imaginary mass. That's fine; we just replace \(m \rightarrow im\).
+
+=Delta function:= Using our identity for delta function composition, we have (for any \(h(k)\) in momentum space)
+\[
+[\phi](h) = \int_{\Sigma} \dfrac{1}{\sqrt{4 \sum_{i} k_{i}^{2}}} h(k) \psi(k) dk
+\]
+
+where \(\Sigma = \{k \mid k_{0}^{2} - \sum_{i=1}^{3} k_{i}^{2} = m^{2} \}   \). In particular we can define \(E_{k} \equiv |k_{0}| = \sqrt{ \bar{k} \cdot  \bar{k} + m^{2}}\). Then we want to do a change of variables.
+
+=Vector calculus:= Whenever we integrate over a surface defined by \(g(k_{0}, \ldots, k_{3}) = 0\), we can change the variables to get
+
+\[
+d \sigma  = \dfrac{\| \nabla g \|}{|\partial_{k_{0}} g|} d^{3} k
+\]
+
+In our case \(d \sigma  = \dfrac{2\sqrt{k_{0}^{2} + \bar{k} \cdot  \bar{k}}}{2 |k_{0}|} d^{3}k\)
+
+Thus our integral can be expressed as
+
+\[
+\int_{\mathbb{R}^{3}} \dfrac{1}{2 \sqrt{k_{0}^{2} + \bar{k} \cdot  \bar{k}}} }\dfrac{2\sqrt{k_{0}^{2} + \bar{k} \cdot  \bar{k}}}{2 |k_{0}|} ( h(E_{k} , k) \psi(E_{k}, k) + h(-E_{k}, k) \psi(-E_{k}, k) )
+\]
+
+So
+\[
+\phi(h) = \int_{\mathbb{R}^{3}} \dfrac{1}{2 E_{k}} (h(E_{k}, k) \psi(E_{k}, k) + h(-E_{k}, k) \psi(-E_{k}, k))
+\]
+
+
+=Transform back:= Now if we want to view things in position space, we apply the identity \(\langle \phi, h \rangle= \langle \mathcal{F}[\phi], \mathcal{F}^{-1} [h] \rangle\). Now if
+\[
+f(x) = \mathcal{F}^{-1} [h] = \dfrac{1}{(2 \pi )^{4}} \int h(k) e^{i k \cdot x} dk
+\]
+then we have 
+\[
+h(k) = \int f(x) e^{-i(k\cdot x)} dx
+\]
+where here I mean \(k\cdot x = k_{0} x_{0} + k_{1} x_{1} + k_{2} x_{2} + k_{3} x_{3}\).
+
+And since our \(h\) has a fixed value of \(k_{0} = E_{k}\), we have 
+\[
+h(E_{k}, k) = \int f(x,t) e^{-i (E_{k} t + \bar{k}\cdot \bar{x})} dx dt
+\]
+
+So we get 
+\[
+\mathcal{F}[\phi](f) = \int_{\mathbb{R}^{4}} dxdt  \int_{\mathbb{R}^{3}} \dfrac{1}{2 E_{k}} (e^{-i(E_{k}t + \bar{x}\cdot \bar{k})}f(x,t) \psi(E_{k}, k) + e^{-i(-E_{k}t + \bar{x}\cdot \bar{k})}f(x,t) \psi(-E_{k}, k))
+\]
+
+Since this holds for all \(f\), we get that \(\mathcal{F}[\phi]\) as a distribution has an associated function:
+
+\[
+\int_{\mathbb{R}^{3}} \dfrac{1}{2 E_{k}} (e^{-i(E_{k}t + \bar{x}\cdot \bar{k})} \psi(E_{k}, k) + e^{-i(-E_{k}t + \bar{x}\cdot \bar{k})} \psi(-E_{k}, k))
+\]
+
+*** Conclusion
+
+The solution to the Klein Gordon equation is an actual function:
+\[
+\int_{\mathbb{R}^{3}} \dfrac{1}{2 E_{k}} (e^{-i(E_{k}t + \bar{x}\cdot \bar{k})} \psi(E_{k}, k) + e^{-i(-E_{k}t + \bar{x}\cdot \bar{k})} \psi(-E_{k}, k))
+\]
+
+We usually denote \(\psi(-E_{k}, k) = \psi^{\dagger}(E_{k}, k)\) and call psi \(a(k)\), so our solution is 
+
+\[
+\int_{\mathbb{R}^{3}} \dfrac{1}{2 E_{k}} (e^{-i(E_{k}t + \bar{x}\cdot \bar{k})} a(k) + e^{i(E_{k}t - \bar{x}\cdot \bar{k})} a^{\dagger}(k))
+\]
+
+ 
+*** Other raw notes
+
+=Setup:= \(\mathbb{R}^{4} \cong \mathbb{R}^{3,1}\) as both smooth manifolds and topological vector spaces. They only differ in terms of the geometry (metric) laid on top.
+
+
 * Viscosity Solutions
 
 You can add in a /friction/ term $\varepsilon$ in order to make the classical equations actually have a solution. You then pick the weak solution which the classical solutions $f_{\varepsilon}$ converge to as $\varepsilon \rightarrow 0$.

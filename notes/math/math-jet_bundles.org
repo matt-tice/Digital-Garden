@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       92eb39fb-9d65-4866-949e-cb05fa707972
+:END:
+#+title: jet bundles
+#+filetags: :math:geometry:calculus:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Local sections of a bundle
+
+Let \(\pi : E \rightarrow M \) be a fiber bundle. A local section of the bundle is a pair \((U, f)\), where \(U \subseteq M\) is an open set and \(f: U \rightarrow E\) is a section of the bundle:
+\[
+\pi \circ f = id_{U}
+\]
+
+*** Global versus local
+
+Global sections are the case where \(U = M\). Such sections don't always exist, which is why local section are useful.
+
+** Jet equivalence on a fiber bundle
+
+Let \(\pi : E \rightarrow M\) be a smooth fiber bundle, and let \(\Gamma(p)\) be the space of local sections whose domains contain \(p \in M.\)
+
+Two smooth sections \(f,g \in \Gamma(p)\) are *\(k\)-equivalent* if all of their partial derivatives up to order \(k\) are equal at \(p.\) In particular, \(f(p) = g(p)\).
+
+=Jets:= The equivalence class of local sections under the jet equivalence is called a *\(k\)-jet*, and is denoted \(j_{p}^{k}\). Given \(f \in \Gamma(p)\), we denote the equivalence class of this element by \(j_{p}^{k} f\).
+
+** Jet bundle
+
+Let \(E \rightarrow M\) be a fiber bundle, and let \(p \in M\). The \(k\)th jet manifold of \(\pi \) is the set
+\[
+J^{k}(\pi) = \{ j_{p}^{k} f \mid p \in M, f \in \Gamma(p) \}
+\]
+
+
+* Theorems
+
+* Examples

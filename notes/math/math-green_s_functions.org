@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       33b500c7-75c2-4cf2-9b2b-b83fb1fb8ce1
+:END:
+#+title: green's functions
+#+filetags: :math:distributions:pdes:
+
+* References
+
+
+
+* Summary
+
+
+
+We take as our equation \(D \phi = \delta \) , where \(D = -\partial^{2}_{t} + \partial^{2}_{x} +  \partial^{2}_{y} +  \partial^{2}_{z} - m^{2}\)
+
+This is where things get really interesting: we plug in a function
+\[
+\langle \mathcal{F}^{-1} [\phi], \mathcal{F}[Df] \rangle= \langle \phi, Df \rangle = \langle \delta , f \rangle = f(0)
+\]
+So in general you get something non-zero on the right.
+
+Now we can write \(\mathcal{F}[Df] = (-k_{0}^{2} + k_{1}^{2} + k_{2}^{2} + k_{3}^{2} - m^{2}) \mathcal{F}[f]\). And also
+\[
+\mathcal{F}[f(x)] = \int e^{-i kx} f(x) dx
+\]
+
+\[
+f(x) = \mathcal{F}^{-1} \mathcal{F}[f] = (2 \pi )^{-4} \int e^{ikx} \mathcal{F}[f] dk
+\]
+
+So \(f(0) = (2 \pi )^{-4} \int \mathcal{F}[f] dk = (2 \pi )^{-4} \langle 1, \mathcal{F}[f]\rangle \), where (importantly!) \(1\) is a *distribution*, not a function. It's a distribution acting on functions in momentum space.
+
+Now we have \(\langle  \mathcal{F}^{-1} [\phi], (-k_{0}^{2} + k\cdot k - m^{2})\mathcal{F}[f] \rangle = f(0) = \langle 1, \mathcal{F}[f] \rangle\). Since this holds for all \(f\), we get 
+
+\[
+(-k_{0}^{2} + k\cdot k - m^{2}) \mathcal{F}^{-1} [\phi] = 1
+\]
+
+as a distribution
+
+Solving this ends up leading to the propagators that show up in quantum field theory. There's lots of cool stuff there.
+
+* Definitions
+
+
+
+
+* Theorems
+
+* Examples

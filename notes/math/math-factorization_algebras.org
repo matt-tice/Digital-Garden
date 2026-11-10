@@ -30,6 +30,10 @@ In other words, factorization algebras don't give you any way to fix the analyti
 
 =Factorization homology:= This is a local-to-global process (a derived coend) that spits out a *homology complex* . The cohomology of the chain complex that factorization homology gives you, ends up being the full Hilbert space / space of states on your manifold. 
 
+Correlation functions somehow live in the homology
+
+=Parametrix:= Essentially the classical propagator of your theory (the Green's function). You use it as input data to construct the factorization algebra (which is meant to encode purely quantum data)
+
 =Operad:= A factorization algebra is really an algebra over a little-disk-like operad, where each disk is embedded into a fixed manifold.
 
 =Operator product expansion:= 

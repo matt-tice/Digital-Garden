@@ -84,7 +84,10 @@ The *left Kan extension of F along K* is
 
 where \cdot is the copwoer
 
-* Yoneda
+
+* Theorems
+
+** Yoneda
 
 \int^A Mor(A,B) \otimes F(A) \cong F(B)
 
