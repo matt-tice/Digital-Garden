@@ -60,6 +60,10 @@
     img {
       max-width: 100%;
     }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.4em;
     }
@@ -103,8 +107,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -170,14 +174,82 @@
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
-<p>L ⊣ R means that L is the left adjoint and R is the right adjoint</p>
+<p><span class="math inline"><em>L</em> ⊣ <em>R</em></span> means that L
+is the left adjoint and R is the right adjoint</p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="adjoint-functors">Adjoint functors</h2>
+<p>A pair of functors <span
+class="math inline"><em>F</em> : 𝒞 ⇄ 𝒟 : <em>G</em></span> are called
+<strong>adjoint</strong> if there is an equivalence <span
+class="math display">Hom (<em>F</em>, −) ≅ Hom (−, <em>G</em>)</span>
+between these functors <span
+class="math inline">𝒞<sup><em>o</em><em>p</em></sup> × 𝒟 → Set</span>.</p>
+<p>In this case, <span class="math inline"><em>F</em></span> is called
+the <strong>left adjoint</strong> and <span
+class="math inline"><em>G</em></span> is the <strong>right
+adjoint</strong></p>
+<h1 id="theorems">Theorems</h1>
+<h1 id="examples">Examples</h1>
+<h2 id="free-and-forget">Free and Forget</h2>
+<h3 id="groups">Groups</h3>
+<p>Let <span class="math inline"><em>U</em> : Grp → Set</span> be the
+forgetful functor that sends a group to its underlying set and <span
+class="math inline"><em>F</em> : Set → Grp</span> send a set to the free
+group it generates. Then <span
+class="math display"><em>F</em> ⊣ <em>U</em></span></p>
+<h2 id="field-of-fractions">Field of fractions</h2>
+<h2 id="abelianization">Abelianization</h2>
+<h2 id="suspensions-and-loops">Suspensions and Loops</h2>
+<h2 id="stone-cech-compactification">Stone-Cech compactification</h2>
+<p>Let <span class="math inline"><em>i</em> : CHaus → Top</span> be the
+inclusion of compact Hausdorff spaces into all topological spaces. Then
+its left adjoint is the Stone-Cech compactification <span
+class="math display"><em>S</em><em>C</em> ⊣ <em>i</em></span></p>
+<h2 id="directinverse-images-of-sheaves">Direct/inverse images of
+sheaves</h2>
+<h2 id="currying">Currying</h2>
+<h2 id="floor-and-ceiling">Floor and ceiling</h2>
+<p>View <span class="math inline">ℤ, ℝ</span> as posets, and take the
+inclusion <span class="math inline"><em>i</em> : ℤ → ℝ</span>. This
+functor has both a left and right adjoint — the ceiling function and
+floor function <span
+class="math display">ceil ⊣ <em>i</em> ⊣ floor</span></p>
+<p><code class="verbatim">Notation:</code> Actually this kinda motivates
+writing things in the opposite direction: <span
+class="math inline">floor ⊢ <em>i</em> ⊢ ceil</span>, going from the
+smallest to the biggest</p>
+<h2 id="discrete-indiscrete-space">Discrete / Indiscrete space</h2>
+<p>Let <span class="math inline"><em>U</em> : Top → Set</span> be the
+forgetful functor on topological spaces. Then the functors that grant a
+set the discrete or indiscrete topology are left/right adjoints
+respectively. <span
+class="math display">Discr ⊣ <em>U</em> ⊣ Indiscr</span></p>
+<h2 id="nerve-and-realization">Nerve and realization</h2>
+<h2 id="initial-terminal">Initial / terminal</h2>
+<p>Let <span class="math inline">1</span> be the terminal category (the
+discrete category with one object). Then adjoints to <span
+class="math inline">* : 𝒞 → 1</span> correspond to initial / terminal
+objects in <span class="math inline">𝒞</span>: <span
+class="math display">Init ⊣ * ⊣ Term</span></p>
+<h2 id="limits-colimits">Limits / colimits</h2>
+<p>Let <span class="math inline">𝒥</span> be an indexing category. Then
+the adjoints to the diagonal functor <span
+class="math inline"><em>Δ</em> : 𝒞 → 𝒞<sup>𝒥</sup></span> which sends
+each object <span class="math inline"><em>X</em></span> to the constant
+functor <span
+class="math inline"><em>Δ</em><sub><em>X</em></sub></span>, are the
+functors picking out limits and colimits of each functor <span
+class="math inline">𝒥 → 𝒞</span>: <span
+class="math display">colim  ⊣ <em>Δ</em> ⊣ lim </span></p>
+<h2 id="kan-extensions">Kan extensions</h2>
+<h2 id="endscoends">Ends/coends</h2>
 <h1 id="colimits">(Co)Limits</h1>
 <ol>
 <li>Take the appropriate diagram</li>
 <li>Set up the constant functor</li>
 </ol>
 <h2 id="coproducts">(Co)products</h2>
-<p><span class="math inline"> ⊔  ⊣ <em>Δ</em> ⊣ ×</span></p>
+<p><span class="math inline">⊔ ⊣ <em>Δ</em> ⊣ ×</span></p>
 <h2 id="coequalizers">(Co)equalizers</h2>
 <p>The diagram is a pair of parallel morphisms</p>
 <p>We then take the functor category C<sup>I</sup></p>

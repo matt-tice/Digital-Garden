@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>(co)limits</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">(co)limits</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<h1 id="definitions">Definitions</h1>
+<h2 id="cones">Cones</h2>
+<p>Given a functor <span class="math inline"><em>F</em> : 𝒟 → 𝒞</span>,
+a <strong>cone</strong> of <span class="math inline"><em>F</em></span>
+is <span
+class="math inline">(<em>C</em>, {<em>ϕ</em><sub><em>D</em></sub>}<sub><em>D</em> ∈ 𝒟</sub>)</span>
+such that <span
+class="math display"><em>ϕ</em><sub><em>D</em></sub> : <em>C</em> → <em>F</em>(<em>D</em>)</span>
+and for all <span
+class="math inline"><em>f</em> : <em>D</em><sub>1</sub> → <em>D</em><sub>2</sub></span>,
+<span
+class="math display"><em>ϕ</em><sub><em>D</em><sub>1</sub></sub><em>f</em> = <em>ϕ</em><sub><em>D</em><sub>2</sub></sub></span></p>
+<h2 id="limits-cones">Limits (cones)</h2>
+<p>Let <span class="math inline"><em>F</em> : 𝒟 → 𝒞</span> be a diagram.
+A limit of <span class="math inline"><em>F</em></span> is a universal
+cone <span
+class="math display">lim <em>F</em> → <em>F</em>(<em>D</em>)</span></p>
+<h2 id="limits-representables">Limits (Representables)</h2>
+<p>Let <span class="math inline"><em>F</em> : 𝒟 → 𝒞</span> be a diagram.
+A <strong>limit</strong> of <strong>F</strong> is an object <span
+class="math inline">lim <em>F</em></span> such that <span
+class="math display">Hom (<em>A</em>, lim <em>F</em>) ≅ NT (<em>Δ</em>(<em>A</em>), <em>F</em>)</span>
+is an isomorphism for all <span
+class="math inline"><em>A</em> ∈ 𝒞</span>, where <span
+class="math inline"><em>Δ</em></span> is the constant diagram functor,
+which sends <span class="math inline"><em>A</em></span> to the constant
+functor at <span class="math inline"><em>A</em></span>.</p>
+<p>In other words, we have a natural isomorphism between presheaves
+<span
+class="math display">Hom (−, lim <em>F</em>) ≅ NT (<em>Δ</em>(−), <em>F</em>) : 𝒞 → Set</span></p>
+<h2 id="limits-adjoints">Limits (Adjoints)</h2>
+<h2 id="limits-constructive">Limits (Constructive)</h2>
+<p>The limit of a diagram <span
+class="math inline"><em>F</em> : 𝒟 → 𝒞</span> is the equalizer</p>
+<p><span
+class="math display">lim <em>F</em> ≅ <em>e</em><em>q</em>(∏<sub><em>D</em></sub><em>F</em>(<em>D</em>) ⇉ ∏<sub><em>f</em> : <em>D</em> → <em>E</em></sub><em>F</em>(<em>E</em>))</span></p>
+<p>where the first map projects onto the codomain with <span
+class="math inline"><em>π</em><sub><em>E</em></sub></span> and the
+second map is <span
+class="math inline"><em>F</em>(<em>f</em>)<em>π</em><sub><em>D</em></sub></span></p>
+<h1 id="theorems">Theorems</h1>
+<h2 id="limits-in-set">Limits in Set</h2>
+<p>Let <span class="math inline"><em>F</em> : 𝒟 → Set</span></p>
+<h2 id="hom-functors-preserve-limits">Hom functors preserve limits</h2>
+<p><span
+class="math inline">Hom (<em>A</em>, lim <em>F</em>) ≅ lim Hom (<em>A</em>, <em>F</em>(−))</span></p>
+<h3 id="proof">Proof</h3>
+<p>Consider <span
+class="math inline">Hom<sub>Set</sub>(<em>X</em>, Hom (<em>A</em>, lim <em>F</em>))≅</span></p>
+<p><span
+class="math inline">Hom (<em>A</em>, lim <em>F</em>) ≅ <em>N</em><em>T</em>(<em>Δ</em>(<em>A</em>), <em>F</em>)</span></p>
+<h2 id="limits-preserve-limits">Limits preserve limits</h2>
+<h2 id="adjoints-preserve-colimits">Adjoints preserve (co)limits</h2>
+<h2 id="yoneda-embedding-preserves-limits">Yoneda embedding preserves
+limits</h2>
+<h2 id="dense-fully-faithful-preserves-limits">Dense fully faithful
+preserves limits</h2>
+<h1 id="examples">Examples</h1>
+<h2 id="coequalizers">(Co)equalizers</h2>
+<p>An equalizer is the limit of the following diagram <span
+class="math inline"><em>f</em>, <em>g</em> : <em>A</em> ⇉ <em>B</em></span>.
+So it's a universal <span
+class="math inline">(<em>E</em>, <em>ϕ</em>)</span> with <span
+class="math inline">$E \xrightarrow{\phi} A \rightrightarrows
+B$</span>.</p>
+<h2 id="coproducts">(Co)products</h2>
+<p>Products are the limits of discrete diagrams. They have a universal
+map into all of the factors of the product: <span
+class="math display"><em>π</em><sub><em>i</em></sub> : ∏<sub><em>i</em></sub><em>A</em><sub><em>i</em></sub> → <em>A</em><sub><em>i</em></sub></span></p>
+<h2 id="initialterminal-objects">Initial/terminal objects</h2>
+<p>The terminal object is the limit of the empty diagram. Because it has
+no conditions, it has a unique map from every other object into it.</p>
+<h2 id="pullbacks-and-pushouts">Pullbacks and pushouts</h2>
+<p>A pullback is the limit of a diagram of the form <span
+class="math inline"><em>f</em><sub>1</sub>, <em>f</em><sub>2</sub> : <em>A</em><sub>1</sub>, <em>A</em><sub>2</sub> → <em>B</em></span>.
+So it's the upper left corner of a commuting square.</p>
+</body>
+</html>

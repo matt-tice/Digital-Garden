@@ -60,6 +60,10 @@
     img {
       max-width: 100%;
     }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.4em;
     }
@@ -103,8 +107,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -180,5 +184,15 @@ adjunctions, they're a much cleaner way of dealing with things</p>
 <p>Requires you to be good at presheaves</p>
 <h2 id="kan-extensions">Kan Extensions</h2>
 <p>Extends naturally to ∞-cats</p>
+<h2 id="congruences">Congruences</h2>
+<p>A congruence in a category is an equivalence relation such that if
+<span class="math inline"><em>f</em> ∼ <em>g</em></span> then <span
+class="math inline"><em>f</em><em>h</em> ∼ <em>g</em><em>h</em></span>
+and <span
+class="math inline"><em>h</em><em>f</em> ∼ <em>h</em><em>g</em></span>
+whenever these compositions make sense.</p>
+<p>The quotient category with respect to a congruence is the category
+with the same objects, but morphisms are equivalence classes under the
+congruence.</p>
 </body>
 </html>

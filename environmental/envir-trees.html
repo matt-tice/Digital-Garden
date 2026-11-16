@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>trees</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">trees</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<h1 id="types">Types</h1>
+<h2 id="boreal">Boreal</h2>
+<p><code class="verbatim">Soil:</code> Thin, acidic, nutrient-poor</p>
+<p><code class="verbatim">Climate:</code> Long freezing winters; short
+summers</p>
+<h3 id="conifers">Conifers</h3>
+<p><code class="verbatim">Needles:</code> Waxy needles prevent water
+loss and shed heavy snow</p>
+<ol>
+<li><p>Spruce</p>
+<p>Spruces work well in areas that firs and pines don't: waterlogged
+bogs and frozen permafrost.</p>
+<p><code class="verbatim">Needles:</code> Four-sided, sharp. Attached
+individually to pegs. These needles have low surface-area-to-volume
+ratio. This allows them to not dry out as easily. Their cells will
+actually produce special proteins that prevent ice crystals from forming
+inside of them down to <strong>-50C</strong></p>
+<p><code class="verbatim">Cones:</code> Hanging. These cones are tough
+and woody. Thick overlapping scales <em>open and close</em> in response
+to humidity — they only release seeds during dry, windy weather. Spruce
+trees will slowly trickle out seeds over several years, but they also
+have <strong>semi-serotinous</strong> cones, which will open after
+wildfires, just like pines</p>
+<p><code class="verbatim">Clones:</code> Just like with firs, low
+hanging branches will get buried in the moist sphagnum moss — they
+sprout new roots and form dense rings of identical trees around the
+parent spruce!</p>
+<p><code class="verbatim">Light:</code> Spruces can survive partial
+shade beneath a birch or aspen for decades, and then shoot upward once
+they get access to more light.</p>
+<p><code class="verbatim">Shape:</code> Spruce trees have that classic
+Christmas triangular shape, allowing heavy wet snow to slide thing the
+ground without snapping the trunk</p>
+<ol>
+<li><p>Black spruce</p>
+<p>Wet, boggy, acidic peatlands</p>
+<p><code class="verbatim">Soil:</code> Black spruce thrives in acidic,
+low-oxygen peat bogs, and in shallow permafrost. Pine taproots would
+drown here, and firs would starve.</p></li>
+<li><p>White spruce</p>
+<p><code class="verbatim">Soil:</code> Well-drained, richer, upland
+soils</p></li>
+</ol></li>
+<li><p>Pine</p>
+<p>Pine trees <strong>adore the sun</strong>. They can handle droughts
+easily. Because of this, they tend to grow in <strong>harsh open
+spaces</strong>.</p>
+<p><code class="verbatim">Roots:</code> Very deep taproots allow them to
+reach underground water tables in dry, sandy, or rocky areas.</p>
+<p><code class="verbatim">Lower branches:</code> You'll often notice
+with pines that the lower part of their trunk is bare! They will
+deliberately shed lower branches as they get taller, in order to save
+energy and prevent fires on the ground from reaching the upper parts of
+the tree.</p>
+<p><code class="verbatim">Upper branches:</code> To gather as much light
+as possible, pines have much denser upper branches than spruce or firs.
+This causes them to break under heavy snowfall</p>
+<p><code class="verbatim">Soil:</code> Dry, sandy, nutrient-poor</p>
+<p><code class="verbatim">Climate:</code> Sunny areas cleared by recent
+wildfires</p>
+<p><code class="verbatim">Trunk:</code> Long and thin</p>
+<p><code class="verbatim">Life:</code> 100-1000 years!</p>
+<p><code class="verbatim">Bark:</code> Thick and scaly. It's full of
+<strong>air pockets.</strong> These pockets actually act as a kind of
+heat shield, allowing the tree to survive low-intensity fires that will
+wipe out thin-barked competition like balsam fir and paper birch.</p>
+<p><code class="verbatim">Pine cones:</code> Serotinous (resin-sealed).
+Pine cones will actually remain <strong>glued shut for years</strong>,
+until the heat of a wildfire melts the resin, allowing them to open. At
+this point, the thousands of seeds in the pine cones will be released
+into the nutrient rich ash of the burned-down forest — in this way, the
+next generation of pines grows with no competition!</p>
+<p>Other pines have cones with sharp tips on the ends of their scales,
+to deter animals like squirrels and birds from eating their seeds.</p>
+<p><code class="verbatim">Needles:</code> Long and grouped in bundles of
+two to five. The needles are very acidic, and when they fall, they
+create a thick, slow-rotting carpet that releases growth-inhibiting
+chemicals into the soil, preventing weeds and rival seedlings from
+growing.</p>
+<p><code class="verbatim">Mycorrhizae:</code> Pine roots work together
+with fungi: the fungi wrap around the roots, allowing them to acquire
+distant phosphorus and nitrogen</p></li>
+<li><p>Fir</p>
+<p>Firs like to grow in dense, dim areas. Because of this, they need
+specialized features to survive admist heavy competition</p>
+<p><code class="verbatim">Needles:</code> Flat and soft; attach directly
+to the twig. They maximize surface area, giving them the ability to
+capture maximal sunlight in <strong>dim areas</strong>. They're like
+mini solar panels that capture the scarce dapple sunlight filtering
+through the canopy above.</p>
+<p><code class="verbatim">Seeds:</code> Large; they contain a lot of
+fats and nutrients, giving new seedlings enough fuel to push roots
+through thick moss and leaf litter, even without immediate sunlight.</p>
+<p><code class="verbatim">Saplings:</code> Young firs can actually
+survive <strong>30 to 50 years</strong> as tiny sapplings, just biding
+their time until a nearby mature tree dies or gets blown down. They then
+have the capability to sprout up incredibly quickly once they get access
+to sunlight, beating out any other saplings!</p>
+<p><code class="verbatim">Cloning:</code> When low, heavy branches of
+the fir droop down into the damp forest moss from the winter snow, they
+can actually sprout roots! They grow into new genetically identical fir
+trees, even without any sunlight or pollination</p>
+<p><code class="verbatim">Dense:</code> Firs prefer dense shady forests.
+In fact, if they're left to grow in an open field, they'll have a hard
+time surviving, because their needles are so thin that they dry out
+easily in the sun and wind</p>
+<p><code class="verbatim">Bark:</code> Smooth with resin blisters</p>
+<p><code class="verbatim">Cones:</code> Upright, sitting on the
+<strong>very tops</strong> of the trees. They break apart scale by
+scale, allowing the wind to scatter the seeds. Because firs don't grow
+in open windy areas like larches, they don't need to drop their needles
+to give better access to the cones. They just use the high-altitude
+breeze to scatter their seeds and then drop the cones</p>
+<p><code class="verbatim">Climate:</code> Cool, moist, and shaded</p>
+<p><code class="verbatim">Soil:</code> Deeper. Often growing beneath
+taller spruce</p></li>
+<li><p>Larch</p>
+<p><code class="verbatim">Needles:</code> Soft and feathery. In clusters
+that turn gold and fall every autumn. This is very useful, because
+larches grow in colder climates than other conifers, so if they didn't
+drop their needles, they'd rsk their needles getting frozen or torn
+apart from the harsh conditions</p>
+<p><code class="verbatim">Climate:</code> Extremely waterlogged swamps
+and permafrost</p>
+<p><code class="verbatim">Wind:</code> Larches like open, windy bogs</p>
+<p><code class="verbatim">Cones:</code> Very small (1-4 cm). Sit upright
+on the branches, like firs. Young female cones are <strong>bright
+colours</strong>, like pink, red, or purple — they absorb warmth and aid
+pollination, and turn brown later, as they mature. They open their
+scales in autumn and then stay attached to the bare winter branches of
+the larch for several years. Since the larch needles drop in the autumn,
+wind is able to access the cones easier, spreading the seeds out in the
+late autumn and winter.</p></li>
+</ol>
+<h3 id="broadleaf">Broadleaf</h3>
+<ol>
+<li><p>Birch</p></li>
+<li><p>Aspen</p></li>
+</ol>
+<h2 id="temperate">Temperate</h2>
+<p><code class="verbatim">Seasons:</code> Needs four different
+seasons</p>
+<p><code class="verbatim">Moisture:</code> Moderate rainfall</p>
+<p><code class="verbatim">Soil:</code> Deep, fertile, enriched with
+fallen leaves</p>
+<h3 id="broadleaf-deciduous">Broadleaf deciduous</h3>
+<p><code class="verbatim">Leaves:</code> These trees shed their leaves
+in autumn <strong>to conserve water</strong> and survive freezing
+temperatures.</p>
+<ol>
+<li><p>Oak</p></li>
+<li><p>Maple</p></li>
+<li><p>Beech</p></li>
+</ol>
+<h3 id="conifers-1">Conifers</h3>
+<ol>
+<li><p>Redwood</p></li>
+<li><p>Cedar</p></li>
+</ol>
+<h2 id="tropical">Tropical</h2>
+<p><code class="verbatim">Climate:</code> Year-round warmth</p>
+<p><code class="verbatim">Moisture:</code> Heavy, consisten rainfall</p>
+<p><code class="verbatim">Soil:</code> Nutrient-poor. Organic material
+recycles rapidly</p>
+<p><code class="verbatim">Roots:</code> Wide, shallow roots help trees
+stay stable in thin, wet soil, and absorb surface nutrients</p>
+<h3 id="broadleaf-evergreens">Broadleaf evergreens</h3>
+<ol>
+<li><p>Palms</p></li>
+<li><p>Mahogany</p></li>
+<li><p>Kapok</p></li>
+</ol>
+<h2 id="mediterranean">Mediterranean</h2>
+<p><code class="verbatim">Climate:</code> Hot dry summers, mild wet
+winters</p>
+<p><code class="verbatim">Soil:</code> Rocky, well-drained</p>
+<p>Resists periodic wildfires</p>
+<p><code class="verbatim">Bark:</code> Dense bark insulates the inside
+of the tree from frequent forest fires</p>
+<h3 id="evergreens">Evergreens</h3>
+<ol>
+<li><p>Cork oak</p></li>
+<li><p>Olive</p></li>
+<li><p>Cypress</p></li>
+</ol>
+</body>
+</html>

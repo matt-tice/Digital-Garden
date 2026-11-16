@@ -60,6 +60,10 @@
     img {
       max-width: 100%;
     }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.4em;
     }
@@ -103,8 +107,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -170,8 +174,67 @@
 </header>
 <h1 id="references">References</h1>
 <h1 id="summary">Summary</h1>
-<h1 id="yoneda-lemma"><a
+<h1 id="theorems">Theorems</h1>
+<h2 id="hom-functors-preserve-limits">Hom functors preserve limits</h2>
+<p>Let <span
+class="math inline"><em>f</em> : <em>A</em> → <em>B</em></span>. The
+following are equivalent:</p>
+<ol>
+<li><span class="math inline"><em>f</em></span> is an isomorphism</li>
+<li><span
+class="math inline"><em>H</em><em>o</em><em>m</em>(<em>f</em>, <em>X</em>)</span>
+is an isomorphism for all <span
+class="math inline"><em>X</em></span></li>
+<li><span
+class="math inline"><em>H</em><em>o</em><em>m</em>(<em>X</em>, <em>f</em>)</span>
+is an isomorphism for all <span
+class="math inline"><em>X</em></span></li>
+</ol>
+<h2 id="section"></h2>
+<p><span class="math inline"><em>f</em> : <em>A</em> → <em>B</em></span>
+is a monomorphism if and only if <span
+class="math inline"><em>H</em><em>o</em><em>m</em>(<em>X</em>, <em>f</em>)</span>
+is an injection for all <span class="math inline"><em>X</em></span></p>
+<p><span class="math inline"><em>f</em> : <em>A</em> → <em>B</em></span>
+is a split epimorphism if and only if <span
+class="math inline"><em>H</em><em>o</em><em>m</em>(<em>X</em>, <em>f</em>)</span>
+is a surjection for all <span class="math inline"><em>X</em></span></p>
+<p><span class="math inline"><em>f</em> : <em>A</em> → <em>B</em></span>
+is an epimorphism if and only if <span
+class="math inline"><em>H</em><em>o</em><em>m</em>(<em>f</em>, <em>X</em>)</span>
+is an injection for all <span class="math inline"><em>X</em></span></p>
+<p><span class="math inline"><em>f</em> : <em>A</em> → <em>B</em></span>
+is a split mono if and only if <span
+class="math inline"><em>H</em><em>o</em><em>m</em>(<em>f</em>, <em>X</em>)</span>
+is a surjection for all <span class="math inline"><em>X</em></span></p>
+<h2 id="axiom-of-choice">Axiom of Choice</h2>
+<p>The axiom of choice is equivalent to the condition that every
+epimorphism in the category of sets is a split empimorphism (has a
+one-sided inverse by precomposition)</p>
+<h2 id="family-of-sets">Family of sets</h2>
+<p>A set map <span
+class="math inline"><em>f</em> : <em>A</em> → <em>I</em></span> defines
+a family of sets indexed by the elements of <span
+class="math inline"><em>I</em></span> — <span
+class="math inline"><em>A</em><sub><em>i</em></sub> ≡ <em>f</em><sup>−1</sup>(<em>i</em>)</span>.</p>
+<h2 id="section-1"></h2>
+<p>If <span class="math inline"><em>f</em>, <em>g</em></span> are monic
+then so is <span class="math inline"><em>f</em><em>g</em></span>. If
+<span class="math inline"><em>f</em> ∘ <em>g</em></span> is monic, then
+so is <span class="math inline"><em>g</em></span></p>
+<p><code class="verbatim">Dually:</code> If <span
+class="math inline"><em>f</em>, <em>g</em></span> are epi then so is
+<span class="math inline"><em>f</em><em>g</em></span>. If <span
+class="math inline"><em>f</em> ∘ <em>g</em></span> is epi then so is
+<span class="math inline"><em>f</em></span></p>
+<h3 id="corollary">Corollary</h3>
+<p>The monomorphims form a subcategory, as do the epimorphisms.</p>
+<h2 id="yoneda-lemma"><a
 href="https:/Digital-Garden/math/math-yoneda_lemma.html">Yoneda
-lemma</a></h1>
+lemma</a></h2>
+<h1 id="examples">Examples</h1>
+<h2 id="mono-epi-iso">Mono + Epi ≠ Iso</h2>
+<p>The inclusion <span class="math inline">ℤ → ℚ</span> is both mono and
+epi in the category of rings. However, it is not an isomorphism.</p>
 </body>
 </html>

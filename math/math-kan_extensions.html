@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>kan extensions</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">kan extensions</h1>
+</header>
+<h1 id="references">References</h1>
+<h1 id="summary">Summary</h1>
+<p><code class="verbatim">Intuition:</code> Kan extensions are something
+like <strong>generating from a basis.</strong> If you have some
+collection of nice objects, you want to extend to a full category of
+objects built up out of those nice building blocks</p>
+<p><code class="verbatim">Left Kan extension:</code> Uses colimits to
+generate by gluing generators together</p>
+<p><code class="verbatim">Right Kan extension:</code> Uses limits to
+restrict the nice objects to</p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="left-kan-extension">Left Kan extension</h2>
+<p>Let <span class="math inline"><em>F</em> : 𝒞 → 𝒟</span> and <span
+class="math inline"><em>G</em> : 𝒞 → ℰ</span> be functors. A
+<strong>left Kan extension</strong> is a pair <span
+class="math inline">(<em>L</em>, <em>η</em>)</span>, where <span
+class="math display"><em>η</em> : <em>G</em> ⇒ <em>F</em><em>L</em></span>
+such that for any <span
+class="math inline"><em>ϕ</em> : <em>G</em> ⇒ <em>F</em><em>X</em></span>
+there's a unique map <span
+class="math inline"><em>δ</em> : <em>L</em> ⇒ <em>X</em></span> with
+<span
+class="math display"><em>η</em><em>δ</em><sub><em>L</em></sub> = <em>ϕ</em></span></p>
+<h3 id="intuition">Intuition</h3>
+<p><span class="math inline"><em>F</em><em>L</em></span> is the smallest
+thing larger than <span class="math inline"><em>G</em></span>, so we map
+into <span class="math inline"><em>F</em><em>L</em></span>, and any
+other thing larger than <span class="math inline"><em>G</em></span> has
+to hit <span class="math inline"><em>F</em><em>L</em></span> first</p>
+<p><code class="verbatim">Notation:</code> I'm going to write <span
+class="math inline"><em>L</em><sub><em>F</em></sub>[<em>G</em>]</span>
+to denote the <strong>left Kan extension of <span
+class="math inline"><em>F</em></span> along <span
+class="math inline"><em>G</em></span>.</strong> This is backwards to the
+normal way that it's notated, but I like that we get a kind of Einstein
+summation thing happening: <span
+class="math display"><em>ε</em> : <em>G</em> ⇒ <em>F</em><em>L</em><sub><em>F</em></sub>[<em>G</em>]</span></p>
+<h2 id="right-kan-extension">Right Kan extension</h2>
+<p>Let <span class="math inline"><em>F</em> : 𝒞 → 𝒟</span> and <span
+class="math inline"><em>G</em> : 𝒞 → ℰ</span> be functors. A
+<strong>right Kan extension</strong> is a pair <span
+class="math inline">(<em>R</em>, <em>ε</em>)</span>, where <span
+class="math display"><em>ε</em> : <em>F</em><em>R</em> ⇒ <em>G</em></span>
+such that for any other <span
+class="math inline"><em>ϕ</em> : <em>F</em><em>X</em> ⇒ <em>G</em></span>,
+there's a unique map <span
+class="math inline"><em>δ</em> : <em>X</em> ⇒ <em>R</em></span> with
+<span
+class="math display"><em>δ</em><sub><em>F</em></sub><em>ε</em> = <em>ϕ</em></span></p>
+<h3 id="intuition-1">Intuition</h3>
+<p><span class="math inline"><em>F</em><em>R</em></span> is the largest
+thing smaller than <span class="math inline"><em>G</em></span>, which is
+why we map into <span class="math inline"><em>G</em></span>, with <span
+class="math inline"><em>ε</em> : <em>F</em><em>R</em> ⇒ <em>G</em></span>,
+and every other thing mapping into <span
+class="math inline"><em>G</em></span> has to first map into <span
+class="math inline"><em>F</em><em>R</em></span></p>
+<p><code class="verbatim">Notation:</code> I'll denote by <span
+class="math inline"><em>R</em><sub><em>F</em></sub>[<em>G</em>]</span>
+the <strong>right Kan extension of <span
+class="math inline"><em>F</em></span> along <span
+class="math inline"><em>G</em></span></strong>, so that we have <span
+class="math inline"><em>η</em> : <em>F</em><em>R</em><sub><em>F</em></sub>[<em>G</em>] ⇒ <em>G</em></span></p>
+<h1 id="theorems">Theorems</h1>
+<h1 id="examples">Examples</h1>
+<h2 id="limits">Limits</h2>
+<p>Let <span class="math inline">1</span> be the terminal category with
+a single object and identity map. Then taking <span
+class="math inline"><em>F</em> : 𝒞 → 𝒟</span> and <span
+class="math inline">* : 𝒞 → 1</span>, we have <span
+class="math display"><em>L</em><sub><em>F</em></sub>[*] ≅ colim <em>F</em></span>
+and <span
+class="math display"><em>R</em><sub><em>F</em></sub>[*] ≅ lim <em>F</em></span></p>
+<h2 id="groups">Groups</h2>
+<p>Let <span class="math inline"><em>G</em></span> be a group and <span
+class="math inline"><em>H</em> ≤ <em>G</em></span> be a subgroup. There
+is an inclusion <span
+class="math inline"><em>i</em><sub><em>H</em></sub> : <em>B</em><em>H</em> → <em>B</em><em>G</em></span>.</p>
+<p>Given a representation <span
+class="math inline"><em>F</em> : <em>B</em><em>H</em> → Vec</span>, the
+LKE is the <strong>induced representation</strong> <span
+class="math display"><em>L</em><sub><em>F</em></sub>[<em>i</em><sub><em>H</em></sub>] ≅ <em>k</em>[<em>G</em>]⊗<sub><em>k</em>[<em>H</em>]</sub>−</span>
+and the RKE is the <strong>coinduced representation</strong> <span
+class="math display"><em>R</em><sub><em>F</em></sub>[<em>i</em><sub><em>H</em></sub>] ≅ Hom<sub><em>k</em>[<em>H</em>]</sub>(<em>k</em>[<em>G</em>], −)</span></p>
+<h2 id="generating-a-vector-space-by-a-basis">Generating a vector space
+by a basis</h2>
+<p>We view a basis as a <strong>discrete category</strong> <span
+class="math inline">ℬ</span>. We view an individual vector space by a
+functor from the terminal category <span
+class="math inline"><em>V</em> : 1 → Vec</span></p>
+<p>Now take <span class="math inline">* : ℬ → 1</span> and let <span
+class="math inline"><em>k</em> : ℬ → Vec</span> send every object to the
+ground field <span class="math inline"><em>k</em></span>. Then <span
+class="math display"><em>L</em><sub>*</sub>[<em>k</em>] ≅ <em>V</em></span></p>
+<p>And <span
+class="math inline"><em>ε</em> : <em>k</em> ⇒ *<em>L</em><sub>*</sub>[<em>k</em>] ≅ <em>V</em></span>
+sends <span
+class="math inline"><em>ε</em><sub><em>b</em></sub> : <em>k</em>(<em>b</em>) → <em>V</em></span>
+by mapping <span class="math inline">1 ∈ <em>k</em></span> to the basis
+element <span class="math inline"><em>b</em> ∈ <em>V</em></span>.</p>
+<h2 id="adjunctions">Adjunctions</h2>
+<h2 id="yoneda-lemma">Yoneda Lemma</h2>
+</body>
+</html>

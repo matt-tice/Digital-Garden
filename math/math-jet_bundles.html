@@ -188,6 +188,66 @@ class="math display"><em>π</em> ∘ <em>f</em> = <em>i</em><em>d</em><s
 <p>Global sections are the case where <span
 class="math inline"><em>U</em> = <em>M</em></span>. Such sections don't
 always exist, which is why local section are useful.</p>
+<h2 id="derivatives-of-a-section">Derivatives of a section</h2>
+<p>Let <span
+class="math inline"><em>f</em> : <em>M</em> → <em>E</em></span> be a
+section of a fiber bundle. Take any open set around a point <span
+class="math inline"><em>p</em> ∈ <em>M</em></span> , <span
+class="math inline"><em>U</em>(<em>p</em>)</span> and pick local
+coordinates <span
+class="math inline"><em>x</em><sup><em>i</em></sup></span>. Since we
+have a fiber bundle, the local coordinates on <span
+class="math inline"><em>E</em></span> will look like <span
+class="math inline">(<em>x</em><sup><em>i</em></sup>, <em>y</em><sup><em>α</em></sup>)</span>
+, where <span class="math inline"><em>y</em><sup><em>α</em></sup></span>
+are the coordinates of the typical fiber <span
+class="math inline"><em>F</em></span>.</p>
+<p>In local coordinates, the section has the form <span
+class="math display"><em>f</em>(<em>x</em>) = (<em>x</em>, <em>ϕ</em>(<em>x</em>))</span>
+where <span
+class="math inline"><em>ϕ</em> : <em>U</em> → <em>F</em></span>. Then
+since <span class="math inline"><em>F</em></span> has local coordinates,
+we can view <span class="math inline"><em>ϕ</em></span> in local
+coordinates as <span
+class="math inline"><em>ϕ</em><sup><em>α</em></sup>(<em>x</em><sup>1</sup>, …, <em>x</em><sup><em>n</em></sup>)</span>,
+where each <span
+class="math inline"><em>ϕ</em><sup><em>α</em></sup></span> is now a map
+from <span class="math inline">ℝ<sup><em>n</em></sup> → ℝ</span>. We can
+thus take its derivative, which we define to be the partial derivative
+<span class="math display">$$
+\partial_{i} \phi^{\alpha} =  \dfrac{\partial \phi^{\alpha} }{\partial
+x^{i}}
+$$</span></p>
+<h3 id="notes">Notes</h3>
+<p>This derivative is <strong>coordinate dependent</strong> — it's very
+physics-y. There's no way to say that a section is <em>constant</em> —
+it can look like it has zero derivative in one trivialization, but then
+have non-zero derivative in another.</p>
+<p><a
+href="https:/Digital-Garden/math/math-connections.html">Connections</a>
+solve this problem — they essentially pick a certain section to be equal
+to zero (like picking a certain section to be light) and then forcing
+everything else to mold around that.</p>
+<ul>
+<li>actually that <em>is</em> apparently related to how connections work
+in physics (props to my intuition!)</li>
+</ul>
+<p>Consider the bundle <span
+class="math inline"><em>T</em><em>M</em> → <em>M</em></span>. We take
+the first jet space <span
+class="math inline"><em>J</em><sup>1</sup>(<em>T</em><em>M</em>)</span>.
+The elements of this jet space correspond uniquely to <strong>horizontal
+subspaces</strong> (which are used to define Ehresmann connections). So
+a section <span
+class="math display"><em>Γ</em> : <em>T</em><em>M</em> → <em>J</em><sup>1</sup>(<em>T</em><em>M</em>)</span>
+is a choice of horizontal subspace at each point in the tangent
+bundle.</p>
+<p>In local coordinates on the tangent bundle <span
+class="math inline">(<em>x</em><sup><em>μ</em></sup>, <em>v</em><sup><em>λ</em></sup>)</span>,
+we can express the section <span
+class="math display"><em>Γ</em>(<em>x</em><sup><em>μ</em></sup>, <em>v</em><sup><em>λ</em></sup>) = (<em>x</em><sup><em>μ</em></sup>, <em>v</em><sup><em>λ</em></sup>, <em>Γ</em><sub><em>μ</em><em>ν</em></sub><sup><em>λ</em></sup>(<em>x</em>)<em>v</em><sup><em>ν</em></sup>)</span></p>
+<p><code class="verbatim">Gauge theory:</code> The local coordinates are
+also the same as picking a <strong>gauge</strong></p>
 <h2 id="jet-equivalence-on-a-fiber-bundle">Jet equivalence on a fiber
 bundle</h2>
 <p>Let <span
@@ -213,13 +273,252 @@ class="math inline"><em>f</em> ∈ <em>Γ</em>(<em>p</em>)</span>, we
 denote the equivalence class of this element by <span
 class="math inline"><em>j</em><sub><em>p</em></sub><sup><em>k</em></sup><em>f</em></span>.</p>
 <h2 id="jet-bundle">Jet bundle</h2>
-<p>Let <span class="math inline"><em>E</em> → <em>M</em></span> be a
+<p>Let <span
+class="math inline"><em>π</em> : <em>E</em> → <em>M</em></span> be a
 fiber bundle, and let <span
 class="math inline"><em>p</em> ∈ <em>M</em></span>. The <span
 class="math inline"><em>k</em></span>th jet manifold of <span
 class="math inline"><em>π</em></span> is the set <span
 class="math display"><em>J</em><sup><em>k</em></sup>(<em>π</em>) = {<em>j</em><sub><em>p</em></sub><sup><em>k</em></sup><em>f</em> ∣ <em>p</em> ∈ <em>M</em>, <em>f</em> ∈ <em>Γ</em>(<em>p</em>)}</span></p>
+<h2 id="prolongation">Prolongation</h2>
+<p>Let <span
+class="math inline"><em>π</em> : <em>E</em> → <em>M</em></span> be a
+fiber bundle and let <span
+class="math inline"><em>f</em> : <em>M</em> → <em>E</em></span> be a
+section. The <strong><span class="math inline"><em>k</em></span>th jet
+prolongation</strong> of <span class="math inline"><em>f</em></span>
+<span
+class="math display"><em>j</em><sup><em>k</em></sup><em>f</em> : <em>M</em> → <em>J</em><sup><em>k</em></sup>(<em>π</em>)</span>
+is defined by</p>
+<p><span
+class="math display">(<em>j</em><sup><em>k</em></sup><em>f</em>)(<em>p</em>) = <em>j</em><sub><em>p</em></sub><sup><em>k</em></sup><em>f</em> = (<em>p</em>, <em>f</em>(<em>p</em>), ∂<sub><em>i</em></sub><em>f</em>(<em>p</em>), ∂<sub><em>i</em><em>j</em></sub><em>f</em>(<em>p</em>), …, )</span>
+where in the last equation we wrote the jet in the induced local
+coordinates of the jet space.</p>
+<h3 id="intuition">Intuition</h3>
+<p>The coordinates on the jet bundle are just formal symbols. There's no
+fixed underlying function on the jet spaces that has its derivatives
+being taken. Instead, for any fixed section of the original bundle <span
+class="math inline"><em>E</em> → <em>M</em></span>, you perform
+prolongation in order to turn it into an actual function living on the
+jet space.</p>
+<p><code class="verbatim">Equivalence classes:</code> Because the points
+on the jet bundle are, by definition, equivalence classes of sections
+and their derivatives, we have a built in way of moving a given section
+onto the jet space.</p>
+<p><code class="verbatim">Functions on jet space:</code> If we have some
+<span
+class="math inline"><em>F</em> : <em>J</em><sup><em>k</em></sup>(<em>π</em>) → ℝ<sup><em>n</em></sup></span>
+representing a differential equation, we can plug in any section <span
+class="math inline"><em>f</em> : <em>M</em> → <em>E</em></span> by doing
+the precomposition <span
+class="math display"><em>F</em> ∘ <em>j</em><sub>−</sub><sup><em>k</em></sup>(<em>f</em>) : <em>M</em> → <em>J</em><sup><em>k</em></sup>(<em>π</em>) → ℝ<sup><em>n</em></sup></span></p>
+<p>Now if we have a submanifold given by the zero set of a function on
+the jet space <span class="math inline"><em>F</em></span>, a
+<strong>solution</strong> to the differential equation is a section
+<span class="math inline"><em>f</em></span> such that its prolongation
+lies entirely within said submanifold: <span
+class="math display"><em>F</em> ∘ <em>j</em><sub><em>p</em></sub><sup><em>k</em></sup>(<em>f</em>) = 0,  ∀<em>p</em> ∈ <em>M</em></span></p>
+<p><code class="verbatim">Problem:</code> What happens if we have a
+solution to the differential equation that doesn't come from a section
+of the original bundle? How do we just isolate the proper solutions?
+This is where <strong>contact forms</strong> come in</p>
+<h2 id="contact-forms">Contact forms</h2>
+<p>Let <span
+class="math inline"><em>Ω</em><sup>1</sup>(<em>J</em><sup><em>k</em></sup>(<em>π</em>))</span>
+be the one-forms of jet space. The space of <strong>contact
+forms</strong> is the subspace <span
+class="math display">{<em>θ</em> ∈ <em>Ω</em><sup>1</sup>(<em>J</em><sup><em>k</em></sup>(<em>π</em>)) ∣ <em>θ</em>(<em>d</em><em>j</em><sup><em>k</em></sup><em>f</em>) = 0,  ∀<em>f</em> ∈ <em>Γ</em>(<em>M</em>)}</span></p>
+<p>where <span
+class="math inline"><em>d</em><em>j</em><sup><em>k</em></sup><em>f</em> : <em>T</em><em>M</em> → <em>T</em><em>J</em><sup><em>k</em></sup>(<em>π</em>)</span>
+is the pushforward (differential) (not the exterior derivative) of the
+prolongation</p>
+<p><code class="verbatim">Cartan distribution:</code> Let <span
+class="math inline"><em>p</em> ∈ <em>J</em><sup><em>k</em></sup>(<em>π</em>)</span>.
+The kernels of all contact forms carve out a subspace of the tangent
+space called the <strong>Cartan distribution</strong></p>
+<p><code class="verbatim">Local coordinates:</code> The local
+coordinates on the jet space induce a basis of <strong>basic contact
+one-forms</strong> <span
+class="math inline"><em>θ</em><sub><em>I</em></sub></span> for all
+multi-indices <span class="math inline"><em>I</em></span> of order <span
+class="math inline"> ≤ <em>k</em> − 1</span>. <span
+class="math display"><em>θ</em><sub><em>I</em></sub><sup><em>α</em></sup> = <em>d</em><em>u</em><sub><em>I</em></sub><sup><em>α</em></sup> − <em>u</em><sub><em>I</em><em>j</em></sub><sup><em>α</em></sup><em>d</em><em>x</em><sup><em>j</em></sup></span>
+where <span class="math inline"><em>α</em></span> corresponds to the
+coordinates on the bundle <span class="math inline"><em>E</em></span>,
+and <span class="math inline"><em>I</em><em>j</em></span> means
+appending <span class="math inline"><em>j</em></span> to the multi-index
+<span class="math inline"><em>I</em></span>.</p>
+<h3 id="intuition-1">Intuition</h3>
+<p>Since the jet space is a smooth manifold, we can define differential
+forms on it: they're just sections of the exterior powers of the
+cotangent bundle: <span
+class="math display">⋀<sup><em>ℓ</em></sup><em>T</em><sub><em>p</em></sub><sup>*</sup><em>J</em><sup><em>k</em></sup>(<em>π</em>) → <em>J</em><sup><em>k</em></sup>(<em>π</em>)</span></p>
+<p><code class="verbatim">Local coords:</code> <span
+class="math inline"><em>θ</em> = <em>d</em><em>u</em> − <em>u</em><sub><em>j</em></sub><em>d</em><em>x</em><sup><em>j</em></sup></span>.
+The condition <span class="math inline"><em>θ</em> = 0</span> on all
+prolongations, means that <span
+class="math inline"><em>d</em><em>f</em> = ∂<sub><em>i</em></sub><em>f</em><em>d</em><em>x</em><sup><em>i</em></sup></span>
+for all sections <span class="math inline"><em>f</em>.</span> In other
+words, the coordinate <span
+class="math inline"><em>u</em><sub><em>j</em></sub></span> on the jet
+space actually acts like the derivative on all sections <span
+class="math inline"><em>f</em> : <em>M</em> → <em>E</em></span>.
+Similarly, the other contact forms assure that the other coordinates of
+the jet space act like derivatives of sections of the original
+bundle.</p>
+<p><code class="verbatim">Consequence:</code> Now, it turns out that
+things which satisfy the differential equation carved out by some
+submanifold of the jet space will be actual prolongations if and only if
+all of the contact forms vanish on them.</p>
+<h3 id="horizontal-and-vertical-differentials">Horizontal and vertical
+differentials</h3>
+<p>Because we have <span
+class="math inline"><em>θ</em><sub><em>I</em></sub><sup><em>α</em></sup> = <em>d</em><em>u</em><sub><em>I</em></sub><sup><em>α</em></sup> − <em>u</em><sub><em>I</em><em>j</em></sub><sup><em>α</em></sup><em>d</em><em>x</em><sup><em>j</em></sup></span>,
+we can write <span
+class="math display"><em>d</em><em>u</em><sub><em>I</em></sub><sup><em>α</em></sup> = <em>θ</em><sub><em>I</em></sub><sup><em>α</em></sup> + <em>u</em><sub><em>I</em><em>j</em></sub><sup><em>α</em></sup><em>d</em><em>x</em><sup><em>j</em></sup>.</span></p>
+<p>So the ordinary exterior derivative on the jet space breaks down into
+the sum of the contact forms and the exterior derivatives on the
+coordinate part of the jet space.</p>
+<p>Writing the definition of the ordinary exterior derivative for a
+smooth function on the jet space</p>
+<p><span
+class="math display"><em>d</em><em>f</em> = ∂<sub><em>i</em></sub><em>f</em><em>d</em><em>x</em><sup><em>i</em></sup> + ∑<sub>|<em>I</em>| ≥ 0</sub>∂<sub><em>u</em><sub><em>I</em></sub><sup><em>α</em></sup></sub><em>f</em><em>d</em><em>u</em><sub><em>I</em></sub><sup><em>α</em></sup></span></p>
+<p>we can substitute in <span
+class="math inline"><em>d</em><em>u</em><sub><em>I</em></sub><sup><em>α</em></sup> = <em>θ</em><sub><em>I</em></sub><sup><em>α</em></sup> + <em>u</em><sub><em>I</em><em>j</em></sub><sup><em>α</em></sup><em>d</em><em>x</em><sup><em>j</em></sup></span>
+to find</p>
+<p><span
+class="math display"><em>d</em><em>f</em> = (∂<sub><em>i</em></sub><em>f</em> + ∑<sub>|<em>I</em>| ≥ 0</sub><em>u</em><sub><em>I</em><em>i</em></sub><sup><em>α</em></sup>)<em>d</em><em>x</em><sup><em>i</em></sup> + ∑<sub>|<em>I</em>| ≥ 0</sub>∂<sub><em>u</em><sub><em>I</em></sub><sup><em>α</em></sup></sub><em>f</em><em>θ</em><sub><em>I</em></sub></span></p>
+<p><code class="verbatim">Horizontal:</code> We define the horizontal
+differential as <span
+class="math display"><em>d</em><sub><em>H</em></sub><em>f</em> = (∂<sub><em>i</em></sub><em>f</em> + ∑<sub>|<em>I</em>| ≥ 0</sub><em>u</em><sub><em>I</em><em>i</em></sub><sup><em>α</em></sup>)<em>d</em><em>x</em><sup><em>i</em></sup></span></p>
+<p><code class="verbatim">Vertical:</code> We define the vertical
+differential as <span
+class="math display"><em>d</em><sub><em>V</em></sub><em>f</em> = ∑<sub>|<em>I</em>| ≥ 0</sub>∂<sub><em>u</em><sub><em>I</em></sub><sup><em>α</em></sup></sub><em>f</em><em>θ</em><sub><em>I</em></sub></span></p>
+<p><code class="verbatim">Higher degrees:</code> We can seee how to
+extend these formulas to higher degrees by simply taking the ordinary
+exterior derivative on higher degrees and then collecting terms
+appropriately.</p>
+<p><span
+class="math display"><em>d</em><em>θ</em><sub><em>I</em></sub><sup><em>α</em></sup> = <em>d</em><em>x</em><sup><em>i</em></sup> ∧ <em>θ</em><sub><em>I</em><em>i</em></sub><sup><em>α</em></sup></span></p>
+<p></p>
+<p>A basis element of <span
+class="math inline"><em>Ω</em><sup><em>p</em>, <em>q</em></sup></span>
+has the form <span
+class="math display"><em>f</em><em>d</em><em>x</em><sup><em>i</em><sub>1</sub></sup> ∧ … ∧ <em>d</em><em>x</em><sup><em>i</em><sub><em>p</em></sub></sup> ∧ <em>θ</em><sub><em>I</em><sub>1</sub></sub><sup><em>α</em><sub>1</sub></sup> ∧ … ∧ <em>θ</em><sub><em>I</em><sub><em>q</em></sub></sub><sup><em>α</em><sub><em>q</em></sub></sup></span></p>
+<p>The action of <span
+class="math inline"><em>d</em><sub><em>V</em></sub></span> is zero on
+everything except <span class="math inline"><em>f</em></span>, on which
+it introduces an extra factor of <span
+class="math inline"><em>θ</em></span>, sending <span
+class="math inline"><em>q</em> → <em>q</em> + 1</span></p>
+<p>The action of <span
+class="math inline"><em>d</em><sub><em>H</em></sub></span> acts on <span
+class="math inline"><em>f</em></span> and on <span
+class="math inline"><em>θ</em></span>, introducing an extra <span
+class="math inline"><em>d</em><em>x</em></span> factor, sending <span
+class="math inline"><em>p</em> → <em>p</em> + 1</span></p>
+<h2 id="variational-bicomplex">Variational bicomplex</h2>
+<p><span
+class="math inline"><em>Ω</em><sup>•</sup>(<em>J</em><sup>∞</sup><em>E</em>)</span>
+is bigraded by wedge products of the underlying coordinates of the
+manifold <span class="math inline"><em>M</em></span> and wedge products
+of the contact forms.</p>
+<h3 id="types-of-objects">Types of objects</h3>
+<p><code class="verbatim">Horizontal degree:</code> Only goes up to the
+dimension of the manifold <span class="math inline"><em>M</em>.</span>
+This degree corresponds to the dimension of the submanifold you're
+integrating over.</p>
+<p><code class="verbatim">Vertical degree:</code> Can be arbitrarily
+large. This degree corresponds to the number of infinitesimal
+variations</p>
+<ol>
+<li><p>Horizontal</p>
+<p><code class="verbatim">Lagrangians:</code> These live in <span
+class="math inline"><em>Ω</em><sup><em>n</em>, 0</sup></span>, taking
+the form <span
+class="math inline"><em>L</em><em>d</em><em>x</em><sup>1</sup> ∧ … ∧ <em>d</em><em>x</em><sup><em>n</em></sup></span>,
+where <span
+class="math inline"><em>L</em> : <em>J</em><sup>∞</sup><em>E</em> → ℝ<sup><em>n</em></sup></span></p>
+<p><code class="verbatim">Conserved currents:</code> Noether's theorem
+lives on <span
+class="math inline"><em>Ω</em><sup><em>n</em> − 1, 0</sup></span></p></li>
+<li><p>Vertical</p>
+<p>We interpret elements of <span
+class="math inline"><em>Ω</em><sup>0, <em>q</em></sup></span> as taking
+in infinitesimal variations <span
+class="math inline"><em>δ</em><sub><em>i</em></sub><em>u</em></span> and
+splitting out real numbers.</p>
+<p><code class="verbatim">Euler-Lagrange equations:</code> <span
+class="math inline"><em>E</em> ∈ <em>Ω</em><sup><em>n</em>, 1</sup></span>
+takes in <span class="math inline"><em>δ</em><em>u</em></span> and spits
+out <span class="math inline">$\dfrac{\delta  L}{\delta  u} \delta u
+d^{n} x$</span></p></li>
+</ol>
+<h2 id="source-form">Source form</h2>
+<p>Source forms are elements of <span
+class="math inline"><em>Ω</em><sup><em>n</em>, 1</sup></span> that have
+no contact forms of shape <span
+class="math inline"><em>θ</em><sub><em>I</em></sub></span> for <span
+class="math inline">|<em>I</em>| &gt; 0</span>.</p>
+<h3 id="euler-lagrange-operator">Euler-Lagrange operator</h3>
+<p>Given a Langragian <span
+class="math inline"><em>L</em><em>d</em><em>x</em><sup>1</sup>…<em>d</em><em>x</em><sup><em>n</em></sup></span>,
+the vertical differential has a unique decomposition into</p>
 <h1 id="theorems">Theorems</h1>
 <h1 id="examples">Examples</h1>
+<h2 id="ordinary-smooth-functions">Ordinary smooth functions</h2>
+<p>We think of smooth maps <span
+class="math inline"><em>f</em> : <em>M</em> → ℝ<sup><em>n</em></sup></span>
+as sections of the trivial bundle <span
+class="math inline"><em>M</em> × ℝ<sup><em>n</em></sup> → <em>M</em></span>.</p>
+<p>The jet bundles <span
+class="math inline"><em>J</em><sup><em>k</em></sup>(<em>M</em> × ℝ<sup><em>n</em></sup>)</span>
+have the data of coordinates in <span
+class="math inline"><em>M</em></span>, coordinates in <span
+class="math inline">ℝ<sup><em>n</em></sup></span>, and all partial
+derivatives up to order <span class="math inline"><em>k</em></span>.</p>
+<p><code class="verbatim">Example:</code> <span
+class="math inline"><em>M</em> = ℝ</span> , <span
+class="math inline"><em>n</em> = 1</span>. The second jet space <span
+class="math inline"><em>J</em><sup>2</sup>(ℝ<sup>2</sup>)</span> then
+has dimension <span class="math inline">4</span>, with coordinates <span
+class="math inline">(<em>x</em>, <em>u</em>, <em>u</em><sub><em>x</em></sub>, <em>u</em><sub><em>x</em><em>x</em></sub>)</span>.
+Differential equations then define surfaces, like <span
+class="math inline"><em>u</em><sub><em>x</em><em>x</em></sub> + sin (<em>u</em>) = 0</span></p>
+<h2 id="one-dimensional-el-equations">One dimensional EL equations</h2>
+<p>Consider a Lagrangian <span
+class="math inline"><em>L</em> : <em>J</em><sup>1</sup>(<em>E</em>) → ℝ</span>.
+The actual Lagrangian density is then <span
+class="math inline">ℒ = <em>L</em>(<em>x</em>, <em>u</em>, <em>u</em><sub><em>x</em></sub>)<em>d</em><em>x</em> ∈ <em>Ω</em><sup>1, 0</sup></span>.</p>
+<p>In order to take the first variation, we apply the vertical
+differential.</p>
+<p><span class="math display">$$
+d_{V} \mathcal{L} = ( \dfrac{\partial  L}{\partial  u} \theta +
+\dfrac{\partial L}{\partial u_{x}} \theta_{x}) \wedge  dx
+$$</span></p>
+<p>Now we define <span class="math inline">$\eta = \dfrac{\partial
+L}{\partial u_{x}} \theta_{x} \in \Omega^{0,1} $</span></p>
+<p><span class="math inline">$d_{H} (\theta_{I}^{\alpha} ) &amp;= dx^{i}
+\wedge  \theta_{Ii}^{\alpha}$</span> <span
+class="math display"><em>d</em><sub><em>H</em></sub><em>f</em> = (∂<sub><em>i</em></sub><em>f</em> + ∑<sub>|<em>I</em>| ≥ 0</sub><em>u</em><sub><em>I</em><em>i</em></sub><sup><em>α</em></sup>)<em>d</em><em>x</em><sup><em>i</em></sup></span></p>
+<p>We have <span class="math inline">$d_{H} \eta = (\partial_{x}
+\dfrac{\partial L}{\partial u_{x}})dx \wedge \theta + \dfrac{\partial
+L}{\partial u_{x}} dx \wedge \theta_{x} $</span></p>
+<p>We get that <span class="math display">$$
+d_{V} \mathcal{L} = (\dfrac{\partial L}{\partial u} - \partial_{x}
+\dfrac{\partial  L}{\partial u_{x}} ) \theta \wedge dx - d_{H} \eta
+$$</span></p>
+<p>We define <span class="math inline">$E(\mathcal{L}) =
+(\dfrac{\partial L}{\partial u} - \partial_{x}
+\dfrac{\partial  L}{\partial u_{x}} ) \theta \wedge dx  $</span></p>
+<p><code class="verbatim">In general:</code> For any Lagrangian, we have
+<span
+class="math display"><em>d</em><sub><em>V</em></sub>ℒ = <em>E</em>(ℒ) + <em>d</em><sub><em>H</em></sub><em>η</em></span></p>
+<p><code class="verbatim">Noether's theorem:</code> <span
+class="math inline">$\eta = \dfrac{\partial L}{\partial u_{x}}
+\theta_{x} \in \Omega^{0,1} $</span></p>
+<h2 id="noethers-theorems">Noether's theorems</h2>
+<p>An infinitesimal symmetry is a <strong>prolonged vector
+field</strong> from <span class="math inline"><em>E</em></span>.</p>
 </body>
 </html>
