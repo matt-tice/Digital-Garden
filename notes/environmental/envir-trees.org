@@ -1,0 +1,182 @@
+:PROPERTIES:
+:ID:       318b6973-adf8-4e2b-b41e-a25289edc1a9
+:END:
+#+title: trees
+#+filetags: :environment:
+
+* References
+
+
+
+* Summary
+
+
+* Types
+
+** Boreal
+
+=Soil:= Thin, acidic, nutrient-poor
+
+=Climate:= Long freezing winters; short summers
+
+*** Conifers
+
+=Needles:= Waxy needles prevent water loss and shed heavy snow
+
+**** Spruce
+
+Spruces work well in areas that firs and pines don't: waterlogged bogs and frozen permafrost. 
+
+=Needles:= Four-sided, sharp. Attached individually to pegs. These needles have low surface-area-to-volume ratio. This allows them to not dry out as easily. Their cells will actually produce special proteins that prevent ice crystals from forming inside of them down to *-50C*
+
+=Cones:= Hanging. These cones are tough and woody.  Thick overlapping scales /open and close/ in response to humidity --- they only release seeds during dry, windy weather. Spruce trees will slowly trickle out seeds over several years, but they also have *semi-serotinous* cones, which will open after wildfires, just like pines
+
+=Clones:= Just like with firs, low hanging branches will get buried in the moist sphagnum moss --- they sprout new roots and form dense rings of identical trees around the parent spruce!
+
+=Light:= Spruces can survive partial shade beneath a birch or aspen for decades, and then shoot upward once they get access to more light.
+
+=Shape:= Spruce trees have that classic Christmas triangular shape, allowing heavy wet snow to slide thing the ground without snapping the trunk
+
+
+***** Black spruce
+
+Wet, boggy, acidic peatlands
+
+=Soil:= Black spruce thrives in acidic, low-oxygen peat bogs, and in shallow permafrost. Pine taproots would drown here, and firs would starve. 
+
+***** White spruce
+
+=Soil:= Well-drained, richer, upland soils
+
+**** Pine
+
+Pine trees *adore the sun*. They can handle droughts easily. Because of this, they tend to grow in *harsh open spaces*.
+
+=Roots:= Very deep taproots allow them to reach underground water tables in dry, sandy, or rocky areas. 
+
+=Lower branches:= You'll often notice with pines that the lower part of their trunk is bare! They will deliberately shed lower branches as they get taller, in order to save energy and prevent fires on the ground from reaching the upper parts of the tree.
+
+=Upper branches:= To gather as much light as possible, pines have much denser upper branches than spruce or firs. This causes them to break under heavy snowfall
+
+=Soil:= Dry, sandy, nutrient-poor
+
+=Climate:= Sunny areas cleared by recent wildfires
+
+=Trunk:= Long and thin
+
+=Life:= 100-1000 years!
+
+=Bark:= Thick and scaly. It's full of *air pockets.* These pockets actually act as a kind of heat shield, allowing the tree to survive low-intensity fires that will wipe out thin-barked competition like balsam fir and paper birch.
+
+
+
+=Pine cones:= Serotinous (resin-sealed). Pine cones will actually remain *glued shut for years*, until the heat of a wildfire melts the resin, allowing them to open. At this point, the thousands of seeds in the pine cones will be released into the nutrient rich ash of the burned-down forest --- in this way, the next generation of pines grows with no competition!
+
+Other pines have cones with sharp tips on the ends of their scales, to deter animals like squirrels and birds from eating their seeds.
+
+=Needles:= Long and grouped in bundles of two to five. The needles are very acidic, and when they fall, they create a thick, slow-rotting carpet that releases growth-inhibiting chemicals into the soil, preventing weeds and rival seedlings from growing.
+
+=Mycorrhizae:= Pine roots work together with fungi: the fungi wrap around the roots, allowing them to acquire distant phosphorus and nitrogen
+
+**** Fir
+
+Firs like to grow in dense, dim areas. Because of this, they need specialized features to survive admist heavy competition
+
+=Needles:= Flat and soft; attach directly to the twig. They maximize surface area, giving them the ability to capture maximal sunlight in *dim areas*. They're like mini solar panels that capture the scarce dapple sunlight filtering through the canopy above. 
+
+
+
+=Seeds:= Large; they contain a lot of fats and nutrients, giving new seedlings enough fuel to push roots through thick moss and leaf litter, even without immediate sunlight.
+
+=Saplings:= Young firs can actually survive *30 to 50 years* as tiny sapplings, just biding their time until a nearby mature tree dies or gets blown down. They then have the capability to sprout up incredibly quickly once they get access to sunlight, beating out any other saplings!
+
+=Cloning:= When low, heavy branches of the fir droop down into the damp forest moss from the winter snow, they can actually sprout roots! They grow into new genetically identical fir trees, even without any sunlight or pollination
+
+=Dense:= Firs prefer dense shady forests. In fact, if they're left to grow in an open field, they'll have a hard time surviving, because their needles are so thin that they dry out easily in the sun and wind
+
+=Bark:= Smooth with resin blisters
+
+=Cones:= Upright, sitting on the *very tops* of the trees. They break apart scale by scale, allowing the wind to scatter the seeds. Because firs don't grow in open windy areas like larches, they don't need to drop their needles to give better access to the cones. They just use the high-altitude breeze to scatter their seeds and then drop the cones
+
+=Climate:= Cool, moist, and shaded
+
+=Soil:= Deeper. Often growing beneath taller spruce
+
+**** Larch
+
+=Needles:= Soft and feathery. In clusters that turn gold and fall every autumn. This is very useful, because larches grow in colder climates than other conifers, so if they didn't drop their needles, they'd rsk their needles getting frozen or torn apart from the harsh conditions
+
+=Climate:= Extremely waterlogged swamps and permafrost
+
+=Wind:= Larches like open, windy bogs
+
+=Cones:= Very small (1-4 cm). Sit upright on the branches, like firs. Young female cones are *bright colours*, like pink, red, or purple --- they absorb warmth and aid pollination, and turn brown later, as they mature. They open their scales in autumn and then stay attached to the bare winter branches of the larch for several years. Since the larch needles drop in the autumn, wind is able to access the cones easier, spreading the seeds out in the late autumn and winter. 
+
+*** Broadleaf
+
+**** Birch
+
+**** Aspen
+
+** Temperate
+
+=Seasons:= Needs four different seasons
+
+=Moisture:= Moderate rainfall
+
+=Soil:= Deep, fertile, enriched with fallen leaves
+
+*** Broadleaf deciduous
+
+=Leaves:= These trees shed their leaves in autumn *to conserve water* and survive freezing temperatures.
+
+
+
+**** Oak
+
+**** Maple
+
+**** Beech
+
+*** Conifers
+
+**** Redwood
+
+**** Cedar
+
+** Tropical
+
+=Climate:= Year-round warmth
+
+=Moisture:= Heavy, consisten rainfall
+
+=Soil:= Nutrient-poor. Organic material recycles rapidly
+
+=Roots:= Wide, shallow roots help trees stay stable in thin, wet soil, and absorb surface nutrients
+
+
+*** Broadleaf evergreens
+
+**** Palms
+
+**** Mahogany
+
+**** Kapok
+
+** Mediterranean
+
+=Climate:= Hot dry summers, mild wet winters
+
+=Soil:= Rocky, well-drained
+
+Resists periodic wildfires
+
+=Bark:= Dense bark insulates the inside of the tree from frequent forest fires
+
+*** Evergreens
+
+**** Cork oak
+
+**** Olive
+
+**** Cypress

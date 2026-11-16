@@ -24,6 +24,42 @@ Let \(\pi : E \rightarrow M \) be a fiber bundle. A local section of the bundle 
 
 Global sections are the case where \(U = M\). Such sections don't always exist, which is why local section are useful.
 
+** Derivatives of a section
+
+Let \(f: M \rightarrow E\) be a section of a fiber bundle. Take any open set around a point \(p \in M\) , \(U(p) \) and pick local coordinates \(x^{i}\). Since we have a fiber bundle, the local coordinates on \(E\) will look like \((x^{i}, y^{\alpha} )\) , where \(y^{\alpha }\) are the coordinates of the typical fiber \(F\). 
+
+In local coordinates, the section has the form
+\[
+f(x) = (x, \phi(x))
+\]
+where \(\phi: U \rightarrow F \). Then since \(F\) has local coordinates, we can view \(\phi\) in local coordinates as \(\phi^{\alpha}(x^{1}, \ldots, x^{n}) \), where each \(\phi^{\alpha}\) is now a map from \(\mathbb{R}^{n} \rightarrow \mathbb{R}\). We can thus take its derivative, which we define to be the partial derivative
+\[
+\partial_{i} \phi^{\alpha} =  \dfrac{\partial \phi^{\alpha} }{\partial x^{i}}
+\]
+
+
+*** Notes
+
+This derivative is *coordinate dependent* --- it's very physics-y. There's no way to say that a section is /constant/ --- it can look like it has zero derivative in one trivialization, but then have non-zero derivative in another.
+
+[[id:7abc01c6-d425-470e-8e74-914fc08df895][Connections]] solve this problem --- they essentially pick a certain section to be equal to zero (like picking a certain section to be light) and then forcing everything else to mold around that.
+        - actually that /is/ apparently related to how connections work in physics (props to my intuition!)
+
+Consider the bundle \(TM \rightarrow M\). We take the first jet space \(J^{1} (TM)\). The elements of this jet space correspond uniquely to *horizontal subspaces* (which are used to define Ehresmann connections). So a section
+\[
+\Gamma: TM \rightarrow J^{1} (TM)
+\]
+is a choice of horizontal subspace at each point in the tangent bundle. 
+
+In local coordinates on the tangent bundle \( (x^{\mu} , v^{\lambda} )\), we can express the section
+\[
+\Gamma(x^{\mu} , v^{\lambda} ) = (x^{\mu} , v^{\lambda} , \Gamma_{\mu\nu}^{\lambda} (x) v^{\nu} )
+\]
+
+
+
+=Gauge theory:= The local coordinates are also the same as picking a *gauge* 
+
 ** Jet equivalence on a fiber bundle
 
 Let \(\pi : E \rightarrow M\) be a smooth fiber bundle, and let \(\Gamma(p)\) be the space of local sections whose domains contain \(p \in M.\)
@@ -34,12 +70,214 @@ Two smooth sections \(f,g \in \Gamma(p)\) are *\(k\)-equivalent* if all of their
 
 ** Jet bundle
 
-Let \(E \rightarrow M\) be a fiber bundle, and let \(p \in M\). The \(k\)th jet manifold of \(\pi \) is the set
+Let \(\pi : E \rightarrow M\) be a fiber bundle, and let \(p \in M\). The \(k\)th jet manifold of \(\pi \) is the set
 \[
 J^{k}(\pi) = \{ j_{p}^{k} f \mid p \in M, f \in \Gamma(p) \}
 \]
 
+** Prolongation
+
+Let \(\pi : E \rightarrow M\) be a fiber bundle and let \(f : M \rightarrow E\) be a section. The *\(k\)th jet prolongation* of \(f\) 
+\[
+j^{k} f : M \rightarrow J^{k}(\pi) 
+\]
+is defined by 
+
+\[
+(j^{k} f)(p) = j^{k}_{p} f = (p, f(p), \partial_{i} f(p), \partial_{ij} f (p), \ldots,)
+\]
+where in the last equation we wrote the jet in the induced local coordinates of the jet space.
+
+
+*** Intuition
+
+The coordinates on the jet bundle are just formal symbols. There's no fixed underlying function on the jet spaces that has its derivatives being taken. Instead, for any fixed section of the original bundle \(E \rightarrow M\), you perform prolongation in order to turn it into an actual function living on the jet space. 
+
+=Equivalence classes:= Because the points on the jet bundle are, by definition, equivalence classes of sections and their derivatives, we have a built in way of moving a given section onto the jet space.
+
+=Functions on jet space:= If we have some \(F: J^{k}(\pi ) \rightarrow \mathbb{R}^{n}\) representing a differential equation, we can plug in any section \(f: M \rightarrow E\) by doing the precomposition
+\[
+F \circ j^{k}_{-} (f): M \rightarrow J^{k}(\pi ) \rightarrow \mathbb{R}^{n}
+\]
+
+Now if we have a submanifold given by the zero set of a function on the jet space \(F\), a *solution* to the differential equation is a section \(f\) such that its prolongation lies entirely within said submanifold:
+\[
+F \circ j^{k}_{p}(f) = 0, \quad \forall p \in M
+\]
+
+=Problem:= What happens if we have a solution to the differential equation that doesn't come from a section of the original bundle? How do we just isolate the proper solutions? This is where *contact forms* come in
+
+** Contact forms
+
+Let \(\Omega^{1}(J^{k}(\pi ))\) be the one-forms of jet space. The space of *contact forms* is the subspace
+\[
+\{ \theta \in \Omega^{1} (J^{k} (\pi )) \mid \theta(d j^{k} f ) = 0, \quad \forall f \in \Gamma(M)\}
+\]
+
+where \(d j^{k} f : T M \rightarrow T J^{k}(\pi ) \) is the pushforward (differential) (not the exterior derivative) of the prolongation
+
+=Cartan distribution:= Let \(p \in J^{k} (\pi )\). The kernels of all contact forms carve out a subspace of the tangent space called the *Cartan distribution* 
+
+=Local coordinates:= The local coordinates on the jet space induce a basis of *basic contact one-forms* \(\theta_{I}\) for all multi-indices \(I\) of order \(\leq k-1\). 
+\[
+\theta_{I}^{\alpha }= du_{I}^{\alpha }- u_{Ij}^{\alpha }dx^{j}
+\]
+where \(\alpha \) corresponds to the coordinates on the bundle \(E\), and \(Ij\) means appending \(j\) to the multi-index \(I\).
+
+*** Intuition
+
+Since the jet space is a smooth manifold, we can define differential forms on it: they're just sections of the exterior powers of the cotangent bundle:
+\[
+\bigwedge^{\ell} T^{*}_{p} J^{k} (\pi ) \rightarrow J^{k}(\pi )
+\]
+
+=Local coords:= \(\theta = du - u_{j} dx^{j}\). The condition \(\theta = 0\) on all prolongations, means that \(df = \partial_{i} f dx^{i}\) for all sections \(f.\) In other words, the coordinate \(u_{j}\) on the jet space actually acts like the derivative on all sections \(f: M \rightarrow E\). Similarly, the other contact forms assure that the other coordinates of the jet space act like derivatives of sections of the original bundle.
+
+=Consequence:= Now, it turns out that things which satisfy the differential equation carved out by some submanifold of the jet space will be actual prolongations if and only if all of the contact forms vanish on them.
+
+
+*** Horizontal and vertical differentials
+
+Because we have \(\theta_{I}^{\alpha }= du_{I}^{\alpha }- u_{Ij}^{\alpha }dx^{j}\), we can write 
+\[
+du_{I}^{\alpha} = \theta_{I}^{\alpha} + u_{Ij}^{\alpha }dx^{j}.
+\]
+
+So the ordinary exterior derivative on the jet space breaks down into the sum of the contact forms and the exterior derivatives on the coordinate part of the jet space.
+
+Writing the definition of the ordinary exterior derivative for a smooth function on the jet space
+
+\[
+df = \partial_{i} f dx^{i} + \sum_{|I| \geq 0} \partial _{u_{I}^{\alpha }} f du_{I}^{\alpha }
+\]
+
+we can substitute in \(du_{I}^{\alpha} = \theta_{I}^{\alpha} + u_{Ij}^{\alpha }dx^{j}\) to find
+
+\[
+df = (\partial_{i} f + \sum_{|I| \geq 0} u_{I i}^{\alpha}) dx^{i} + \sum_{|I| \geq 0} \partial _{u_{I}^{\alpha }} f \theta_{I}
+\]
+
+
+=Horizontal:= We define the horizontal differential as
+\[
+d_{H} f = (\partial_{i} f + \sum_{|I| \geq 0} u_{I i}^{\alpha}) dx^{i}
+\]
+
+
+=Vertical:= We define the vertical differential as
+\[
+d_{V} f = \sum_{|I| \geq 0} \partial _{u_{I}^{\alpha }} f \theta_{I}
+\]
+
+
+=Higher degrees:= We can seee how to extend these formulas to higher degrees by simply taking the ordinary exterior derivative on higher degrees and then collecting terms appropriately.
+
+\[
+d\theta_{I}^{\alpha} = dx^{i} \wedge \theta_{Ii}^{\alpha} 
+\]
+
+
+\begin{align*}
+d_{V} (d x^{i}) &= 0 \\
+d_{H} (d x^{i}) &= 0 \\
+d_{V} (\theta_{I}^{\alpha} ) &= 0 \\
+d_{H} (\theta_{I}^{\alpha} ) &= dx^{i} \wedge  \theta_{Ii}^{\alpha}
+\end{align*}
+
+A basis element of \(\Omega^{p,q}\) has the form
+\[
+f dx^{i_{1}} \wedge \ldots \wedge dx^{i_{p} }\wedge \theta_{I_{1}}^{\alpha_{1}} \wedge \ldots \wedge \theta_{I_{q}}^{\alpha_{q}}
+\]
+
+The action of \(d_{V}\) is zero on everything except \(f\), on which it introduces an extra factor of \(\theta\), sending \(q \rightarrow q+1\)
+
+The action of \(d_{H}\) acts on \(f\) and on \(\theta\), introducing an extra \(dx\) factor, sending \(p \rightarrow p+1\)
+
+
+** Variational bicomplex
+
+\(\Omega^{\bullet} (J ^{\infty} E)\) is bigraded by wedge products of the underlying coordinates of the manifold \(M\) and wedge products of the contact forms.
+
+*** Types of objects
+
+=Horizontal degree:= Only goes up to the dimension of the manifold \(M.\) This degree corresponds to the dimension of the submanifold you're integrating over.
+
+=Vertical degree:= Can be arbitrarily large. This degree corresponds to the number of infinitesimal variations
+
+**** Horizontal
+
+=Lagrangians:= These live in \(\Omega^{n,0}\), taking the form \(L dx^{1}  \wedge  \ldots \wedge dx^{n}\), where \(L: J^{\infty}E \rightarrow \mathbb{R}^{n}\)
+
+=Conserved currents:= Noether's theorem lives on \(\Omega^{n-1,0}\)
+
+**** Vertical
+
+We interpret elements of \(\Omega^{0, q}\) as taking in infinitesimal variations \(\delta_{i} u\) and splitting out real numbers.
+
+=Euler-Lagrange equations:= \(E \in \Omega^{n,1}\) takes in \(\delta u\) and spits out \(\dfrac{\delta  L}{\delta  u} \delta u d^{n} x\)
+
+
+
+
+** Source form
+
+Source forms are elements of \(\Omega^{n,1}\) that have no contact forms of shape \(\theta_{I}\) for \(|I| > 0\).
+
+
+*** Euler-Lagrange operator
+
+Given a Langragian \(L dx^{1} \ldots dx^{n}\), the vertical differential has a unique decomposition into 
 
 * Theorems
 
 * Examples
+
+** Ordinary smooth functions
+
+We think of smooth maps \(f: M \rightarrow \mathbb{R}^{n}\) as sections of the trivial bundle \(M \times \mathbb{R}^{n}  \rightarrow M\). 
+
+The jet bundles \(J^{k} (M \times \mathbb{R}^{n}) \) have the data of coordinates in \(M\), coordinates in \(\mathbb{R}^{n}\), and all partial derivatives up to order \(k\).
+
+=Example:= \(M = \mathbb{R}\) , \(n  = 1\). The second jet space \(J^{2}(\mathbb{R}^{2})\) then has dimension \(4\), with coordinates \((x, u, u_{x}, u_{xx})\). Differential equations then define surfaces, like \(u_{xx} + \sin(u) = 0\)
+
+
+** One dimensional EL equations 
+
+Consider a Lagrangian \(L: J^{1}(E) \rightarrow \mathbb{R}\). 
+ The actual Lagrangian density is then \(\mathcal{L} = L(x,u,u_{x}) dx \in \Omega^{1,0}\).
+
+In order to take the first variation, we apply the vertical differential.
+
+\[
+d_{V} \mathcal{L} = ( \dfrac{\partial  L}{\partial  u} \theta + \dfrac{\partial L}{\partial u_{x}} \theta_{x}) \wedge  dx
+\]
+
+Now we define \(\eta = \dfrac{\partial L}{\partial u_{x}} \theta_{x} \in \Omega^{0,1} \)
+
+$d_{H} (\theta_{I}^{\alpha} ) &= dx^{i} \wedge  \theta_{Ii}^{\alpha}$
+\[
+d_{H} f = (\partial_{i} f + \sum_{|I| \geq 0} u_{I i}^{\alpha}) dx^{i}
+\]
+
+
+We have \(d_{H} \eta = (\partial_{x} \dfrac{\partial L}{\partial u_{x}})dx \wedge \theta + \dfrac{\partial L}{\partial u_{x}} dx \wedge \theta_{x} \)
+
+We get that 
+\[
+d_{V} \mathcal{L} = (\dfrac{\partial L}{\partial u} - \partial_{x} \dfrac{\partial  L}{\partial u_{x}} ) \theta \wedge dx - d_{H} \eta
+\]
+
+We define \(E(\mathcal{L}) = (\dfrac{\partial L}{\partial u} - \partial_{x} \dfrac{\partial  L}{\partial u_{x}} ) \theta \wedge dx  \)
+
+=In general:= For any Lagrangian, we have 
+\[
+d_{V} \mathcal{L} = E(\mathcal{L}) + d_{H} \eta
+\]
+
+=Noether's theorem:= \(\eta = \dfrac{\partial L}{\partial u_{x}} \theta_{x} \in \Omega^{0,1} \)
+
+
+** Noether's theorems
+
+An infinitesimal symmetry is a *prolonged vector field* from \(E\).
+

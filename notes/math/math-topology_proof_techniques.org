@@ -1,0 +1,92 @@
+:PROPERTIES:
+:ID:       f8332457-ef31-4c06-bbbb-b82baee05722
+:END:
+#+title: topology proof techniques
+#+filetags: :math:techniques:
+
+* References
+
+
+
+* Summary
+
+
+* Tube arguments
+
+=Idea:= Take a bunch of local neighbourhoods around slices of a compact set, and then use compactness to glue all these slices together
+
+** example: tube lemma
+
+Let \(X,Y\) be topological spaces with \(Y\) compact. If \(U \subseteq X \times Y\) is open, then for any \(\{x_{0} \} \times Y \in U \), there is an open neighbourhood \(u \in V \subseteq X\) such that 
+\[
+V \times Y \subseteq U
+\]
+
+*** Proof
+
+Since \(U\) is open, we can find open neighbourhoods in the product topology containing \((x_{0}, y)\) for any \(y \in Y\). In particular, we can take these neighbourhoods to be basis elements:
+\[
+(x_{0}, y) \in V_{y} \times W_{y} \subseteq  U.
+\]
+
+=Compactness:= Since \(Y\) is compact and \(\cup_{y} W_{y} = Y\), we can find a finite subcover \(\cup_{i} W_{y_{i}} = Y\).
+
+=Intersection:= We take \(V = \cap_{i} V_{y_{i}}\) which is an open set (since it's a finite intersection) which contains \(x_{0}\). 
+
+Now \((x, y) \in V \times Y\) implies \(x \in V_{y_{i}}\) for all \(y_{i}\), and \(y \in Y = \cup_{i} W_{y_{i}}\). So there's some \(y_{j}\) for which 
+\[
+(x,y) \in V_{y_{j}} \times W_{y_{j}} \subseteq U.
+\]
+
+Thus \((x_{0}, y) \in V \times Y \subseteq U.\)
+
+*** Intuition
+
+The tube lemma says that we can widen any slice in an open set into a tube, as long as the length of the slice is compact.
+
+** Example: Projections with compactness are closed
+
+Let \(Y\) be compact. Then for any space \(X\), the projection map \(\pi_{1} : X \times Y \rightarrow X\) is closed.
+
+*** Proof
+
+Let \(C \subseteq X \times Y\) be closed. We'll show that \(\pi_{1}(C)^{c} \) is open. Take any \(x_{0} \in \pi_{1} (C)^{c}\). Then 
+\[
+\{ x_{0} \} \times Y \subseteq (X \times Y) \setminus C = C^{c}.
+\]
+
+Since \(C\) is closed, \(C^{c}\) is open.
+
+=Tube lemma:= We apply the tube lemma to get an open neighbourhood \((x_{0} , y ) \in V \times Y \subseteq C^{c} \). Note that if \( v \in \pi_{1}(C) \) then \((v,y) \in C\) , so \((v,y) \ne V \times Y \subseteq  C^{c}\) and thus \(v \ne V\). So
+\[
+V \cap \pi_{1}(C) = \varnothing. 
+\]
+
+We have thus found an open neighbourhood of \(x_{0}\) entirely contained in \(\pi_{1}(C)^{c} \). Thus \(\pi_{1}(C)^{c} \) is open.
+
+*** Intuition
+
+The idea of the proof is very simple: we take any point \(x_{0}\) outside of \(\pi_{1}(C) \) and consider the slice over it. We can then enlarge the slice to a tube. In the projection, the widening corresponds to creating an open neighbourhood around \(x_{0}\) which doesn't intersect \(\pi_{1} (C) \). 
+
+** Compact Hausdorff spaces are normal
+
+** Whitehead's theorem
+
+** Uniform continuity on compact metric spaces
+
+** Wallace's theorem
+
+** Tychonoff theorem
+
+** Mapping space from locally compact is exponential
+
+** Generalization of tube lemma
+
+* Definitions
+
+
+
+
+* Theorems
+
+* Examples

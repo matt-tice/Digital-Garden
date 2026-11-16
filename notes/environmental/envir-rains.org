@@ -1,0 +1,77 @@
+:PROPERTIES:
+:ID:       b03290fa-cfb9-4858-9b71-1a4c46b68854
+:END:
+#+title: rains
+#+filetags: :environmental:geography:
+
+* References
+
+
+
+* Summary
+
+
+* Thunderstorms
+
+As opposed to the case of ordinary rainfall, which occurs due to the slow, gentle lifting of moist air, thunderstorms come from *rapid, violent upward air currents* 
+
+** Electricity
+
+=Charge:= As the air quickly rises into the upper atmosphere, much *higher than ordinary clouds;* the water droplets cool and collide with *ice particles*, which strip their electrons, generating a charge. 
+
+=Charge separation:= The positively charged ice particles get carried to the top of the cloud, while the heavier, negatively charged particles sink to the middle and bottom.
+
+=Discharge:= As the charge grows, the air provides insulation, preventing it from reaching the ground. Eventually the charge becomes so great that it breaks through the insulation, creating *lightning* --- which either goes directly to earth, or hops between different parts of the cloud.
+
+=Thunder:= The massive bolt of lightning is so hot, it heats the surrounding air to around *50,000F*, causing a massive shockwave called *thunder.* 
+
+*** Lightning
+
+=Being hit:= The vast majority of people hit by lightning survive! This is because when you get hit, the electrical current moves over the *outside of the body*, within a fraction of a second, rather than travelling /through/ the body and reaching your organs.
+
+=Quickness:= Because the lightning travels so fast, it doesn't have time to trasmit a huge amount of energy to your body
+
+=Skin:= Skin has pretty high electrical resistance! (go us!). Consequently, the lightning avoids trying to penetrate the skin.
+
+=Steam cushion:= When lightning hits you, it immediately vapourizes any sweat or rainwater on your skin. This creates a steam cushion around you, which helps carry the electricity over the outside of your skin
+
+=Indirect:= Most of the time, lightning doesn't hit someone directly, if it does at all. If it hits the ground nearby, the electricity can spread through the soil, travel up one of your legs and down the other, back into the ground. If it hits a nearby tree or pole, it can jump sideways into you. If it travels through a metal object that is connected to you, it can also reach you.
+
+** Causes
+
+Every thunderstorm needs three things:
+
+=Moisture:= From warm oceans, lakes, and damp ground evaporate water
+
+=Atmospheric instability:= Warm air that gets trapped at ground level wants to push upward. Once it's finally able to, it shoots up quickly. The layer of air that blocks the warm air from rising is called a *capping inversion.* 
+
+=Lift:= The cause that makes the warm air able to break through and finally rise. For example, a cold front.
+
+** Capping inversion
+
+Weather patterns often push a thin layer of warm dry air roughly a mile above the ground. This creates a temperature inversion, where there's a region of *warm air between two regions of cold air*.
+
+=Capping:= When warm air near the earth rises, it cools down, and by the time it meets the trapped warm air cap, it's cooler than it, causing the relatively cooler ground air to sink back down
+
+=Temperature difference:= As the cap prevents the warm ground air from mixing with the higher cool air, the temperature differential increases. Eventually the trapped surface air gets hot enough, or a cold front comes in, pushing the warm air upwards, breaking through the cap
+
+*** Latent heat release
+
+=Buoyancy:= Cooler air is *less buoyant* --- this is because water vapour condenses as it cools. So when the warm surface air is finally released, it's able to easily cut through the higher, cooler air.
+
+=Self-heating:= Condensation actually *releases heat* back into the air, warming the upward-moving surface air, keeping it hotter than its very cool surroundings for miles up into the upper atmosphere.
+
+** Convection
+
+** Rainfall
+
+
+
+** Clouds
+
+=Cumulonimbus:= Gigantic
+
+* Supercells
+
+** Tornadoes
+

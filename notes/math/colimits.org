@@ -1,0 +1,108 @@
+:PROPERTIES:
+:ID:       7984b13c-f903-4d99-b047-73e544683acd
+:END:
+#+title: (co)limits
+#+filetags: :math:categories:colimits:
+
+
+* References
+
+
+* Summary
+
+* Definitions
+
+** Cones
+
+Given a functor \(F: \mathcal{D} \rightarrow \mathcal{C}\), a *cone* of \(F\) is \((C, \{ \phi_{D }\}_{D \in \mathcal{D}})\) such that 
+\[
+\phi_{D}: C \rightarrow F(D)
+\]
+and for all \(f: D_{1} \rightarrow D_{2}\), 
+\[
+\phi_{D_{1}} f = \phi_{D_{2}}
+\]
+
+
+** Limits (cones)
+
+Let \(F: \mathcal{D} \rightarrow \mathcal{C}\) be a diagram. A limit of \(F\) is a universal cone
+\[
+\lim F \rightarrow F(D)
+\]
+
+** Limits (Representables)
+
+Let \(F: \mathcal{D} \rightarrow \mathcal{C}\) be a diagram. A *limit* of *F* is an object \(\lim F\) such that 
+\[
+\operatorname{Hom}(A, \lim F) \cong  \operatorname{NT}(\Delta (A), F)
+\]
+is an isomorphism for all \(A \in \mathcal{C}\), where \(\Delta \) is the constant diagram functor, which sends \(A\) to the constant functor at \(A\).
+
+In other words, we have a natural isomorphism between presheaves
+\[
+\operatorname{Hom}(-, \lim F) \cong  \operatorname{NT}(\Delta (-), F) : \mathcal{C} \rightarrow \text{Set}
+\]
+
+** Limits (Adjoints)
+
+
+
+
+** Limits (Constructive)
+
+The limit of a diagram \(F: \mathcal{D} \rightarrow \mathcal{C}\) is the equalizer 
+
+\[
+\lim F \cong  eq( \prod_{D} F(D) \rightrightarrows \prod_{f: D \rightarrow E} F(E))
+\]
+
+where the first map projects onto the codomain with \(\pi_{E}\) and the second map is \(F(f) \pi_{D} \)
+
+* Theorems
+
+** Limits in Set
+
+Let \(F: \mathcal{D} \rightarrow \text{Set}\) 
+
+** Hom functors preserve limits
+
+\(\operatorname{Hom}(A, \lim F) \cong \lim \operatorname{Hom}(A, F(-)) \)
+
+*** Proof
+
+Consider \(\operatorname{Hom}_{\text{Set}}(X, \operatorname{Hom}(A, \lim F)) \cong  \)
+
+\(\operatorname{Hom}(A, \lim F) \cong NT(\Delta (A), F) \)
+
+** Limits preserve limits
+
+** Adjoints preserve (co)limits
+
+** Yoneda embedding preserves limits
+
+** Dense fully faithful preserves limits
+
+* Examples
+
+** (Co)equalizers
+
+An equalizer is the limit of the following diagram \( f,g: A \rightrightarrows B\). So it's a universal \((E, \phi)\) with \(E \xrightarrow{\phi} A \rightrightarrows B\).
+
+** (Co)products
+
+Products are the limits of discrete diagrams. They have a universal map into all of the factors of the product:
+\[
+\pi_{i} : \prod_{i} A_{i} \rightarrow A_{i}
+\]
+
+
+** Initial/terminal objects
+
+The terminal object is the limit of the empty diagram. Because it has no conditions, it has a unique map from every other object into it.
+
+** Pullbacks and pushouts
+
+A pullback is the limit of a diagram of the form \(f_{1}, f_{2}: A_{1}, A_{2} \rightarrow B\). So it's the upper left corner of a commuting square.
+
+

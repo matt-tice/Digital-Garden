@@ -1,0 +1,167 @@
+:PROPERTIES:
+:ID:       613b0037-637f-41fc-811d-e4b71c89de04
+:END:
+#+title: minerals
+#+filetags: :environment:
+
+* References
+
+
+
+* Summary
+
+Minerals are inorganic solids with ordered crystaline structure. They're the building blocks that form rocks
+
+* Criteria
+
+=Naturally occurring:= So we don't count things like lab-grown diamonds or synthetic rubies
+
+=Inorganic:= Cannot be made by living organisms. Therefore wood, pearls, and coal are not minerals
+
+=Solid:= Must be solid at room temperature and pressure. Liquid water and mercury thus don't count. Technically though, naturally occuring glacial ice /is a mineral!/ 
+
+=Definite chemical composition:= Every single sample of a fixed mineral has the exact same chemical elements in the same ratio. 
+
+=Crystaline:= The atoms are arranged in a periodic pattern.
+
+* Earth's crust
+
+=Oxygen/sulfur:= Nearly *47% of the crust* (by weight) is oxygen and sulfur. This is why we see so many minerals which are made up of (at least in part) those two elements.
+
+* Dana classification
+
+Minerals are classified using their *dominant negative ion* 
+
+** Silicates
+
+=Largest:= The most important group of minerals. They make up *90% of the earth's crust* 
+
+=Anion:= Silicon and oxygen \((SiO_{4})\). 
+
+=Hard:= 
+
+=Glassy:= 
+
+=Rocks:= They tend to form the bulk of igneous and metamorphic rocks
+
+*** Quartz (\(Si O_{2}\))
+
+=Crust:= Makes up 12-20% of the earth's crust
+
+*** Feldspar ()
+
+=Crust:= Makes up 60% of the earth's crust
+
+There's a bunch of different types of feldspar
+
+*** Mica ()
+
+There are 37 different types of mica
+
+** Carbonates
+
+=Anion:= Carbon and oxygen \((CO_{3})\).
+
+=Hardness:= 
+
+=Fizzling:= Because they contain carbon and oxygen, they'll react with acids like vinegar by fizzing and releasing \(CO_{2}\)
+
+*** Calcite (\(CaCO_{3}\))
+
+*** Dolomite (\(CaMg(CO_{3})_{2}\))
+
+** Oxides
+
+=Anion:= Oxygen and a metal
+
+=Metals:= Because they contain metals, people love to mine oxides
+
+=Iron age:= Because iron and tin are bonded to oxygen, it took humans thousands of years to learn how to acquire them. This is why the Bronze and Iron ages came so much later than the Stone and Copper ages
+
+=Smelting:= 
+
+=Aluminum:= This is so tightly bonded to oxygen, that humans couldn't extract it cheaply until electricity was harnessed in the late 1800s
+
+*** Hematite (\(Fe_{2} O_{3}\))
+
+*** Magnetite (\(Fe_{3} O_{4}\))
+
+*** Corundum (\(Al_{2} O_{3}\))
+
+=Hardness:= It's the *second hardest* mineral on earth, after diamond.
+
+*** Cassiterite (\(Sn O_{2}\))
+
+** Sulfides
+
+=Anion:= Sulfur and metal. Unlike oxides, they have metals but no oxygen.
+
+=Mining:= People also mine these a lot
+
+
+*** Pyrite (\(Fe S_{2}\))
+
+Also called *Fool's gold* 
+
+=Common:= The *most abundant* sulfide.
+
+*** Galena (\(Pb S\))
+
+The primary ore of lead
+
+*** Sphalerite (\((Zn, Fe) S\))
+
+=Zinc:= Accounts for 95% of all zinc extraction
+
+*** Chalcopyrite (\(Cu Fe S_{2}\))
+
+=Copper:= The most abundant ore of copper
+
+** Sulfates
+
+=Anion:= Sulfur and oxygen \((SO_{4})\) bonded to a metal
+
+*** Gypsum (\(CaSO_{4} \cdot 2 H_{2} O\))
+
+=Soft:= 
+
+*** Barite (\(Ba SO_{4}\))
+
+
+** Halides
+
+=Anion:= Halogen and metal
+
+*** Halite (\(NaCl\))
+
+Also called *rock salt* 
+
+*** Fluorite (\(Ca F_{2}\))
+
+
+
+** Native elements
+
+=Anion:= Composed of a *single* element. These elements sit near the very bottom of the chemical reactivity series. They hold their electrons tightly, preventing them from reacting with other elements.
+
+=Malleable:= 
+
+=Conductive:= 
+
+*** Gold (\(Au\))
+
+=Non-reactive:= Even when exposed to air, moisture, or extreme heat over millions of years, gold won't oxidize or form compounds; it'll just sit as pure gold. That's one of the reasons it became so valuable, because it basically never degrades
+
+*** Silver (\(Ag\))
+
+=Reactivity:= Slightly more reactive than gold, leading it to bond with sulfur or oxygen over time. This is why silver *tarnishes* 
+
+*** Copper (\(Cu\))
+
+=Reactivity:= Slightly more reactive than gold, leading it to bond with sulfur or oxygen over time. This is why copper *turns green* 
+
+*** Sulfur (\(S_{8}\))
+
+*** Diamond (\(C\))
+
+*** Graphite (\(C\))

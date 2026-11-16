@@ -67,6 +67,73 @@ When the temperature differential weakens and the speed of the wind movement fro
 
 * El Niño
 
+
+* Tropical wave
+
+
+* Tropical cyclones
+
+Massive, rotating, low-pressure weather systems.
+
+=Vetical:= Hurricanes are *very vertical*; they're basically straight up and down.
+
+=Heat:= It's unimaginable, how much heat a hurricane generates. A single mature hurricane creates *200 times the entire world's electrical generating capacity* in heat energy
+
+** Causes
+
+Like tornadoes, these are caused by warm moist air (in this case, from the ocean) meeting cold air. 
+
+As the warm air rises, it creates a low pressure region, drawing in more air
+
+=Deep warm water:= In order to form a cyclone, ocean water much reach a surface temperature of at least 26.5C, down to a depth of about 50m. It's this massive well of warm water that creates the cyclone.
+
+=Disturbance:= Cyclones are usually formed within a cluster of thunderstorms or a tropical wave (an area of low pressure moving through the tropics).
+
+=Moist unstable air:= With high humidity in the lower and middle layers of the atmosphere, rising air is able to continue to grow as it travels upwards, without drying out
+
+=Low vertical wind shear:=  Unlike tornadoes, which rely on wind shear, cyclones will be destroyed by strong crosswinds. This is for a few reasons: the top of the storm clouds can get blown apart; the latent heat released inside the hurricane can be blown away, causing the air to start to cool and fall back down; dry air can get shoved into the cyclone causing rain to evaporate, *cooling* the air and killing the warm updrafts.
+
+=Coriolis effect:= To form, cyclones need to utilize the earth's spin. The Coriolis effect is too weak near the equator, so cyclones usually form at least five degrees latitude away from the equator.
+
+** Formation
+
+Heat from the ocean causes water to evaporate, creating low warm, moist air. As this air rises, more air comes in to take its place, which also gets warmed by the ocean, continuing the cycle. 
+
+=Condensation:= As the air rises and cools, it condenses, releasing latent heat, causing it to warm and propel itself upwards even faster.
+
+=Rotation:= The rotation of the cyclone is caused by earth's rotation
+
+=Cold water:= Since the cyclone needs warm water to heat surface air to sustain itself, it will dissipate once it reaches cooler water
+
+** Terminology
+
+=Hurricanes:= In the North Atlantic and Northeast Pacific. These spin *counterclockwise* 
+
+=Typhoons:= Northwest Pacific. Spin *counterclockwise.* 
+
+=Cyclones:= South Pacific and Indian Ocean. Since they're in the southern hemisphere, these spin *clockwise* 
+
+* Tornadoes
+
+Small, localized, intensely violent column of rotating air.
+
+=Size:= Much smaller than tropical cyclones, usually only touch the ground for a few minutes. However, because they're smaller, they rotate much faster --- reaching *300mph*, leading to extreme localized damage.
+
+
+** Causes
+
+=Thunderstorms:= Tornadoes typically form inside of severe thunderstorms, like supercells. 
+
+=Temperature:= When warm humid air collides with cold dry air, the warm air is forced upwards, as the cold air travels downwards. The rapid movement of warm air upwards is called an *updraft.* As the updraft cools, it creates storm clouds. 
+
+=Wind shear:= Wind shear is when the wind speed and direction changes at different heights. Winds near the surface of the earth are usually blowing in a different direction and at a different speed than those higher in the atmosphere. The wind shear causes air to *roll horizontally* between the different directions and speeds
+
+=Updraft:= The powerful spurt of air travelling upwards catches the rolling tube of air and pushes it *vertical* --- this causes the entire column of rising air to *start to spin*, forming a *mesocyclone.* 
+
+=Angular momentum:= As air rushes higher, the spinning column gets stretched vertically, and starts to *spin faster*, by conservation of angular momentum. 
+
+=Touching down:= The cold sinking air forms a *downdraft*, which pushes the vortex downwards until it reaches the ground, becoming a *tornado.* 
+
 * Prevailing winds
 
 Winds that blow predominantly in one specific direction.
@@ -81,7 +148,11 @@ The trade winds are *east-to-west* blowing winds that flow in the equatorial reg
 
 These winds blow *west-to-east*. They sit in the *middle latitudes* (between 30 and 60 degress latitude)
 
+
 * Monsoons
+:PROPERTIES:
+:ID:       9b36e7ec-ebc9-4c9d-ace1-1f21b49a6ef3
+:END:
 
 =Specific heat capacity:= The inertia of heat --- it tells you how easily it is to change the temperature of a substance. A low specific heat capacity means that the material will heat up and cool down quickly. 
 

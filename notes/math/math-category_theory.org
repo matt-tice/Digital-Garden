@@ -26,3 +26,9 @@ Requires you to be good at presheaves
 ** Kan Extensions
 
 Extends naturally to \infty-cats
+
+** Congruences
+
+A congruence in a category is an equivalence relation such that if \(f \sim g\) then \(f h \sim gh\) and \(hf \sim hg\) whenever these compositions make sense.
+
+The quotient category with respect to a congruence is the category with the same objects, but morphisms are equivalence classes under the congruence.

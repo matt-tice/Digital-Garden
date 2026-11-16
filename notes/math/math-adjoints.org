@@ -9,7 +9,91 @@
 
 * Summary
 
-L \dashv R means that L is the left adjoint and R is the right adjoint
+$L \dashv R$ means that L is the left adjoint and R is the right adjoint
+
+* Definitions
+
+** Adjoint functors
+
+A pair of functors \(F: \mathcal{C} \rightleftarrows \mathcal{D} : G\) are called *adjoint* if there is an equivalence
+\[
+\operatorname{Hom}(F,-) \cong \operatorname{Hom}(-,G)
+\]
+between these functors \(\mathcal{C}^{op} \times \mathcal{D} \rightarrow \text{Set} \).
+
+In this case, \(F\) is called the *left adjoint* and \(G\) is the *right adjoint* 
+
+* Theorems
+
+* Examples
+
+** Free and Forget
+
+*** Groups
+
+Let \(U: \text{Grp} \rightarrow \text{Set}\) be the forgetful functor that sends a group to its underlying set and \(F: \text{Set} \rightarrow \text{Grp}\) send a set to the free group it generates. Then
+\[
+F \dashv U
+\]
+
+** Field of fractions
+
+** Abelianization
+
+** Suspensions and Loops
+
+** Stone-Cech compactification
+
+Let \(i: \text{CHaus} \rightarrow \text{Top}\) be the inclusion of compact Hausdorff spaces into all topological spaces. Then its left adjoint is the Stone-Cech compactification
+\[
+SC \dashv i
+\]
+
+
+** Direct/inverse images of sheaves
+
+** Currying
+
+** Floor and ceiling
+
+View \(\mathbb{Z}, \mathbb{R}\) as posets, and take the inclusion \(i: \mathbb{Z} \rightarrow \mathbb{R}\). This functor has both a left and right adjoint --- the ceiling function and floor function
+\[
+\text{ceil} \dashv i \dashv \text{floor}
+\]
+
+=Notation:= Actually this kinda motivates writing things in the opposite direction: \(\text{floor} \vdash i \vdash \text{ceil}\), going from the smallest to the biggest
+
+** Discrete / Indiscrete space
+
+Let \(U: \text{Top} \rightarrow \text{Set}\) be the forgetful functor on topological spaces. Then the functors that grant a set the discrete or indiscrete topology are left/right adjoints respectively.
+\[
+\text{Discr} \dashv U \dashv \text{Indiscr}
+\]
+
+
+** Nerve and realization
+
+
+** Initial / terminal
+
+Let \(1\) be the terminal category (the discrete category with one object). Then adjoints to \(*: \mathcal{C} \rightarrow 1\) correspond to initial / terminal objects in \(\mathcal{C}\):
+\[
+\text{Init} \dashv * \dashv \text{Term}
+\]
+
+
+** Limits / colimits
+
+Let \(\mathcal{J}\) be an indexing category. Then the adjoints to the diagonal functor \(\Delta : \mathcal{C} \rightarrow \mathcal{C}^{\mathcal{J}}\) which sends each object \(X\) to the constant functor \(\Delta_{X}\), are the functors picking out limits and colimits of each functor \(\mathcal{J} \rightarrow \mathcal{C}\):
+\[
+\operatorname{colim} \dashv \Delta \dashv \lim
+\]
+
+
+
+** Kan extensions
+
+** Ends/coends
 
 * (Co)Limits
 

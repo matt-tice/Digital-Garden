@@ -1,0 +1,93 @@
+:PROPERTIES:
+:ID:       d86de95a-bd96-4bab-9bbf-a6d0ea7c9ad7
+:END:
+#+title: rocks
+#+filetags: :environment:
+
+* References
+
+
+
+* Summary
+
+Rocks are made up of two or more [[id:613b0037-637f-41fc-811d-e4b71c89de04][minerals]]
+
+* Types
+
+** Igneous
+
+Created from hot molten lava and magma that cools down.
+
+*** Intrusive igneous rock
+
+Intrusive igneous rock is formed below the earth's surface, from magma.
+
+=Magma:= Magma is lava found underground. It cools very slowly since it's not accessible to wind. Because of the slow growth period, *large crystals* have time to form
+
+**** Granite
+
+*** Extrusive igneous rock
+
+=Lava:= Magma that erupts onto the surface of the earth. It cools rapidly, creating fine-grained, *glassy* textures
+
+**** Basalt
+
+**** Obsidian
+
+**** Pumice
+
+** Sedimentary
+
+Formed from tiny pieces of rock, sand, minerals, and dead organisms settle in *layers* and get squeezed together over *millions of years* 
+
+=Fossils:= Because they form without extreme heat, they're able to preserve fossils
+
+*** Sandstone
+
+*** Shale
+
+*** Conglomerate
+
+*** Chalk
+
+*** Limestone
+
+** Metamorphic
+
+They start out as igneous, sedimentary, or metamorphic rocks. But then, existing deep inside the earth, the extreme heat and pressure causes them to form entirely new rock!
+
+=Dense:= The extreme heat and pressure fusing them together makes them very dense
+
+*** Foliated
+
+=Foliated:= The pressure will align the minerals into distinct bands/layers
+
+**** Slate
+
+Forms from shale
+
+**** Gneiss
+
+Forms from granite (intrusive igneous)
+
+*** Nonfoliated
+
+Minerals recrystalize without forming layers. They have a smooth, uniform structure
+
+**** Marble
+
+Formed from limestone
+
+**** Quartzite
+
+Formed from sandstone
+
+* Rock cycle
+
+=Sediment:= Wind, water, and ice break down surface rocks like extrusive igneous rocks into sediment, which gets buried and forms *sedimentary rock* 
+
+=Metamorphic:= Tectonic plates push the layers of the rock deeper, where heat and pressure turns them into metamorphic rock
+
+=Igneous:= If the rock gets pushed deep enough, it enters the magma and the cycle starts over.
+
+

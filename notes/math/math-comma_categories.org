@@ -1,0 +1,55 @@
+:PROPERTIES:
+:ID:       79e306c1-1696-4010-b95a-31c56e1772de
+:END:
+#+title: comma categories
+#+filetags: :math:cat:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Comma categories
+
+Let \(F: \mathcal{C} \rightarrow \mathcal{E}\) and \(G: \mathcal{D} \rightarrow \mathcal{E}\) be functors. The *comma category* \(F \downarrow G\) is the category with 
+
+=Objects:= \((A,B,f)\) where \(f: F(A) \rightarrow G(B) \)
+
+=Morphisms:= \((\phi, \psi): (A_{1}, B_{1}, f_{1}) \rightarrow (A_{2}, B_{2}, f_{2})\) making the relevant square commute: \(f_{1} G(\psi) = F(\phi) f_{2}\)
+
+*** Convention
+
+If one of the functors is the identity functor or an inclusion functor, we just write the relevant categories, instead of the functor itself. For example, \(I_{\mathcal{C}} : \mathcal{C} \rightarrow \mathcal{C} \) and \(i: \mathcal{D} \rightarrow \mathcal{C}\) has the comma category \((\mathcal{C} \downarrow \mathcal{D})\)
+
+
+
+* Theorems
+
+* Examples
+
+
+** Arrow category
+
+Consider the comma category \(\mathcal{C} \downarrow \mathcal{C}\). Then objects are just morphisms in \(\mathcal{C}\) and morphisms are the commuting squares. This is the arrow category.
+
+** Slice category
+
+Let \(X\) be about object of \(\mathcal{C}\). Then the comma category \(\mathcal{C} \downarrow X\) has objects maps into \(X\) and the morphisms are commuting triangles. This is the slice category.
+
+Dually \(X \downarrow \mathcal{C}\) is the coslice category
+
+*** Graphs
+
+
+
+*** Pointed sets
+
+** Natural transformations
+
+Let \(F,G: \mathcal{C} \rightarrow \mathcal{D}\). Then \(F \downarrow G\) has objects \(f: F(A) \rightarrow G(A)\), which look like components of natural transformations; and the morphisms are commuting squares.
+
+An actual natural transformation is then

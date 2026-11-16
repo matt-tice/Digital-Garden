@@ -1,0 +1,101 @@
+:PROPERTIES:
+:ID:       21e876a1-2705-48b3-959e-dd6c0ecd89b0
+:END:
+#+title: kan extensions
+#+filetags: :math:categories:
+
+* References
+
+
+
+* Summary
+
+=Intuition:= Kan extensions are something like *generating from a basis.* If you have some collection of nice objects, you want to extend to a full category of objects built up out of those nice building blocks
+
+=Left Kan extension:= Uses colimits to generate by gluing generators together 
+
+=Right Kan extension:= Uses limits to restrict the nice objects to 
+
+* Definitions
+
+** Left Kan extension
+
+Let \(F: \mathcal{C} \rightarrow \mathcal{D}\) and \(G: \mathcal{C} \rightarrow \mathcal{E}\) be functors. A *left Kan extension* is a pair \((L, \eta)\), where 
+\[
+\eta : G \Rightarrow FL
+\]
+such that for any \(\phi: G \Rightarrow FX\) there's a unique map \(\delta : L \Rightarrow X\) with 
+\[
+\eta \delta_{L} = \phi
+\]
+
+*** Intuition
+
+\(FL\) is the smallest thing larger than \(G\), so we map into \(FL\), and any other thing larger than \(G\) has to hit \(FL\) first 
+
+=Notation:= I'm going to write \(L_{F}[G]\) to denote the *left Kan extension of \(F\) along \(G\).* This is backwards to the normal way that it's notated, but I like that we get a kind of Einstein summation thing happening:
+\[
+\varepsilon : G \Rightarrow F L_{F}[G]
+\]
+
+
+** Right Kan extension
+
+Let \(F: \mathcal{C} \rightarrow \mathcal{D}\) and \(G: \mathcal{C} \rightarrow \mathcal{E}\) be functors. A *right Kan extension* is a pair \((R, \varepsilon )\), where 
+\[
+\varepsilon : FR \Rightarrow G
+\]
+such that for any other \(\phi: FX \Rightarrow G \), there's a unique map \(\delta : X \Rightarrow R \) with 
+\[
+\delta_{F} \varepsilon = \phi
+\]
+
+*** Intuition
+
+\(FR\) is the largest thing smaller than \(G\), which is why we map into \(G\), with \(\varepsilon : FR \Rightarrow G\), and every other thing mapping into \(G\) has to first map into \(FR\)
+
+=Notation:= I'll denote by \(R_{F}[G]\) the *right Kan extension of \(F\) along \(G\)*, so that we have \(\eta: F R_{F}[G] \Rightarrow G\)
+
+* Theorems
+
+* Examples
+
+** Limits
+
+Let \(1\) be the terminal category with a single object and identity map. Then taking \(F : \mathcal{C} \rightarrow \mathcal{D}\) and \(*: \mathcal{C} \rightarrow 1\), we have 
+\[
+L_{F}[*] \cong \operatorname{colim} F
+\]
+and 
+\[
+R_{F}[*] \cong \lim F
+\]
+
+** Groups
+
+Let \(G\) be a group and \(H \leq G\) be a subgroup. There is an inclusion \(i_{H}: BH \rightarrow BG \). 
+
+Given a representation \(F: BH \rightarrow \text{Vec}\), the LKE is the *induced representation* 
+\[
+L_{F}[i_{H}] \cong k[G] \otimes_{k[H]} -
+\]
+and the RKE is the *coinduced representation* 
+\[
+R_{F}[i_{H}] \cong \operatorname{Hom}_{k[H]}(k[G], -)
+\]
+
+** Generating a vector space by a basis
+
+We view a basis as a *discrete category* \(\mathcal{B}\). We view an individual vector space by a functor from the terminal category \(V: 1 \rightarrow \text{Vec}\) 
+
+Now take \(*: \mathcal{B} \rightarrow 1\) and let \(k: \mathcal{B} \rightarrow \text{Vec}\) send every object to the ground field \(k\). Then
+\[
+L_{*}[k] \cong  V
+\]
+
+And \(\varepsilon : k \Rightarrow * L_{*}[k] \cong V \) sends  \(\varepsilon_{b} : k(b) \rightarrow V \) by mapping \(1 \in k\) to the basis element \(b \in V\).
+
+
+** Adjunctions
+
+** Yoneda Lemma

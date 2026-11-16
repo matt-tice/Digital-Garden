@@ -9,11 +9,58 @@
 
 * Summary
 
+* Theorems
+
+** Hom functors preserve limits
+
+Let \(f: A \rightarrow B\). The following are equivalent:
+
+        1. \(f\) is an isomorphism
+        2. \(Hom(f, X)\) is an isomorphism for all \(X\)
+        3. \(Hom(X,f)\) is an isomorphism for all \(X\)
 
 
-* [[id:dc299af7-5db3-44a3-a66f-e4be459a5cde][Yoneda lemma]]
+** 
+
+\(f: A \rightarrow B\) is a monomorphism if and only if \(Hom(X,f)\) is an injection for all \(X\)
+
+\(f: A \rightarrow B\) is a split epimorphism if and only if \(Hom(X,f)\) is a surjection for all \(X\)
+
+\(f: A \rightarrow B\) is an epimorphism if and only if \(Hom(f,X)\) is an injection for all \(X\)
+
+\(f: A \rightarrow B\) is a split mono if and only if \(Hom(f,X)\) is a surjection for all \(X\)
 
 
 
+** Axiom of Choice
+
+The axiom of choice is equivalent to the condition that every epimorphism in the category of sets is a split empimorphism (has a one-sided inverse by precomposition)
+
+** Family of sets
+
+A set map \(f: A \rightarrow I\) defines a family of sets indexed by the elements of \(I\) --- \(A_{i} \equiv f^{-1} (i) \).
+
+** 
+
+If \(f,g\) are monic then so is \(fg\). If \(f \circ g\) is monic, then so is \(g\)
+
+=Dually:= If \(f,g\) are epi then so is \(fg\). If \(f \circ g\) is epi then so is \(f\)
+
+*** Corollary
+
+The monomorphims form a subcategory, as do the epimorphisms.
+
+
+
+** [[id:dc299af7-5db3-44a3-a66f-e4be459a5cde][Yoneda lemma]]
+
+
+
+
+* Examples
+
+** Mono + Epi \ne Iso
+
+The inclusion \(\mathbb{Z} \rightarrow \mathbb{Q}\) is both mono and epi in the category of rings. However, it is not an isomorphism.
 
 
