@@ -107,6 +107,14 @@ F \circ j^{k}_{p}(f) = 0, \quad \forall p \in M
 
 =Problem:= What happens if we have a solution to the differential equation that doesn't come from a section of the original bundle? How do we just isolate the proper solutions? This is where *contact forms* come in
 
+*** Prolongation of vector field
+
+Consider a vector field on \( E \)
+\[
+Q: E \rightarrow TE
+\]
+
+
 ** Contact forms
 
 Let \(\Omega^{1}(J^{k}(\pi ))\) be the one-forms of jet space. The space of *contact forms* is the subspace
@@ -254,7 +262,7 @@ d_{V} \mathcal{L} = ( \dfrac{\partial  L}{\partial  u} \theta + \dfrac{\partial 
 
 Now we define \(\eta = \dfrac{\partial L}{\partial u_{x}} \theta_{x} \in \Omega^{0,1} \)
 
-$d_{H} (\theta_{I}^{\alpha} ) &= dx^{i} \wedge  \theta_{Ii}^{\alpha}$
+$d_{H} (\theta_{I}^{\alpha} ) = dx^{i} \wedge  \theta_{Ii}^{\alpha}$
 \[
 d_{H} f = (\partial_{i} f + \sum_{|I| \geq 0} u_{I i}^{\alpha}) dx^{i}
 \]
