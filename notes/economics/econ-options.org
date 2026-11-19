@@ -102,13 +102,13 @@ This should probably be called *assumed volatility.* Unlike historic volatility 
 
 =Value:= Implied volatility is given as a *percentage.* 
 
-*** Range
+*** Range 
 
-=Under 0.02= Typical for *extremely-short-dated contracts*, like 1DTEs. Also shows up for low-priced stocks under $15
+=Under 20%= Stable. Big blue-chips have IVs in here.
 
-=0.02 - 0.1= Appears in standard monthly contracts on stocks with double-digit prices. 
+=20% - 50%= This is normal for large-cap technology stocks, growth stocks. 
 
-=Over 0.1= Common in high-priced stocks like Shopify and contracts with *60+ DTE* --- since there is longer to expiry, there's more time for large price swings to happen.
+=50% += These are highly unstable stocks: high-growth tech, biotech awaiting clinical trial results, and any stock right ahead of earnings.
 
 ** Vega
 
@@ -118,13 +118,13 @@ Tells you how much the premium changes based on a 1% shift in implied volatility
 
 =Don't buy in volatility:= When the market anticipates a big move and IV increases, vega causes the premium to change. But this means that if you buy an option during a volatile time, the premium is inflated. Once the situation relaxes, volatility decreases, and all of a sudden your option loses value. This is called the *IV Crush*.
 
-*** Range 
+*** Range
 
-=Under 20%= Stable. Big blue-chips have IVs in here.
+=Under 0.02= Typical for *extremely-short-dated contracts*, like 1DTEs. Also shows up for low-priced stocks under $15
 
-=20% - 50%= This is normal for large-cap technology stocks, growth stocks. 
+=0.02 - 0.1= Appears in standard monthly contracts on stocks with double-digit prices. 
 
-=50% += These are highly unstable stocks: high-growth tech, biotech awaiting clinical trial results, and any stock right ahead of earnings.
+=Over 0.1= Common in high-priced stocks like Shopify and contracts with *60+ DTE* --- since there is longer to expiry, there's more time for large price swings to happen.
 
 * Strategies
 

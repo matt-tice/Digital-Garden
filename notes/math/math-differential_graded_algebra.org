@@ -2,16 +2,88 @@
 :ID:       22e9f46f-5824-4e44-8334-6d9677ad9101
 :END:
 #+title: differential graded algebra
-#+filetags: :math:
+#+filetags: :math:dga:
 
 * References
 
-
+-70
 * Summary
 
 If a chain complex encodes the homotopical nature of spaces, the algebraic structure on top, turning it into a dga, encodes the geometry / coordinate functions.
 
 In the de Rham complex, the higher chains encode higher derivatives.
+
+* Definitions
+
+** Differential graded algebra
+
+A differential graded algebra is a monoid in the category of chain complexes of vector spaces.
+
+Concretely, the tensor product in chain complexes has
+\[
+(A \otimes B)_{n} = \bigoplus_{i+j=n} A_{i} \otimes B_{j}
+\]
+and \( d_{n} = \sum_{i+j = n} d_{A_{i}} \otimes 1_{B_{j}} + (-1)^{i} 1_{A_{i}} \otimes d_{B_{j}} \)
+
+So a dga would have a multiplication
+\[
+\mu: A \otimes A \rightarrow A
+\]
+which acts like 
+\[
+d_{A, n} \circ \mu_{n} = \mu_{n-1} \circ  d_{A \otimes A, n}
+\]
+
+Unpacking this, we have for all \( x,y \in A \) with \( |x| = i, |y| = j \), 
+\[
+d_{A,i+j}(xy) = d_{A}(x) y + (-1)^{i} x d_{A}(y)
+\]
+
+** Commutative dga
+
+A dga is called commutative if for all homogeneous  \( x,y \) we have 
+\[
+xy = (-1)^{|x||y|} yx
+\]
+
+
+
+
+* Theorems
+
+* Examples
+
+** Chain complexes
+
+Any chain complex can be given the structure of a dga with \( xy = 0 \) for all \( x,y. \)
+
+** Graded algebras
+
+Any graded algebra can be viewed as a dga with \( d = 0 \)
+
+** de-Rham dga
+
+Let \( M \) be a manifold and \( \Omega^{\bullet} (M) \)  be its de Rham cochain complex of differentials. This forms a *commutative dga*, with the ordinary multiplication of the exterior products
+
+** Singular cochains
+
+Let \( X \) be a topological space and consider the singular cochain complex with coefficients in a ring \( R \)
+\[
+C^{\bullet} (X ; R)
+\]
+
+=Cup product:= 
+
+This is not a commutative dga in general. However in the case that \( X \) is a smooth manifold and \( R = \mathbb{R} \), we have that the singular cohomology matches the de Rham cohomology and the cup product matches the exterior product --- thus in that case we do get that our dga is commutative
+
+** Free dga
+
+Let \( V \) be any non-graded vector space. The free dga is formed by taking the tensor algebra \( TV = \bigoplus_{n} V^{\otimes n} \), and viewing it as a chain complex with a differential defined by any linear map \( f: V \rightarrow k \)
+
+\[
+d_{f}(x_{1} \ldots x_{n}) = \sum_{i} (-1)^{i-1} v_{1} \otimes \ldots \otimes f(v_{i}) \otimes \ldots \otimes v_{n}
+\]
+
 
 * Graded-Commutative
 

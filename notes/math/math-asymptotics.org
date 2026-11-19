@@ -1,0 +1,111 @@
+:PROPERTIES:
+:ID:       9ffc8e09-293d-479c-a42c-018aa46c4912
+:END:
+#+title: asymptotics
+#+filetags: :math:big_o_notation:series:
+
+* References
+
+
+
+* Summary
+
+* 
+
+** Big-O Set
+
+Let \( X \)  be a set equipped with a filter, and let \( g: X \rightarrow \mathbb{R}_{\ne 0} \) be a scalar function. For any topological vector space \( V \) and subset \( A \subseteq X \), we define the  *big-O set* along the filter \( \mathcal{F} \) as
+
+\begin{align*}
+O_{\mathcal{F}}(g) = \{ f: X \to V \mid \exists A &\in \mathcal{F}, B \subseteq V \text{ bounded, such that} \\
+&\dfrac{f(x)}{g(x)} \in B, \forall x \in A \}
+\end{align*}
+
+*** Intuition
+
+=von Neumann bounded:= A set \( B \) is (von Neumann) bounded in a topological vector space if every neighbourhood of zero \( U(0) \) can be scaled to absorb \( B \):
+\[
+B \subseteq \lambda_{U} U(0)
+\]
+for some \( \lambda_{U} > 0 \).
+
+In the case of \( V = \mathbb{R} \), this says (taking \( U = (-1, 1) \), the ball of radius one) that \( | f/g | \leq \lambda \) for some \( \lambda \), which is the ordinary version of Big-O notation.
+
+If \( V \) is locally convex, the condition becomes 
+\[
+p_{a}(f) \leq M_{a} |g|, \quad \forall a
+\]
+where \( p_{a} \) are the seminorms defining the locally convex topology.
+
+=Filters:= In the most obvious cases, we have that \( X \) is some kind of a topological space, so it comes equipped with a bunch of filters (the neighbourhood filters around any point)
+
+** Little-o  set
+
+Let \( X \)  be a set equipped with a filter, and let \( g: X \rightarrow \mathbb{R}_{\ne 0} \) be a scalar function. For any topological vector space \( V \) and subset \( A \subseteq X \), we define the  *little-o set* along the filter \( \mathcal{F} \) as
+
+\begin{align*}
+o_{\mathcal{F}}(g) = \{ f: X \to V \mid \forall U(0) \in \tau_{V}, \exists A &\in \mathcal{F} \text{ such that } \\
+&\dfrac{f(x)}{g(x)} \in U, \forall x \in A \}
+\end{align*}
+
+*** Intuition
+
+Unlike Big-O notation, which has to do with \( g \) bounding \( f \), little-o says that \( g \) is *so large* compared to \( f \), in the region explored by the filter, that \( f/g \) is arbitrarily small as you zoom into that region.
+
+In other words, \( f \) is *negligible compared to \( g \)*.
+
+** Asymptotic scale
+
+Let \( X \) be a set with a filter \( \mathcal{F} \) and \( k \) be the field \( \mathbb{R} \) or \( \mathbb{C} \). A sequence \( \phi_{n} : X \rightarrow k \setminus 0 \), is an *asymptotic scale* if 
+\[
+\phi_{n+1} \in o_{\mathcal{F}}(\phi_{n})
+\]
+for all \( n \).
+
+*** Intuition
+
+The condition \( \phi_{n+1} \in o(\phi_{n}) \) is a way of encoding that the functions \( \phi_{n} \) become rapidly smaller on the region described by the filter
+
+This is a very cool structure, because it basically allows you to define series in which the actual series can diverge, but the asymptotic scale means it *doesn't diverge too much* 
+
+=Power series:= Let \( \phi_{n}(x) = a_{n} x^{n} \). Then
+
+\[
+\dfrac{\phi_{n+1}(x)}{\phi_{n}(x)} = \dfrac{a_{n+1}}{a_{n}} x \rightarrow 0, \quad \text{as } x \rightarrow 0
+\]
+
+So this is a valid asymptotic scaling around zero
+
+** Asymptotic series
+
+If \( f: X \rightarrow V\) is a map into a topological vector space then we say that \( f \) has *asymptotic expansion with respect to the scale \( \{ \phi_{n} (x) \} \)* , if there's a sequence \( v_{n} \in V \) such that 
+
+\[
+f(x) - \sum_{n=0}^{N } \phi_{n} (x) v_{n} (x) \in o(\phi_{N})
+\]
+for all \( N \)
+
+*** Intuition
+
+This says that around a certain point/region (defined by the filter) you can always zoom in to a small enough region to make the sum of the first \( N \) terms look a small distance from \( f \) (with the error term being much smaller than the last \( \phi_{N} \) in the series)
+
+=Power series:= Let \( \phi_{n}(x) = x^{n} \). Then we take 
+
+* Definitions
+
+
+
+
+* Theorems
+
+** \( O \) is a vector space
+
+Let 
+
+*** Proof
+
+Let \( f_{1}, f_{2} \in O(g) \), so there are \( A_{1}, A_{2}, B_{1}, B_{2} \) with \( B_{i} \) bounded and \( f_{i} / g \in B_{i} \) on \( A_{i}. \) Then 
+
+** Hausdorff has unique asymptotic expansions
+
+* Examples

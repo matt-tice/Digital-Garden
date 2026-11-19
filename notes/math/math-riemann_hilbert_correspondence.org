@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       80a34522-8d16-42a4-94bf-b82e4eb63fa3
+:END:
+#+title: riemann hilbert correspondence
+#+filetags: :math:geometry:d_modules:
+
+* References
+
+
+
+* Summary
+
+=Idea:= There's a correspondence between systems of differential equations and certain kinds of sheaves
+
+=Monodromy:= When you have singularities, analytic continuation becomes difficult --- you try to spread outward from your starting region, but if you pass around a singularity and get back to your starting region, you can wind up with a different function than the one you started with. Monodromy is essentially a way of capturing how much distortion happens in analytic continuation
+
+=21st problem:= Hilbert's 21st problem was about the existence of differential equations with certain singularities and monodromy. Basically he wanted to know, for any choice of singularities and monodromic group, is there always a linear differential equation (of Fuchsian type) with those features?
+
+=Dmodules:= In one dimension, you can approach differential equations using vector bundles with flat connections --- this was Deligne's approach. But in higher dimensions, the singularities become complicated, since they're no longer isolated points, but rather surfaces/subvarieties. To deal with this, you look at Dmodules, in the form of sheafs of differential algebras. Sheaves work with singularities more naturally
+
+=Correspondence:= The correspondence that ends up working is between regular holonomic Dmodules (corresponding to finite-dimensional solution spaces, and mild singularities) and perverse sheaves (some kind of chain complex of sheaves)
+
+=Poincaré duality:= Ordinary smooth manifolds have Poincaré duality. But once you introduce singularities, this breaks. To fix it, you need *perverse sheaves* 
+
+=Stratification:= To build a perverse sheaf, first you perform a stratification of your space, which slices it into smooth pieces of decreasing dimension. You then take a chain complex of sheaves whose cohomology is constant on each stratum
+
+=Intuition:= The stratification is a process of picking out singularities. The condition of constancy (called *constructability*) basically says that your singularities are fairly nice. The reason you want the constructability is so that the only bad behaviour comes from *transitioning between strata*, not from moving within a fixed stratum. The stratification corresponds (in the Riemann-Hilbert correspondence) to the fact that the Dmodule differential equations are holonomic (finite solution space)
+
+=Example:= Consider \( \mathbb{C} \) --- we stratify it with a single point (the origin), and the punctured plane.
+
+=Flat connections:= Every flat connection actually corresponds to a Dmodule --- a flat connection on \( E \rightarrow M \) turns \( E \) into a Dmodule (a space on which differential operators, or more precisely a sheaf of differential operators, acts). Locally constant sheafs correspond (by the classical Riemann-Hilbert correspondence) to vector bundles with flat connections! Basically this means that you don't do the stratification procedure (so you just have a single locally constant sheaf); meaning you don't have singularities (which is why you get a flat connection)
+
+* Definitions
+
+** Constant sheaf
+
+** Locally constant sheaf
+
+
+
+* Theorems
+
+* Examples

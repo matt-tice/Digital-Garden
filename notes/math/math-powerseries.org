@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       82abaab3-3303-46d0-b452-fd03b3faf2ed
+:END:
+#+title: powerseries
+#+filetags: :math:series:analysis:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Asymptotic series
+
+A formal power series \( \sum a_{n} x^{n} \) is *asymptotic to \( f(x) \) as \( x \rightarrow 0^{+} \)*, if 
+
+
+* Theorems
+
+* Examples

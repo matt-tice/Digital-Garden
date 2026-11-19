@@ -36,8 +36,215 @@ You typically work with linear operads
 
 You typically assume a connected operad
 
+* Definitions
+
+** Augmentation
+
+A linear functional \( \varepsilon : A \rightarrow k \) on an algebra is called an *augmentation* if 
+\[
+\varepsilon \circ \eta = 1_{k}
+\]
+
+The pair \( (A, \varepsilon ) \) is called an *augmented algebra*. 
+
+The *augmentation ideal* is \( \ker \varepsilon  \), and we have 
+\[
+A \cong k \oplus \ker \varepsilon 
+\]
+
+
+** Coaugmentation
+
+Let \( C \) be a coalgebra. A linear map \( \eta: C \rightarrow k \) is a *coaugmentation* if 
+\[
+\varepsilon \circ \eta = 1_{k}
+\]
+
+The *coaugmented coideal* \( \bar{C} \) is the coalgebra \( \operatorname{coker} \eta   \), and 
+\[
+C \cong k \oplus \operatorname{coker} \eta 
+\]
+
+** Reduced comultiplication
+
+Let \( (C, \varepsilon ) \)  be a coalgebra with coaugmentation \( \eta : k \rightarrow C \), where \( \eta (1) \equiv 1 \in C \). The *reduced comultiplication* induced by \( \eta  \) is 
+\[
+\bar{\Delta} = \Delta  - 1 \otimes id - id \otimes 1
+\]
+
+
+** Conilpotent coalgebra
+
+A coalgebra \( C \) is *conilpotent* if for all \( x \in  C \), there is some \( n \) such that 
+\[
+\Delta^{n} (x) = 0
+\]
+
+
+** Cofree conilpotent coalgebra
+
+Let \( C \) be a vector space. The cofree conilpotent coaugmented coalgebra \( T^{c}(C) \) has underlying vector space \( T(V) \) , the tensor product on \( V \), and coproduct
+\[
+\Delta (v_{1} \ldots v_{n}) = \sum_{i=0}^{n} v_{1} \ldots v_{i} \otimes v_{i+1} \ldots v_{n}
+\]
+coaugmentation \( \eta (1) = 1 \in V^{0} \cong k\), and counit
+\[
+\varepsilon (x) = 0
+\]
+for \( x \ne 1 \) and \( \varepsilon (1) = 1 \).
+
+*** Notes
+
+=Coaugmented:= This isn't just a coalgebra, it's coaugmented. So we can take \( \overline{T^{c} (V)} \cong \bigoplus_{n > 0} V^{\otimes n} \).
+
+=Note:= The order zero and nth order terms will be \( 1 \otimes v_{1} \ldots v_{n} \) and \( v_{1} \ldots v_{n} \otimes  1 \). Removing these creates the reduced coalgebra, which is *conilpotent*! This is because the reduced comultiplication will always *reduce the number of terms* in each tensor factor. After enough time, it'll bring one of the tensor factors down to having only \( 1 \), which will cause that term to be removed.
+
+=Conilpotent:= \( T^{c}(V) \) is *not* the cofree object in coalgebras! It's only the cofree object in *conilpotent* coalgebras. The actual cofree object has as underlying vector space 
+\[
+\prod_{n} V^{\otimes n} 
+\]
+which allows formal power series in elements of \( V \).
+
+** Bar construction
+
+Let \( A \) be an augmented dga. The bar construction on \( A \) is the coaugmented coalgebra
+\[
+B(A) = T^{c}(s \bar{A})
+\]
+where \( (s \bar{A})_{n} \equiv \bar{A}_{n-1} \)
+viewed as a dgcoa, with differential \( d = d_{1} + d_{2} \), where 
+\[
+d_{1}(x_{1} \otimes  \ldots \otimes x_{n}) = -\sum_{i=1}^{n} (-1)^{|x_{1}| + \ldots + |x_{i-1}|} x_{1} \otimes \ldots \otimes d_{A}(x_{i} )\otimes \ldots \otimes x_{n}
+\]
+
+\[
+d_{2}(x_{1} \otimes \ldots \otimes x_{n}) = \sum_{i=1}^{n-1} (-1)^{|x_{1}| + \ldots + |x_{i}|} x_{1} \otimes \ldots x_{i} x_{i+1} \otimes  \ldots \otimes x_{n}
+\]
+
+*** Notes
+
+Because we've shifted the degrees, when we write \( |x_{i}| \), we really mean the shifted degree, which is \( \deg (x_{i} )+ 1 \), where \( \deg \) means the original degree
+
+** Cobar construction
+
+Let \( C \) be an coaugmented dgcoa. The cobar construction on \( C \) is the augmented algebra
+\[
+\Omega(C) = T(s^{-1}  \bar{C})
+\]
+where \( (s^{-1}  \bar{C})_{n} \equiv \bar{C}_{n+1} \)
+viewed as a dgcoa, with differential \( d = d_{1} + d_{2} \), where 
+\[
+d_{1}(x_{1} \otimes  \ldots \otimes x_{n}) = -\sum_{i=1}^{n} (-1)^{|x_{1}| + \ldots + |x_{i-1}|} x_{1} \otimes \ldots \otimes d_{C}(x_{i} )\otimes \ldots \otimes x_{n}
+\]
+
+\[
+d_{2}(x_{1} \otimes \ldots \otimes x_{n}) =\sum_{i=1}^{n} \sum (-1)^{|x_{1}| + \ldots + |x_{i, (1)}|} x_{1} \otimes \ldots \otimes x_{i, (1)} \otimes  x_{i, (2)} \otimes  \ldots \otimes x_{n}
+\]
+
+*** Notes
+
+An easier way to write this is that \( d_{1} = d_{d_{C}} \) and \( d_{2} = d_{\Delta_{C}} \), using the notation that \( d_{f} \) sends the linear map \( f \) through all of the tensor factors, picking up appropriate signs
+
+=Maurer-Cartan equation:= 
+
+** Free operad in vector spaces
+
+Let \( M \) be an Smodule in vector spaces. The *free operad* \( \mathcal{F}[M] \) in vector spaces has its operations 
+
+\begin{align*}
+\mathcal{F}[M](n) = \{ &\text{ linear combinations of n-input} \\ 
+& \text{formal compositions of trees from } M \}
+\end{align*}
+
+And composition given by formally grafting trees together
+
+** Cofree cooperad in vector spaces
+
+Let \( M \) be an Smodule in vector spaces. The *cofree cooperad* \( \mathcal{F}^{c}[M] \) in vector spaces has its operations the same spaces \( \mathcal{F}[M] \), but with comultiplication given by the following:
+
+If \( T \) is a tree with \( n \) levels of composition, where at level \( i \) you've attached the trees \( T_1^{i } , \ldots , T_{k_{i}}^{i} \) then 
+
+\[
+\Delta (T) = \sum_{i} T_1^{i} \otimes \ldots \otimes  T_{k_{i}}^{i} 
+\]
+
+*** Notes
+
+In order for this to be a finite sum, we need 
+
+
+** Augmented DG Operad
+
+An augmented DGO is an operad in chain complexes \( \mathcal{O} \) along with a map of operads
+\[
+\varepsilon : \mathcal{O} \rightarrow \mathcal{K}
+\]
+where \( \mathcal{K} \) is the operad with \( \mathcal{K}[1] = k \) and \( \mathcal{K}[n \ne 1] = 0 \)
+
+*** Notes
+
+This allows you to disregard the stuff in arity one from the operad. This is useful for the same reason that it is in the bar-cobar construction in dgas --- you don't want identity maps to allow your decompositions to be infinite when you pass to the cooperad.
+
+
+
+
+
+* Theorems
+
+** Reduced coalgebra
+
+Let \( C \) be a coaugmented coalgebra with unit \( 1. \) Then if \( \bar{C} \) is the coaugmented coideal, the reduced comultiplication makes \( \bar{C} \) into a coalgebra, called the *reduced coalgebra* :
+\[
+\bar{\Delta} : \bar{C} \otimes \bar{C} \rightarrow \bar{C} 
+\]
+
+*** Proof
+
+** Bar-cobar adjunction
+
+** (Co)fibrant resolutions
+
+Let \( A \) be an augmented DGA then 
+\[
+\Omega B(A) \xrightarrow{\sim} A
+\]
+(ie they're quasi-isomorphic)
+
+Similarly, if \( C \) is a conilpotent DGcoA, then 
+\[
+C \xrightarrow{\sim} B \Omega (C)
+\]
+
+*** Notes
+
+=Resolutions:= Since we have these quasi-isomorphisms, we get a resolution of any (co)augmented DGcoA. The main issue is that when you perform this resolution, the space you get out the other side is very unwieldy --- it's not messy, but it's still hard to deal with because they're so much (co)free structure
+
+=Purpose:= What's the point of doing a resolution when it just gives you a more complicated object? The idea is that the more complicated object you get is more complicated because you *made it free* --- it no longer has any relations (the data of the relations basically became the data of all of the ways of breaking stuff down or putting it together). So *mapping* into/out of it becomes easier
+
+=Ext/Tor:= For an augmented dga \( A \), the homology of the dual of the bar construction is the same thing as the ext!
+\[
+Ext_{A} (k,k) \cong H^{\bullet}(B(A)^{*})
+\]
+and 
+\[
+Tor^{A}(k,k) \cong H_{\bullet} (B(A))
+\]
+
+
+=Koszul duality:= In the case of Koszul algebras, the homology of the bar construction (the Tor) becomes concentrated in a single degree, allowing you to just study a sub-coalgebra, called the *Koszul dual coalgebra*. And in fact, taking the dual of this coalgebra gives you the *Koszul dual algebra* \( A^{!} \), whose cohomology is then the Ext!
+
+
+
+
+** Adam's cobar theorem
+
+
+
+* Examples
+
 * Bar Construction
 
 Takes an operad and constructs a cooperad
 
 More generally it takes a monad algebra and turns it into a simplicial object
+

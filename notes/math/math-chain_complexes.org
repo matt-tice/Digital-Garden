@@ -54,9 +54,36 @@ and so we get a (very easy) resolution of k[x]:
 0 \to k[x, \varepsilon] \to k[x] \to 0
 which is quasi-isomorphic to k[x] (as a trivial chain complex: 0 \to k[x] \to 0).
 
-* Functional Analysis
+* Definitions
 
-** Fredholm Operators
+** Chain complexes in vector spaces
+
+A chain complex \( (C_{\bullet} , d) \) is a graded vector space \( C_{\bullet } = \bigoplus_{n} C_{n} \) along with  linear maps \( d: C_{\bullet } \rightarrow C_{\bullet} \) (called differentials) which send
+\[
+d_{n}: C_{n} \rightarrow C_{n-1}
+\]
+and satisfy \( d^{2} = 0 \).
+
+** Chain maps
+
+A morphism of chain complexes \( f: (A_{\bullet} , d_{A}) \rightarrow (B_{\bullet } , d_{b}) \) is a linear map 
+\[
+f_{n}: A_{n} \rightarrow B_{n}
+\]
+that commutes with the differentials:
+\[
+ d_{B, n} \circ f_{n} = f_{n-1} \circ d_{A,n}
+\]
+
+
+
+* Theorems
+
+* Examples
+
+** Functional Analysis
+
+*** Fredholm Operators
 
 By definition, these are operators with
 - finite dimensional kernel
@@ -66,29 +93,29 @@ The *Fredholm index* is
     dim(ker) - dim(coker)
 It counts solutions to equations
 
-** Atiyah-Singer Index Theorem
+*** Atiyah-Singer Index Theorem
 
 If T is an elliptic differential operator on a manifold, the analytical index is equal to the topological index
 - the analytical index is the homology of the operator
 - the topological index is the cohomology of the manifold's tangent bundle.
 
-* Harmonic Analysis
+** Harmonic Analysis
 
 A locally compact group is amenable if and only if its first Hochschild cohomology group of its convolution algebra with coefficients in dual modules is zero:
        H^1(L^1(G), X^*) \cong 0
 
-* Complex Analysis
+** Complex Analysis
 
-** Hartog's Extension Theorem
+*** Hartog's Extension Theorem
 
 Holomorphic functions are those that are locally complex differentiable
 - each point has some neighbourhood on which it's complex differentiable.
 
 This is enough to conclude that the function is analytic  
 
-*** Sheaf Cohomology
+**** Sheaf Cohomology
 
-** Analytic Continuation
+*** Analytic Continuation
 
 This is actually related to *relative cohomology*
 
@@ -105,7 +132,7 @@ The codifferential into H^1 is a computation of the difference between a pair of
 
 Functions that admit analytic continuations are precisely coboundaries in the first degree
 
-** Wick Rotation
+*** Wick Rotation
 
 When you take a path integral, say over time, you're integrating
 \int_{-\infty}^{\infty} \omega
@@ -135,6 +162,6 @@ If the pole at \infty is regular or logarithmic, everything is fine
 - if it's an essential singularity, you have to be careful
 - this is actually related to *global D-Module theory*
 
-* Cup Product
+** Cup Product
 
 
