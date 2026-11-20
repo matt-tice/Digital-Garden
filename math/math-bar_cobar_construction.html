@@ -60,6 +60,10 @@
     img {
       max-width: 100%;
     }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.4em;
     }
@@ -103,8 +107,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -176,7 +180,7 @@ strict (non-homotopy) structure, by first considering all formal
 compositions, and then quotienting out by certain relations.</p>
 <p>It's called the bar construction, because you write a formal
 composition of algebraic elements using bars: <span
-class="math display">[<em>x</em><sub>1</sub>∣<em>x</em><sub>2</sub>∣…∣<em>x</em><sub><em>n</em></sub>]</span>.
+class="math display">[<em>x</em><sub>1</sub> ∣ <em>x</em><sub>2</sub> ∣ … ∣ <em>x</em><sub><em>n</em></sub>]</span>.
 These formal compositions are then interpretted as
 <strong>simplices.</strong> This allows you to turn <strong>algebraic
 structure into spaces</strong></p>
@@ -201,9 +205,220 @@ class="math inline">1</span>-simplices. This allows you to turn
 <p>You need an augmented operad</p>
 <p>You typically work with linear operads</p>
 <p>You typically assume a connected operad</p>
-<h1 id="bar-construction">Bar Construction</h1>
-<p>Takes an operad and constructs a cooperad</p>
-<p>More generally it takes a monad algebra and turns it into a
-simplicial object</p>
+<h1 id="definitions">Definitions</h1>
+<h2 id="augmentation">Augmentation</h2>
+<p>A linear functional <span
+class="math inline"><em>ε</em> : <em>A</em> → <em>k</em></span> on an
+algebra is called an <strong>augmentation</strong> if <span
+class="math display"><em>ε</em> ∘ <em>η</em> = 1<sub><em>k</em></sub></span></p>
+<p>The pair <span class="math inline">(<em>A</em>, <em>ε</em>)</span> is
+called an <strong>augmented algebra</strong>.</p>
+<p>The <strong>augmentation ideal</strong> is <span
+class="math inline">ker <em>ε</em></span>, and we have <span
+class="math display"><em>A</em> ≅ <em>k</em> ⊕ ker <em>ε</em></span></p>
+<h2 id="coaugmentation">Coaugmentation</h2>
+<p>Let <span class="math inline"><em>C</em></span> be a coalgebra. A
+linear map <span
+class="math inline"><em>η</em> : <em>C</em> → <em>k</em></span> is a
+<strong>coaugmentation</strong> if <span
+class="math display"><em>ε</em> ∘ <em>η</em> = 1<sub><em>k</em></sub></span></p>
+<p>The <strong>coaugmented coideal</strong> <span
+class="math inline"><em>C̄</em></span> is the coalgebra <span
+class="math inline">coker <em>η</em></span>, and <span
+class="math display"><em>C</em> ≅ <em>k</em> ⊕ coker <em>η</em></span></p>
+<h2 id="reduced-comultiplication">Reduced comultiplication</h2>
+<p>Let <span class="math inline">(<em>C</em>, <em>ε</em>)</span> be a
+coalgebra with coaugmentation <span
+class="math inline"><em>η</em> : <em>k</em> → <em>C</em></span>, where
+<span class="math inline"><em>η</em>(1) ≡ 1 ∈ <em>C</em></span>. The
+<strong>reduced comultiplication</strong> induced by <span
+class="math inline"><em>η</em></span> is <span
+class="math display"><em>Δ̄</em> = <em>Δ</em> − 1 ⊗ <em>i</em><em>d</em> − <em>i</em><em>d</em> ⊗ 1</span></p>
+<h2 id="conilpotent-coalgebra">Conilpotent coalgebra</h2>
+<p>A coalgebra <span class="math inline"><em>C</em></span> is
+<strong>conilpotent</strong> if for all <span
+class="math inline"><em>x</em> ∈ <em>C</em></span>, there is some <span
+class="math inline"><em>n</em></span> such that <span
+class="math display"><em>Δ</em><sup><em>n</em></sup>(<em>x</em>) = 0</span></p>
+<h2 id="cofree-conilpotent-coalgebra">Cofree conilpotent coalgebra</h2>
+<p>Let <span class="math inline"><em>C</em></span> be a vector space.
+The cofree conilpotent coaugmented coalgebra <span
+class="math inline"><em>T</em><sup><em>c</em></sup>(<em>C</em>)</span>
+has underlying vector space <span
+class="math inline"><em>T</em>(<em>V</em>)</span> , the tensor product
+on <span class="math inline"><em>V</em></span>, and coproduct <span
+class="math display">$$
+\Delta (v_{1} \ldots v_{n}) = \sum_{i=0}^{n} v_{1} \ldots v_{i} \otimes
+v_{i+1} \ldots v_{n}
+$$</span> coaugmentation <span
+class="math inline"><em>η</em>(1) = 1 ∈ <em>V</em><sup>0</sup> ≅ <em>k</em></span>,
+and counit <span class="math display"><em>ε</em>(<em>x</em>) = 0</span>
+for <span class="math inline"><em>x</em> ≠ 1</span> and <span
+class="math inline"><em>ε</em>(1) = 1</span>.</p>
+<h3 id="notes">Notes</h3>
+<p><code class="verbatim">Coaugmented:</code> This isn't just a
+coalgebra, it's coaugmented. So we can take <span class="math inline">$
+\overline{T^{c} (V)} \cong \bigoplus_{n &gt; 0} V^{\otimes n}
+$</span>.</p>
+<p><code class="verbatim">Note:</code> The order zero and nth order
+terms will be <span
+class="math inline">1 ⊗ <em>v</em><sub>1</sub>…<em>v</em><sub><em>n</em></sub></span>
+and <span
+class="math inline"><em>v</em><sub>1</sub>…<em>v</em><sub><em>n</em></sub> ⊗ 1</span>.
+Removing these creates the reduced coalgebra, which is
+<strong>conilpotent</strong>! This is because the reduced
+comultiplication will always <strong>reduce the number of terms</strong>
+in each tensor factor. After enough time, it'll bring one of the tensor
+factors down to having only <span class="math inline">1</span>, which
+will cause that term to be removed.</p>
+<p><code class="verbatim">Conilpotent:</code> <span
+class="math inline"><em>T</em><sup><em>c</em></sup>(<em>V</em>)</span>
+is <strong>not</strong> the cofree object in coalgebras! It's only the
+cofree object in <strong>conilpotent</strong> coalgebras. The actual
+cofree object has as underlying vector space <span
+class="math display">∏<sub><em>n</em></sub><em>V</em><sup>⊗<em>n</em></sup></span>
+which allows formal power series in elements of <span
+class="math inline"><em>V</em></span>.</p>
+<h2 id="bar-construction">Bar construction</h2>
+<p>Let <span class="math inline"><em>A</em></span> be an augmented dga.
+The bar construction on <span class="math inline"><em>A</em></span> is
+the coaugmented coalgebra <span
+class="math display"><em>B</em>(<em>A</em>) = <em>T</em><sup><em>c</em></sup>(<em>s</em><em>Ā</em>)</span>
+where <span
+class="math inline">(<em>s</em><em>Ā</em>)<sub><em>n</em></sub> ≡ <em>Ā</em><sub><em>n</em> − 1</sub></span>
+viewed as a dgcoa, with differential <span
+class="math inline"><em>d</em> = <em>d</em><sub>1</sub> + <em>d</em><sub>2</sub></span>,
+where <span class="math display">$$
+d_{1}(x_{1} \otimes  \ldots \otimes x_{n}) = -\sum_{i=1}^{n}
+(-1)^{|x_{1}| + \ldots + |x_{i-1}|} x_{1} \otimes \ldots \otimes
+d_{A}(x_{i} )\otimes \ldots \otimes x_{n}
+$$</span></p>
+<p><span class="math display">$$
+d_{2}(x_{1} \otimes \ldots \otimes x_{n}) = \sum_{i=1}^{n-1}
+(-1)^{|x_{1}| + \ldots + |x_{i}|} x_{1} \otimes \ldots x_{i} x_{i+1}
+\otimes  \ldots \otimes x_{n}
+$$</span></p>
+<h3 id="notes-1">Notes</h3>
+<p>Because we've shifted the degrees, when we write <span
+class="math inline">|<em>x</em><sub><em>i</em></sub>|</span>, we really
+mean the shifted degree, which is <span
+class="math inline">deg (<em>x</em><sub><em>i</em></sub>) + 1</span>,
+where <span class="math inline">deg </span> means the original
+degree</p>
+<h2 id="cobar-construction">Cobar construction</h2>
+<p>Let <span class="math inline"><em>C</em></span> be an coaugmented
+dgcoa. The cobar construction on <span
+class="math inline"><em>C</em></span> is the augmented algebra <span
+class="math display"><em>Ω</em>(<em>C</em>) = <em>T</em>(<em>s</em><sup>−1</sup><em>C̄</em>)</span>
+where <span
+class="math inline">(<em>s</em><sup>−1</sup><em>C̄</em>)<sub><em>n</em></sub> ≡ <em>C̄</em><sub><em>n</em> + 1</sub></span>
+viewed as a dgcoa, with differential <span
+class="math inline"><em>d</em> = <em>d</em><sub>1</sub> + <em>d</em><sub>2</sub></span>,
+where <span class="math display">$$
+d_{1}(x_{1} \otimes  \ldots \otimes x_{n}) = -\sum_{i=1}^{n}
+(-1)^{|x_{1}| + \ldots + |x_{i-1}|} x_{1} \otimes \ldots \otimes
+d_{C}(x_{i} )\otimes \ldots \otimes x_{n}
+$$</span></p>
+<p><span class="math display">$$
+d_{2}(x_{1} \otimes \ldots \otimes x_{n}) =\sum_{i=1}^{n} \sum
+(-1)^{|x_{1}| + \ldots + |x_{i, (1)}|} x_{1} \otimes \ldots \otimes
+x_{i, (1)} \otimes  x_{i, (2)} \otimes  \ldots \otimes x_{n}
+$$</span></p>
+<h3 id="notes-2">Notes</h3>
+<p>An easier way to write this is that <span
+class="math inline"><em>d</em><sub>1</sub> = <em>d</em><sub><em>d</em><sub><em>C</em></sub></sub></span>
+and <span
+class="math inline"><em>d</em><sub>2</sub> = <em>d</em><sub><em>Δ</em><sub><em>C</em></sub></sub></span>,
+using the notation that <span
+class="math inline"><em>d</em><sub><em>f</em></sub></span> sends the
+linear map <span class="math inline"><em>f</em></span> through all of
+the tensor factors, picking up appropriate signs</p>
+<p><code class="verbatim">Maurer-Cartan equation:</code></p>
+<h2 id="free-operad-in-vector-spaces">Free operad in vector spaces</h2>
+<p>Let <span class="math inline"><em>M</em></span> be an Smodule in
+vector spaces. The <strong>free operad</strong> <span
+class="math inline">ℱ[<em>M</em>]</span> in vector spaces has its
+operations</p>
+<p></p>
+<p>And composition given by formally grafting trees together</p>
+<h2 id="cofree-cooperad-in-vector-spaces">Cofree cooperad in vector
+spaces</h2>
+<p>Let <span class="math inline"><em>M</em></span> be an Smodule in
+vector spaces. The <strong>cofree cooperad</strong> <span
+class="math inline">ℱ<sup><em>c</em></sup>[<em>M</em>]</span> in vector
+spaces has its operations the same spaces <span
+class="math inline">ℱ[<em>M</em>]</span>, but with comultiplication
+given by the following:</p>
+<p>If <span class="math inline"><em>T</em></span> is a tree with <span
+class="math inline"><em>n</em></span> levels of composition, where at
+level <span class="math inline"><em>i</em></span> you've attached the
+trees <span
+class="math inline"><em>T</em><sub>1</sub><sup><em>i</em></sup>, …, <em>T</em><sub><em>k</em><sub><em>i</em></sub></sub><sup><em>i</em></sup></span>
+then</p>
+<p><span
+class="math display"><em>Δ</em>(<em>T</em>) = ∑<sub><em>i</em></sub><em>T</em><sub>1</sub><sup><em>i</em></sup> ⊗ … ⊗ <em>T</em><sub><em>k</em><sub><em>i</em></sub></sub><sup><em>i</em></sup></span></p>
+<h3 id="notes-3">Notes</h3>
+<p>In order for this to be a finite sum, we need</p>
+<h2 id="augmented-dg-operad">Augmented DG Operad</h2>
+<p>An augmented DGO is an operad in chain complexes <span
+class="math inline">𝒪</span> along with a map of operads <span
+class="math display"><em>ε</em> : 𝒪 → 𝒦</span> where <span
+class="math inline">𝒦</span> is the operad with <span
+class="math inline">𝒦[1] = <em>k</em></span> and <span
+class="math inline">𝒦[<em>n</em> ≠ 1] = 0</span></p>
+<h3 id="notes-4">Notes</h3>
+<p>This allows you to disregard the stuff in arity one from the operad.
+This is useful for the same reason that it is in the bar-cobar
+construction in dgas — you don't want identity maps to allow your
+decompositions to be infinite when you pass to the cooperad.</p>
+<h1 id="theorems">Theorems</h1>
+<h2 id="reduced-coalgebra">Reduced coalgebra</h2>
+<p>Let <span class="math inline"><em>C</em></span> be a coaugmented
+coalgebra with unit <span class="math inline">1.</span> Then if <span
+class="math inline"><em>C̄</em></span> is the coaugmented coideal, the
+reduced comultiplication makes <span
+class="math inline"><em>C̄</em></span> into a coalgebra, called the
+<strong>reduced coalgebra</strong> : <span
+class="math display"><em>Δ̄</em> : <em>C̄</em> ⊗ <em>C̄</em> → <em>C̄</em></span></p>
+<h3 id="proof">Proof</h3>
+<h2 id="bar-cobar-adjunction">Bar-cobar adjunction</h2>
+<h2 id="cofibrant-resolutions">(Co)fibrant resolutions</h2>
+<p>Let <span class="math inline"><em>A</em></span> be an augmented DGA
+then <span class="math display">$$
+\Omega B(A) \xrightarrow{\sim} A
+$$</span> (ie they're quasi-isomorphic)</p>
+<p>Similarly, if <span class="math inline"><em>C</em></span> is a
+conilpotent DGcoA, then <span class="math display">$$
+C \xrightarrow{\sim} B \Omega (C)
+$$</span></p>
+<h3 id="notes-5">Notes</h3>
+<p><code class="verbatim">Resolutions:</code> Since we have these
+quasi-isomorphisms, we get a resolution of any (co)augmented DGcoA. The
+main issue is that when you perform this resolution, the space you get
+out the other side is very unwieldy — it's not messy, but it's still
+hard to deal with because they're so much (co)free structure</p>
+<p><code class="verbatim">Purpose:</code> What's the point of doing a
+resolution when it just gives you a more complicated object? The idea is
+that the more complicated object you get is more complicated because you
+<strong>made it free</strong> — it no longer has any relations (the data
+of the relations basically became the data of all of the ways of
+breaking stuff down or putting it together). So <strong>mapping</strong>
+into/out of it becomes easier</p>
+<p><code class="verbatim">Ext/Tor:</code> For an augmented dga <span
+class="math inline"><em>A</em></span>, the homology of the dual of the
+bar construction is the same thing as the ext! <span
+class="math display"><em>E</em><em>x</em><em>t</em><sub><em>A</em></sub>(<em>k</em>, <em>k</em>) ≅ <em>H</em><sup>•</sup>(<em>B</em>(<em>A</em>)<sup>*</sup>)</span>
+and <span
+class="math display"><em>T</em><em>o</em><em>r</em><sup><em>A</em></sup>(<em>k</em>, <em>k</em>) ≅ <em>H</em><sub>•</sub>(<em>B</em>(<em>A</em>))</span></p>
+<p><code class="verbatim">Koszul duality:</code> In the case of Koszul
+algebras, the homology of the bar construction (the Tor) becomes
+concentrated in a single degree, allowing you to just study a
+sub-coalgebra, called the <strong>Koszul dual coalgebra</strong>. And in
+fact, taking the dual of this coalgebra gives you the <strong>Koszul
+dual algebra</strong> <span
+class="math inline"><em>A</em><sup>!</sup></span>, whose cohomology is
+then the Ext!</p>
+<h2 id="adams-cobar-theorem">Adam's cobar theorem</h2>
+<h1 id="examples">Examples</h1>
 </body>
 </html>
