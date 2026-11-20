@@ -241,10 +241,3 @@ Tor^{A}(k,k) \cong H_{\bullet} (B(A))
 
 
 * Examples
-
-* Bar Construction
-
-Takes an operad and constructs a cooperad
-
-More generally it takes a monad algebra and turns it into a simplicial object
-

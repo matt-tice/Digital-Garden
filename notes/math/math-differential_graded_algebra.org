@@ -6,7 +6,7 @@
 
 * References
 
--70
+
 * Summary
 
 If a chain complex encodes the homotopical nature of spaces, the algebraic structure on top, turning it into a dga, encodes the geometry / coordinate functions.

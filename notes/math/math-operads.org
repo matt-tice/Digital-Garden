@@ -13,6 +13,31 @@
 
 * Definitions
 
+** Day convolution
+
+Let \( \mathcal{V} \) be symmetric monoidal and \( \mathcal{C} \) be \( \mathcal{V} \)-enriched and monoidal. Given any two enriched functors \( F,G: \mathcal{C}^{op} \rightarrow \mathcal{V} \) their *Day convolution* is the functor
+\[
+(F \otimes G)[A] = \int^{(B_{1}, B_{2}) \in  \mathcal{C} \times \mathcal{C}} \operatorname{Hom}_{\mathcal{C}} (B_{1} \otimes B_{2} , A) \otimes F(B_{1}) \otimes G(B_{2})
+\]
+
+In the case of set-enrichment
+
+
+** Composition product
+
+\[
+(M \circ N)(A) = \int^{B \in \text{Gr(FSet)}} M(B) \otimes N^{\otimes_{Day} B} 
+\]
+
+where for any functor
+\[
+F^{\otimes_{Day} B} [A]\cong \bigsqcup_{f: A \rightarrow B} \bigotimes_{b \in B} F[f^{-1} (b)]
+\]
+
+The idea of this is that \( f \) is any set map, and the fibers (preimages of each \( b \)) tell you what sits at the input of each operation
+
+
+
 ** Symmetric sequence
 
 Let \(C\) be a set. Define \(S[C]\) to be the category whose objects are pairs \((A, f)\), where \(A\) is a finite set and \(f: A \rightarrow C\) is a set map. Morphisms \((A,f) \rightarrow (B, g)\) in this category are maps \(\phi : A \rightarrow B\)  such that 
