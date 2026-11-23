@@ -306,3 +306,81 @@ Consider $f' = g$. If $g$ has a jump discontinuity, then this has no traditional
 for all $\phi \in C_{c}^{\infty}$.
 
 That is, we ask for $f$ to be the weak derivative of $g$.
+
+
+* Elliptic Equations
+
+So as a bit of background: linear pdes are generally divided into three categories: elliptic, parabolic, and hyperbolic, which behave something like *solids, liquids, and gases*, in the following respect:
+
+=Elliptic:= (Solid) The solutions to these equations are determined everywhere once you fix the boundary --- there's no possible propagation.
+
+=Parabolic:= (Liquid) Things are allowed to flow in a single direction (for instance, forward time). So for example, think of an ink drop spilling out into a pond, moving outwards slowly as time evolves. In these equations you need to set the boundary and also the initial conditions. But because things have a fixed direction they evolve in, there's a kind of entropy thing going on --- you can't reverse a solution to find the initial set up. You can't unmix the ink, or unshatter the teacup
+
+=Hyperbolic:= (Gas) Here solutions evolve at finite speeds and don't typically smear out; they're able to maintain sharpness (and typically do) or start off smooth and then evolve into sharp solutions. For these equations you just set the initial conditions.
+
+** Elliptic
+
+Now, narrowing in on the elliptic side of things, I want to look at this idea of rigidity --- it's very reminiscent of analytic functions and global sections. 
+
+*** Complex analysis
+
+For analytic functions in the complex plane, the behaviour in one region determines the behaviour in all others --- if you're zero in any small region, you have to be the zero function (this is why all the zeros of an analytic function are isolated).
+
+This is actually very concretely related to elliptic functions:  if you take \( f(z) = u(x,y) + i v(x,y) \), then being complex differentiable means that you must satisfy the *Cauchy-Riemann equations* 
+\[
+u_{x} = v_{y} \quad \text{and} \quad u_{y} = - v_{x}
+\]
+which imply \( u_{xx} = v_{yx} = v_{xy} = - u_{yy} \) . So the function \( u(x,y) \) actually satisfies an elliptic equation! (The Laplace equation):
+\[
+\nabla^{2} u = u_{xx} + u_{yy} = 0
+\]
+Similarly \( \nabla^{2} v = 0 \).
+
+Now the cool thing about complex analysis is that being complex analytic is the same as just being complex differentiable everywhere which is the same as satisfying Cauchy-Riemann everywhere, which is the same as satisfying these elliptic pdes everywhere! This is why complex differentiable functions are so massively rigid, because they're forced to be built out of two rigid functions.
+
+Amazing!
+
+*** Sheaves / Hodge theory
+
+We can also think of elliptic functions as something like a sheaf that's determined by a single global ring of functions, rather than having very local behaviour that gets glued together.
+
+=Fredholm property:= When you place an elliptic operator on a compact manifold, the space of global solutions is *finite-dimensional* always.
+
+=Hodge theory:= In Hodge theory you literally study the Laplacian \( \Delta = dd^{*} + d^{*} d \), which is an elliptic operator on differential forms. Solutions are called /harmonic/. Amazingly, the space of global harmonic forms is isomorphic to the /de Rham comology/ of the manifold.
+
+*** Topological quantum field theories
+
+And this is where I had my realization I'm quite pleased with --- knowing Chern-Simons has finite-dimensional Hilbert spaces, and that it's a weak version of Hodge theory, and that, since it has no metric, there's no propagation in time, I was like, this /has to be an elliptic operator/. And yes --- 100% yes.
+
+=Yang-Mills:= The equations of motion are \( d \star F = 0 \), which are hyperbolic, leading to an infinite-dimensional space of solutions.
+
+=Chern-Simons:= We solve \( F_{A} = dA + A \wedge A = 0 \). The solutions are not propagating waves, but rather are *flat connections* --- fixed for all time.
+
+And now everything falls into place:
+
+        * The Hamiltonian is zero, so there's no propagation
+        * There are no local excitations (particles), because there's no localized behaviour at all (just like how elliptic equations don't have solutions that are bump functions in one region and zero outside of that)
+        * All of the information of the solutions is contained in the global structure of the manifold, which is why you get *topological invariants*
+
+If we consider Chern-Simons on \( \Sigma \times \mathbb{R} \), where \( \Sigma  \) is two-dimensional and compact, we get a nice result tying things together
+
+=Classical phase space:= Imposing \( F_{A} = 0 \) on \( \Sigma  \) and quotienting out the gauge freedom gives the moduli space of flat connections. 
+
+Next we *choose a complex structure* to place on \( \Sigma  \), turning it into a *Riemann surface*. 
+
+=Narasimhan-Seshadri:= By this theorem and Atiyah-Bott gauge theory, we end up getting an elliptic system equivalent to studying holomorphic vector bundles on \( \Sigma  \). The quantum Hilbert space is then the space of *global holomorphic sections* of a prequantum line bundle over the moduli space.
+
+=Finite-dimensional:= Now since \( \Sigma  \) is compact, the moduli space of flat connections is a *compact Kähler manifold*. Global holomorphic sections are solutions to the *elliptic Cauchy-Riemann equation*. Then applying elliptic regularity and Hodge/Riemann-Roch theory on compact manifolds, you get that the kernel of an elliptic operator is always finite-dimensional (the *Verlinde formula*)
+
+
+**** Witten TQFTs
+
+You start with a supersymmetric field theory on a *Riemannian* manifold, not pseudo-Riemannian. Then you twist the fields so that the time propagation gets killed. 
+
+The path integral collapses onto a certain zero-locus, which is always the *moduli space of solutions of an elliptic PDE!* 
+
+=Donaldson-Witten:= (4D) Localizes onto the anti-self-dual Yang-Mills equation (instantons). The solution space yields Donaldson invariants of four-manifolds
+
+=Gromov-Witten:= (2D) Localizes onto the non-linear Cauchy-Riemann equation. Solutions are related to pseudoholomorphic curves and counting curves inside of sympletic manifolds.
+
+
