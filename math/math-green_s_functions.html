@@ -205,5 +205,326 @@ quantum field theory. There's lots of cool stuff there.</p>
 <h1 id="definitions">Definitions</h1>
 <h1 id="theorems">Theorems</h1>
 <h1 id="examples">Examples</h1>
+<h3 id="example">Example</h3>
+<p>Consider a really simple differential equation: <span
+class="math display">∂<sup>2</sup><em>G</em> = <em>δ</em>(<em>x</em>)</span>
+This is the Klein-Gordon equation in <span
+class="math inline">0 + 1</span> spacetime for a massless particle.</p>
+<p>Taking the Fourier transform on both sides gives <span
+class="math display"><em>k</em><sup>2</sup><em>G̃</em> = 1</span> So it's
+super easy to find the Green's function in the momentum space. The
+challenge is to pass back into position space</p>
+<p>So we need to compute (up to scalars) <span class="math display">$$
+G(x) = \int^{\infty}_{-\infty }dk \dfrac{1}{k^{2}} e^{ikx}
+$$</span></p>
+<p>The problem is that this integral passes through the singularity at
+<span class="math inline"><em>k</em> = 0</span>. The standard way to fix
+this is to change the differential equation slightly; perturb it, if you
+will <span
+class="math display">(∂<sup>2</sup> + <em>ε</em><sup>2</sup>)<em>G</em> = <em>δ</em></span></p>
+<p>This is now Klein-Gordon for a particle with a tiny mass <span
+class="math inline"><em>ε</em></span>. Here's the benefit: we now can
+write <span class="math display">$$
+~{G}(k) = \dfrac{1}{k^{2} + \varepsilon^{2}} = \dfrac{1}{(k - i
+\varepsilon )(k + i\varepsilon )},
+$$</span> moving the poles from zero to <span
+class="math inline">±<em>i</em><em>ε</em>.</span></p>
+<p>Now the integral technically is well-defined. If that's all you care
+about, you're done. But there's more work if you want to find a closed
+form. The issue with the closed form is that if you just do the integral
+directly, there are no elementary functions that have the
+antiderivative. So to do it, you use <strong>complex
+analysis</strong></p>
+<h3 id="cauchy-residues">Cauchy Residues</h3>
+<p>The goal is to take a line/contour integral around the singularities
+and use Cauchy's residue theorem to pick off what the integral has to
+be.</p>
+<p>So we integrate from <span
+class="math inline">−<em>R</em> → <em>R</em></span> and then use a
+semicircle to close the loop. We get <span
+class="math display">∫<sub><em>γ</em></sub> = ∫<sub>−<em>R</em></sub><sup><em>R</em></sup> + ∫<sub><em>C</em></sub> = 2<em>π</em><em>i</em>∑
+residues</span></p>
+<p>So we need to do this in a way that the semicircle part of the
+integral <span class="math inline">∫<sub><em>C</em></sub></span> will go
+to zero (or at least become something that has a closed form).</p>
+<p>Now let's just look at the integral over the semicircle <span
+class="math display">∫<sub><em>C</em></sub>(<em>k</em><sup>2</sup> + <em>ε</em><sup>2</sup>)<sup>−1</sup><em>e</em><sup><em>i</em><em>k</em><em>x</em></sup><em>d</em><em>k</em>.</span>
+Since <span class="math inline"><em>C</em></span> is living in the
+complex plane, we write <span
+class="math inline"><em>k</em> = <em>u</em> + <em>i</em><em>v</em></span>,
+so the exponential <span
+class="math inline"><em>e</em><sup><em>i</em><em>k</em><em>x</em></sup> = <em>e</em><sup><em>i</em><em>k</em><em>u</em></sup><em>e</em><sup>−<em>v</em><em>x</em></sup></span></p>
+<p>Basically now the idea is that as you expand out <span
+class="math inline"><em>R</em></span>, the semicircle needs to have
+larger and larger <span class="math inline"><em>v</em></span> in order
+to close things, and the semicircle integral goes to zero. But I think
+it's nicer to do this with the projective line</p>
+<h3 id="real-projective-line">Real Projective Line</h3>
+<p>In order to use the Cauchy residue theorem, we need a closed loop,
+which is why we had to do this semicircle business. But instead we can
+just view the integral <span class="math inline">−∞ → ∞</span> as a
+integral around <span class="math inline">ℝ<em>P</em><sup>1</sup></span>
+(which is diffeomorphic to a circle). The real projective line is
+embedded in <span class="math inline">ℂ<em>P</em><sup>1</sup></span>
+(which is diffeomorphic to the sphere), as just the equator of the
+Riemann sphere.</p>
+<p>We need to be a bit careful about how <span
+class="math inline"><em>e</em><sup><em>i</em><em>k</em><em>x</em></sup></span>
+works in this case, though. We end up with a singularity at <span
+class="math inline">∞</span>. But that's fine — this is basically where
+the semicircle comes back in.</p>
+<p><code class="verbatim">Residue theorem:</code> By the way, this
+theorem only needs your path to be <strong>piecewise smooth</strong>, so
+instead of using the arcs/semicircles that you always see in physics,
+people really should just be using a step function around the
+singularities — it's so much easier!</p>
+<p>You basically just bound the integral around the singularity. So if
+we want to integrate around <span class="math inline">∞</span>, we can
+do it using calculus on manifolds by viewing the sphere as a manifold
+and picking a chart (or change coordinates) where <span
+class="math inline"><em>w</em> = 1/<em>k</em></span>, so <span
+class="math inline"><em>d</em><em>k</em> = −<em>d</em><em>w</em>/<em>w</em><sup>2</sup></span>.</p>
+<p><span class="math display">$$
+\int_{C} \dfrac{1}{k^{2} + \varepsilon ^{2}}e^{ikx} dk =-  \int_{C}
+\dfrac{1}{1 + \varepsilon^{2} w^{2}}e^{ix/w} dw
+$$</span></p>
+<p>Now it's easy — just bound the integral <span
+class="math inline">$|-  \int_{C} \dfrac{1}{1 + \varepsilon^2}
+w^{2}}e^{ix/w} dw|  \leq \int | \ldots | = \int | (1 + \varepsilon^{2}
+w^{2})^{-1} | $</span></p>
+<p>You can just bound the thing in the absolute value in your tiny path
+around the singularity; it'll depend on the size of the detour, and as
+you send that to zero you find that the part of the integral with the
+detour goes to zero, so we get that our integral is just entirely
+determined by the residues</p>
+<p><code class="verbatim">Small mistake:</code> Oh wait, you need to be
+careful, because <span class="math inline"><em>w</em></span> is
+integrating in the complex plane, so we get the same issue as with the
+thing around zero; that <span
+class="math inline"><em>e</em><sup><em>i</em><em>k</em><em>x</em></sup> = <em>e</em><sup><em>i</em><em>u</em><em>x</em></sup><em>e</em><sup>−<em>v</em><em>x</em></sup></span>.</p>
+<p>Right and this is important actually, because we need to pick our
+direction of going around the loop to make sure that the real part stays
+bounded</p>
+<p>So when you're finding <span
+class="math inline"><em>G</em>(<em>x</em>)</span> and <span
+class="math inline"><em>x</em> &gt; 0</span>, you have to go into the
+upper hemisphere, and when <span
+class="math inline"><em>x</em> &lt; 0</span> you go into the lower
+part</p>
+<h2 id="the-ddx-example">The <span
+class="math inline"><em>d</em>/<em>d</em><em>x</em></span> example</h2>
+<p>This is actually what we should probably start with: <span
+class="math inline">∂<em>G</em> = <em>δ</em></span>. Then <span
+class="math inline"><em>G̃</em> = 1/<em>k</em><em>i</em></span></p>
+<p>We do the same type of regularization (<span
+class="math inline"><em>ε</em></span> is called a
+<strong>regulator</strong> by the way). So we end up with <span
+class="math display">$$
+\int dk \dfrac{1}{ik + \varepsilon } e^{ikx}
+$$</span></p>
+<p>This gives the so-called <strong>causal green's function</strong>
+(which people also call "retarded", but that's not…my favourite word, so
+I'm going to avoid it)</p>
+<p>The pole is located at <span
+class="math inline"><em>k</em> = <em>i</em><em>ε</em></span>, which is
+in the upper half plane. Since there's only one pole, our result is a
+bit different:</p>
+<p>When <span class="math inline"><em>x</em> &lt; 0</span> there is no
+pole to trap, since we pass into the lower part of the complex plane.
+The integral ends up giving <strong>zero.</strong></p>
+<p>When <span class="math inline"><em>x</em> &gt; 0</span>, we need to
+close in the upper half plane to make sure things stay bounded, so we
+pick up our residue</p>
+<h3 id="residues">Residues</h3>
+<p>This is actually more subtle than I thought. The residue theorem says
+that you get the integral just reducing to the residues, but computing
+the residues can be tricky, depending on your singularities.</p>
+<p>The residue is always the <span
+class="math inline"><em>a</em><sub>−1</sub></span> term of your Laurent
+series</p>
+<p>Here we need to find <span class="math display">$$
+Res[\dfrac{e^{ikx}}{ik + \varepsilon }]
+$$</span></p>
+<p>Since the singularity is at <span
+class="math inline"><em>k</em> = <em>i</em><em>ε</em></span>, we need to
+find the coefficient of <span class="math inline">$ \dfrac{1}{k -
+i\varepsilon } $</span> in the Laurent series of your function.</p>
+<p>In this case if we expand everything out we have <span
+class="math display">$$
+\dfrac{1}{i} (\dfrac{1 + (ikx) + \ldots}{k - i \varepsilon })
+$$</span></p>
+<p>Oh but ok — technically you <em>can</em> do that, because exp is
+analytic, so you can expand it around zero, but then you need to change
+up the equation a bit, because you need to find the negative one
+coefficient in a Laurent series <strong>around the singularity</strong>,
+so having <span
+class="math inline"><em>k</em>/(<em>k</em> − <em>i</em><em>ε</em>)</span>
+isn't going to fly.</p>
+<p>So the easier way to do it is just to expand your exponential around
+the singularity: write <span
+class="math display"><em>e</em><sup><em>i</em><em>k</em><em>x</em></sup> = <em>e</em><sup><em>i</em><em>x</em>(<em>k</em> − <em>i</em><em>ε</em>)</sup><em>e</em><sup>−<em>ε</em><em>x</em></sup> = <em>e</em><sup>−<em>ε</em><em>x</em></sup>(1 + <em>i</em><em>x</em>(<em>k</em> − <em>i</em><em>ε</em>) + …)</span></p>
+<p>Now it works, and you get that the residue is <span
+class="math display">$$
+\dfrac{e^{-\varepsilon x}}{i} \rightarrow 1, \quad \text{as }
+\varepsilon  \rightarrow 0.
+$$</span></p>
+<p>So in this case our Green's function is </p>
+<p>which is a step function</p>
+<p>By the way, when <span class="math inline"><em>x</em> = 0</span> we
+have <span class="math display">$$
+\int_{-\infty}^{\infty} \dfrac{1}{ik + \varepsilon } = \dfrac{1}{2}
+$$</span></p>
+<p>but it's essentially irrelevant, because we don't need to define
+<span class="math inline"><em>G</em>(<em>x</em>)</span> everywhere, only
+almost everywhere.</p>
+<p><code class="verbatim">Advanced propagator:</code> We could do the
+same thing though, where we take <span
+class="math inline">∂ − <em>ε</em></span> as our regularization. In that
+case you get the advanced propagator, which ends up being <span
+class="math inline">−<em>θ</em>(−<em>x</em>)</span> (negative one on
+<span class="math inline"><em>x</em> &lt; 0</span> and zero on <span
+class="math inline"><em>x</em> &gt; 0</span>)</p>
+<h2 id="back-to-the-original-example">Back to the original example</h2>
+<p>We have our two poles at <span
+class="math inline">±<em>i</em><em>ε</em></span>. When <span
+class="math inline"><em>x</em> &gt; 0</span> we go around the top one,
+and when <span class="math inline"><em>x</em> &lt; 0</span> we go around
+the bottom</p>
+<p>The interesting thing is what happens with the residues</p>
+<p>Say <span class="math inline"><em>x</em> &gt; 0</span>, so we need to
+find the residue of <span class="math inline">$ \dfrac{e^{ikx}}{k^{2} +
+\varepsilon^{2}} $</span> at <span
+class="math inline"><em>k</em> = <em>i</em><em>ε</em></span>.</p>
+<p><code class="verbatim">Cover-up:</code> There's this thing called the
+<em>cover up rule</em> apparently, where if your singularity only has a
+single power in the denominator, then the residue is <span
+class="math display"><em>R</em><em>e</em><em>s</em><sub><em>k</em> = <em>k</em><sub>0</sub></sub><em>f</em>(<em>k</em>) = lim<sub><em>k</em> → <em>k</em><sub>0</sub></sub>(<em>k</em> − <em>k</em><sub>0</sub>)<em>f</em>(<em>k</em>)</span></p>
+<p>So in this case, we get <span
+class="math inline">lim<sub><em>k</em> → <em>i</em><em>ε</em></sub><em>e</em><sup><em>i</em><em>k</em><em>x</em></sup>/(<em>k</em> + <em>i</em><em>ε</em>)</span>.
+So we get <span class="math display">$$
+\dfrac{e^{-\varepsilon x}}{2 i \varepsilon }
+$$</span></p>
+<p>Similarly, <span class="math inline">$ G(x &lt; 0) =
+\dfrac{e^{\varepsilon x}}{2 i \varepsilon } $</span>, so in general
+<span class="math display">$$
+G_{\varepsilon }(x) \sim \dfrac{1}{\varepsilon } e^{-\varepsilon |x|}
+$$</span> But now we don't have any way to send <span
+class="math inline"><em>ε</em> → 0</span></p>
+<p><code class="verbatim">Double pole:</code> The way to fix it (or at
+least one way to) is to pick a different regularization: <span
+class="math display">(∂ + <em>ε</em>)<sup>2</sup> → (<em>i</em><em>k</em> + <em>ε</em>)<sup>2</sup></span>
+Now if we play the same game we have <span class="math display">$$
+\dfrac{e^{ikx}}{(ik + \varepsilon )^{2}}
+$$</span> which has an order two pole living at <span
+class="math inline"><em>k</em> = <em>i</em><em>ε</em></span></p>
+<p>The rule to find the residue in this case is <span
+class="math inline">$\mathrm{Res}\&gt;{}_{k=k_{0}}f(k)=\lim
+_{k\rightarrow k_{0}}\frac{d}{dk}\Big[(k-k_{0})^{2}f(k)\Big]$</span></p>
+<p>We get <span
+class="math inline"><em>i</em><em>x</em><em>e</em><sup>−<em>x</em><em>ε</em></sup> → <em>i</em><em>x</em></span>
+as <span class="math inline"><em>ε</em> → 0</span></p>
+<p>And similarly to the <span class="math inline">∂ + <em>ε</em></span>
+case, we have no poles in the bottom half-plane, so we get (also there
+are factors of <span class="math inline">2<em>π</em><em>i</em></span>
+that cancel out) <span
+class="math display"><em>G</em>(<em>x</em>) = <em>x</em><em>θ</em>(<em>x</em>)</span>
+This is the causal propagator. And just like the other case, we could
+have used <span class="math inline">−<em>ε</em></span> to get the
+advanced (anti-causal) propagator.</p>
+<h2 id="hyperbolic">Hyperbolic</h2>
+<h3 id="klein-gordon">Klein-Gordon</h3>
+<p>Doing our Fourier transform, we have <span
+class="math display">(−<em>ω</em><sup>2</sup> + <em>k</em><sup>2</sup> + <em>m</em><sup>2</sup>)<em>G</em> = 1</span></p>
+<p>Let <span class="math inline">$ E_{k} = \sqrt{k^{2} + m^{2}}
+$</span></p>
+<p>So we have <span class="math display">$$
+G(\omega, k) = \dfrac{1}{E_{k}^{2} - \omega^{2}} = \dfrac{1}{(E_{k} -
+\omega )(E_{k} + \omega )}
+$$</span></p>
+<p>This has singularities at <span
+class="math inline"><em>ω</em> = ±<em>E</em><sub><em>k</em></sub></span></p>
+<p>But in this case, these aren't just isolated singularities; since
+<span class="math inline"><em>E</em><sub><em>k</em></sub></span> depends
+on <span class="math inline"><em>k</em></span>, this is a whole sheet of
+singularities.</p>
+<p>The way that you treat it, is you fix <span
+class="math inline"><em>k</em></span> and therefore <span
+class="math inline"><em>E</em><sub><em>k</em></sub></span>, and treat it
+like our <span class="math inline"><em>ε</em></span>. But now the
+singularity is sitting on the real axis, not in the imaginary part. But
+that's fine, we can just do what we did before, and add a new <span
+class="math inline"><em>ε</em></span></p>
+<p>If we take <span
+class="math inline"><em>ω</em> → <em>ω</em> + <em>i</em><em>ε</em></span>,
+the new poles are at <span
+class="math inline"><em>ω</em> = −<em>i</em><em>ε</em> ± <em>E</em><sub><em>k</em></sub></span></p>
+<p>Now we look into how we want to do our contour. If we have <span
+class="math inline"><em>e</em><sup>−<em>i</em><em>ω</em><em>t</em></sup></span>
+then for <span class="math inline"><em>t</em> &gt; 0</span> we go low,
+and for <span class="math inline"><em>t</em> &lt; 0</span> we go
+high</p>
+<p>So <span class="math inline"><em>t</em> &lt; 0</span> will just lead
+to zero, since there's no pole in the higher part. So we're left with
+<span class="math inline"><em>t</em> &gt; 0</span></p>
+<p>Taking the residues, we have to look at <span class="math display">$$
+\dfrac{e^{-i \omega t}}{(\omega  - E_{k} - i \varepsilon ) (\omega +
+E_{k} - i \varepsilon )}
+$$</span></p>
+<p>We get <span class="math inline">$ \dfrac{e^{-it E_{k}} e^{-
+\varepsilon t}}{2 E_{k} } + \dfrac{ e^{it E_{k}} e^{- \varepsilon t}}{-2
+E_{k} }     $</span></p>
+<p>We can send <span class="math inline"><em>ε</em> → 0</span> and we're
+all good</p>
+<p><span class="math display">$$
+G(t,k) = \dfrac{1}{E_{k}} \sin(E_{k} t) \theta(t)
+$$</span></p>
+<p>Then we still need to transform back from <span
+class="math inline"><em>k</em> → <em>x</em></span></p>
+<ol>
+<li><p>Feynman propagator</p>
+<p>We saw that we can take <span
+class="math inline"><em>ω</em> + <em>i</em><em>ε</em></span> to get the
+causal propagator; similarly subtracting gives you the anti-causal
+(advanced) propagator. But you can also take the regulator to sit
+outside the omega part <span
+class="math display">−<em>ω</em><sup>2</sup> + <em>E</em><sub><em>k</em></sub><sup>2</sup> − <em>i</em><em>ε</em></span>
+so that <span
+class="math display"><em>ω</em> ≈ ±(<em>E</em><sub><em>k</em></sub> − <em>i</em><em>ε</em><sup>′</sup>)</span></p>
+<p>Now one of them sits in the upper half plane and the other sits in
+the lower. This ends up giving you the <strong>Feynman
+propagator</strong> <span class="math display">$$
+G_{F}(t,k) = \dfrac{i}{2 E_{k}} e^{-i E_{k} |t|}
+$$</span></p></li>
+</ol>
+<h3 id="interpretations">Interpretations</h3>
+<p>One thing I didn't realize is that to do a Fourier transform we
+really need the function to decay to zero at <span
+class="math inline">±∞</span>. Actually more precisely we need <span
+class="math inline"><em>f</em> ∈ <em>L</em><sup>1</sup></span></p>
+<p>This is actually <strong>what regularization does!</strong> That's
+kinda crazy actually.</p>
+<p><code class="verbatim">Causal prop:</code> For instance, consider the
+causal propagator, where we take <span
+class="math inline"><em>ω</em> + <em>i</em><em>ε</em></span>. We could
+write <span
+class="math display"><em>G̃</em>(<em>ω</em> + <em>i</em><em>ε</em>) = ∫<em>d</em><em>t</em><em>G</em>(<em>t</em>)<em>e</em><sup><em>i</em>(<em>ω</em> + <em>i</em><em>ε</em>)<em>t</em></sup> = <em>e</em><sup>−<em>ε</em><em>t</em></sup><em>G̃</em>(<em>ω</em>)</span></p>
+<p>This basically says that if you wanted the boundary conditions that
+<span class="math inline"><em>G</em>(<em>t</em>) = 0</span> for <span
+class="math inline"><em>t</em> &lt; 0</span> and is non-zero for
+positive <span class="math inline"><em>t</em></span>, then in order to
+make sure you can do the Fourier transform at all, you first consider
+<span
+class="math inline"><em>e</em><sup>−<em>ε</em><em>t</em></sup><em>G</em></span>,
+so that when <span class="math inline"><em>t</em> → ∞</span>, your
+integral doesn't blow up. But from the equation above, that boundary
+condition ends up being the same as just shifting <span
+class="math inline"><em>ω</em> → <em>ω</em> + <em>i</em><em>ε</em></span></p>
+<p><code class="verbatim">Feynman:</code> The Feynman propagator says
+that we're <strong>in the vacuum</strong> at <span
+class="math inline"><em>t</em> = ±∞</span>, apparently. Supposedly you
+want to somehow show that with this prescription, everything dies off
+except the <span
+class="math inline"><em>E</em><sub><em>k</em></sub> = 0</span> terms as
+<span class="math inline"><em>t</em> → ±∞</span>.</p>
 </body>
 </html>
