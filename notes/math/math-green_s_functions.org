@@ -11,7 +11,6 @@
 * Summary
 
 
-
 We take as our equation \(D \phi = \delta \) , where \(D = -\partial^{2}_{t} + \partial^{2}_{x} +  \partial^{2}_{y} +  \partial^{2}_{z} - m^{2}\)
 
 This is where things get really interesting: we plug in a function
@@ -49,3 +48,266 @@ Solving this ends up leading to the propagators that show up in quantum field th
 * Theorems
 
 * Examples
+
+*** Example
+
+Consider a really simple differential equation:
+\[
+\partial^{2} G  = \delta(x)
+\]
+This is the Klein-Gordon equation in \( 0+1 \) spacetime for a massless particle.
+
+Taking the Fourier transform on both sides gives
+\[
+k^{2} \tilde{G} = 1
+\]
+So it's super easy to find the Green's function in the momentum space. The challenge is to pass back into position space
+
+So we need to compute (up to scalars)
+\[
+G(x) = \int^{\infty}_{-\infty }dk \dfrac{1}{k^{2}} e^{ikx}
+\]
+
+The problem is that this integral passes through the singularity at \( k=0 \). The standard way to fix this is to change the differential equation slightly; perturb it, if you will
+\[
+(\partial^{2} + \varepsilon^{2} ) G = \delta 
+\]
+
+This is now Klein-Gordon for a particle with a tiny mass \( \varepsilon  \). Here's the benefit: we now can write
+\[
+~{G}(k) = \dfrac{1}{k^{2} + \varepsilon^{2}} = \dfrac{1}{(k - i \varepsilon )(k + i\varepsilon )},
+\]
+moving the poles from zero to \( \pm i \varepsilon . \)
+
+Now the integral technically is well-defined. If that's all you care about, you're done. But there's more work if you want to find a closed form. The issue with the closed form is that if you just do the integral directly, there are no elementary functions that have the antiderivative. So to do it, you use *complex analysis* 
+
+*** Cauchy Residues
+
+The goal is to take a line/contour integral around the singularities and use Cauchy's residue theorem to pick off what the integral has to be.
+
+So we integrate from \( -R \rightarrow R \) and then use a semicircle to close the loop. We get 
+\[
+\int_{\gamma} = \int_{-R}^{R} + \int_{C} = 2 \pi i \sum \text{ residues}
+\]
+
+So we need to do this in a way that the semicircle part of the integral \( \int_{C} \) will go to zero (or at least become something that has a closed form).
+
+Now let's just look at the integral over the semicircle
+\[
+\int_{C} (k^{2} + \varepsilon^{2}  )^{-1}  e^{ikx} dk.
+\]
+Since \( C \) is living in the complex plane, we write \( k = u + iv \), so the exponential \( e^{ikx} = e^{iku} e^{-vx} \)
+ 
+Basically now the idea is that as you expand out \( R \), the semicircle needs to have larger and larger \( v \) in order to close things, and the semicircle integral goes to zero. But I think it's nicer to do this with the projective line
+
+*** Real Projective Line
+
+In order to use the Cauchy residue theorem, we need a closed loop, which is why we had to do this semicircle business. But instead we can just view the integral \( -\infty \rightarrow \infty \) as a integral around \( \mathbb{R}P^{1} \) (which is diffeomorphic to a circle). The real projective line is embedded in \( \mathbb{C}P^{1} \) (which is diffeomorphic to the sphere), as just the equator of the Riemann sphere.
+
+We need to be a bit careful about how \( e^{ikx} \) works in this case, though. We end up with a singularity at \( \infty \). But that's fine --- this is basically where the semicircle comes back in.
+
+=Residue theorem:= By the way, this theorem only needs your path to be *piecewise smooth*, so instead of using the arcs/semicircles that you always see in physics, people really should just be using a step function around the singularities --- it's so much easier!
+
+You basically just bound the integral around the singularity. So if we want to integrate around \( \infty \), we can do it using calculus on manifolds by viewing the sphere as a manifold and picking a chart (or change coordinates) where \( w = 1/k \), so \( dk = - dw/w^{2} \). 
+
+\[
+\int_{C} \dfrac{1}{k^{2} + \varepsilon ^{2}}e^{ikx} dk =-  \int_{C} \dfrac{1}{1 + \varepsilon^{2} w^{2}}e^{ix/w} dw 
+\]
+
+Now it's easy --- just bound the integral
+\(|-  \int_{C} \dfrac{1}{1 + \varepsilon^2} w^{2}}e^{ix/w} dw|  \leq \int | \ldots | = \int | (1 + \varepsilon^{2} w^{2})^{-1} | \)
+
+You can just bound the thing in the absolute value in your tiny path around the singularity; it'll depend on the size of the detour, and as you send that to zero you find that the part of the integral with the detour goes to zero, so we get that our integral is just entirely determined by the residues
+
+=Small mistake:= Oh wait, you need to be careful, because \( w \) is integrating in the complex plane, so we get the same issue as with the thing around zero; that \( e^{ikx} = e^{iux} e^{-vx} \). 
+
+Right and this is important actually, because we need to pick our direction of going around the loop to make sure that the real part stays bounded
+
+So when you're finding \( G(x) \) and \( x > 0 \), you have to go into the upper hemisphere, and when \( x < 0 \) you go into the lower part
+
+** The \( d/dx \) example
+
+This is actually what we should probably start with: \( \partial G = \delta  \). Then \( \tilde{G} = 1/ki \)
+
+We do the same type of regularization (\( \varepsilon  \) is called a *regulator* by the way). So we end up with 
+\[
+\int dk \dfrac{1}{ik + \varepsilon } e^{ikx}
+\]
+
+This gives the so-called *causal green's function* (which people also call "retarded", but that's not...my favourite word, so I'm going to avoid it)
+
+The pole is located at \( k = i \varepsilon  \), which is in the upper half plane. Since there's only one pole, our result is a bit different: 
+
+When \( x < 0 \) there is no pole to trap, since we pass into the lower part of the complex plane. The integral ends up giving *zero.* 
+
+When \( x > 0 \), we need to close in the upper half plane to make sure things stay bounded, so we pick up our residue
+
+*** Residues
+
+This is actually more subtle than I thought. The residue theorem says that you get the integral just reducing to the residues, but computing the residues can be tricky, depending on your singularities.
+
+The residue is always the \( a_{-1} \) term of your Laurent series
+
+Here we need to find 
+\[
+Res[\dfrac{e^{ikx}}{ik + \varepsilon }]
+\]
+
+Since the singularity is at \( k = i \varepsilon  \), we need to find the coefficient of \( \dfrac{1}{k - i\varepsilon } \) in the Laurent series of your function.
+
+In this case if we expand everything out we have 
+\[
+\dfrac{1}{i} (\dfrac{1 + (ikx) + \ldots}{k - i \varepsilon })
+\]
+
+Oh but ok --- technically you /can/ do that, because exp is analytic, so you can expand it around zero, but then you need to change up the equation a bit, because you need to find the negative one coefficient in a Laurent series *around the singularity*, so having \( k / (k - i \varepsilon ) \) isn't going to fly.
+
+So the easier way to do it is just to expand your exponential around the singularity: write 
+\[
+e^{ikx} = e^{ix(k - i\varepsilon )} e^{-\varepsilon  x} = e^{-\varepsilon x} (1 + ix(k - i \varepsilon ) + \ldots )
+\]
+
+Now it works, and you get that the residue is 
+\[
+\dfrac{e^{-\varepsilon x}}{i} \rightarrow 1, \quad \text{as } \varepsilon  \rightarrow 0.
+\]
+
+So in this case our Green's function is 
+\begin{equation*}
+G(x) = 
+\begin{cases}
+1  & x > 0\\
+0 & x < 0
+\end{cases}
+\end{equation*}
+
+which is a step function
+
+By the way, when \( x = 0 \) we have 
+\[
+\int_{-\infty}^{\infty} \dfrac{1}{ik + \varepsilon } = \dfrac{1}{2}
+\]
+
+but it's essentially irrelevant, because we don't need to define \( G(x) \) everywhere, only almost everywhere.
+
+
+=Advanced propagator:= We could do the same thing though, where we take \( \partial  - \varepsilon  \) as our regularization. In that case you get the advanced propagator, which ends up being \( -\theta (-x) \) (negative one on \( x < 0 \) and zero on \( x > 0 \))
+
+** Back to the original example
+
+We have our two poles at \( \pm i\varepsilon  \). When \( x > 0 \) we go around the top one, and when \( x < 0 \) we go around the bottom
+
+The interesting thing is what happens with the residues
+
+Say \( x > 0 \), so we need to find the residue of \( \dfrac{e^{ikx}}{k^{2} + \varepsilon^{2}} \) at \( k = i\varepsilon  \).
+
+=Cover-up:= There's this thing called the /cover up rule/ apparently, where if your singularity only has a single power in the denominator, then the residue is 
+\[
+Res_{k = k_{0}} f(k) = \lim_{k \rightarrow k_{0}} (k-k_{0}) f(k)
+\]
+
+So in this case, we get \( \lim_{k \rightarrow i \varepsilon }e^{ikx} / (k + i\varepsilon )  \). So we get
+\[
+\dfrac{e^{-\varepsilon x}}{2 i \varepsilon }
+\]
+
+Similarly, \( G(x < 0) = \dfrac{e^{\varepsilon x}}{2 i \varepsilon } \), so in general
+\[
+G_{\varepsilon }(x) \sim \dfrac{1}{\varepsilon } e^{-\varepsilon |x|}
+\]
+But now we don't have any way to send \( \varepsilon \rightarrow 0 \)
+
+=Double pole:= The way to fix it (or at least one way to) is to pick a different regularization:
+\[
+(\partial + \varepsilon )^{2} \rightarrow (ik + \varepsilon )^{2}
+\]
+Now if we play the same game we have 
+\[
+\dfrac{e^{ikx}}{(ik + \varepsilon )^{2}}
+\]
+which has an order two pole living at \( k = i \varepsilon  \)
+
+The rule to find the residue in this case is 
+\(\mathrm{Res}\>{}_{k=k_{0}}f(k)=\lim _{k\rightarrow k_{0}}\frac{d}{dk}\Big[(k-k_{0})^{2}f(k)\Big]\)
+
+We get \( ix e^{-x \varepsilon } \rightarrow ix \) as \( \varepsilon  \rightarrow 0 \)
+
+And similarly to the \( \partial  + \varepsilon  \) case, we have no poles in the bottom half-plane, so we get (also there are factors of \( 2 \pi i  \) that cancel out)
+\[
+G(x) = x \theta (x)
+\]
+This is the causal propagator. And just like the other case, we could have used \( - \varepsilon  \) to get the advanced (anti-causal) propagator.
+
+** Hyperbolic
+
+*** Klein-Gordon
+
+Doing our Fourier transform, we have 
+\[
+(- \omega^{2}  + k^{2} + m^{2} ) G = 1
+\]
+
+Let \( E_{k} = \sqrt{k^{2} + m^{2}} \)
+
+So we have 
+\[
+G(\omega, k) = \dfrac{1}{E_{k}^{2} - \omega^{2}} = \dfrac{1}{(E_{k} - \omega )(E_{k} + \omega )}
+\]
+
+This has singularities at \( \omega = \pm E_{k} \)
+
+But in this case, these aren't just isolated singularities; since \( E_{k} \) depends on \( k \), this is a whole sheet of singularities.
+
+The way that you treat it, is you fix \( k \) and therefore \( E_{k} \), and treat it like our \( \varepsilon  \). But now the singularity is sitting on the real axis, not in the imaginary part. But that's fine, we can just do what we did before, and add a new \( \varepsilon  \)
+
+If we take  \( \omega  \rightarrow \omega  + i \varepsilon  \), the new poles are at \( \omega = - i\varepsilon \pm E_{k} \)
+
+Now we look into how we want to do our contour. If we have \( e^{-i \omega t} \) then for \( t > 0 \) we go low, and for \( t < 0 \) we go high
+
+So \( t < 0 \) will just lead to zero, since there's no pole in the higher part. So we're left with \( t > 0 \) 
+
+Taking the residues, we have to look at 
+\[
+\dfrac{e^{-i \omega t}}{(\omega  - E_{k} - i \varepsilon ) (\omega + E_{k} - i \varepsilon )}
+\]
+
+We get \( \dfrac{e^{-it E_{k}} e^{- \varepsilon t}}{2 E_{k} } + \dfrac{ e^{it E_{k}} e^{- \varepsilon t}}{-2 E_{k} }     \)
+
+We can send \( \varepsilon \rightarrow 0 \) and we're all good
+
+\[
+G(t,k) = \dfrac{1}{E_{k}} \sin(E_{k} t) \theta(t)
+\]
+
+Then we still need to transform back from \( k \rightarrow  x \)
+
+**** Feynman propagator
+
+We saw that we can take \( \omega + i \varepsilon  \) to get the causal propagator; similarly subtracting gives you the anti-causal (advanced) propagator. But you can also take the regulator to sit outside the omega part
+\[
+-\omega^{2} + E_{k}^{2} - i \varepsilon 
+\]
+so that 
+\[
+\omega \approx \pm (E_{k} - i \varepsilon')
+\]
+
+Now one of them sits in the upper half plane and the other sits in the lower. This ends up giving you the *Feynman propagator*
+\[
+G_{F}(t,k) = \dfrac{i}{2 E_{k}} e^{-i E_{k} |t|}
+\]
+
+*** Interpretations
+
+One thing I didn't realize is that to do a Fourier transform we really need the function to decay to zero at \( \pm\infty \). Actually more precisely we need \( f \in  L^{1} \)
+
+This is actually *what regularization does!* That's kinda crazy actually.
+
+=Causal prop:= For instance, consider the causal propagator, where we take \( \omega + i \varepsilon  \). We could write 
+\[
+\tilde{G}(\omega + i \varepsilon ) = \int dt G(t) e^{i (\omega + i \varepsilon )t} = e^{- \varepsilon t} \tilde{G}(\omega )
+\]
+
+This basically says that if you wanted the boundary conditions that \( G(t) = 0 \) for \( t < 0 \) and is non-zero for positive \( t \), then in order to make sure you can do the Fourier transform at all, you first consider \( e^{-\varepsilon t} G \), so that when \( t \rightarrow \infty\), your integral doesn't blow up. But from the equation above, that boundary condition ends up being the same as just shifting \( \omega  \rightarrow \omega  + i \varepsilon  \)
+
+=Feynman:= The Feynman propagator says that we're *in the vacuum* at \( t = \pm \infty \), apparently. Supposedly you want to somehow show that with this prescription, everything dies off except the \( E_{k} = 0 \) terms as \( t \rightarrow \pm \infty \).
