@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       fff246f6-b1f1-4849-b156-e70604c577b8
+:END:
+#+title: support floors
+#+filetags: :trading:
+
+* References
+
+
+
+* Summary
+
+
+Support floors are *regions*, rather than unique price points.
+
+=End of day:= Prices frequently dip below support intraday. But buyers can step in and push the price back up to the floor. This isn't a true break in the floor --- to actually break the floor, you need the price to be below the floor at the *end of day* 
+
+=Volume:= If the stock closes below the floor on *above average volume*, that all but confirms that sellers are going to drag the price lower.
+
+=Floor-ceiling flip:=  
