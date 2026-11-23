@@ -543,5 +543,135 @@ for all <span
 class="math inline"><em>ϕ</em> ∈ <em>C</em><sub><em>c</em></sub><sup>∞</sup></span>.</p>
 <p>That is, we ask for <span class="math inline"><em>f</em></span> to be
 the weak derivative of <span class="math inline"><em>g</em></span>.</p>
+<h1 id="elliptic-equations">Elliptic Equations</h1>
+<p>So as a bit of background: linear pdes are generally divided into
+three categories: elliptic, parabolic, and hyperbolic, which behave
+something like <strong>solids, liquids, and gases</strong>, in the
+following respect:</p>
+<p><code class="verbatim">Elliptic:</code> (Solid) The solutions to
+these equations are determined everywhere once you fix the boundary —
+there's no possible propagation.</p>
+<p><code class="verbatim">Parabolic:</code> (Liquid) Things are allowed
+to flow in a single direction (for instance, forward time). So for
+example, think of an ink drop spilling out into a pond, moving outwards
+slowly as time evolves. In these equations you need to set the boundary
+and also the initial conditions. But because things have a fixed
+direction they evolve in, there's a kind of entropy thing going on — you
+can't reverse a solution to find the initial set up. You can't unmix the
+ink, or unshatter the teacup</p>
+<p><code class="verbatim">Hyperbolic:</code> (Gas) Here solutions evolve
+at finite speeds and don't typically smear out; they're able to maintain
+sharpness (and typically do) or start off smooth and then evolve into
+sharp solutions. For these equations you just set the initial
+conditions.</p>
+<h2 id="elliptic">Elliptic</h2>
+<p>Now, narrowing in on the elliptic side of things, I want to look at
+this idea of rigidity — it's very reminiscent of analytic functions and
+global sections.</p>
+<h3 id="complex-analysis">Complex analysis</h3>
+<p>For analytic functions in the complex plane, the behaviour in one
+region determines the behaviour in all others — if you're zero in any
+small region, you have to be the zero function (this is why all the
+zeros of an analytic function are isolated).</p>
+<p>This is actually very concretely related to elliptic functions: if
+you take <span
+class="math inline"><em>f</em>(<em>z</em>) = <em>u</em>(<em>x</em>, <em>y</em>) + <em>i</em><em>v</em>(<em>x</em>, <em>y</em>)</span>,
+then being complex differentiable means that you must satisfy the
+<strong>Cauchy-Riemann equations</strong> <span
+class="math display"><em>u</em><sub><em>x</em></sub> = <em>v</em><sub><em>y</em></sub>  and  <em>u</em><sub><em>y</em></sub> = −<em>v</em><sub><em>x</em></sub></span>
+which imply <span
+class="math inline"><em>u</em><sub><em>x</em><em>x</em></sub> = <em>v</em><sub><em>y</em><em>x</em></sub> = <em>v</em><sub><em>x</em><em>y</em></sub> = −<em>u</em><sub><em>y</em><em>y</em></sub></span>
+. So the function <span
+class="math inline"><em>u</em>(<em>x</em>, <em>y</em>)</span> actually
+satisfies an elliptic equation! (The Laplace equation): <span
+class="math display">∇<sup>2</sup><em>u</em> = <em>u</em><sub><em>x</em><em>x</em></sub> + <em>u</em><sub><em>y</em><em>y</em></sub> = 0</span>
+Similarly <span
+class="math inline">∇<sup>2</sup><em>v</em> = 0</span>.</p>
+<p>Now the cool thing about complex analysis is that being complex
+analytic is the same as just being complex differentiable everywhere
+which is the same as satisfying Cauchy-Riemann everywhere, which is the
+same as satisfying these elliptic pdes everywhere! This is why complex
+differentiable functions are so massively rigid, because they're forced
+to be built out of two rigid functions.</p>
+<p>Amazing!</p>
+<h3 id="sheaves-hodge-theory">Sheaves / Hodge theory</h3>
+<p>We can also think of elliptic functions as something like a sheaf
+that's determined by a single global ring of functions, rather than
+having very local behaviour that gets glued together.</p>
+<p><code class="verbatim">Fredholm property:</code> When you place an
+elliptic operator on a compact manifold, the space of global solutions
+is <strong>finite-dimensional</strong> always.</p>
+<p><code class="verbatim">Hodge theory:</code> In Hodge theory you
+literally study the Laplacian <span
+class="math inline"><em>Δ</em> = <em>d</em><em>d</em><sup>*</sup> + <em>d</em><sup>*</sup><em>d</em></span>,
+which is an elliptic operator on differential forms. Solutions are
+called <em>harmonic</em>. Amazingly, the space of global harmonic forms
+is isomorphic to the <em>de Rham comology</em> of the manifold.</p>
+<h3 id="topological-quantum-field-theories">Topological quantum field
+theories</h3>
+<p>And this is where I had my realization I'm quite pleased with —
+knowing Chern-Simons has finite-dimensional Hilbert spaces, and that
+it's a weak version of Hodge theory, and that, since it has no metric,
+there's no propagation in time, I was like, this <em>has to be an
+elliptic operator</em>. And yes — 100% yes.</p>
+<p><code class="verbatim">Yang-Mills:</code> The equations of motion are
+<span class="math inline"><em>d</em> ⋆ <em>F</em> = 0</span>, which are
+hyperbolic, leading to an infinite-dimensional space of solutions.</p>
+<p><code class="verbatim">Chern-Simons:</code> We solve <span
+class="math inline"><em>F</em><sub><em>A</em></sub> = <em>d</em><em>A</em> + <em>A</em> ∧ <em>A</em> = 0</span>.
+The solutions are not propagating waves, but rather are <strong>flat
+connections</strong> — fixed for all time.</p>
+<p>And now everything falls into place:</p>
+<ul>
+<li>The Hamiltonian is zero, so there's no propagation</li>
+<li>There are no local excitations (particles), because there's no
+localized behaviour at all (just like how elliptic equations don't have
+solutions that are bump functions in one region and zero outside of
+that)</li>
+<li>All of the information of the solutions is contained in the global
+structure of the manifold, which is why you get <strong>topological
+invariants</strong></li>
+</ul>
+<p>If we consider Chern-Simons on <span
+class="math inline"><em>Σ</em> × ℝ</span>, where <span
+class="math inline"><em>Σ</em></span> is two-dimensional and compact, we
+get a nice result tying things together</p>
+<p><code class="verbatim">Classical phase space:</code> Imposing <span
+class="math inline"><em>F</em><sub><em>A</em></sub> = 0</span> on <span
+class="math inline"><em>Σ</em></span> and quotienting out the gauge
+freedom gives the moduli space of flat connections.</p>
+<p>Next we <strong>choose a complex structure</strong> to place on <span
+class="math inline"><em>Σ</em></span>, turning it into a <strong>Riemann
+surface</strong>.</p>
+<p><code class="verbatim">Narasimhan-Seshadri:</code> By this theorem
+and Atiyah-Bott gauge theory, we end up getting an elliptic system
+equivalent to studying holomorphic vector bundles on <span
+class="math inline"><em>Σ</em></span>. The quantum Hilbert space is then
+the space of <strong>global holomorphic sections</strong> of a
+prequantum line bundle over the moduli space.</p>
+<p><code class="verbatim">Finite-dimensional:</code> Now since <span
+class="math inline"><em>Σ</em></span> is compact, the moduli space of
+flat connections is a <strong>compact Kähler manifold</strong>. Global
+holomorphic sections are solutions to the <strong>elliptic
+Cauchy-Riemann equation</strong>. Then applying elliptic regularity and
+Hodge/Riemann-Roch theory on compact manifolds, you get that the kernel
+of an elliptic operator is always finite-dimensional (the
+<strong>Verlinde formula</strong>)</p>
+<ol>
+<li><p>Witten TQFTs</p>
+<p>You start with a supersymmetric field theory on a
+<strong>Riemannian</strong> manifold, not pseudo-Riemannian. Then you
+twist the fields so that the time propagation gets killed.</p>
+<p>The path integral collapses onto a certain zero-locus, which is
+always the <strong>moduli space of solutions of an elliptic
+PDE!</strong></p>
+<p><code class="verbatim">Donaldson-Witten:</code> (4D) Localizes onto
+the anti-self-dual Yang-Mills equation (instantons). The solution space
+yields Donaldson invariants of four-manifolds</p>
+<p><code class="verbatim">Gromov-Witten:</code> (2D) Localizes onto the
+non-linear Cauchy-Riemann equation. Solutions are related to
+pseudoholomorphic curves and counting curves inside of sympletic
+manifolds.</p></li>
+</ol>
 </body>
 </html>
