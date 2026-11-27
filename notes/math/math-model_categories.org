@@ -10,7 +10,229 @@
 
 * Definitions
 
+** Lifting properties
+
+A pair of morphisms \( \ell \dashv r \) have the lifting property (\( \ell \) has the left lifting property with respect to \( r \), and \( r \) has the right lifting property with respect to \( \ell \)) if 
+
+        for all commuting squares \( fr = \ell g \) there is a \( \phi  \) such that \( \ell \phi  = f \) and \( \phi r = g \)
+
+*** Intuition
+
+If we work in the arrow category, we can view commuting squares as morphisms. So we can reformulate this as follows
+
+We say that a pair of objects \( (\ell, r) \) is lifting if for all morphisms \( (f,g) : \ell \rightarrow r \) there is some \( \phi  \) with \( (f, \phi ): \ell \rightarrow 1 \) and \( (\phi , g) : 1 \rightarrow r \)
+
+In my square-bracket notation from [[id:79e306c1-1696-4010-b95a-31c56e1772de][comma categories]], we have \( [g,f] : \ell \rightarrow r \), so that \( \ell g = fr \). Then the lifting property means that we get \( [\phi , f] : \ell \rightarrow 1 \)  and \( [g, \phi ] : 1 \rightarrow r \)
+
+From this perspective, there's a nice homotopy-interpretation: we have that \( \phi  \) is a weak inverse of \( f \) and \( g \) --- it's a weak left inverse of one, and weak right inverse of the other.
+
+In that sense, the lifting morphisms are kind of like morphisms that are contractible (from one side)
+
+
+
+** Weak equivalences
+
+Let \( \mathcal{C} \) be a category. A collection of morphisms \( \mathcal{W} \) are called *weak equivalences* if \( \operatorname{Iso}(\mathcal{C}) \subseteq \mathcal{W} \) and if any two of \( \left\{ f, g, fg \right\} \) are in \( \mathcal{W} \), so is the third.
+
+A category and a collection of weak equivalences is called a *category with weak equivalences* 
+
+*** Intuition
+
+Let's look at the three possibilities for things that can be in \( \mathcal{W} \):
+\( [g, 1] : f \rightarrow fg \) , \( [1, f] : fg \rightarrow g \), and \( [g, f] : f \rightarrow g \)
+
+So it's something like if we have any of the above maps living in \( \mathcal{W} \) then the composition of the elements in the map also lives in \( \mathcal{W} \).
+
+** Weak factorization systems
+
+A *weak factorization system* on a category \( \mathcal{C} \) is a pair of classes of morphisms \( (\mathcal{L}, \mathcal{R}) \) such that every morphism can be factored as
+\[
+f: X \xrightarrow{\ell} Y \xrightarrow{r} Z
+\]
+
+and \( \mathcal{L}, \mathcal{R} \) are precisely the class of morphisms that have the lifting properties against each other.
+
+*** Intuition
+
+Let's work in the arrow category. The factorization aspect means that for each \( f \) we have some \( [1, \ell] : f \rightarrow r \), which is kind of a weird condition, but I guess it means that every morphism has some homotopy-equivalent morphism
+
+Now say we have \( (f,g) : a \rightarrow b \) and we take a factorization \( [\ell_{2} r_{2}, \ell_{1} r_{1}] : a \rightarrow b \).
+
+We can rewrite this as \( [r_{2} , \ell_{1}] : a \ell_{2} \rightarrow r_{1} b \) , which is then equivalent to \( [r_{1} b, a \ell_{2}] : \ell_{1} \rightarrow r_{2} \). This will then have a lift, so that \( [\phi , a \ell_{2}] : \ell_{1} \rightarrow 1 \) and \( [r_{1} b,  \phi ] : 1 \rightarrow r_{2} \)
+
+Oh maybe we think of this like \( [\phi , a] : \ell_{1} \rightarrow \ell_{2} \) and \( [b, \phi ] : r_{1} \rightarrow r_{2} \).
+
+Then we're saying something like if you map between factorizations \( [b,a] : \ell_{1} r_{1} \rightarrow \ell_{2} r_{2} \) there's always a way to split this up into maps between the left and right parts of the factorizations \( [b,\phi ] : r_{1} \rightarrow r_{2} \) and \( [\phi , a] : \ell_{1} \rightarrow \ell_{2} \)
+
+** Orthogonal factorization system
+
+
+
+** Model structure
+
+A *model structure* on a category \( \mathcal{C} \) is a choice of three classes of morphisms called cofibrations \( (C) \), fibrations \( (F) \), and weak equivalences \( (W) \), such that 
+
+        1. \( W \) makes \( \mathcal{C} \) into a category with weak equivalences
+        2. \( (C, W \cap F) \) is a weak factorization system
+        3. \( (C \cap W, F) \) is a weak factorization system.
+
+If \( \mathcal{C} \) is also complete and cocomplete, we call it a *model category* 
+
+** (co)Fibrant object
+
+Let \( \mathcal{C} \) be a model category. An object \( A \) is *fibrant* if the unique map to the terminal object is a fibration
+\[
+A \rightarrow *
+\]
+An object \( B \) is *cofibrant* if the unique map from the initial object is a cofibration
+\[
+\varnothing \rightarrow B
+\]
+And if *bifibrant* if it is both fibrant and cofibrant
+
+*** Intuition
+
+**** Fibrant
+These things are easy to map /into/, they're basically /cofree/. Once you map into the generators \( \phi : C \rightarrow V \) (each element of \( C \) gets sent to a generator) then you define a  comultiplication to be sent to the factorwise \( \phi  \)
+
+
+**** Cofibrant
+
+These things are basically /free/ (easy to map out of). Another way of thinking about them, is that they *have no constraints* --- once you map the generators, every other element is a formal multiplication, which becomes a real multiplication in the codomain.
+
+
+
+
+** (co)fibrant replacement
+
+Let \( \mathcal{C} \) be a model category and \( A \) be an object. A *fibrant replacement* is a fibrant object \( RA \) and an acyclic cofibration
+\[
+A \rightarrow RA
+\]
+
+A *cofibrant replacement* is a cofibrant object \( QA \) and an acyclic fibration
+\[
+QA \rightarrow A
+\]
+
+
+** Retract
+
+A map \( f: A \rightarrow B \) is called a *retract* of \( g: C \rightarrow D \) if there are maps \( f \xrightarrow{[a,b]} g \xrightarrow{[c,d]} f \) such that \( [ac, bd] = [1,1] \)
+
 * Theorems
+
+** (co)Fibrant replacements always exist
+
+Let \( A \) be an object in a model category. Then there exists both a fibrant and cofibrant object.
+
+*** Proof
+
+Since \( (C, W \cap F) \) and \( (C \cap W, F) \) are weak factorization systems, we can factor the maps \( \varnothing \rightarrow A \rightarrow * \) into 
+\[
+\varnothing \xrightarrow{\ell_{1}} QA \xrightarrow{r_{1}} A  \xrightarrow{\ell_{2}} RA  \xrightarrow{r_{2}} *
+\]
+
+where \( \ell_{1} \) is cofibrant, \( r_{1} \) is acyclic fibrant, \( \ell_{2} \) is acyclic cofibrant and \( r_{2} \) is fibrant
+
+** Fibrations are closed under pullbacks
+
+Dually, cofibrations are closed under pushouts
+
+That is, if \( f \in  F \) and we have any pullback square \( [a,\tilde{a}] : \tilde{f} \rightarrow f \) then \( \tilde{f} \in  F \)
+
+*** Proof
+
+To determine if \( \tilde{f} \in  F \), we just need to test that it has the right lifting property against all acyclic cofibrations. Let \( [c,d] : \ell \rightarrow \tilde{f} \) be a commutative square, where \( \ell \in  W \cap C\). We compose to get 
+\[
+[ca, d\tilde{a}] : \ell \rightarrow \tilde{f} \rightarrow f
+\]
+
+Since \( f \in  F \), we have a lift \( [ca, \phi ] : 1 \rightarrow f \) and \( [\phi , d \tilde{a}] : \ell \rightarrow 1 \). So we have 
+\[
+[a, \phi ] : c \rightarrow f
+\].
+Then by the universal property of the pullback, we have a map \( \Psi \) with \( \Psi \tilde{f} = c \)  and \( \Psi \tilde{a} = \phi  \). So \( [c, \Psi] : 1 \rightarrow \tilde{f} \). Now we use  \( [\phi , d \tilde{a}] : \ell \rightarrow 1 \) to write \( [\phi , d] : \ell \rightarrow \tilde{a} \). Plugging in our map from above, we have 
+\[
+\ell \Psi \tilde{a} = d \tilde{a}.
+\]
+Now we use the uniqueness of the universal map. Since we also have \( \ell \Psi \tilde{f} = \ell c = d \tilde{f} \), we get that \( \ell \Psi = d \), so \( [\Psi, d] : \ell \rightarrow 1 \)
+
+Thus we get our lift of \( [c,d] : \ell \rightarrow \tilde{f} \), so \( \tilde{f} \in  F \).
+
+
+
+
+** TODO Closed under retracts
+
+Let \( g  \) be an element of any of \( W, F, C \) and let \( f \) be a retract, so \( [ac,bd] = [1,1] : f \rightarrow g \rightarrow f \). Then \( f \) is also in that class of morphisms.
+
+[you might need to use the fact that it's complete/cocomplete]
+
+*** Proof 
+
+=Fibrations:= 
+If \( g \in F \), take any acyclic cofibration and try to lift
+\[
+[x,y] : \ell \rightarrow f
+\]
+
+Now \( [xa, yb] : \ell \rightarrow g \), so we get a lift \( [\phi , yb] : \ell \rightarrow 1 \) and \( [xa, \phi ] : 1 \rightarrow g \). Then \( [xac, \phi d] : 1 \rightarrow f \). But \( ac = 1 \), so this is 
+\[
+[x, \phi d] : 1 \rightarrow f
+\].
+And \([\phi , yb] : \ell \rightarrow 1 \) implies \( \ell \phi d = y bd = y \). So 
+\[
+[\phi d, y] : \ell \rightarrow 1
+\]
+
+So \( f \in  F \).
+
+=Cofibrations:= Let \( g \in C \) and try to lift \( [x,y] : f \rightarrow r \). We have \( [cx,dy] : g \rightarrow f \rightarrow r \), lifting to \( [cx, \phi ] : 1 \rightarrow r \) and \( [\phi , dy] : g \rightarrow 1 \). Then \( [a \phi , bd y] : f \rightarrow 1 \) so \( [a \phi , y] : f \rightarrow 1 \) and \( [acx, a \phi ] = [x, a \phi ] : 1 \rightarrow r \). So \( f \in  C \)
+
+=Weak equivalences:= Let \( g \in W \). We use the fact that we can factor \( g = \ell^{g} r^{g} \), where \( \ell \in  W \cap C \) and \( r \in F \). By two out of three, that also implies \( r \in W \). Now we also write \( f = \ell^{f} r^{f} \).
+
+Say \( \ell^{f} \in  C \) and \( r^{f} \in  F \cap W \). We have \( [a,b] : f \rightarrow g \) is \( [a,b] : \ell^{f} r^{f} \rightarrow \ell^{g} r^{g}\), so \( [r^{f} a, b \ell^{g}] : \ell^{f} \rightarrow r^{g} \)
+
+We lift this to get \( [\phi , b \ell^{g}] : \ell^{f} \rightarrow 1 \). So we have a map \( [\phi , b] : \ell^{f} \rightarrow \ell^{g} \) and similarly \( [r^{f} a, \phi ] : 1 \rightarrow r^{g} \) gives \( [a, \phi ] : r^{f} \rightarrow r^{g} \). 
+
+\( [c,d] : \ell^{g} r^{g} \rightarrow \ell^{f} r^{f} \) gives \( [r^{g} c, d \ell^{f}] : \ell^{g} \rightarrow r^{f} \). Lifting
+
+\( [\psi , d \ell^{f}] : \ell^{g} \rightarrow 1 \) and \( [r^{g} c , \psi ] : 1 \rightarrow r^{f} \)
+So \( [\psi , d] : \ell^{g} \rightarrow \ell^{f} \) and \( [c, \psi ] : r^{g} \rightarrow r^{f} \)
+
+Then \( [ac, \phi  \psi ] = [1, \phi \psi ] : r^{f} \rightarrow r^{f} \). Since \( r^{f} \in  W  \) , and \( r^{f} = (\phi  \psi ) r^{f} \), by two out of three, we get that \( \phi  \psi \in  W  \). So now from \( [\phi , b] : \ell^{f} \rightarrow \ell^{g} \) we have 
+\[
+[\phi \psi , b] : \ell^{f} \rightarrow \ell^{g} \psi 
+\]
+And from \( [\psi , d] : \ell^{g} \rightarrow \ell^{f} \)  we have 
+\[
+[\psi , bd] : b \ell^{g} \rightarrow \ell^{f}
+\]
+So \( \ell^{f} \phi  \psi  = b \ell^{g} \psi  = bd \ell^{f} = \ell^{f} \)
+
+So \( b \ell^{g} \psi  = \ell^{f} \). But \( \ell^{f} \phi = b \ell^{g} \), so \( \ell^{f} \phi  \psi  = \ell^{f} \). Similarly, 
+
+ \( [a,b] : f \rightarrow g = \ell r \). So we have \( [a, b \ell] : f \rightarrow r \)
+
+** \( W \cap F \cap C = \operatorname{Iso} (\mathcal{C}) \)
+
+Let \( \mathcal{C} \) be a model category. Then \( W \cap F \cap C = \operatorname{Iso} (\mathcal{C}) \).
+
+*** Proof
+
+Let \( f \in  W \cap F \cap C \). In particular, it is an acyclic (co)fibration, so we have a lift of
+\[
+[1,1] : f \rightarrow f
+\]
+into \( [1, \phi ] : 1 \rightarrow f \) and \( [\phi , 1] : f \rightarrow 1 \). Thus \( \phi  f = 1 = f \phi  \), so \( f \) is an isomorphism.
+
+=Other direction:= Let \( f \) be an isomorphism. Then by definition of weak equivalence, \( f \in  W \). Now take an acyclic fibration \( \ell \) and acyclic cofibration \( r \). Now we look at \( [a,b] : \ell \rightarrow f \) and \( [c,d] : f \rightarrow r \). Now since \( f \) is invertible, we have \( \ell a = bf \) implies \( \ell (a f^{-1} ) = b \) so \( [af^{-1} , b] : \ell \rightarrow 1 \). And \( [a, a f^{-1} ] : 1 \rightarrow f \). So \( f \in F  \).
+
+Similarly, \( [f^{-1} d, d] : f \rightarrow 1 \) and \( [c, f^{-1} d] : 1 \rightarrow r \), so \( f \in C \).
+
+
+
 
 ** Combinatorial Model Cats are Locally Presentable Quasicats
 

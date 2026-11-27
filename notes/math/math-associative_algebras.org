@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       775bee6b-5ae5-4c41-b698-c20f8588d268
+:END:
+#+title: associative algebras
+#+filetags: :math:algebra:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Finitely generated algebra
+
+Let \( R \) be a commutative ring. An \( R \)-algebra \( A \) is *finitely generated* if there is a surjective morphism of algebras
+\[
+R[x_{1}, \ldots , x_{n}] \rightarrow A
+\]
+for some \( n. \)
+
+
+
+* Theorems
+
+** Finitely generated are quotients
+
+An algebra \( A \) is finitely generated if and only if 
+\[
+A \cong R[x_{1} , \ldots , x_{n}] / I
+\]
+
+*** Proof
+
+If \( A \cong R[x_{1} , \ldots , x_{n}] / I \) then \( R[x_{1}, \ldots , x_{n}] \rightarrow R[x_{1}, \ldots , x_{n}] / I  \) is a surjection.
+
+And if we have a surjection \( \phi : R[x_{1}, \ldots , x_{n}] \rightarrow A \), then apply the first isomorphism theorem to get 
+\[
+R[x_{1}, \ldots, x_{n}] / \ker \phi \cong Im \phi  = A
+\]
+
+
+* Examples

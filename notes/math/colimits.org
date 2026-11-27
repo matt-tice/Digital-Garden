@@ -106,3 +106,15 @@ The terminal object is the limit of the empty diagram. Because it has no conditi
 A pullback is the limit of a diagram of the form \(f_{1}, f_{2}: A_{1}, A_{2} \rightarrow B\). So it's the upper left corner of a commuting square.
 
 
+*** Arrow category
+
+We can use our arrow category calculus to express pullbacks and pushouts:
+
+A pullback of two maps \( f_{i} : A_{i} \rightarrow B \) is a pair of maps \( \tilde{f_{1}}, \tilde{f_{2}} \) that form the commutative square
+\[
+[f_{2}, \tilde{f_{2}}  ] : \tilde{f_{1}}_{} \rightarrow f_{1}
+\]
+so \( \tilde{f_{1}} f_{2} = \tilde{f_{2}} f_{1} \), that's universal
+
+So any other \( [f_{2}, \phi_{2}] : \phi_{1} \rightarrow f_{1} \) has a universal map \( \Psi \) with \( \Psi \tilde{f_{i}} = \phi_{i} \), which is to say \( [1, \Psi] : \phi_{i} \rightarrow \tilde{f}_{i} \)
+

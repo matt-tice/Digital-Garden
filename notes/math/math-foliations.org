@@ -11,8 +11,87 @@
 
 A foliation is a way to stratify a space: you create a bunch of /layers/ of the space made up of submanifolds. Each layer is called a *leaf* of the foliation
 
+=Construction:= Typically the way that you build a foliation is by working locally; at each point you pick which directions you're allowed to move in. Then you try to glue all of that structure together using *Frobenius's theorem* 
+
 * Definitions
 
 ** Foliations
 
 A *foliation of degree $k$* of an $n$-manifold $M$ is a partition of $M$ into connected, $k$-dimensional submanifolds such that for all $p \in M$, there is a local coordinate chart $(x^{i})$ where the leaves are defined by holding the last $n-k$ coordinates constant.
+
+** Tangent distribution
+
+A \( k \) dimensional tangent distribution on an \( n \) manifold is a \( k \)-dimensional subbundle of the tangent bundle --- a smooth map that assigns a subspace of dimension \( k \)  \( D_{p} \subseteq T_{p} M \) to all \( p \in  M \)
+
+=Notation:= Distributions with the same dimension for each \( D_{p} \) are called *regular.* But you can also define irregular distributions
+
+** Involutive distribution
+
+A tangent distribution \( D \rightarrow M \) is *involutive* if for any two vector fields \( \phi , \psi \in \Gamma_{p}(D) \) the Lie bracket \( [\phi ,\psi ] \in  \Gamma_{p}(D) \) for all \( p. \)
+
+*** Intuition
+
+The idea is that because you have a different subspace at each point on your manifold, each point gives you different directions you're *allowed to move in*. But as you travel around, the allowed directions can change. Because of this, the 
+
+** Integrable manifold
+
+Given a regular \( k \) distribution \( D \) on a manifold \( M \), an *integral manifold* is a \( k \)-dimensional submanifold \( N \subseteq M \) such that 
+\[
+T_{p} N = D_{p}
+\]
+for all \( p \in N \)
+
+** Integral distribution
+
+A distribution \( D \) is *integrable* if for all \( p \in M \) there is an integral manifold \( N^{p} \) such that \( p \in  N^{p} \).
+
+* Theorems
+
+** Foliations from integrability
+
+Let \( D \) be an integrable distribution on \( M \). Then there exists a foliation corresponding to \( D \)
+
+For each point \( p \in M \), the leaf \( L_{p} \) is the union of all *connected integral manifolds* that contain \( p \)
+
+** Frobenius's theorem
+
+A smooth tangent distribution on a manifold is integrable if and only if it's involutive
+
+
+* Examples
+
+** General Relativity
+
+Foliations act as a way to talk about time propagation in general relativity, where space and time are wrapped up together.
+
+=Spacelike foliation:= Slices spacetime into a stack of hypersurfaces indexed by a time parameter
+
+=ADM:= (Arnowitt-Deser-Misner formalism). Rewrites Einstein's equations as an initial value problem on the foliation, and then evolving it with respect to time.
+
+=Globally hyperbolic:= You get a smooth foliation into Cauchy surfaces if and only if you're globally hyperbolic (contain no closed timelike curves)
+
+** Poisson manifolds
+
+The phase space in classical mechanics breaks into a *symplectic foliation*, where each leaf is a subspace where conserved quantities are *constant*.
+
+=Geometric quantization:= You quantize the individual leaves of the foliation rather than trying to quantize the whole phase space at once
+
+** Statistical mechanics
+
+=Equilibrium:= You foliate into leaves of constant entropy (adiabatic surfaces) or constant temperature (isotherms)
+
+=Caratheodory:= The second law of thermodynamics is actually equivalent to the existence of a particular foliation on your state space --- near any equilibrium state there are adjacent states you *cannot reach* without exchanging heat (which corresponds to jumping between leaves)
+
+** Condensed matter
+
+In materials like soap films or LCD displays, molecules assemble into 2D layers that slide over one another. This forms a foliation
+
+=Topological defects:= Imperfections actually correspond to places where the folitation breaks down.
+
+** String theory
+
+=Dbranes:= Open strings have boundaries that are lower dimensional subspaces called Dbranes. You can have parallel Dbranes that are leaves of a foliation of spacetime
+
+** Gauge theory
+
+In Yang-Mills you have *gauge orbits*, which foliate the space of all possible field configurations. Gauge fixing then becomes picking a representative point on each leaf.

@@ -9,13 +9,168 @@
 
 * Summary
 
+* History
+
+=1960s:= Physicists were trying to understand the strong force.
+
+=1968:= Gabriele Eneziano wrote down how hadrons scatter off each other. Nambu, Nielsen, and Susskind realized that this was describing *1D vibrating strings* that were holding the quarks together.
+
+This was the birth of string theory. But by design, it was only meant to describe bosons (specifically the force carriers for the strong force)
+
+=1971:= People tried to include fermions in the theory. Pierre Ramond tried to bake fermions into the theory by including anticommuting variables on every point of the string's length. Neveu and Schwarz, at the same time, were adding a similar feature to fix the bosonic spectrum. The combination of these two approaches was the *RNS formalism*, which required that the bosonic and fermionic variables have a correspondence (supersymmetry)
+
 * Closed Strings
 
 Their world sheets are *closed Riemann surfaces*
 
 * Open Strings
 
-Open string boundaries lie on D-branes
+Open string boundaries lie on D-branes \( B \subseteq M \).
+
+An open string is a smooth map into spacetime \( \gamma : [0,1] \rightarrow M \) such that \( \gamma (0), \gamma (1) \in B \) 
+
+** Boundary conditions
+
+Given a brane \( B \subseteq M \), we have two types of boundary conditions
+
+*** Neumann condition
+
+\( B = M =  S^{1} \)
+
+The end points of the string have the freedom to move all around the brane. This allows the string to unwind itself, so the string ends up with trivial winding number.
+
+But because the end points can move, the string carries *momentum* 
+
+*** Dirichlet condition
+
+\( \gamma (0) = \gamma (1) = b_{0} \in B \)
+
+In this case, the end points of the string are fixed, so there's no momentum, but any windings are fixed and can't be removed.
+
+
+
+
+* T-Duality
+
+Closed strings moving on a circle of radius \( R \) are equivalent to closed strings moving on a circle of another radius
+
+This is essentially the reason that we have M-theory:  all five of the superstring theories from the 1990s ended up just being different cases of the same theory.
+
+=Connections:= This duality links Type IIA and IIB theories and the two Heterotic theories.
+
+=Dimension:= Changes the dimension by one, which is why IIA and IIB get mapped into each other.
+
+* S-duality
+
+=Connections:= Links Type I and Heterotic \( SO(32) \) and Type IIB with itself
+
+
+
+* Types of superstring theory
+
+Each kind of string theory allows different kinds of strings. There are five kinds of superstring theories in 10 dimensions.
+
+The reason that people mainly work with superstring theories, rather than not having supersymmetry (which gives you *bosonic* string theory) is that bosonic string theory literally only gives you bosons. On top of that, bosonic string theory has *tachyons* (imaginary mass particles)
+
+=Tachyons:= The lowest vibrational mode of a string in bosonic string theory is a tachyon. Supersymmetry kills this off
+
+=Gravitons:= The lowest vibrational mode of the closed string in each of the theories.
+
+=Open strings:= Give rise to force-carriers (except gravity) and matter
+
+** Type I
+
+The only one of the string theories that has *unoriented strings*, and the only theory with open strings in the vacuum.
+
+=Supercharges:= \( \mathcal{N} = 1 \) (16 supercharges)
+
+=Gauge group:= \( SO(32) \)
+
+=Vacuum:= Open strings can move around 10D space, because the vacuum is filled with D9 branes whose world volumes cover all 10 dimensions.
+
+=Branes:= These are just natural parts of the string theory; consequently, gauge forces arise naturally
+
+=Unoriented:= Because the strings are unoriented, calculations are much harder, so you normally have to pass into \( SO(32) \) heterotic theory to actually compute things.
+
+=Non-perturbative:= One of the easiest string theories to do non-perturbative things in
+
+** Type IIA
+
+Only closed strings.
+Non-chiral: left and right moving vibrations on the string are mirror images of each other
+
+=Supercharges:= \( \mathcal{N} = 2 \) (32 supercharges)
+
+=Gauge group:= None at low energy
+
+=Vacuum:= There are no branes filling the vacuum. The vacuum only contains fluctuating quantum fields of closed strings.
+
+=Dbranes:= They exist only for even dimensions: D0, D2, ... 
+
+=Particles:= Arise due to intersecting D6 branes.
+
+=Stabilization:= Flux stabilization is difficult compared to IIB string theory. 
+
+=Strong interactions:= Much harder to deal with, but it lifts to 11D Mtheory at strong coupling. It arises out of the D0 branes
+
+** Type IIB
+
+Only closed strings
+Chiral: left and right moving vibrations are asymmetric
+
+=Supercharges:= \( \mathcal{N} = 2 \) (32 supercharges)
+
+=Gauge group:= None at low energy. This is also related to the fact that there are no forces built into the theory; you have to add them by hand by constructing stacks of Dbranes and orientifold planes to make particle physics show up
+
+=Vacuum:= There are no branes filling the vacuum. The vacuum only contains fluctuating quantum fields of closed strings.
+
+=Dbranes:= They exist only for odd dimensions: D1, D3, ... and D(-1), which are *instantons*. Has a nice variety of Dbranes, but they don't arise naturally
+
+=Cosmology:= Great for that, because the fluxes can create energy in the vacuum that looks like dark energy
+
+=Stabilization:= Good for moduli stabilization, because you can use fluxes to stabilize the holes in Calabi-Yau manifolds.
+
+=AdS/CFT:= Has this correspondence inside of it
+
+** $SO(32)$ Heterotic
+
+Only closed strings
+Heterotic means /hybrid/ --- in this case the clockwise (right moving) vibrations act like a 10D superstring, while the anticlockwise (left moving) act like a 26D bosonic string
+
+=Supercharges:= \( \mathcal{N} = 1 \) (16 supercharges)
+
+=Gauge group:= \( SO(32) \). Very nice and built into the closed string itself. However, it's not as easy to see how this one reproduces the Standard Model
+
+=S-duality:= This string theory is mainly used with Type I and S-duality, rather than being studied on its own.
+
+=Vacuum:= The right moving strings have type II vacuums, while the left moving are on a lattice.
+
+** \( E_{8}  \times E_{8}\) Heterotic
+
+Only closed strings.
+Heterotic means /hybrid/ --- in this case the clockwise vibrations act like a 10D superstring, while the anticlockwise act like a 26D bosonic string
+
+=Supercharges:= \( \mathcal{N} = 1 \) (16 supercharges)
+
+=Gauge group:= \( E_{8} \times E_{8} \)
+
+=Vacuum:= The right moving strings have type II vacuums, while the left moving are on a lattice.
+
+=Standard model:= This is the best model for deriving standard particle physics
+
+=Stabilization:= It's very difficult to stabilize this theory. This is called the *Moduli Stabilization Problem* --- the six extra dimensions usually create a fifth force that we don't observe in nature, that you have to eliminate somehow.
+
+=No Dbranes:= 
+
+* Compactified vacuums
+
+In order to get something that looks like our 4D universe, six of the 10 dimensions are assumed to be compactified. 
+
+=Calabi-Yau manifolds:= This is the standard choice of compact space for the extra six dimensions. The number of topological twists in the manifold corresponds to the types of particles that exist in the vacuum
+
+=Flux vacuums:= In Type II theories you can put magnetic-like fields (fluxes) through the holes of a Calabi-Yau manifold, which prevent the holes from collapsing or expanding
+
+=Brane vacuums:= In Type II a vacuum canalso include Dbranes wrapped around cycles of the extra dimensions. The intersections of Dbranes ends up corresponding to matter particles
 
 * Homotopy
 

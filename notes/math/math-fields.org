@@ -1,0 +1,63 @@
+:PROPERTIES:
+:ID:       575af909-3238-4fbd-b681-1c143cf3a1aa
+:END:
+#+title: fields
+#+filetags: :math:algebra:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+** Characteristic of a field
+
+** Field extensions
+
+A field extension is a pair of fields \( k \leq F \), where \( k \) is a subfield of \( F \). The field \( F \) is called an *extension* of \( k. \)
+
+*** Notes
+
+\( F \) is a vector space over \( k \). 
+
+** Degree of extension
+
+Let \( k \leq F \) be a field extension. Then the dimension of \( F \) as a vector space over \( k \) is called the *degree* of the extension, and is denoted
+\[
+[F : k]
+\]
+
+
+* Theorems
+
+** All ideals are trivial
+
+Let \( k \) be a field. Then every ideal is either \( 0 \) or \( k \). 
+
+*** Proof
+
+If \( I \) is any non-zero ideal, we can find \( x \in I \). Then since \( I \) is an ideal we have \( x^{-1} x = 1 \in  I \), which implies \( I = k. \)
+
+
+** Characteristic is zero or prime
+
+** Field extension characterization
+
+Let \( k \leq F \) be a field extension. Thne \( [F: k] = 1 \) if and only if \( F \simeq  k \).
+
+** Primitive element theorem.
+
+* Examples
+
+** Reals
+
+** Rationals
+
+** Complex numbers
+
+** Finite fields
+
+Let \( F_{p} = \mathbb{Z}/p \mathbb{Z} \) be the integers mod \( p \), for a prime \( p. \) This forms a field.

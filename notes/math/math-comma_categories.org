@@ -36,6 +36,18 @@ If one of the functors is the identity functor or an inclusion functor, we just 
 
 Consider the comma category \(\mathcal{C} \downarrow \mathcal{C}\). Then objects are just morphisms in \(\mathcal{C}\) and morphisms are the commuting squares. This is the arrow category.
 
+*** Calculus
+
+There's a nice inside of the arrow category: morphism take the form \( (f,g) : a \rightarrow b \), meaning that \( fb = ag \). But we can always swap which pair of arrows is considered the morphism. So this is equivalent to \( (a,b) : f \rightarrow g \)
+
+Actually now that I look at this, the notation is way cleaner if we use the convention that \( [f,g] : a \rightarrow b \) means that \( af = gb \), so \( f \) is the bottom map and \( g \) is the top map in the commuting square. Then this is equivalent to \( [b,a] : g \rightarrow f \) (swapping both pairs)
+
+Now if we have a composition \( [ab, cd] : f \rightarrow g \) this is the same as \( [b,c] : fa \rightarrow dg \), which is beautiful notation
+\[
+fa \xrightarrow{[b,c]} dg  = f \xrightarrow{[ab,cd]} g
+\]
+
+
 ** Slice category
 
 Let \(X\) be about object of \(\mathcal{C}\). Then the comma category \(\mathcal{C} \downarrow X\) has objects maps into \(X\) and the morphisms are commuting triangles. This is the slice category.

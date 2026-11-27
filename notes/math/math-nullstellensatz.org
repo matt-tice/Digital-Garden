@@ -1,0 +1,56 @@
+:PROPERTIES:
+:ID:       40ad9936-3b20-4412-b9d1-1d764364d9d9
+:END:
+#+title: nullstellensatz
+#+filetags: :math:alg_geo:
+
+* References
+
+
+
+* Summary
+
+
+* Definitions
+
+
+
+
+* Theorems
+
+** Weak Nullstellensatz
+
+Let \( k \) be algebraic closed, and take a finite collection of polynomials \( f_{1,} \ldots , f_{m} \in k[x_{1}, \ldots , x_{n}]  \). Then there is a simultaneous solution \( v \) with \( f_{i}(v) = 0 \) for all \( i \) if and only if \( \langle f_{1}, \ldots , f_{m} \rangle\subsetneq k[x_{1} \ldots x_{n}] \) is a proper ideal
+
+*** Proof
+
+Say all \( f_{i}(v) = 0\). Then if \( 1 \in \langle f_{1}, \ldots , f_{m} \rangle \), we would have \( 1 = \sum_{i} f_{i} (x) g_{i} (x) \). So \( 1 = \sum_{i} f_{i}(v) g_{i} (v) = 0 \). Since this isn't possible, we must have \( 1 \neq \langle f_{1}, \ldots, f_{m} \rangle \), so this is a proper ideal.
+
+And if this is a proper ideal, then 
+
+** Strong Nullstellensatz
+
+For every ideal \( I \trianglelefteq k[x_{1}, \ldots , x_{n}] \)
+
+** Maximal ideals of \( k[x_{1}, \ldots , x_{n}] \)
+
+Every maximal of ideal of \( k[x_{1}, \ldots , x_{n}] \) is of the form \( \langle x_{1} - a_{1}, \ldots , x_{n} - a_{n} \rangle \) for some \( a_{i} \in  k. \)
+
+*** Proof
+
+Let \( M \) be a maximal ideal 
+
+** Zariski's lemma
+
+Let \( k \) be a field that is finitely generated as a \( k \)-algebra. Then \( k \) is a finite algebraic extension of \( k. \) In other words, \( k \) is a finite-dimensional vector space over \( k. \)
+
+*** Proof
+
+=Finitely generated:= This means that \( k \cong k[x_{1}, \ldots , x_{n}] / I \)
+
+
+** Jacobson
+
+Let \( A \) be a finitely generated algebra over a Jacobson ring \( R \). Then \( A \) is also a Jacobson ring
+
+* Examples
